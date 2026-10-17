@@ -5,7 +5,7 @@ layout: default
 {%- assign _posts = site.posts | where: "lang", lang -%}
 {{ content }}
 <section aria-labelledby="latest-heading">
-  <h1 id="latest-heading" class="page-title">{{ t.latest }}</h1>
+  <h2 id="latest-heading" class="section-title">{{ t.latest }}</h2>
   {%- if _posts.size > 0 %}
   <div class="post-grid">
     {%- for p in _posts %}

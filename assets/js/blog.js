@@ -174,7 +174,7 @@
   });
 
   /* Home pages: the wordmark's gradient follows the cursor across the page. */
-  var home = document.querySelector('.is-home .brand-text');
+  var home = document.querySelector('.brand-hero .brand-text');
   if (home && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     var gx = null;
     addEventListener('pointermove', function (e) {
