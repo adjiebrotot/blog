@@ -1,20 +1,3 @@
 <footer class="site-footer">
-  <div class="container">
-    <div class="footer-card">
-      <p>{{ t.disclaimer }}</p>
-      <p>{{ t.contact }} <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>.</p>
-      <nav class="footer-links" aria-label="{{ site.title }}">
-        <a href="{{ site.links.home }}">{{ t.main_site }}</a>
-        <a href="{{ site.links.tools }}">Adjie Brotools</a>
-        <a href="{{ '/en/' | relative_url }}" hreflang="en" lang="en">Blog (English)</a>
-        <a href="{{ '/id/' | relative_url }}" hreflang="id" lang="id">Blog (Bahasa Indonesia)</a>
-        <a href="{{ '/' | append: lang | append: '/feed.xml' | relative_url }}">{{ t.feed }}</a>
-      </nav>
-      <div class="footer-made">
-        <img src="{{ '/assets/img/australian.png' | relative_url }}" alt="Australian Made" width="36" height="36" loading="lazy">
-        <img src="{{ '/assets/img/indonesian.png' | relative_url }}" alt="100% Indonesia" width="40" height="16" loading="lazy" class="flag">
-        <span>{{ t.made }} © {{ site.time | date: "%Y" }} {{ site.author.name }}</span>
-      </div>
-    </div>
-  </div>
+  <p>© {{ site.time | date: "%Y" }} {{ t.footer_by }} {{ site.author.name }}</p>
 </footer>

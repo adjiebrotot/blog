@@ -5,12 +5,6 @@ title: Page not found
 noindex: true
 sitemap: false
 ---
-<section class="hero-card hero-slim">
-  <h1>{{ site.data.i18n.en.not_found_title }}</h1>
-  <p class="hero-desc">{{ site.data.i18n.en.not_found_body }}</p>
-  <p class="hero-desc" lang="id">{{ site.data.i18n.id.not_found_title }}. {{ site.data.i18n.id.not_found_body }}</p>
-  <div class="lang-pick">
-    <a class="btn-primary" href="{{ '/en/' | relative_url }}" hreflang="en" lang="en">English posts</a>
-    <a class="btn-primary" href="{{ '/id/' | relative_url }}" hreflang="id" lang="id">Artikel Bahasa Indonesia</a>
-  </div>
-</section>
+<h1 class="page-title">{{ site.data.i18n.en.not_found_title }}</h1>
+<p class="page-desc">{{ site.data.i18n.en.not_found_body }} <a href="{{ '/en/' | relative_url }}" hreflang="en">{{ site.data.i18n.en.latest }} <span aria-hidden="true">→</span></a></p>
+<p class="page-desc" lang="id">{{ site.data.i18n.id.not_found_title }}. {{ site.data.i18n.id.not_found_body }} <a href="{{ '/id/' | relative_url }}" hreflang="id">{{ site.data.i18n.id.latest }} <span aria-hidden="true">→</span></a></p>

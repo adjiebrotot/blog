@@ -1,14 +1,21 @@
 {%- comment -%}
-  Sets post_keys: the category keys a post's tags resolve to, each once.
-  A tag not in _data/categories.yml (or no tag at all) counts as "others".
+  Sets post_keys: the category keys a post's tags resolve to, each once, in
+  the order the post lists them. A post can carry several (tags: [finance,
+  engineering]) and is then listed on each of those category pages. A tag
+  matches a key or a label in either language (Finance, Keuangan), any case.
+  A tag that matches nothing (or no tag at all) counts as "others".
   Usage: {% include post-keys.html tags=post.tags %}
 {%- endcomment -%}
 {%- capture _keys -%}
   {%- for _tg in include.tags -%}
     {%- assign _k = _tg | downcase | strip -%}
-    {%- assign _c = site.data.categories | where: "key", _k | first -%}
-    {%- if _c -%}{{ _k }}{%- else -%}others{%- endif -%}
-    {%- unless forloop.last -%},{%- endunless -%}
+    {%- assign _hit = "others" -%}
+    {%- for _c in site.data.categories -%}
+      {%- assign _en = _c.en.label | downcase -%}
+      {%- assign _id = _c.id.label | downcase -%}
+      {%- if _k == _c.key or _k == _en or _k == _id -%}{%- assign _hit = _c.key -%}{%- endif -%}
+    {%- endfor -%}
+    {{ _hit }}{%- unless forloop.last -%},{%- endunless -%}
   {%- endfor -%}
 {%- endcapture -%}
 {%- assign post_keys = _keys | split: "," | uniq -%}
