@@ -121,6 +121,21 @@ img { height: auto; }
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent; color: transparent;
 }
+/* Home pages: a bigger logo and wordmark, the whole name in one gradient
+   that slides with the cursor (blog.js sets --gx, 0 to 100, from its x). */
+.is-home .bar { padding-top: 0.55rem; padding-bottom: 0.55rem; }
+.is-home .brand { gap: 0.75rem; letter-spacing: -0.03em; }
+.is-home .brand img { width: clamp(36px, 9vw, 48px); height: auto; }
+.is-home .brand-text {
+  font-size: clamp(1.2rem, 4.6vw, 1.85rem);
+  background: linear-gradient(110deg, var(--accent) 0%, var(--accent-strong) 25%, var(--accent2) 50%, var(--accent-strong) 75%, var(--accent) 100%);
+  background-size: 250% 100%; background-position: calc(var(--gx, 50) * 1%) 50%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+  transition: background-position 0.35s ease-out;
+}
+.is-home .brand-b { background: none; }
+@media (prefers-reduced-motion: reduce) { .is-home .brand-text { transition: none; } }
 .bar-actions { display: flex; align-items: center; gap: 0.4rem; flex-shrink: 0; }
 
 /* Same control as the tool pages' header buttons (shared.css .btn-theme). */

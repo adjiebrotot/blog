@@ -8,6 +8,7 @@
       (tool.adjiebrotots.com/mdtopdf/): LaTeX through KaTeX, ```mermaid
       diagrams and charts, a copy button on code, and GitHub's > [!NOTE]
       alerts. KaTeX and Mermaid load only on a post that uses them.
+   5. On the home pages, the wordmark's gradient slides with the cursor.
    UI words come from _data/i18n.yml through data-* on <body>. */
 (function () {
   var root = document.documentElement;
@@ -171,6 +172,16 @@
     syncEmbeds();
     if (mermaidReady) drawDiagrams();
   });
+
+  /* Home pages: the wordmark's gradient follows the cursor across the page. */
+  var home = document.querySelector('.is-home .brand-text');
+  if (home && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var gx = null;
+    addEventListener('pointermove', function (e) {
+      if (gx === null) requestAnimationFrame(function () { home.style.setProperty('--gx', gx); gx = null; });
+      gx = (e.clientX / innerWidth * 100).toFixed(1);
+    }, { passive: true });
+  }
 
   syncEmbeds();
   styleAlerts();

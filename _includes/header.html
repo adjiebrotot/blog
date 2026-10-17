@@ -1,4 +1,4 @@
-<header class="site-header">
+<header class="site-header{% if page.layout == "home" or page.layout == "landing" %} is-home{% endif %}">
   <div class="container bar">
     <a class="brand" href="{{ '/' | append: lang | append: '/' | relative_url }}" aria-label="{{ site.title }}">
       <img src="{{ '/assets/img/logo.svg' | relative_url }}" alt="" width="30" height="30">
