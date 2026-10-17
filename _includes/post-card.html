@@ -1,0 +1,10 @@
+{%- assign p = include.post -%}
+<article class="post-card">
+  {% include tags.html tags=p.tags lang=include.lang %}
+  <h{{ include.level | default: 2 }} class="post-card-title"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h{{ include.level | default: 2 }}>
+  {%- if p.description %}
+  <p class="post-card-desc">{{ p.description | strip_html }}</p>
+  {%- endif %}
+  <p class="post-meta"><time datetime="{{ p.date | date_to_xmlschema }}">{% include date.html date=p.date lang=include.lang %}</time>
+    <span aria-hidden="true">·</span> {% assign _w = p.content | strip_html | number_of_words %}{{ _w | divided_by: 200 | plus: 1 }} {{ site.data.i18n[include.lang].min_read }}</p>
+</article>

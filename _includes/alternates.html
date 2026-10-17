@@ -1,0 +1,34 @@
+{%- comment -%}
+  hreflang links for a page or post that shares a `translation:` key with
+  others. Usage: {% include alternates.html doc=page docs=all_docs format="link" %}
+  format "link" writes <link> tags for <head>, "xhtml" writes sitemap entries.
+  The page marked `hreflang: x-default` (the bilingual root) is the x-default;
+  without one, the English version is.
+{%- endcomment -%}
+{%- if include.doc.translation -%}
+  {%- assign _g = include.docs | where: "translation", include.doc.translation -%}
+  {%- if _g.size > 1 -%}
+    {%- assign _xdef = nil -%}
+    {%- for _a in _g -%}
+      {%- assign _hl = _a.hreflang | default: _a.lang -%}
+      {%- if _hl == "x-default" -%}{%- assign _xdef = _a -%}{%- endif -%}
+      {%- if include.format == "xhtml" %}
+    <xhtml:link rel="alternate" hreflang="{{ _hl }}" href="{{ _a.url | absolute_url }}"/>
+      {%- else %}
+  <link rel="alternate" hreflang="{{ _hl }}" href="{{ _a.url | absolute_url }}">
+      {%- endif -%}
+    {%- endfor -%}
+    {%- unless _xdef -%}
+      {%- for _a in _g -%}
+        {%- if _a.lang == site.default_lang and _a.hreflang == nil -%}{%- assign _xdef = _a -%}{%- endif -%}
+      {%- endfor -%}
+      {%- if _xdef -%}
+        {%- if include.format == "xhtml" %}
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ _xdef.url | absolute_url }}"/>
+        {%- else %}
+  <link rel="alternate" hreflang="x-default" href="{{ _xdef.url | absolute_url }}">
+        {%- endif -%}
+      {%- endif -%}
+    {%- endunless -%}
+  {%- endif -%}
+{%- endif -%}

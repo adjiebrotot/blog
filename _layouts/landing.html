@@ -1,0 +1,33 @@
+---
+layout: default
+---
+{%- include context.html -%}
+<section class="hero-card">
+  <h1><span class="brand-a">{{ site.brand_a }}</span> <span class="brand-b">{{ site.brand_b }}</span></h1>
+  <p class="hero-tagline">{{ site.data.i18n.en.tagline }}</p>
+  <p class="hero-tagline" lang="id">{{ site.data.i18n.id.tagline }}</p>
+  <div class="lang-pick">
+    <a class="btn-primary" href="{{ '/en/' | relative_url }}" hreflang="en" lang="en">Read in English</a>
+    <a class="btn-primary" href="{{ '/id/' | relative_url }}" hreflang="id" lang="id">Baca dalam Bahasa Indonesia</a>
+  </div>
+</section>
+{{ content }}
+<div class="landing-cols">
+  {%- for _l in site.languages %}
+  {%- assign _posts = site.posts | where: "lang", _l -%}
+  {%- assign _t = site.data.i18n[_l] %}
+  <section lang="{{ _l }}" aria-labelledby="latest-{{ _l }}">
+    <h2 id="latest-{{ _l }}" class="section-title">{{ _t.latest }} <span class="lang-chip">{{ _t.short }}</span></h2>
+    {%- if _posts.size > 0 %}
+    <div class="post-list">
+      {%- for p in _posts limit: 6 %}
+      {% include post-card.html post=p lang=_l level=3 %}
+      {%- endfor %}
+    </div>
+    {%- else %}
+    <p class="empty">{{ _t.no_posts }}</p>
+    {%- endif %}
+    <p><a class="more" href="{{ '/' | append: _l | append: '/' | relative_url }}" hreflang="{{ _l }}">{{ _t.all }} <span aria-hidden="true">→</span></a></p>
+  </section>
+  {%- endfor %}
+</div>

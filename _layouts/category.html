@@ -1,0 +1,32 @@
+---
+layout: default
+---
+{%- include context.html -%}
+{%- assign _c = site.data.categories | where: "key", page.category | first -%}
+{%- assign _posts = site.posts | where: "lang", lang -%}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="{{ '/' | append: lang | append: '/' | relative_url }}">{{ t.home }}</a></li>
+    <li aria-current="page">{{ _c[lang].label }}</li>
+  </ol>
+</nav>
+<section class="hero-card hero-slim">
+  <p class="eyebrow">{{ t.posts_in }}</p>
+  <h1>{{ _c[lang].label }}</h1>
+  <p class="hero-desc">{{ _c[lang].description }}</p>
+</section>
+{%- assign _shown = 0 -%}
+{%- capture _list -%}
+  {%- for p in _posts -%}
+    {%- include post-keys.html tags=p.tags -%}
+    {%- if post_keys contains page.category -%}
+      {%- assign _shown = _shown | plus: 1 -%}
+      {% include post-card.html post=p lang=lang %}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- if _shown > 0 %}
+<div class="post-grid">{{ _list }}</div>
+{%- else %}
+<p class="empty">{{ t.no_posts }}</p>
+{%- endif %}

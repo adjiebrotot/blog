@@ -1,0 +1,27 @@
+{%- comment -%}
+  A post's rendered HTML as tidy plain text for llms-full.txt: the {:toc}
+  list dropped, scripts and tags stripped, one blank line between blocks.
+  Usage: {% include plain-text.html html=p.content %}
+{%- endcomment -%}
+{%- assign _html = include.html -%}
+{%- if _html contains '<ul id="markdown-toc">' -%}
+  {%- capture _sep %}</ul>
+
+{% endcapture -%}
+  {%- assign _parts = _html | split: '<ul id="markdown-toc">' -%}
+  {%- assign _after = _parts[1] | split: _sep -%}
+  {%- capture _html -%}{{ _parts[0] }}{% for _x in _after offset: 1 %}{{ _x }}{% unless forloop.last %}{{ _sep }}{% endunless %}{% endfor %}{%- endcapture -%}
+{%- endif -%}
+{%- capture _nl %}
+{% endcapture -%}
+{%- assign _h2 = _nl | append: "## <h2 " -%}
+{%- assign _h3 = _nl | append: "### <h3 " -%}
+{%- assign _li = _nl | append: "- " -%}
+{%- assign _text = _html | replace: _nl, " " | replace: "<h2 ", _h2 | replace: "<h3 ", _h3 | replace: "</h2>", _nl | replace: "</h3>", _nl | replace: "</p>", _nl | replace: "<li>", _li | replace: "</li>", _nl | replace: "</tr>", _nl | replace: "</td>", " | " | replace: "</th>", " | " | replace: "<br />", _nl | replace: "</blockquote>", _nl | strip_html -%}
+{%- assign _lines = _text | split: _nl -%}
+{%- for _l in _lines -%}
+  {%- assign _s = _l | normalize_whitespace | strip -%}
+  {%- if _s != "" %}{{ _s }}
+
+{% endif -%}
+{%- endfor -%}

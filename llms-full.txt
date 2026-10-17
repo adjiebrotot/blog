@@ -1,0 +1,21 @@
+---
+layout: null
+sitemap: false
+---
+# {{ site.title }}: full text of every post
+
+> {{ site.data.i18n.en.description }}
+
+Author: {{ site.author.name }}. Index of posts: {{ '/llms.txt' | absolute_url }}
+{% for p in site.posts %}
+---
+
+## {{ p.title }}
+
+URL: {{ p.url | absolute_url }}
+Language: {% if p.lang == "id" %}Indonesian{% else %}English{% endif %}
+Published: {{ p.date | date: "%Y-%m-%d" }}{% if p.last_modified_at %}, updated {{ p.last_modified_at | date: "%Y-%m-%d" }}{% endif %}
+Summary: {{ p.description | strip_html | normalize_whitespace }}
+
+{% include plain-text.html html=p.content %}
+{% endfor %}

@@ -1,0 +1,70 @@
+# Every word the layouts show, per language. Posts bring their own words.
+en:
+  locale: en_US
+  name: English
+  short: EN
+  tagline: "Notes on money, engineering and life, from the person behind Adjie Brotools."
+  description: "Adjie Brotosukmono's blog: personal finance, power and software engineering, and life between Perth and Jakarta, with interactive calculators from Adjie Brotools built into the posts."
+  skip: Skip to content
+  home: Blog
+  all: All posts
+  latest: Latest posts
+  categories: Categories
+  tools: Tools
+  main_site: adjiebrotots.com
+  by: By
+  published: Published
+  updated: Updated
+  min_read: min read
+  related: Related posts
+  read_in: Read this in English
+  switch_title: Read the blog in English
+  no_posts: "No posts here yet. Check back soon."
+  posts_in: "Posts in"
+  open_tool: Open the full tool
+  theme: Switch light or dark theme
+  feed: RSS feed
+  contents: Contents
+  about_author: "Adjie Brotosukmono is an Indonesian engineer based in Perth, Australia, who builds the free calculators at Adjie Brotools and writes here about the decisions behind them."
+  disclaimer: "Posts are personal notes written for learning and discussion. They are not financial, legal, tax or engineering advice. Check the figures for your own situation, and get professional advice before you act on them."
+  contact: "Questions, corrections or ideas for a post? Email"
+  made: "Made in Australia by an Indonesian engineer."
+  not_found_title: Page not found
+  not_found_body: "This page does not exist, or it moved. Try the latest posts instead."
+  months: [January, February, March, April, May, June, July, August, September, October, November, December]
+  date_format: "{d} {m} {y}"
+
+id:
+  locale: id_ID
+  name: Bahasa Indonesia
+  short: ID
+  tagline: "Catatan tentang keuangan, teknik, dan kehidupan, dari pembuat Adjie Brotools."
+  description: "Blog Adjie Brotosukmono: keuangan pribadi, teknik ketenagalistrikan dan perangkat lunak, serta kehidupan antara Perth dan Jakarta, lengkap dengan kalkulator interaktif dari Adjie Brotools di dalam artikel."
+  skip: Langsung ke konten
+  home: Blog
+  all: Semua artikel
+  latest: Artikel terbaru
+  categories: Kategori
+  tools: Tools
+  main_site: adjiebrotots.com
+  by: Oleh
+  published: Terbit
+  updated: Diperbarui
+  min_read: menit baca
+  related: Artikel terkait
+  read_in: Baca dalam Bahasa Indonesia
+  switch_title: Baca blog dalam Bahasa Indonesia
+  no_posts: "Belum ada artikel di sini. Nantikan segera."
+  posts_in: "Artikel dalam kategori"
+  open_tool: Buka tool lengkapnya
+  theme: Ganti tema terang atau gelap
+  feed: Umpan RSS
+  contents: Daftar isi
+  about_author: "Adjie Brotosukmono adalah insinyur asal Indonesia yang tinggal di Perth, Australia. Ia membuat kalkulator gratis di Adjie Brotools dan menulis di sini tentang keputusan di balik alat-alat tersebut."
+  disclaimer: "Artikel di sini adalah catatan pribadi untuk belajar dan berdiskusi, bukan nasihat keuangan, hukum, pajak, atau teknik. Periksa angkanya untuk kondisi Anda sendiri, dan minta nasihat profesional sebelum mengambil keputusan."
+  contact: "Ada pertanyaan, koreksi, atau ide artikel? Email ke"
+  made: "Dibuat di Australia oleh insinyur Indonesia."
+  not_found_title: Halaman tidak ditemukan
+  not_found_body: "Halaman ini tidak ada atau sudah dipindahkan. Coba lihat artikel terbaru."
+  months: [Januari, Februari, Maret, April, Mei, Juni, Juli, Agustus, September, Oktober, November, Desember]
+  date_format: "{d} {m} {y}"

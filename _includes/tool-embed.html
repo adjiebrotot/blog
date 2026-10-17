@@ -1,0 +1,7 @@
+{%- comment -%}
+  A whole tool page inside a post. For one chart, paste the tool's own
+  "Embed as HTML" code instead (Share menu on any chart).
+  {% include tool-embed.html src="https://tool.adjiebrotots.com/rentvsownhouse/" title="Rent vs Own" height="760" caption="…" %}
+{%- endcomment -%}
+{%- assign _lang = page.lang | default: site.default_lang -%}
+<figure class="tool-embed"><iframe src="{{ include.src }}" title="{{ include.title | escape }}" width="100%" height="{{ include.height | default: 760 }}" loading="lazy" style="border:0" allow="clipboard-write; fullscreen"></iframe><figcaption>{% if include.caption %}{{ include.caption }} {% endif %}<a href="{{ include.src | split: '#' | first }}">{{ site.data.i18n[_lang].open_tool }} ↗</a></figcaption></figure>

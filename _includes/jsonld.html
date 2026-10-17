@@ -1,0 +1,44 @@
+{%- comment -%}
+  Structured data: who wrote it, what it is, where it sits. The person node
+  carries the same @id on every page (and on www / tool later), so search and
+  answer engines join the blog, the tools and the main site into one author.
+{%- endcomment -%}
+{%- assign _home = "/" | append: lang | append: "/" | absolute_url -%}
+{%- capture _person -%}
+{"@type":"Person","@id":{{ site.author.id | jsonify }},"name":{{ site.author.name | jsonify }},"alternateName":{{ site.author.alternate_name | jsonify }},"url":{{ site.author.url | jsonify }},"jobTitle":{{ site.author.job_title | jsonify }},"description":{{ t.about_author | jsonify }},"sameAs":{{ site.author.same_as | jsonify }}}
+{%- endcapture -%}
+{%- capture _blog -%}
+{"@type":"Blog","@id":{{ _home | append: "#blog" | jsonify }},"name":{{ site.title | jsonify }},"description":{{ t.description | jsonify }},"url":{{ _home | jsonify }},"inLanguage":{{ lang | jsonify }},"author":{"@id":{{ site.author.id | jsonify }}},"publisher":{"@id":{{ site.author.id | jsonify }}}}
+{%- endcapture -%}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{{ _person }}
+{%- if page.layout == "post" -%}
+  {%- include post-keys.html tags=page.tags -%}
+  {%- assign _c0 = site.data.categories | where: "key", post_keys[0] | first -%}
+  {%- capture _labels -%}{%- for _k in post_keys -%}{%- assign _c = site.data.categories | where: "key", _k | first -%}{{ _c[lang].label }}{%- unless forloop.last -%}|{%- endunless -%}{%- endfor -%}{%- endcapture -%}
+  {%- assign _labels = _labels | split: "|" -%}
+  {%- if page.keywords -%}{%- assign _labels = _labels | concat: page.keywords -%}{%- endif -%}
+,{{ _blog }}
+,{"@type":"BlogPosting","@id":{{ page.url | absolute_url | append: "#article" | jsonify }},"mainEntityOfPage":{{ page.url | absolute_url | jsonify }},"url":{{ page.url | absolute_url | jsonify }},"headline":{{ page.title | jsonify }},"description":{{ page.description | strip_html | normalize_whitespace | jsonify }},"inLanguage":{{ lang | jsonify }},"datePublished":{{ page.date | date_to_xmlschema | jsonify }},"dateModified":{{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},"author":{"@id":{{ site.author.id | jsonify }}},"publisher":{"@id":{{ site.author.id | jsonify }}},"image":{{ page.image | default: site.default_image | absolute_url | jsonify }},"articleSection":{{ _c0[lang].label | jsonify }},"keywords":{{ _labels | jsonify }},"wordCount":{{ page.content | strip_html | number_of_words }},"isPartOf":{"@id":{{ _home | append: "#blog" | jsonify }}}
+  {%- if other_is_twin -%},"workTranslation":{"@id":{{ other_url | absolute_url | append: "#article" | jsonify }}}{%- endif -%}
+}
+,{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":{{ site.title | jsonify }},"item":{{ _home | jsonify }}},{"@type":"ListItem","position":2,"name":{{ _c0[lang].label | jsonify }},"item":{{ _c0[lang].url | absolute_url | jsonify }}},{"@type":"ListItem","position":3,"name":{{ page.title | jsonify }},"item":{{ page.url | absolute_url | jsonify }}}]}
+{%- elsif page.layout == "home" -%}
+  {%- assign _posts = site.posts | where: "lang", lang -%}
+,{"@type":"Blog","@id":{{ _home | append: "#blog" | jsonify }},"name":{{ site.title | jsonify }},"description":{{ t.description | jsonify }},"url":{{ _home | jsonify }},"inLanguage":{{ lang | jsonify }},"author":{"@id":{{ site.author.id | jsonify }}},"publisher":{"@id":{{ site.author.id | jsonify }}},"blogPost":[
+  {%- for p in _posts limit: 20 -%}
+{"@type":"BlogPosting","headline":{{ p.title | jsonify }},"url":{{ p.url | absolute_url | jsonify }},"datePublished":{{ p.date | date_to_xmlschema | jsonify }},"description":{{ p.description | strip_html | normalize_whitespace | jsonify }}}{%- unless forloop.last -%},{%- endunless -%}
+  {%- endfor -%}
+]}
+,{"@type":"WebSite","@id":{{ site.url | append: "/#website" | jsonify }},"name":{{ site.title | jsonify }},"url":{{ site.url | append: "/" | jsonify }},"inLanguage":["en","id"],"publisher":{"@id":{{ site.author.id | jsonify }}}}
+{%- elsif page.layout == "category" -%}
+  {%- assign _c = site.data.categories | where: "key", page.category | first -%}
+,{{ _blog }}
+,{"@type":"CollectionPage","@id":{{ page.url | absolute_url | jsonify }},"url":{{ page.url | absolute_url | jsonify }},"name":{{ _c[lang].label | append: " | " | append: site.title | jsonify }},"description":{{ _c[lang].description | jsonify }},"inLanguage":{{ lang | jsonify }},"isPartOf":{"@id":{{ _home | append: "#blog" | jsonify }}}}
+,{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":{{ site.title | jsonify }},"item":{{ _home | jsonify }}},{"@type":"ListItem","position":2,"name":{{ _c[lang].label | jsonify }},"item":{{ page.url | absolute_url | jsonify }}}]}
+{%- else -%}
+,{"@type":"WebSite","@id":{{ site.url | append: "/#website" | jsonify }},"name":{{ site.title | jsonify }},"url":{{ site.url | append: "/" | jsonify }},"description":{{ site.data.i18n.en.description | jsonify }},"inLanguage":["en","id"],"author":{"@id":{{ site.author.id | jsonify }}},"publisher":{"@id":{{ site.author.id | jsonify }}}}
+{%- endif %}
+]}
+</script>

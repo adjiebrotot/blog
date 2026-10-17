@@ -1,0 +1,17 @@
+{%- comment -%}
+  Variables every layout and include reads: lang, t (the words for that
+  language), other_lang, all_docs, and other_url, the same page in the
+  other language when one is paired by `translation:`, else that language's home.
+{%- endcomment -%}
+{%- assign lang = page.lang | default: site.default_lang -%}
+{%- assign t = site.data.i18n[lang] -%}
+{%- if lang == "en" -%}{%- assign other_lang = "id" -%}{%- else -%}{%- assign other_lang = "en" -%}{%- endif -%}
+{%- assign all_docs = site.pages | concat: site.posts -%}
+{%- assign other_url = "/" | append: other_lang | append: "/" -%}
+{%- assign other_is_twin = false -%}
+{%- if page.translation -%}
+  {%- assign _twins = all_docs | where: "translation", page.translation | where: "lang", other_lang -%}
+  {%- for _a in _twins -%}
+    {%- if _a.hreflang == nil -%}{%- assign other_url = _a.url -%}{%- assign other_is_twin = true -%}{%- endif -%}
+  {%- endfor -%}
+{%- endif -%}

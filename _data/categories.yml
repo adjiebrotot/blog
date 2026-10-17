@@ -1,0 +1,17 @@
+# The categories a post can carry in `tags:`. The key is what posts write and
+# what URLs are built from, so it never changes once posts use it; the labels
+# and descriptions can be reworded freely. A tag that is not listed here shows
+# as Others. A new category needs a row here plus one page per language
+# (en/category/<slug>.html, id/kategori/<slug>.html).
+- key: finance
+  en: { label: Finance, url: /en/category/finance/, description: "Personal finance worked through with real numbers: tax, property, investing, debt and financial independence." }
+  id: { label: Keuangan, url: /id/kategori/keuangan/, description: "Keuangan pribadi dengan hitungan nyata: pajak, properti, investasi, utang, dan kebebasan finansial." }
+- key: engineering
+  en: { label: Engineering, url: /en/category/engineering/, description: "Power systems, software and the tools behind them, explained from practice." }
+  id: { label: Teknik, url: /id/kategori/teknik/, description: "Sistem tenaga listrik, perangkat lunak, dan alat di baliknya, dijelaskan dari pengalaman langsung." }
+- key: personal
+  en: { label: Personal, url: /en/category/personal/, description: "Life, work and moving between Indonesia and Australia." }
+  id: { label: Pribadi, url: /id/kategori/pribadi/, description: "Kehidupan, pekerjaan, dan cerita antara Indonesia dan Australia." }
+- key: others
+  en: { label: Others, url: /en/category/others/, description: "Everything that does not fit the other categories." }
+  id: { label: Lainnya, url: /id/kategori/lainnya/, description: "Semua tulisan yang tidak masuk kategori lain." }

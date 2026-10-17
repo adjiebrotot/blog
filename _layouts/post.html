@@ -1,0 +1,69 @@
+---
+layout: default
+---
+{%- include context.html -%}
+{%- include post-keys.html tags=page.tags -%}
+{%- assign _c0 = site.data.categories | where: "key", post_keys[0] | first -%}
+{%- assign _words = content | strip_html | number_of_words -%}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="{{ '/' | append: lang | append: '/' | relative_url }}">{{ t.home }}</a></li>
+    <li><a href="{{ _c0[lang].url | relative_url }}">{{ _c0[lang].label }}</a></li>
+    <li aria-current="page">{{ page.title }}</li>
+  </ol>
+</nav>
+
+<article class="post">
+  <header class="post-header">
+    {% include tags.html tags=page.tags lang=lang %}
+    <h1>{{ page.title }}</h1>
+    {%- if page.description %}
+    <p class="lede">{{ page.description }}</p>
+    {%- endif %}
+    <p class="byline">
+      {{ t.by }} <a rel="author" href="{{ site.author.url }}">{{ site.author.name }}</a>
+      <span aria-hidden="true">·</span>
+      <span>{{ t.published }} <time datetime="{{ page.date | date_to_xmlschema }}">{% include date.html date=page.date lang=lang %}</time></span>
+      {%- if page.last_modified_at %}
+      <span aria-hidden="true">·</span>
+      <span>{{ t.updated }} <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{% include date.html date=page.last_modified_at lang=lang %}</time></span>
+      {%- endif %}
+      <span aria-hidden="true">·</span>
+      <span>{{ _words | divided_by: 200 | plus: 1 }} {{ t.min_read }}</span>
+    </p>
+    {%- if other_is_twin %}
+    <p class="also-in"><a href="{{ other_url | relative_url }}" hreflang="{{ other_lang }}" lang="{{ other_lang }}">{{ site.data.i18n[other_lang].read_in }} <span aria-hidden="true">→</span></a></p>
+    {%- endif %}
+  </header>
+
+  <div class="prose">
+{{ content }}
+  </div>
+
+  <footer class="post-footer">
+    <div class="author-box">
+      <img src="{{ '/assets/img/logo.svg' | relative_url }}" alt="" width="44" height="44" loading="lazy">
+      <p><strong><a rel="author" href="{{ site.author.url }}">{{ site.author.name }}</a></strong><br>{{ t.about_author }}</p>
+    </div>
+  </footer>
+</article>
+
+{%- assign _same = site.posts | where: "lang", lang -%}
+{%- assign _shown = 0 -%}
+{%- capture _related -%}
+  {%- for p in _same -%}
+    {%- if p.url != page.url and _shown < 3 -%}
+      {%- include post-keys.html tags=p.tags -%}
+      {%- if post_keys contains _c0.key -%}
+        {%- assign _shown = _shown | plus: 1 -%}
+        {% include post-card.html post=p lang=lang level=3 %}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- if _shown > 0 %}
+<section class="related" aria-labelledby="related-heading">
+  <h2 id="related-heading">{{ t.related }}</h2>
+  <div class="post-grid">{{ _related }}</div>
+</section>
+{%- endif %}

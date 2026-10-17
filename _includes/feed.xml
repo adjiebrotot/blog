@@ -1,0 +1,31 @@
+{%- assign _l = include.lang -%}
+{%- assign _t = site.data.i18n[_l] -%}
+{%- assign _posts = site.posts | where: "lang", _l -%}
+{%- assign _self = "/" | append: _l | append: "/feed.xml" | absolute_url -%}
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ _l }}">
+  <title>{{ site.title | xml_escape }} ({{ _t.name }})</title>
+  <subtitle>{{ _t.description | xml_escape }}</subtitle>
+  <link href="{{ _self }}" rel="self" type="application/atom+xml"/>
+  <link href="{{ '/' | append: _l | append: '/' | absolute_url }}" rel="alternate" type="text/html" hreflang="{{ _l }}"/>
+  <id>{{ _self }}</id>
+  <updated>{% if _posts.size > 0 %}{{ _posts.first.last_modified_at | default: _posts.first.date | date_to_xmlschema }}{% else %}{{ site.time | date_to_xmlschema }}{% endif %}</updated>
+  <author><name>{{ site.author.name | xml_escape }}</name><uri>{{ site.author.url }}</uri></author>
+  <icon>{{ '/assets/img/logo.png' | absolute_url }}</icon>
+  {%- for p in _posts limit: 30 %}
+  <entry>
+    <title type="html">{{ p.title | xml_escape }}</title>
+    <link href="{{ p.url | absolute_url }}" rel="alternate" type="text/html"/>
+    <id>{{ p.url | absolute_url }}</id>
+    <published>{{ p.date | date_to_xmlschema }}</published>
+    <updated>{{ p.last_modified_at | default: p.date | date_to_xmlschema }}</updated>
+    {%- include post-keys.html tags=p.tags -%}
+    {%- for _k in post_keys -%}
+    {%- assign _c = site.data.categories | where: "key", _k | first %}
+    <category term="{{ _k }}" label="{{ _c[_l].label | xml_escape }}"/>
+    {%- endfor %}
+    <summary type="html">{{ p.description | xml_escape }}</summary>
+    <content type="html" xml:base="{{ p.url | absolute_url }}">{{ p.content | xml_escape }}</content>
+  </entry>
+  {%- endfor %}
+</feed>

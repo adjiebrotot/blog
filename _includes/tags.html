@@ -1,0 +1,8 @@
+{%- comment -%} Category pills for a post. Usage: {% include tags.html tags=post.tags lang=lang %} {%- endcomment -%}
+{%- include post-keys.html tags=include.tags -%}
+<ul class="post-tags">
+  {%- for _k in post_keys -%}
+  {%- assign _c = site.data.categories | where: "key", _k | first -%}
+  <li><a href="{{ _c[include.lang].url | relative_url }}" rel="tag">{{ _c[include.lang].label }}</a></li>
+  {%- endfor -%}
+</ul>

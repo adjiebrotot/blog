@@ -1,0 +1,77 @@
+# Adjie Brotot Blog: built by GitHub Pages' own Jekyll ("Deploy from branch").
+# Only plugins GitHub Pages ships are used, so there is no build step to run.
+
+title: Adjie Brotot Blog
+# No GitHub Pages default theme (primer): every layout and style is our own.
+theme: null
+# The brand in the header, split like the tool site's "Adjie Brotools".
+brand_a: Adjie
+brand_b: Brotot Blog
+
+url: "https://blog.adjiebrotots.com"
+baseurl: ""
+repository: adjiebrotot/blog
+timezone: Australia/Perth
+
+languages: [en, id]
+default_lang: en
+
+author:
+  # One @id for the person across www, tool and blog, so search engines and
+  # answer engines join them into one entity.
+  id: "https://www.adjiebrotots.com/#person"
+  name: Adjie Brotosukmono
+  alternate_name: adjiebrotot
+  email: adjiebrotots@gmail.com
+  url: "https://www.adjiebrotots.com/"
+  job_title: Engineer
+  same_as:
+    - "https://www.adjiebrotots.com/"
+    - "https://tool.adjiebrotots.com/"
+
+links:
+  home: "https://www.adjiebrotots.com/"
+  tools: "https://tool.adjiebrotots.com/"
+
+# Social card when a post sets no image of its own.
+default_image: /assets/img/logo.png
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  toc_levels: 2..3
+  syntax_highlighter: rouge
+  # Raw HTML (iframes, embed scripts, figures) passes through untouched.
+  parse_block_html: false
+
+permalink: pretty
+
+# Whitelisted by GitHub Pages. Lets a post keep an old URL alive:
+#   redirect_from: [/en/old-slug/]
+plugins:
+  - jekyll-redirect-from
+
+defaults:
+  # A post's URL is its language folder plus its slug, the filename without the
+  # date: en/_posts/2026-10-17-my-post.md -> /en/my-post/
+  - scope: { path: "en", type: posts }
+    values: { lang: en, layout: post, permalink: "/en/:slug/" }
+  - scope: { path: "id", type: posts }
+    values: { lang: id, layout: post, permalink: "/id/:slug/" }
+  - scope: { path: "en" }
+    values: { lang: en }
+  - scope: { path: "id" }
+    values: { lang: id }
+
+exclude:
+  - README.md
+  - CLAUDE.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - .bundle
+  - .jekyll-cache
