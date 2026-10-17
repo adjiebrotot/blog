@@ -2,15 +2,6 @@
 layout: default
 ---
 {%- include context.html -%}
-<section class="hero-card">
-  <h1><span class="brand-a">{{ site.brand_a }}</span> <span class="brand-b">{{ site.brand_b }}</span></h1>
-  <p class="hero-tagline">{{ site.data.i18n.en.tagline }}</p>
-  <p class="hero-tagline" lang="id">{{ site.data.i18n.id.tagline }}</p>
-  <div class="lang-pick">
-    <a class="btn-primary" href="{{ '/en/' | relative_url }}" hreflang="en" lang="en">Read in English</a>
-    <a class="btn-primary" href="{{ '/id/' | relative_url }}" hreflang="id" lang="id">Baca dalam Bahasa Indonesia</a>
-  </div>
-</section>
 {{ content }}
 <div class="landing-cols">
   {%- for _l in site.languages %}

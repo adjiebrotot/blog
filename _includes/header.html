@@ -1,25 +1,39 @@
-<header class="site-header">
+{%- assign _is_home = false -%}
+{%- if page.layout == "home" or page.layout == "landing" -%}{%- assign _is_home = true -%}{%- endif -%}
+<header class="site-header{% if _is_home %} is-home{% endif %}">
   <div class="container bar">
+    {%- unless _is_home %}
     <a class="brand" href="{{ '/' | append: lang | append: '/' | relative_url }}" aria-label="{{ site.title }}">
       <img src="{{ '/assets/img/logo.svg' | relative_url }}" alt="" width="30" height="30">
       <span class="brand-text"><span class="brand-a">{{ site.brand_a }}</span> <span class="brand-b">{{ site.brand_b }}</span></span>
     </a>
+    {%- endunless %}
     <div class="bar-actions">
-      <a class="btn-theme" href="{{ site.links.tools }}" title="Adjie Brotools">{{ t.tools }} <span aria-hidden="true">↗</span></a>
+      {%- comment -%} Only when this exact page also exists in the other language. {%- endcomment -%}
+      {%- if other_is_twin %}
       <a class="btn-theme" id="langToggle" href="{{ other_url | relative_url }}" hreflang="{{ other_lang }}" lang="{{ other_lang }}"
-         title="{% if other_is_twin %}{{ site.data.i18n[other_lang].read_in }}{% else %}{{ site.data.i18n[other_lang].switch_title }}{% endif %}">{{ site.data.i18n[other_lang].short }}</a>
+         title="{{ site.data.i18n[other_lang].read_in }}">
+        <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+        {{ site.data.i18n[other_lang].short }}</a>
+      {%- endif %}
       <button class="btn-theme btn-icon" id="themeToggle" type="button" aria-label="{{ t.theme }}" title="{{ t.theme }}">
         <svg class="ico-sun" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
         <svg class="ico-moon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
       </button>
     </div>
   </div>
-  <nav class="container cat-nav" aria-label="{{ t.categories }}">
-    <ul>
-      <li><a href="{{ '/' | append: lang | append: '/' | relative_url }}"{% if page.layout == "home" %} aria-current="page"{% endif %}>{{ t.all }}</a></li>
-      {%- for _c in site.data.categories %}
-      <li><a href="{{ _c[lang].url | relative_url }}"{% if page.category == _c.key %} aria-current="page"{% endif %}>{{ _c[lang].label }}</a></li>
-      {%- endfor %}
-    </ul>
-  </nav>
 </header>
+{%- if _is_home %}
+<h1 class="container brand-hero">
+  <img src="{{ '/assets/img/logo.svg' | relative_url }}" alt="" width="64" height="64">
+  <span class="brand-text"><span class="brand-a">{{ site.brand_a }}</span> <span class="brand-b">{{ site.brand_b }}</span></span>
+</h1>
+{%- endif %}
+<nav class="container cat-nav" aria-label="{{ t.categories }}">
+  <ul>
+    <li><a href="{{ '/' | append: lang | append: '/' | relative_url }}"{% if page.layout == "home" %} aria-current="page"{% endif %}>{{ t.all }}</a></li>
+    {%- for _c in site.data.categories %}
+    <li><a href="{{ _c[lang].url | relative_url }}"{% if page.category == _c.key %} aria-current="page"{% endif %}>{{ _c[lang].label }}</a></li>
+    {%- endfor %}
+  </ul>
+</nav>

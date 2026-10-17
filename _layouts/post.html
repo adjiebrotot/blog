@@ -4,6 +4,7 @@ layout: default
 {%- include context.html -%}
 {%- include post-keys.html tags=page.tags -%}
 {%- assign _c0 = site.data.categories | where: "key", post_keys[0] | first -%}
+{%- assign _my_keys = post_keys -%}
 {%- assign _words = content | strip_html | number_of_words -%}
 <nav class="breadcrumbs" aria-label="Breadcrumb">
   <ol>
@@ -54,7 +55,9 @@ layout: default
   {%- for p in _same -%}
     {%- if p.url != page.url and _shown < 3 -%}
       {%- include post-keys.html tags=p.tags -%}
-      {%- if post_keys contains _c0.key -%}
+      {%- assign _shared = false -%}
+      {%- for _k in post_keys -%}{%- if _my_keys contains _k -%}{%- assign _shared = true -%}{%- endif -%}{%- endfor -%}
+      {%- if _shared -%}
         {%- assign _shown = _shown | plus: 1 -%}
         {% include post-card.html post=p lang=lang level=3 %}
       {%- endif -%}

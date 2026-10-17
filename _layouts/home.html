@@ -3,11 +3,6 @@ layout: default
 ---
 {%- include context.html -%}
 {%- assign _posts = site.posts | where: "lang", lang -%}
-<section class="hero-card">
-  <h1><span class="brand-a">{{ site.brand_a }}</span> <span class="brand-b">{{ site.brand_b }}</span></h1>
-  <p class="hero-tagline">{{ t.tagline }}</p>
-  <p class="hero-desc">{{ t.description }}</p>
-</section>
 {{ content }}
 <section aria-labelledby="latest-heading">
   <h2 id="latest-heading" class="section-title">{{ t.latest }}</h2>

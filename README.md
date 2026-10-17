@@ -37,7 +37,10 @@ publishes it. The look comes from the design system of
 
 ### Categories
 
-`tags:` takes the keys `finance`, `engineering`, `personal` and `others`. Each one shows as
+`tags:` takes the keys `finance`, `engineering`, `personal` and `others`, and a post can
+carry several: `tags: [finance, engineering]` shows both pills, lists the post on both category
+pages, and the first one is the breadcrumb. A label works too, in either language and any case
+(`Finance`, `Keuangan`). Each key shows as
 Finance / Keuangan, Engineering / Teknik, Personal / Pribadi or Others / Lainnya, and has a
 page per language (`/en/category/finance/`, `/id/kategori/keuangan/`). A misspelt or unknown
 tag shows as Others, so it never breaks the site. Labels and descriptions live in
@@ -51,10 +54,10 @@ both the same value, and the site then:
 
 - tells Google they are language versions of each other (`hreflang`), so each reader is shown
   the right one
-- links each post to the other one ("Baca dalam Bahasa Indonesia →") and points the EN/ID
-  button at it
+- links each post to the other one ("Baca dalam Bahasa Indonesia →") and shows the EN/ID
+  button in the floating bar, pointing at it
 
-Without `translation:`, the EN/ID button goes to the other language's home page.
+Without `translation:`, the post has no EN/ID button, because there is nothing to switch to.
 
 ### Embedding a tool
 
@@ -70,6 +73,43 @@ follows the blog's light or dark theme.
 ```
 
 If pasted code ever contains `{{` or `{%`, wrap it in `{% raw %}` … `{% endraw %}`.
+
+### Code, maths, diagrams and charts
+
+The same Markdown the tool's [Markdown Reader](https://tool.adjiebrotots.com/mdtopdf/) reads.
+KaTeX and Mermaid load only on a post that uses them.
+
+- **Code:** a fenced block with its language (` ```python `, ` ```js `, ` ```yaml `…) is
+  highlighted when the site builds, in both themes, with a Copy button.
+- **Maths (LaTeX):** `$$E = mc^2$$` inside a sentence is inline. A `$$` block on its own lines
+  is a centred equation:
+
+  ```
+  $$
+  \int_0^\infty e^{-x^2}\,dx = \frac{\sqrt{\pi}}{2}
+  $$
+  ```
+
+  A single `$` stays a dollar sign, so prices like $500 are safe.
+- **Diagrams and charts:** a ` ```mermaid ` block draws a
+  [Mermaid](https://mermaid.js.org/intro/) diagram: `flowchart`, `sequenceDiagram`, `gantt`,
+  `pie` or `xychart-beta` (bars and lines). Colours come from the blog's theme and the tool's
+  chart palette, and redraw when the reader switches theme.
+
+  ````
+  ```mermaid
+  xychart-beta
+    title "Net wealth"
+    x-axis [Y1, Y2, Y3, Y4, Y5]
+    y-axis "AUD k" 0 --> 200
+    bar [20, 45, 80, 120, 170]
+    line [30, 50, 70, 95, 120]
+  ```
+  ````
+- **Footnotes:** `text[^1]`, then `[^1]: The note.` anywhere below.
+- **Task lists:** `- [ ] to do` and `- [x] done`.
+- **Alerts:** GitHub's `> [!NOTE]`, `> [!TIP]`, `> [!IMPORTANT]`, `> [!WARNING]` and
+  `> [!CAUTION]` on the first line of a quote.
 
 ### Handy extras
 
@@ -130,5 +170,5 @@ complains about US-ASCII, run with `LANG=C.UTF-8`.
 | `_config.yml` | Site name, author, links, URL rules |
 | `_layouts/`, `_includes/` | Page templates, SEO and structured data |
 | `assets/css/blog.css` | Design tokens (copied from the tool's `dark.css` / `light.css`) and styles |
-| `assets/js/blog.js` | Theme button and embed theme sync |
+| `assets/js/blog.js` | Theme button, embed theme sync, maths, diagrams, code copy, alerts |
 | `en/category/`, `id/kategori/` | One small file per category page |
