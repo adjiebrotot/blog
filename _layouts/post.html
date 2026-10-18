@@ -49,6 +49,8 @@ layout: default
   </footer>
 </article>
 
+{% include comments.html %}
+
 {%- assign _same = site.posts | where: "lang", lang -%}
 {%- assign _shown = 0 -%}
 {%- capture _related -%}

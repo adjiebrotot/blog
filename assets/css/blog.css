@@ -374,6 +374,11 @@ main { padding: 1rem 0 3rem; }
 .related { max-width: calc(var(--measure) + 5rem); margin: 2.5rem auto 0; }
 .related h2 { font-size: 1.25rem; margin: 0 0 1rem; }
 
+.comments { max-width: calc(var(--measure) + 5rem); margin: 2.5rem auto 0; }
+.comments h2 { font-size: 1.25rem; margin: 0 0 1rem; }
+.comments .giscus { min-height: 12rem; }
+.comments noscript p { color: var(--muted); }
+
 /* ── Footer ───────────────────────────────────────────────────────────── */
 .site-footer { padding: 0.5rem 1rem 2.25rem; text-align: center; color: var(--muted); font-size: 0.88rem; }
 .site-footer p { margin: 0; }
@@ -402,7 +407,7 @@ main { padding: 1rem 0 3rem; }
 }
 
 @media print {
-  .site-header, .cat-nav, .brand-hero, .site-footer, .related, .breadcrumbs, .also-in, .code-copy { display: none; }
+  .site-header, .cat-nav, .brand-hero, .site-footer, .related, .comments, .breadcrumbs, .also-in, .code-copy { display: none; }
   body { background: #fff; color: #000; }
   .post { box-shadow: none; border: 0; padding: 0; }
 }

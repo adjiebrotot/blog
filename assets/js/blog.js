@@ -9,6 +9,8 @@
       diagrams and charts, a copy button on code, and GitHub's > [!NOTE]
       alerts. KaTeX and Mermaid load only on a post that uses them.
    5. On the home pages, the wordmark's gradient slides with the cursor.
+   6. Comments (giscus) load only when the reader nears them, and follow the
+      theme button.
    UI words come from _data/i18n.yml through data-* on <body>. */
 (function () {
   var root = document.documentElement;
@@ -163,6 +165,32 @@
     });
   }
 
+  /* ── Comments: giscus.app is not contacted until the comments section is
+     within a screen of view, so it costs the post nothing on load. ── */
+  var giscusBox = document.querySelector('.comments .giscus');
+  function giscusTheme() { return giscusBox.dataset['theme' + (theme() === 'light' ? 'Light' : 'Dark')]; }
+  function loadComments() {
+    var d = giscusBox.dataset, s = document.createElement('script');
+    s.src = 'https://giscus.app/client.js'; s.async = true; s.crossOrigin = 'anonymous';
+    [['repo', d.repo], ['repo-id', d.repoId], ['category', d.category], ['category-id', d.categoryId],
+     ['mapping', 'specific'], ['term', d.term], ['strict', '1'], ['reactions-enabled', '1'],
+     ['emit-metadata', '0'], ['input-position', 'bottom'], ['lang', d.lang], ['theme', giscusTheme()]
+    ].forEach(function (kv) { s.setAttribute('data-' + kv[0], kv[1]); });
+    giscusBox.appendChild(s);
+  }
+  function syncComments() {
+    var f = giscusBox && giscusBox.querySelector('iframe.giscus-frame');
+    if (f) f.contentWindow.postMessage({ giscus: { setConfig: { theme: giscusTheme() } } }, 'https://giscus.app');
+  }
+  if (giscusBox) {
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) { io.disconnect(); loadComments(); }
+      }, { rootMargin: '0px 0px 100% 0px' });
+      io.observe(giscusBox);
+    } else loadComments();
+  }
+
   var btn = document.getElementById('themeToggle');
   if (btn) btn.addEventListener('click', function () {
     var next = theme() === 'light' ? 'dark' : 'light';
@@ -170,6 +198,7 @@
     root.classList.add(next);
     try { localStorage.setItem('blog-theme', next); } catch (e) {}
     syncEmbeds();
+    syncComments();
     if (mermaidReady) drawDiagrams();
   });
 
