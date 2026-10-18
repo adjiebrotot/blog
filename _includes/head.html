@@ -3,7 +3,11 @@
 {%- else -%}
   {%- capture seo_title -%}{{ site.title }}: {{ t.tagline }}{%- endcapture -%}
 {%- endif -%}
-{%- assign seo_desc = page.description | default: t.description | strip_html | normalize_whitespace | strip -%}
+{%- if page.layout == "category" -%}
+  {%- assign _cat = site.data.categories | where: "key", page.category | first -%}
+  {%- assign seo_desc = _cat[lang].description -%}
+{%- endif -%}
+{%- assign seo_desc = page.description | default: seo_desc | default: t.description | strip_html | normalize_whitespace | strip -%}
 {%- assign seo_image = page.image | default: site.default_image | absolute_url -%}
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">

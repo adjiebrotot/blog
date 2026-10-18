@@ -29,11 +29,25 @@
   <span class="brand-text"><span class="brand-a">{{ site.brand_a }}</span> <span class="brand-b">{{ site.brand_b }}</span></span>
 </h1>
 {%- endif %}
+{%- comment -%}
+  Category pills: only on the home, landing and category pages, and only for
+  categories that have at least one post in this language. Driven by
+  _data/categories.yml, so a new category shows up once it has a post.
+{%- endcomment -%}
+{%- if _is_home or page.layout == "category" -%}
+  {%- capture _used -%}
+    {%- assign _lp = site.posts | where: "lang", lang -%}
+    {%- for _p in _lp -%}{%- include post-keys.html tags=_p.tags -%},{{ post_keys | join: "," }}{%- endfor -%}
+  {%- endcapture -%}
+  {%- assign _used = _used | split: "," | uniq -%}
+  {%- if _used.size > 0 %}
 <nav class="container cat-nav" aria-label="{{ t.categories }}">
   <ul>
     <li><a href="{{ '/' | append: lang | append: '/' | relative_url }}"{% if page.layout == "home" %} aria-current="page"{% endif %}>{{ t.all }}</a></li>
-    {%- for _c in site.data.categories %}
+    {%- for _c in site.data.categories %}{% if _used contains _c.key %}
     <li><a href="{{ _c[lang].url | relative_url }}"{% if page.category == _c.key %} aria-current="page"{% endif %}>{{ _c[lang].label }}</a></li>
-    {%- endfor %}
+    {%- endif %}{% endfor %}
   </ul>
 </nav>
+  {%- endif -%}
+{%- endif %}
