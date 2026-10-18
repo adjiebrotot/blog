@@ -1,0 +1,21 @@
+{%- comment -%}
+  Comments through giscus (GitHub Discussions), moderated on GitHub.
+  Shows only once site.comments has repo_id and category_id, and not on a post
+  that sets `comments: false`. Nothing loads from giscus.app until the reader
+  scrolls near this section (blog.js), so the post itself stays as fast as before.
+  A thread is keyed by language and `translation:` (en/rent-vs-buy), so it
+  stays with the post even if its URL ever changes; without `translation:`,
+  by language and slug.
+{%- endcomment -%}
+{%- assign _c = site.comments -%}
+{%- if _c.repo_id and _c.repo_id != "" and _c.category_id and _c.category_id != "" and page.comments != false -%}
+{%- if page.translation -%}{%- assign _term = lang | append: "/" | append: page.translation -%}{%- else -%}{%- assign _term = lang | append: "/" | append: page.slug -%}{%- endif %}
+<section class="comments" id="comments" aria-labelledby="comments-heading">
+  <h2 id="comments-heading">{{ t.comments }}</h2>
+  <div class="giscus" data-repo="{{ _c.repo }}" data-repo-id="{{ _c.repo_id }}"
+    data-category="{{ _c.category }}" data-category-id="{{ _c.category_id }}"
+    data-term="{{ _term }}" data-lang="{{ lang }}"
+    data-theme-light="{{ _c.theme_light }}" data-theme-dark="{{ _c.theme_dark }}"></div>
+  <noscript><p>{{ t.comments_noscript }}</p></noscript>
+</section>
+{%- endif -%}

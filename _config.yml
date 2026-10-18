@@ -49,6 +49,18 @@ kramdown:
 
 permalink: pretty
 
+# Comments under each post, through giscus (GitHub Discussions). Off until
+# repo_id and category_id are filled in: get them at https://giscus.app after
+# installing the giscus app on the repo and turning on Discussions. Moderate on
+# GitHub: delete or hide a comment, lock a thread, block a user.
+comments:
+  repo: ""            # e.g. adjiebrotot/blog-comments (must be public)
+  repo_id: ""
+  category: Announcements   # an Announcements-type category: only giscus opens threads
+  category_id: ""
+  theme_light: light
+  theme_dark: transparent_dark
+
 # Whitelisted by GitHub Pages. Lets a post keep an old URL alive:
 #   redirect_from: [/en/old-slug/]
 plugins:

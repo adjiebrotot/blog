@@ -23,6 +23,8 @@ en:
   copy: Copy
   copied: Copied
   contents: Contents
+  comments: Comments
+  comments_noscript: "Comments need JavaScript and a GitHub account."
   about_author: "Adjie Brotosukmono is an Indonesian engineer based in Perth, Australia, who builds the free calculators at Adjie Brotools and writes here about the decisions behind them."
   not_found_title: Page not found
   not_found_body: "This page does not exist, or it moved. Try the latest posts instead."
@@ -53,6 +55,8 @@ id:
   copy: Salin
   copied: Tersalin
   contents: Daftar isi
+  comments: Komentar
+  comments_noscript: "Komentar memerlukan JavaScript dan akun GitHub."
   about_author: "Adjie Brotosukmono adalah insinyur asal Indonesia yang tinggal di Perth, Australia. Ia membuat kalkulator gratis di Adjie Brotools dan menulis di sini tentang keputusan di balik alat-alat tersebut."
   not_found_title: Halaman tidak ditemukan
   not_found_body: "Halaman ini tidak ada atau sudah dipindahkan. Coba lihat artikel terbaru."

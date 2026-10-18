@@ -160,6 +160,36 @@ complains about US-ASCII, run with `LANG=C.UTF-8`.
 5. In Google Search Console (a Domain property for `adjiebrotots.com` covers www, tool and
    blog) and Bing Webmaster Tools, submit `https://blog.adjiebrotots.com/sitemap.xml`.
 
+## Comments (one-time setup, then moderation)
+
+Comments run on [giscus](https://giscus.app): each post's thread is a GitHub Discussion.
+They stay off until `comments:` in `_config.yml` is filled in.
+
+1. Create a **public** repo for them, e.g. `adjiebrotot/blog-comments`, and turn on
+   **Settings → Features → Discussions**.
+2. Install the [giscus app](https://github.com/apps/giscus) on that repo only.
+3. On [giscus.app](https://giscus.app), enter the repo and pick the **Announcements**
+   category (only you and giscus can open threads there). Copy `data-repo-id` and
+   `data-category-id` into `comments:` in `_config.yml`.
+4. Watch the repo with **Watch → Custom → Discussions** to get an email for every comment.
+
+Moderating, all on GitHub:
+
+- **Remove a comment:** its `…` menu → **Delete**, or **Hide** with a reason (spam, abuse,
+  off-topic) to collapse it.
+- **Stop a person:** **Settings → Blocked users** on your account. They can no longer
+  comment on any of your repos.
+- **Close one thread:** **Lock conversation** on that Discussion.
+- **A spam wave:** the repo's **Settings → Moderation options → Interaction limits** pauses
+  comments from new accounts for 24 hours up to 6 months.
+
+Comments go live as they are written; you remove bad ones afterwards. Commenters need a
+GitHub account. A thread belongs to a language and the post's `translation:` key (or its
+slug when it has none), so English and Indonesian comments stay apart. Set
+`comments: false` in a post's front matter to leave the section off that post. The page
+doesn't contact giscus.app until the reader scrolls near the comments, so a post loads as
+fast as without them.
+
 ## Files
 
 | Path | What it is |
@@ -170,5 +200,5 @@ complains about US-ASCII, run with `LANG=C.UTF-8`.
 | `_config.yml` | Site name, author, links, URL rules |
 | `_layouts/`, `_includes/` | Page templates, SEO and structured data |
 | `assets/css/blog.css` | Design tokens (copied from the tool's `dark.css` / `light.css`) and styles |
-| `assets/js/blog.js` | Theme button, embed theme sync, maths, diagrams, code copy, alerts |
+| `assets/js/blog.js` | Theme button, embed theme sync, maths, diagrams, code copy, alerts, comments |
 | `en/category/`, `id/kategori/` | One small file per category page |
