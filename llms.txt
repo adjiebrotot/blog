@@ -6,7 +6,7 @@ sitemap: false
 
 > {{ site.data.i18n.en.description }}
 
-Author: {{ site.author.name }} ({{ site.author.alternate_name }}), {{ site.author.job_title | downcase }} based in Perth, Australia. Main site: {{ site.links.home }}. Free calculators and visualisers: {{ site.links.tools }} (many posts embed them live).
+Author: {{ site.author.name }} ({{ site.author.alternate_name }}), an Indonesian {{ site.author.job_title | downcase }} and power system engineer at Mott MacDonald in Perth, Australia. Who the author is: {{ site.links.about }} (for LLMs: {{ site.links.home }}llms.txt). Free calculators and visualisers: {{ site.links.tools }} (many posts embed them live).
 
 The blog is in two languages. English posts live under {{ '/en/' | absolute_url }} and Indonesian (Bahasa Indonesia) posts under {{ '/id/' | absolute_url }}. Posts in the two languages are written separately; when one covers the same topic as another, the pages link to each other with hreflang. Categories: {% for c in site.data.categories %}{{ c.en.label }} ({{ c.id.label }}){% unless forloop.last %}, {% endunless %}{% endfor %}.
 

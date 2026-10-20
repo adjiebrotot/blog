@@ -1,3 +1,8 @@
 <footer class="site-footer">
-  <p>© {{ site.time | date: "%Y" }} {{ t.footer_by }} {{ site.author.name }}</p>
+  <nav aria-label="{{ t.elsewhere }}">
+    <a href="{{ site.links.home }}">adjiebrotots.com</a>
+    <a href="{{ site.links.about }}" rel="author">{{ t.about_me }}</a>
+    <a href="{{ site.links.tools }}">Adjie Brotools</a>
+  </nav>
+  <p>© {{ site.time | date: "%Y" }} {{ t.footer_by }} <a href="{{ site.links.about }}" rel="author">{{ site.author.name }}</a></p>
 </footer>
