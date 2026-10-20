@@ -24,13 +24,17 @@ author:
   alternate_name: adjiebrotot
   email: adjiebrotots@gmail.com
   url: "https://www.adjiebrotots.com/"
-  job_title: Engineer
+  job_title: Energy Economics Consultant
+  # Profiles of the same person, as on www.adjiebrotots.com.
   same_as:
-    - "https://www.adjiebrotots.com/"
-    - "https://tool.adjiebrotots.com/"
+    - "https://www.linkedin.com/in/adjiebrotot/"
+    - "https://www.instagram.com/adjiebrotot/"
+    - "https://github.com/adjiebrotot"
+    - "https://www.youtube.com/c/adjiebrotots"
 
 links:
   home: "https://www.adjiebrotots.com/"
+  about: "https://www.adjiebrotots.com/about/"
   tools: "https://tool.adjiebrotots.com/"
 
 # Social card when a post sets no image of its own.
