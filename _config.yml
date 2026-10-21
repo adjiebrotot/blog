@@ -21,10 +21,15 @@ author:
   # answer engines join them into one entity.
   id: "https://www.adjiebrotots.com/#person"
   name: Adjie Brotosukmono
-  alternate_name: adjiebrotot
+  # The same names, photo and facts as the person node on www and tool.
+  alternate_name: [Adjie, Harso Adjie Brotosukmono, Adjie Brotot, adjiebrotot]
   email: adjiebrotots@gmail.com
   url: "https://www.adjiebrotots.com/"
+  image: "https://www.adjiebrotots.com/assets/img/adjie.jpg"
   job_title: Senior Economics Consultant
+  works_for: { name: Mott MacDonald, url: "https://www.mottmac.com/" }
+  alumni_of: { name: Institut Teknologi Bandung, alternate_name: ITB, url: "https://www.itb.ac.id/" }
+  nationality: Indonesia
   # Profiles of the same person, as on www.adjiebrotots.com.
   same_as:
     - "https://www.linkedin.com/in/adjiebrotot/"

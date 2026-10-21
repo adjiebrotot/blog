@@ -14,6 +14,7 @@
   <title>{{ seo_title | strip_html | normalize_whitespace | escape }}</title>
   <meta name="description" content="{{ seo_desc | escape }}">
   <meta name="author" content="{{ site.author.name }}">
+  <link rel="author" href="{{ site.links.about }}">
   <meta name="robots" content="{% if page.noindex %}noindex, follow{% else %}index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1{% endif %}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   {%- include alternates.html doc=page docs=all_docs format="link" %}

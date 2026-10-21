@@ -3,7 +3,7 @@ en:
   locale: en_US
   name: English
   short: EN
-  tagline: "Notes on money, engineering and life, from the person behind Adjie Brotools."
+  tagline: "Notes on money, engineering and life by Adjie Brotosukmono"
   description: "Adjie Brotosukmono's blog: personal finance, power and software engineering, and life between Perth and Jakarta, with interactive calculators from Adjie Brotools built into the posts."
   skip: Skip to content
   home: Blog
@@ -37,7 +37,7 @@ id:
   locale: id_ID
   name: Bahasa Indonesia
   short: ID
-  tagline: "Catatan tentang keuangan, teknik, dan kehidupan, dari pembuat Adjie Brotools."
+  tagline: "Catatan keuangan, teknik, dan kehidupan oleh Adjie Brotosukmono"
   description: "Blog Adjie Brotosukmono: keuangan pribadi, teknik ketenagalistrikan dan perangkat lunak, serta kehidupan antara Perth dan Jakarta, lengkap dengan kalkulator interaktif dari Adjie Brotools di dalam artikel."
   skip: Langsung ke konten
   home: Blog

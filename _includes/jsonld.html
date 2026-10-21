@@ -1,11 +1,11 @@
 {%- comment -%}
   Structured data: who wrote it, what it is, where it sits. The person node
-  carries the same @id on every page (and on www / tool later), so search and
+  carries the same @id on every page, and on www and tool, so search and
   answer engines join the blog, the tools and the main site into one author.
 {%- endcomment -%}
 {%- assign _home = "/" | append: lang | append: "/" | absolute_url -%}
 {%- capture _person -%}
-{"@type":"Person","@id":{{ site.author.id | jsonify }},"name":{{ site.author.name | jsonify }},"alternateName":{{ site.author.alternate_name | jsonify }},"url":{{ site.author.url | jsonify }},"jobTitle":{{ site.author.job_title | jsonify }},"description":{{ t.about_author | jsonify }},"sameAs":{{ site.author.same_as | jsonify }}}
+{"@type":"Person","@id":{{ site.author.id | jsonify }},"name":{{ site.author.name | jsonify }},"alternateName":{{ site.author.alternate_name | jsonify }},"url":{{ site.author.url | jsonify }},"mainEntityOfPage":{{ site.links.about | jsonify }},"image":{{ site.author.image | jsonify }},"jobTitle":{{ site.author.job_title | jsonify }},"worksFor":{"@type":"Organization","name":{{ site.author.works_for.name | jsonify }},"url":{{ site.author.works_for.url | jsonify }}},"alumniOf":{"@type":"CollegeOrUniversity","name":{{ site.author.alumni_of.name | jsonify }},"alternateName":{{ site.author.alumni_of.alternate_name | jsonify }},"url":{{ site.author.alumni_of.url | jsonify }}},"nationality":{"@type":"Country","name":{{ site.author.nationality | jsonify }}},"description":{{ t.about_author | jsonify }},"sameAs":{{ site.author.same_as | jsonify }}}
 {%- endcapture -%}
 {%- capture _blog -%}
 {"@type":"Blog","@id":{{ _home | append: "#blog" | jsonify }},"name":{{ site.title | jsonify }},"description":{{ t.description | jsonify }},"url":{{ _home | jsonify }},"inLanguage":{{ lang | jsonify }},"author":{"@id":{{ site.author.id | jsonify }}},"publisher":{"@id":{{ site.author.id | jsonify }}}}
