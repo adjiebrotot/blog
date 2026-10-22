@@ -8,8 +8,7 @@
       (tool.adjiebrotots.com/mdtopdf/): LaTeX through KaTeX, ```mermaid
       diagrams and charts, a copy button on code, and GitHub's > [!NOTE]
       alerts. KaTeX and Mermaid load only on a post that uses them.
-   5. On the home pages, the wordmark's gradient slides with the cursor.
-   6. Comments (giscus) load only when the reader nears them, and follow the
+   5. Comments (giscus) load only when the reader nears them, and follow the
       theme button.
    UI words come from _data/i18n.yml through data-* on <body>. */
 (function () {
@@ -197,20 +196,15 @@
     root.classList.remove('light', 'dark');
     root.classList.add(next);
     try { localStorage.setItem('blog-theme', next); } catch (e) {}
+    // The pick is shared with www and the tools through one cookie on the
+    // parent domain (see tool.adjiebrotots.com theme.js).
+    if (/(^|\.)adjiebrotots\.com$/.test(location.hostname)) {
+      document.cookie = 'abt-theme=' + next + '; max-age=31536000; path=/; SameSite=Lax; domain=adjiebrotots.com' + (location.protocol === 'https:' ? '; Secure' : '');
+    }
     syncEmbeds();
     syncComments();
     if (mermaidReady) drawDiagrams();
   });
-
-  /* Home pages: the wordmark's gradient follows the cursor across the page. */
-  var home = document.querySelector('.brand-hero .brand-text');
-  if (home && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    var gx = null;
-    addEventListener('pointermove', function (e) {
-      if (gx === null) requestAnimationFrame(function () { home.style.setProperty('--gx', gx); gx = null; });
-      gx = (e.clientX / innerWidth * 100).toFixed(1);
-    }, { passive: true });
-  }
 
   syncEmbeds();
   styleAlerts();

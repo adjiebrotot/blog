@@ -8,8 +8,9 @@ layout: default
   <h2 id="latest-heading" class="section-title">{{ t.latest }}</h2>
   {%- if _posts.size > 0 %}
   <div class="post-grid">
+    {%- comment -%} The newest post leads at full width, so a short list never leaves the row half empty. {%- endcomment -%}
     {%- for p in _posts %}
-    {% include post-card.html post=p lang=lang %}
+    {% include post-card.html post=p lang=lang featured=forloop.first %}
     {%- endfor %}
   </div>
   {%- else %}
