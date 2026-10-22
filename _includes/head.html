@@ -1,7 +1,7 @@
 {%- if page.layout == "post" or page.title -%}
   {%- capture seo_title -%}{{ page.seo_title | default: page.title }} | {{ site.title }}{%- endcapture -%}
 {%- else -%}
-  {%- capture seo_title -%}{{ site.title }}: {{ t.tagline }}{%- endcapture -%}
+  {%- capture seo_title -%}{{ site.title }}{%- endcapture -%}
 {%- endif -%}
 {%- if page.layout == "category" -%}
   {%- assign _cat = site.data.categories | where: "key", page.category | first -%}
