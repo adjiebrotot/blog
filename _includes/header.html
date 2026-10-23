@@ -32,12 +32,8 @@
 </header>
 {%- if _is_home %}
 <div class="container home-intro">
-  <img class="home-avatar" src="{{ '/assets/img/adjie-160.webp' | relative_url }}" alt="{{ site.author.name }}" width="80" height="80">
-  <div>
-    <h1 class="brand-hero"><span class="brand-a">{{ site.brand_a }}</span> <span class="brand-b">{{ site.brand_b }}</span></h1>
-    <p class="home-tagline">{{ t.tagline }}</p>
-    <span class="hand-note" data-note="{{ t.hand_note }}" aria-hidden="true" data-nosnippet></span>
-  </div>
+  <h1 class="brand-hero"><span class="brand-a">{{ site.brand_a }}</span> <span class="brand-b">{{ site.brand_b }}</span></h1>
+  <span class="hand-note" data-note="{{ t.hand_note }}" aria-hidden="true" data-nosnippet></span>
 </div>
 {%- endif %}
 {%- comment -%}
