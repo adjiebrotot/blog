@@ -19,6 +19,8 @@ en:
   no_posts: "No posts here yet. Check back soon."
   open_tool: Open the full tool
   theme: Switch light or dark theme
+  theme_to_dark: Switch to night
+  theme_to_light: Switch to day
   sites: "Adjie's sites"
   nav_home: Home
   nav_blog: Blog
@@ -59,6 +61,8 @@ id:
   no_posts: "Belum ada artikel di sini. Nantikan segera."
   open_tool: Buka tool lengkapnya
   theme: Ganti tema terang atau gelap
+  theme_to_dark: Ganti ke mode gelap
+  theme_to_light: Ganti ke mode terang
   sites: "Situs Adjie"
   nav_home: Beranda
   nav_blog: Blog

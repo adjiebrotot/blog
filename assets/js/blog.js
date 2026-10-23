@@ -191,6 +191,13 @@
   }
 
   var btn = document.getElementById('themeToggle');
+  /* The toggle says what a press will do, as on www and the tools. */
+  function labelTheme() {
+    if (!btn) return;
+    var text = theme() === 'light' ? btn.dataset.toDark : btn.dataset.toLight;
+    if (text) { btn.setAttribute('aria-label', text); btn.title = text; }
+  }
+  labelTheme();
   if (btn) btn.addEventListener('click', function () {
     var next = theme() === 'light' ? 'dark' : 'light';
     root.classList.remove('light', 'dark');
@@ -203,6 +210,7 @@
     }
     syncEmbeds();
     syncComments();
+    labelTheme();
     if (mermaidReady) drawDiagrams();
   });
 

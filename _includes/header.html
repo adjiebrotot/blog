@@ -20,10 +20,10 @@
       {%- if other_is_twin %}
       <a class="btn-theme" id="langToggle" href="{{ other_url | relative_url }}" hreflang="{{ other_lang }}" lang="{{ other_lang }}"
          title="{{ site.data.i18n[other_lang].read_in }}">
-        <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+        <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
         {{ site.data.i18n[other_lang].short }}</a>
       {%- endif %}
-      <button class="btn-theme btn-icon" id="themeToggle" type="button" aria-label="{{ t.theme }}" title="{{ t.theme }}">
+      <button class="btn-theme btn-icon" id="themeToggle" type="button" aria-label="{{ t.theme }}" title="{{ t.theme }}" data-to-dark="{{ t.theme_to_dark }}" data-to-light="{{ t.theme_to_light }}">
         <svg class="ico-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
         <svg class="ico-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
       </button>
