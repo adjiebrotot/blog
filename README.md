@@ -55,7 +55,7 @@ both the same value, and the site then:
 - tells Google they are language versions of each other (`hreflang`), so each reader is shown
   the right one
 - links each post to the other one ("Baca dalam Bahasa Indonesia →") and shows the EN/ID
-  button in the floating bar, pointing at it
+  button in the top bar, pointing at it
 
 Without `translation:`, the post has no EN/ID button, because there is nothing to switch to.
 

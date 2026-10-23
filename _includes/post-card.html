@@ -1,5 +1,5 @@
 {%- assign p = include.post -%}
-<article class="post-card">
+<article class="post-card{% if include.featured %} is-featured{% endif %}">
   {% include tags.html tags=p.tags lang=include.lang %}
   <h{{ include.level | default: 2 }} class="post-card-title"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h{{ include.level | default: 2 }}>
   {%- if p.description %}

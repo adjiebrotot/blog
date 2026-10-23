@@ -56,16 +56,19 @@
 
   <script>
     /* Theme before first paint, so the page never flashes the wrong one:
-       the reader's own pick, else their system's. */
+       the reader's own pick (the abt-theme cookie shared with www and the
+       tools, else this blog's own key), else their system's. */
     (function () {
-      var t = null;
-      try { t = localStorage.getItem('blog-theme'); } catch (e) {}
+      var m = /(?:^|;\s*)abt-theme=(light|dark)/.exec(document.cookie), t = m && m[1];
+      if (!t) { try { t = localStorage.getItem('blog-theme'); } catch (e) {} }
       if (t !== 'light' && t !== 'dark') t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
       document.documentElement.classList.add(t);
     })();
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..600&family=DM+Mono:wght@400;500&display=swap">
+  <link rel="preload" href="{{ '/assets/fonts/dm-sans.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  {%- if page.layout == "home" or page.layout == "landing" %}
+  <link rel="preload" href="{{ '/assets/fonts/caveat.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  {%- endif %}
+  <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}?v={{ site.time | date: '%s' }}">
   {%- include jsonld.html %}
