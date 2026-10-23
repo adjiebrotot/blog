@@ -66,6 +66,9 @@
     })();
   </script>
   <link rel="preload" href="{{ '/assets/fonts/dm-sans.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  {%- if page.layout == "home" or page.layout == "landing" %}
+  <link rel="preload" href="{{ '/assets/fonts/caveat.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  {%- endif %}
   <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}?v={{ site.time | date: '%s' }}">
   {%- include jsonld.html %}
