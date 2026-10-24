@@ -113,12 +113,12 @@ Saya membuat tool ini sebagai ekonom berlatar perbankan, jadi ada tiga pintu mas
 3. Lihat kartu **Modal awal** dan **Anggaran perumahan bulanan**. Kalau gak cocok dengan hidupmu, sesuaikan **Uang Muka (DP)** sampai cocok.
 
 <figure>
-<img src="/assets/img/rvo-basic-quickstart-id.webp" alt="Tool Sewa vs Beli Rumah: Mulai Cepat diisi Perth dan rumah 2 kamar tidur, dengan Harga properti $855,000 dan Uang Muka 20% di tab Rumah" width="780" height="1202" loading="lazy" style="max-width:340px">
+<img src="/assets/img/rvo-basic-quickstart-id.webp" alt="Tool Sewa vs Beli Rumah: Quick Start diisi Perth dan rumah 2 kamar tidur, dengan Harga properti $855,000 dan Uang Muka 20% di tab Rumah" width="760" height="1208" loading="lazy" style="max-width:340px">
 <figcaption>Quick Start: Perth, rumah 2KT. Harga properti jadi titik awal. Biaya sewa ada di tab Sewa.</figcaption>
 </figure>
 
 <figure>
-<img src="/assets/img/rvo-basic-cards-id.webp" alt="Kesimpulan dan empat kartu ringkasan untuk Perth: Perbedaan kekayaan bersih +$850k, Tahun breakeven 5, Modal awal $210k, Anggaran perumahan bulanan $3k sampai $5k" width="1500" height="449" loading="lazy">
+<img src="/assets/img/rvo-basic-cards-id.webp" alt="Kesimpulan dan empat kartu ringkasan untuk Perth: Perbedaan kekayaan bersih +$850k, Tahun breakeven 5, Modal awal $210k, Anggaran perumahan bulanan $3k sampai $5k" width="1500" height="370" loading="lazy">
 <figcaption>Kartu di bawah kesimpulan. Perth butuh sekitar $210 ribu untuk mulai, dan anggaran bulanan $3 ribu sampai $5 ribu selama bertahun-tahun.</figcaption>
 </figure>
 
@@ -131,12 +131,12 @@ Buat yang mau lebih canggih, buka pengaturan yang paling menggeser jawaban.
 - **Suku Bunga Bebas Risiko.** Yang terpenting. Kalau kamu berani mengubahnya, berarti kamu gak lagi menaruh uang di celengan atau tabungan biasa. Anggap ini imbal hasil ke mana uang sisamu pergi: misalnya reksa dana indeks S&P 500 dengan ekspektasi imbal hasil jangka panjang 8%.
 
 <figure>
-<img src="/assets/img/rvo-expert-mortgage-id.webp" alt="Kelompok KPR mode Rinci untuk Jakarta: jangka waktu 20 tahun, bunga tetap 8,5% tahun 1 sampai 5, lalu mengambang 11% sampai 13%" width="716" height="1496" loading="lazy" style="max-width:320px">
+<img src="/assets/img/rvo-expert-mortgage-id.webp" alt="Kelompok KPR mode Rinci untuk Jakarta: jangka waktu 20 tahun, bunga fixed 8,5% tahun 1 sampai 5, lalu floating 11% sampai 13%" width="692" height="1472" loading="lazy" style="max-width:320px">
 <figcaption>Jadwal promo-lalu-floating untuk Jakarta, dimasukkan sebagai dua periode.</figcaption>
 </figure>
 
 <figure>
-<img src="/assets/img/rvo-expert-assumptions-id.webp" alt="Slider Tabungan dan jangka waktu (Suku Bunga Bebas Risiko, Jangka waktu) dan Pertumbuhan properti (kenaikan harga, biaya penjualan) untuk Jakarta" width="716" height="1198" loading="lazy" style="max-width:320px">
+<img src="/assets/img/rvo-expert-assumptions-id.webp" alt="Slider Tabungan dan jangka waktu (Suku Bunga Bebas Risiko, Jangka waktu) dan Pertumbuhan properti (kenaikan harga, biaya penjualan) untuk Jakarta" width="692" height="1214" loading="lazy" style="max-width:320px">
 <figcaption>Suku Bunga Bebas Risiko, jangka waktu, kenaikan harga, dan biaya penjualan, semuanya di tab Asumsi.</figcaption>
 </figure>
 
@@ -163,7 +163,7 @@ Suatu saat satu skenario gak cukup. Kamu ingin menaruh banyak hal berdampingan. 
 - **Suku bunga dan skema pembiayaan.** Rumah yang sama, pinjaman yang beda.
 
 <figure>
-<img src="/assets/img/rvo-sens-cities-top-id.webp" alt="Sensitivity Analysis tool dengan rumah 2 kamar tidur Perth dan Jakarta berdampingan: jangka waktu dan suku bunga bebas risiko bersama, multi-mata uang dan kurs" width="1500" height="659" loading="lazy">
+<img src="/assets/img/rvo-sens-cities-top-id.webp" alt="Sensitivity Analysis tool dengan rumah 2 kamar tidur Perth dan Jakarta berdampingan: jangka waktu dan suku bunga bebas risiko bersama, multi-mata uang dan kurs" width="1500" height="518" loading="lazy">
 <figcaption>Perth dan Jakarta berdampingan, dengan horizon 20 tahun yang sama.</figcaption>
 </figure>
 
@@ -177,7 +177,7 @@ Bacanya begini: bandingkan garis penuh dengan putus-putus *dalam satu warna*, bu
 Sekarang soal pembiayaan. Empat cara membeli rumah Jakarta yang sama, melawan satu garis sewa. Biru adalah KPR bertahap (8,5% selama 5 tahun, lalu floating). Oranye 8,5% datar selama 20 tahun. Hijau promo 3,81% selama 5 tahun, lalu floating. Merah muda tunai. Garis putus-putus adalah sewa.
 
 <figure>
-<img src="/assets/img/rvo-sens-financing-inputs-id.webp" alt="Empat skenario pembiayaan Jakarta: KPR bertahap, 8,5% tetap penuh, promo 3,81% lalu mengambang, dan beli tunai 100%" width="1500" height="428" loading="lazy">
+<img src="/assets/img/rvo-sens-financing-inputs-id.webp" alt="Empat skenario pembiayaan Jakarta: KPR bertahap, 8,5% tetap penuh, promo 3,81% lalu floating, dan beli tunai 100%" width="1500" height="471" loading="lazy">
 <figcaption>Empat skema pembiayaan untuk satu rumah di Jakarta, disusun sebagai empat kolom.</figcaption>
 </figure>
 
@@ -209,7 +209,7 @@ Jangan tanya "sewa atau beli, mana yang lebih pintar?" Tanyakan "rumah ini mengh
 
 *Tulisan ini informasi umum, bukan nasihat keuangan.*
 
-[^reiwa]: REIWA, profil kawasan Perth (median Landgate/REIWA, 12 bulan sampai September 2026), diringkas di [halaman asumsi Mulai Cepat](https://tool.adjiebrotots.com/rentvsownhouse/quickstart-assumptions/): sekitar 17% untuk rumah tapak dan 22% untuk unit.
+[^reiwa]: REIWA, profil kawasan Perth (median Landgate/REIWA, 12 bulan sampai September 2026), diringkas di [halaman asumsi Quick Start](https://tool.adjiebrotots.com/rentvsownhouse/quickstart-assumptions/): sekitar 17% untuk rumah tapak dan 22% untuk unit.
 [^abs]: Australian Bureau of Statistics, [Australia's population up 1.5% in December 2025](https://www.abs.gov.au/media-centre/media-releases/australias-population-15-december-2025): +412.500 orang, migrasi bersih luar negeri 301.000, pertambahan alami 111.500, Australia Barat tercepat 2,2%.
 [^bps]: BPS, [siaran pers SUPAS 2025](https://www.bps.go.id/en/pressrelease/2026/05/05/2645/supas-2025--angka-kelahiran-total--tfr--sebesar-2-13---angka-kematian-bayi--imr--sebesar-14-12--dan-persentase-lansia-mencapai-11-97-persen-.html), 5 Mei 2026: angka kelahiran total 2,13.
 [^idprice]: Colliers, lewat [Kompas, April 2026](https://www.kompas.com/properti/read/2026/04/13/210000021/kredit-apartemen-makin-diminati-konsumen-tinggalkan-tren-investasi): harga rata-rata apartemen Jakarta Rp 27,7 juta per m² (2014) menjadi Rp 36,2 juta (2026). Survei properti residensial Bank Indonesia mencatat indeks rumah Jabodebek naik sekitar 1,2% per tahun sejak 2018 ([BI, Triwulan II 2026](https://www.bi.go.id/id/publikasi/laporan/Documents/SHPR_Tw_II_2026.pdf)). Stok belum terjual: [halaman asumsi](https://tool.adjiebrotots.com/rentvsownhouse/quickstart-assumptions/).
