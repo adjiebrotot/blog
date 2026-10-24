@@ -2,7 +2,8 @@
 
 Bilingual Jekyll blog at blog.adjiebrotots.com, built by GitHub Pages itself ("Deploy from
 branch", `github-pages` gem). Use only plugins that GitHub Pages whitelists, and don't add
-GitHub Actions. How to write a post: `README.md`. The design tokens come from
+GitHub Actions. How to write a post: `README.md`. How to write it in Adjie's voice: the
+`adjie-writing-style` skill (`.claude/skills/adjie-writing-style/`). The design tokens come from
 `../tool/dark.css` and `light.css` (tool repo, `_ref/design-reference.md`).
 
 ## Published URLs are permanent
