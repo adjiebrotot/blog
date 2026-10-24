@@ -228,15 +228,16 @@
   if (toc) toc.setAttribute('data-title', words.contents);
 
   /* ── Reading guide: CSS shows the rail or the bar, never both. The active
-     section is the last h2 above a line a third down the screen. ── */
+     section is the last h2 above a line a third down the screen. The rail
+     waits until the post's own {:toc} (or, without one, its header) has
+     scrolled under the site bar, so the two lists never show together. The
+     bar hangs from the bottom of the site bar and travels with it. ── */
   var heads = prose && document.querySelector('.post') ? Array.prototype.filter.call(
     prose.querySelectorAll('h2'), function (h) { return h.id; }) : [];
   if (heads.length > 1) {
     var rail = document.createElement('nav');
     rail.className = 'toc-rail';
     rail.setAttribute('aria-label', words.contents);
-    var title = document.createElement('p');
-    title.textContent = words.contents;
     var list = document.createElement('ol');
     var bar = document.createElement('div');
     bar.className = 'read-bar';
@@ -249,9 +250,11 @@
       var seg = document.createElement('span'), fill = document.createElement('i');
       seg.appendChild(fill); bar.appendChild(seg); fills.push(fill);
     });
-    rail.appendChild(title); rail.appendChild(list);
+    rail.appendChild(list);
     document.body.appendChild(rail);
-    document.body.appendChild(bar);
+    var header = document.querySelector('.site-header');
+    (header || document.body).appendChild(bar);
+    var gate = toc || document.querySelector('.post-header');
 
     var queued = false, current = -1;
     var update = function () {
@@ -259,6 +262,8 @@
       var vh = window.innerHeight, line = vh / 3, end = prose.getBoundingClientRect().bottom;
       var tops = heads.map(function (h) { return h.getBoundingClientRect().top; });
       var atEnd = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+      var top = header ? header.getBoundingClientRect().bottom : 0;
+      rail.classList.toggle('is-shown', !gate || gate.getBoundingClientRect().bottom <= top);
       var active = -1;
       tops.forEach(function (t, i) {
         var next = i + 1 < tops.length ? tops[i + 1] : end, len = next - t;

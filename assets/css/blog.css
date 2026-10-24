@@ -308,20 +308,22 @@ main { padding: 1rem 0 3rem; }
 
 /* Reading guide (blog.js adds it on a post with two or more h2s). A wide
    screen gets the rail: the post's sections at the left of the article, the
-   one being read in brand blue. A narrow one gets the bar: a hairline at the
-   top, one part per section, as long as that section. */
+   one being read in brand blue, faded in once the post's own contents list
+   is behind the reader. A narrow one gets the bar: a hairline under the
+   site bar, one part per section, as long as that section. */
 .toc-rail {
   display: none; position: fixed; top: 6rem; z-index: 40; width: 11rem;
   /* The article's left edge, less the rail and a gap. */
   right: calc(50% + (var(--measure) + 5rem) / 2 + 1.5rem);
   max-height: calc(100vh - 8rem); overflow-y: auto;
+  opacity: 0; visibility: hidden; transition: opacity var(--motion-base), visibility var(--motion-base);
 }
-.toc-rail p { margin: 0 0 0.6rem; color: var(--muted); font-size: var(--fs-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+.toc-rail.is-shown { opacity: 1; visibility: visible; }
 .toc-rail ol { margin: 0; padding: 0; list-style: none; font-size: var(--fs-sm); line-height: 1.4; border-left: 2px solid var(--border); }
 .toc-rail a { display: block; margin-left: -2px; padding: 0.35rem 0 0.35rem 0.85rem; border-left: 2px solid transparent; color: var(--muted); transition: color var(--motion-fast), border-color var(--motion-fast); }
 .toc-rail a:hover { color: var(--text); text-decoration: none; }
 .toc-rail a[aria-current] { color: var(--brand); border-left-color: var(--brand); font-weight: 700; }
-.read-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 60; display: flex; gap: 2px; height: 3px; pointer-events: none; }
+.read-bar { position: absolute; top: 100%; left: 0; right: 0; display: flex; gap: 2px; height: 3px; pointer-events: none; }
 .read-bar span { flex: 1 1 0; background: var(--border); overflow: hidden; }
 .read-bar i { display: block; height: 100%; background: var(--brand); transform: scaleX(0); transform-origin: left; }
 @media (min-width: 1280px) {
