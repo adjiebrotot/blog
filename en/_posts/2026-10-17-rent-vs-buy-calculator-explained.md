@@ -16,9 +16,9 @@ keywords: [rent vs buy, rent or buy house, Perth, Jakarta, KPR, mortgage, proper
 
 ## Who is right, the buyer or the renter?
 
-Meet two friends. Bayu wants a home he can paint, drill and never be asked to leave, a place where his kids can grow up. Rani changes countries every few years, hates juggling property tax, repairs and utility accounts in three countries, and wants one monthly payment, all in.
+Meet two friends. Robert wants a home to paint, drill and never be asked to leave, a place where the kids can grow up. Geoff changes countries every few years, hates juggling property tax, repairs and utility accounts in three countries, and wants one monthly payment, all in.
 
-Both are right. Nobody can put a price on Bayu's stability or on Rani's freedom, and I won't try. Those are values, not line items.
+Both are right. Nobody can put a price on Robert's stability or on Geoff's freedom, and I won't try. Those are values, not line items.
 
 But there is a second, colder question that doesn't care about values: **if you count only the money, who ends up with more?** My honest answer, after building a tool to find out, is that both can win. That is why I wrote the Rent vs Own calculator. For me, because I was tired of arguing about it from gut feeling. For my friends, who got a number to argue with. And for you, if you would like to see the bigger picture before signing 30 years of anything.
 
@@ -203,7 +203,7 @@ Now the financing question. Four ways to buy the same Jakarta house, against one
 
 ## So, rent or buy?
 
-Back to Bayu and Rani. If both live in Perth on today's numbers, Bayu's house is also the better deal, as long as it keeps outgrowing the money Rani invests. If both live in Jakarta and Bayu takes a standard KPR, Rani's rental, plus a disciplined investment habit, comes out ahead. In my view neither choice is foolish in general. Each is only right for a given price, a given rate and a given city.
+Back to Robert and Geoff. If both live in Perth on today's numbers, Robert's house is also the better deal, as long as it keeps outgrowing the money Geoff invests. If both live in Jakarta and Robert takes a standard KPR, Geoff's rental, plus a disciplined investment habit, comes out ahead. In my view neither choice is foolish in general. Each is only right for a given price, a given rate and a given city.
 
 Don't ask "is renting or buying smarter?" Ask "what does this house earn, and what does this money cost?" And since you now have a calculator for that, my small request: before you sign anything, put your own house price and your own rent into it. It takes five minutes. [Open the Rent vs Own calculator](https://tool.adjiebrotots.com/rentvsownhouse/), then tell me in the comments whether your city says buy or rent. 
 

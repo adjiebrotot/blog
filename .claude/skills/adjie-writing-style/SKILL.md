@@ -136,6 +136,40 @@ These override anything above.
 - **Two languages.** Write each language natively with the same moves, case and
   numbers. Don't mirror sentence by sentence; a joke that doesn't travel gets a
   different joke.
+  - **Personas needn't match.** The parable characters can be different people in each
+    language. Pick names that sound natural to that readership (a pair that fits an
+    Indonesian post can feel foreign in an English one). The role each plays stays the same.
+  - **Keep the number and the case; rewrite the sentence.** Never produce the second
+    language by translating the first line by line.
+
+### Writing in Indonesian
+
+Use the `bahasa-indonesia` skill (`.claude/skills/bahasa-indonesia/`) to avoid Indonesian
+slop. Blog setting: `language: indonesia`, `register: santai`, `regional_voice: netral`,
+`technical_terms: english-first`, `self_reference: saya`, `addressee_reference: kamu`,
+`orthography: percakapan`. On top of that:
+
+- **saya-kamu.** Talk to the reader as *kamu*, never *Anda*: "caramu memandang kekayaan",
+  not "cara Anda memandang kekayaan". Adjie is *saya*.
+- **Keep English where it sounds better.** Don't translate a term just because a
+  dictionary word exists. Keep: *values* (not *nilai hidup*), *tool* (for the Adjie Brotools tools, never
+  *alat*), *opportunity cost* (not *biaya peluang*), *input* (not *masukan*), *market* and
+  *hot* when the sentence is casual ("Itu market yang sangat hot", not "Itu pasar yang
+  sangat panas"), *holistic thinking* (not *pikiran holistik*), *liquid asset thinking*
+  (not *pikiran likuid*), *breakeven*, *Quick Start* (the tool's own labels).
+  Also keep *apple to apple* (not *apel dengan apel*) and *versus* (not *lawan*).
+- **But don't keep English where Indonesians already say something else.** Prefer what a
+  person actually says over a literal translation. Mortgage talk is about *KPR*, not about
+  the "cost of money": "Berapa bunga KPR-nya?", not "Berapa harga uangnya?". "Biar fair",
+  not "keberatan yang wajar" (that one is a mistranslation of "fair objection"). "Batasannya",
+  not "batas-batas yang jujur".
+- **Be casual where the context allows:** *gak* instead of *tidak* in explanation and
+  asides. Keep *tidak* in formal spots (a disclaimer, a quoted definition, a heading that
+  must read as plain Indonesian).
+- **Idioms must make sense in Indonesian.** Read each sentence cold. If it only works as
+  a word-for-word of the English ("Masukannya yang milik tempat itu"), rewrite it as
+  something a person would say ("Bedanya ada di input-nya, dan input itu ikut kotanya").
+- **One address form per post.** Never mix *Anda* and *kamu*.
 
 ## Check a draft
 

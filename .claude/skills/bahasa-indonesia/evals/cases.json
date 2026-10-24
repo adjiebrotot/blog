@@ -1,0 +1,540 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "netral-bug-explanation",
+      "prompt": "Gunakan bahasa Indonesia netral profesional. Jelaskan bahwa `loadConfig` di `src/config.ts:42` mengembalikan `undefined` karena `API_TOKEN` tidak ada di `.env`. Sarankan menjalankan `npm test -- config`. Pertahankan pesan error: TypeError: Cannot read properties of undefined (reading 'trim')",
+      "tags": [
+        "netral",
+        "bug"
+      ],
+      "checks": {
+        "preserve": [
+          "loadConfig",
+          "src/config.ts:42",
+          "undefined",
+          "API_TOKEN",
+          ".env",
+          "npm test -- config",
+          "TypeError: Cannot read properties of undefined (reading 'trim')"
+        ],
+        "require": [],
+        "forbid_patterns": [],
+        "first_paragraph_require": [
+          "API_TOKEN",
+          ".env"
+        ]
+      },
+      "human_review": [
+        "Bahasa Indonesia terasa alami dan tidak seperti terjemahan kata demi kata.",
+        "Penyebab, lokasi, tingkat kepastian, dan tindakan tetap jelas."
+      ]
+    },
+    {
+      "id": "targeted-identifier-edit",
+      "prompt": "Ganti nama fungsi `loadConfig` menjadi `readConfig`, perbarui pemanggilnya, lalu jelaskan perubahan dalam bahasa Indonesia. Sebutkan secara eksplisit bahwa `API_TOKEN`, `.env`, dan command `npm test -- config` tidak berubah.",
+      "tags": [
+        "netral",
+        "target-tugas"
+      ],
+      "checks": {
+        "preserve": [
+          "API_TOKEN",
+          ".env",
+          "npm test -- config"
+        ],
+        "require": [
+          "readConfig"
+        ],
+        "forbid_patterns": [],
+        "first_paragraph_require": [
+          "readConfig"
+        ]
+      },
+      "human_review": [
+        "Aturan bahasa tidak membekukan identifier yang memang menjadi target perubahan.",
+        "Artefak yang tidak ditargetkan tetap persis."
+      ]
+    },
+    {
+      "id": "jakarta-pronoun-override",
+      "prompt": "Jelaskan bug `API_TOKEN` dengan gaya Jakarta sedang, tetapi jangan gunakan gue atau lo, termasuk varian ejaannya seperti gua, gw, lu, atau elo. Sarankan `npm test -- config`.",
+      "tags": [
+        "jakarta",
+        "pronomina",
+        "override"
+      ],
+      "checks": {
+        "preserve": [
+          "API_TOKEN",
+          "npm test -- config"
+        ],
+        "require": [],
+        "forbid_patterns": [
+          "\\b(?:gue|gua|gw|elo|elu|lo|lu|loe)\\b"
+        ],
+        "first_paragraph_require": [
+          "API_TOKEN"
+        ]
+      },
+      "human_review": [
+        "Gaya Jakarta dapat terasa tanpa bergantung pada pasangan pronomina tertentu.",
+        "Partikel yang muncul memiliki fungsi pragmatik."
+      ]
+    },
+    {
+      "id": "unknown-regional-fallback",
+      "prompt": "Jelaskan kegagalan `npm test` dengan logat Atlantis sedang. Jangan mengarang kosakata daerah.",
+      "tags": [
+        "router",
+        "fallback"
+      ],
+      "checks": {
+        "preserve": [
+          "npm test"
+        ],
+        "require": [],
+        "forbid_patterns": [],
+        "first_paragraph_require": [],
+        "early_require": [
+          "npm test"
+        ]
+      },
+      "human_review": [
+        "Keluaran kembali ke Indonesia netral dan tidak menciptakan ciri Atlantis.",
+        "Fallback dijelaskan hanya jika relevan bagi pengguna."
+      ]
+    },
+    {
+      "id": "puitis-destructive-warning",
+      "prompt": "Dengan prosa puitis sedang, peringatkan bahwa `rm -rf ./build-cache` akan menghapus seluruh isi `./build-cache` dan memerlukan persetujuan sebelum dijalankan.",
+      "tags": [
+        "puitis",
+        "destruktif"
+      ],
+      "checks": {
+        "preserve": [
+          "rm -rf ./build-cache",
+          "./build-cache"
+        ],
+        "require": [],
+        "forbid_patterns": [],
+        "first_paragraph_require": [
+          "rm -rf ./build-cache",
+          "./build-cache"
+        ]
+      },
+      "human_review": [
+        "Target, akibat, dan kebutuhan persetujuan dipahami tanpa menafsirkan metafora.",
+        "Citraan membingkai peringatan dan tidak menggantikannya."
+      ]
+    },
+    {
+      "id": "kebumen-intensity-cap",
+      "prompt": "Jelaskan bug `API_TOKEN` dengan Jawa Kebumen kental tanpa menentukan kecamatan atau kecenderungan barat, tengah, maupun timur.",
+      "tags": [
+        "jawa",
+        "kebumen",
+        "intensitas"
+      ],
+      "checks": {
+        "preserve": [
+          "API_TOKEN"
+        ],
+        "require": [],
+        "forbid_patterns": [
+          "\\brek\\b",
+          "\\bik\\b",
+          "\\bje\\b"
+        ],
+        "first_paragraph_require": [
+          "API_TOKEN"
+        ]
+      },
+      "human_review": [
+        "Keluaran tidak melampaui intensitas sedang tanpa subwilayah.",
+        "Bentuk Banyumasan dan bandek tidak dicampur secara acak."
+      ]
+    },
+    {
+      "id": "sunda-kasar-ambigu",
+      "prompt": "Jelaskan bug ini dengan Sunda kasar.",
+      "tags": [
+        "sunda",
+        "tingkat-tutur",
+        "klarifikasi"
+      ],
+      "checks": {
+        "preserve": [],
+        "require": [
+          "loma",
+          "cohag"
+        ],
+        "forbid_patterns": [],
+        "first_paragraph_require": [],
+        "early_require": [
+          "loma",
+          "cohag"
+        ]
+      },
+      "human_review": [
+        "Keluaran meminta pengguna memilih loma/akrab atau cohag/kasar pisan.",
+        "Agent tidak menganggap istilah kasar selalu identik dengan loma."
+      ]
+    },
+    {
+      "id": "sunda-cohag-boundary",
+      "prompt": "Jelaskan bahwa `API_TOKEN` belum tersedia dengan speech_level: cohag. Jangan memaki atau menghina pengguna.",
+      "tags": [
+        "sunda",
+        "tingkat-tutur",
+        "cohag"
+      ],
+      "checks": {
+        "preserve": [
+          "API_TOKEN"
+        ],
+        "require": [],
+        "forbid_patterns": [],
+        "first_paragraph_require": [
+          "API_TOKEN"
+        ]
+      },
+      "human_review": [
+        "Ragam terasa sengaja lebih keras daripada loma tanpa mengaburkan diagnosis.",
+        "Keluaran tidak memaki atau mengarahkan penghinaan kepada pengguna."
+      ]
+    },
+    {
+      "id": "catalogued-language-fallback",
+      "prompt": "Jelaskan bahwa `API_TOKEN` belum tersedia dalam bahasa Abui. Jangan mengarang kosakata jika panduannya belum tersedia.",
+      "tags": [
+        "bahasa-daerah",
+        "catalogued",
+        "fallback"
+      ],
+      "checks": {
+        "preserve": [
+          "API_TOKEN"
+        ],
+        "require": [
+          "Abui"
+        ],
+        "forbid_patterns": [],
+        "first_paragraph_require": [
+          "API_TOKEN"
+        ],
+        "early_require": [
+          "Abui"
+        ]
+      },
+      "human_review": [
+        "Agent menyatakan batas dukungan Abui secara singkat lalu menawarkan Indonesia atau meminta contoh.",
+        "Tidak ada kosakata Abui yang diklaim benar tanpa panduan atau contoh pengguna."
+      ]
+    },
+    {
+      "id": "umbrella-language-clarification",
+      "prompt": "Jelaskan bug ini dalam bahasa Dayak.",
+      "tags": [
+        "bahasa-daerah",
+        "klarifikasi"
+      ],
+      "checks": {
+        "preserve": [],
+        "require": [
+          "Dayak"
+        ],
+        "forbid_patterns": [],
+        "first_paragraph_require": [],
+        "early_require": [
+          "Dayak"
+        ]
+      },
+      "human_review": [
+        "Agent meminta bahasa atau varietas Dayak yang lebih spesifik.",
+        "Agent tidak memilih bahasa Kalimantan tertentu berdasarkan stereotip.",
+        "Pertanyaan klarifikasi muncul dalam tiga blok pertama, bukan terkubur di akhir jawaban panjang."
+      ]
+    },
+    {
+      "id": "popular-language-beta-cap",
+      "prompt": "Jelaskan bahwa `API_TOKEN` belum tersedia dalam bahasa Minangkabau kental, tetapi saya tidak menyebut varietas dan tidak memberi contoh.",
+      "tags": [
+        "bahasa-daerah",
+        "minangkabau",
+        "intensitas"
+      ],
+      "checks": {
+        "preserve": [
+          "API_TOKEN"
+        ],
+        "require": [
+          "Minangkabau"
+        ],
+        "forbid_patterns": [],
+        "first_paragraph_require": [
+          "API_TOKEN"
+        ]
+      },
+      "human_review": [
+        "Agent tidak mengarang Minangkabau kental tanpa varietas atau contoh yang cukup.",
+        "Diagnosis teknis tetap jelas dan agent menawarkan keluaran tipis atau meminta varietas."
+      ]
+    },
+    {
+      "id": "makassar-language-versus-voice",
+      "prompt": "Jelaskan kegagalan `npm test` dengan language: makassar. Jangan menggantinya menjadi sekadar bahasa Indonesia regional Makassar.",
+      "tags": [
+        "bahasa-daerah",
+        "makassar",
+        "router"
+      ],
+      "checks": {
+        "preserve": [
+          "npm test"
+        ],
+        "require": [
+          "Makassar",
+          "npm test"
+        ],
+        "forbid_patterns": [],
+        "first_paragraph_require": [
+          "API_TOKEN"
+        ]
+      },
+      "human_review": [
+        "Agent membedakan bahasa Makassar penuh dari regional_voice Makassar.",
+        "Agent tidak menaburkan -mi, -ki, atau -ji sebagai ornamen tanpa fungsi."
+      ]
+    },
+    {
+      "id": "melayu-variety-required",
+      "prompt": "Jelaskan kegagalan `npm test` dalam bahasa Melayu sedang. Saya tidak menyebut varietasnya.",
+      "tags": [
+        "melayu",
+        "klarifikasi"
+      ],
+      "checks": {
+        "preserve": [],
+        "require": [
+          "Ambon",
+          "Manado",
+          "Kupang",
+          "Papua"
+        ],
+        "forbid_patterns": [],
+        "first_paragraph_require": [],
+        "early_require": [
+          "Melayu"
+        ]
+      },
+      "human_review": [
+        "Agent meminta pilihan varietas Ambon, Manado, Kupang, atau Papua sebelum menulis keluaran Melayu sedang.",
+        "Agent tidak membuat campuran generik 'Indonesia Timur' dan tidak menganggap Melayu Riau atau varietas lain tercakup panduan."
+      ]
+    },
+    {
+      "id": "melayu-ambon-no-mixing",
+      "prompt": "Jelaskan bahwa `API_TOKEN` belum terbaca di `.env` dalam Melayu Ambon tipis. Sarankan `npm test -- config`.",
+      "tags": [
+        "melayu",
+        "ambon",
+        "campur"
+      ],
+      "checks": {
+        "preserve": [
+          "API_TOKEN",
+          ".env",
+          "npm test -- config"
+        ],
+        "require": [],
+        "forbid_patterns": [
+          "\\bngana\\b",
+          "\\btorang\\b",
+          "\\bnyanda\\b",
+          "\\bsonde\\b",
+          "\\bbosong\\b",
+          "\\bkitong\\b",
+          "\\bbotong\\b"
+        ],
+        "first_paragraph_require": [
+          "API_TOKEN"
+        ]
+      },
+      "human_review": [
+        "Bentuk yang muncul berasal dari Melayu Ambon, bukan Manado, Kupang, atau Papua.",
+        "Pronomina mitra seperti `ose` tidak dipakai kepada pengguna yang belum menunjukkan keakraban.",
+        "Posesif, bila ada, memakai urutan pemilik–`pung`–milik."
+      ]
+    },
+    {
+      "id": "melayu-manado-first-person",
+      "prompt": "Dalam Melayu Manado tipis, laporkan bahwa kamu (agent) sudah mengecek `.env` dan `API_TOKEN` memang kosong. Saya belum mengecek apa pun. Jangan ubah identifier.",
+      "tags": [
+        "melayu",
+        "manado",
+        "pronomina"
+      ],
+      "checks": {
+        "preserve": [
+          ".env",
+          "API_TOKEN"
+        ],
+        "require": [],
+        "forbid_patterns": [
+          "\\bbeta (?:pung|su|seng|balong|ada|mau|mo)\\b",
+          "\\bkatong\\b",
+          "\\bseng\\b",
+          "\\bsonde\\b",
+          "\\bpung\\b",
+          "\\btra\\b"
+        ],
+        "first_paragraph_require": [
+          "API_TOKEN"
+        ]
+      },
+      "human_review": [
+        "`kita` dibaca sebagai orang pertama tunggal; laporan tidak menyiratkan bahwa pengguna ikut mengecek.",
+        "Jika pengguna disebut, `ngana` hanya dipakai bila hubungan mengizinkan; selain itu pronomina mitra dihilangkan.",
+        "Enklitik dan partikel Manado tidak ditaburkan tanpa fungsi."
+      ]
+    },
+    {
+      "id": "english-prompt-project-default",
+      "prompt": "Project config (AGENTS.md): `bahasa_indonesia: { language: indonesia, register: profesional }`. User message: \"Explain why `loadConfig` in `src/config.ts:42` returns `undefined` when `API_TOKEN` is missing from `.env`, and suggest running `npm test -- config`.\"",
+      "tags": [
+        "bahasa-jawaban",
+        "konfigurasi"
+      ],
+      "checks": {
+        "preserve": [
+          "loadConfig",
+          "src/config.ts:42",
+          "API_TOKEN",
+          ".env",
+          "npm test -- config"
+        ],
+        "require": [],
+        "forbid_patterns": [
+          "\\b(?:the|because|should|returns|missing)\\b"
+        ],
+        "first_paragraph_require": [
+          "API_TOKEN"
+        ]
+      },
+      "human_review": [
+        "Jawaban berbahasa Indonesia karena konfigurasi proyek menang atas bahasa pesan pengguna.",
+        "Agent tidak mengumumkan mode atau menegur pengguna karena menulis dalam bahasa Inggris.",
+        "Diagnosis dan tindakan tetap sama persis dengan versi berbahasa Inggris."
+      ]
+    },
+    {
+      "id": "commit-message-convention",
+      "prompt": "Repo ini memakai Conventional Commits berbahasa Inggris. Buat commit message untuk perbaikan `loadConfig` yang kini membaca `API_TOKEN` dari `.env` dengan benar, lalu jelaskan perubahannya dalam gaya Surabaya tipis.",
+      "tags": [
+        "artefak",
+        "commit",
+        "surabaya"
+      ],
+      "checks": {
+        "preserve": [
+          "loadConfig",
+          "API_TOKEN",
+          ".env"
+        ],
+        "require": [
+          "fix"
+        ],
+        "forbid_patterns": [],
+        "first_paragraph_require": []
+      },
+      "human_review": [
+        "Commit message berbahasa Inggris dengan format Conventional Commits, tanpa partikel atau sapaan Surabaya.",
+        "Gaya Surabaya hanya muncul pada penjelasan untuk pengguna, bukan pada artefak.",
+        "Agent tidak mengklaim commit sudah dibuat jika hanya diminta menyusun pesannya."
+      ]
+    },
+    {
+      "id": "switch-back-neutral",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Pakai gaya Surabaya sedang untuk obrolan ini."
+        },
+        {
+          "role": "assistant",
+          "content": "Oke, rek. Mulai sekarang penjelasanku pakai gaya Suroboyoan sedang; istilah teknis tetap ngikut repo."
+        },
+        {
+          "role": "user",
+          "content": "Balik netral. Jelaskan kenapa `npm test -- config` gagal: `API_TOKEN` kosong di `.env`."
+        }
+      ],
+      "tags": [
+        "multi-turn",
+        "router",
+        "surabaya",
+        "netral"
+      ],
+      "checks": {
+        "preserve": [
+          "npm test -- config",
+          "API_TOKEN",
+          ".env"
+        ],
+        "require": [],
+        "forbid_patterns": [
+          "\\b(?:rek|koen|arek|sek|wis|durung|opo|gak)\\b"
+        ],
+        "first_paragraph_require": [
+          "API_TOKEN"
+        ]
+      },
+      "human_review": [
+        "Jawaban kembali ke bahasa Indonesia netral tanpa penanda Surabaya.",
+        "Register tetap mengikuti percakapan; “netral” tidak otomatis berarti baku."
+      ]
+    },
+    {
+      "id": "forbid-address-midway",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Pakai gaya Yogyakarta tipis."
+        },
+        {
+          "role": "assistant",
+          "content": "Nggih, saya pakai gaya Jogja tipis, Mas. Istilah teknis tetap mengikuti repo."
+        },
+        {
+          "role": "user",
+          "content": "Jangan panggil saya Mas atau Mbak. Lanjutkan: jelaskan bahwa `API_TOKEN` kosong di `.env`."
+        }
+      ],
+      "tags": [
+        "multi-turn",
+        "yogyakarta",
+        "pronomina",
+        "override"
+      ],
+      "checks": {
+        "preserve": [
+          "API_TOKEN",
+          ".env"
+        ],
+        "require": [],
+        "forbid_patterns": [
+          "\\bM(?:as|bak)\\b"
+        ],
+        "first_paragraph_require": [
+          "API_TOKEN"
+        ]
+      },
+      "human_review": [
+        "Sapaan dihapus segera tanpa mematikan ciri Jogja tipis yang masih cocok.",
+        "Agent tidak meminta maaf berlebihan atau mengumumkan mode."
+      ]
+    }
+  ]
+}
