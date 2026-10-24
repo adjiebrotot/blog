@@ -10,6 +10,10 @@
       alerts. KaTeX and Mermaid load only on a post that uses them.
    5. Comments (giscus) load only when the reader nears them, and follow the
       theme button.
+   6. On a post, a reading guide built from its h2s: a floating list of
+      sections at the left on a wide screen, a bar split by section length on
+      a narrow one. Both are added here, never in the HTML, so crawlers and
+      feeds see the same page as before.
    UI words come from _data/i18n.yml through data-* on <body>. */
 (function () {
   var root = document.documentElement;
@@ -222,4 +226,62 @@
 
   var toc = document.getElementById('markdown-toc');
   if (toc) toc.setAttribute('data-title', words.contents);
+
+  /* ── Reading guide: CSS shows the rail or the bar, never both. The active
+     section is the last h2 above a line a third down the screen. ── */
+  var heads = prose && document.querySelector('.post') ? Array.prototype.filter.call(
+    prose.querySelectorAll('h2'), function (h) { return h.id; }) : [];
+  if (heads.length > 1) {
+    var rail = document.createElement('nav');
+    rail.className = 'toc-rail';
+    rail.setAttribute('aria-label', words.contents);
+    var title = document.createElement('p');
+    title.textContent = words.contents;
+    var list = document.createElement('ol');
+    var bar = document.createElement('div');
+    bar.className = 'read-bar';
+    bar.setAttribute('aria-hidden', 'true');
+    var links = [], fills = [];
+    heads.forEach(function (h) {
+      var li = document.createElement('li'), a = document.createElement('a');
+      a.href = '#' + h.id; a.textContent = h.textContent;
+      li.appendChild(a); list.appendChild(li); links.push(a);
+      var seg = document.createElement('span'), fill = document.createElement('i');
+      seg.appendChild(fill); bar.appendChild(seg); fills.push(fill);
+    });
+    rail.appendChild(title); rail.appendChild(list);
+    document.body.appendChild(rail);
+    document.body.appendChild(bar);
+
+    var queued = false, current = -1;
+    var update = function () {
+      queued = false;
+      var vh = window.innerHeight, line = vh / 3, end = prose.getBoundingClientRect().bottom;
+      var tops = heads.map(function (h) { return h.getBoundingClientRect().top; });
+      var atEnd = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+      var active = -1;
+      tops.forEach(function (t, i) {
+        var next = i + 1 < tops.length ? tops[i + 1] : end, len = next - t;
+        if (t <= line) active = i;
+        /* Each part fills as its section scrolls into view. */
+        var seen = Math.min(Math.max((vh - t) / len, 0), 1);
+        fills[i].style.transform = 'scaleX(' + seen + ')';
+        if (!fills[i].parentNode.style.flexGrow) fills[i].parentNode.style.flexGrow = Math.max(len, 1);
+      });
+      if (atEnd) active = heads.length - 1;
+      if (active !== current) {
+        if (current > -1) links[current].removeAttribute('aria-current');
+        if (active > -1) links[active].setAttribute('aria-current', 'true');
+        current = active;
+      }
+    };
+    var queue = function () { if (!queued) { queued = true; requestAnimationFrame(update); } };
+    /* Section lengths change as images, diagrams and embeds load. */
+    var resize = function () { fills.forEach(function (f) { f.parentNode.style.flexGrow = ''; }); queue(); };
+    window.addEventListener('scroll', queue, { passive: true });
+    window.addEventListener('resize', resize);
+    window.addEventListener('load', resize);
+    if ('ResizeObserver' in window) new ResizeObserver(resize).observe(prose);
+    update();
+  }
 })();
