@@ -34,6 +34,12 @@ Then, in `_site/`: each page has exactly one `<h1>` and valid JSON-LD; `sitemap.
 `*/feed.xml` parse as XML; paired posts list each other in `hreflang`; and at 390px no page
 scrolls sideways.
 
+## Writing in Indonesian
+
+Use the `bahasa-indonesia` skill (`.claude/skills/bahasa-indonesia/`) and the Indonesian rules
+in `adjie-writing-style`: saya-kamu (never *Anda*), keep English terms that sound better,
+*gak* where the context is casual.
+
 ## Page text
 
 No em-dashes in UI text (same rule as the tool site). Every UI string lives in
