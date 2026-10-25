@@ -30,7 +30,7 @@ Dan saya akui: nasi goreng Rp20 ribuan itu rasanya memang lebih enak.
 
 Tapi coba jujur: berapa persen gajimu yang habis untuk nasi goreng? Di daftar pengeluaran yang saya pakai di bawah, makan di luar cuma sekitar 15 sampai 17 persen dari seluruh belanja bulanan. Sisanya sewa, belanja bahan makanan, listrik dan air, ongkos, ponsel, dan barang-barang yang kamu beli. Nasi goreng itu secuil. Kamu gak mungkin menghabiskan seluruh gajimu cuma untuk nasi goreng.
 
-Satu konsesi lagi, supaya adil. Rata-rata upah buruh di Indonesia Rp3,33 juta per Agustus 2025.[^bpsupah] Rp10 juta itu tiga kali lipatnya. Jadi apa yang saya bahas di sini berlaku untuk kamu yang punya pilihan untuk pindah, bukan untuk semua orang.
+Satu hal lagi, supaya adil. Rata-rata upah buruh di Indonesia Rp3,33 juta per Agustus 2025.[^bpsupah] Rp10 juta itu tiga kali lipatnya. Jadi apa yang saya bahas di sini berlaku untuk kamu yang punya pilihan untuk pindah, bukan untuk semua orang.
 
 ## Kenapa nasi goreng mahal di negara maju?
 
@@ -47,8 +47,6 @@ Nasi goreng di restoran termasuk non-tradable. Apa yang gak bisa diimpor? Koki d
 Barang tradable lain ceritanya. Baju, kendaraan, elektronik, bensin: harganya relatif sama di seluruh dunia (bensin pun ikut harga minyak dunia, kecuali yang harganya diatur pemerintah, seperti di Indonesia). iPhone gak jadi murah hanya karena dijual di Jakarta.
 
 Makanan ada di antara keduanya. Beras dan daging bisa diperdagangkan, tapi punya tanggal kedaluwarsa dan sebagian diproduksi lokal, jadi harganya separuh ikut dunia, separuh ikut setempat.
-
-Jadi pertanyaannya bergeser: kalau barang tradable harganya sama di mana-mana, siapa yang punya gaji lebih besar untuk membelinya?
 
 ## Berapa tabungan akhir bulannya? Skenario A: upah rendah
 
@@ -79,7 +77,7 @@ Skenario pertama: pekerja upah rendah.
 
 Perth jelas menang: sekitar 80 kali lipat tabungan Jakarta, dalam rupiah. Singapura juga menang di atas kertas (6,9% versus 5,8%), tapi tipis, dan ini bagian yang harus saya jujurkan. PWM hanya mewajibkan upah itu untuk warga negara dan PR, bukan pemegang work permit.[^pwm] Jadi skenario ini menunjukkan mekanisme harga, bukan jalur yang biasa dilewati orang Indonesia yang pindah. Dan CPF yang dipotong itu sebenarnya tabungan wajibmu sendiri, jadi tabungan sebenarnya lebih besar daripada baris di atas.
 
-Uji stres: kalau semua pengeluaran selain sewa ternyata 50 persen lebih mahal daripada perkiraan tool (tool memakai indeks, bukan struk belanja), tabungan di Perth masih sekitar A$1.680 per bulan (sekitar Rp21,4 juta), sedangkan di Singapura jatuh negatif.
+Stress Test: kalau semua pengeluaran selain sewa ternyata 50 persen lebih mahal daripada perkiraan tool (tool memakai indeks, bukan struk belanja), tabungan di Perth masih sekitar A$1.680 per bulan (sekitar Rp21,4 juta), sedangkan di Singapura jatuh negatif.
 
 ## Bagaimana dengan pekerja profesional? Skenario B
 
@@ -106,17 +104,7 @@ Daftar pengeluarannya lebih tinggi karena gaya hidupnya juga: tempat tinggal sat
 | Rasio tabungan | 13,0% | 47,7% | 52,8% |
 | Tabungan dalam rupiah | Rp1,3 juta | Rp32,1 juta | Rp40,3 juta |
 
-Kali ini dua-duanya menang telak. Rasionya sekitar 4 kali lipat, dan nominalnya 25 sampai 31 kali lipat. Uji stres yang sama (semua selain sewa 50 persen lebih mahal) menyisakan tabungan sekitar Rp24 juta di Perth dan Rp32 juta di Singapura. Kesimpulannya gak berubah.
-
-```mermaid
-xychart-beta
-  title "Tabungan per bulan (Rp juta)"
-  x-axis ["A Jakarta", "A Perth", "A Singapura", "B Jakarta", "B Perth", "B Singapura"]
-  y-axis "Rp juta" 0 --> 45
-  bar [0.3, 26.6, 1.6, 1.3, 32.1, 40.3]
-```
-
-*A = upah rendah, B = profesional di batas gaji minimum visa.*
+Kali ini dua-duanya menang telak. Rasionya sekitar 4 kali lipat, dan nominalnya 25 sampai 31 kali lipat. Stress Test yang sama (semua selain sewa 50 persen lebih mahal) menyisakan tabungan sekitar Rp24 juta di Perth dan Rp32 juta di Singapura. Kesimpulannya gak berubah.
 
 Kamu bisa membuat skenariomu sendiri di [Cost of Living Comparator](https://tool.adjiebrotots.com/costofliving-comparator/): isi kota asal, kota tujuan, gaji, dan pengeluaranmu, lalu lihat berapa yang tersisa.
 
@@ -161,16 +149,13 @@ Gak. Ini keberatan terkuat, dan sebagian benar.
 - **Ada biaya yang gak masuk tabel.** Jauh dari keluarga, biaya pindah dan visa, dan masa awal yang sepi.
 - **Bias sampel.** Teman-teman saya adalah yang bertahan. Saya gak punya angka berapa persen yang menyerah dan pulang.
 - **Kalau penghasilanmu di Indonesia sudah tinggi, atau usahamu ada di sini**, hitungannya bisa lain. Tool ini hanya memperkirakan gaji dan biaya, bukan kesempatan yang cuma ada di Indonesia.
-- **Estimasi ini dari indeks harga.** Tool memperkirakan biaya dari indeks tiap kota, bukan dari struk belanjamu. Makanya saya tampilkan uji stres di atas.
+- **Estimasi ini dari indeks harga.** Tool memperkirakan biaya dari indeks tiap kota, bukan dari struk belanjamu. Makanya saya tampilkan Stress Test di atas.
 
 ## Jadi, kabur atau bertahan?
 
 Nasi goreng di Jakarta memang lebih murah dan lebih enak. Tapi nasi goreng gak menentukan masa depanmu. Harga nasi goreng menentukan makan siangmu. Selisih antara gaji dan pengeluaran menentukan masa depanmu.
 
 Kalau kamu sedang menimbang-nimbang, jangan mulai dari perasaan, dan jangan mulai dari harga nasi goreng. Mulai dari selisih: berapa yang tersisa di akhir bulan, dan apa yang bisa dibeli dengan sisa itu. Hitung versimu sendiri di [Cost of Living Comparator](https://tool.adjiebrotots.com/costofliving-comparator/), lalu putuskan.
-
-Dan kalau hitungan itu membuatmu ingin bertanya soal rumah juga, saya pernah membahas [sewa atau beli rumah di Perth dan Jakarta](https://blog.adjiebrotots.com/id/sewa-atau-beli-rumah/).
-
 ## Referensi
 
 [^kad]: Bisnis.com, [Awal mula kemunculan #KaburAjaDulu yang digaungkan masyarakat](https://kabar24.bisnis.com/read/20250215/15/1839813/awal-mula-kemunculan-kaburajadulu-yang-digaungkan-masyarakat), 15 Februari 2025. Tagar ini sudah dipakai sejak 2023 dan melonjak pada Januari 2025.
