@@ -42,7 +42,10 @@ What the tests taught:
   gave the real thing.
 - **Hands in a close-up:** say "exactly two hands" and what each one does, plus
   "anatomically correct hands, five fingers each". Without it, a close-up got three hands.
-- **Anything with writing on it** (a notebook, a receipt, a screen, a sign): say "only
+- **Short text is allowed.** Quote the exact words in the scene ("a mug with the word
+  RENT printed on it"), keep it to a word or two or a number, and check the spelling in the
+  result. If it comes back wrong after two tries, switch to scribble.
+- **Detailed writing** (a notebook, a receipt, a list, a screen of text): say "only
   wavy scribble lines, no readable words". Asking for "a list" got garbled fake English;
   with the scribble line, the page came out clean. Charts are safe: "a simple line chart
   going up" drew one with no labels.
@@ -69,9 +72,11 @@ realistic simplified proportions, crisp even outlines in a darker shade of each 
 black), saturated flat fills with soft painterly shading and gentle highlights, simple
 friendly faces with small almond eyes and a heavy upper lid line. The background is a soft,
 out-of-focus painted wash with large blurred shapes and no detail, paler than the person.
-Only the drawing style comes from the references, not their people or scenes. No text, no
-letters, no logo, no watermark, no signature.
+Only the drawing style comes from the references, not their people or scenes. No logo, no
+watermark, no signature. No text, except the exact words quoted in the scene, if any.
 ```
+
+With no quoted words in the scene this keeps the picture text-free, as before.
 
 "Only the drawing style comes from the references" stops the model reusing the people in the
 example pictures. Without any `--ref` the same block still works, a little flatter and less
@@ -97,6 +102,7 @@ Swap the framing sentence:
 
 - Don't name wikiHow in the prompt. The style block and the references give the look, and a
   brand name invites its watermark.
-- Don't ask for words, labels or numbers in the picture.
+- Don't ask for more than a word or two or a number in the picture, and never for a
+  paragraph, list or receipt: those get scribble.
 - Don't put real wikiHow pictures in the repo (it is public and they are wikiHow's). The four
   in `examples/` were generated from Adjie's wikiHow samples and are ours to keep.

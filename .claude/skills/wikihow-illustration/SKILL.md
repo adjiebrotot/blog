@@ -57,8 +57,12 @@ Settle these in a few lines (in the plan, if the post goes through `ai-assisted-
   step; a diagonal split panel for "this vs that" or "before and after"; a back view when
   what they look at matters more than their face.
 - **Setting:** one or two props that say where we are, nothing more.
-- **Words in the picture:** none, so one picture serves both languages. Models garble text,
-  so put numbers and labels in the post, not the picture.
+- **Words in the picture:** optional. Short, easily readable text is fine (a word or two, a
+  number, a price, a name on a mug) when it helps the step: quote it exactly in the scene
+  and check every letter afterwards. Detailed writing (a note, a receipt, a list, a screen
+  full of text) always becomes scribble: models turn it into slop. With no text at all, one
+  picture serves both languages; with text, make one picture per language (or use a number
+  or name that reads the same in both).
 - **Keep the pose simple.** Sitting at a table, standing, holding something up. Complicated
   poses (on a vehicle, mid-stride, two people touching) go wrong more often.
 
@@ -100,7 +104,8 @@ Then **open the PNG with Read and check it**:
 - [ ] The object is right (a calculator shows its keys, a phone its screen to the user).
 - [ ] Face calm and friendly, eyes level, looking at the object or the reader.
 - [ ] Clean outlines, soft shading, pale quiet background: it sits with the style reference.
-- [ ] No text, letters, logo, watermark or signature anywhere.
+- [ ] Any text is short, spelled exactly as quoted and easy to read; everything else is
+      scribble. No logo, watermark or signature anywhere.
 
 If it fails, change the prompt (say what was wrong: "the calculator faces the viewer, with
 its keys visible") and generate again. Two or three tries is normal; draft with the cheaper

@@ -52,4 +52,5 @@ a prompt and to judge what comes back.
 - Gloss, glow, 3D rendering, photo-realism, heavy texture.
 - Busy backgrounds, patterned walls, many props.
 - Anime eyes, exaggerated cartoon proportions.
-- Any text, letters, a logo, a watermark or a signature.
+- Detailed or garbled text (notes, receipts, lists), a logo, a watermark or a signature.
+  Short, correct, readable text is allowed.
