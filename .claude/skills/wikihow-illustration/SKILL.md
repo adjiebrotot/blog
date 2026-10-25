@@ -1,89 +1,112 @@
 ---
 name: wikihow-illustration
-description: Make a wikiHow-style illustration for a post on this blog. A friendly, flat, softly shaded drawing of one person doing one action, on a pale background, drawn as SVG and rendered to WebP in assets/img/ (or a prompt for an image model, when Adjie wants to generate it himself). Use when Adjie asks for an illustration, a drawing, a "wikiHow-style" image, a picture for a step or a section, or a cover image that is not a screenshot or a chart.
+description: Make a wikiHow-style illustration for a post on this blog with an image model on OpenRouter. A friendly, clean, softly shaded drawing of one person doing one action, on a pale background, saved as WebP in assets/img/. Use when Adjie asks for an illustration, a drawing, an image, a "wikiHow-style" picture, a picture for a step or a section, or a cover image that is not a screenshot or a chart.
 ---
 
 # wikiHow-style illustration
 
 The look of a wikiHow step picture: one ordinary person, mid-shot, doing the one thing the
-step is about, drawn in clean flat colour with a single soft shadow tone and a pale, almost
-empty background. Friendly and plain, never cartoonish or glossy. It explains an action, so
-the hands and the object they hold are the centre of the picture.
+step is about, in clean line art with soft shading and a pale, almost empty background.
+Friendly and plain. It explains an action, so the hands and the object they hold are the
+centre of the picture. `examples/style-reference.webp` is the target look (made with the
+prompt in `examples/style-reference.txt`).
 
-The style is the inspiration, not the brand. **Never** draw the wikiHow logo or watermark,
-copy a real wikiHow picture, or say in a caption or alt text that the picture is from
-wikiHow.
+The style is the inspiration, not the brand. **Never** ask for or keep the wikiHow logo or
+watermark, never send a real wikiHow picture to the model, and never say in a caption or alt
+text that the picture is from wikiHow.
 
 ```
-brief (what the picture must show)  →  SVG in _illustrations/  →  render  →  look at it, fix
-                                                                   →  WebP in assets/img/  →  <img> in the post
+brief  →  prompt in _illustrations/<name>.txt  →  generate.mjs (OpenRouter)  →  look, retry
+       →  render.mjs  →  assets/img/<name>.webp  →  <img> in the post
 ```
 
-## When a picture earns its place
+## Before you start: the API key
 
-Use one where a reader has to *imagine a person doing something*: a habit, a step, a
-choice, a feeling about money or work ("put the receipt in an envelope", "ask your landlord
-first", "two shirts, one budget"). Don't use one where a chart, a screenshot or a tool embed
-shows the real thing better (see the Features table in `ai-assisted-blog-post`). One or two
-per post is usually right; one per step suits a how-to post.
+Pictures come from an image model on [OpenRouter](https://openrouter.ai/). The script reads
+the key from `OPENROUTER_API_KEY`. If it is not set, **ask Adjie for a key** (or for another
+image service he prefers) before doing anything else, and pass it only as an environment
+variable for the command. Never write a key into a file, a commit, a prompt file or a post.
+
+OpenRouter refuses image output when the key has less than $1.00 of credit left (error
+402). Tell Adjie the balance needs topping up; don't retry.
+
+## Which model
+
+| Model | Cost per picture | Use for |
+|-------|------------------|---------|
+| `google/gemini-3-pro-image` | about $0.14 | **Default.** Cleanest wikiHow look: even outlines, soft cel shading, natural hands, follows a style reference well. |
+| `google/gemini-nano-banana-2.1` | about $0.04 | Drafts and retries. Almost the same look at a quarter of the price; a little flatter. |
+| `google/gemini-3.1-flash-image` | about $0.07 | A fallback if the two above are unavailable. |
+| `openai/gpt-5.4-image-2` | about $0.17 | Not for this style: softer and more painterly, weaker outlines, and the dearest. |
+
+Tested on 25 October 2026 with the same prompt. Model ids change: if one is gone, list the
+current ones with
+`curl -s https://openrouter.ai/api/v1/models | grep -o '"id":"[^"]*image[^"]*"'`
+and prefer the newest Gemini image model.
 
 ## Step 1: Write the brief
 
-Before drawing, settle these in a few lines (in the plan, if the post goes through
-`ai-assisted-blog-post`):
+Settle these in a few lines (in the plan, if the post goes through `ai-assisted-blog-post`):
 
 - **Action:** the one verb the picture shows, and the object in the hands.
 - **Who:** an everyday person. Vary age, gender, skin tone and hair across a post; match the
   post's character if it has one (Robert, Geoff). Indonesian posts can show Indonesian
   people and settings (a warung, a motorbike, a batik shirt, a hijab) when it fits.
 - **Framing:** mid-shot (head to waist) by default; a close-up on the hands for a detail
-  step; a diagonal split panel for a "this vs that" or "before and after".
+  step; a diagonal split panel for "this vs that" or "before and after"; a back view when
+  what they look at matters more than their face.
 - **Setting:** one or two props that say where we are, nothing more.
-- **Words in the picture:** avoid them, so one picture serves both languages. Numbers and
-  symbols (1,250, %, $, Rp) are fine. If words are unavoidable, make one file per language
-  (`-en.webp`, `-id.webp`), like the screenshots.
+- **Words in the picture:** none, so one picture serves both languages. Models garble text,
+  so put numbers and labels in the post, not the picture.
 
-## Step 2: Draw the SVG
+## Step 2: Write the prompt
 
-Read `references/style-guide.md` (the look) and `references/svg-kit.md` (how to build it),
-and open `examples/budget-calculator.svg`, a finished picture that follows both. Start from
-a copy of it when the scene is close; its structure (define, fill, shade, outline) is the
-part to keep.
+Build it from `references/image-prompt.md`: the scene from the brief, then the style block
+word for word, so every picture on the blog matches. `references/style-guide.md` explains
+the look in detail; use it to word the scene and to judge the result.
 
-Save the source as `_illustrations/<name>.svg` at the repo root. Jekyll skips folders that
-start with `_`, so the source stays in git for later edits but is not published. `<name>`
-starts with the post's short prefix, like the screenshots (`rvo-...`): `rvo-ill-compare-rent.svg`.
+Save the prompt as `_illustrations/<name>.txt` at the repo root. Jekyll skips folders that
+start with `_`, so it stays in git, unpublished, for regenerating later. `<name>` starts
+with the post's short prefix, like the screenshots (`rvo-...`): `rvo-ill-compare-rent.txt`.
 
-## Step 3: Render and look at it
+## Step 3: Generate and look at it
 
 ```sh
-node .claude/skills/wikihow-illustration/scripts/render.mjs \
-  _illustrations/<name>.svg assets/img/<name>.webp --preview <scratchpad>/<name>.png
+OPENROUTER_API_KEY=... node .claude/skills/wikihow-illustration/scripts/generate.mjs \
+  _illustrations/<name>.txt <scratchpad>/<name>.png \
+  --ref .claude/skills/wikihow-illustration/examples/style-reference.webp
 ```
 
-The default `--width 1456` is twice the 728 × 546 drawing, sharp on high-density screens and
-usually 30 to 80 KB. Then **open the preview PNG with Read and look at it** as a reader
-would, against the checklist below. Fix and re-render; two or three rounds is normal. Stop
-when it passes, not when it is perfect.
+- `--model` picks the model (default `google/gemini-3-pro-image`), `--aspect` the shape
+  (default `4:3`; `1.91:1` is not offered, use `16:9` for a social card).
+- `--ref` attaches a picture as a style reference, and can be repeated. Pass the style
+  reference for the first picture of a post, and that post's first approved picture for the
+  rest, so they look like one set. With a reference, start the prompt with "Match the
+  drawing style of the attached reference picture exactly, but draw a new scene:".
+
+Then **open the PNG with Read and check it**:
 
 - [ ] The action reads in one second: you can say the step from the picture alone.
-- [ ] Hands are on the object, at a believable size (a hand is about as long as the face).
-- [ ] Face: eyes level, the same size and looking at the object or the reader; a calm,
-      friendly expression.
-- [ ] Every shape has its darker outline, and the shadow sits on the same side everywhere
-      (light from the upper right in the example).
-- [ ] No stray gaps between shapes, no outline cutting through a hand or a face.
-- [ ] Background is pale and quiet; the person is the most saturated thing in the picture.
-- [ ] Nothing from wikiHow: no logo, no watermark, no copied scene.
-- [ ] No words, or one file per language.
+- [ ] Hands: five fingers, holding the object the way people do.
+- [ ] The object is right (a calculator shows its keys, a phone its screen to the user).
+- [ ] Face calm and friendly, eyes level, looking at the object or the reader.
+- [ ] Clean outlines, soft shading, pale quiet background: it sits with the style reference.
+- [ ] No text, letters, logo, watermark or signature anywhere.
 
-If after three rounds a part still looks wrong (hands are the usual one), simplify it:
-crop it out of frame, turn it away, or put the object in front of it. A simple picture that
-reads is better than a detailed one that looks off.
+If it fails, change the prompt (say what was wrong: "the calculator faces the viewer, with
+its keys visible") and generate again. Two or three tries is normal; draft with the cheaper
+model if it takes more. Keep the final wording in the `.txt` file.
 
 ## Step 4: Put it in the post
 
-Use an `<img>` with its real pixel size, like the other images on the blog, inside a
+Convert the PNG to WebP at the width the blog needs:
+
+```sh
+node .claude/skills/wikihow-illustration/scripts/render.mjs <scratchpad>/<name>.png assets/img/<name>.webp
+```
+
+(`--width 1456` is the default, sharp on high-density screens and usually 60 to 150 KB.)
+Then use an `<img>` with its real pixel size, like the other images on the blog, inside a
 `<figure>` when it has a caption:
 
 ```html
@@ -94,19 +117,10 @@ Use an `<img>` with its real pixel size, like the other images on the blog, insi
 
 - **Alt text** says what the person is doing and with what, in the post's language. Not
   "illustration of" and not the style.
-- The first picture in a post can also be the social card (`image:` and `image_alt:` in the
-  front matter). Cards work best at 1200 × 630, so for a card draw a second SVG with
-  `viewBox="0 0 1200 630"` (the same scene, wider, the person off-centre) and render it with
+- A picture can also be the social card (`image:` and `image_alt:` in the front matter).
+  Cards work best wide: generate a version with `--aspect 16:9` and render it with
   `--width 1200`.
-- The picture carries its own pale background, so it works in both the light and the dark
-  theme. Don't make it transparent.
+- The picture carries its own pale background, so it works in the light and the dark theme.
 
-Then run the checks in `CLAUDE.md` and commit the SVG source with the WebP.
-
-## When Adjie wants to generate it himself
-
-If he would rather use an image model (ChatGPT, Gemini, Midjourney...) or asks for "a
-prompt", write one from `references/image-prompt.md` instead of drawing. When he sends the
-result back, convert it with the same script (it reads PNG, JPG and WebP too), check it
-against the checklist above, and place it as in Step 4. There is no SVG source then; say so
-in the commit.
+Run the checks in `CLAUDE.md`, and commit the WebP with its prompt file. Tell Adjie which
+model made it and what it cost (the script prints both).
