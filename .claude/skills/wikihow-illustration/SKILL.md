@@ -89,8 +89,9 @@ OPENROUTER_API_KEY=... node $K/scripts/generate.mjs \
 - `--ref` attaches a style reference and can be repeated. Always pass the four examples. For
   the same character across a post, put that post's first picture before them (see
   `references/image-prompt.md`).
-- **One request at a time.** Parallel requests get a 429 from OpenRouter; the script waits
-  and retries three times, but running several at once still fails.
+- **One request at a time.** Parallel requests get a 429 from OpenRouter. The script waits
+  and retries a 429 or a busy provider (502, 503) three times, but running several at once
+  still fails.
 
 Then **open the PNG with Read and check it**:
 

@@ -46,11 +46,13 @@ const request = () => fetch('https://openrouter.ai/api/v1/chat/completions', {
     image_config: { aspect_ratio: aspect },
   }),
 });
-// A 429 (too many requests at once) clears after a few seconds: wait and try again.
+// A 429 (too many requests at once) or a 502/503 (the model's provider is busy) clears after
+// a few seconds: wait and try again.
+const busy = (status) => [429, 502, 503].includes(status);
 let res = await request();
-for (let tries = 1; res.status === 429 && tries <= 3; tries++) {
+for (let tries = 1; busy(res.status) && tries <= 3; tries++) {
   const wait = Number(res.headers.get('retry-after')) || 10;
-  console.error(`429, retrying in ${wait}s`);
+  console.error(`${res.status}, retrying in ${wait}s`);
   await new Promise((r) => setTimeout(r, wait * 1000));
   res = await request();
 }

@@ -1,6 +1,6 @@
 # The prompt
 
-Tuned on Nano Banana 2.1 with ten test pictures (25 October 2026). A prompt has three
+Tuned on Nano Banana 2.1 with eighteen test pictures (25 October 2026). A prompt has three
 parts, in this order: the opening line, the scene, the style block. Pass the four pictures in
 `examples/` as `--ref`; they carry the look better than words alone.
 
@@ -18,7 +18,7 @@ The first attached picture shows a character. Draw the same [man / woman] (same 
 and clothes) in a new scene, in the drawing style of all the attached pictures:
 ```
 
-(This one is not tested yet: check the face closely.)
+(Tested: the same face, hair and shirt came back in a new pose. Still check the face.)
 
 ## 2. The scene
 
@@ -43,8 +43,15 @@ What the tests taught:
 - **Hands in a close-up:** say "exactly two hands" and what each one does, plus
   "anatomically correct hands, five fingers each". Without it, a close-up got three hands.
 - **Anything with writing on it** (a notebook, a receipt, a screen, a sign): say "only
-  wavy scribble lines, no readable words". Asking for "a list" got garbled fake English.
-  Charts are safe: "a simple line chart going up" drew one with no labels.
+  wavy scribble lines, no readable words". Asking for "a list" got garbled fake English;
+  with the scribble line, the page came out clean. Charts are safe: "a simple line chart
+  going up" drew one with no labels.
+- **Never use the words "label", "labelled" or "sign"**, not even to forbid them. "Labelled-free
+  envelopes" got three envelopes with Indonesian words written on them. Say what it looks like
+  instead: "plain white envelopes with nothing written on them".
+- **Always name the clothes.** Whatever you leave out comes from the references: a man with
+  no shirt described got the orange t-shirt of `ref-midshot.webp`. In a split panel, say
+  "the same man in the same [shirt]" on the second side.
 - **Spell out the pose with vehicles and furniture.** "Sits on a parked scooter" got a man
   standing beside it. Say "sitting astride the scooter, both feet on the ground".
 - **People of any background work:** a hijab, dark skin with short natural hair, an older man
@@ -82,7 +89,9 @@ Swap the framing sentence:
 - **Back view:** "Seen from behind and slightly to the side, [who] [does what] and looks at
   [...]. 4:3." (made `examples/ref-back-view.webp`)
 - **Social card:** "Wide picture for a social card: the [person] on the left third, plenty of
-  empty pale background on the right. 16:9." with `--aspect 16:9`. (Not tested yet.)
+  empty pale background on the right. 16:9." with `--aspect 16:9`. (Tested: it comes back
+  at 1376 × 768 with the person on the left and room on the right; render it with
+  `--width 1200`.)
 
 ## Don'ts
 
