@@ -6,7 +6,7 @@ tags: [finance, personal]
 keywords: [KaburAjaDulu, kabur aja dulu, kerja di luar negeri, gaji Australia, gaji Singapura, tradable non-tradable, biaya hidup Perth, biaya hidup Singapura, cost of living]
 ---
 
-**Singkatnya:** nasi goreng memang jauh lebih murah di Indonesia, tapi tabungan akhir bulan bisa jauh lebih besar di Australia dan Singapura. Alasannya, sebagian besar belanja kita adalah barang yang harganya hampir sama di seluruh dunia, sementara gajinya gak sama. Di hitungan saya, pekerja profesional di Perth menabung sekitar Rp32 juta sebulan, di Singapura sekitar Rp42 juta, sedangkan di Jakarta Rp1,3 juta. Dengan catatan: yang paling tipis justru pekerja upah rendah di Singapura.
+**Singkatnya:** nasi goreng memang jauh lebih murah di Indonesia, tapi tabungan akhir bulan bisa jauh lebih besar di Australia dan Singapura. Alasannya, sebagian besar belanja kita adalah barang yang harganya hampir sama di seluruh dunia, sementara gajinya gak sama. Di hitungan saya, pekerja profesional di Perth menabung sekitar Rp32 juta sebulan, di Singapura sekitar Rp40 juta, sedangkan di Jakarta Rp1,3 juta. Dengan catatan: yang paling tipis justru pekerja upah rendah di Singapura.
 {: .tldr}
 
 * TOC
@@ -58,7 +58,7 @@ Jadi pertanyaannya bergeser: kalau barang tradable harganya sama di mana-mana, s
 
 ## Berapa tabungan akhir bulannya? Skenario A: upah rendah
 
-Supaya adil, kita uji dua kelompok. Hitungan di bawah dibuat dengan [tool Cost of Living Comparator](https://tool.adjiebrotots.com/costofliving-comparator/) buatan saya, dengan satu daftar pengeluaran yang sama di tiga kota: seorang single, menyewa kamar atau tempat tinggal dengan tipe yang sama, makan campur masak dan di luar. Itu yang saya maksud dengan apple to apple. Jakarta jadi titik awal, dan tool memperkirakan biaya yang sama di Perth dan Singapura dari indeks harga tiap kota.
+Supaya adil, kita uji dua kelompok. Hitungan di bawah dibuat dengan [tool Cost of Living Comparator](https://tool.adjiebrotots.com/costofliving-comparator/) buatan saya, dalam mode Detailed, dengan satu daftar pengeluaran yang sama di tiga kota: seorang single, menyewa tempat tinggal dengan tipe yang sama, makan campur masak dan di luar, bepergian dengan motor atau transportasi umum. Itu yang saya maksud dengan apple to apple. Jakarta jadi titik awal. Tiap baris (sewa, makanan, listrik dan air, bensin, kesehatan, dan seterusnya) lalu diperkirakan tool untuk Perth dan Singapura dari indeks harga masing-masing kota, jadi kamu bisa melihat selisihnya per baris.
 
 Skenario pertama: pekerja upah rendah.
 
@@ -73,17 +73,19 @@ Skenario pertama: pekerja upah rendah.
 | Belanja bahan makanan | 1.400.000 | 223 | 202 |
 | Makan di luar | 800.000 | 242 | 166 |
 | Listrik, air, gas | 400.000 | 167 | 95 |
-| Lain-lain (ongkos, ponsel, dll.) | 1.000.000 | 185 | 178 |
-| **Total pengeluaran** | **5.400.000** | **1.668** | **1.493** |
-| **Tabungan** | **329.876** | **2.101** | **171** |
-| Rasio tabungan | 5,8% | 55,7% | 10,3% |
-| Tabungan dalam rupiah | Rp330 ribu | Rp26,7 juta | Rp2,4 juta |
+| Transportasi (bensin) | 400.000 | 60 | 112 |
+| Kesehatan (dokter, obat) | 150.000 | 50 | 42 |
+| Lain-lain (ponsel, pakaian, dll.) | 450.000 | 83 | 80 |
+| **Total pengeluaran** | **5.400.000** | **1.677** | **1.549** |
+| **Tabungan** | **329.876** | **2.092** | **115** |
+| Rasio tabungan | 5,8% | 55,5% | 6,9% |
+| Tabungan dalam rupiah | Rp330 ribu | Rp26,6 juta | Rp1,6 juta |
 
 *Angka dibulatkan. Kurs bawaan tool: A$1 = Rp12.710 dan S$1 = Rp14.152.*
 
-Perth jelas menang: sekitar 80 kali lipat tabungan Jakarta, dalam rupiah. Singapura juga menang di atas kertas (10,3% versus 5,8%), tapi tipis, dan ini bagian yang harus saya jujurkan. PWM hanya mewajibkan upah itu untuk warga negara dan PR, bukan pemegang work permit.[^pwm] Jadi skenario ini menunjukkan mekanisme harga, bukan jalur yang biasa dilewati orang Indonesia yang pindah. Dan CPF yang dipotong itu sebenarnya tabungan wajibmu sendiri, jadi tabungan sebenarnya lebih besar daripada baris di atas.
+Perth jelas menang: sekitar 80 kali lipat tabungan Jakarta, dalam rupiah. Singapura juga menang di atas kertas (6,9% versus 5,8%), tapi tipis, dan ini bagian yang harus saya jujurkan. PWM hanya mewajibkan upah itu untuk warga negara dan PR, bukan pemegang work permit.[^pwm] Jadi skenario ini menunjukkan mekanisme harga, bukan jalur yang biasa dilewati orang Indonesia yang pindah. Dan CPF yang dipotong itu sebenarnya tabungan wajibmu sendiri, jadi tabungan sebenarnya lebih besar daripada baris di atas.
 
-Uji stres: kalau semua pengeluaran selain sewa ternyata 50 persen lebih mahal daripada perkiraan tool (tool memakai indeks, bukan struk belanja), tabungan di Perth masih sekitar A$1.690 per bulan (sekitar Rp21,5 juta), sedangkan di Singapura jatuh negatif.
+Uji stres: kalau semua pengeluaran selain sewa ternyata 50 persen lebih mahal daripada perkiraan tool (tool memakai indeks, bukan struk belanja), tabungan di Perth masih sekitar A$1.680 per bulan (sekitar Rp21,4 juta), sedangkan di Singapura jatuh negatif.
 
 ## Bagaimana dengan pekerja profesional? Skenario B
 
@@ -93,7 +95,7 @@ Skenario kedua lebih mirip jalur yang biasa ditempuh orang Indonesia: pindah den
 - **Perth:** batas gaji minimum visa kerja terampil (dulu populer disebut TSMIT, sekarang Core Skills Income Threshold) sekitar A$79.423 per tahun. Setelah pajak dan Medicare levy, take-home sekitar A$5.291 per bulan.[^csit]
 - **Singapura:** gaji minimum untuk Employment Pass (E-Pass), S$5.600 per bulan. Setelah pajak resident (tanpa CPF untuk pemegang pass asing), take-home sekitar S$5.396.[^ep]
 
-Daftar pengeluarannya lebih tinggi karena gaya hidupnya juga: tempat tinggal satu kamar tidur dan lebih sering makan di luar.
+Daftar pengeluarannya lebih tinggi karena gaya hidupnya juga: tempat tinggal satu kamar tidur, lebih sering makan di luar, dan biaya kesehatan yang lebih besar.
 
 | Per bulan | Jakarta (Rp) | Perth (A$) | Singapura (S$) |
 | --- | --- | --- | --- |
@@ -102,20 +104,22 @@ Daftar pengeluarannya lebih tinggi karena gaya hidupnya juga: tempat tinggal sat
 | Belanja bahan makanan | 1.800.000 | 287 | 260 |
 | Makan di luar | 1.500.000 | 454 | 312 |
 | Listrik, air, gas | 600.000 | 250 | 142 |
-| Lain-lain (ongkos, ponsel, dll.) | 1.800.000 | 332 | 320 |
-| **Total pengeluaran** | **8.700.000** | **2.743** | **2.453** |
-| **Tabungan** | **1.300.000** | **2.548** | **2.943** |
-| Rasio tabungan | 13,0% | 48,2% | 54,5% |
-| Tabungan dalam rupiah | Rp1,3 juta | Rp32,4 juta | Rp41,6 juta |
+| Transportasi (bensin) | 600.000 | 90 | 167 |
+| Kesehatan (dokter, obat) | 300.000 | 100 | 85 |
+| Lain-lain (ponsel, pakaian, dll.) | 900.000 | 166 | 160 |
+| **Total pengeluaran** | **8.700.000** | **2.766** | **2.545** |
+| **Tabungan** | **1.300.000** | **2.525** | **2.851** |
+| Rasio tabungan | 13,0% | 47,7% | 52,8% |
+| Tabungan dalam rupiah | Rp1,3 juta | Rp32,1 juta | Rp40,3 juta |
 
-Kali ini dua-duanya menang telak. Rasionya sekitar 4 kali lipat, dan nominalnya 25 sampai 32 kali lipat. Uji stres yang sama (semua selain sewa 50 persen lebih mahal) menyisakan tabungan sekitar Rp24 juta di Perth dan Rp34 juta di Singapura. Kesimpulannya gak berubah.
+Kali ini dua-duanya menang telak. Rasionya sekitar 4 kali lipat, dan nominalnya 25 sampai 31 kali lipat. Uji stres yang sama (semua selain sewa 50 persen lebih mahal) menyisakan tabungan sekitar Rp24 juta di Perth dan Rp32 juta di Singapura. Kesimpulannya gak berubah.
 
 ```mermaid
 xychart-beta
   title "Tabungan per bulan (Rp juta)"
   x-axis ["A Jakarta", "A Perth", "A Singapura", "B Jakarta", "B Perth", "B Singapura"]
   y-axis "Rp juta" 0 --> 45
-  bar [0.3, 26.7, 2.4, 1.3, 32.4, 41.6]
+  bar [0.3, 26.6, 1.6, 1.3, 32.1, 40.3]
 ```
 
 *A = upah rendah, B = profesional di batas gaji minimum visa.*
