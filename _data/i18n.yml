@@ -35,8 +35,9 @@ en:
   about_author: "Adjie Brotosukmono is an Indonesian senior economics consultant and power system engineer at Mott MacDonald in Perth, Australia. Adjie builds the free calculators at Adjie Brotools and writes here about the decisions behind them."
   about_me: About me
   elsewhere: Elsewhere
-  not_found_title: Page not found
-  not_found_body: "This page does not exist, or it moved. Try the latest posts instead."
+  not_found_hand: "oops, wrong stop"
+  not_found_heading: "This page took a different train."
+  not_found_lead: "The address doesn't exist, or it moved. Hop back on at one of these:"
   months: [January, February, March, April, May, June, July, August, September, October, November, December]
   date_format: "{d} {m} {y}"
 
@@ -76,7 +77,8 @@ id:
   about_author: "Adjie Brotosukmono adalah konsultan ekonomi senior dan insinyur sistem tenaga listrik asal Indonesia di Mott MacDonald, Perth, Australia. Ia membuat kalkulator gratis di Adjie Brotools dan menulis di sini tentang keputusan di balik alat-alat tersebut."
   about_me: Tentang saya
   elsewhere: Tautan lain
-  not_found_title: Halaman tidak ditemukan
-  not_found_body: "Halaman ini tidak ada atau sudah dipindahkan. Coba lihat artikel terbaru."
+  not_found_hand: "ups salah stasiun"
+  not_found_heading: "Halaman ini salah naik kereta."
+  not_found_lead: "Alamatnya gak ada, atau sudah pindah. Naik lagi dari salah satu stasiun ini:"
   months: [Januari, Februari, Maret, April, Mei, Juni, Juli, Agustus, September, Oktober, November, Desember]
   date_format: "{d} {m} {y}"
