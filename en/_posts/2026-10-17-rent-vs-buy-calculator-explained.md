@@ -18,6 +18,10 @@ keywords: [rent vs buy, rent or buy house, Perth, Jakarta, KPR, mortgage, proper
 
 Meet two friends. Robert wants a home to paint, drill and never be asked to leave, a place where the kids can grow up. Geoff changes countries every few years, hates juggling property tax, repairs and utility accounts in three countries, and wants one monthly payment, all in.
 
+<figure>
+<img src="/assets/img/rvo-ill-buyer-renter.webp" alt="Two friends side by side: one paints his living room wall with a roller, the other holds a passport-sized booklet beside his rolling suitcase" width="1456" height="1087" loading="lazy">
+</figure>
+
 Both are right. Nobody can put a price on Robert's stability or on Geoff's freedom, and I won't try. Those are values, not line items.
 
 But there is a second, colder question that doesn't care about values: **if you count only the money, who ends up with more?** My honest answer, after building a tool to find out, is that both can win. That is why I wrote the Rent vs Own calculator. For me, because I was tired of arguing about it from gut feeling. For my friends, who got a number to argue with. And for you, if you would like to see the bigger picture before signing 30 years of anything.
@@ -93,6 +97,10 @@ A fair objection: Perth runs 30 years and Jakarta 20, because that is each marke
 ## How do you count your wealth?
 
 Here is the part no spreadsheet settles for you. The word "wealthier" depends on what you call wealth. I see three camps.
+
+<figure>
+<img src="/assets/img/rvo-ill-count-wealth.webp" alt="A woman in a hijab weighs a small toy house in one hand against a stack of gold coins in the other, a piggy bank on the table in front of her" width="1456" height="1087" loading="lazy">
+</figure>
 
 1. **The holistic mind.** Your house equity is wealth, full stop. This is how most Australians think, and the numbers back them up. UBS's Global Wealth Report 2026 (2025 data) ranks Australia **third in the world for median wealth per adult**, at US$210,783, behind only Luxembourg and Belgium.[^ubs] And much of it is bricks: Australian households hold A$12.3 trillion in residential land and dwellings.[^abc] If you count equity, buying in Perth looks great.
 2. **The liquid mind.** Wealth is what you can spend. A house is paper until you sell it, and the equity cannot buy dinner. You want to afford things, not be "paper rich". The calculator's chart has a **Liquid cash** tab for this lens.

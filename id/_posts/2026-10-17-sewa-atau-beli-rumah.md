@@ -18,6 +18,10 @@ keywords: [sewa atau beli rumah, KPR, kalkulator sewa vs beli, Perth, Jakarta, b
 
 Kenalkan dua teman. Robert pengin punya rumah yang bebas dia cat dan bor, tanpa pernah disuruh pindah, tempat anak-anaknya tumbuh. Vieri pindah negara tiap beberapa tahun, malas ngurus pajak properti, perbaikan, dan akun listrik di tiga negara, dan maunya satu pembayaran per bulan, sudah beres semua.
 
+<figure>
+<img src="/assets/img/rvo-ill-buyer-renter.webp" alt="Dua teman berdampingan: satu mengecat dinding ruang tamunya dengan rol cat, satunya memegang buku kecil di samping koper dorongnya" width="1456" height="1087" loading="lazy">
+</figure>
+
 Dua-duanya benar. Stabilitas Robert dan kebebasan Vieri gak bisa dikasih harga, dan saya gak akan mencoba. Itu values, bukan baris di spreadsheet.
 
 Tapi ada pertanyaan kedua yang lebih dingin dan gak peduli values: **kalau cuma menghitung uang, siapa yang akhirnya punya lebih banyak?** Jawaban jujur saya, setelah membuat tool untuk mencari tahu, adalah dua-duanya bisa menang. Itulah alasan saya membuat tool Sewa vs Beli Rumah. Pertama untuk saya sendiri, karena capek berdebat pakai perasaan. Kedua untuk teman-teman saya, supaya ada angka yang bisa diadu. Dan untuk kamu yang ingin melihat gambaran besarnya sebelum menandatangani cicilan 20 sampai 30 tahun.
@@ -93,6 +97,10 @@ Biar fair: Perth berjalan 30 tahun dan Jakarta 20 tahun, karena itulah jangka KP
 ## Gimana caramu memandang kekayaan?
 
 Bagian ini gak bisa diputuskan spreadsheet buat kamu. Kata "lebih kaya" tergantung apa yang kamu sebut kekayaan. Saya melihat tiga kubu.
+
+<figure>
+<img src="/assets/img/rvo-ill-count-wealth.webp" alt="Seorang perempuan berhijab menimbang rumah mainan kecil di satu tangan dan setumpuk koin emas di tangan lainnya, dengan celengan di meja di depannya" width="1456" height="1087" loading="lazy">
+</figure>
 
 1. **Holistic thinking.** Ekuitas rumah adalah kekayaan, titik. Begitulah kebanyakan orang Australia berpikir, dan angkanya mendukung. Global Wealth Report 2026 dari UBS (data 2025) menempatkan Australia di **peringkat ketiga dunia untuk kekayaan median per orang dewasa**, US$210.783, di bawah Luksemburg dan Belgia saja.[^ubs] Dan sebagian besar berupa batu bata: rumah tangga Australia punya tanah dan bangunan hunian senilai A$12,3 triliun.[^abc] Kalau ekuitas dihitung, beli di Perth kelihatan bagus.
 2. **Liquid asset thinking.** Kekayaan adalah yang bisa dibelanjakan. Rumah itu cuma angka di kertas sampai dijual, dan ekuitas gak bisa buat beli makan malam. Kamu ingin benar-benar mampu membeli sesuatu, bukan "kaya di atas kertas". Grafik di tool punya tab **Uang tunai** untuk cara pandang ini.
