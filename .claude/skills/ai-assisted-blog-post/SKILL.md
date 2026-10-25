@@ -101,6 +101,7 @@ what the plan does about them. "None I can see" is allowed, but check hard first
 | D1 | Data | <figure, with date> | <section> | <publisher, link> / verified or **to verify** |
 | T1 | Tool embed | <tool, chart, inputs> | <section> | <tool URL> |
 | S1 | Screenshot | <what the image shows> | <section> | <how it will be made> |
+| I1 | Illustration | <who does what, with which object> | <section> | generated with `wikihow-illustration` |
 | M1 | Mermaid | <diagram type: flowchart, xychart-beta, pie...> showing <...> | <section> | <data behind it> |
 | K1 | KaTeX | <the equation, in words> | <section> | <every symbol it defines> |
 | X1 | Extra | table / alert / footnotes / TOC | <section> | |
@@ -152,6 +153,10 @@ the blog can draw them. Per type:
 - **Screenshot:** what it shows, its alt text, and whether Adjie supplies it or you
   capture it (the container has Playwright and Chromium). It goes in `assets/img/`.
   Prefer an embed when the reader would want to change the numbers.
+- **Illustration:** a wikiHow-style picture of one person doing one action, generated with the
+  `wikihow-illustration` skill. Give the brief (action, who, framing) and its alt text.
+  Use it where the reader has to imagine a person doing something, not where a chart or a
+  screenshot shows the real thing.
 - **Mermaid:** the diagram type and the data or steps it draws. Charts use
   `xychart-beta` or `pie` and need real numbers from a D row.
 - **KaTeX:** the equation in words or LaTeX, and the symbols it defines. A simple sum for
