@@ -12,12 +12,6 @@ keywords: [KaburAjaDulu, kabur aja dulu, kerja di luar negeri, gaji Australia, g
 * TOC
 {:toc}
 
-## Siapa yang benar, kubu "kabur" atau kubu "di sini murah"?
-
-Dua grup WhatsApp, satu topik. Di grup pertama, Bimo mengirim tangkapan layar struk: nasi goreng dan es teh, Rp25.000. "Di Sydney ini bisa A$30. Mending di sini lah." Di grup kedua, Sari, teman kuliah saya yang sekarang di Melbourne, membaca pesan yang sama dan cuma membalas satu pertanyaan: "Kamu menghabiskan gaji sebulan cuma buat nasi goreng?"
-
-Dua-duanya benar soal nasi goreng. Tapi pertanyaan yang sebenarnya bukan "di mana nasi goreng lebih murah?". Pertanyaannya: **di akhir bulan, di mana uangmu yang tersisa lebih banyak?** Kita hitung.
-
 ## Apa itu #KaburAjaDulu, dan kenapa ada dua kubu?
 
 Tagar ini sebenarnya sudah muncul sejak 2023, lalu meledak di awal 2025 sebagai ungkapan kecewa, terutama dari anak muda, terhadap kondisi di dalam negeri.[^kad] Sejak itu muncul kubu tandingannya: justru hidup di Indonesia lebih enak, karena harga-harganya murah. Bukan tanpa alasan. Ketimpangan misalnya melebar lagi, rasio Gini naik dari 0,363 (September 2025) menjadi 0,368 (Maret 2026).[^gini] Itu saja yang akan saya bahas soal kondisi dalam negeri. Tulisan ini soal uang, bukan politik.
@@ -171,7 +165,7 @@ Gak. Ini keberatan terkuat, dan sebagian benar.
 
 ## Jadi, kabur atau bertahan?
 
-Kembali ke Bimo dan Sari. Bimo benar bahwa nasi goreng di Jakarta lebih murah dan lebih enak. Sari benar bahwa nasi goreng gak menentukan masa depanmu. Harga nasi goreng menentukan makan siangmu. Selisih antara gaji dan pengeluaran menentukan masa depanmu.
+Nasi goreng di Jakarta memang lebih murah dan lebih enak. Tapi nasi goreng gak menentukan masa depanmu. Harga nasi goreng menentukan makan siangmu. Selisih antara gaji dan pengeluaran menentukan masa depanmu.
 
 Kalau kamu sedang menimbang-nimbang, jangan mulai dari perasaan, dan jangan mulai dari harga nasi goreng. Mulai dari selisih: berapa yang tersisa di akhir bulan, dan apa yang bisa dibeli dengan sisa itu. Hitung versimu sendiri di [Cost of Living Comparator](https://tool.adjiebrotots.com/costofliving-comparator/), lalu putuskan.
 
