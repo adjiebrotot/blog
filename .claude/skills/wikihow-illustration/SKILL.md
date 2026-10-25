@@ -8,12 +8,13 @@ description: Make a wikiHow-style illustration for a post on this blog with an i
 The look of a wikiHow step picture: one ordinary person, mid-shot, doing the one thing the
 step is about, in clean line art with soft shading and a pale, almost empty background.
 Friendly and plain. It explains an action, so the hands and the object they hold are the
-centre of the picture. `examples/style-reference.webp` is the target look (made with the
-prompt in `examples/style-reference.txt`).
+centre of the picture. The four pictures in `examples/` are the target look: a mid-shot, an
+Indonesian street scene, a split panel and a back view. They were generated from Adjie's
+wikiHow samples and are passed to the model as style references every time.
 
 The style is the inspiration, not the brand. **Never** ask for or keep the wikiHow logo or
-watermark, never send a real wikiHow picture to the model, and never say in a caption or alt
-text that the picture is from wikiHow.
+watermark, never commit a real wikiHow picture to this public repo, and never say in a
+caption or alt text that the picture is from wikiHow.
 
 ```
 brief  →  prompt in _illustrations/<name>.txt  →  generate.mjs (OpenRouter)  →  look, retry
@@ -34,12 +35,12 @@ OpenRouter refuses image output when the key has less than $1.00 of credit left 
 
 | Model | Cost per picture | Use for |
 |-------|------------------|---------|
-| `google/gemini-3-pro-image` | about $0.14 | **Default.** Cleanest wikiHow look: even outlines, soft cel shading, natural hands, follows a style reference well. |
-| `google/gemini-nano-banana-2.1` | about $0.04 | Drafts and retries. Almost the same look at a quarter of the price; a little flatter. |
+| `google/gemini-nano-banana-2.1` | about $0.04 | **Default** (Adjie's choice). The wikiHow look at a quarter of the price of Pro; follows the reference pictures well. |
+| `google/gemini-3-pro-image` | about $0.14 | When Nano Banana keeps failing a scene: slightly cleaner outlines and hands. |
 | `google/gemini-3.1-flash-image` | about $0.07 | A fallback if the two above are unavailable. |
 | `openai/gpt-5.4-image-2` | about $0.17 | Not for this style: softer and more painterly, weaker outlines, and the dearest. |
 
-Tested on 25 October 2026 with the same prompt. Model ids change: if one is gone, list the
+Compared on 25 October 2026 with the same prompt; the prompt was then tuned on Nano Banana. Model ids change: if one is gone, list the
 current ones with
 `curl -s https://openrouter.ai/api/v1/models | grep -o '"id":"[^"]*image[^"]*"'`
 and prefer the newest Gemini image model.
@@ -58,11 +59,15 @@ Settle these in a few lines (in the plan, if the post goes through `ai-assisted-
 - **Setting:** one or two props that say where we are, nothing more.
 - **Words in the picture:** none, so one picture serves both languages. Models garble text,
   so put numbers and labels in the post, not the picture.
+- **Keep the pose simple.** Sitting at a table, standing, holding something up. Complicated
+  poses (on a vehicle, mid-stride, two people touching) go wrong more often.
 
 ## Step 2: Write the prompt
 
-Build it from `references/image-prompt.md`: the scene from the brief, then the style block
-word for word, so every picture on the blog matches. `references/style-guide.md` explains
+Build it from `references/image-prompt.md`: the opening line, the scene from the brief, then
+the style block word for word, so every picture on the blog matches. Its "What the tests
+taught" list fixes the usual failures (device facing away, extra hands, fake text), so apply
+it before the first try. `references/style-guide.md` explains
 the look in detail; use it to word the scene and to judge the result.
 
 Save the prompt as `_illustrations/<name>.txt` at the repo root. Jekyll skips folders that
@@ -72,17 +77,20 @@ with the post's short prefix, like the screenshots (`rvo-...`): `rvo-ill-compare
 ## Step 3: Generate and look at it
 
 ```sh
-OPENROUTER_API_KEY=... node .claude/skills/wikihow-illustration/scripts/generate.mjs \
+K=.claude/skills/wikihow-illustration
+OPENROUTER_API_KEY=... node $K/scripts/generate.mjs \
   _illustrations/<name>.txt <scratchpad>/<name>.png \
-  --ref .claude/skills/wikihow-illustration/examples/style-reference.webp
+  --ref $K/examples/ref-midshot.webp --ref $K/examples/ref-indonesia.webp \
+  --ref $K/examples/ref-split-panel.webp --ref $K/examples/ref-back-view.webp
 ```
 
-- `--model` picks the model (default `google/gemini-3-pro-image`), `--aspect` the shape
-  (default `4:3`; `1.91:1` is not offered, use `16:9` for a social card).
-- `--ref` attaches a picture as a style reference, and can be repeated. Pass the style
-  reference for the first picture of a post, and that post's first approved picture for the
-  rest, so they look like one set. With a reference, start the prompt with "Match the
-  drawing style of the attached reference picture exactly, but draw a new scene:".
+- `--model` picks the model (default `google/gemini-nano-banana-2.1`), `--aspect` the shape
+  (default `4:3`; use `16:9` for a social card).
+- `--ref` attaches a style reference and can be repeated. Always pass the four examples. For
+  the same character across a post, put that post's first picture before them (see
+  `references/image-prompt.md`).
+- **One request at a time.** Parallel requests get a 429 from OpenRouter; the script waits
+  and retries three times, but running several at once still fails.
 
 Then **open the PNG with Read and check it**:
 

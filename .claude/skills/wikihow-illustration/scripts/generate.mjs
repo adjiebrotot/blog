@@ -1,7 +1,7 @@
 // Generate an illustration with an image model on OpenRouter and save it as a PNG.
 //
 //   OPENROUTER_API_KEY=sk-or-... node generate.mjs <prompt.txt> <out.png>
-//     [--model google/gemini-3-pro-image] [--aspect 4:3] [--ref <image>]...
+//     [--model google/gemini-nano-banana-2.1] [--aspect 4:3] [--ref <image>]...
 //
 // <prompt.txt> holds the full prompt (scene + the style block from references/image-prompt.md).
 // --ref attaches an earlier picture from this blog as a style reference (repeatable), so a
@@ -15,7 +15,7 @@ const opt = (name, fallback) => {
 };
 const refs = [];
 for (let i = args.indexOf('--ref'); i !== -1; i = args.indexOf('--ref')) refs.push(args.splice(i, 2)[1]);
-const model = opt('model', 'google/gemini-3-pro-image');
+const model = opt('model', 'google/gemini-nano-banana-2.1');
 const aspect = opt('aspect', '4:3');
 const [promptFile, output] = args;
 const key = process.env.OPENROUTER_API_KEY;
@@ -36,7 +36,7 @@ for (const ref of refs) {
   content.push({ type: 'image_url', image_url: { url: `data:${mime};base64,${data}` } });
 }
 
-const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+const request = () => fetch('https://openrouter.ai/api/v1/chat/completions', {
   method: 'POST',
   headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
   body: JSON.stringify({
@@ -46,6 +46,14 @@ const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
     image_config: { aspect_ratio: aspect },
   }),
 });
+// A 429 (too many requests at once) clears after a few seconds: wait and try again.
+let res = await request();
+for (let tries = 1; res.status === 429 && tries <= 3; tries++) {
+  const wait = Number(res.headers.get('retry-after')) || 10;
+  console.error(`429, retrying in ${wait}s`);
+  await new Promise((r) => setTimeout(r, wait * 1000));
+  res = await request();
+}
 const body = await res.json();
 if (!res.ok) {
   console.error(`${res.status}: ${JSON.stringify(body.error ?? body)}`);

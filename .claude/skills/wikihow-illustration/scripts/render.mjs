@@ -6,7 +6,8 @@
 // an image model) is scaled to --width at its own aspect ratio, so this also converts those.
 // Uses the Playwright + Chromium that come with the container: Chromium draws the image
 // on a canvas and encodes the WebP itself, so nothing else needs installing.
-import { readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { dirname } from 'node:path';
 import { createRequire } from 'node:module';
 
 // require() finds the globally installed Playwright; an ESM import would not.
@@ -55,7 +56,10 @@ const result = await page.evaluate(async ({ src, width, quality }) => {
 }, { src, width, quality });
 await browser.close();
 
-const save = (path, dataUrl) => writeFile(path, Buffer.from(dataUrl.split(',')[1], 'base64'));
+const save = async (path, dataUrl) => {
+  await mkdir(dirname(path), { recursive: true });
+  await writeFile(path, Buffer.from(dataUrl.split(',')[1], 'base64'));
+};
 await save(output, result.webp);
 if (preview) await save(preview, result.png);
 console.log(`${output}: ${width}×${result.height}${preview ? `, preview ${preview}` : ''}`);

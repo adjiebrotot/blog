@@ -1,60 +1,93 @@
 # The prompt
 
-A prompt is the scene (from the brief in `SKILL.md`), then the style block word for word.
-This one made `examples/style-reference.webp`:
+Tuned on Nano Banana 2.1 with ten test pictures (25 October 2026). A prompt has three
+parts, in this order: the opening line, the scene, the style block. Pass the four pictures in
+`examples/` as `--ref`; they carry the look better than words alone.
+
+## 1. Opening line
+
+```text
+Draw a new picture in the drawing style of the attached reference pictures:
+```
+
+To keep a post's character the same across pictures, attach that post's first picture as
+the **first** `--ref` (before the four examples) and open with:
+
+```text
+The first attached picture shows a character. Draw the same [man / woman] (same face, hair
+and clothes) in a new scene, in the drawing style of all the attached pictures:
+```
+
+(This one is not tested yet: check the face closely.)
+
+## 2. The scene
+
+One to three sentences, in this order: **who** (age, skin, hair, clothes), **the action with
+the object**, **where** (one or two props), then **framing** and `4:3`. The example that made
+`examples/ref-midshot.webp`:
 
 ```text
 A man in his thirties with light skin and short brown hair, wearing a plain orange t-shirt,
-holds a calculator in both hands and checks the total, sitting at a wooden desk with a paper
-receipt and a small pink piggy bank on it. Mid-shot, head to waist, 4:3.
-
-Style: clean digital illustration in the style of a how-to guide step picture. Realistic,
-simplified proportions. Every shape has a thin outline in a darker shade of its own colour,
-never black. Flat, fairly saturated fills with soft painterly shading and gentle highlights,
-light from the upper right. Simple friendly face: small almond eyes with a heavy upper lid
-line, a one-stroke nose, a small closed smile. Pale, quiet, light blue-grey background with
-a soft gradient and almost no detail. No text, no letters, no logo, no watermark, no
-signature.
+sits at a wooden desk and checks a total on a calculator he holds tilted towards the viewer
+so its keys show. A paper receipt and a small pink piggy bank are on the desk. Mid-shot,
+head to waist, 4:3.
 ```
 
-## The scene
+What the tests taught:
 
-Write it in one or two sentences, in this order: **who** (age, skin, hair, clothes),
-**the action with the object**, **where** (one or two props), then **framing**. Be
-concrete about the object's position when it matters ("holding the phone so its screen
-faces her", "the calculator tilted towards the viewer so its keys show"); models often show
-the back of a device.
+- **Say which way a device faces.** Left alone, models show the back of a calculator or a
+  phone. "Tilted towards the viewer so its keys show", "looking at the phone screen".
+- **Spell out the action as a movement.** "Pays with her phone" gave a phone held in the
+  air; "holds her phone flat just above the QR code stand, looking at the phone screen"
+  gave the real thing.
+- **Hands in a close-up:** say "exactly two hands" and what each one does, plus
+  "anatomically correct hands, five fingers each". Without it, a close-up got three hands.
+- **Anything with writing on it** (a notebook, a receipt, a screen, a sign): say "only
+  wavy scribble lines, no readable words". Asking for "a list" got garbled fake English.
+  Charts are safe: "a simple line chart going up" drew one with no labels.
+- **Spell out the pose with vehicles and furniture.** "Sits on a parked scooter" got a man
+  standing beside it. Say "sitting astride the scooter, both feet on the ground".
+- **People of any background work:** a hijab, dark skin with short natural hair, an older man
+  with grey hair all came out well and respectfully. Name skin tone and hair directly.
+- Name the background colour in the scene when it matters ("pale warm beige background",
+  "pale green background"). Keep a post's pictures in one colour family.
 
-With `--ref`, open with:
+## 3. The style block
+
+Word for word, at the end:
 
 ```text
-Match the drawing style of the attached reference picture exactly (line, colour, shading,
-background), but draw a new scene:
+Style: match the attached reference pictures exactly: an instructional step illustration with
+realistic simplified proportions, crisp even outlines in a darker shade of each colour (never
+black), saturated flat fills with soft painterly shading and gentle highlights, simple
+friendly faces with small almond eyes and a heavy upper lid line. The background is a soft,
+out-of-focus painted wash with large blurred shapes and no detail, paler than the person.
+Only the drawing style comes from the references, not their people or scenes. No text, no
+letters, no logo, no watermark, no signature.
 ```
+
+"Only the drawing style comes from the references" stops the model reusing the people in the
+example pictures. Without any `--ref` the same block still works, a little flatter and less
+like wikiHow; drop the words "match the attached reference pictures exactly:" then.
 
 ## Framing variants
 
 Swap the framing sentence:
 
 - **Mid-shot:** "Mid-shot, head to waist, 4:3."
-- **Close-up:** "Close-up on the hands and the [object], a bit of sleeve visible, 4:3."
-- **Comparison:** "Split diagonally into two panels by a thick dark line: on the left
-  [...], on the right [...], each with its own pale background colour. 4:3."
-- **Back view:** "Seen from behind and slightly to the side, so we see what they are
-  looking at: [...]. 4:3."
-- **Social card:** end with "16:9, the person on the left third, empty pale space on the
-  right." and generate with `--aspect 16:9`.
-
-## Background colour
-
-Keep it pale. Change "light blue-grey" to suit the scene: pale green for outdoors or
-plants, pale warm beige for a kitchen or a shop, pale sky blue for travel. One colour per
-picture, and keep a post's pictures in the same family.
+- **Close-up:** "Close-up from the person's own point of view: exactly two hands, ... 4:3."
+- **Comparison:** "Split diagonally into two panels by a thick dark line from the top right to
+  the bottom left. On the left, [...]. On the right, the same [person] [...]. Each panel has
+  its own pale background colour. 4:3." (made `examples/ref-split-panel.webp`)
+- **Back view:** "Seen from behind and slightly to the side, [who] [does what] and looks at
+  [...]. 4:3." (made `examples/ref-back-view.webp`)
+- **Social card:** "Wide picture for a social card: the [person] on the left third, plenty of
+  empty pale background on the right. 16:9." with `--aspect 16:9`. (Not tested yet.)
 
 ## Don'ts
 
-- Don't name wikiHow in the prompt. Some models refuse a brand, others add its watermark;
-  the style block describes the look without it.
+- Don't name wikiHow in the prompt. The style block and the references give the look, and a
+  brand name invites its watermark.
 - Don't ask for words, labels or numbers in the picture.
-- Don't attach real wikiHow pictures as references: they are copyrighted. Use the style
-  reference here or a picture already on this blog.
+- Don't put real wikiHow pictures in the repo (it is public and they are wikiHow's). The four
+  in `examples/` were generated from Adjie's wikiHow samples and are ours to keep.
