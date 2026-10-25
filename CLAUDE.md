@@ -5,7 +5,9 @@ branch", `github-pages` gem). Use only plugins that GitHub Pages whitelists, and
 GitHub Actions. How to write a post: `README.md`. How to write it in Adjie's voice: the
 `adjie-writing-style` skill (`.claude/skills/adjie-writing-style/`). To turn a concept or rough points into a
 post, plan first and write after approval: the `ai-assisted-blog-post` skill
-(`.claude/skills/ai-assisted-blog-post/`). The design tokens come from
+(`.claude/skills/ai-assisted-blog-post/`). For a drawn illustration (a person doing the step,
+wikiHow style): the `wikihow-illustration` skill (`.claude/skills/wikihow-illustration/`),
+with SVG sources in `_illustrations/`. The design tokens come from
 `../tool/dark.css` and `light.css` (tool repo, `_ref/design-reference.md`).
 
 ## Published URLs are permanent
