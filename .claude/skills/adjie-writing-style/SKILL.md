@@ -144,32 +144,12 @@ These override anything above.
 
 ### Writing in Indonesian
 
-Use the `bahasa-indonesia` skill (`.claude/skills/bahasa-indonesia/`) to avoid Indonesian
-slop. Blog setting: `language: indonesia`, `register: santai`, `regional_voice: netral`,
-`technical_terms: english-first`, `self_reference: saya`, `addressee_reference: kamu`,
-`orthography: percakapan`. On top of that:
-
-- **saya-kamu.** Talk to the reader as *kamu*, never *Anda*: "caramu memandang kekayaan",
-  not "cara Anda memandang kekayaan". Adjie is *saya*.
-- **Keep English where it sounds better.** Don't translate a term just because a
-  dictionary word exists. Keep: *values* (not *nilai hidup*), *tool* (for the Adjie Brotools tools, never
-  *alat*), *opportunity cost* (not *biaya peluang*), *input* (not *masukan*), *market* and
-  *hot* when the sentence is casual ("Itu market yang sangat hot", not "Itu pasar yang
-  sangat panas"), *holistic thinking* (not *pikiran holistik*), *liquid asset thinking*
-  (not *pikiran likuid*), *breakeven*, *Quick Start* (the tool's own labels).
-  Also keep *apple to apple* (not *apel dengan apel*) and *versus* (not *lawan*).
-- **But don't keep English where Indonesians already say something else.** Prefer what a
-  person actually says over a literal translation. Mortgage talk is about *KPR*, not about
-  the "cost of money": "Berapa bunga KPR-nya?", not "Berapa harga uangnya?". "Biar fair",
-  not "keberatan yang wajar" (that one is a mistranslation of "fair objection"). "Batasannya",
-  not "batas-batas yang jujur".
-- **Be casual where the context allows:** *gak* instead of *tidak* in explanation and
-  asides. Keep *tidak* in formal spots (a disclaimer, a quoted definition, a heading that
-  must read as plain Indonesian).
-- **Idioms must make sense in Indonesian.** Read each sentence cold. If it only works as
-  a word-for-word of the English ("Masukannya yang milik tempat itu"), rewrite it as
-  something a person would say ("Bedanya ada di input-nya, dan input itu ikut kotanya").
-- **One address form per post.** Never mix *Anda* and *kamu*.
+**Mandatory:** load the `bahasa-indonesia` skill (`.claude/skills/bahasa-indonesia/`)
+before writing or editing any Indonesian, and run its checklist. It holds every rule for
+Indonesian on this blog: the one voice (written Jakarta Indonesian, *saya-kamu*), casual
+versus factual words, *gak* versus *enggak*/*tidak*, the finance terms, the English terms
+to keep, the calques to avoid and Adjie's own corrections. Use the moves above; let that
+skill choose the words.
 
 ## Check a draft
 
