@@ -158,7 +158,7 @@ Biar fair, ribetnya juga nyata. Pisah berarti dua SPT, dua akun, dua kode otoris
 
 ## Hitung sendiri pakai tool
 
-Contoh di atas cuma tiga titik. Gajimu pasti beda, jadi saya buat [tool Pisah vs Gabung](https://tool.adjiebrotots.com/pisahvsgabung/id/) untuk menghitungnya. Gratis, dan semua hitungan berjalan di browser-mu, jadi data gajimu gak ke mana-mana.
+Contoh di atas cuma tiga jenis. Gajimu pasti beda, jadi saya buat [tool Pisah vs Gabung](https://tool.adjiebrotots.com/pisahvsgabung/id/) untuk menghitungnya. Gratis, dan semua hitungan berjalan di browser-mu, jadi data gajimu gak ke mana-mana.
 
 1. Pilih jumlah **tanggungan**.
 2. Isi gaji kotor suami dan istri per tahun di mode **Per pasangan**, atau total gaji rumah tangga dan porsi istri di mode **Total dan porsi**.

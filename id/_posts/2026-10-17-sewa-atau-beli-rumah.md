@@ -1,14 +1,14 @@
 ---
 title: "Sewa atau beli rumah? Kenapa Perth bilang beli dan Jakarta bilang sewa"
-description: "Beli dan sewa sama-sama bisa menang, tergantung empat hal: hasil rumahnya, bunga KPR-nya, hasil uangmu kalau dipakai di tempat lain, dan caramu memandang kekayaan. Begini cara mengujinya sendiri, dengan Perth dan Jakarta sebagai contoh."
+description: "Beli dan sewa sama-sama bisa menang, tergantung empat hal: imbal hasil rumahnya, bunga KPR-nya, imbal hasil uangmu kalau dipakai di tempat lain, dan caramu memandang kekayaan. Ini cara mengujinya sendiri, dengan Perth dan Jakarta sebagai contoh."
 date: 2026-10-17 09:00:00 +0800
-last_modified_at: 2026-10-24
+last_modified_at: 2026-10-26
 tags: [finance]
 translation: rent-vs-buy
 keywords: [sewa atau beli rumah, KPR, kalkulator sewa vs beli, Perth, Jakarta, bunga KPR floating, investasi properti]
 ---
 
-**Singkatnya:** beli menang kalau rumahnya menghasilkan lebih banyak daripada uang yang sama kalau dipakai di tempat lain. Sewa menang kalau gak. Di [tool Sewa vs Beli Rumah](https://tool.adjiebrotots.com/rentvsownhouse/id/) buatan saya, rumah 2 kamar tidur di Perth unggul sekitar A$850 ribu dari sewa setelah 30 tahun. Rumah sejenis di Jakarta justru kalah setelah 20 tahun. Hitungannya sama, input-nya yang beda.
+**Singkatnya:** beli menang kalau rumahnya menghasilkan lebih banyak daripada uang yang sama kalau dipakai di tempat lain. Sewa menang kalau tidak. Di [tool Sewa vs Beli Rumah](https://tool.adjiebrotots.com/rentvsownhouse/id/), rumah 2 kamar tidur di Perth unggul sekitar A$850 ribu dari sewa setelah 30 tahun. Rumah sejenis di Jakarta justru kalah setelah 20 tahun. Hitungannya sama, input-nya yang beda.
 {: .tldr}
 
 * TOC
@@ -22,18 +22,18 @@ Kenalkan dua teman. Robert pengin punya rumah yang bebas dia cat dan bor, tanpa 
 <img src="/assets/img/rvo-ill-buyer-renter.webp" alt="Dua teman berdampingan: satu mengecat dinding ruang tamunya dengan rol cat, satunya memegang buku kecil di samping koper dorongnya" width="1456" height="1087" loading="lazy">
 </figure>
 
-Dua-duanya benar. Stabilitas Robert dan kebebasan Vieri gak bisa dikasih harga, dan saya gak akan mencoba. Itu values, bukan baris di spreadsheet.
+Dua-duanya benar. Stabilitas Robert dan kebebasan Vieri gak bisa dikasih harga, dan saya gak bisa menilai. Itu values, bukan baris di spreadsheet.
 
 Tapi ada pertanyaan kedua yang lebih dingin dan gak peduli values: **kalau cuma menghitung uang, siapa yang akhirnya punya lebih banyak?** Jawaban jujur saya, setelah membuat tool untuk mencari tahu, adalah dua-duanya bisa menang. Itulah alasan saya membuat tool Sewa vs Beli Rumah. Pertama untuk saya sendiri, karena capek berdebat pakai perasaan. Kedua untuk teman-teman saya, supaya ada angka yang bisa diadu. Dan untuk kamu yang ingin melihat gambaran besarnya sebelum menandatangani cicilan 20 sampai 30 tahun.
 
 ## Apa sih yang sebenarnya menentukan?
 
-Kalau semua gangguannya dibuang, pertanyaan uangnya tinggal beberapa hal:
+Kalau faktor-faktor lain dibuang, pertanyaannya bisa dijawab dengan beberapa jawaban:
 
-- **Hasil rumah.** Kenaikan harga, ditambah sewa yang gak lagi kamu bayar (rental yield, a.k.a. sewa setahun dibagi harga).
+- **Imbal hasil rumah.** Kenaikan harga, ditambah sewa yang gak lagi kamu bayar (rental yield, a.k.a. sewa setahun dibagi harga).
 - **Biaya rumah.** Bunga KPR, PBB, asuransi, perawatan, dan biaya sekali bayar di dua ujung: BPHTB dan notaris saat beli, komisi agen dan PPh saat jual.
-- **Hasil uangmu kalau gak jadi beli.** Penyewa menginvestasikan DP dan selisih cicilan bulanan. Di tool ini namanya **Suku Bunga Bebas Risiko** (Risk-Free Rate), dan boleh kamu anggap sebagai tingkat imbal hasil investasimu. Inilah opportunity cost dari membeli.
-- **Leverage.** KPR bikin kamu menikmati hasil rumah atas 100% harga, padahal yang disetor cuma 20%. Pisau bermata dua.
+- **Imbal hasil uangmu kalau gak jadi beli.** Penyewa menginvestasikan DP dan selisih cicilan bulanan. Di tool ini namanya **Suku Bunga Bebas Risiko** (Risk-Free Rate), dan boleh kamu anggap sebagai tingkat imbal hasil investasimu. Inilah opportunity cost dari membeli.
+- **Leverage.** KPR bikin kamu bisa menikmati imbal hasil kenaikan harga rumah atas 100% harga dasar, padahal yang disetor cuma 20%. Pisau bermata dua.
 
 Ini hitungan kasarnya. Misalkan $$g$$ kenaikan harga, $$y$$ rental yield, $$c$$ biaya rutin sebagai persen harga, dan $$r$$ bunga KPR:
 
@@ -41,23 +41,23 @@ $$
 g + y - c \;>\; r
 $$
 
-Kalau hasil rumah lebih besar daripada bunga pinjamannya, leverage jadi teman. Kalau gak, setiap rupiah pinjaman jadi beban. Rumus ini mengabaikan biaya sekali bayar dan opportunity cost DP-mu, jadi anggap saja kompas, bukan kalkulator. Tool-nya yang menghitung penuh. Tapi coba lihat apa kata kompas ini untuk dua kota di Quick Start (rumah 2 kamar tidur, angka Oktober 2026):
+Kalau imbal hasil rumah lebih besar daripada bunga pinjamannya, leverage jadi teman. Kalau tidak, setiap rupiah pinjaman jadi beban. Rumus ini mengabaikan biaya sekali bayar dan opportunity cost DP-mu, jadi anggap saja kompas, bukan kalkulator. Tool-nya yang menghitung penuh. Tapi coba lihat apa kata kompas ini untuk dua kota di Quick Start (rumah 2 kamar tidur, angka Oktober 2026):
 
 | | Perth | Jakarta |
 | --- | --- | --- |
 | Kenaikan harga ($$g$$) | 4,5% | 3,5% |
 | Rental yield ($$y$$) | 3,95% (A$650 per minggu atas A$855.000) | 3,0% (Rp 36 juta setahun atas Rp 1,2 miliar) |
 | Biaya rutin ($$c$$) | 0,9% | 0,4% |
-| **Hasil rumah ($$g + y - c$$)** | **7,5%** | **6,1%** |
+| **Imbal hasil rumah ($$g + y - c$$)** | **7,5%** | **6,1%** |
 | **Bunga KPR ($$r$$)** | **6,4%** | **8,5% selama 5 tahun, lalu 11% sampai 13%** |
 
-Rumah di Perth menghasilkan sekitar satu poin di atas bunga pinjamannya. Rumah di Jakarta menghasilkan sekitar 6% dari uang yang berbunga 11% atau lebih setelah lima tahun pertama. Yang satu leverage, yang satu bocor.
+Rumah di Perth menghasilkan sekitar satu persen di atas bunga pinjamannya. Rumah di Jakarta menghasilkan sekitar 6% dari uang yang berbunga 11% atau lebih setelah lima tahun pertama. Yang satu leverage, yang satu bocor.
 
 ## Kenapa satu kota bilang beli, kota lain bilang sewa?
 
 Saya sadar soal ini waktu pindah dari Jakarta ke Perth. Di Perth, beli lebih menguntungkan daripada sewa. Di Jakarta, justru sewa. Orangnya sama, hitungannya sama, tool-nya sama. Bedanya ada di input-nya, dan input itu ikut kotanya.
 
-Biar fair, bahas Perth dulu. Australia lagi krisis perumahan. Negeri yang lagu kebangsaannya menjanjikan "boundless plains to share" (dataran luas untuk dibagi) ternyata kesulitan menampung warganya sendiri. Median harga di Perth menurut REIWA naik sekitar 17% untuk rumah tapak dan 22% untuk unit dalam setahun sampai September 2026.[^reiwa] Itu market yang sangat hot, dan saya gak akan mengira kenaikan segitu bakal terus berlanjut. Quick Start di tool memakai angka yang jauh lebih tenang: 4,5% per tahun selama 30 tahun.
+Biar fair, bahas Perth dulu. Australia lagi krisis perumahan. Negeri yang lagu kebangsaannya menjanjikan "boundless plains to share" (dataran luas untuk dibagi) ternyata kesulitan menampung warganya sendiri. Median harga di Perth menurut REIWA naik sekitar 17% untuk rumah tapak dan 22% untuk unit dalam setahun sampai September 2026.[^reiwa] Itu market yang sangat hot, dan saya gak akan kira kenaikan segitu bakal terus berlanjut. Quick Start di tool memakai angka yang jauh lebih moderat: 4,5% per tahun selama 30 tahun.
 
 Ada dua perbedaan struktural yang bikin hasil Perth dan Jakarta berjauhan. (Satu saja gak cukup menjelaskannya, dan ini saya buktikan di bawah. Pasang KPR 8,5% ala Jakarta di rumah Perth, dan beli tetap unggul sekitar A$495 ribu. Kombinasinyalah yang menentukan.)
 
@@ -108,11 +108,11 @@ Bagian ini gak bisa diputuskan spreadsheet buat kamu. Kata "lebih kaya" tergantu
 
 Jujur dulu sama diri sendiri, kamu masuk kubu yang mana, sebelum memilih tab. Skenario yang sama bisa kelihatan menang di cara pandang pertama dan kalah di cara pandang kedua.
 
-Nah, keberatannya: "UBS bilang orang Australia kaya. Bukannya itu bukti beli menang?" Bukan. Itu bukti harga rumah Australia naik dan rumah tangganya memilikinya. Itu hasil, bukan janji, dan sebagian ditopang imigrasi dan tahun-tahun bunga murah yang belum tentu terulang. Di laporan yang sama, kekayaan median juga turun di sebagian besar negara.[^abc]
+Nah, keberatannya: "UBS bilang orang Australia kaya. Bukannya itu bukti beli menang?" Bukan. Itu bukti harga rumah Australia naik dan sebagian besar rumah tangga punya rumah. Itu hasil, bukan janji, dan sebagian ditopang imigrasi dan tahun-tahun bunga murah yang belum tentu terulang. Di laporan yang sama, kekayaan median juga turun di sebagian besar negara.[^abc]
 
 ## Gimana cara memakai tool-nya? Tiga level
 
-Saya membuat tool ini sebagai ekonom berlatar perbankan, jadi ada tiga pintu masuk, dari "tunjukkan saja" sampai "biar saya bongkar".
+Saya membuat tool ini sebagai ekonom berlatar perbankan, jadi ada tiga pintu masuk, dari "tunjukin aja" sampai "biar saya bongkar".
 
 ### Basic: pilih kota, cek dua angka
 
@@ -148,7 +148,7 @@ Buat yang mau lebih canggih, buka pengaturan yang paling menggeser jawaban.
 <figcaption>Suku Bunga Bebas Risiko, jangka waktu, kenaikan harga, dan biaya penjualan, semuanya di tab Asumsi.</figcaption>
 </figure>
 
-Tadi saya bilang Suku Bunga Bebas Risiko itu tombol terpenting, jadi saya buktikan, karena ini melawan cerita Perth saya sendiri. Di 4,6% bawaan Quick Start, beli di Perth unggul $850 ribu. Setel ke 8%, dan **sewa unggul sekitar $167 ribu**. Kalau kenaikan harga rumah juga dipotong jadi 3%, sewa unggul sekitar $690 ribu. Hasil Perth itu nyata, tapi gampang goyah: hasilnya bergantung pada rumah yang tumbuh lebih cepat daripada hasil uangmu di tempat lain.
+Tadi saya bilang Suku Bunga Bebas Risiko itu tombol terpenting, jadi saya buktikan, karena ini melawan cerita Perth saya sendiri. Di 4,6% bawaan Quick Start, beli di Perth unggul $850 ribu. Setel ke 8%, dan **sewa unggul sekitar $167 ribu**. Kalau kenaikan harga rumah juga dipotong jadi 3%, sewa unggul sekitar $690 ribu. Hasil Perth itu nyata, tapi gampang goyah: hasilnya bergantung pada rumah yang tumbuh lebih cepat daripada imbal hasil uangmu di tempat lain.
 
 Jakarta kebalikannya. Beli tetap tertinggal di suku bunga 8% (sewa unggul Rp 1,6 miliar), dan juga kalah di 3%. Beli baru menang kalau yang saya ubah adalah rumahnya atau pinjamannya:
 
@@ -160,7 +160,7 @@ Jakarta kebalikannya. Beli tetap tertinggal di suku bunga 8% (sewa unggul Rp 1,6
 | Harga rumah naik 6% per tahun | Beli unggul Rp 202 juta |
 | Bayar tunai (butuh sekitar Rp 1,27 miliar) | Beli unggul Rp 162 juta |
 
-(Nilai hari ini, 20 tahun. Skenario tunai mengharuskan pembeli benar-benar punya Rp 1,27 miliar, dan penyewa di skenario itu menginvestasikan jumlah yang sama.) Bahkan 8,5% yang datar tanpa kejutan pun masih kalah. Ekor floating bikin makin parah, tapi masalah dasarnya adalah pinjaman yang bunganya lebih besar daripada hasil rumah.
+(Nilai hari ini, 20 tahun. Skenario tunai mengharuskan pembeli benar-benar punya Rp 1,27 miliar, dan penyewa di skenario itu menginvestasikan jumlah yang sama.) Bahkan 8,5% yang datar tanpa kejutan pun masih kalah. Ekor floating bikin makin parah, tapi masalah dasarnya adalah pinjaman yang bunganya lebih besar daripada imbal hasil rumah.
 
 ### Conglomerate: Sensitivity Analysis tool 😎
 
@@ -180,7 +180,7 @@ Ini Perth versus Jakarta dalam satu grafik. Garis penuh adalah beli, garis putus
 <iframe src="https://tool.adjiebrotots.com/embed/#t=c&amp;l=id&amp;s=z7V3bchs5kv0VBmZjZjoaRiNxByPmQbJktW3Jbt2sUTsUE0WyRJVIVtFkyZLs0Ps-78_s-37KfslGVvFSst0k1NMza8vojjDBqoMEkEACyIME9ZG8J22gZJDlPdIm3YtkUl5OCSWjopdOSfvtRzIkbXKa5P1WLyuT0TgbDpK81Z8k59mAUDIgbTJN-4SSYoF-mQ6S2yTJW510Ms0uCCXTLzy9ozX6GGWXV3mSzYBHVXr-ejNLbpPW4Gp0NUzK7HyOKcpk2OrgO3J3RklSkjZfZEmH2axq3Yu0O7hXueL8fCG7yBeZYf7sML1OHp75jJJRMibtj4RToEDanBJOOeWVdjEFpC1o9ZaTtqQE6reqTgFpa0xVb02dAtK2lIga5-oUkLbHVIUDXieBtAHuKDmfJKNZp5W345S0yTDLU0LJMOmkwynW7j_GlZ5ILymTaVrOehhfkzb5JZ2UF63_-e_WwdUouWiJl0ft1kyXnWLSSydPi2ExIW3yJ73hYdvh86Q76E-Kq7z3yTshFrlOsl55QdqCaUrGRZaXB0kvu5pWOqq-_1y8Tyfzh4aSMs2nWZGTNmeSku5VJ-s-z8t0Mi5wCBT5XtHDxo2KvCiLqoHn2XBI2ufJcJrWbZu3Fe6q7lrRwFl__1ENrJ9sJdML0n6rqTr797dZ3Gvzi2SQTMokqFs3lZbcf7nV9buvpFtlQBO_3LG_u4lfQceqO5xnijFmq6x5kk7HRT7N3qekXU6uUpyEsrxMsnxjOk675QGWsBCV5NmoKnLxJMOKJN362cdqzidtkuW99IbM3k7TbjnD31EyHl71s7rsYdpPcc34SHrZdDxMbpeosiiGZVbNht1kOERNY5a7Lyr9WfUfoaTMymG6eAxKcLlR9UTvdvFUPdWb1nzeq1tPt-Uz_mm_ASXjpNfL8n49V6Z50hmmvUXz05syneTJsNLvAP_NcQG4SCZp7ymuhEfZmC1Ad3d3lHwoihECx0mlsYXEmfZrBd6QBvL6Ik2HX8BOxyl-4Yw7VGyWdy8-Q93dFznMRllZKf-m6q4sr4bdKLkhbYGJLD9I8n5K2rqq7LRqyemzrER4clUW1edNtUaQW3KGfdwdXvXSX9NJMSuyythNhumyoOQmm1Z1mHXSvU6vW1OmNyXuE9JkQijpftZf50VeVeI8GWXDW9Imf9naa-0VefEX2sKhPx0nXRz70-xDOlvNFl33kZTFuFopO0VZolYVVrLM6mH1hdJGyc0Rvt1FhZE2iN9VAVRnUc4sptbz8ruu9D2ZYMmz4YQ6OCwnxSCdjT_efDYfq6TRMkk_1SN20uEAbef-918aWapp7_X5-TQt63plOUpG-xoll_NkMsz6OJy7KZoxdsqkmE43Zk_zuqOmF8X1LorbTLqD3gTVPGtMZ_ZgXu1Jv5P8VWhNW8t_OLP6B7LELiop7ijpT7Levd556rZUtaR-0mTcoywNtjdJrl_nlfVtTNJkDsLHR3WHzwZc1h3spnkfszmKG7NKHYspqN7_dJMy7ReT289LvZeBkkn6Hue6ZfPTfpZvlLVdzJ_hvIWGUI88SrrDZUf1Jzh-sDvqKegLNtKr146zOtXowOtF67tNbVf7R8oZ_IDGj9qsTHBcTLN6DM7t4Y6S24ad3q6300_24q2_bhxv_fAVGG600u_RSlF21dBHYaO39210mJ6X9d5hsXl621yZzxoGcVNvmcr5hk_fzU37fFQ97OA_P3IUsXG81SKUkLoCmCAMhT2p3v7vf_7XbwF-hJXZYV12sTK7WJddNrIPCJWf5Jf383-O-FGtFqDWCtCrBei1AkxDwIhQQ8U9Aea-gM8RP9rVAuxaAW61ALdWgG8I6BDqPxHg7wv4HPEj8NUSgK8XAWtEwHoRYo0IsV6EXCNCrhaBW33SrgTw2s5nrk8H1y90shfmDMi8dDqknV8Nh5Qki9T5PFFNSXyON3eUwPyLvaNEzL-gyyDnX3xV6twfe3uPA0PCCqcvnBNxVpteV8vyPXao-5nPVT2ZzitVz4l1-rrhEdd-6qwF2XAo5l8ukrK7yNEryoWkykGuv9x9wrf9cRWdOed_YE3P5to9mqTVpqpL2qTffYLVenKBwIovfPuRZDMWMqs4wUWvHBXjGcP4AF4uuvrR1Y-ufnT1oxMRXf3o6kcrfRRWGl39ta5-tfF8y-nMZ6jOlqP7H93_6P5_s-5_7VOu9fybbnzleT7MYYxxDjEIIDIDkRmIzEBkBqLPEZmByAxEK_12rDQyAzEIILIAkQV4vCzA7wsCsM0ggC8e9T--E_R_8uT8O7rR8lhvd0SKI1IckeKIFEd0niLFESmOaKWPwkojxREpjkhxRIojUhwr7jm4b_M2w7-X4YjucXSPo3sc3eO48Y7u8T_hHi9_eit6xtFAo2f8NXvG8VpA9Jajt_yovOV4LSBeC4jXAiIpEEmBSApEnyOSApEUiKRANNBICsTj8kgARALgOyAA4o2AeCPgD7gR8B38wQeIdwIivxH5jchvRPcp8huR34gG-ggMNPIbkd-I_EbkNyK_cZ_fANUkOEDHCwGR4Ih_xfORkjoxVCdSWZHKilRWpLKipxyprEhlRQP9Fg00UlmRyopUVqSyIpW1isq69yc8Qce_4fn1xhvFv-EZ_fzo50c_P7oR0c____fzN7PkNmkNrkZXSDafR2c_Wml09r9mZz_-WEckACIB8KgIgPhjHf-SEADzXYYAgI0xAJEbiNxA5Aai1xG5gcgNRCt9JFYauYEYCBB5gMgDPF4e4HcGArh7d1rir3Z895daBH_8FzwERJoj0hyR5og0R3SgIs0RaY5opY_ESiPNEWmOSHNEmiPSHPdpDiGaNIeQ3-athshy_KtYjhjU8pionRi4ExmtyGhFRisyWtFXjoxWZLSilX67VhoZrchoRUYrMlqR0VrFaFVhPIuf8BCy-RMeXw7q-frZru_vNzwq3qAYkvbbt5wCFVRSRTU11FJHPQVOASgICpKCoqApGAqWgqPgqeBn9C0oyw2n4IVQnoGiQnojFbOCCuelMEwKKhUo6RloKr3hXjFpqdJSgWeKapBaOSYk1dYYAcwJapSwzjElqQUhuGJcUus0l4JZSZ0BpSwDR70CIzzjlgIX2hrPDAUAxS1nWHFurBIM688V556C4ga4ZpKCBmW4x3dGcuU1s2f0reBeG840FUpapZi2VFintGfCUAnSeM6cpVJ5JSQzhkqnjfTMOqqEkOAZ11Rpr6RjTlPljbeSeUm1VM4bJjTVVoJVzBpqAKzV-Mxobgz63tQ4jw3H5goPoKg1TjvHHHXcgXbMU6esNYYBUOesVBYV7IUDg83yljvDmcee8c4IoMJIaywDS6UUIKqMikunJdOKKusBBKpca8etZlJRIx1qBgy1QoK2zDjqALxQTHjquQZsu6bAufBOMEUBuLaKozIFSKMr5UthvKtSShkOkjkK2gLXwDQFy4UCYDiWFFey6iTvtLL4TID0QqGhCMmFM4qZe51jjQXNjKRSWe4kc0CVQP0wp6jyjhvPNI4nz4Ezrqgx0gGvmqQF1s8a6pS2AlDpXkkB1eAFrrTUVWVACyktBWGU4hzHlXRgHa_GDldWKGyGkVJ5iSqwxkmNHQWee8M1U1RwbbUEBlQIkNa6qkHWS-eqBpHTSQtpotNJC-oPUX_I-kPVH7r-MPWHrT9c_eFn2ediZnJgJghmkmAmCmayYCYMZtJgJg5m8gQnZ_TtW9Jq_RYT327hGgPKDhC5HuhFGFAoHgh0PgwoFQQCvQkDKi3DgBpUINAG6tGowKItBCrcOh0GdCZQj14FFg2My1EgEiAUKYKRkociVbBMHYw02PYVVobbkNlQh5U20QCqleOtAbQuDChXj-AGUK00xwbQrbSyJVCJlcOoAdSBRSu_0sqWQC1X2kQDaFea4xJoVptjA6hXWlkD6AMHhRWB6rEmEOh44OhxKhToAnvGi0CJ3qIeZ-b12-eO89Vp0fJ1UGFUKFRKEQpVPFiqssF11dqFQo0MlmqFDIU6CNaA5zoUCowvJu712OXCsR4rHoCVMhyrdDhW23CsfYAenArHeh-KFQyC5Yp6wV1pk19c9NZCl7undVCpgqFKQDDUrzG05oqxxtAaM_y6qaYxdes1Ntmck00o1KtgqcD4mjHexMIDsMKEY6ULx-o1ttPEmjW23sTaNfbbxPo1801jiDMerAexdh5rYiudVTaJx-WtyvGrk7BMimVSLpNqmdTLpFkm7TLplknfKKJZXKM8aBQIjRKhUSQ0yoRGodAoFRrFQqNc9G_xS82T0uqzKn52grLmf5ASGPfSU-QfGJe6Ilyc8lIxJ6lQWguDtJTkHkTFhkmrna04I6W0F4IpRzV4JSySEdorJyVzjhorvfZMOmp1RaAopHwUd4Cci5daac28ocAlSK6RhAAJTgFSD0Ja4QxSFFJZZznyK8pIJy3itNNKVVSGBeGVxhxOGSMBuRcH4JhE7sVhpUQQAcCDnJ2IiqhvBRVIcugHeBcueGsr1i3ODe-CB-_YpQ2WqsIroCHcEfHBGjA22BOyes1eruGIqGCpXj7EEXmAEwAPwIoHbNblA5wLtWYTcc8RCXYCgNkHOE7uAfV9sCNSLeFSC86pBYPnVNwLPHhxFJQTSMF7Cs4Z4AwPRySX0jLvqLBSA8dlV4IDa5l2VBolPeBCrfAUSuMxiTJgrMGzJw3C1Yc22mgHtjpnENxwx4ylxlrhHbNArdReSwaCWm-M4ngM5vCIiDOlqRdKeouHMt6DAc2srdogPFdMGDw6ck4xY8BT55VkYJXHky2HmsQjFckFc3h24bBowSUVgnPOhPRUaOWAgTcoT0umuKNSWMDzrKp9DpiQBg-EcAMhgSoluWRGKaqcNJ5JSbXQCpgBQ7VxQjLhPTUgwNZHV1YYpsBSy6WWzAlJrQYumLarthDLLeiqabnhuAUycjaQZwMeSHZBKIcFqw8kGntuGUrn2lDyFULpXBMoUYXylcoEAjUEUqXaBBLERoRSpatPVxqDRwYWbUOZZBfKTXsR2DO-OkkLJFH4ytmzMS6COYlg7iCYOVhDETaQaxbmBjK4dBFcugguXQSXLoP1LoMVr4Jps3V7ogYynN4KbtG6zVvz7CScMQsmzIK1ZGc7fYz0wOADzzGmQDtNQQEohWEI4MFLWcW8KCGVqTgALyQGGgBGv3jucVMgPfdOM2Wpkl5Ly0BS5awWHPNijIjDiBTtQHuBewwjrLYaXxorrBNVYAhYUJ5JoNZwA4DBNI5L7i1TgFQBhhxY6lzFKGBsiPRQhZl4A8ZpBkhWaKscAy8wwkFZwbRBEoBrwaS3uG_ALZCUVIKVhnnwVFoHjmkFGODiDMbBaOlxFyOBGjBCMa-BGs9xlyIctQa0YkJb6lAZzIGgzksQzFtHvcbdGAiBcSTWVsEjXFupcC8EwIFb5pHbcAgBY30VIwTgvHJImYDgGEjjIYiokIHRAqtP1ZqRD4GO4gMiH0KBoRJlqETpAxujQqMzlFu5I2m4hqs3dg2gC2yMWX1E2HQ1g2MpAqMzbGiIhOOBRTsVGp0RGsaxZqPRAJq1G42GLoN95uATwXB6Yd3S3BjowaXL4KPTBzAmwSSECa6nCT-3Da6nCz_gDS49nAECvma9b0LDx92648QmNLifAIIpKAgfzyCwrmdnlAxSDNtm_e6TbpK_T_AKCd7i2MiTYTbNpq1DvM9bZu-zMpm2_tzauxqW2ZPDQZonk6yoNjGt99NKcl1SHf9NDtPRVdKaznDt1st0kNwmSd7qpJNphiiMg856CL-oop37F-Xs0g5pk4uyHE_bP_2EN2tZ0rvM0s6kKItyyrrF6KdJmpfvp8V1flFcTdOfposq3v6U9X76UzFO878tW_Tn6d-SHf1hS77YeJU-T8XL68M3uv8yf6eE27dP93r6Kjm-3E0nJ72n3b2jzsHGPyaj3e4z3u_LkxfbF2a8IXd331xe5mnnxL8YvN-8OnXPBx13dPrh4CC_3rzsbU1PtTR6mO38Y1sU5--ev3LPtzb3Elfs_7KZbqS-4D-_2Hl2ONh_9_J28-eTl5Pr_ok92BhdPbvYdpvPJ9e7H5KTl-_2RlfvN7bti7-fXv5a7Ownm-Od6-ejy_Qi-WWys717sL99CZs7ZjtPdl5Nn_aK487B7s9He__YGJT97c7-y6T38sWL0eXp6NWAd_b1-Ul_--Sgc_ired5PB6Ob0_HOk-1XH57ulccvXosxn-7z47zzbPv85WZfbV3DntjLntxsTG8ncLx9enp6ePxaPYU3-_n-7d83L7eei_2jrW1-sLW7zXf7Ylj8-uFw8OupHh_tvds6zDe3lbzZ5uP-4f7Fm-LV5U333THfvD466b_eeDN5tXcwyD4cvb48OtQbO4cDNb59dVBMt_3mwdOb6ZujAzUsPxzz3u7-s6PbAzs6yJL-Tbfov35x-GS_u3myc7QHJ8O-ednfeXHx7liV5SnfGil9-uzkenR8M3n1ZHuiu9vli-ONfYySvyZt8rToLMdgayPvJa1pmveySdbqZdWtuhIj7TdwfLU2qwHWOiqKIRrBBWlLx-_-Dw" title="Semua skenario: Kekayaan bersih" width="100%" height="620" style="border:0;background:transparent" loading="lazy"></iframe>
 <p style="margin:6px 0 0;font-size:13px;text-align:right">Grafik interaktif: <a href="https://tool.adjiebrotots.com/rentvsownhouse/sensitivity/id/#open=.gc-canvas&amp;s=aG5zD3JANeIe2KwSV5gKnq428Q7CMd5uaUjLerWdCcMTbRA_rmLcF0gg3WJEh6pA3LLVjjnebW9JkvBuY8Ikb8TYzRRnwBjdDsY5365liG_E2ofqIN8IDBMa8oQPBeAe9o0HJGFSkQqKyBHWKrwgW7RAmuFhE8BIrwLzaWKqMmuvAE7JXYjZoGQaBpGwImjehaPrGELRQEj1BG6EnaGNsCdoUbRLHTM_AktgEbQKadKJJmjYmNk0bQ5fWgEWRbSZ6IgekmxYpG-ENzCMtUJO2p0sQ0UnbFEfKBg4Dw1M2Mi-xAsyr1UEYYYSUO4C1VQnQyXBjDI2QTDE0RDLE0Lg2loZzSkZY5pTMqDSnBE43xE0pgSQhVoNjxcqU0BwTWgOAVrNMRkizTOjTS5AGSk4pyNRosE9BRCxsVTR4ltzU0dLQFTyR7mRiagxcogOJS-QcBWGTM1Wlg6KgGJhqU4ttY0Dm45YFWwmUxrN-Er5cEtJUAQA">Analisis Sensitivitas &amp; Multi-Skenario Sewa vs Beli Rumah</a> oleh Adjie Brotot Tools</p>
 
-Bacanya begini: bandingkan garis penuh dengan putus-putus *dalam satu warna*, bukan biru dengan oranye. Tool ini memakai satu anggaran awal yang sama untuk semua kolom dan mengonversi Jakarta ke dolar Australia pada kurs yang bergeser mengikuti selisih suku bunga, jadi tinggi garis biru dan oranye gak bisa dibandingkan langsung. Yang penting selisih di dalam tiap warna. Di Perth, garis penuh biru melewati garis putus-putus sekitar tahun ke-5 dan berakhir unggul sekitar A$660 ribu di tahun ke-20. Di Jakarta, garis putus-putus oranye tetap di atas.
+Cara bacanya begini: bandingkan garis penuh dengan putus-putus *dalam satu warna*, bukan biru dengan oranye. Tool ini memakai satu anggaran awal yang sama untuk semua kolom dan mengonversi Jakarta ke dolar Australia pada kurs yang bergeser mengikuti selisih suku bunga, jadi tinggi garis biru dan oranye gak bisa dibandingkan langsung. Yang penting selisih di dalam tiap warna. Di Perth, garis penuh biru melewati garis putus-putus sekitar tahun ke-5 dan berakhir unggul sekitar A$660 ribu di tahun ke-20. Di Jakarta, garis putus-putus oranye tetap di atas.
 
 Sekarang soal pembiayaan. Empat cara membeli rumah Jakarta yang sama, melawan satu garis sewa. Biru adalah KPR bertahap (8,5% selama 5 tahun, lalu floating). Oranye 8,5% datar selama 20 tahun. Hijau promo 3,81% selama 5 tahun, lalu floating. Merah muda tunai. Garis putus-putus adalah sewa.
 

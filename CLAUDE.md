@@ -40,9 +40,11 @@ scrolls sideways.
 
 ## Writing in Indonesian
 
-Use the `bahasa-indonesia` skill (`.claude/skills/bahasa-indonesia/`) and the Indonesian rules
-in `adjie-writing-style`: saya-kamu (never *Anda*), keep English terms that sound better,
-*gak* where the context is casual.
+**Mandatory:** load the `bahasa-indonesia` skill (`.claude/skills/bahasa-indonesia/`) before
+writing, translating or editing any Indonesian text (posts, front matter, captions, alt text,
+`_data/` strings), even a one-word fix, and run its checklist before pushing. One voice:
+written Jakarta Indonesian, saya-kamu (never *Anda*), no regional languages. Write it natively
+from the case, never by translating the English post sentence by sentence.
 
 ## Page text
 

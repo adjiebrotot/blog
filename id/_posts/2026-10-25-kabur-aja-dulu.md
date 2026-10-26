@@ -6,7 +6,7 @@ tags: [finance, personal]
 keywords: [KaburAjaDulu, kabur aja dulu, kerja di luar negeri, gaji Australia, gaji Singapura, tradable non-tradable, biaya hidup Perth, biaya hidup Singapura, cost of living]
 ---
 
-**Singkatnya:** nasi goreng memang jauh lebih murah di Indonesia, tapi tabungan akhir bulan bisa jauh lebih besar di Australia dan Singapura. Alasannya, sebagian besar belanja kita adalah barang yang harganya hampir sama di seluruh dunia, sementara gajinya gak sama. Di hitungan saya, pekerja profesional di Perth menabung sekitar Rp32 juta sebulan, di Singapura sekitar Rp40 juta, sedangkan di Jakarta Rp1,3 juta. Dengan catatan: yang paling tipis justru pekerja upah rendah di Singapura.
+**Singkatnya:** nasi goreng memang jauh lebih murah di Indonesia, tapi tabungan akhir bulan bisa jauh lebih besar di Australia dan Singapura. Alasannya, sebagian besar belanja kita adalah barang yang harganya hampir sama di seluruh dunia, sementara gajinya gak sama. Di hitungan saya, pekerja profesional di Perth bisa menabung sekitar Rp32 juta sebulan, di Singapura sekitar Rp40 juta, sedangkan di Jakarta Rp1,3 juta. Dengan catatan: yang paling tipis justru pekerja upah rendah di Singapura.
 {: .tldr}
 
 * TOC
@@ -50,7 +50,7 @@ Makanan ada di antara keduanya. Beras dan daging bisa diperdagangkan, tapi punya
 
 ## Berapa tabungan akhir bulannya? Skenario A: upah rendah
 
-Supaya adil, kita uji dua kelompok. Hitungan di bawah dibuat dengan [tool Cost of Living Comparator](https://tool.adjiebrotots.com/costofliving-comparator/) buatan saya, dalam mode Detailed, dengan satu daftar pengeluaran yang sama di tiga kota: seorang single, menyewa tempat tinggal dengan tipe yang sama, makan campur masak dan di luar, bepergian dengan motor atau transportasi umum. Itu yang saya maksud dengan apple to apple. Jakarta jadi titik awal. Tiap baris (sewa, makanan, listrik dan air, bensin, kesehatan, dan seterusnya) lalu diperkirakan tool untuk Perth dan Singapura dari indeks harga masing-masing kota, jadi kamu bisa melihat selisihnya per baris.
+Supaya adil, kita uji dua kelompok. Hitungan di bawah dibuat dengan [tool Cost of Living Comparator](https://tool.adjiebrotots.com/costofliving-comparator/), dalam mode Detailed, dengan satu daftar pengeluaran yang sama di tiga kota: seorang single, menyewa tempat tinggal dengan tipe yang sama, makan campur masak dan di luar, bepergian dengan motor atau transportasi umum. Itu yang saya maksud dengan apple to apple. Jakarta jadi titik awal. Tiap baris (sewa, makanan, listrik dan air, bensin, kesehatan, dan seterusnya) lalu diperkirakan tool untuk Perth dan Singapura dari indeks harga masing-masing kota, jadi kamu bisa melihat selisihnya per baris.
 
 Skenario pertama: pekerja upah rendah.
 
@@ -75,7 +75,7 @@ Skenario pertama: pekerja upah rendah.
 
 *Angka dibulatkan. Kurs bawaan tool: A$1 = Rp12.710 dan S$1 = Rp14.152.*
 
-Perth jelas menang: sekitar 80 kali lipat tabungan Jakarta, dalam rupiah. Singapura juga menang di atas kertas (6,9% versus 5,8%), tapi tipis, dan ini bagian yang harus saya jujurkan. PWM hanya mewajibkan upah itu untuk warga negara dan PR, bukan pemegang work permit.[^pwm] Jadi skenario ini menunjukkan mekanisme harga, bukan jalur yang biasa dilewati orang Indonesia yang pindah. Dan CPF yang dipotong itu sebenarnya tabungan wajibmu sendiri, jadi tabungan sebenarnya lebih besar daripada baris di atas.
+Perth jelas menang: sekitar 80 kali lipat tabungan Jakarta, dalam rupiah. Singapura juga menang di atas kertas (6,9% versus 5,8%), tapi tipis, dan ini bagian yang saya harus jujur. PWM hanya mewajibkan upah itu untuk warga negara dan PR, bukan pemegang work permit.[^pwm] Jadi skenario ini menunjukkan mekanisme harga, bukan jalur yang biasa dilewati orang Indonesia yang pindah. Dan CPF yang dipotong itu sebenarnya tabungan wajibmu sendiri, jadi tabungan sebenarnya lebih besar daripada baris di atas.
 
 Stress Test: kalau semua pengeluaran selain sewa ternyata 50 persen lebih mahal daripada perkiraan tool (tool memakai indeks, bukan struk belanja), tabungan di Perth masih sekitar A$1.680 per bulan (sekitar Rp21,4 juta), sedangkan di Singapura jatuh negatif.
 
@@ -143,7 +143,7 @@ Gaji bukan satu-satunya alasan. Ini yang saya rasakan sendiri sejak pindah dari 
 
 ## Tapi apakah semua orang cocok kabur?
 
-Gak. Ini keberatan terkuat, dan sebagian benar.
+Enggak. Ini keberatan terkuat, dan sebagian benar.
 
 - **Gak semua orang bisa.** Visa kerja terampil butuh pekerjaan dan sponsor, dan gaji yang memenuhi batas minimum. Skenario A, seperti saya jelaskan, sebagian besar mekanisme harga saja.
 - **Ada biaya yang gak masuk tabel.** Jauh dari keluarga, biaya pindah dan visa, dan masa awal yang sepi.

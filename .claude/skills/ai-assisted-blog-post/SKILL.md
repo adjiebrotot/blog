@@ -44,8 +44,8 @@ concept / points  →  Draft plan (v1)  →  Adjie: revision + answers  →  ful
 Before writing the plan:
 
 1. Read `README.md` (front matter, categories, embeds, KaTeX, Mermaid, extras) and the
-   `adjie-writing-style` skill. For Indonesian, also the `bahasa-indonesia` skill and the
-   Indonesian rules in `adjie-writing-style`.
+   `adjie-writing-style` skill. For Indonesian, also the `bahasa-indonesia` skill
+   (mandatory for any Indonesian, the plan's opening narrative included).
 2. Look at `en/_posts/` and `id/_posts/` for related posts to link to, and for a
    `translation:` key if the topic already exists in the other language.
 3. Work out the post's shape from `adjie-writing-style` (argument or explainer, personal
@@ -186,7 +186,7 @@ After Adjie's reply (and no request for another draft):
 2. Verify every **to verify** figure. If one does not hold, use the correct figure or
    drop the claim, and tell him which.
 3. Write the post following `README.md`, `adjie-writing-style` (run its "Check a draft"
-   list) and, for Indonesian, `bahasa-indonesia`. Keep the opening narrative he approved,
+   list) and, for Indonesian, `bahasa-indonesia` (mandatory; run its checklist). Keep the opening narrative he approved,
    with only the edits he asked for. Every source goes in a footnote.
 4. Save it as `<lang>/_posts/YYYY-MM-DD-<slug>.md`, with the `translation:` key on both
    files if the post is in two languages.
