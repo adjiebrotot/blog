@@ -116,6 +116,8 @@ KaTeX and Mermaid load only on a post that uses them.
 - **Table of contents:** put `* TOC` on one line and `{:toc}` on the next.
 - **Summary box:** add `{: .tldr}` on the line after a paragraph. `{: .note}` and
   `{: .warning}` work the same way.
+- **Abbreviations:** define a term once, anywhere in the post, as `*[PTKP]: Penghasilan Tidak Kena Pajak`.
+  Every PTKP in the post then shows its meaning on hover, focus, click or tap.
 - **Images:** keep them in `assets/img/`, and always write alt text:
   `![Net equity chart](/assets/img/net-equity.png)`.
 

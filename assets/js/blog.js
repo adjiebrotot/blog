@@ -14,6 +14,9 @@
       sections at the left on a wide screen, a bar split by section length on
       a narrow one. Both are added here, never in the HTML, so crawlers and
       feeds see the same page as before.
+   7. Abbreviations: kramdown writes *[PTKP]: … definitions as <abbr title>.
+      A bubble shows the meaning on hover, focus, click or tap, so a phone
+      reader gets it too; the title stays in the HTML for crawlers.
    UI words come from _data/i18n.yml through data-* on <body>. */
 (function () {
   var root = document.documentElement;
@@ -288,5 +291,58 @@
     window.addEventListener('load', resize);
     if ('ResizeObserver' in window) new ResizeObserver(resize).observe(prose);
     update();
+  }
+
+  /* 7. Abbreviations. The native title is moved to data-title so it does not
+     pop up a second time over the bubble. */
+  var abbrs = prose ? prose.querySelectorAll('abbr[title]') : [];
+  if (abbrs.length) {
+    var bubble = document.createElement('div');
+    bubble.className = 'abbr-tip';
+    bubble.setAttribute('role', 'tooltip');
+    bubble.id = 'abbr-tip';
+    document.body.appendChild(bubble);
+    var shown = null, shownAt = 0;
+    var place = function (el) {
+      var r = el.getBoundingClientRect(), b = bubble.getBoundingClientRect();
+      var left = Math.min(Math.max(8, r.left + r.width / 2 - b.width / 2), window.innerWidth - b.width - 8);
+      var top = r.top - b.height - 8;
+      if (top < 8) top = r.bottom + 8;
+      bubble.style.left = left + 'px';
+      bubble.style.top = top + 'px';
+    };
+    var show = function (el) {
+      if (shown !== el) shownAt = Date.now();
+      shown = el;
+      bubble.textContent = el.dataset.title;
+      bubble.classList.add('is-shown');
+      el.setAttribute('aria-describedby', 'abbr-tip');
+      place(el);
+    };
+    var hide = function () {
+      if (shown) shown.removeAttribute('aria-describedby');
+      shown = null;
+      bubble.classList.remove('is-shown');
+    };
+    Array.prototype.forEach.call(abbrs, function (el) {
+      el.dataset.title = el.title;
+      el.removeAttribute('title');
+      el.tabIndex = 0;
+      /* Hover is for a mouse only: a tap sends its own enter and leave. */
+      el.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') show(el); });
+      el.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') hide(); });
+      el.addEventListener('focus', function () { show(el); });
+      // Only when focus moves on to something else (Tab); a click away is handled below.
+      el.addEventListener('blur', function (e) { if (e.relatedTarget) hide(); });
+      /* A tap focuses the term just before click, so a click
+         straight after the bubble opened keeps it open; a second tap closes it. */
+      el.addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (shown === el && Date.now() - shownAt > 400) hide(); else show(el);
+      });
+    });
+    document.addEventListener('click', hide);
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hide(); });
+    window.addEventListener('scroll', function () { if (shown) place(shown); }, { passive: true });
   }
 })();
