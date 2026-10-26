@@ -10,6 +10,7 @@
 {%- assign seo_desc = page.description | default: seo_desc | default: t.description | strip_html | normalize_whitespace | strip -%}
 {%- assign seo_image = page.image | default: site.default_image | absolute_url -%}
 <meta charset="utf-8">
+<meta name="google-adsense-account" content="ca-pub-8730116101825381">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ seo_title | strip_html | normalize_whitespace | escape }}</title>
   <meta name="description" content="{{ seo_desc | escape }}">
