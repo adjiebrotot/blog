@@ -1,0 +1,7 @@
+---
+layout: null
+permalink: /id/sewa-atau-beli-rumah/index.md
+md_of: /id/sewa-atau-beli-rumah/
+sitemap: false
+---
+{% include post-markdown.txt url=page.md_of %}

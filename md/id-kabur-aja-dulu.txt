@@ -1,0 +1,7 @@
+---
+layout: null
+permalink: /id/kabur-aja-dulu/index.md
+md_of: /id/kabur-aja-dulu/
+sitemap: false
+---
+{% include post-markdown.txt url=page.md_of %}

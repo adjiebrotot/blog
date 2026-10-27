@@ -1,0 +1,16 @@
+{%- comment -%}
+  One post as Markdown, for AI readers: served at <post URL>index.md by a stub in md/
+  (see md/README.txt) and linked from the post's head as rel="alternate" text/markdown.
+  Usage: {% include post-markdown.txt url="/en/<slug>/" %}
+{%- endcomment -%}
+{%- assign p = site.posts | where: "url", include.url | first -%}
+# {{ p.title }}
+
+> {{ p.description | strip_html | normalize_whitespace }}
+
+URL: {{ p.url | absolute_url }}
+Author: {{ site.author.name }} ({{ site.links.about }})
+Language: {% if p.lang == "id" %}Indonesian{% else %}English{% endif %}
+Published: {{ p.date | date: "%Y-%m-%d" }}{% if p.last_modified_at %}, updated {{ p.last_modified_at | date: "%Y-%m-%d" }}{% endif %}
+
+{% include plain-text.html html=p.content %}

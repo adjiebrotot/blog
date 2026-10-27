@@ -43,7 +43,7 @@ links:
   tools: "https://tool.adjiebrotots.com/"
 
 # Social card when a post sets no image of its own.
-default_image: /assets/img/logo.png
+default_image: /assets/img/og/blog.jpg   # 1200x630 card, drawn by _build/og.mjs
 
 markdown: kramdown
 highlighter: rouge
@@ -96,3 +96,4 @@ exclude:
   - node_modules
   - .bundle
   - .jekyll-cache
+  - md/README.txt

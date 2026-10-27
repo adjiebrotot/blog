@@ -25,7 +25,7 @@ publishes it. The look comes from the design system of
    tags: [finance]                 # finance | engineering | personal | others (one or more)
    # Optional:
    last_modified_at: 2026-11-02    # shown as "Updated", tells search engines it changed
-   image: /assets/img/my-card.png  # social preview, 1200×630 works best; else the logo
+   image: /assets/img/og/<slug>.jpg  # social preview card, drawn by `node _build/og.mjs`; else the blog card
    image_alt: "What the image shows"
    translation: rent-vs-buy        # only when the same topic exists in the other language
    keywords: [rent vs buy, KPR]    # extra keywords for structured data
@@ -34,6 +34,10 @@ publishes it. The look comes from the design system of
 
    Language, layout and URL come from the folder, so you never set them.
 3. Write the body in Markdown (GitHub-flavoured). Raw HTML works anywhere.
+4. Give it a social card and a Markdown copy: `node _build/og.mjs` draws
+   `assets/img/og/<slug>.jpg` (set it as `image:`), and a stub in `md/` (copy one, see
+   `md/README.txt`) publishes the post as Markdown at `<post URL>index.md` for AI readers.
+   After it is live, `node ../tool/_ref/indexnow.mjs <post URL>` asks Bing to crawl it now.
 
 ### Categories
 

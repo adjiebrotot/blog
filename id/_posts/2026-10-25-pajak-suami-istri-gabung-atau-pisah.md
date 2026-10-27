@@ -1,9 +1,9 @@
 ---
 title: "Lapor pajak suami istri: lebih untung gabung atau pisah SPT?"
-description: "Untuk sebagian besar pasangan, gabung atau pisah pajaknya sama saja, karena aturannya memang dirancang begitu. Gabung lebih untung kalau suami dan istri sama-sama bergaji besar. Pisah (MT) cuma menang kalau gaji salah satunya di bawah PTKP. Ini cara lapor dan hitungannya."
+description: "Gabung atau pisah, pajak kebanyakan pasangan sama saja. Gabung lebih untung kalau keduanya bergaji besar, pisah (MT) kalau gaji salah satunya di bawah PTKP."
 date: 2026-10-25 21:00:00 +0800
 tags: [finance]
-image: /assets/img/psg-ill-lapor-spt.webp
+image: /assets/img/og/pajak-suami-istri-gabung-atau-pisah.jpg
 image_alt: "Pasangan suami istri duduk di meja makan, istri menunjuk layar laptop, suami memegang selembar kertas"
 keywords: [lapor pajak suami istri gabung atau pisah, lebih untung gabung atau pisah SPT, NPWP istri gabung atau pisah, pisah harta pajak, memilih terpisah MT, PTKP K/I, SPT suami istri Coretax, kalkulator pajak suami istri]
 ---

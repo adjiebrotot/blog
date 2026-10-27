@@ -1,9 +1,11 @@
 ---
 title: "Sewa atau beli rumah? Kenapa Perth bilang beli dan Jakarta bilang sewa"
-description: "Beli dan sewa sama-sama bisa menang, tergantung empat hal: imbal hasil rumahnya, bunga KPR-nya, imbal hasil uangmu kalau dipakai di tempat lain, dan caramu memandang kekayaan. Ini cara mengujinya sendiri, dengan Perth dan Jakarta sebagai contoh."
+description: "Beli dan sewa sama-sama bisa menang, tergantung empat hal: imbal hasil rumah, bunga KPR, imbal hasil uangmu di tempat lain, dan caramu memandang kekayaan."
 date: 2026-10-17 09:00:00 +0800
 last_modified_at: 2026-10-26
 tags: [finance]
+image: /assets/img/og/sewa-atau-beli-rumah.jpg
+image_alt: "Dua teman berdampingan: satu mengecat dinding ruang tamunya dengan rol cat, satunya memegang buku kecil di samping koper dorongnya"
 translation: rent-vs-buy
 keywords: [sewa atau beli rumah, KPR, kalkulator sewa vs beli, Perth, Jakarta, bunga KPR floating, investasi properti]
 ---
