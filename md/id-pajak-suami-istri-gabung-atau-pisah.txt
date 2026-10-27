@@ -1,0 +1,7 @@
+---
+layout: null
+permalink: /id/pajak-suami-istri-gabung-atau-pisah/index.md
+md_of: /id/pajak-suami-istri-gabung-atau-pisah/
+sitemap: false
+---
+{% include post-markdown.txt url=page.md_of %}

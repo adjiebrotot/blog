@@ -1,8 +1,10 @@
 ---
 title: "#KaburAjaDulu atau 'di sini murah': siapa yang menang di rekening tabungan?"
-description: "Nasi goreng memang jauh lebih murah di Indonesia. Tapi tabungan akhir bulan di Australia dan Singapura tetap bisa lebih besar, karena sebagian besar belanja kita adalah barang yang harganya hampir sama di mana-mana. Ini hitungannya, lengkap dengan angka dan batasannya."
+description: "Nasi goreng memang jauh lebih murah di Indonesia, tapi tabungan akhir bulan di Australia dan Singapura bisa lebih besar. Ini hitungan dan batasannya."
 date: 2026-10-25 09:00:00 +0800
 tags: [finance, personal]
+image: /assets/img/og/kabur-aja-dulu.jpg
+image_alt: "Seorang pria duduk di warung sambil memegang struk dan tersenyum, di depannya ada sepiring nasi goreng dan segelas es teh"
 keywords: [KaburAjaDulu, kabur aja dulu, kerja di luar negeri, gaji Australia, gaji Singapura, tradable non-tradable, biaya hidup Perth, biaya hidup Singapura, cost of living]
 ---
 

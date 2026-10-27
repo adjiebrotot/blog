@@ -3,7 +3,7 @@ en:
   locale: en_US
   name: English
   short: EN
-  description: "Adjie Brotosukmono's blog: personal finance, power and software engineering, and life between Perth and Jakarta, with interactive calculators from Adjie Brotools built into the posts."
+  description: "Adjie Brotosukmono's blog: personal finance, power and software engineering, and life between Perth and Jakarta, with Adjie Brotools calculators in the posts."
   skip: Skip to content
   home: Blog
   all: All posts
@@ -45,7 +45,7 @@ id:
   locale: id_ID
   name: Bahasa Indonesia
   short: ID
-  description: "Blog Adjie Brotosukmono: keuangan pribadi, teknik ketenagalistrikan dan perangkat lunak, serta kehidupan antara Perth dan Jakarta, lengkap dengan kalkulator interaktif dari Adjie Brotools di dalam artikel."
+  description: "Blog Adjie Brotosukmono: keuangan pribadi, teknik ketenagalistrikan dan perangkat lunak, serta hidup antara Perth dan Jakarta, dengan kalkulator Adjie Brotools."
   skip: Langsung ke konten
   home: Blog
   all: Semua artikel

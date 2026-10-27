@@ -1,9 +1,11 @@
 ---
 title: "Rent or buy a house? Why Perth says buy and Jakarta says rent"
-description: "Buying and renting can both win, depending on four numbers: what the house earns, what the mortgage costs, what your cash could earn elsewhere, and how you count wealth. Here is how to test them yourself, with Perth and Jakarta as the worked example."
+description: "Buying and renting can both win, depending on four numbers: what the house earns, the mortgage rate, what your cash earns elsewhere and how you count wealth."
 date: 2026-10-17 09:00:00 +0800
 last_modified_at: 2026-10-24
 tags: [finance]
+image: /assets/img/og/rent-vs-buy-calculator-explained.jpg
+image_alt: "Two friends side by side: one paints his living room wall with a roller, the other holds a passport-sized booklet beside his rolling suitcase"
 translation: rent-vs-buy
 keywords: [rent vs buy, rent or buy house, Perth, Jakarta, KPR, mortgage, property investment, rent vs own calculator]
 ---

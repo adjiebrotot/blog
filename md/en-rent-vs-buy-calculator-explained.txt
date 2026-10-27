@@ -1,0 +1,7 @@
+---
+layout: null
+permalink: /en/rent-vs-buy-calculator-explained/index.md
+md_of: /en/rent-vs-buy-calculator-explained/
+sitemap: false
+---
+{% include post-markdown.txt url=page.md_of %}

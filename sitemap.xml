@@ -9,8 +9,27 @@ sitemap: false
   {%- if d.lang and d.sitemap != false and d.noindex != true %}
   <url>
     <loc>{{ d.url | absolute_url }}</loc>
-    {%- if d.last_modified_at or d.date %}
-    <lastmod>{{ d.last_modified_at | default: d.date | date_to_xmlschema }}</lastmod>
+    {%- assign _lm = d.last_modified_at | default: d.date -%}
+    {%- unless _lm -%}
+      {%- comment -%} A home or category page changes when a post it lists does: its lastmod is that newest post's. {%- endcomment -%}
+      {%- assign _newest = 0 -%}
+      {%- for p in site.posts -%}
+        {%- if d.layout == "landing" or p.lang == d.lang -%}
+          {%- assign _in = true -%}
+          {%- if d.category -%}
+            {%- include post-keys.html tags=p.tags -%}
+            {%- unless post_keys contains d.category -%}{%- assign _in = false -%}{%- endunless -%}
+          {%- endif -%}
+          {%- if _in -%}
+            {%- assign _pm = p.last_modified_at | default: p.date -%}
+            {%- assign _ps = _pm | date: "%s" | plus: 0 -%}
+            {%- if _ps > _newest -%}{%- assign _newest = _ps -%}{%- assign _lm = _pm -%}{%- endif -%}
+          {%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endunless -%}
+    {%- if _lm %}
+    <lastmod>{{ _lm | date_to_xmlschema }}</lastmod>
     {%- endif -%}
     {%- include alternates.html doc=d docs=all_docs format="xhtml" %}
   </url>
