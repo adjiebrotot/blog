@@ -35,6 +35,7 @@ en:
   about_author: "Adjie Brotosukmono is an Indonesian senior economics consultant and power system engineer at Mott MacDonald in Perth, Australia. Adjie builds the free calculators at Adjie Brotools and writes here about the decisions behind them."
   about_me: About me
   elsewhere: Elsewhere
+  privacy: Privacy Policy
   not_found_hand: "oops, wrong stop"
   not_found_heading: "This page took a different train."
   not_found_lead: "The address doesn't exist, or it moved. Hop back on at one of these:"
@@ -77,6 +78,7 @@ id:
   about_author: "Adjie Brotosukmono adalah konsultan ekonomi senior dan insinyur sistem tenaga listrik asal Indonesia di Mott MacDonald, Perth, Australia. Ia membuat kalkulator gratis di Adjie Brotools dan menulis di sini tentang keputusan di balik alat-alat tersebut."
   about_me: Tentang saya
   elsewhere: Tautan lain
+  privacy: Kebijakan Privasi
   not_found_hand: "ups salah stasiun"
   not_found_heading: "Halaman ini salah naik kereta."
   not_found_lead: "Alamatnya gak ada, atau sudah pindah. Naik lagi dari salah satu stasiun ini:"
