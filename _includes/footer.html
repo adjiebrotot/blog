@@ -3,6 +3,7 @@
     <a href="{{ site.links.home }}">adjiebrotots.com</a>
     <a href="{{ site.links.about }}" rel="author">{{ t.about_me }}</a>
     <a href="{{ site.links.tools }}">Adjie Brotools</a>
+    <a href="{{ site.links.privacy }}{% if lang == 'id' %}id/{% endif %}" rel="privacy-policy">{{ t.privacy }}</a>
   </nav>
   <p>© {{ site.time | date: "%Y" }} {{ t.footer_by }} <a href="{{ site.links.about }}" rel="author">{{ site.author.name }}</a></p>
 </footer>

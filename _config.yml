@@ -41,6 +41,7 @@ links:
   home: "https://www.adjiebrotots.com/"
   about: "https://www.adjiebrotots.com/about/"
   tools: "https://tool.adjiebrotots.com/"
+  privacy: "https://tool.adjiebrotots.com/privacy/"   # covers the blog too; the Indonesian page is privacy/id/
 
 # Social card when a post sets no image of its own.
 default_image: /assets/img/og/blog.jpg   # 1200x630 card, drawn by _build/og.mjs
