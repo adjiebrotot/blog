@@ -42,9 +42,16 @@ scrolls sideways.
 
 **Mandatory:** load the `bahasa-indonesia` skill (`.claude/skills/bahasa-indonesia/`) before
 writing, translating or editing any Indonesian text (posts, front matter, captions, alt text,
-`_data/` strings), even a one-word fix, and run its checklist before pushing. One voice:
-written Jakarta Indonesian, saya-kamu (never *Anda*), no regional languages. Write it natively
-from the case, never by translating the English post sentence by sentence.
+`_data/` strings), even a one-word fix. One voice: written Jakarta Indonesian with the flow of
+an opinion column, saya-kamu (never *Anda*), no regional languages, foreign terms in italics.
+Write it natively from the case, never by translating the English post sentence by sentence.
+
+- **Before pushing,** Indonesian passes `python3 .claude/skills/bahasa-indonesia/scripts/cek.py
+  <file>` (no ERROR) and the evaluator in `references/evaluator.md`, run by an agent that has
+  not read the English.
+- **A post in both languages** is written by two writer agents from one language-neutral brief,
+  in parallel, never by one context writing both (`ai-assisted-blog-post`, Step 3). The two may
+  use different examples as long as the message and the verified numbers match.
 
 ## Page text
 
