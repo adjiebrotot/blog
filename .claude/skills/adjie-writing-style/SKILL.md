@@ -60,7 +60,10 @@ Avoid scenery for its own sake, mixed metaphors and metaphors that need explaini
   the reveal in a fragment ("Per year? No. Per day.").
 - **Elimination by counterexample, in threes,** before giving his own answer.
 - **A mirrored line for the thesis.** Antithesis or chiasmus that states the point in
-  two balanced halves.
+  two balanced halves. In Indonesian the two halves sit in one compound sentence
+  ("..., tetapi harganya hanya menentukan menu makan siangmu hari ini. Selisih antara
+  penghasilan dan pengeluaranlah yang pada akhirnya membentuk masa depanmu."), never as
+  two or three clipped slogans.
 - **A refrain across a list.** Each item closes with the same frame, and the conclusion
   names the pattern.
 - **The reader's objection as a heading,** in the sceptic's own worried voice, answered
@@ -75,7 +78,12 @@ Avoid scenery for its own sake, mixed metaphors and metaphors that need explaini
 - Long explanatory sentences, then a short fragment that names, reveals or punches.
 - Questions as hinges between sections. Headings are often questions.
 - Short spoken pivots ("Okay,", "Now,", "Wait,") in the language's own equivalents,
-  sparingly.
+  sparingly. In Indonesian a pivot is a whole, warm sentence ("Sekarang, mari jujur-jujuran
+  dulu."), never a bare label ("Sekarang pengakuan dulu.").
+- **Rhythm is per language.** English likes short sentences and fragments; Indonesian essay
+  prose links clauses into flowing sentences and treats a run of short punchy sentences as
+  ad copy. In Indonesian, keep at most one short line for effect per section, and let
+  `bahasa-indonesia` decide.
 - Paragraph cycle: claim, figure or source, everyday example, one-line takeaway.
 - Short paragraphs. Lists and tables break up any run of numbers.
 
@@ -105,7 +113,8 @@ theory into the reader's life.
 
 ## Quirks
 
-- **"X, a.k.a. Y".** Jargon is unpacked in casual terms right away. For a laugh, an
+- **"X, a.k.a. Y".** Jargon is unpacked in casual terms right away (in Indonesian, "X,
+  alias Y", with X in italics if it is a foreign term). For a laugh, an
   acronym can be re-expanded two or three ways, the cheekiest one last.
 - **The term of art as a label.** A named concept becomes a heading or a proper noun.
 - **Parenthetical asides** that wink, disclaim or update an old fact.
@@ -133,23 +142,29 @@ These override anything above.
   `-_-` or `:(`.
 - Follow `README.md` for the rest: question-style `##` headings, short paragraphs, the
   "In short" summary, a source and date for every figure.
-- **Two languages.** Write each language natively with the same moves, case and
-  numbers. Don't mirror sentence by sentence; a joke that doesn't travel gets a
-  different joke.
+- **Two languages.** Write each language natively with the same moves and message. Don't
+  mirror sentence by sentence; a joke that doesn't travel gets a different joke. Each
+  language is written by its own writer from a shared brief, never next to the other
+  language's draft (the flow is in `ai-assisted-blog-post`, Step 3).
   - **Personas needn't match.** The parable characters can be different people in each
     language. Pick names that sound natural to that readership (a pair that fits an
     Indonesian post can feel foreign in an English one). The role each plays stays the same.
-  - **Keep the number and the case; rewrite the sentence.** Never produce the second
-    language by translating the first line by line.
+  - **Keep the message and the verified numbers; rewrite the sentence.** Never produce the
+    second language by translating the first line by line.
+  - **Examples needn't match either.** A comparison can use cities, prices or cases that
+    each readership knows (Perth vs Melbourne in English, Jakarta vs Bali in Indonesian),
+    as long as both carry the same point and every number is sourced.
 
 ### Writing in Indonesian
 
 **Mandatory:** load the `bahasa-indonesia` skill (`.claude/skills/bahasa-indonesia/`)
-before writing or editing any Indonesian, and run its checklist. It holds every rule for
-Indonesian on this blog: the one voice (written Jakarta Indonesian, *saya-kamu*), casual
-versus factual words, *gak* versus *enggak*/*tidak*, the finance terms, the English terms
-to keep, the calques to avoid and Adjie's own corrections. Use the moves above; let that
-skill choose the words.
+before writing or editing any Indonesian, and pass its evaluator. It holds every rule for
+Indonesian on this blog: the one voice (written Jakarta Indonesian, *saya-kamu*, the flow
+of an opinion column), sentences that flow instead of note-style fragments, slogan copy or
+sentence-initial conjunctions, idiomatic diction, no personified cities, italics and
+explanations for foreign terms, casual versus factual words, the finance terms, the calques
+to avoid and Adjie's own corrections. Use the moves above; let that skill choose the words
+and the shape of the sentences.
 
 ## Check a draft
 
@@ -162,4 +177,5 @@ skill choose the words.
 7. Fragments and question hinges break up the long sentences.
 8. Humour is mostly self-directed and comes after a serious point.
 9. It ends with a principle and a small action, or an honest question.
-10. It reads as natural speech in its language, with no em-dashes.
+10. It reads as natural speech in its language, with no em-dashes. Indonesian has passed
+    `bahasa-indonesia`'s script and evaluator.
