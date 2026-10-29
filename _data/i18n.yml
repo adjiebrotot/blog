@@ -45,8 +45,6 @@ en:
   share_facebook: Share to Facebook
   share_x: Share to X
   share_linkedin: Share to LinkedIn
-  share_dm: Share to Instagram DM
-  share_dm_sub: Send the link to a friend
   share_story: Share as Story
   share_story_sub: Vertical poster for Instagram
   share_post: Share as Post
@@ -114,8 +112,6 @@ id:
   share_facebook: Bagikan ke Facebook
   share_x: Bagikan ke X
   share_linkedin: Bagikan ke LinkedIn
-  share_dm: Kirim lewat DM Instagram
-  share_dm_sub: Kirim tautannya ke teman
   share_story: Bagikan sebagai Story
   share_story_sub: Poster tegak untuk Instagram
   share_post: Bagikan sebagai postingan

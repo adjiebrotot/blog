@@ -18,8 +18,8 @@
       A bubble shows the meaning on hover, focus, click or tap, so a phone
       reader gets it too; the title stays in the HTML for crawlers.
    8. The Share menu on a post (_includes/share.html): Facebook, X and
-      LinkedIn as links, Instagram DM through the phone's share sheet, a
-      Story or Post poster drawn here on a canvas, and Share as link.
+      LinkedIn as links, a Story or Post poster drawn here on a canvas, and
+      Share as link.
    UI words come from _data/i18n.yml through data-* on <body>. */
 (function () {
   var root = document.documentElement;
@@ -403,21 +403,10 @@
     if (navigator.clipboard && navigator.clipboard.writeText) return navigator.clipboard.writeText(text).catch(fallback);
     return fallback();
   }
-  /* A phone's share sheet lists Instagram; a computer's does not. */
-  function phoneShare() { return !!navigator.share && matchMedia('(pointer: coarse)').matches; }
 
   function pickShare(m, kind) {
     var d = m.box.dataset;
     if (kind === 'link') { copyText(d.url).then(function () { flashShare(m); }, function () {}); return; }
-    if (kind === 'dm') {
-      // Instagram takes no link to send from the web: on a phone the share
-      // sheet hands the link to Instagram's chats; elsewhere the link is
-      // copied and the inbox opens, ready to paste.
-      if (phoneShare()) { navigator.share({ title: d.title, url: d.url }).catch(function () {}); return; }
-      copyText(d.url).then(function () { flashShare(m); }, function () {});
-      window.open('https://www.instagram.com/direct/inbox/', '_blank', 'noopener');
-      return;
-    }
     if (kind === 'story' || kind === 'post') {
       copyText(d.url).catch(function () {});
       openPoster(m, kind);
