@@ -96,6 +96,23 @@ Same patterns, fixed in the same pass (not in his list):
 | tool, input, spreadsheet, fixed, floating ... (roman) | *tool*, *input*, *spreadsheet*, *fixed*, *floating* ... (italic everywhere, *tool*-nya) |
 | gak in rules, tables and footnotes ("gak digabung", "gak dihitung") | tidak (factual layer) |
 
+### Pointers to another section (October 2026)
+
+Adjie: "where is the screenshot? Even if you refer to the iframe in the next section, this
+is still wrong. Do not refer to any figures from the next section." A sentence may point
+only at what is in its own section; otherwise it states its fact on its own. The rule is in
+`adjie-writing-style` and applies to every language; `check-references.py` and the
+reference-checker agent catch it.
+
+| Before | After | Why |
+| --- | --- | --- |
+| Jadwal bunga bertahap KPR reguler bisa kamu lihat di *screenshot* di bawah: bunga 8,5% di awal tidak akan bertahan sampai cicilan lunas. | Baik promo maupun KPR reguler sama-sama memakai bunga bertahap, sehingga bunga di tahun-tahun awal tidak akan bertahan sampai cicilan lunas. | The screenshot is three sections down. |
+| Dalam daftar pengeluaran yang saya pakai di bawah, makan di luar hanya menyumbang sekitar 11 sampai 17 persen dari total belanja bulanan. | Makan di luar hanya menyumbang sekitar 15 persen dari total belanja bulanan. | The tables are in later sections. "You can just assume in this section" a round figure. Not *paling* or *paling-paling* (at most): two of the post's six shares are above 15%. |
+| (rinciannya ada di bagian Conglomerate di bawah) | (deleted) | A section name used to reach one chart inside it. |
+| Kalau dikonversi dengan kurs tadi | Kalau dikonversi dengan kurs A$1 = Rp12.710 dan S$1 = Rp14.152 | The rate sat under a table two sections up. |
+| Seperti yang sudah saya jelaskan, skenario A ... / seperti yang sudah saya tunjukkan, hal itu tidak dijamin | Karena syarat itu, skenario upah minimum ... / padahal hal itu tidak dijamin: kalau Suku Bunga Bebas Risiko dinaikkan ke 8%, ... | Back-references across sections: say the fact again instead. |
+| Contoh di atas cuma tiga jenis. | Karena gaji setiap pasangan tentu berbeda-beda, ... | The examples are in three earlier sections. |
+
 ### What the first evaluator run caught after that rewrite
 
 The rewrite above still had 41 *wajib* findings across the three posts when a fresh
