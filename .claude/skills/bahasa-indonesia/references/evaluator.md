@@ -113,7 +113,10 @@ habit, not only the instances>
 ## Step 4: the loop
 
 The writer (or the main agent) applies every *wajib* finding and the *saran* it agrees
-with, runs the script again, and sends the changed paragraphs back. The evaluator checks
+with, runs the script again, and sends the changed paragraphs back. Don't paste a
+suggestion in blindly: read the new sentence together with the one before and after it,
+because a pasted fix often repeats a word or a fact from its neighbour (the second round on
+the first three posts found exactly that). The evaluator checks
 those paragraphs and the ones around them, and issues a new verdict. Repeat until LULUS.
 If the writer disagrees with a *wajib* finding after two rounds, list the disagreement for
 Adjie in the delivery message instead of looping further.

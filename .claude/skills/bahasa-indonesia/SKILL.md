@@ -199,6 +199,52 @@ A state acting as a state is fine ("Australia menetapkan gaji minimum ...", "Ind
 butuh lebih banyak insinyur"). So is an institution that does speak ("UBS mencatat",
 "DJP mengingatkan"). A tool's card shows, not says: "Kartu ini menunjukkan ...".
 
+### Name the thing
+
+English leans on pronouns, metonymy and "with X". Indonesian names the actor or the object.
+The first evaluator run found these in every post:
+
+- **No *-nya* chains standing for English pronouns.** "Kalau gajinya cuma Rp30 juta,
+  pajaknya nol, dan sisa PTKP-nya ..." → "Kalau gaji istri cuma Rp30 juta setahun, pajaknya
+  nol dan sisa PTKP sebesar Rp24 juta terbuang". "bagian mana darinya" → "bagian mana dari
+  sepiring nasi goreng restoran". "Status ini", "Keduanya", "punyamu" need a clear noun.
+- **A colour, a city or a tab is not the scenario.** "Garis biru adalah membeli" →
+  "Garis biru menunjukkan skenario membeli". "mengonversi Jakarta ke dolar Australia" →
+  "mengonversi angka Jakarta". "Perth jelas menang, dengan tabungan 80 kali lipat Jakarta"
+  → "Pekerja di Perth jelas paling untung: tabungannya sekitar 80 kali lipat tabungan
+  pekerja di Jakarta". "Kedua kota memakai jenis rumah yang sama" → "Simulasi untuk kedua
+  kota memakai ...".
+- **"Dengan X" is not "with X".** "Dengan pisah, semua penghasilan digabung" → "Kalau
+  memilih pisah, ...". "Dengan kerja penuh waktu, totalnya ..." → "Untuk kerja penuh waktu,
+  upah mingguannya ...".
+- **A tool calculates; it does not think.** "*Tool* ini menganggap ..." → "Hitungan *tool*
+  ini berasumsi ...". A card "menunjukkan", a system "mencatat".
+- **Watch the connective tics.** *Itulah sebabnya*, *Dengan kata lain*, *Artinya* are good
+  transitions once; three in a post become a tic, and each must point at the right reason.
+- **One name per thing.** Pick one form and use it everywhere, captions and alt text
+  included: *tool* (not *kalkulator* in one place), *fixed* (not *flat*, *datar*, *tetap*
+  for the same loan), A$ (not $ in one paragraph), *floating* (not *variabel*), the same
+  name for the same tool page.
+
+### False friends in finance
+
+Words that look right but mean something else to an Indonesian finance reader:
+
+| Meant | Wrong | Right |
+| --- | --- | --- |
+| a loan at one rate for the whole term | bunga *flat* (in Indonesia, a flat-rate calculation method) | bunga *fixed* selama 20 tahun |
+| your actual savings | tabungan riil (*riil* = adjusted for inflation) | tabunganmu yang sebenarnya |
+| a study's limits | batasan (a definition or a rule) | keterbatasan |
+| housing wealth ("bricks and mortar") | kekayaan berbentuk batu bata | kekayaan yang tertanam di properti |
+| the floating-rate tail | ekor bunga *floating* | periode bunga *floating* di sisa tenor |
+| "that's how mortgages work in the real world" | begitulah KPR di dunia nyata bekerja | memang seperti itulah skema KPR yang ditawarkan bank |
+| "he just wants one payment" | dia cukup ingin satu pembayaran | baginya, cukup satu tagihan setiap bulan |
+| "leverage becomes your friend" | *leverage* jadi kawan | *leverage* akan menguntungkanmu |
+| "sourced medians" | median bersumber | nilai median dari sumber yang jelas |
+| "via" in a footnote | lewat [sumber] | dikutip dari [sumber], menurut [sumber] |
+| "I make no claim" | saya tidak mengklaim apa-apa | saya tidak dalam posisi untuk menarik kesimpulan |
+| "the hassle is real" | ribetnya juga nyata | ... memang lebih merepotkan |
+
 ## Calques to catch
 
 Each line is a pattern Adjie corrected (examples in `references/corrections.md`).

@@ -37,6 +37,25 @@ CALQUES = [
     (r"\bpengakuan dulu\b", "'mari jujur-jujuran dulu'"),
     (r"\bnegara kelahiran\b", "means 'country of birth'; say 'tumbuh dari kelahiran'"),
     (r"\ba\.k\.a\.", "Indonesian has 'alias'"),
+    (r"\bberbentuk batu bata\b", "'bricks and mortar': 'tertanam di properti'"),
+    (r"\bekor bunga\b", "'periode bunga floating di sisa tenor'"),
+    (r"\bdi dunia nyata bekerja\b", "calque of 'how it works in the real world'"),
+    (r"\bcukup ingin\b", "calque of 'just wants': 'baginya, cukup ...'"),
+    (r"\bjadi kawan\b", "calque of 'becomes your friend'"),
+    (r"\bmedian bersumber\b", "'nilai median dari sumber yang jelas'"),
+    (r"\bribetnya juga nyata\b", "calque of 'the hassle is real'"),
+    (r"\btidak mengklaim apa-apa\b", "calque of 'I make no claim'"),
+]
+
+# False friends: read the sentence and check the meaning.
+FALSE_FRIENDS = [
+    (r"\bbunga \*?flat\*?|\*flat\* \d", "in Indonesia 'bunga flat' is a calculation method; a whole-term rate is 'fixed'"),
+    (r"\briil(nya)?\b", "'riil' means inflation-adjusted; for 'actual' say 'yang sebenarnya'"),
+    (r"\bbatasannya\b|\bdan batasan\b", "a study's limits are 'keterbatasan'"),
+    (r"\blewat \[", "a source is 'dikutip dari' or 'menurut', not 'lewat' (via)"),
+    (r"^Dengan (gabung|pisah|kerja|MT|PH)\b|[.] Dengan (gabung|pisah|kerja|MT|PH)\b", "'with X' calque: 'Kalau memilih ...', 'Untuk ...'"),
+    (r"\b(Garis )?(biru|oranye|hijau|merah muda) adalah\b", "a colour is not the scenario: 'garis biru menunjukkan ...'"),
+    (r"\bmenganggap\b.*\b(tool|kalkulator|sistem)\b|\b(Tool|tool|sistem)\*? ini menganggap\b", "a tool calculates, it does not think"),
 ]
 
 # Places and things that cannot speak, followed by a verb of speech or will.
@@ -193,6 +212,9 @@ def check(path):
         for pat, hint in CALQUES:
             if re.search(pat, raw, re.I):
                 add("ERROR", path, ln, "known calque", plain, hint)
+        for pat, hint in FALSE_FRIENDS:
+            if re.search(pat, raw):
+                add("REVIEW", path, ln, "false friend / calque", plain, hint)
         if PERSONIFICATION.search(plain):
             add("ERROR", path, ln, "personified place", plain,
                 "a city or market cannot speak: 'di Perth lebih untung membeli'")
@@ -264,6 +286,10 @@ def check(path):
             elif n <= 3 and kind == "para" and not re.search(r"[?]$", sent):
                 add("REVIEW", path, ln, "very short sentence", sent,
                     "keep only if it is a deliberate punch (one per section)")
+    itulah = sum(len(re.findall(r"\bItulah\b", l)) for l in lines)
+    if itulah > 2:
+        add("REVIEW", path, 0, "connective tic", f"'Itulah' opens {itulah} sentences",
+            "vary the transitions; each one must point at the right reason")
     if word_total:
         rate = conj_total * 1000 / word_total
         level = "REVIEW" if rate > 8 else "INFO"

@@ -95,3 +95,20 @@ Same patterns, fixed in the same pass (not in his list):
 | Saat suami dan istri sama-sama bergaji besar, ... (fragment answer) | Gabung lebih untung ketika suami dan istri sama-sama bergaji besar ... |
 | tool, input, spreadsheet, fixed, floating ... (roman) | *tool*, *input*, *spreadsheet*, *fixed*, *floating* ... (italic everywhere, *tool*-nya) |
 | gak in rules, tables and footnotes ("gak digabung", "gak dihitung") | tidak (factual layer) |
+
+### What the first evaluator run caught after that rewrite
+
+The rewrite above still had 41 *wajib* findings across the three posts when a fresh
+evaluator (no access to the English) read it. They became the "Name the thing" and "False
+friends in finance" sections of `SKILL.md`. The most instructive ones:
+
+| Before | After | Why |
+| --- | --- | --- |
+| Bunga *flat* 8,5% selama 20 tahun | Bunga *fixed* 8,5% selama 20 tahun | *Bunga flat* is a calculation method in Indonesian banking. |
+| tabungan riilnya lebih besar | jumlah yang kamu tabung lebih besar | *Riil* means inflation-adjusted. |
+| Sebagian besar kekayaan itu berbentuk batu bata | ... tertanam di properti | "Bricks and mortar" word for word. |
+| Garis biru adalah membeli | Garis biru menunjukkan skenario membeli | A colour is not a scenario. |
+| Dia cukup ingin satu pembayaran per bulan | Baginya, cukup satu tagihan setiap bulan | "just wants" word for word. |
+| Kurang bayar ... bukan denda. Itu selisih antara ... | ... bukan denda, melainkan selisih antara ... | "X isn't A. It's B." slogan shape. |
+| Contohnya, suami Rp400 juta setahun, istri Rp300 juta, satu anak. | Ambil contoh pasangan dengan satu anak: suami bergaji Rp400 juta setahun dan istri Rp300 juta. | A worked example written as notes, with no verb. |
+| sebagian besar belanja kita adalah barang yang harganya kurang lebih sama di mana pun | selisih gaji antarnegara jauh lebih lebar daripada selisih harga, apalagi banyak barang ... harganya kurang lebih sama di mana pun | The old line contradicted the post's own table (rent, the biggest item, is non-tradable). |
