@@ -1,0 +1,20 @@
+{%- comment -%}
+  The dialog behind Share as Story and Share as Post: blog.js draws the
+  poster, shows it here and offers it to the phone's share sheet (Instagram
+  is one of its targets) or as a download. Once per post.
+{%- endcomment -%}
+<div class="poster-overlay" hidden>
+  <div class="poster-dialog" role="dialog" aria-modal="true" aria-labelledby="poster-title">
+    <div class="poster-head">
+      <h2 id="poster-title" data-story="{{ t.poster_story }}" data-post="{{ t.poster_post }}"></h2>
+      <button type="button" class="btn-secondary btn-sm poster-close" aria-label="{{ t.close }}" title="{{ t.close }}"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <p class="poster-note" data-story="{{ t.poster_story_note }}" data-post="{{ t.poster_post_note }}"></p>
+    <div class="poster-frame" data-making="{{ t.poster_making }}" data-failed="{{ t.poster_failed }}"><img class="poster-img" alt="{{ t.poster_preview }}" hidden></div>
+    <div class="poster-actions">
+      <button type="button" class="btn-secondary btn-sm poster-copy">{{ t.poster_copy }}</button>
+      <a class="btn-secondary btn-sm poster-download" download>{{ t.poster_download }}</a>
+      <button type="button" class="btn-primary btn-sm poster-share" hidden>{{ t.poster_share }}</button>
+    </div>
+  </div>
+</div>

@@ -17,6 +17,9 @@
    7. Abbreviations: kramdown writes *[PTKP]: … definitions as <abbr title>.
       A bubble shows the meaning on hover, focus, click or tap, so a phone
       reader gets it too; the title stays in the HTML for crawlers.
+   8. The Share menu on a post (_includes/share.html): Facebook, X and
+      LinkedIn as links, a Story or Post poster drawn here on a canvas, and
+      Share as link.
    UI words come from _data/i18n.yml through data-* on <body>. */
 (function () {
   var root = document.documentElement;
@@ -344,5 +347,320 @@
     document.addEventListener('click', hide);
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hide(); });
     window.addEventListener('scroll', function () { if (shown) place(shown); }, { passive: true });
+  }
+
+  /* 8. Share. The menu works as the tool site's Share menu does (shared.js
+     SharedShare): opened under its button, arrow keys between rows, Escape
+     or Tab back to the button. Its list moves to the body when it opens, so
+     no box can clip it. */
+  var shareMenus = document.querySelectorAll('.share-menu');
+  var openShare = null;
+  function shareRows(m) { return Array.prototype.slice.call(m.list.querySelectorAll('.share-opt')); }
+  /* Below the button, right edges lined up; above it when there is no room. */
+  function placeList(btn, list) {
+    var r = btn.getBoundingClientRect(), vw = root.clientWidth, vh = window.innerHeight;
+    var w = Math.min(292, vw - 16);
+    list.style.width = w + 'px';
+    list.style.left = Math.max(8, Math.min(r.right - w, vw - w - 8)) + 'px';
+    var below = vh - r.bottom - 12, above = r.top - 12, cap = 420;
+    if (below < Math.min(cap, 260) && above > below) {
+      list.style.top = ''; list.style.bottom = (vh - r.top + 4) + 'px'; list.style.maxHeight = Math.min(cap, above) + 'px';
+    } else {
+      list.style.bottom = ''; list.style.top = (r.bottom + 4) + 'px'; list.style.maxHeight = Math.min(cap, Math.max(below, 160)) + 'px';
+    }
+  }
+  function closeShare(m, refocus) {
+    m.list.classList.remove('is-open');
+    m.btn.setAttribute('aria-expanded', 'false');
+    if (openShare === m) openShare = null;
+    if (refocus) m.btn.focus({ preventScroll: true });
+  }
+  function showShare(m) {
+    if (openShare && openShare !== m) closeShare(openShare);
+    if (m.list.parentNode !== document.body) document.body.appendChild(m.list);
+    m.list.classList.add('is-open');
+    m.btn.setAttribute('aria-expanded', 'true');
+    placeList(m.btn, m.list);
+    openShare = m;
+  }
+  /* The button's own words say "Link copied" for a moment. */
+  function flashShare(m) {
+    var el = m.btn.querySelector('.share-label');
+    if (el.__t) clearTimeout(el.__t); else el.__text = el.textContent;
+    el.textContent = m.box.dataset.copied;
+    el.__t = setTimeout(function () { el.textContent = el.__text; el.__t = null; }, 1600);
+  }
+  function copyText(text) {
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) {}
+      ta.remove();
+      return ok ? Promise.resolve() : Promise.reject(new Error('copy'));
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) return navigator.clipboard.writeText(text).catch(fallback);
+    return fallback();
+  }
+
+  function pickShare(m, kind) {
+    var d = m.box.dataset;
+    if (kind === 'link') { copyText(d.url).then(function () { flashShare(m); }, function () {}); return; }
+    if (kind === 'story' || kind === 'post') {
+      copyText(d.url).catch(function () {});
+      openPoster(m, kind);
+    }
+  }
+
+  Array.prototype.forEach.call(shareMenus, function (box) {
+    var m = { box: box, btn: box.querySelector('.share-toggle'), list: box.querySelector('.share-list') };
+    box.hidden = false;
+    m.btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      if (openShare === m) { closeShare(m); return; }
+      showShare(m);
+      shareRows(m)[0].focus({ preventScroll: true });
+    });
+    m.btn.addEventListener('keydown', function (e) {
+      if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+      e.preventDefault();
+      showShare(m);
+      var r = shareRows(m);
+      r[e.key === 'ArrowDown' ? 0 : r.length - 1].focus({ preventScroll: true });
+    });
+    m.list.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var b = e.target.closest('.share-opt');
+      if (!b) return;
+      closeShare(m, true);
+      // The three networks are plain links and open on their own.
+      if (b.tagName === 'BUTTON') pickShare(m, b.dataset.kind);
+    });
+    m.list.addEventListener('mousemove', function (e) {
+      var b = e.target.closest('.share-opt');
+      if (b && b !== document.activeElement && m.list.contains(document.activeElement)) b.focus({ preventScroll: true });
+    });
+    m.list.addEventListener('keydown', function (e) {
+      var r = shareRows(m), i = r.indexOf(document.activeElement), to = null;
+      if (e.key === 'ArrowDown') to = r[(i + 1) % r.length];
+      else if (e.key === 'ArrowUp') to = r[(i - 1 + r.length) % r.length];
+      else if (e.key === 'Home') to = r[0];
+      else if (e.key === 'End') to = r[r.length - 1];
+      else if (e.key === 'Escape' || e.key === 'Tab') { e.preventDefault(); e.stopPropagation(); closeShare(m, true); return; }
+      else return;
+      e.preventDefault();
+      to.focus();
+    });
+  });
+  if (shareMenus.length) {
+    document.addEventListener('click', function () { if (openShare) closeShare(openShare); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && openShare) closeShare(openShare, true); });
+    window.addEventListener('scroll', function (e) { if (openShare && !openShare.list.contains(e.target)) closeShare(openShare); }, true);
+    window.addEventListener('resize', function () { if (openShare) closeShare(openShare); });
+  }
+
+  /* The floating Share shows while neither the header's nor the footer's
+     Share is on screen, so the reader can share from anywhere in the post. */
+  var shareFloat = document.querySelector('.share-float');
+  if (shareFloat && 'IntersectionObserver' in window) {
+    var seen = new Set();
+    var fio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) seen.add(en.target); else seen.delete(en.target); });
+      var on = seen.size === 0;
+      shareFloat.classList.toggle('is-shown', on);
+      if (!on && openShare && shareFloat.contains(openShare.btn)) closeShare(openShare);
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('.post-actions'), function (el) { fio.observe(el); });
+  }
+
+  /* ── The poster: the post's category, title and picture in the og card's
+     look (_build/og.mjs), always in the day colours, with blank space left
+     for Instagram's link sticker. A Story is 1080x1920, its picture and title
+     high up, its name at the very bottom and a wide blank middle; a Post is
+     1080x1080. ── */
+  var INK = '#14203A', BG = '#F0F4FF', MUTED = '#4C5B76', GOLD = '#B45309';
+  var SANS = "'DM Sans', system-ui, sans-serif";
+  function loadImage(src) {
+    return new Promise(function (resolve, reject) {
+      var img = new Image();
+      img.onload = function () { resolve(img); };
+      img.onerror = reject;
+      img.src = src;
+    });
+  }
+  /* The picture: share_image from the front matter, else the post's first
+     illustration, else its first image. */
+  function posterPicture(d) {
+    if (d.image) return d.image;
+    var img = prose && (prose.querySelector('img[src*="-ill-"]') || prose.querySelector('img[src]'));
+    return img ? img.currentSrc || img.src : null;
+  }
+  function wrapLines(ctx, text, width) {
+    var words = text.split(/\s+/), lines = [], line = '';
+    words.forEach(function (w) {
+      var next = line ? line + ' ' + w : w;
+      if (line && ctx.measureText(next).width > width) { lines.push(line); line = w; } else line = next;
+    });
+    if (line) lines.push(line);
+    return lines;
+  }
+  /* The largest size from the list whose lines fit both maxLines and a
+     height budget; the smallest size if none does. */
+  function fitTitle(ctx, text, width, sizes, maxLines, budget) {
+    for (var i = 0; i < sizes.length; i++) {
+      ctx.font = '800 ' + sizes[i] + 'px ' + SANS;
+      var lines = wrapLines(ctx, text, width);
+      if ((lines.length <= maxLines && lines.length * sizes[i] * 1.08 <= budget) || i === sizes.length - 1) return { size: sizes[i], lines: lines };
+    }
+  }
+  function roundRect(ctx, x, y, w, h, r) {
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r);
+    ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r);
+    ctx.closePath();
+  }
+  /* The picture in the family sticker: an ink outline and a hard offset. */
+  function drawSticker(ctx, img, x, y, w, h) {
+    var r = 30;
+    ctx.fillStyle = INK; roundRect(ctx, x + 12, y + 12, w, h, r); ctx.fill();
+    ctx.fillStyle = '#fff'; roundRect(ctx, x, y, w, h, r); ctx.fill();
+    if (img) {
+      ctx.save(); roundRect(ctx, x, y, w, h, r); ctx.clip();
+      var s = Math.max(w / img.naturalWidth, h / img.naturalHeight), iw = img.naturalWidth * s, ih = img.naturalHeight * s;
+      ctx.drawImage(img, x + (w - iw) / 2, y + (h - ih) / 2, iw, ih);
+      ctx.restore();
+    }
+    ctx.lineWidth = 4; ctx.strokeStyle = INK; roundRect(ctx, x, y, w, h, r); ctx.stroke();
+  }
+  function drawBrand(ctx, logo, x, y) {
+    if (logo) ctx.drawImage(logo, x, y, 72, 72);
+    ctx.fillStyle = INK; ctx.font = '700 38px ' + SANS;
+    ctx.fillText('Adjie Brotot Blog', x + 92, y + 32);
+    ctx.fillStyle = MUTED; ctx.font = '500 29px ' + SANS;
+    ctx.fillText('blog.adjiebrotots.com', x + 92, y + 70);
+  }
+  function drawPoster(d, kind) {
+    var story = kind === 'story', W = 1080, H = story ? 1920 : 1080, pad = story ? 90 : 72;
+    var pic = posterPicture(d);
+    return Promise.all([
+      document.fonts ? Promise.all([document.fonts.load('800 80px "DM Sans"'), document.fonts.load('500 30px "DM Sans"'), document.fonts.load('600 60px Caveat')]).catch(function () {}) : null,
+      pic ? loadImage(pic).catch(function () { return null; }) : null,
+      loadImage(document.querySelector('.brand img').src).catch(function () { return null; })
+    ]).then(function (got) {
+      var img = got[1], logo = got[2];
+      var c = document.createElement('canvas');
+      c.width = W; c.height = H;
+      var ctx = c.getContext('2d'), cw = W - pad * 2;
+      ctx.fillStyle = BG; ctx.fillRect(0, 0, W, H);
+
+      // The category, handwritten, then the title, from baseline-to-be `top`.
+      function heading(top, catPx, sizes, max, budget) {
+        ctx.save();
+        ctx.translate(pad, top + Math.round(catPx * 0.8)); ctx.rotate(-2 * Math.PI / 180);
+        ctx.fillStyle = GOLD; ctx.font = '600 ' + catPx + 'px Caveat, cursive';
+        ctx.fillText(d.cat, 0, 0);
+        ctx.restore();
+        var t = fitTitle(ctx, d.title, cw, sizes, max, budget);
+        var lh = Math.round(t.size * 1.08), y = top + Math.round(catPx * 1.35) + t.size;
+        ctx.fillStyle = INK; ctx.font = '800 ' + t.size + 'px ' + SANS;
+        // A title too long for the poster ends in an ellipsis on its last line.
+        t.lines.slice(0, max).forEach(function (line, i) {
+          if (i === max - 1 && t.lines.length > max) {
+            while (line && ctx.measureText(line + '…').width > cw) line = line.replace(/\s*\S+$/, '');
+            line += '…';
+          }
+          ctx.fillText(line, pad, y + i * lh);
+        });
+        return y + (Math.min(t.lines.length, max) - 1) * lh + Math.round(t.size * 0.3);
+      }
+
+      if (story) {
+        // The picture and the title high up, the blog's name at the very
+        // bottom, and the wide space between left blank for the reader's
+        // link sticker or their own words.
+        drawSticker(ctx, img, pad, 120, cw - 12, 480);
+        heading(120 + 480 + 12 + 40, 56, [72, 66, 60, 54, 48], 4, 280);
+        drawBrand(ctx, logo, pad, H - 64 - 72);
+      } else {
+        // The category and title, the picture, then an empty band for the
+        // link above the blog's name.
+        var textEnd = heading(pad, 54, [68, 62, 56, 50, 44], 3, 200);
+        var brandY = H - pad - 72, imgTop = textEnd + 40;
+        var imgH = Math.max(300, Math.min(brandY - 140 - imgTop, Math.round(cw * 0.6)));
+        drawSticker(ctx, img, pad, imgTop, cw - 12, imgH);
+        drawBrand(ctx, logo, pad, brandY);
+      }
+      return new Promise(function (resolve, reject) {
+        c.toBlob(function (b) { if (b) resolve(b); else reject(new Error('poster')); }, 'image/png');
+      });
+    });
+  }
+
+  var overlay = document.querySelector('.poster-overlay');
+  var poster = null, posterBack = null;
+  function closePoster() {
+    if (!overlay || overlay.hidden) return;
+    overlay.hidden = true;
+    if (poster && poster.href) URL.revokeObjectURL(poster.href);
+    poster = null;
+    if (posterBack) posterBack.focus({ preventScroll: true });
+  }
+  function openPoster(m, kind) {
+    if (!overlay) return;
+    var d = m.box.dataset, q = function (s) { return overlay.querySelector(s); };
+    var frame = q('.poster-frame'), img = q('.poster-img'), share = q('.poster-share'), save = q('.poster-download');
+    var job = poster = { kind: kind, url: d.url, title: d.title };
+    posterBack = m.btn;
+    q('#poster-title').textContent = q('#poster-title').dataset[kind];
+    q('.poster-note').textContent = q('.poster-note').dataset[kind];
+    img.hidden = true; img.removeAttribute('src');
+    frame.classList.remove('is-failed'); frame.classList.add('is-making');
+    share.hidden = true; save.classList.add('is-off'); save.removeAttribute('href');
+    overlay.hidden = false;
+    q('.poster-close').focus({ preventScroll: true });
+    var slug = d.url.replace(/\/+$/, '').split('/').pop() || 'post';
+    drawPoster(d, kind).then(function (blob) {
+      if (poster !== job) return;
+      job.file = new File([blob], slug + '-' + kind + '.png', { type: 'image/png' });
+      job.href = URL.createObjectURL(blob);
+      img.src = job.href; img.hidden = false;
+      frame.classList.remove('is-making');
+      save.href = job.href; save.download = job.file.name; save.classList.remove('is-off');
+      share.hidden = !(navigator.canShare && navigator.canShare({ files: [job.file] }));
+    }, function () {
+      if (poster !== job) return;
+      frame.classList.remove('is-making'); frame.classList.add('is-failed');
+    });
+  }
+  if (overlay) {
+    overlay.querySelector('.poster-close').addEventListener('click', closePoster);
+    overlay.addEventListener('click', function (e) { if (e.target === overlay) closePoster(); });
+    overlay.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') { e.stopPropagation(); closePoster(); return; }
+      if (e.key !== 'Tab') return;
+      // Focus stays inside the dialog while it is open.
+      var f = Array.prototype.filter.call(overlay.querySelectorAll('button, a[href]'), function (el) { return !el.hidden && el.offsetParent; });
+      var first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    });
+    overlay.querySelector('.poster-copy').addEventListener('click', function () {
+      var b = this;
+      if (!poster) return;
+      copyText(poster.url).then(function () {
+        if (b.__t) clearTimeout(b.__t); else b.__text = b.textContent;
+        var label = document.querySelector('.share-menu');
+        b.textContent = label ? label.dataset.copied : b.textContent;
+        b.__t = setTimeout(function () { b.textContent = b.__text; b.__t = null; }, 1600);
+      }, function () {});
+    });
+    overlay.querySelector('.poster-share').addEventListener('click', function () {
+      if (!poster || !poster.file) return;
+      // The link goes on the clipboard again, in case something replaced it.
+      copyText(poster.url).catch(function () {});
+      navigator.share({ files: [poster.file], title: poster.title }).catch(function () {});
+    });
   }
 })();

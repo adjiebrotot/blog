@@ -27,6 +27,7 @@ publishes it. The look comes from the design system of
    last_modified_at: 2026-11-02    # shown as "Updated", tells search engines it changed
    image: /assets/img/og/<slug>.jpg  # social preview card, drawn by `node _build/og.mjs`; else the blog card
    image_alt: "What the image shows"
+   share_image: /assets/img/<file>.webp  # picture on the Instagram Story/Post poster; else the first *-ill-* illustration
    translation: rent-vs-buy        # only when the same topic exists in the other language
    keywords: [rent vs buy, KPR]    # extra keywords for structured data
    ---

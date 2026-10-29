@@ -5,6 +5,7 @@ layout: default
 {%- include post-keys.html tags=page.tags -%}
 {%- assign _c0 = site.data.categories | where: "key", post_keys[0] | first -%}
 {%- assign _my_keys = post_keys -%}
+{%- assign _cat_label = _c0[lang].label -%}
 {%- assign _words = content | strip_html | number_of_words -%}
 <nav class="breadcrumbs" aria-label="Breadcrumb">
   <ol>
@@ -32,9 +33,12 @@ layout: default
       <span aria-hidden="true">·</span>
       <span>{{ _words | divided_by: 200 | plus: 1 }} {{ t.min_read }}</span>
     </p>
-    {%- if other_is_twin %}
-    <p class="also-in"><a href="{{ other_url | relative_url }}" hreflang="{{ other_lang }}" lang="{{ other_lang }}">{{ site.data.i18n[other_lang].read_in }} <span aria-hidden="true">→</span></a></p>
-    {%- endif %}
+    <div class="post-actions">
+      {%- if other_is_twin %}
+      <p class="also-in"><a href="{{ other_url | relative_url }}" hreflang="{{ other_lang }}" lang="{{ other_lang }}">{{ site.data.i18n[other_lang].read_in }} <span aria-hidden="true">→</span></a></p>
+      {%- endif %}
+      {% include share.html n=1 cat=_cat_label %}
+    </div>
   </header>
 
   <div class="prose">
@@ -42,12 +46,17 @@ layout: default
   </div>
 
   <footer class="post-footer">
+    <div class="post-actions">{% include share.html n=2 cat=_cat_label %}</div>
     <div class="author-box">
       <img src="{{ '/assets/img/adjie-160.webp' | relative_url }}" alt="{{ site.author.name }}" width="44" height="44" loading="lazy" decoding="async">
       <p><strong><a rel="author" href="{{ site.links.about }}">{{ site.author.name }}</a></strong><br>{{ t.about_author }}</p>
     </div>
   </footer>
 </article>
+
+{%- comment -%} The same menu, floating at the right edge once the header's has scrolled away (blog.js). {%- endcomment %}
+<div class="share-float">{% include share.html n=3 cat=_cat_label %}</div>
+{% include share-dialog.html %}
 
 {% include comments.html %}
 

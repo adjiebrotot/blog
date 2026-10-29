@@ -39,6 +39,30 @@ en:
   not_found_hand: "oops, wrong stop"
   not_found_heading: "This page took a different train."
   not_found_lead: "The address doesn't exist, or it moved. Hop back on at one of these:"
+  # The Share menu on a post, and the dialog that draws an Instagram poster.
+  share: Share
+  share_title: Share this post
+  share_facebook: Share to Facebook
+  share_x: Share to X
+  share_linkedin: Share to LinkedIn
+  share_story: Share as Story
+  share_story_sub: Vertical poster for Instagram
+  share_post: Share as Post
+  share_post_sub: Square poster for Instagram
+  share_link: Share as link
+  share_link_sub: Copies the link to this post
+  share_copied: Link copied
+  poster_story: Instagram Story poster
+  poster_post: Instagram post poster
+  poster_story_note: "Share or download the picture, then post it to Instagram as a Story. The link to this post is already copied: paste it into a Link sticker in the empty space under the picture."
+  poster_post_note: "Share or download the picture, then post it to Instagram. The link to this post is already copied, ready to paste into your caption."
+  poster_making: "Drawing the poster…"
+  poster_failed: "The poster could not be drawn here. Try again, or use Share as link."
+  poster_preview: Preview of the poster
+  poster_share: Share picture
+  poster_download: Download picture
+  poster_copy: Copy link
+  close: Close
   months: [January, February, March, April, May, June, July, August, September, October, November, December]
   date_format: "{d} {m} {y}"
 
@@ -82,5 +106,29 @@ id:
   not_found_hand: "ups salah stasiun"
   not_found_heading: "Halaman ini salah naik kereta."
   not_found_lead: "Alamatnya gak ada, atau sudah pindah. Naik lagi dari salah satu stasiun ini:"
+  # Menu Bagikan di artikel, dan dialog yang menggambar poster Instagram.
+  share: Bagikan
+  share_title: Bagikan artikel ini
+  share_facebook: Bagikan ke Facebook
+  share_x: Bagikan ke X
+  share_linkedin: Bagikan ke LinkedIn
+  share_story: Bagikan sebagai Story
+  share_story_sub: Poster tegak untuk Instagram
+  share_post: Bagikan sebagai postingan
+  share_post_sub: Poster persegi untuk Instagram
+  share_link: Bagikan sebagai tautan
+  share_link_sub: Menyalin tautan artikel ini
+  share_copied: Tautan tersalin
+  poster_story: Poster untuk Story Instagram
+  poster_post: Poster untuk postingan Instagram
+  poster_story_note: "Bagikan atau unduh gambar ini, lalu unggah ke Instagram sebagai Story. Tautan artikel ini sudah tersalin, jadi kamu tinggal menempelkannya lewat stiker Tautan di ruang kosong di bawah gambar."
+  poster_post_note: "Bagikan atau unduh gambar ini, lalu unggah ke Instagram sebagai postingan. Tautan artikel ini sudah tersalin dan siap ditempel di keterangan postinganmu."
+  poster_making: "Menyiapkan poster…"
+  poster_failed: "Poster tidak bisa dibuat di sini. Coba lagi, atau gunakan Bagikan sebagai tautan."
+  poster_preview: Pratinjau poster
+  poster_share: Bagikan gambar
+  poster_download: Unduh gambar
+  poster_copy: Salin tautan
+  close: Tutup
   months: [Januari, Februari, Maret, April, Mei, Juni, Juli, Agustus, September, Oktober, November, Desember]
   date_format: "{d} {m} {y}"
