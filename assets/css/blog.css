@@ -21,6 +21,7 @@
   --shadow-lg:0 10px 30px rgba(2,6,16,0.55);
   --sticker:2px 2px 0 var(--ink-line);
   --sticker-hover:4px 4px 0 var(--ink-line);
+  --sticker-accent:2px 2px 0 #3A71C8;--sticker-accent-hover:3px 3px 0 #3A71C8;
   --radius-sm:8px;--radius-md:8px;--radius-lg:14px;--radius-xl:14px;--radius-2xl:14px;--radius-pill:999px;
   --fs-xs:.8125rem;--fs-sm:.875rem;--fs-base:1rem;--fs-md:1.25rem;--fs-lg:1.5625rem;--fs-xl:1.953rem;--fs-2xl:2.441rem;
   --positive:#0052CC;--positive-em:#7FB2FF;--negative:#E63939;--negative-em:#FF8B8B;
@@ -49,6 +50,7 @@
   --bg:#F0F4FF;--panel:#FFFFFF;--panel-raised:#FFFFFF;--text:#14203A;--muted:#4C5B76;--border:#DCE3F0;
   --accent:#3A71C8;--accent-strong:#0052CC;--accent2:#1F7F63;--accent3:#E66A6A;--gold:#B45309;
   --brand:#0052CC;--ink-line:#14203A;
+  --sticker-accent:2px 2px 0 #14203A;--sticker-accent-hover:3px 3px 0 #14203A;
   --input-bg:rgba(20,32,58,0.045);--card-bg:#FFFFFF;--bg-subtle:#F6F9FF;--text-inv:#FFFFFF;
   --shadow-lg:0 10px 30px rgba(20,32,58,0.16);
   --positive:#0052CC;--positive-em:#0052CC;--negative:#E63939;--negative-em:#C6382F;
@@ -415,6 +417,107 @@ main { padding: 1rem 0 3rem; }
 .comments .giscus { min-height: 12rem; }
 .comments noscript p { color: var(--muted); }
 
+/* ── Share menu (blog.js) ─────────────────────────────────────────────
+   The tool site's chart toolbar Share button (shared.css .btn-secondary
+   .btn-sm .share-toggle) and its dropdown list (dropdown.css .combo-list),
+   with each network's own logo in its colours. The lit row is filled with
+   the accent, and the logos turn to its text colour with it. */
+.btn-secondary, .btn-primary {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  border-radius: var(--radius-md); padding: 10px 21px; font: inherit; font-weight: 700; font-size: var(--fs-sm);
+  cursor: pointer; transition: transform var(--motion-fast), box-shadow var(--motion-fast);
+}
+.btn-secondary { background: var(--panel); color: var(--text); border: 1.5px solid var(--ink-line); box-shadow: var(--sticker); }
+.btn-secondary:hover { transform: translate(-1px, -1px); box-shadow: var(--sticker-hover); text-decoration: none; }
+.btn-secondary:active { transform: translate(1px, 1px); box-shadow: 0 0 0 transparent; }
+.btn-primary { background: var(--accent); color: var(--text-inv); border: 1.5px solid var(--accent); box-shadow: var(--sticker-accent); }
+.btn-primary:hover { transform: translate(-1px, -1px); box-shadow: var(--sticker-accent-hover); text-decoration: none; }
+.btn-primary:active { transform: translate(2px, 2px); box-shadow: 0 0 0 transparent; }
+.btn-sm { padding: 5px 11px; font-size: 0.8rem; border-radius: 8px; line-height: 1.35; white-space: nowrap; }
+a.btn-secondary { color: var(--text); }
+a.btn-primary { color: var(--text-inv); }
+@media (prefers-reduced-motion: reduce) { .btn-secondary:hover, .btn-primary:hover { transform: none; } }
+
+.post-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 0.6rem 1rem; margin-top: 0.9rem; }
+.post-actions .also-in { margin: 0 auto 0 0; }
+.post-footer .post-actions { margin: 0 0 1.1rem; }
+.share-menu { display: inline-flex; }
+.share-menu[hidden] { display: none; }
+.share-toggle .share-chev { flex: none; transition: transform var(--motion-fast); }
+.share-toggle[aria-expanded="true"] { border-color: var(--accent); }
+.share-toggle[aria-expanded="true"] .share-chev { transform: rotate(180deg); }
+
+.combo-list {
+  background: var(--panel); border: 1.5px solid var(--border); border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-lg); padding: 4px; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain;
+  z-index: 70; font-size: 0.86rem; line-height: 1.35; text-align: left; color: var(--text);
+}
+.share-list { display: none; position: fixed; margin: 0; list-style: none; }
+.share-list.is-open { display: block; }
+.share-list li { margin: 0; padding: 0; }
+.share-list .share-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+.share-list .share-opt {
+  display: flex; align-items: center; justify-content: flex-start; gap: 10px; width: 100%;
+  padding: 7px 10px; border: 0; border-radius: 5px; background: transparent;
+  color: inherit; font: inherit; text-align: left; cursor: pointer;
+}
+.share-list .share-opt:hover, .share-list .share-opt:focus-visible { outline: none; background: var(--accent); color: var(--text-inv); text-decoration: none; }
+.combo-text { display: flex; flex-direction: column; min-width: 0; }
+.combo-main { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.combo-sub { display: block; font-size: 0.76rem; color: var(--muted); overflow: hidden; text-overflow: ellipsis; }
+.share-list .share-opt:hover .combo-sub, .share-list .share-opt:focus-visible .combo-sub { color: inherit; opacity: 0.85; }
+.share-ico { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 1.6rem; }
+.share-ico svg { display: block; }
+.share-ico-fb svg { fill: #0866FF; }
+.share-ico-in svg { fill: #0A66C2; }
+.share-ico-x svg { fill: var(--text); }
+:root:not(.light) .share-ico-in svg { fill: #3D8FE0; }
+.share-list .share-opt:hover .share-ico svg, .share-list .share-opt:focus-visible .share-ico svg { fill: currentColor; }
+.share-list .share-opt:hover .share-ico-ig path, .share-list .share-opt:focus-visible .share-ico-ig path { fill: currentColor; }
+.share-list .share-opt:hover .share-ico svg[fill="none"], .share-list .share-opt:focus-visible .share-ico svg[fill="none"] { fill: none; }
+
+/* The floating Share: at the article's right edge on a wide screen (the
+   mirror of the reading rail on its left), at the bottom right corner on a
+   narrow one. blog.js shows it while neither the header's nor the footer's
+   Share is on screen. */
+.share-float {
+  position: fixed; z-index: 45;
+  right: max(16px, env(safe-area-inset-right)); bottom: calc(16px + env(safe-area-inset-bottom));
+  opacity: 0; visibility: hidden; transform: translateY(8px);
+  transition: opacity var(--motion-base), visibility var(--motion-base), transform var(--motion-base);
+}
+.share-float.is-shown { opacity: 1; visibility: visible; transform: none; }
+.share-float .share-toggle { padding: 8px 15px; font-size: var(--fs-sm); box-shadow: var(--sticker), var(--shadow-lg); }
+@media (min-width: 1280px) {
+  .share-float { top: 6rem; bottom: auto; right: auto; left: calc(50% + (var(--measure) + 5rem) / 2 + 1.5rem); }
+  .share-float .share-toggle { padding: 5px 11px; font-size: 0.8rem; box-shadow: var(--sticker); }
+}
+@media (prefers-reduced-motion: reduce) { .share-float { transform: none; } }
+
+/* The Story and Post poster: a preview, then share, download or copy. */
+.poster-overlay { position: fixed; inset: 0; z-index: 80; display: flex; align-items: center; justify-content: center; padding: 16px; background: rgba(8, 12, 22, 0.55); }
+.poster-overlay[hidden] { display: none; }
+.poster-dialog {
+  display: flex; flex-direction: column; width: 100%; max-width: 440px; max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px); overflow: auto;
+  padding: 16px 18px 18px; background: var(--panel); border: 1.5px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);
+}
+.poster-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.poster-head h2 { margin: 0; font-size: 1.05rem; line-height: 1.3; }
+.poster-close { flex: none; width: 34px; height: 34px; padding: 0; }
+.poster-note { margin: 8px 0 12px; color: var(--muted); font-size: 0.86rem; line-height: 1.5; }
+.poster-frame {
+  position: relative; display: flex; align-items: center; justify-content: center; flex: 1 1 auto; min-height: 200px;
+  background: var(--bg-subtle); border-radius: var(--radius-sm); overflow: hidden;
+}
+.poster-frame:empty::before, .poster-frame.is-making::before, .poster-frame.is-failed::before {
+  content: attr(data-making); padding: 24px; color: var(--muted); font-size: 0.86rem; text-align: center;
+}
+.poster-frame.is-failed::before { content: attr(data-failed); }
+.poster-img { display: block; width: auto; max-width: 100%; max-height: min(56vh, 520px); height: auto; border: 1px solid var(--border); border-radius: 6px; }
+.poster-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; margin-top: 14px; }
+.poster-actions [hidden] { display: none; }
+.poster-actions .is-off { opacity: 0.45; pointer-events: none; }
+
 /* ── Footer ───────────────────────────────────────────────────────────── */
 .site-footer { padding: 0.5rem 1rem 2.25rem; text-align: center; color: var(--muted); font-size: 0.88rem; }
 .site-footer p { margin: 0; }
@@ -448,7 +551,7 @@ main { padding: 1rem 0 3rem; }
 }
 
 @media print {
-  .site-header, .cat-nav, .home-intro, .site-footer, .related, .comments, .breadcrumbs, .also-in, .code-copy, .toc-rail, .read-bar { display: none; }
+  .site-header, .cat-nav, .home-intro, .site-footer, .related, .comments, .breadcrumbs, .also-in, .code-copy, .toc-rail, .read-bar, .post-actions, .share-float, .poster-overlay { display: none; }
   body { background: #fff; color: #000; }
   .post { box-shadow: none; border: 0; padding: 0; }
 }
