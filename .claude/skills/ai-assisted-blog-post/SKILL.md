@@ -1,6 +1,6 @@
 ---
 name: ai-assisted-blog-post
-description: AI-assisted blog post. Turn Adjie's concept or points into a post he approves before any of it is written. First a draft plan (title, description, outline, opening narrative, planned data, embeds, diagrams and equations, and a list of decisions for him), then one round of revision, then the full post, written per language by separate writer agents from a shared brief, with the Indonesian checked by a separate evaluator agent. Use when Adjie sends a topic, an idea, rough notes or bullet points and wants a post on this blog, or asks for an "AI-assisted blog post".
+description: AI-assisted blog post. Turn Adjie's concept or points into a post he approves before any of it is written. First a draft plan (title, description, outline, opening narrative, planned data, embeds, diagrams and equations, and a list of decisions for him), then one round of revision, then the full post, written per language by separate writer agents from a shared brief, with the Indonesian checked by a separate evaluator agent and every post checked by a reference-checker agent for pointers to other sections. Use when Adjie sends a topic, an idea, rough notes or bullet points and wants a post on this blog, or asks for an "AI-assisted blog post".
 ---
 
 # AI-assisted blog post
@@ -18,6 +18,7 @@ concept / points  →  Draft plan (v1)  →  Adjie: revision + answers  →  con
                                               │              │                  ID evaluator agent (loop
                                               │              │                  until LULUS)
                                               │              └───────────────┬───────────────┘
+                                              │      reference-checker agent per post (loop until PASS)
                                               │                  consistency check, build, deliver
                                               └─ "show me another draft first" → Draft plan (v2) → …
 ```
@@ -49,6 +50,12 @@ concept / points  →  Draft plan (v1)  →  Adjie: revision + answers  →  con
   the context bloats. The posts share the message, the verdict and the verified data;
   they don't share sentences, and they may use different examples (the English compares
   Perth and Melbourne, the Indonesian Jakarta and Bali) if each carries the same point.
+- **Every section stands on its own.** A sentence points only at a figure, table, chart,
+  screenshot or example in its own section (`adjie-writing-style`, "Point only at what is
+  in the same section"). Plan each feature into the section that talks about it, and never
+  write "see below", "as I showed" or "details in the X section" across sections. Every
+  post passes `adjie-writing-style`'s `scripts/check-references.py` and the
+  reference-checker agent (`.claude/agents/reference-checker.md`) before Adjie sees it.
 - **Indonesian passes the evaluator before Adjie sees it.** Every Indonesian text, the
   plan's opening narrative included, goes through `bahasa-indonesia`'s
   `scripts/cek.py` and its evaluator (`references/evaluator.md`), run by an agent that has
@@ -163,7 +170,10 @@ so choose it here, in the post's language, short and with the words people searc
 
 **Outline.** Headings are the real `##` / `###` headings you intend to use, mostly
 questions. Under each, 2 to 5 short bullets: the claim, the number, the example. Mark
-where each feature from section 4 sits (e.g. "→ T1").
+where each feature from section 4 sits (e.g. "→ T1"). A feature sits in the section whose
+text talks about it. If two sections need the same figure, give the earlier one the number
+in words and the later one the figure, or repeat the figure; never plan "see the chart in
+section X".
 
 **Opening narrative.** The only finished prose in the plan. It follows
 `adjie-writing-style` (a question, an invitation to imagine or a claim to challenge; a
@@ -230,7 +240,9 @@ notes in the language you think in, never as draft prose.
 - **Shape and dial** from the plan, and the stance (where Adjie concedes, where he is
   sharp).
 - **Sections,** in order: what each one asks and answers, its points, which data and
-  features go in it. Heading intent, not heading wording.
+  features go in it. Heading intent, not heading wording. Each section's points are
+  self-contained: a number it needs is listed under it, even if another section has it
+  too, because a sentence may not send the reader to another section.
 - **Data table:** every figure with its date, publisher and URL, marked shared or
   language-specific. A writer may use only figures from this table.
 - **Per-language choices:** characters, cities, examples and jokes for each language, as
@@ -252,7 +264,10 @@ Each gets only the brief, its own slug and file path, and its own skills:
   told not to open the English file and not to translate from the brief's wording.
 
 Each writer runs `adjie-writing-style`'s "Check a draft" list, keeps its approved opening
-narrative with only the edits Adjie asked for, and puts every source in a footnote.
+narrative with only the edits Adjie asked for, and puts every source in a footnote. Each
+writer is told the same-section rule and runs
+`python3 .claude/skills/adjie-writing-style/scripts/check-references.py <file>` until it
+shows no ERROR.
 
 If you cannot spawn agents, write the Indonesian post first, from the brief alone, run
 3d on it, and only then write the English.
@@ -265,7 +280,16 @@ its findings to the Indonesian writer (SendMessage) or apply them yourself, run
 `scripts/cek.py` again, and send the changed paragraphs back to the evaluator. Repeat until
 the verdict is LULUS. Keep the last report for the delivery message.
 
-### 3e. Put it together
+### 3e. Check the references
+
+For each post, spawn a fresh reference-checker agent (`subagent_type: reference-checker`,
+or a general-purpose agent told to follow `.claude/agents/reference-checker.md`), in
+parallel, with only the post's path. Apply every finding: delete the pointer and let the
+sentence state its fact. An Indonesian fix is written under `bahasa-indonesia`, runs
+`scripts/cek.py`, and goes back to the Indonesian evaluator with its neighbouring
+paragraphs. Repeat until the checker says PASS.
+
+### 3f. Put it together
 
 1. **Consistency, not alignment.** Compare the two posts on the message, the verdict, the
    shared numbers, the sources and the fixed pieces. Never compare them sentence by
@@ -281,4 +305,6 @@ the verdict is LULUS. Keep the last report for the delivery message.
 
 Changes he asks for after this are ordinary edits to the post, not a new round of the
 flow. An edit to the Indonesian still runs `scripts/cek.py` and the evaluator on the
-changed paragraphs before it is pushed.
+changed paragraphs before it is pushed, and any edit, in any language, runs
+`check-references.py` again: moving or deleting a figure can strand a "below" in another
+section.

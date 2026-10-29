@@ -81,7 +81,7 @@ Mulai tahun pajak 2025 (yang dilaporkan awal 2026), SPT Tahunan disampaikan lewa
 
 Jawabannya, total PTKP untuk kedua cara itu memang dirancang sama. Coba kita jumlahkan. Kalau gabung, PTKP suami K/1 (Rp63 juta) ditambah PTKP istri TK/0 (Rp54 juta) menjadi Rp117 juta. Kalau pisah, PTKP-nya K/I/1, juga Rp117 juta, sama persis.
 
-Dengan begitu, satu-satunya sumber perbedaan adalah lapisan tarif tadi. Selama **PKP gabungan masih di lapisan 5%** (paling banyak Rp60 juta) dan masing-masing bergaji di atas PTKP-nya sendiri, dua cara itu menghasilkan angka yang sama persis, tanpa selisih serupiah pun.
+Dengan begitu, satu-satunya sumber perbedaan adalah lapisan tarif progresif. Selama **PKP gabungan masih di lapisan 5%** (paling banyak Rp60 juta) dan masing-masing bergaji di atas PTKP-nya sendiri, dua cara itu menghasilkan pajak yang sama, tanpa selisih serupiah pun.
 
 Contohnya, ada pasangan dengan satu anak: suami bergaji Rp96 juta setahun (Rp8 juta per bulan) dan istri Rp72 juta (Rp6 juta per bulan). Supaya sederhana, semua contoh di sini memakai gaji kotor dan mengabaikan biaya jabatan serta iuran pensiun.
 
@@ -147,7 +147,7 @@ Polanya sama kalau dibalik: istri bergaji besar dan suami berpenghasilan kecil. 
 
 Kalimat ini yang paling sering saya dengar, dan ada juga versi romantisnya: "Suami istri itu satu, masa pajaknya dipisah?"
 
-Saya paham alasannya, tetapi untuk pasangan seperti contoh tadi, memilih gabung "biar gak ribet" (atau karena cinta) adalah **salah strategi**. Kamu jadi menyetor lebih banyak uang ke negara setiap tahun hanya untuk menghindari sedikit kerepotan di Coretax, padahal Rp3,6 juta setahun itu jauh lebih enak dipakai jalan-jalan berdua.
+Saya paham alasannya, tetapi kalau gaji salah satu dari kalian di bawah PTKP-nya sendiri sementara yang satu lagi bergaji cukup besar, memilih gabung "biar gak ribet" (atau karena cinta) adalah **salah strategi**. Kalian jadi menyetor beberapa juta rupiah lebih banyak ke negara setiap tahun hanya untuk menghindari sedikit kerepotan di Coretax, padahal uang sebanyak itu jauh lebih enak dipakai jalan-jalan berdua.
 
 <figure>
 <img src="/assets/img/psg-ill-jalan-jalan.webp" alt="Seorang perempuan menutup ritsleting koper di kasur; di atas koper ada topi pantai dan kacamata hitam, dan di sampingnya ada amplop" width="1456" height="1087" loading="lazy">
@@ -159,7 +159,7 @@ Supaya adil, saya akui bahwa pisah memang lebih merepotkan. Pisah berarti mengur
 
 ## Hitung sendiri pakai *tool*
 
-Contoh di atas cuma tiga jenis. Gajimu tentu berbeda, dan untuk menghitungnya kamu bisa memakai [*tool* Pisah vs Gabung](https://tool.adjiebrotots.com/pisahvsgabung/id/). *Tool* ini gratis, dan semua hitungannya berjalan di *browser*-mu sehingga data gajimu tidak dikirim ke mana-mana.
+Karena gaji setiap pasangan tentu berbeda-beda, cara paling mudah untuk menghitung pajakmu sendiri adalah memakai [*tool* Pisah vs Gabung](https://tool.adjiebrotots.com/pisahvsgabung/id/). *Tool* ini gratis, dan semua hitungannya berjalan di *browser*-mu sehingga data gajimu tidak dikirim ke mana-mana.
 
 1. Pilih jumlah **tanggungan**.
 2. Isi gaji kotor suami dan istri per tahun di mode **Per pasangan**, atau total gaji rumah tangga dan porsi istri di mode **Total dan porsi**.
@@ -167,7 +167,7 @@ Contoh di atas cuma tiga jenis. Gajimu tentu berbeda, dan untuk menghitungnya ka
 4. Baca kartu **Penghematan pajak** di atas grafik. Kartu ini menunjukkan cara mana yang lebih murah dan berapa selisihnya setahun.
 5. Grafik kedua memperlihatkan selisihnya di setiap tingkat gaji rumah tangga, dengan porsi istri yang sama, dan catatan di bawahnya memberi tahu pada tingkat gaji berapa cara yang lebih hemat berganti.
 
-Hitungan *tool* ini berasumsi bahwa semua penghasilan adalah gaji dan gaji istri berasal dari satu pemberi kerja. Kalau istri punya usaha atau bekerja di dua tempat, ingat catatan di bagian gabung tadi: hasil gabung akan sama dengan pisah.
+Hitungan *tool* ini berasumsi bahwa semua penghasilan adalah gaji dan gaji istri berasal dari satu pemberi kerja. Kalau istri punya usaha atau bekerja di dua tempat, penghasilannya ikut digabung ke SPT suami dengan PTKP K/I, sehingga hasil gabung akan sama dengan hasil pisah.
 
 ## Jadi, lebih untung gabung atau pisah?
 

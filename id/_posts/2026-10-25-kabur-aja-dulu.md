@@ -23,7 +23,7 @@ Sekarang, mari jujur-jujuran dulu. Saya punya banyak teman yang bekerja di luar 
 
 ## Benarkah hidup di Indonesia lebih enak karena murah?
 
-Mari mulai dari argumen terkuat kubu "murah". Anggap saja gajimu Rp10 juta sebulan di Indonesia dan sepiring nasi goreng harganya Rp20.000. Artinya, sebulan kamu bisa membeli 500 porsi. Di Australia, anggap gajimu A$5.000 dan nasi goreng A$20, jadi sebulan kamu cuma kebagian 250 porsi. Kelihatannya seperti turun kelas, kan? 😅 (Angka bulat ini hanya ilustrasi; angka sebenarnya ada di tabel di bawah.)
+Mari mulai dari argumen terkuat kubu "murah". Anggap saja gajimu Rp10 juta sebulan di Indonesia dan sepiring nasi goreng harganya Rp20.000. Gaji sebesar itu cukup untuk membeli 500 porsi sebulan. Di Australia, anggap gajimu A$5.000 dan nasi goreng A$20, jadi sebulan kamu cuma kebagian 250 porsi. Kelihatannya seperti turun kelas, kan? 😅 (Angka bulat ini hanya ilustrasi.)
 
 Soal rasa, saya pun mengakui nasi goreng Rp20 ribuan di Indonesia memang lebih nendang.
 
@@ -31,7 +31,7 @@ Soal rasa, saya pun mengakui nasi goreng Rp20 ribuan di Indonesia memang lebih n
 <img src="/assets/img/kad-ill-warung-struk.webp" alt="Seorang pria duduk di warung sambil memegang struk dan tersenyum, di depannya ada sepiring nasi goreng dan segelas es teh" width="1456" height="1087" loading="lazy">
 </figure>
 
-Pertanyaannya, berapa persen gajimu yang benar-benar habis untuk nasi goreng? Dalam daftar pengeluaran yang saya pakai di bawah, makan di luar hanya menyumbang sekitar 11 sampai 17 persen dari total belanja bulanan. Sisanya habis untuk sewa, bahan makanan, listrik dan air, ongkos transportasi, tagihan ponsel, dan barang-barang lain yang kamu beli. Bagian untuk nasi goreng hanya secuil, dan tidak ada orang yang menghabiskan seluruh gajinya untuk nasi goreng.
+Pertanyaannya, berapa persen gajimu yang benar-benar habis untuk nasi goreng? Makan di luar hanya menyumbang sekitar 15 persen dari total belanja bulanan. Sisanya habis untuk sewa, bahan makanan, listrik dan air, ongkos transportasi, tagihan ponsel, dan barang-barang lain yang kamu beli. Bagian untuk nasi goreng hanya secuil, dan tidak ada orang yang menghabiskan seluruh gajinya untuk nasi goreng.
 
 Ada satu hal lagi yang perlu diingat supaya perbandingannya tidak berat sebelah. Per Agustus 2025, rata-rata upah buruh di Indonesia hanya Rp3,33 juta sebulan,[^bpsupah] sehingga gaji Rp10 juta tadi sudah tiga kali lipat rata-rata. Artinya, tulisan ini lebih relevan bagi kamu yang memang punya pilihan untuk pindah, bukan untuk semua orang.
 
@@ -53,7 +53,7 @@ Bahan makanan berada di antara keduanya. Beras dan daging memang bisa diperdagan
 
 ## Berapa yang tersisa di akhir bulan? Skenario A: pekerja bergaji rendah
 
-Agar adil, saya menguji dua kelompok pekerja. Semua hitungan di bawah dibuat dengan [*tool* Cost of Living Comparator](https://tool.adjiebrotots.com/costofliving-comparator/) dalam mode **Detailed**, memakai daftar pengeluaran yang sama untuk ketiga kota, yaitu milik seorang lajang yang menyewa tempat tinggal dengan tipe yang sama, kadang masak sendiri dan kadang jajan di luar, serta bepergian dengan motor atau transportasi umum. Perbandingannya pun benar-benar *apple to apple*. Jakarta saya jadikan titik awal, lalu *tool* ini memperkirakan setiap baris pengeluaran (sewa, makanan, listrik dan air, bensin, kesehatan, dan seterusnya) untuk Perth dan Singapura berdasarkan indeks harga masing-masing kota. Dengan begitu, kamu bisa melihat selisihnya baris demi baris.
+Agar adil, saya menguji dua kelompok pekerja. Untuk kedua skenario, saya memakai [*tool* Cost of Living Comparator](https://tool.adjiebrotots.com/costofliving-comparator/) dalam mode **Detailed** dan daftar pengeluaran yang sama untuk ketiga kota, yaitu milik seorang lajang yang menyewa tempat tinggal dengan tipe yang sama, kadang masak sendiri dan kadang jajan di luar, serta bepergian dengan motor atau transportasi umum. Perbandingannya pun benar-benar *apple to apple*. Jakarta saya jadikan titik awal, lalu *tool* ini memperkirakan setiap baris pengeluaran (sewa, makanan, listrik dan air, bensin, kesehatan, dan seterusnya) untuk Perth dan Singapura berdasarkan indeks harga masing-masing kota. Dengan begitu, kamu bisa melihat selisihnya baris demi baris.
 
 Skenario pertama memakai gaji pekerja bergaji rendah di ketiga kota.
 
@@ -117,7 +117,7 @@ Kamu bisa menyusun skenariomu sendiri di [Cost of Living Comparator](https://too
 
 Ada satu hal yang sering terlupakan dalam perdebatan ini: kalau harga barang *tradable* sama di mana-mana, gaji yang lebih besar otomatis berarti daya beli yang lebih besar pula.
 
-Ambil contoh iPhone 18 Pro 256GB yang baru dirilis bulan ini. Harga resminya sekitar Rp27,5 juta di Indonesia, A$2.099 di Australia, dan S$1.899 di Singapura.[^iphone] Kalau dikonversi dengan kurs tadi, harga di Australia dan Singapura setara dengan Rp26,7 juta dan Rp26,9 juta, hampir sama dan malah sedikit lebih murah. Sekarang bandingkan harga itu dengan gaji bersih di skenario A (upah minimum):
+Ambil contoh iPhone 18 Pro 256GB yang baru dirilis bulan ini. Harga resminya sekitar Rp27,5 juta di Indonesia, A$2.099 di Australia, dan S$1.899 di Singapura.[^iphone] Kalau dikonversi dengan kurs A$1 = Rp12.710 dan S$1 = Rp14.152, harga di Australia dan Singapura setara dengan Rp26,7 juta dan Rp26,9 juta, hampir sama dan malah sedikit lebih murah. Sekarang bandingkan harga itu dengan gaji bersih pekerja berupah minimum di ketiga kota:
 
 ```mermaid
 xychart-beta
@@ -127,9 +127,9 @@ xychart-beta
   bar [104, 12, 25]
 ```
 
-*Dihitung dari gaji bersih di tabel skenario A, dengan 21,7 hari kerja per bulan.*
+*Dihitung dari gaji bersih pekerja berupah minimum (Rp5,73 juta, A$3.769, dan S$1.664 sebulan), dengan 21,7 hari kerja per bulan.*
 
-Di Jakarta, pekerja bergaji UMP harus bekerja sekitar 4,8 bulan untuk membeli satu iPhone, sementara di Perth cukup sekitar 12 hari kerja dan di Singapura sekitar 25 hari. Untuk pekerja profesional di skenario B, selisihnya mengecil, tetapi masih jauh: 2,8 bulan di Jakarta, dibandingkan dengan sekitar 9 hari kerja di Perth dan 8 hari di Singapura.
+Di Jakarta, pekerja bergaji UMP harus bekerja sekitar 4,8 bulan untuk membeli satu iPhone, sementara di Perth cukup sekitar 12 hari kerja dan di Singapura sekitar 25 hari. Untuk pekerja profesional, selisihnya mengecil, tetapi masih jauh: 2,8 bulan di Jakarta, dibandingkan dengan sekitar 9 hari kerja di Perth dan 8 hari di Singapura.
 
 Logika yang sama berlaku untuk liburan ke luar negeri, karena harga tiket pesawat dan hotel di tempat tujuan sama untuk semua orang. Bagi orang Indonesia, Jepang mungkin terasa mahal, sementara bagi orang Singapura atau Australia, liburan ke Jepang rasanya seperti belanja saat diskon besar-besaran.
 
@@ -150,11 +150,11 @@ Gaji bukan satu-satunya alasan untuk pindah. Berikut beberapa hal yang saya rasa
 
 Tentu tidak. Keberatan bahwa tidak semua orang cocok untuk kabur memang yang paling kuat, dan sebagian isinya benar:
 
-- **Tidak semua orang bisa pergi.** Visa kerja terampil mensyaratkan tawaran kerja, sponsor dari perusahaan, dan gaji yang memenuhi batas minimum. Seperti yang sudah saya jelaskan, skenario A lebih tepat dibaca sebagai ilustrasi tentang bagaimana harga terbentuk.
-- **Ada biaya yang tidak tercatat di tabel**, seperti harus hidup jauh dari keluarga, ongkos pindah dan visa, serta masa-masa awal yang sepi.
+- **Tidak semua orang bisa pergi.** Visa kerja terampil mensyaratkan tawaran kerja, sponsor dari perusahaan, dan gaji yang memenuhi batas minimum. Karena syarat itu, skenario upah minimum lebih tepat dibaca sebagai ilustrasi tentang bagaimana harga terbentuk, bukan sebagai jalur pindah yang realistis.
+- **Ada biaya yang tidak masuk hitungan**, seperti harus hidup jauh dari keluarga, ongkos pindah dan visa, serta masa-masa awal yang sepi.
 - **Bias sampel.** Teman-teman saya adalah mereka yang bertahan, dan saya tidak punya data berapa persen yang menyerah lalu pulang.
 - **Kalau penghasilanmu di Indonesia sudah tinggi, atau usahamu ada di sini**, hitungannya bisa berbeda. *Tool* ini hanya menghitung gaji dan biaya hidup, tidak termasuk peluang yang cuma ada di Indonesia.
-- **Perkiraan ini berbasis indeks harga.** *Tool* ini memperkirakan biaya dari indeks tiap kota, bukan dari struk belanjamu. Itulah alasan saya menyertakan *stress test* di atas.
+- **Perkiraan ini berbasis indeks harga.** *Tool* ini memperkirakan biaya dari indeks tiap kota, bukan dari struk belanjamu. Itulah alasan saya menguji hitungannya dengan *stress test*, yaitu menaikkan semua pengeluaran selain sewa sebesar 50 persen.
 
 ## Jadi, kabur atau bertahan?
 

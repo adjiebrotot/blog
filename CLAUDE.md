@@ -34,6 +34,12 @@ never break a URL that is already live.
 LANG=C.UTF-8 bundle exec jekyll build
 ```
 
+Every post you touched, in any language, passes
+`python3 .claude/skills/adjie-writing-style/scripts/check-references.py <file>` (no ERROR):
+a sentence points only at a figure, table, chart or example in its own section, never at
+one in another section ("the screenshot below" three sections up is wrong). A new or
+rewritten post also passes the reference-checker agent (`.claude/agents/reference-checker.md`).
+
 Then, in `_site/`: each page has exactly one `<h1>` and valid JSON-LD; `sitemap.xml` and
 `*/feed.xml` parse as XML; paired posts list each other in `hreflang`; and at 390px no page
 scrolls sideways.
