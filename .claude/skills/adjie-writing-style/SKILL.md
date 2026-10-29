@@ -140,6 +140,40 @@ These override anything above.
 - **Emoji.** Allowed, never required, never overused: at most one or two in a post,
   usually after a self-mocking aside. Use emoji (😑, 😂, 😋), not ASCII emoticons like
   `-_-` or `:(`.
+- **Point only at what is in the same section.** A sentence may point at a figure, table,
+  chart, embed, screenshot, list or worked example ("in the screenshot below", "the table
+  above", "the exchange rate from before", "as I showed") only when that thing sits in
+  the same section (the same `##` or `###`), in the direction the sentence says. If it
+  sits in another section, earlier or later, or does not exist, delete the pointer and
+  let the sentence state its fact on its own, with the number in it if the number
+  matters. Readers, search snippets and AI answers meet one section at a time, so a
+  section must make sense without the rest of the post.
+  - Wrong: "Look at the staged schedule in the tool, which I screenshot below. An 8.5%
+    start does not stay 8.5%." (the screenshot is three sections down) → "Even the
+    regular KPR is staged: an 8.5% start does not stay 8.5%, it floats to 11% after five
+    years."
+  - Wrong: "Dalam daftar pengeluaran yang saya pakai di bawah, makan di luar hanya
+    menyumbang sekitar 11 sampai 17 persen" (the tables are in the next sections) →
+    "Makan di luar paling-paling hanya menyumbang sekitar 15 persen dari total belanja
+    bulanan." A section may state a round figure as its own assumption; it never sends
+    the reader elsewhere to find it.
+  - Wrong: "Kalau dikonversi dengan kurs tadi" (the rate is two sections up) → "Kalau
+    dikonversi dengan kurs A$1 = Rp12.710 dan S$1 = Rp14.152".
+  - **The one exception** is a whole section as the referent: the heading and everything
+    under it is what you mean ("the three levels of the calculator are in *How do I use
+    the calculator?*"). Name it by its heading, ideally as a link. A section name used to
+    reach one number, chart or row inside it ("details in the Conglomerate section
+    below") is not the exception.
+  - Not a pointer: the post's own character or core question coming back at the end
+    ("Back to Robert and Geoff"), a restated fact ("with the same stress test, every cost
+    except rent up 50%"), and a tool's own screen ("the card above the chart" in the
+    tool).
+  - Check every post with
+    `python3 .claude/skills/adjie-writing-style/scripts/check-references.py <file>` (no
+    ERROR, every REVIEW read), then have the reference-checker agent
+    (`.claude/agents/reference-checker.md`) read for the pointers a regex misses.
+  - Plan for it: put each figure in the section that talks about it, and don't promise a
+    later section ("I will show that further down"). Show it there, or say it here.
 - Follow `README.md` for the rest: question-style `##` headings, short paragraphs, the
   "In short" summary, a source and date for every figure.
 - **Two languages.** Write each language natively with the same moves and message. Don't
@@ -179,3 +213,7 @@ and the shape of the sentences.
 9. It ends with a principle and a small action, or an honest question.
 10. It reads as natural speech in its language, with no em-dashes. Indonesian has passed
     `bahasa-indonesia`'s script and evaluator.
+11. Every "below", "above", "earlier", "di bawah", "di atas", "tadi" and every named
+    figure, table or section points at something in the same section (or at a whole
+    section, named by its heading). `scripts/check-references.py` shows no ERROR, and the
+    reference-checker agent passed it.

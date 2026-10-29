@@ -80,7 +80,12 @@ captions, alt text and footnotes. For each sentence ask the two tests, then the 
 **Also check** the house rules: *saya-kamu* only; *gak* never standing alone; casual and
 factual words each in their layer; finance terms from the table (*imbal hasil*, *bunga
 KPR*, *persen*); no *buatan saya*; numbers in Indonesian format; no em-dashes; none of the
-mistakes in `corrections.md` is back. And the meaning: a rewrite must not change a number,
+mistakes in `corrections.md` is back. Every pointer (*di bawah*, *di atas*, *tadi*,
+*seperti yang sudah saya jelaskan*, *tabel itu*, *contoh tadi*, *kurs tadi*) points at
+something in the same `##` or `###` section, in that direction, or at a whole section named
+by its heading (`adjie-writing-style`, "Point only at what is in the same section"); one
+that reaches into another section is *wajib*, and its *Usulan* states the fact without the
+pointer. A suggestion of yours must not add such a pointer either. And the meaning: a rewrite must not change a number,
 a claim, a source or the post's verdict.
 
 ## Step 3: the report

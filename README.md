@@ -131,6 +131,11 @@ KaTeX and Mermaid load only on a post that uses them.
   quoted.
 - Use question-style `##` headings ("How long until buying pays off?") and short paragraphs
   under them.
+- Make every section stand on its own, because search snippets and AI answers quote one
+  section at a time. Point only at a figure, table or chart in the same section ("the
+  table below" when the table is right there); never "see the screenshot below" for one
+  three sections down, or "as I showed" for something in another section. State the fact
+  instead. `.claude/skills/adjie-writing-style/scripts/check-references.py <file>` checks it.
 - Give real numbers, sources and dates. Set `last_modified_at` when you update a post.
 - Link to the relevant tool and to related posts.
 
