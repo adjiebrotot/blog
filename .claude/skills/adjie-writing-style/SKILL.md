@@ -154,9 +154,9 @@ These override anything above.
     years."
   - Wrong: "Dalam daftar pengeluaran yang saya pakai di bawah, makan di luar hanya
     menyumbang sekitar 11 sampai 17 persen" (the tables are in the next sections) →
-    "Makan di luar paling-paling hanya menyumbang sekitar 15 persen dari total belanja
-    bulanan." A section may state a round figure as its own assumption; it never sends
-    the reader elsewhere to find it.
+    "Makan di luar hanya menyumbang sekitar 15 persen dari total belanja bulanan." A
+    section may state a round figure as its own assumption (true to the data: not "at
+    most 15" when one table shows 17); it never sends the reader elsewhere to find it.
   - Wrong: "Kalau dikonversi dengan kurs tadi" (the rate is two sections up) → "Kalau
     dikonversi dengan kurs A$1 = Rp12.710 dan S$1 = Rp14.152".
   - **The one exception** is a whole section as the referent: the heading and everything
