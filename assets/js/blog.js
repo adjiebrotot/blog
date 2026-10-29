@@ -488,8 +488,8 @@
   /* ── The poster: the post's category, title and picture in the og card's
      look (_build/og.mjs), always in the day colours, with blank space left
      for Instagram's link sticker. A Story is 1080x1920, its picture and title
-     in the top half and a wide blank middle, clear of the bands Instagram
-     draws over its top and bottom; a Post is 1080x1080. ── */
+     high up, its name at the very bottom and a wide blank middle; a Post is
+     1080x1080. ── */
   var INK = '#14203A', BG = '#F0F4FF', MUTED = '#4C5B76', GOLD = '#B45309';
   var SANS = "'DM Sans', system-ui, sans-serif";
   function loadImage(src) {
@@ -588,12 +588,12 @@
       }
 
       if (story) {
-        // The picture and the title in the top half, the blog's name at the
+        // The picture and the title high up, the blog's name at the very
         // bottom, and the wide space between left blank for the reader's
         // link sticker or their own words.
-        drawSticker(ctx, img, pad, 220, cw - 12, 500);
-        heading(220 + 500 + 12 + 48, 56, [72, 66, 60, 54, 48], 4, 280);
-        drawBrand(ctx, logo, pad, H - 260 - 72);
+        drawSticker(ctx, img, pad, 120, cw - 12, 480);
+        heading(120 + 480 + 12 + 40, 56, [72, 66, 60, 54, 48], 4, 280);
+        drawBrand(ctx, logo, pad, H - 64 - 72);
       } else {
         // The category and title, the picture, then an empty band for the
         // link above the blog's name.
