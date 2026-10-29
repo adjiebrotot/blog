@@ -420,8 +420,8 @@ main { padding: 1rem 0 3rem; }
 /* ── Share menu (blog.js) ─────────────────────────────────────────────
    The tool site's chart toolbar Share button (shared.css .btn-secondary
    .btn-sm .share-toggle) and its dropdown list (dropdown.css .combo-list),
-   with each network's own logo in its colours. The lit row is filled with
-   the accent, and the logos turn to its text colour with it. */
+   with each network's own logo in the text colour. The lit row is filled
+   with the accent. */
 .btn-secondary, .btn-primary {
   display: inline-flex; align-items: center; justify-content: center; gap: 6px;
   border-radius: var(--radius-md); padding: 10px 21px; font: inherit; font-weight: 700; font-size: var(--fs-sm);
@@ -455,7 +455,6 @@ a.btn-primary { color: var(--text-inv); }
 .share-list { display: none; position: fixed; margin: 0; list-style: none; }
 .share-list.is-open { display: block; }
 .share-list li { margin: 0; padding: 0; }
-.share-list .share-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
 .share-list .share-opt {
   display: flex; align-items: center; justify-content: flex-start; gap: 10px; width: 100%;
   padding: 7px 10px; border: 0; border-radius: 5px; background: transparent;
@@ -467,14 +466,8 @@ a.btn-primary { color: var(--text-inv); }
 .combo-sub { display: block; font-size: 0.76rem; color: var(--muted); overflow: hidden; text-overflow: ellipsis; }
 .share-list .share-opt:hover .combo-sub, .share-list .share-opt:focus-visible .combo-sub { color: inherit; opacity: 0.85; }
 .share-ico { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 1.6rem; }
-.share-ico svg { display: block; }
-.share-ico-fb svg { fill: #0866FF; }
-.share-ico-in svg { fill: #0A66C2; }
-.share-ico-x svg { fill: var(--text); }
-:root:not(.light) .share-ico-in svg { fill: #3D8FE0; }
-.share-list .share-opt:hover .share-ico svg, .share-list .share-opt:focus-visible .share-ico svg { fill: currentColor; }
-.share-list .share-opt:hover .share-ico-ig path, .share-list .share-opt:focus-visible .share-ico-ig path { fill: currentColor; }
-.share-list .share-opt:hover .share-ico svg[fill="none"], .share-list .share-opt:focus-visible .share-ico svg[fill="none"] { fill: none; }
+.share-ico svg { display: block; fill: currentColor; }
+.share-ico svg[fill="none"] { fill: none; }
 
 /* The floating Share: at the article's right edge on a wide screen (the
    mirror of the reading rail on its left), at the bottom right corner on a

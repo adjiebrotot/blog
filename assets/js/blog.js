@@ -486,10 +486,10 @@
   }
 
   /* ── The poster: the post's category, title and picture in the og card's
-     look (_build/og.mjs), always in the day colours, with an empty band left
-     under the picture for Instagram's link sticker. A Story is 1080x1920 and
-     keeps clear of the bands Instagram draws over its top and bottom; a Post
-     is 1080x1080. ── */
+     look (_build/og.mjs), always in the day colours, with blank space left
+     for Instagram's link sticker. A Story is 1080x1920, its picture and title
+     in the top half and a wide blank middle, clear of the bands Instagram
+     draws over its top and bottom; a Post is 1080x1080. ── */
   var INK = '#14203A', BG = '#F0F4FF', MUTED = '#4C5B76', GOLD = '#B45309';
   var SANS = "'DM Sans', system-ui, sans-serif";
   function loadImage(src) {
@@ -566,35 +566,43 @@
       var ctx = c.getContext('2d'), cw = W - pad * 2;
       ctx.fillStyle = BG; ctx.fillRect(0, 0, W, H);
 
-      // From the top: the category, handwritten, then the title.
-      var top = story ? 250 : pad;
-      ctx.save();
-      ctx.translate(pad, top + 52); ctx.rotate(-2 * Math.PI / 180);
-      ctx.fillStyle = GOLD; ctx.font = '600 ' + (story ? 64 : 54) + 'px Caveat, cursive';
-      ctx.fillText(d.cat, 0, 0);
-      ctx.restore();
-      var max = story ? 5 : 3;
-      var t = story ? fitTitle(ctx, d.title, cw, [88, 80, 72, 64, 56], max, 360) : fitTitle(ctx, d.title, cw, [68, 62, 56, 50, 44], max, 200);
-      var lh = Math.round(t.size * 1.08), y = top + (story ? 92 : 80) + t.size;
-      ctx.fillStyle = INK; ctx.font = '800 ' + t.size + 'px ' + SANS;
-      // A title too long for the poster ends in an ellipsis on its last line.
-      t.lines.slice(0, max).forEach(function (line, i) {
-        if (i === max - 1 && t.lines.length > max) {
-          while (line && ctx.measureText(line + '…').width > cw) line = line.replace(/\s*\S+$/, '');
-          line += '…';
-        }
-        ctx.fillText(line, pad, y + i * lh);
-      });
-      var textEnd = y + (Math.min(t.lines.length, max) - 1) * lh + Math.round(t.size * 0.3);
+      // The category, handwritten, then the title, from baseline-to-be `top`.
+      function heading(top, catPx, sizes, max, budget) {
+        ctx.save();
+        ctx.translate(pad, top + Math.round(catPx * 0.8)); ctx.rotate(-2 * Math.PI / 180);
+        ctx.fillStyle = GOLD; ctx.font = '600 ' + catPx + 'px Caveat, cursive';
+        ctx.fillText(d.cat, 0, 0);
+        ctx.restore();
+        var t = fitTitle(ctx, d.title, cw, sizes, max, budget);
+        var lh = Math.round(t.size * 1.08), y = top + Math.round(catPx * 1.35) + t.size;
+        ctx.fillStyle = INK; ctx.font = '800 ' + t.size + 'px ' + SANS;
+        // A title too long for the poster ends in an ellipsis on its last line.
+        t.lines.slice(0, max).forEach(function (line, i) {
+          if (i === max - 1 && t.lines.length > max) {
+            while (line && ctx.measureText(line + '…').width > cw) line = line.replace(/\s*\S+$/, '');
+            line += '…';
+          }
+          ctx.fillText(line, pad, y + i * lh);
+        });
+        return y + (Math.min(t.lines.length, max) - 1) * lh + Math.round(t.size * 0.3);
+      }
 
-      // From the bottom: the blog's name, and above it the empty band for
-      // the link sticker. The picture takes what is left between.
-      var brandY = H - (story ? 300 : pad) - 72;
-      var band = story ? 280 : 140;
-      var imgTop = textEnd + (story ? 56 : 40);
-      var imgH = Math.max(story ? 520 : 300, Math.min(brandY - band - imgTop, Math.round(cw * (story ? 0.82 : 0.6))));
-      drawSticker(ctx, img, pad, imgTop, cw - 12, imgH);
-      drawBrand(ctx, logo, pad, brandY);
+      if (story) {
+        // The picture and the title in the top half, the blog's name at the
+        // bottom, and the wide space between left blank for the reader's
+        // link sticker or their own words.
+        drawSticker(ctx, img, pad, 220, cw - 12, 500);
+        heading(220 + 500 + 12 + 48, 56, [72, 66, 60, 54, 48], 4, 280);
+        drawBrand(ctx, logo, pad, H - 260 - 72);
+      } else {
+        // The category and title, the picture, then an empty band for the
+        // link above the blog's name.
+        var textEnd = heading(pad, 54, [68, 62, 56, 50, 44], 3, 200);
+        var brandY = H - pad - 72, imgTop = textEnd + 40;
+        var imgH = Math.max(300, Math.min(brandY - 140 - imgTop, Math.round(cw * 0.6)));
+        drawSticker(ctx, img, pad, imgTop, cw - 12, imgH);
+        drawBrand(ctx, logo, pad, brandY);
+      }
       return new Promise(function (resolve, reject) {
         c.toBlob(function (b) { if (b) resolve(b); else reject(new Error('poster')); }, 'image/png');
       });
