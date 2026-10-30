@@ -134,6 +134,10 @@ theory into the reader's life.
 
 These override anything above.
 
+- **No over-disclaiming.** A cliché, a saying, a figure of speech, a rough guess or Adjie's
+  own experience is used as it is. Don't add "this is only a saying", don't correct it, and
+  don't hang a disclaimer on it. Caveats belong only where they change a number or a
+  decision.
 - **No em-dashes.** Use a colon, comma, parentheses or a full stop.
 - **Maths.** A simple sum used for emphasis stays as text in the sentence, for example
   "(12,000 - 10,000) / 10,000 = 20%!". Real maths and formulae use KaTeX (`$$ ... $$`).

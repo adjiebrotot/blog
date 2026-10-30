@@ -105,7 +105,7 @@ what the plan does about them. "None I can see" is allowed, but check hard first
 ## 1. Title and description
 - **Language(s):** EN / ID / both (paired with `translation: <key>`)
 - **Title:** "<title>"  (alt: "<second option>")
-- **Description:** "<one or two plain sentences that answer the post's question>"
+- **Description:** "<one or two plain sentences that set up the question and make the reader curious, without the answer>"
 - **Slug:** `<slug>` → https://blog.adjiebrotots.com/<lang>/<slug>/
 - **Tags:** [<finance | engineering | personal | others>]
 - **Shape:** <argument / personal story / technical notes>, dial: humour <low/med/high>,
@@ -162,10 +162,13 @@ want to see a revised plan first, say so ("show me the draft again").
 
 **Read this first.** The point of this section is to be useful, not polite: an
 unsupported premise, a one-sided argument, a number that may be stale, a topic an existing
-post already covers.
+post already covers. Flag data and mechanics that change the argument, not clichés, sayings,
+figures of speech, rough guesses or Adjie's own experience: readers know those for what they
+are, and the post never "corrects" them or carries a disclaimer for them.
 
-**Title and description.** Follow `README.md`: the description answers the question
-and is what search engines and AI answers quote. The slug is permanent once it is live,
+**Title and description.** Follow `README.md`: the description is a hook that makes the
+reader curious (the question, the surprise) and does not give the answer away; the answer
+goes in the post's first paragraph. The slug is permanent once it is live,
 so choose it here, in the post's language, short and with the words people search for.
 
 **Outline.** Headings are the real `##` / `###` headings you intend to use, mostly
