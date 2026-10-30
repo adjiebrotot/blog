@@ -20,7 +20,7 @@ publishes it. The look comes from the design system of
    ```yaml
    ---
    title: "Rent or buy a house? How to read the Rent vs Own calculator"
-   description: "One or two plain sentences that answer the post's question. Shown under the title, in search results and to AI answer engines."
+   description: "One or two plain sentences that set up the post's question and make the reader curious, without giving the answer away. Shown under the title, in search results and to AI answer engines."
    date: 2026-10-17 09:00:00 +0800
    tags: [finance]                 # finance | engineering | personal | others (one or more)
    # Optional:
@@ -128,8 +128,9 @@ KaTeX and Mermaid load only on a post that uses them.
 
 ### Writing for search and AI answers
 
-- Answer the question in the `description` and the first paragraph. That text is what gets
-  quoted.
+- Make the `description` a hook: state the question or the surprise and leave the answer for
+  the post ("..., bahkan bisa lebih banyak. Gimana hitungannya?"). Answer the question in the
+  first paragraph (the **In short** box), which is what gets quoted.
 - Use question-style `##` headings ("How long until buying pays off?") and short paragraphs
   under them.
 - Make every section stand on its own, because search snippets and AI answers quote one
