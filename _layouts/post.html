@@ -88,6 +88,11 @@ layout: default
   </footer>
 </article>
 
+{%- comment -%} The multiplex unit, once, after the post and its author box: away from the share buttons, and before the comments and related posts so it never sits among the blog's own cards. {%- endcomment -%}
+{%- if _ads_on and _ad.multiplex_slot %}
+{% include ad-multiplex.html %}
+{%- endif %}
+
 {%- comment -%} The same menu, floating at the right edge once the header's has scrolled away (blog.js). {%- endcomment %}
 <div class="share-float">{% include share.html n=3 cat=_cat_label %}</div>
 {% include share-dialog.html %}
