@@ -1,0 +1,7 @@
+---
+layout: null
+permalink: /id/pensiun-tanpa-jadi-pns/index.md
+md_of: /id/pensiun-tanpa-jadi-pns/
+sitemap: false
+---
+{% include post-markdown.txt url=page.md_of %}
