@@ -71,6 +71,18 @@ comments:
   theme_light: light
   theme_dark: transparent_dark
 
+# Google AdSense. The loader is in head.html; post.html places the in-article
+# unit between sections by word count (first after `first_after` words, then at
+# least `gap` words apart, never with fewer than `tail` words left, at most `max`
+# per post). A post opts out with `ads: false` in its front matter.
+adsense:
+  client: ca-pub-8730116101825381
+  in_article_slot: "1433722275"
+  first_after: 500
+  gap: 1000
+  tail: 400
+  max: 3
+
 # Whitelisted by GitHub Pages. Lets a post keep an old URL alive:
 #   redirect_from: [/en/old-slug/]
 plugins:
