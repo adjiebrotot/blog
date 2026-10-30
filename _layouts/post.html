@@ -41,8 +41,42 @@ layout: default
     </div>
   </header>
 
+  {%- comment -%}
+    In-article ads go only at a section break (just before an h2), spaced by
+    words read rather than by section count, so a long section is never cut and
+    a short post shows none. Settings: `adsense` in _config.yml.
+  {%- endcomment -%}
+  {%- assign _ad = site.adsense -%}
+  {%- assign _ads_on = true -%}
+  {%- if page.ads == false or _ad.in_article_slot == nil -%}{%- assign _ads_on = false -%}{%- endif -%}
+  {%- assign _ads = 0 -%}
+  {%- assign _read = 0 -%}
+  {%- assign _since = 0 -%}
+  {%- assign _need = _ad.first_after -%}
+  {%- assign _chunks = content | split: "<h2" -%}
+  {%- capture _body -%}
+  {%- for _chunk in _chunks -%}
+    {%- if forloop.first -%}
+      {%- assign _html = _chunk -%}
+    {%- else -%}
+      {%- assign _html = "<h2" | append: _chunk -%}
+      {%- assign _left = _words | minus: _read -%}
+      {%- if _ads_on and _ads < _ad.max and _since >= _need and _left >= _ad.tail -%}
+        {% include ad-in-article.html %}
+        {%- assign _ads = _ads | plus: 1 -%}
+        {%- assign _since = 0 -%}
+        {%- assign _need = _ad.gap -%}
+      {%- endif -%}
+    {%- endif -%}
+    {{ _html }}
+    {%- assign _n = _html | strip_html | number_of_words -%}
+    {%- assign _read = _read | plus: _n -%}
+    {%- assign _since = _since | plus: _n -%}
+  {%- endfor -%}
+  {%- endcapture %}
+
   <div class="prose">
-{{ content }}
+{{ _body }}
   </div>
 
   <footer class="post-footer">

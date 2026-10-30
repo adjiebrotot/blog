@@ -1,0 +1,14 @@
+{%- comment -%}
+  One AdSense in-article unit, labelled so it never passes for the post's own
+  content. The loader script is in head.html. Placed by post.html, never by hand.
+{%- endcomment -%}
+<aside class="ad-slot" aria-label="{{ t.ad_label }}">
+  <p class="ad-label">{{ t.ad_label }}</p>
+  <ins class="adsbygoogle"
+       style="display:block; text-align:center;"
+       data-ad-layout="in-article"
+       data-ad-format="fluid"
+       data-ad-client="{{ site.adsense.client }}"
+       data-ad-slot="{{ site.adsense.in_article_slot }}"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</aside>

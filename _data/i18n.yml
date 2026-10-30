@@ -14,6 +14,7 @@ en:
   updated: Updated
   min_read: min read
   related: Related posts
+  ad_label: Advertisement
   read_in: Read this in English
   no_posts: "No posts here yet. Check back soon."
   open_tool: Open the full tool
@@ -81,6 +82,7 @@ id:
   updated: Diperbarui
   min_read: menit baca
   related: Artikel terkait
+  ad_label: Iklan
   read_in: Baca dalam Bahasa Indonesia
   no_posts: "Belum ada artikel di sini. Nantikan segera."
   open_tool: Buka tool lengkapnya
