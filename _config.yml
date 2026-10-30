@@ -74,10 +74,15 @@ comments:
 # Google AdSense. The loader is in head.html; post.html places the in-article
 # unit between sections by word count (first after `first_after` words, then at
 # least `gap` words apart, never with fewer than `tail` words left, at most `max`
-# per post). A post opts out with `ads: false` in its front matter.
+# per post), and the multiplex unit once, after the post (so at least `tail`
+# words from the last in-article unit). A post opts out of both with `ads: false`
+# in its front matter. The slots are the blog's own (In-article 2, Multiplex 3),
+# so AdSense reports them apart from the tool site's; the map of every unit on
+# the three sites is in the tool repo's shared.css, above .ad-slot.
 adsense:
   client: ca-pub-8730116101825381
-  in_article_slot: "1433722275"
+  in_article_slot: "7068974137"
+  multiplex_slot: "6347753554"
   first_after: 500
   gap: 1000
   tail: 400

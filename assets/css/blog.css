@@ -285,6 +285,12 @@ main { padding: 1rem 0 3rem; }
 .prose .ad-label { margin: 0 0 0.5rem; color: var(--muted); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; text-align: center; }
 .prose .ad-slot:has(ins[data-ad-status="unfilled"]) { display: none; }
 
+/* The multiplex after the post (_includes/ad-multiplex.html): the same label and
+   rules, at the width of the comments and related posts below it. */
+.ad-end { max-width: calc(var(--measure) + 5rem); margin: 2.5rem auto 0; padding: 0.6rem 0 0.9rem; border-block: 1px solid var(--border); }
+.ad-end .ad-label { margin: 0 0 0.5rem; color: var(--muted); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; text-align: center; }
+.ad-end:has(ins[data-ad-status="unfilled"]) { display: none; }
+
 /* Callouts: <div class="note">…</div> or {: .note} / {: .warning} on a paragraph. */
 /* Set apart by a field of tone, not an outline. */
 .prose .note, .prose .tldr, .prose .warning {
@@ -550,7 +556,7 @@ a.btn-primary { color: var(--text-inv); }
 }
 
 @media print {
-  .site-header, .cat-nav, .home-intro, .site-footer, .related, .comments, .breadcrumbs, .also-in, .code-copy, .toc-rail, .read-bar, .post-actions, .share-float, .poster-overlay { display: none; }
+  .site-header, .cat-nav, .home-intro, .site-footer, .related, .comments, .ad-slot, .breadcrumbs, .also-in, .code-copy, .toc-rail, .read-bar, .post-actions, .share-float, .poster-overlay { display: none; }
   body { background: #fff; color: #000; }
   .post { box-shadow: none; border: 0; padding: 0; }
 }
