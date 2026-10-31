@@ -13,6 +13,9 @@ layout: default
     <div class="post-list">
       {%- for p in _posts limit: 6 %}
       {% include post-card.html post=p lang=_l level=3 %}
+      {%- if forloop.index == site.adsense.in_feed_after and forloop.rindex > 1 and site.adsense.in_feed_slot %}
+      {% include ad-in-feed.html t=_t %}
+      {%- endif %}
       {%- endfor %}
     </div>
     {%- else %}
@@ -22,3 +25,7 @@ layout: default
   </section>
   {%- endfor %}
 </div>
+{%- comment -%} One multiplex unit under both lists, never among the blog's own cards. Settings: `adsense` in _config.yml. {%- endcomment -%}
+{%- if site.adsense.multiplex_slot %}
+{% include ad-multiplex.html %}
+{%- endif %}

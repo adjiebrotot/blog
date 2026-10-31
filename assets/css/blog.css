@@ -291,6 +291,13 @@ main { padding: 1rem 0 3rem; }
 .ad-end .ad-label { margin: 0 0 0.5rem; color: var(--muted); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; text-align: center; }
 .ad-end:has(ins[data-ad-status="unfilled"]) { display: none; }
 
+/* The in-feed unit among the home page cards (_includes/ad-in-feed.html): a
+   card's shape with a plain rule instead of the sticker, so it never reads as
+   a post, and gone when AdSense has none. */
+.ad-feed { padding: 0.75rem 1rem 1rem; border: 1px solid var(--border); border-radius: var(--radius-xl); }
+.ad-feed .ad-label { margin: 0 0 0.5rem; color: var(--muted); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; text-align: center; }
+.ad-feed:has(ins[data-ad-status="unfilled"]) { display: none; }
+
 /* Callouts: <div class="note">…</div> or {: .note} / {: .warning} on a paragraph. */
 /* Set apart by a field of tone, not an outline. */
 .prose .note, .prose .tldr, .prose .warning {

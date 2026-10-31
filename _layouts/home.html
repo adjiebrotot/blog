@@ -11,9 +11,17 @@ layout: default
     {%- comment -%} The newest post leads at full width, so a short list never leaves the row half empty. {%- endcomment -%}
     {%- for p in _posts %}
     {% include post-card.html post=p lang=lang featured=forloop.first %}
+    {%- comment -%} The in-feed unit once, never as the last item. Settings: `adsense` in _config.yml. {%- endcomment -%}
+    {%- if forloop.index == site.adsense.in_feed_after and forloop.rindex > 1 and site.adsense.in_feed_slot %}
+    {% include ad-in-feed.html t=t %}
+    {%- endif %}
     {%- endfor %}
   </div>
   {%- else %}
   <p class="empty">{{ t.no_posts }}</p>
   {%- endif %}
 </section>
+{%- comment -%} One multiplex unit under the list, never among the blog's own cards. Settings: `adsense` in _config.yml. {%- endcomment -%}
+{%- if _posts.size > 0 and site.adsense.multiplex_slot %}
+{% include ad-multiplex.html %}
+{%- endif %}
