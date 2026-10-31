@@ -17,7 +17,7 @@ layout: default
     {%- include post-keys.html tags=p.tags -%}
     {%- if post_keys contains page.category -%}
       {%- assign _shown = _shown | plus: 1 -%}
-      {% include post-card.html post=p lang=lang %}
+      {% include post-card.html post=p lang=lang  thumb=true %}
     {%- endif -%}
   {%- endfor -%}
 {%- endcapture -%}

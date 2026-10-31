@@ -10,7 +10,7 @@ layout: default
   <div class="post-grid">
     {%- comment -%} The newest post leads at full width, so a short list never leaves the row half empty. {%- endcomment -%}
     {%- for p in _posts %}
-    {% include post-card.html post=p lang=lang featured=forloop.first %}
+    {% include post-card.html post=p lang=lang featured=forloop.first  thumb=true %}
     {%- comment -%} The in-feed unit once, never as the last item. Settings: `adsense` in _config.yml. {%- endcomment -%}
     {%- if forloop.index == site.adsense.in_feed_after and forloop.rindex > 1 and site.adsense.in_feed_slot %}
     {% include ad-in-feed.html t=t %}

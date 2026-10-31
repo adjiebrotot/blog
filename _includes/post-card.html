@@ -1,5 +1,9 @@
 {%- assign p = include.post -%}
-<article class="post-card{% if include.featured %} is-featured{% endif %}">
+<article class="post-card{% if include.featured %} is-featured{% endif %}{% if include.thumb %} has-thumb{% endif %}">
+  {%- if include.thumb %}
+  {%- assign _img = p.image | default: site.default_image %}
+  <a class="post-card-thumb" href="{{ p.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ _img | relative_url }}" alt="" width="1200" height="630" loading="{% if include.featured %}eager{% else %}lazy{% endif %}" decoding="async"></a>
+  {%- endif %}
   {% include tags.html tags=p.tags lang=include.lang %}
   <h{{ include.level | default: 2 }} class="post-card-title"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h{{ include.level | default: 2 }}>
   {%- if p.description %}
