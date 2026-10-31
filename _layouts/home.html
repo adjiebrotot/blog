@@ -7,14 +7,11 @@ layout: default
 <section aria-labelledby="latest-heading">
   <h2 id="latest-heading" class="section-title">{{ t.latest }}</h2>
   {%- if _posts.size > 0 %}
+  {%- comment -%} Posts only: blog.js adds an ad tile only where the last row is left uneven. {%- endcomment %}
   <div class="post-grid">
     {%- comment -%} The newest post leads at full width, so a short list never leaves the row half empty. {%- endcomment -%}
     {%- for p in _posts %}
     {% include post-card.html post=p lang=lang featured=forloop.first  thumb=true %}
-    {%- comment -%} The in-feed unit once, never as the last item. Settings: `adsense` in _config.yml. {%- endcomment -%}
-    {%- if forloop.index == site.adsense.in_feed_after and forloop.rindex > 1 and site.adsense.in_feed_slot %}
-    {% include ad-in-feed.html t=t %}
-    {%- endif %}
     {%- endfor %}
   </div>
   {%- else %}

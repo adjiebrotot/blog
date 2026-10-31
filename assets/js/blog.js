@@ -20,6 +20,10 @@
    8. The Share menu on a post (_includes/share.html): Facebook, X and
       LinkedIn as links, a Story or Post poster drawn here on a canvas, and
       Share as link.
+   9. Ads balance an uneven card layout: a post grid's short last row gets
+      one in-feed tile across its empty cells, and on the landing page the
+      shorter language column gets the multiplex unit (or one tile). Settings:
+      `adsense` in _config.yml.
    UI words come from _data/i18n.yml through data-* on <body>. */
 (function () {
   var root = document.documentElement;
@@ -663,4 +667,139 @@
       navigator.share({ files: [poster.file], title: poster.title }).catch(function () {});
     });
   }
+})();
+
+/* 9. Ads only balance an uneven layout; the lists hold posts alone. A grid's
+   last row, when posts leave it short, gets one in-feed tile spanning the
+   empty cells, so the page ends square instead of on a lone card. The gap
+   follows the number of columns, so it is worked out again on a resize. On
+   the landing page the shorter language column gets the multiplex when it is
+   two or more cards short (the longer column nothing), one tile when it is
+   one short. A tile is pushed to AdSense the first time it is shown, and one that
+   comes back unfilled is replaced by the next unit in `fill_units` (a tile
+   waits invisible until it is filled, so nothing shows a bare box). A list
+   never holds more ad tiles than posts. */
+(function () {
+  var d = document.body.dataset;
+  if (!d.adUnits) return;
+  var units;
+  try { units = JSON.parse(d.adUnits); } catch (e) { return; }
+  if (!units.length) return;
+
+  function push() { try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch (e) {} }
+  function shown(el) { return getComputedStyle(el).display !== 'none'; }
+  function isAd(el) { return el.classList.contains('ad-slot'); }
+  function columns(grid) {
+    return getComputedStyle(grid).gridTemplateColumns.split(' ').filter(function (c) { return c && c !== 'none'; }).length || 1;
+  }
+  function unfilled(aside) { var i = aside.querySelector('ins'); return i && i.getAttribute('data-ad-status') === 'unfilled'; }
+
+  function makeTile(unit) {
+    var aside = document.createElement('aside');
+    aside.className = 'ad-slot ad-feed ad-fill';
+    aside.setAttribute('aria-label', d.adLabel);
+    aside.hidden = true;
+    var label = document.createElement('p');
+    label.className = 'ad-label';
+    label.textContent = d.adLabel;
+    var ins = document.createElement('ins');
+    ins.className = 'adsbygoogle';
+    ins.style.display = 'block';
+    ins.dataset.adFormat = 'fluid';
+    ins.dataset.adLayoutKey = unit.key;
+    ins.dataset.adClient = d.adClient;
+    ins.dataset.adSlot = unit.slot;
+    aside.appendChild(label);
+    aside.appendChild(ins);
+    return aside;
+  }
+
+  // One list (a .post-grid, or a landing column) and its fillers.
+  function Filler(list) {
+    this.list = list;
+    this.tiles = [];
+    this.failed = 0;
+    var self = this;
+    new MutationObserver(function () { self.update(); })
+      .observe(list, { subtree: true, attributes: true, attributeFilter: ['data-ad-status'] });
+  }
+  Filler.prototype.items = function () {
+    return Array.prototype.filter.call(this.list.children, function (el) {
+      return !el.classList.contains('ad-fill') && shown(el) && !(isAd(el) && unfilled(el));
+    });
+  };
+  // Show `want` tiles at the end of the list, making new ones as needed.
+  Filler.prototype.show = function (want) {
+    var self = this;
+    this.tiles = this.tiles.filter(function (t) {
+      if (!unfilled(t)) return true;
+      t.remove(); self.failed++;
+      return false;
+    });
+    var posts = this.items().filter(function (el) { return !isAd(el); }).length;
+    var ads = this.items().length - posts;
+    want = Math.max(0, Math.min(want, posts - ads));
+    // A tile left unfilled is replaced by the next unit; once each unit has
+    // failed here, the gap stays.
+    while (this.tiles.length < want && this.failed < units.length) {
+      var t = makeTile(units[this.failed]);
+      this.list.appendChild(t);
+      this.tiles.push(t);
+    }
+    var span = this.span || 1;
+    this.tiles.forEach(function (t, i) {
+      var on = i < want;
+      t.hidden = !on;
+      t.style.gridColumn = on && span > 1 ? 'span ' + span : '';
+      if (on && !t.dataset.pushed) { t.dataset.pushed = '1'; push(); }
+    });
+  };
+  // A post grid: the cells left empty in its last row.
+  Filler.prototype.update = function () {
+    if (this.busy) return;
+    this.busy = true;
+    var cols = columns(this.list), pos = 0;
+    this.items().forEach(function (el) {
+      pos = el.classList.contains('is-featured') ? 0 : (pos + 1) % cols;
+    });
+    // One tile, as wide as the gap: a row needs balancing, not filling up.
+    this.span = cols > 1 && pos ? cols - pos : 0;
+    this.show(this.span ? 1 : 0);
+    this.busy = false;
+  };
+
+  var grids = Array.prototype.map.call(document.querySelectorAll('.post-grid'), function (g) { return new Filler(g); });
+
+  // The landing page: two language columns side by side. The shorter gets the
+  // multiplex unit when it is two or more cards short, one tile when it is one.
+  var cols = document.querySelector('.landing-cols');
+  var multiplex = document.querySelector('.ad-end[data-ad-defer]');
+  var lists = cols ? Array.prototype.slice.call(cols.querySelectorAll('.post-list')) : [];
+  if (lists.length === 2) {
+    var fills = lists.map(function (l) { return new Filler(l); });
+    var side = columns(cols) > 1;
+    var count = function (f) { return f.items().length; };
+    var short = count(fills[0]) < count(fills[1]) ? 0 : 1, gap = Math.abs(count(fills[0]) - count(fills[1]));
+    if (side && gap >= 2 && multiplex) {
+      fills[short].list.appendChild(multiplex);
+      gap = 0;
+    }
+    fills.forEach(function (f, i) {
+      f.update = function () {
+        if (this.busy) return;
+        this.busy = true;
+        var other = count(fills[1 - i]);
+        var two = columns(cols) > 1;
+        this.show(two && this.list.contains(multiplex) ? 0 : two ? Math.min(1, Math.max(0, other - count(this))) : 0);
+        this.busy = false;
+      };
+    });
+    grids = grids.concat(fills);
+  }
+  if (multiplex) push();
+
+  function all() { grids.forEach(function (g) { g.update(); }); }
+  all();
+  var t;
+  window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(all, 150); });
 })();

@@ -79,19 +79,29 @@ comments:
 # minutes of reading, so text always far outweighs ads. The multiplex unit goes
 # once after the post (so at least `tail` words from the last in-article unit),
 # and once under the post lists on the home pages (landing.html, home.html).
-# Those lists also carry the in-feed unit once, after card `in_feed_after`, and
-# only when another card follows, so an ad never ends a list. A post opts out
+# A post opts out
 # of its units with `ads: false` in its front matter. The slots are the blog's
 # own (In-article 2, Multiplex 3, In-feed), so AdSense reports them apart from
 # the tool site's; the map of every unit on the three sites is in the tool
 # repo's shared.css, above .ad-slot.
+# Ads among the cards only balance an uneven layout, never push a post down:
+# the lists hold posts alone, and blog.js fills what is still uneven after
+# them. A grid's short last row gets one in-feed tile across its empty cells
+# (`fill_units`, the first tried first, the next one only when AdSense leaves
+# a tile unfilled). On the landing page
+# the shorter language column gets the multiplex unit when it is two or more
+# cards short (and the longer one nothing), one tile when it is one short.
+# "Image on the side" first: a picture beside a few lines of text, the same
+# shape as the cards.
 adsense:
   client: ca-pub-8730116101825381
   in_article_slot: "7068974137"
   multiplex_slot: "6347753554"
-  in_feed_slot: "6995134169"
-  in_feed_layout_key: "-gw-3+1f-3d+2z"
-  in_feed_after: 3
+  fill_units:
+    - { slot: "5403685043", key: "-fb+5w+4e-db+86" }  # image on the side
+    - { slot: "8828371845", key: "-6t+ed+2i-1n-4w" }  # image above
+    - { slot: "2777521705", key: "-ef+6k-30-ac+ty" }  # title above
+    - { slot: "6995134169", key: "-gw-3+1f-3d+2z" }   # text only
   first_after: 350
   gap: 600
   tail: 300
