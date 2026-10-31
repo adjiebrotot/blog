@@ -78,15 +78,20 @@ comments:
 # before the break), at most `max` per post. That is one ad per two or three
 # minutes of reading, so text always far outweighs ads. The multiplex unit goes
 # once after the post (so at least `tail` words from the last in-article unit),
-# and once under the post lists on the home pages (landing.html, home.html). A
-# post opts out of both units with `ads: false` in its front matter. The slots
-# are the blog's own (In-article 2, Multiplex 3), so AdSense reports them apart
-# from the tool site's; the map of every unit on
-# the three sites is in the tool repo's shared.css, above .ad-slot.
+# and once under the post lists on the home pages (landing.html, home.html).
+# Those lists also carry the in-feed unit once, after card `in_feed_after`, and
+# only when another card follows, so an ad never ends a list. A post opts out
+# of its units with `ads: false` in its front matter. The slots are the blog's
+# own (In-article 2, Multiplex 3, In-feed), so AdSense reports them apart from
+# the tool site's; the map of every unit on the three sites is in the tool
+# repo's shared.css, above .ad-slot.
 adsense:
   client: ca-pub-8730116101825381
   in_article_slot: "7068974137"
   multiplex_slot: "6347753554"
+  in_feed_slot: "6995134169"
+  in_feed_layout_key: "-gw-3+1f-3d+2z"
+  in_feed_after: 3
   first_after: 350
   gap: 600
   tail: 300
