@@ -330,8 +330,8 @@ main { padding: 1rem 0 3rem; }
 .ad-end .ad-label { margin: 0 0 0.5rem; color: var(--muted); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; text-align: center; }
 .ad-end:has(ins[data-ad-status="unfilled"]) { display: none; }
 
-/* The in-feed unit among the home page cards (_includes/ad-in-feed.html), and
-   the tiles blog.js adds to fill a grid's last row: a card's size, surface and
+/* The in-feed tiles blog.js adds to balance an uneven last row of cards (never
+   among the posts themselves): a card's size, surface and
    corners with a plain rule instead of the sticker, so it sits in the grid
    like a card yet never reads as a post, and gone when AdSense has none. */
 .ad-feed {

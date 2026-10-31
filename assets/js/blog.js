@@ -20,9 +20,9 @@
    8. The Share menu on a post (_includes/share.html): Facebook, X and
       LinkedIn as links, a Story or Post poster drawn here on a canvas, and
       Share as link.
-   9. Ads fill the gaps in a card grid: the last row of a post grid gets
-      in-feed tiles in its empty cells, and on the landing page the shorter
-      language column gets the multiplex unit (or one tile). Settings:
+   9. Ads balance an uneven card layout: a post grid's short last row gets
+      one in-feed tile across its empty cells, and on the landing page the
+      shorter language column gets the multiplex unit (or one tile). Settings:
       `adsense` in _config.yml.
    UI words come from _data/i18n.yml through data-* on <body>. */
 (function () {
@@ -669,10 +669,13 @@
   }
 })();
 
-/* 9. Ads in the gaps of a card grid. A grid's last row is filled with in-feed
-   tiles the size of a card, so the page ends square instead of on a lone card.
-   The count follows the number of columns, so it is worked out again on a
-   resize; a tile is pushed to AdSense the first time it is shown, and one that
+/* 9. Ads only balance an uneven layout; the lists hold posts alone. A grid's
+   last row, when posts leave it short, gets one in-feed tile spanning the
+   empty cells, so the page ends square instead of on a lone card. The gap
+   follows the number of columns, so it is worked out again on a resize. On
+   the landing page the shorter language column gets the multiplex when it is
+   two or more cards short (the longer column nothing), one tile when it is
+   one short. A tile is pushed to AdSense the first time it is shown, and one that
    comes back unfilled is replaced by the next unit in `fill_units` (a tile
    waits invisible until it is filled, so nothing shows a bare box). A list
    never holds more ad tiles than posts. */
@@ -743,9 +746,11 @@
       this.list.appendChild(t);
       this.tiles.push(t);
     }
+    var span = this.span || 1;
     this.tiles.forEach(function (t, i) {
       var on = i < want;
       t.hidden = !on;
+      t.style.gridColumn = on && span > 1 ? 'span ' + span : '';
       if (on && !t.dataset.pushed) { t.dataset.pushed = '1'; push(); }
     });
   };
@@ -757,7 +762,9 @@
     this.items().forEach(function (el) {
       pos = el.classList.contains('is-featured') ? 0 : (pos + 1) % cols;
     });
-    this.show(cols > 1 && pos ? cols - pos : 0);
+    // One tile, as wide as the gap: a row needs balancing, not filling up.
+    this.span = cols > 1 && pos ? cols - pos : 0;
+    this.show(this.span ? 1 : 0);
     this.busy = false;
   };
 
