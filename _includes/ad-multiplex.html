@@ -2,8 +2,10 @@
   The AdSense multiplex unit after a post or under a home page's list, labelled
   so its grid of ads never passes for the blog's own posts. The loader script
   is in head.html. Placed by post.html, home.html and landing.html, never by hand.
+  With `defer=true` (landing.html) blog.js pushes it, after it may move it into
+  the shorter language column.
 {%- endcomment -%}
-<aside class="ad-slot ad-end" aria-label="{{ t.ad_label }}">
+<aside class="ad-slot ad-end"{% if include.defer %} data-ad-defer{% endif %} aria-label="{{ t.ad_label }}">
   <p class="ad-label">{{ t.ad_label }}</p>
   <ins class="adsbygoogle"
        style="display:block"
@@ -11,5 +13,7 @@
        data-full-width-responsive="false"
        data-ad-client="{{ site.adsense.client }}"
        data-ad-slot="{{ site.adsense.multiplex_slot }}"></ins>
+  {%- unless include.defer %}
   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  {%- endunless %}
 </aside>

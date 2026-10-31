@@ -85,12 +85,24 @@ comments:
 # own (In-article 2, Multiplex 3, In-feed), so AdSense reports them apart from
 # the tool site's; the map of every unit on the three sites is in the tool
 # repo's shared.css, above .ad-slot.
+# A card grid never ends on a half-empty row: blog.js fills the last row's
+# empty cells with in-feed tiles the size of a card (`fill_units`, the first
+# tried first, the next one only when AdSense leaves a tile unfilled), never
+# more ad tiles in a list than posts. On the landing page the multiplex unit
+# fills the shorter language column instead, when it is two or more cards
+# short. The in-feed units are "image on the side" first: a picture beside a
+# few lines of text, the same shape as the cards.
 adsense:
   client: ca-pub-8730116101825381
   in_article_slot: "7068974137"
   multiplex_slot: "6347753554"
-  in_feed_slot: "6995134169"
-  in_feed_layout_key: "-gw-3+1f-3d+2z"
+  in_feed_slot: "5403685043"               # In-feed, image on the side
+  in_feed_layout_key: "-fb+5w+4e-db+86"
+  fill_units:
+    - { slot: "5403685043", key: "-fb+5w+4e-db+86" }  # image on the side
+    - { slot: "8828371845", key: "-6t+ed+2i-1n-4w" }  # image above
+    - { slot: "2777521705", key: "-ef+6k-30-ac+ty" }  # title above
+    - { slot: "6995134169", key: "-gw-3+1f-3d+2z" }   # text only
   in_feed_after: 3
   first_after: 350
   gap: 600

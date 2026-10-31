@@ -25,7 +25,7 @@ layout: default
   </section>
   {%- endfor %}
 </div>
-{%- comment -%} One multiplex unit under both lists, never among the blog's own cards. Settings: `adsense` in _config.yml. {%- endcomment -%}
+{%- comment -%} One multiplex unit under both lists (blog.js may move it into the shorter one), never among the blog's own cards. Settings: `adsense` in _config.yml. {%- endcomment -%}
 {%- if site.adsense.multiplex_slot %}
-{% include ad-multiplex.html %}
+{% include ad-multiplex.html defer=true %}
 {%- endif %}
