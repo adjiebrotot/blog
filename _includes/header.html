@@ -13,7 +13,7 @@
     <div class="bar-actions">
       <nav class="family-nav" aria-label="{{ t.sites }}">
         <a href="{{ site.links.home }}">{{ t.nav_home }}</a>
-        <a class="is-site" href="{{ '/' | append: lang | append: '/' | relative_url }}"{% if _is_home %} aria-current="page"{% endif %}>{{ t.nav_blog }}</a>
+        <a class="is-site" href="{{ '/' | relative_url }}"{% if page.layout == "landing" %} aria-current="page"{% endif %}>{{ t.nav_blog }}</a>
         <a href="{{ site.links.tools }}">{{ t.nav_tools }}</a>
       </nav>
       {%- comment -%} Only when this exact page also exists in the other language. {%- endcomment -%}
@@ -50,10 +50,25 @@
   {%- if _used.size > 0 %}
 <nav class="container cat-nav" aria-label="{{ t.categories }}">
   <ul>
-    <li><a href="{{ '/' | append: lang | append: '/' | relative_url }}"{% if page.layout == "home" %} aria-current="page"{% endif %}>{{ t.all }}</a></li>
+    <li><a href="{{ '/' | relative_url }}"{% if page.layout == "landing" %} aria-current="page"{% endif %}>{{ t.all }}</a></li>
     {%- for _c in site.data.categories %}{% if _used contains _c.key %}
     <li><a href="{{ _c[lang].url | relative_url }}"{% if page.category == _c.key %} aria-current="page"{% endif %}>{{ _c[lang].label }}</a></li>
     {%- endif %}{% endfor %}
+    {%- comment -%}
+      The language filter. On the landing page (all languages) each pill opens
+      that language's home. Elsewhere this page's language is the current pill,
+      and the other one opens the same page in that language, or its home.
+    {%- endcomment -%}
+    {%- for _l in site.languages %}
+      {%- if page.layout == "landing" -%}
+        {%- assign _href = '/' | append: _l | append: '/' -%}{%- assign _cur = false -%}
+      {%- elsif _l == lang -%}
+        {%- assign _href = page.url -%}{%- assign _cur = true -%}
+      {%- else -%}
+        {%- assign _href = other_url -%}{%- assign _cur = false -%}
+      {%- endif %}
+    <li{% if forloop.first %} class="lang-filter"{% endif %}><a href="{{ _href | relative_url }}" hreflang="{{ _l }}" lang="{{ _l }}"{% if _cur %} aria-current="page"{% endif %}>{{ site.data.i18n[_l].name }}</a></li>
+    {%- endfor %}
   </ul>
 </nav>
   {%- endif -%}
