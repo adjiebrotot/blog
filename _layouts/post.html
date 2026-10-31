@@ -58,8 +58,8 @@ layout: default
   {%- assign _chunks = content | split: "<h2" -%}
   {%- capture _body -%}
   {%- for _chunk in _chunks -%}
-    {%- unless forloop.first -%}{%- assign _chunk = "<h2" | append: _chunk -%}{%- endunless -%}
-    {%- assign _subs = _chunk | split: "<h3" -%}
+    {%- if forloop.first -%}{%- assign _sec = _chunk -%}{%- else -%}{%- assign _sec = "<h2" | append: _chunk -%}{%- endif -%}
+    {%- assign _subs = _sec | split: "<h3" -%}
     {%- for _sub in _subs -%}
       {%- if forloop.first -%}
         {%- assign _html = _sub -%}
