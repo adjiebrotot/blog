@@ -1,5 +1,19 @@
 {%- assign p = include.post -%}
-<article class="post-card{% if include.featured %} is-featured{% endif %}">
+  {%- assign _img = nil %}
+  {%- if include.thumb %}
+    {%- comment %} The art only: `thumbnail:` if set, else the post's first *-ill-*.webp illustration (as _build/og.mjs picks it). {% endcomment %}
+    {%- if p.thumbnail %}{% assign _img = p.thumbnail %}{% else %}
+      {%- assign _parts = p.content | split: '/assets/img/' %}
+      {%- for _part in _parts offset: 1 %}
+        {%- assign _name = _part | split: '.webp' | first %}
+        {%- if _name contains '-ill-' and _name.size < 80 %}{% assign _img = '/assets/img/' | append: _name | append: '.webp' %}{% break %}{% endif %}
+      {%- endfor %}
+    {%- endif %}
+  {%- endif %}
+<article class="post-card{% if include.featured %} is-featured{% endif %}{% if _img %} has-thumb{% endif %}">
+  {%- if _img %}
+  <a class="post-card-thumb" href="{{ p.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ _img | relative_url }}" alt="" width="1456" height="1087" loading="{% if include.featured %}eager{% else %}lazy{% endif %}" decoding="async"></a>
+  {%- endif %}
   {% include tags.html tags=p.tags lang=include.lang %}
   <h{{ include.level | default: 2 }} class="post-card-title"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h{{ include.level | default: 2 }}>
   {%- if p.description %}
