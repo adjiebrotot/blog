@@ -159,6 +159,8 @@ a.btn-theme { color: var(--text); }
 }
 .cat-nav ul::-webkit-scrollbar { display: none; }
 .cat-nav li { flex-shrink: 0; }
+/* The language pills sit after the categories, behind a thin rule. */
+.cat-nav li.lang-filter { margin-left: 0.35rem; padding-left: 0.75rem; border-left: 1px solid var(--border); }
 .cat-nav a {
   display: inline-block; padding: 0.35rem 0.85rem; border-radius: var(--radius-pill);
   border: 1px solid var(--border); background: var(--card-bg);
