@@ -72,21 +72,26 @@ comments:
   theme_dark: transparent_dark
 
 # Google AdSense. The loader is in head.html; post.html places the in-article
-# unit between sections by word count (first after `first_after` words, then at
-# least `gap` words apart, never with fewer than `tail` words left, at most `max`
-# per post), and the multiplex unit once, after the post (so at least `tail`
-# words from the last in-article unit). A post opts out of both with `ads: false`
-# in its front matter. The slots are the blog's own (In-article 2, Multiplex 3),
-# so AdSense reports them apart from the tool site's; the map of every unit on
+# unit at section breaks (before an h2 or h3) by word count: first after
+# `first_after` words, then at least `gap` words apart, never with fewer than
+# `tail` words left, never right under a heading (`min_lead` words of text
+# before the break), at most `max` per post. That is one ad per two or three
+# minutes of reading, so text always far outweighs ads. The multiplex unit goes
+# once after the post (so at least `tail` words from the last in-article unit),
+# and once under the post lists on the home pages (landing.html, home.html). A
+# post opts out of both units with `ads: false` in its front matter. The slots
+# are the blog's own (In-article 2, Multiplex 3), so AdSense reports them apart
+# from the tool site's; the map of every unit on
 # the three sites is in the tool repo's shared.css, above .ad-slot.
 adsense:
   client: ca-pub-8730116101825381
   in_article_slot: "7068974137"
   multiplex_slot: "6347753554"
-  first_after: 500
-  gap: 1000
-  tail: 400
-  max: 3
+  first_after: 350
+  gap: 600
+  tail: 300
+  min_lead: 60
+  max: 5
 
 # Whitelisted by GitHub Pages. Lets a post keep an old URL alive:
 #   redirect_from: [/en/old-slug/]
