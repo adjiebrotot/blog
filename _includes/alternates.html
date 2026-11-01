@@ -6,7 +6,17 @@
   without one, the English version is.
 {%- endcomment -%}
 {%- if include.doc.translation -%}
-  {%- assign _g = include.docs | where: "translation", include.doc.translation -%}
+  {%- assign _all = include.docs | where: "translation", include.doc.translation -%}
+  {%- comment -%} An empty category page is noindex, so no hreflang points at it. {%- endcomment -%}
+  {%- assign _g = "" | split: "" -%}
+  {%- for _a in _all -%}
+    {%- assign _keep = true -%}
+    {%- if _a.layout == "category" -%}
+      {%- include category-count.html key=_a.category lang=_a.lang -%}
+      {%- if cat_count == 0 -%}{%- assign _keep = false -%}{%- endif -%}
+    {%- endif -%}
+    {%- if _keep -%}{%- assign _g = _g | push: _a -%}{%- endif -%}
+  {%- endfor -%}
   {%- if _g.size > 1 -%}
     {%- assign _xdef = nil -%}
     {%- for _a in _g -%}

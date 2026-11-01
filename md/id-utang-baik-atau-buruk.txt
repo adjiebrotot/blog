@@ -1,0 +1,7 @@
+---
+layout: null
+permalink: /id/utang-baik-atau-buruk/index.md
+md_of: /id/utang-baik-atau-buruk/
+sitemap: false
+---
+{% include post-markdown.txt url=page.md_of %}

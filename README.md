@@ -38,7 +38,17 @@ publishes it. The look comes from the design system of
 4. Give it a social card and a Markdown copy: `node _build/og.mjs` draws
    `assets/img/og/<slug>.jpg` (set it as `image:`), and a stub in `md/` (copy one, see
    `md/README.txt`) publishes the post as Markdown at `<post URL>index.md` for AI readers.
-   After it is live, `node ../tool/_ref/indexnow.mjs <post URL>` asks Bing to crawl it now.
+5. Check it for search and answer engines:
+   `python3 .claude/skills/ai-assisted-blog-post/scripts/check-seo.py <post>.md` (title,
+   description, slug, keywords, the In short block, headings, sources, links, images, the
+   Markdown copy). Fix every ERROR, and every WARN you can.
+6. After it is live, ask the search engines to crawl it now. Google: in
+   [Search Console](https://search.google.com/search-console), URL Inspection → paste the
+   post URL → **Request indexing** (Google does not take IndexNow). Bing and others:
+   `node ../tool/_ref/indexnow.mjs <post URL>`.
+
+A category with no posts in a language is marked `noindex` and left out of the sitemap and
+of `hreflang` until its first post lands, so search engines never see an empty page.
 
 ### Categories
 

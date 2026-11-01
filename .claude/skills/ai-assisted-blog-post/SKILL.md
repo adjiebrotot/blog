@@ -1,6 +1,6 @@
 ---
 name: ai-assisted-blog-post
-description: AI-assisted blog post. Turn Adjie's concept or points into a post he approves before any of it is written. First a draft plan (title, description, outline, opening narrative, planned data, embeds, diagrams and equations, and a list of decisions for him), then one round of revision, then the full post, written per language by separate writer agents from a shared brief, with the Indonesian checked by a separate evaluator agent and every post checked by a reference-checker agent for pointers to other sections. Use when Adjie sends a topic, an idea, rough notes or bullet points and wants a post on this blog, or asks for an "AI-assisted blog post".
+description: AI-assisted blog post. Turn Adjie's concept or points into a post he approves before any of it is written. First a draft plan (title, description, outline, opening narrative, planned data, embeds, diagrams and equations, and a list of decisions for him), then one round of revision, then the full post, written per language by separate writer agents from a shared brief, with the Indonesian checked by a separate evaluator agent and every post checked by a reference-checker agent for pointers to other sections and by an SEO/GEO check (search words, title and description length, the answer up front, sources, links). Use when Adjie sends a topic, an idea, rough notes or bullet points and wants a post on this blog, or asks for an "AI-assisted blog post".
 ---
 
 # AI-assisted blog post
@@ -170,6 +170,9 @@ are, and the post never "corrects" them or carries a disclaimer for them.
 reader curious (the question, the surprise) and does not give the answer away; the answer
 goes in the post's first paragraph. The slug is permanent once it is live,
 so choose it here, in the post's language, short and with the words people search for.
+Plan them for search and answer engines too (the "Search and answer engines" rules below):
+the title at 60 characters or fewer with the main search words first, the description at
+110 to 160 characters, and 3 to 8 keywords in the post's language.
 
 **Outline.** Headings are the real `##` / `###` headings you intend to use, mostly
 questions. Under each, 2 to 5 short bullets: the claim, the number, the example. Mark
@@ -220,6 +223,33 @@ recommendation. Typical ones:
 Keep it to the decisions that matter, usually 3 to 7. Don't ask what the README or the
 style skill already decides.
 
+### Search and answer engines (SEO and GEO)
+
+The layouts already write the canonical URL, hreflang, Open Graph, JSON-LD, the sitemap,
+the feeds and `llms.txt`. What only the post can supply, every plan and every writer
+covers, and `scripts/check-seo.py` checks:
+
+- **Search words, in the post's language.** Find the phrase the reader actually types or
+  asks ("is debt bad", "pajak suami istri gabung atau pisah"), and put it in the slug, the
+  title (first half), the description, the first sentence of the In short block and one
+  `##` heading. Write it naturally, never repeated for its own sake.
+- **Title at 60 characters or fewer.** A longer one is cut in results and loses the blog's
+  name. If the voice needs a longer title, keep it and add `seo_title:` (60 or fewer).
+- **Description at 110 to 160 characters,** still the hook from `README.md`.
+- **The answer first.** The In short block (`{: .tldr}`) answers the question in 40 to 90
+  words with the key number, so an answer engine can quote it whole.
+- **Question headings.** Most `##` headings are the questions a reader would ask, and the
+  first sentence under each answers it plainly before the story.
+- **Facts with sources.** Every figure has a date and a footnote to its primary source;
+  answer engines prefer, and cite, pages that cite.
+- **Links.** At least one link in the text to the most related post on the blog (in the
+  same language), and a link to the Adjie Brotools tool the post uses.
+- **Images.** A social card (`node _build/og.mjs`), `image_alt`, and alt text, width and
+  height on every image.
+- **A Markdown copy:** the `md/<lang>-<slug>.txt` stub (`md/README.txt`).
+- **3 to 8 `keywords:`** in the post's language: the question, the local terms, the tool's
+  name.
+
 ## Step 3: Write the post
 
 After Adjie's reply (and no request for another draft), you are the editor: you prepare
@@ -266,7 +296,9 @@ Each gets only the brief, its own slug and file path, and its own skills:
   writing for Indonesian readers, and runs `scripts/cek.py` until it shows no ERROR. It is
   told not to open the English file and not to translate from the brief's wording.
 
-Each writer runs `adjie-writing-style`'s "Check a draft" list, keeps its approved opening
+Each writer follows the "Search and answer engines" rules in Step 2 and runs
+`python3 .claude/skills/ai-assisted-blog-post/scripts/check-seo.py <file>` until it shows
+no ERROR (and fixes every WARN it can). Each writer runs `adjie-writing-style`'s "Check a draft" list, keeps its approved opening
 narrative with only the edits Adjie asked for, and puts every source in a footnote. Each
 writer is told the same-section rule and runs
 `python3 .claude/skills/adjie-writing-style/scripts/check-references.py <file>` until it
@@ -299,12 +331,17 @@ paragraphs. Repeat until the checker says PASS.
    sentence, and never "fix" one to mirror the other's wording or examples.
 2. Make sure both files are saved as `<lang>/_posts/YYYY-MM-DD-<slug>.md`, with the
    `translation:` key on both if the post is in two languages.
-3. Run the checks in `CLAUDE.md` (`LANG=C.UTF-8 bundle exec jekyll build`, one `<h1>`,
-   valid JSON-LD, feeds and sitemap parse, `hreflang` pairs, no sideways scroll at 390px).
+3. Add the `md/<lang>-<slug>.txt` stub for each post, then run the checks in `CLAUDE.md`
+   (`LANG=C.UTF-8 bundle exec jekyll build`, `scripts/check-seo.py` with no ERROR, one
+   `<h1>`, valid JSON-LD, feeds and sitemap parse, `hreflang` pairs, no sideways scroll at
+   390px). List any WARN you left, with the reason.
 4. Deliver: the file path(s), the defaults you applied for skipped answers, any figure you
    changed or dropped, where the two languages use different examples, the evaluator's
    verdict and any finding you chose not to apply, and anything still waiting on him (an
    embed code, a screenshot). Commit and push as the session's git instructions say.
+5. Remind him of the one step only he can do, once the post is live: in Google Search
+   Console, URL Inspection → paste each post URL → **Request indexing** (Google does not
+   take IndexNow), and `node ../tool/_ref/indexnow.mjs <post URL>` for Bing.
 
 Changes he asks for after this are ordinary edits to the post, not a new round of the
 flow. An edit to the Indonesian still runs `scripts/cek.py` and the evaluator on the
