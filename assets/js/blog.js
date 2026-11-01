@@ -258,6 +258,8 @@
     bar.setAttribute('aria-hidden', 'true');
     var tip = document.createElement('div');
     tip.className = 'read-tip';
+    var thumb = document.createElement('div');
+    thumb.className = 'read-thumb';
     var links = [], fills = [];
     heads.forEach(function (h) {
       var li = document.createElement('li'), a = document.createElement('a');
@@ -267,6 +269,7 @@
       seg.appendChild(fill); bar.appendChild(seg); fills.push(fill);
     });
     rail.appendChild(list);
+    bar.appendChild(thumb);
     bar.appendChild(tip);
     document.body.appendChild(rail);
     var header = document.querySelector('.site-header');
@@ -287,7 +290,8 @@
         if (t <= line) active = i;
         /* Each part fills as its section scrolls into view. */
         var seen = Math.min(Math.max((vh - t) / len, 0), 1);
-        fills[i].style.transform = 'scaleX(' + seen + ')';
+        // While a finger slides along the bar, the fill follows the finger.
+        if (pick < 0) fills[i].style.transform = 'scaleX(' + seen + ')';
         if (!fills[i].parentNode.style.flexGrow) fills[i].parentNode.style.flexGrow = Math.max(len, 1);
       });
       if (atEnd) active = heads.length - 1;
@@ -323,11 +327,24 @@
       }
       return fills.length - 1;
     };
+    /* While picking, the bar becomes a slider: a dot under the finger, and
+       the fill runs from the start up to the dot, backwards as well as
+       forwards. Letting go hands the fill back to the reading progress. */
+    var slide = function (x) {
+      var r = bar.getBoundingClientRect(), half = thumb.offsetWidth / 2;
+      x = Math.min(Math.max(x, r.left + half), r.right - half);
+      thumb.style.left = (x - r.left) + 'px';
+      fills.forEach(function (f) {
+        var s = f.parentNode.getBoundingClientRect();
+        f.style.transform = 'scaleX(' + Math.min(Math.max((x - s.left) / s.width, 0), 1) + ')';
+      });
+    };
     var choose = function (x) {
       var i = partAt(x);
       if (pick > -1) fills[pick].parentNode.classList.remove('is-pick');
       pick = i;
       fills[i].parentNode.classList.add('is-pick');
+      slide(x);
       showTip(i, x);
     };
     var release = function (jump) {
@@ -337,6 +354,7 @@
       }
       pick = -1; startX = null;
       bar.classList.remove('is-scrub');
+      queue();
       tipTimer = setTimeout(function () { tip.classList.remove('is-shown'); }, 900);
     };
     bar.addEventListener('pointerdown', function (e) { startX = e.clientX; });

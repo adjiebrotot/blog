@@ -405,6 +405,12 @@ main { padding: 1rem 0 3rem; }
 .read-bar span { flex: 1 1 0; background: var(--border); overflow: hidden; }
 .read-bar span.is-pick { background: var(--muted); }
 .read-bar i { display: block; height: 100%; background: var(--brand); transform: scaleX(0); transform-origin: left; }
+.read-thumb {
+  position: absolute; top: 50%; left: 0; width: 14px; height: 14px; border: 2px solid var(--panel); border-radius: 50%;
+  background: var(--brand); box-shadow: var(--shadow-lg); pointer-events: none;
+  opacity: 0; transform: translate(-50%, -50%) scale(0.5); transition: opacity var(--motion-fast), transform var(--motion-fast);
+}
+.read-bar.is-scrub .read-thumb { opacity: 1; transform: translate(-50%, -50%) scale(1); }
 .read-tip {
   position: absolute; top: calc(100% + 8px); left: 50%; max-width: calc(100vw - 32px);
   padding: 0.35rem 0.75rem; border: 1px solid var(--border); border-radius: var(--radius-pill);
@@ -414,7 +420,7 @@ main { padding: 1rem 0 3rem; }
 }
 .read-tip.is-shown { opacity: 1; transform: translate(-50%, 0); }
 .read-tip b { color: var(--brand); font-weight: 700; margin-right: 0.35rem; }
-@media (prefers-reduced-motion: reduce) { .read-tip, .read-bar { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .read-tip, .read-bar, .read-thumb { transition: none; } }
 @media (min-width: 1280px) {
   .toc-rail { display: block; }
   .read-bar { display: none; }
