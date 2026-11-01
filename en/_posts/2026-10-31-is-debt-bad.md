@@ -20,7 +20,7 @@ keywords: [is debt bad, good debt vs bad debt, interest free installments, buy n
 Meet three people. The first stares at his phone and winces: $10K owing, and payday is still nine days away. The second hugs her piggy bank and smiles, because she has never owed anyone a cent. And the third, lounging on something that looks suspiciously like a throne, hands his credit card to a waiter and smiles too.
 
 <figure>
-<img src="/assets/img/debt-ill-three-people-en.webp" alt="Three people side by side: a young man on a stool looks sadly at his phone showing DEBT $10K, a smiling woman hugs a pink piggy bank, and a grey-haired man in a suit on a red and gold throne-like chair holds out a gold credit card" width="1456" height="1087" loading="lazy">
+<img src="/assets/img/debt-ill-three-people-en.webp" alt="Three people side by side: a young man on a stool looks sadly at his phone showing DEBT $10K, a smiling woman hugs a pink piggy bank, and a grey-haired man in a suit on a red and gold throne-like chair holds out a gold credit card" width="1200" height="896" loading="lazy">
 </figure>
 
 Two of the three are in debt, and only one of them is worried. If debt is bad, why is the richest person in the picture borrowing on purpose? And where do I sit? Somewhere between the second and the third: the middle class trying very hard to be rich, which so far mostly means I've picked up the third one's habits before his bank balance.
