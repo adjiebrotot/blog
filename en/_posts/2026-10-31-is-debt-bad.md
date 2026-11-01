@@ -154,6 +154,8 @@ So yes, I'll stand by the provocation: all debt is good. Its honest meaning is n
 
 One small thing to try: before you sign your next instalment plan, compare its all-in rate with what your cash earns safely. If the plan has fees, a cash discount or a term you can't eyeball, run it through [Finance vs Cash](https://tool.adjiebrotots.com/financingvscash/) first. (Not financial advice, just maths.)
 
+## References
+
 [^asic]: ASIC Moneysmart, [Payday loans](https://moneysmart.gov.au/loans/payday-loans): small amount credit contracts can charge a one-off establishment fee of up to 20% of the amount borrowed and a monthly account-keeping fee of up to 4%.
 [^tool]: All worked figures in this post (the phone plans and the TV offer) were computed in [Finance vs Cash](https://tool.adjiebrotots.com/financingvscash/), Adjie Brotools, October 2026. The 4.5% savings rate is my assumption for a typical savings account in late 2026.
 [^mozo]: Mozo, [Credit cards](https://www.mozo.com.au/credit-cards), citing Reserve Bank of Australia data: average standard credit card purchase rate of 20.99% a year, 2026.

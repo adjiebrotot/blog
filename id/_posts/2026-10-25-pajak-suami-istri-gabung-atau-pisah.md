@@ -177,6 +177,8 @@ Langkah kecilnya hanya butuh lima menit: sebelum musim SPT berikutnya, buka *too
 
 *Artikel ini berisi penjelasan umum, bukan nasihat pajak untuk kasusmu. Untuk keputusan yang menyangkut perjanjian pisah harta atau penghasilan di luar gaji, bicarakan dengan konsultan pajak atau KPP tempatmu terdaftar.*
 
+## Referensi
+
 [^uupph]: UU Nomor 7 Tahun 1983 tentang Pajak Penghasilan, Pasal 8, sebagaimana diubah terakhir dengan UU Nomor 7 Tahun 2021 (HPP). Ringkasan isinya di [IKPI, "Pisah Harta dan Pajak Istri Pasca Putusan MK"](https://ikpi.or.id/pisah-harta-dan-pajak-istri-pasca-putusan-mk/), 30 Januari 2026.
 [^final]: Syaratnya: penghasilan istri hanya dari satu pemberi kerja, sudah dipotong PPh 21, dan pekerjaannya tidak berhubungan dengan usaha atau pekerjaan bebas suami atau anggota keluarga lain. [DDTCNews, "Kriteria Penghasilan Istri yang Dianggap Final di SPT Tahunan Suami"](https://news.ddtc.co.id/kriteria-penghasilan-istri-yang-dianggap-final-di-spt-tahunan-suami-1817141).
 [^contohdjp]: Contoh resmi DJP untuk PH/MT menggabungkan penghasilan neto suami Rp150 juta dan istri Rp100 juta, memakai PTKP K/3 ditambah Rp54 juta untuk istri (setara K/I/3), lalu membagi pajaknya 150/250 dan 100/250. [pajak.go.id, "Perhitungan Pajak Wanita Kawin"](https://pajak.go.id/id/perhitungan-pajak-wanita-kawin). Contoh itu masih memakai lapisan tarif sebelum UU HPP.
