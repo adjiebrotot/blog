@@ -1,8 +1,9 @@
 /* Adjie Brotot Blog: the only script on the page.
    1. The theme button: flips light / dark and remembers the pick.
    2. Charts embedded from tool.adjiebrotots.com follow the blog's theme. Their
-      link names a theme (#embed=…&theme=light); the tool reads it once when
-      the frame loads, so a frame in the wrong theme is swapped for a fresh one.
+      link names a theme (#embed=…&theme=light, or embed/#…&theme=dark, added
+      here when a pasted chart has none); the tool reads it once when the
+      frame loads, so a frame in the wrong theme is swapped for a fresh one.
    3. kramdown's {:toc} list gets its heading in the page's language.
    4. Rich Markdown in a post, the same set as the tool's Markdown Reader
       (tool.adjiebrotots.com/mdtopdf/): LaTeX through KaTeX, ```mermaid
@@ -51,8 +52,11 @@
     var want = theme();
     Array.prototype.forEach.call(document.querySelectorAll('iframe[src*="tool.adjiebrotots.com"]'), function (f) {
       var src = f.getAttribute('src') || '';
-      if (!/[#&]embed=/.test(src)) return;
+      var whole = /[#&]embed=/.test(src), chart = /\/embed\/#/.test(src);
+      if (!whole && !chart) return;
       var next = src.replace(/([#&]theme=)(light|dark)\b/, '$1' + want);
+      // A chart pasted from "Embed as HTML" has no theme in its link yet.
+      if (chart && !/[#&]theme=/.test(src)) next = src + '&theme=' + want;
       if (next === src) return;
       var fresh = f.cloneNode(false);
       fresh.setAttribute('src', next);
@@ -252,6 +256,8 @@
     var bar = document.createElement('div');
     bar.className = 'read-bar';
     bar.setAttribute('aria-hidden', 'true');
+    var tip = document.createElement('div');
+    tip.className = 'read-tip';
     var links = [], fills = [];
     heads.forEach(function (h) {
       var li = document.createElement('li'), a = document.createElement('a');
@@ -261,6 +267,7 @@
       seg.appendChild(fill); bar.appendChild(seg); fills.push(fill);
     });
     rail.appendChild(list);
+    bar.appendChild(tip);
     document.body.appendChild(rail);
     var header = document.querySelector('.site-header');
     (header || document.body).appendChild(bar);
@@ -287,9 +294,64 @@
       if (active !== current) {
         if (current > -1) links[current].removeAttribute('aria-current');
         if (active > -1) links[active].setAttribute('aria-current', 'true');
+        // On a phone, the section just entered says its name for a moment.
+        if (current > -1 && active > -1 && pick < 0) showTip(active);
         current = active;
       }
     };
+
+    /* On a phone the bar is also the contents: slide a finger along it to
+       pick a section (its name pops down under the bar), let go to jump
+       there. A tap on a part jumps to it too. */
+    var pick = -1, startX = null, tipTimer = null;
+    var showTip = function (i, x) {
+      tip.innerHTML = '';
+      var n = document.createElement('b');
+      n.textContent = (i + 1) + '/' + heads.length;
+      tip.appendChild(n);
+      tip.appendChild(document.createTextNode(heads[i].textContent));
+      var seg = fills[i].parentNode.getBoundingClientRect(), half = tip.offsetWidth / 2, vw = root.clientWidth;
+      if (x == null) x = seg.left + seg.width / 2;
+      tip.style.left = Math.min(Math.max(x, half + 16), vw - half - 16) + 'px';
+      tip.classList.add('is-shown');
+      clearTimeout(tipTimer);
+      if (pick < 0) tipTimer = setTimeout(function () { tip.classList.remove('is-shown'); }, 1200);
+    };
+    var partAt = function (x) {
+      for (var i = 0; i < fills.length; i++) {
+        if (x < fills[i].parentNode.getBoundingClientRect().right) return i;
+      }
+      return fills.length - 1;
+    };
+    var choose = function (x) {
+      var i = partAt(x);
+      if (pick > -1) fills[pick].parentNode.classList.remove('is-pick');
+      pick = i;
+      fills[i].parentNode.classList.add('is-pick');
+      showTip(i, x);
+    };
+    var release = function (jump) {
+      if (pick > -1) {
+        fills[pick].parentNode.classList.remove('is-pick');
+        if (jump) heads[pick].scrollIntoView({ block: 'start' });
+      }
+      pick = -1; startX = null;
+      bar.classList.remove('is-scrub');
+      tipTimer = setTimeout(function () { tip.classList.remove('is-shown'); }, 900);
+    };
+    bar.addEventListener('pointerdown', function (e) { startX = e.clientX; });
+    bar.addEventListener('pointermove', function (e) {
+      if (startX === null) return;
+      if (pick < 0 && Math.abs(e.clientX - startX) < 6) return;
+      if (pick < 0) { bar.classList.add('is-scrub'); try { bar.setPointerCapture(e.pointerId); } catch (err) {} }
+      choose(e.clientX);
+    });
+    bar.addEventListener('pointerup', function (e) {
+      if (startX === null) return;
+      if (pick < 0) choose(e.clientX);
+      release(true);
+    });
+    bar.addEventListener('pointercancel', function () { release(false); });
     var queue = function () { if (!queued) { queued = true; requestAnimationFrame(update); } };
     /* Section lengths change as images, diagrams and embeds load. */
     var resize = function () { fills.forEach(function (f) { f.parentNode.style.flexGrow = ''; }); queue(); };
