@@ -1,0 +1,13 @@
+{%- comment -%}
+  Sets cat_count: how many posts in language include.lang the category page
+  include.key lists. A category with no posts yet is an empty page, so head.html
+  marks it noindex and sitemap.xml leaves it out until its first post lands.
+  Usage: {% include category-count.html key=page.category lang=page.lang %}
+{%- endcomment -%}
+{%- assign cat_count = 0 -%}
+{%- for _p in site.posts -%}
+  {%- if _p.lang == include.lang -%}
+    {%- include post-keys.html tags=_p.tags -%}
+    {%- if post_keys contains include.key -%}{%- assign cat_count = cat_count | plus: 1 -%}{%- endif -%}
+  {%- endif -%}
+{%- endfor -%}

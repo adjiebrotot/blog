@@ -1,0 +1,7 @@
+---
+layout: null
+permalink: /en/is-debt-bad/index.md
+md_of: /en/is-debt-bad/
+sitemap: false
+---
+{% include post-markdown.txt url=page.md_of %}
