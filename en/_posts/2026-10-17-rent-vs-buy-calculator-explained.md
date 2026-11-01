@@ -219,6 +219,8 @@ Don't ask "is renting or buying smarter?" Ask "what does this house earn, and wh
 
 *This post is general information, not financial advice.*
 
+## References
+
 [^reiwa]: REIWA suburb profiles, Perth (Landgate/REIWA medians, 12 months to September 2026), summarised in the [Quick Start assumptions](https://tool.adjiebrotots.com/rentvsownhouse/quickstart-assumptions/): about 17% for houses and 22% for units.
 [^abs]: Australian Bureau of Statistics, [Australia's population up 1.5% in December 2025](https://www.abs.gov.au/media-centre/media-releases/australias-population-15-december-2025): +412,500 people, net overseas migration 301,000, natural increase 111,500, Western Australia fastest at 2.2%.
 [^bps]: BPS-Statistics Indonesia, [SUPAS 2025 press release](https://www.bps.go.id/en/pressrelease/2026/05/05/2645/supas-2025--angka-kelahiran-total--tfr--sebesar-2-13---angka-kematian-bayi--imr--sebesar-14-12--dan-persentase-lansia-mencapai-11-97-persen-.html), 5 May 2026: total fertility rate 2.13.

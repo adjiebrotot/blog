@@ -219,6 +219,8 @@ Itulah sebabnya, alih-alih bertanya "sewa atau beli, mana yang lebih pintar?", l
 
 *Tulisan ini berisi informasi umum, bukan nasihat keuangan.*
 
+## Referensi
+
 [^reiwa]: REIWA, profil kawasan Perth (median Landgate/REIWA, 12 bulan sampai September 2026), diringkas di [halaman asumsi Quick Start](https://tool.adjiebrotots.com/rentvsownhouse/quickstart-assumptions/): sekitar 17% untuk rumah tapak dan 22% untuk unit.
 [^abs]: Australian Bureau of Statistics, [Australia's population up 1.5% in December 2025](https://www.abs.gov.au/media-centre/media-releases/australias-population-15-december-2025): +412.500 orang, migrasi bersih dari luar negeri 301.000, pertambahan alami 111.500, Australia Barat tercepat 2,2%.
 [^bps]: BPS, [siaran pers SUPAS 2025](https://www.bps.go.id/en/pressrelease/2026/05/05/2645/supas-2025--angka-kelahiran-total--tfr--sebesar-2-13---angka-kematian-bayi--imr--sebesar-14-12--dan-persentase-lansia-mencapai-11-97-persen-.html), 5 Mei 2026: angka kelahiran total 2,13.
