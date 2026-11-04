@@ -348,9 +348,8 @@ follows this skill:
   no italics (a `title` attribute cannot hold them anyway).
 - A foreign country or currency code is explained in Indonesian: `*[US]: United States,
   Amerika Serikat`, `*[NOK]: krone Norwegia`.
-- Short forms count: `*[vs]: versus`, `*[dll]: dan lain-lain`, `*[Kemenkeu]: Kementerian
-  Keuangan`. Write them out in full in running prose if you can (*dan lain-lain*), and
-  define the short form where it stays.
+- Short forms count: `*[Kemenkeu]: Kementerian Keuangan`. The very obvious ones (*vs*,
+  *dll*, *US*, *AS*) get no line.
 - No em-dashes, no casual words: the meaning is factual layer.
 - Run `python3 .claude/skills/adjie-writing-style/scripts/check-abbr.py <file>` next to
   `cek.py`.

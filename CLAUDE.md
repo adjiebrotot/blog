@@ -69,7 +69,7 @@ Write it natively from the case, never by translating the English post sentence 
 post (the end is tidy), as a kramdown line `*[TERM]: meaning`, and the site renders every
 use as `<abbr title="meaning">` with a hover, focus and tap bubble. This covers acronyms and
 initialisms (DPR, KPR, GDP, ATO, CNN), codes and labels (TK/0, Q2, YA2026, IV/e), and short
-forms (vs, dll, a.k.a, Kemenkeu), in prose, headings, tables, link text, captions and the
+forms (dkk, Kemenkeu), in prose, headings, tables, link text, captions and the
 source list alike, even when the post already spells the term out once in the sentence.
 
 - Kramdown matches the exact term, as a whole word, case-sensitive. `MPs` needs its own line
@@ -77,9 +77,10 @@ source list alike, even when the post already spells the term out once in the se
 - The meaning is the full name plus, when a reader may not know it, a few words on what it is
   ("Badan Pusat Statistik, Statistics Indonesia"). In Indonesian, write it per the
   `bahasa-indonesia` skill.
-- Not abbreviations, so not defined: currency symbols and number suffixes (Rp, A$, US$ is
-  covered through `US`, 850k, 1.27bn), roman numerals, hashtags, and brand or site names that
-  stand for nothing (LinkedIn, DDTCNews). A capitalised brand the checker flags goes in
+- Not defined: very obvious ones that every reader knows (vs, US, UK, TV, PDF, a.k.a, dll;
+  the checker skips them), currency symbols and number suffixes (Rp, A$, 850k, 1.27bn),
+  roman numerals, hashtags, and brand or site names that stand for nothing (LinkedIn,
+  DDTCNews). A capitalised brand the checker flags goes in
   `<!-- abbr-ok: TERM -->`.
 - Define a term in the post that uses it. Two posts never share definitions, and a pair in
   two languages each carries its own (the meaning in that language).

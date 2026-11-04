@@ -239,8 +239,5 @@ Don't ask "is renting or buying smarter?" Ask "what does this house earn, and wh
 *[BPHTB]: Bea Perolehan Hak atas Tanah dan Bangunan, Indonesia's land and building acquisition duty
 *[REIWA]: Real Estate Institute of Western Australia
 *[UBS]: the Swiss bank that publishes the Global Wealth Report
-*[US]: United States
 *[ABC]: Australian Broadcasting Corporation
 *[Q2]: second quarter
-*[vs]: versus
-*[a.k.a]: also known as

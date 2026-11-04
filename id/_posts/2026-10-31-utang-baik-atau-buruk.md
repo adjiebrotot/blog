@@ -157,4 +157,3 @@ Semua hasil skenario (cicilan HP dan laptop) dihitung dengan [*tool* Finance vs 
 *[APR]: Annual Percentage Rate
 *[BI]: Bank Indonesia
 *[HP]: handphone, telepon seluler
-*[vs]: versus

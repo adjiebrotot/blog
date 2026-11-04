@@ -182,7 +182,6 @@ Kita tentu tidak bisa mengubah semua itu dalam semalam, tetapi kita bisa mulai d
 *[AAP]: Australian Associated Press
 *[ABC]: Australian Broadcasting Corporation
 *[AFL-CIO]: American Federation of Labor and Congress of Industrial Organizations
-*[AS]: Amerika Serikat
 *[BLS]: Bureau of Labor Statistics, badan statistik tenaga kerja Amerika Serikat
 *[CN]: Tiongkok, seperti pada CN¥, yuan Tiongkok
 *[CNN]: Cable News Network
@@ -199,7 +198,6 @@ Kita tentu tidak bisa mengubah semua itu dalam semalam, tetapi kita bisa mulai d
 *[ONS]: Office for National Statistics, badan statistik Inggris
 *[PSA]: Philippine Statistics Authority, badan statistik Filipina
 *[SSB]: Statistisk sentralbyrå, badan statistik Norwegia
-*[US]: United States, Amerika Serikat
 
 ## Referensi
 

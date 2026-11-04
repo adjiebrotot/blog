@@ -164,6 +164,3 @@ One small thing to try: before you sign your next instalment plan, compare its a
 
 *[APR]: Annual Percentage Rate
 *[ASIC]: Australian Securities and Investments Commission
-*[TV]: television
-*[vs]: versus
-*[a.k.a]: also known as

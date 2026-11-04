@@ -242,6 +242,4 @@ Itulah sebabnya, alih-alih bertanya "sewa atau beli, mana yang lebih pintar?", l
 *[DP]: Down Payment, uang muka pembelian rumah
 *[REIWA]: Real Estate Institute of Western Australia, asosiasi properti di Australia Barat
 *[UBS]: bank asal Swiss yang menerbitkan Global Wealth Report
-*[US]: United States, Amerika Serikat
 *[ABC]: Australian Broadcasting Corporation, lembaga penyiaran publik Australia
-*[vs]: versus

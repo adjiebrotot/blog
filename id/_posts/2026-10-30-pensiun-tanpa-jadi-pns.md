@@ -230,4 +230,3 @@ Semua hasil skenario dihitung dengan [*tool* Financial Freedom Calculator](https
 *[S2]: Strata 2, jenjang pendidikan magister
 *[SG]: Superannuation Guarantee, iuran pensiun wajib dari pemberi kerja di Australia
 *[UBS]: bank asal Swiss yang menerbitkan Global Wealth Report
-*[US]: United States, Amerika Serikat

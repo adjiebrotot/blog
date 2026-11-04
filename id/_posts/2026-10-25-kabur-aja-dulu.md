@@ -194,4 +194,3 @@ Kalau kamu sedang menimbang untuk pindah, mulailah dari selisih itu, bukan dari 
 *[UMP]: Upah Minimum Provinsi
 *[UU]: Undang-Undang
 *[YA2026]: Year of Assessment 2026, tahun pajak 2026 di Singapura
-*[dll]: dan lain-lain

@@ -179,12 +179,12 @@ These override anything above.
   - Plan for it: put each figure in the section that talks about it, and don't promise a
     later section ("I will show that further down"). Show it there, or say it here.
 - **Every abbreviation is wrapped in `<abbr>`.** Acronyms, codes and short forms (DPR, KPR,
-  GDP, TK/0, Q2, vs, dll) each get one `*[TERM]: meaning` line in the post, which kramdown
+  GDP, TK/0, Q2) each get one `*[TERM]: meaning` line in the post, which kramdown
   turns into `<abbr title="meaning">` on every use, in prose, headings, tables, link text and
   the source list. Spelling a term out in the sentence is good for the reader but does not
   replace the line. Plurals are separate terms (`MP` and `MPs`). Currency symbols, number
-  suffixes (Rp, 850k), roman numerals and brand names that stand for nothing are not
-  abbreviations. Write the definitions as you write the post, not after: every time you type
+  suffixes (Rp, 850k), roman numerals, brand names that stand for nothing and the very
+  obvious (vs, US, TV, PDF, a.k.a, dll) are not defined. Write the definitions as you write the post, not after: every time you type
   an abbreviation you have not defined yet, add its line. Check every post with
   `python3 .claude/skills/adjie-writing-style/scripts/check-abbr.py <file>` (no ERROR), then
   read once for mixed-case short forms the script cannot see (Kemenkeu, MaPS). Full rule:

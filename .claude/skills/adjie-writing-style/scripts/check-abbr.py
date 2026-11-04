@@ -10,12 +10,12 @@ it as <abbr title="meaning">. Kramdown matches the exact term, whole word, case-
 
 It prints:
 
-- ERROR: an all-caps term (DPR, KPR, US, Q2, TK/0, S&P, AFL-CIO...) or a known short form
-  (vs, dll, a.k.a...) that is used but not defined. Define it, or, if it is a brand and not an
+- ERROR: an all-caps term (DPR, KPR, Q2, TK/0, S&P, AFL-CIO...) or a known short form
+  (dkk, e.g...) that is used but not defined. Define it, or, if it is a brand and not an
   abbreviation, add `<!-- abbr-ok: TERM -->` anywhere in the post.
 - WARN: a definition the post never uses (stale), or a definition written twice.
 
-Not checked, on purpose: currency symbols and number suffixes (Rp, A$, 850k, 1.27bn), roman
+Not checked, on purpose: very obvious ones (vs, US, UK, TV, PDF, a.k.a, dll), currency symbols and number suffixes (Rp, A$, 850k, 1.27bn), roman
 numerals, and mixed-case short forms such as Kemenkeu or MaPS. Those are the writer's call, so
 read the post once for them. Exit code 1 if any ERROR.
 """
@@ -23,9 +23,11 @@ import re
 import sys
 
 # Lowercase short forms the all-caps scan cannot see. Add to this list when a new one turns up.
-SHORT_FORMS = ["vs", "dll", "dkk", "dsb", "dst", "a.k.a", "e.g", "i.e", "etc", "approx", "yg", "dgn"]
-# Markers and labels that are not abbreviations of anything the reader needs explained.
-SKIP = {"TOC", "NOTE", "TIP", "IMPORTANT", "WARNING", "CAUTION"}
+SHORT_FORMS = ["dkk", "dsb", "dst", "e.g", "i.e", "approx", "yg", "dgn"]
+# Markers and labels that are not abbreviations of anything the reader needs explained, and
+# abbreviations so obvious that a tooltip is clutter (vs, a.k.a, dll are not in SHORT_FORMS).
+SKIP = {"TOC", "NOTE", "TIP", "IMPORTANT", "WARNING", "CAUTION",
+        "US", "UK", "AS", "TV", "PDF", "SUV", "SUVs", "ID", "OK", "AI"}
 
 DEF = re.compile(r"^\*\[([^\]]+)\]:\s*(.*)$")
 TOKEN = re.compile(r"(?<![\w/@.#$&-])([A-Z][A-Z0-9]*[A-Z0-9](?:[/&-][A-Za-z0-9]+)*s?)(?![\w])")

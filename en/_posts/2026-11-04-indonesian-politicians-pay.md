@@ -226,8 +226,6 @@ If you are Indonesian, here is one small thing to start with: ask for the receip
 *[PSA]: Philippine Statistics Authority
 *[Q1]: first quarter
 *[SSB]: Statistisk sentralbyrå, Statistics Norway
-*[SUVs]: sport utility vehicles
-*[US]: United States
 *[VND]: Vietnamese dong
 
 ## References

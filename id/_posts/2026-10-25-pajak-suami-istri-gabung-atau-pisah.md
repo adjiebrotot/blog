@@ -218,4 +218,3 @@ Langkah kecilnya hanya butuh lima menit: sebelum musim SPT berikutnya, buka *too
 *[JDIH]: Jaringan Dokumentasi dan Informasi Hukum
 *[Kemenkeu]: Kementerian Keuangan
 *[MK]: Mahkamah Konstitusi
-*[vs]: versus
