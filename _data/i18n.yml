@@ -37,11 +37,6 @@ en:
   about_me: About me
   elsewhere: Elsewhere
   privacy: Privacy Policy
-  # The Buy Me a Coffee link at the end of a post and in the footer.
-  support_note: "Found this useful? The blog and the tools stay free, and an iced latte keeps the late nights going."
-  support_cta: Buy me an iced latte
-  support_aria: "Buy me an iced latte on Buy Me a Coffee (opens in a new tab)"
-  support_footer: Buy me a coffee
   not_found_hand: "oops, wrong stop"
   not_found_heading: "This page took a different train."
   not_found_lead: "The address doesn't exist, or it moved. Hop back on at one of these:"
@@ -110,11 +105,6 @@ id:
   about_me: Tentang saya
   elsewhere: Tautan lain
   privacy: Kebijakan Privasi
-  # Tautan Buy Me a Coffee di akhir artikel dan di kaki halaman.
-  support_note: "Kalau tulisan ini bermanfaat, kamu bisa mentraktir saya segelas es kopi susu. Blog dan <em>tool</em> di sini tetap gratis, dan kopi itulah yang menemani saya bekerja sampai larut malam."
-  support_cta: Traktir saya es kopi susu
-  support_aria: "Traktir saya es kopi susu lewat Buy Me a Coffee (terbuka di tab baru)"
-  support_footer: Traktir saya kopi
   not_found_hand: "ups salah stasiun"
   not_found_heading: "Halaman ini salah naik kereta."
   not_found_lead: "Alamatnya gak ada, atau sudah pindah. Naik lagi dari salah satu stasiun ini:"
