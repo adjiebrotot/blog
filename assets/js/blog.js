@@ -116,10 +116,21 @@
     if (!mermaidReady) mermaidReady = loadScript(MERMAID);
     mermaidReady.then(function () {
       window.mermaid.initialize(mermaidTheme());
+      /* Render off screen at full width: Mermaid measures text in screen pixels,
+         so a chart drawn inside a phone-width box leaves too little room for its
+         axis labels and clips them. CSS then scales the finished SVG down. */
+      var stage = document.createElement('div');
+      stage.setAttribute('aria-hidden', 'true');
+      stage.style.cssText = 'position:absolute;left:-10000px;top:0;width:800px;visibility:hidden';
+      document.body.appendChild(stage);
+      var left = diagrams.length;
+      function done() { if (--left === 0) stage.remove(); }
       diagrams.forEach(function (box, i) {
-        window.mermaid.render('mmd-' + i + '-' + Date.now().toString(36), box.dataset.src).then(function (r) {
+        window.mermaid.render('mmd-' + i + '-' + Date.now().toString(36), box.dataset.src, stage).then(function (r) {
           box.innerHTML = r.svg;
+          done();
         }, function () {
+          done();
           var pre = document.createElement('pre');
           pre.textContent = box.dataset.src;
           box.replaceChildren(pre);

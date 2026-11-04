@@ -164,7 +164,7 @@ I used the same yardstick as for Australia and Indonesia: the leader's salary di
 | Philippines | President: ₱449,157 a month (from 1 January 2026)[^philippines] | Average full-time wage ₱21,544 a month (2024) | 20.8x |
 
 ```mermaid
-xychart-beta
+xychart-beta horizontal
   title "Leader's pay as a multiple of a typical wage"
   x-axis [China, Norway, Vietnam, UK, Malaysia, US, "S. Korea", Thailand, Japan, Australia, Indonesia, Philippines]
   y-axis "Multiple of a typical wage" 0 --> 22
@@ -174,6 +174,31 @@ xychart-beta
 The two highest multiples, Indonesia's 18.8 and the Philippines' 20.8, are if anything too low. Indonesia's is an average, and a median would most likely be lower. The Philippine wage comes from a survey of formal businesses with at least ten workers, which leaves out the informal sector, where pay is lower.
 
 The point is simple. Most countries in the table, rich ones like Norway and Australia and Asian ones like Thailand, Vietnam and South Korea, pay their leader less than 9 times what their people earn. Indonesia sits in the top group with the Philippines. And the 18.8 doesn't even include an ex-president's lifetime perks, while a DPR member, recess funds counted, is at about 85 times the average wage.
+
+Ordinary MPs show the same pattern. For each country I added up the salary and the fixed allowances paid to a backbench MP personally, and divided by the same typical wage as in the leaders' table. Office budgets, staff and constituency funds, the DPR's recess money included, are left out. On that measure a DPR member earns 22.3 times the average Indonesian wage, the highest of the ten countries and well clear of the Philippines in second place at 14.0. MPs in Norway, the UK and the US get between 2 and 3.5 times what their people earn.
+
+| Country | MP's pay and allowances | Typical wage | Multiple |
+| --- | --- | --- | --- |
+| Norway | NOK 1,272,209 a year (from 1 May 2026)[^mp-norway] | Median NOK 669,600 a year (2025) | 1.9x |
+| United Kingdom | £98,599 a year (from 1 April 2026)[^mp-uk] | Median full-time £39,039 (April 2025) | 2.5x |
+| United States | US$174,000 a year (unchanged since 2009)[^mp-us] | BLS median annual wage US$50,980 (2025) | 3.4x |
+| Australia | About A$311,270 a year (base salary, electorate allowance, Canberra travel allowance)[^remtrib][^electorate][^travel] | Median A$74,100 a year (August 2025)[^absmedian] | 4.2x |
+| Japan | About ¥21.7 million a year (salary and bonuses)[^mp-japan] | Average private-sector salary ¥4.87 million (2025) | 4.5x |
+| South Korea | About ₩161 million a year (2026)[^mp-korea] | Median ₩2.88 million a month (December 2024) | 4.7x |
+| Thailand | ฿113,560 a month[^mp-thailand] | Average employee wage ฿15,675 a month (Q1 2026) | 7.2x |
+| Malaysia | RM25,700 a month (RM16,000 base plus fixed allowances)[^mp-malaysia] | Median RM2,940 a month (2025) | 8.7x |
+| Philippines | ₱300,961 a month (base salary only, from 1 January 2026)[^mp-philippines] | Average full-time wage ₱21,544 a month (2024) | 14.0x |
+| Indonesia | About Rp74.2 million a month (gross, September 2025)[^dpr] | BPS average wage of employees Rp3.33 million a month (August 2025)[^bpswage] | 22.3x |
+
+```mermaid
+xychart-beta horizontal
+  title "MP's pay as a multiple of a typical wage"
+  x-axis [Norway, UK, US, Australia, Japan, "S. Korea", Thailand, Malaysia, Philippines, Indonesia]
+  y-axis "Multiple of a typical wage" 0 --> 24
+  bar [1.9, 2.5, 3.4, 4.2, 4.5, 4.7, 7.2, 8.7, 14.0, 22.3]
+```
+
+China and Vietnam are missing from the MP table on purpose. Most of their legislators are part-time and keep their day jobs, so there is no MP salary to compare fairly. The Philippine figure is too low as well: it is the base salary of a member of the House of Representatives, and their allowances, which are large, aren't published in detail.
 
 ## What would I rather argue about?
 
@@ -227,6 +252,8 @@ If you are Indonesian, here is one small thing to start with: ask for the receip
 *[Q1]: first quarter
 *[SSB]: Statistisk sentralbyrå, Statistics Norway
 *[VND]: Vietnamese dong
+*[IPSA]: Independent Parliamentary Standards Authority, which sets and pays UK MPs' salaries
+*[PBS]: Public Broadcasting Service (Thai PBS, Thailand's public broadcaster)
 
 ## References
 
@@ -269,5 +296,13 @@ If you are Indonesian, here is one small thing to start with: ask for the receip
 [^bk-turkey]: JPNN, [Tanpa ketuanya, BK DPR tetap ke Yunani](https://www.jpnn.com/news/tanpa-ketuanya-bk-dpr-tetap-ke-yunani), 19 October 2010 (Gayus Lumbuun's refusal, six-day trip); Kontan, [Pelesiran ke Turki, 8 anggota DPR diadukan ke Badan Kehormatan](https://nasional.kontan.co.id/news/pelesiran-ke-turki-8-anggota-dpr-diadukan-ke-badan-kehormatan-1) (the ten NGOs' complaint).
 [^per-diem]: CNN Indonesia, [Intip uang saku DPR ke luar negeri yang akan dimoratorium buntut demo](https://www.cnnindonesia.com/ekonomi/20250902182852-532-1269374/intip-uang-saku-dpr-ke-luar-negeri-yang-akan-dimoratorium-buntut-demo), 3 September 2025: tier-A daily allowance under PMK 32/2025, US$347 to US$792 (UK) per person per day, at Rp16,412 to the US dollar (September 2025). US$792 x Rp16,412 = about Rp13 million; Rp13 million / Rp3.33 million = 3.9.
 [^moratorium]: Suara.com, [DPR setop kunjungan kerja ke luar negeri](https://www.suara.com/news/2025/09/05/211435/dpr-setop-kunjungan-kerja-ke-luar-negeri-dasco-janji-buka-bukaan), 5 September 2025: moratorium from 1 September 2025, except for state invitations.
+[^mp-norway]: Stortinget, [Godtgjøring](https://stortinget.no/no/Stortinget-og-demokratiet/Representantene/representantordninger/godtgjoring/): a Storting member's fixed allowance is NOK 1,272,209 a year from 1 May 2026. NOK 1,272,209 ÷ NOK 669,600 ≈ 1.9.
+[^mp-uk]: IPSA, [IPSA confirms decision on MPs' pay for 2026-27](https://www.theipsa.org.uk/news/ipsa-confirms-decision-on-mps-pay-for-2026-27), March 2026: £98,599 from 1 April 2026. £98,599 ÷ £39,039 ≈ 2.5.
+[^mp-us]: Clerk of the House of Representatives, [Salaries](https://clerk.house.gov/documents/Salary.pdf), as of 21 January 2026: US$174,000 for members of Congress, unchanged since 2009. US$174,000 ÷ US$50,980 ≈ 3.4.
+[^mp-japan]: Zeiri4, [国会議員の年収](https://www.zeiri4.com/c_1076/n_1142/), 21 November 2023: salary (*saihi*) ¥1,294,000 a month (¥15,528,000 a year) plus bonuses (*kimatsu teate*) of about ¥6.2 million a year. I left out the ¥1 million a month research, communication and accommodation fund, which is tax-free and meant for members' activities. ¥21.7 million ÷ ¥4.87 million ≈ 4.5.
+[^mp-korea]: The Fact (더팩트), via [Daum](https://v.daum.net/v/WdzvOHztov), 9 February 2026: about ₩161 million a year in 2026, including about ₩37.63 million in legislative activity expenses and ₩9.41 million in special activity expenses. ₩161 million ÷ (₩2.88 million × 12) ≈ 4.7.
+[^mp-thailand]: Thai PBS, [เปิดรายได้ ส.ส. - ส.ว.](https://www.thaipbs.or.th/now/content/563196), 25 May 2023: salary ฿71,230 plus an additional allowance of ฿42,330, ฿113,560 a month in total. ฿113,560 ÷ ฿15,675 ≈ 7.2.
+[^mp-malaysia]: Free Malaysia Today, [Doctors grouse over why MPs get so much more money](https://www.freemalaysiatoday.com/category/nation/2025/09/07/doctors-grouse-over-why-mps-get-so-much-more-money), 7 September 2025: base salary RM16,000 a month plus fixed allowances for entertainment (RM2,500), transport (RM1,500), a driver (RM1,500), ceremonial dress (RM1,500), fuel (RM1,500), phone (RM900) and tolls (RM300), RM25,700 in total. The RM400 daily sitting allowance is left out. RM25,700 ÷ RM2,940 ≈ 8.7.
+[^mp-philippines]: Philstar, [How much will govt workers get in 3rd tranche salary increase](https://www.philstar.com/headlines/2026/01/03/2498499/how-much-will-govt-workers-get-3rd-tranche-salary-increase), 3 January 2026, under DBM's [National Budget Circular No. 601](https://www.dbm.gov.ph/wp-content/uploads/Issuances/2026/National-Budget-Circular/NATIONAL-BUDGET-CIRCULAR-NO.-601_NEW.pdf): Salary Grade 31 (members of the House of Representatives), step 1, ₱300,961 a month from 1 January 2026, excluding allowances. ₱300,961 ÷ ₱21,544 ≈ 14.0.
 
 <!-- abbr-ok: LSVN -->
