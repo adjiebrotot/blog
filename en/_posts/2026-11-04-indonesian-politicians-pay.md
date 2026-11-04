@@ -11,7 +11,7 @@ translation: politician-pay
 keywords: [Indonesian politicians pay, DPR salary, Indonesian president salary, Australian MP salary, Australian prime minister salary, politician pay vs minimum wage, DPR allowances, reses funds]
 ---
 
-**In short:** Indonesian politicians' pay is far higher than Australia's once you measure it against what ordinary workers earn. Australia's Prime Minister earns 11.9 times the national minimum wage; Indonesia's president, 17.9 times the average provincial minimum wage. An Australian backbench MP's base salary is 4.6 times the minimum wage; a DPR member takes home 18.7 times, about 80 times with recess funds. Then add Indonesia's lifetime perks for ex-presidents and daily motorcades, against Australia's per-person expense reports, published every quarter.
+**In short:** Indonesian politicians' pay is far higher than Australia's once you measure it against what ordinary workers earn. Australia's Prime Minister earns 11.9 times the national minimum wage; Indonesia's president, 17.9 times the average provincial minimum wage. An Australian backbench MP's pay and allowances come to 6.0 times the minimum wage; a DPR member's to 21.1 times (18.7 after tax). With constituency funds, it is about 12 times against about 80. Then add Indonesia's lifetime perks for ex-presidents and its motorcades, against Australia's per-person expense reports, published every quarter.
 {: .tldr}
 
 * TOC
@@ -71,7 +71,7 @@ An Indonesian ex-president, under Law 7 of 1978, keeps a pension of 100% of the 
 
 ## How much does an MP take home in Jakarta versus Canberra?
 
-A member of the DPR, Indonesia's 580-member House of Representatives, takes home about 18.7 times the average provincial minimum wage, and about 80 times once recess funds are counted. An Australian backbench MP's base salary is 4.6 times the minimum wage, and about 12 times with everything included.
+A member of the DPR, Indonesia's 580-member House of Representatives, gets pay and allowances worth 21.1 times the average provincial minimum wage (18.7 times after tax), and about 80 times once recess funds are counted. An Australian backbench MP's pay and allowances come to 6.0 times the minimum wage, and about 12 times with everything included.
 
 When you hear "DPR" in Indonesia, you picture immense power and a lot of money. In Australia, a backbench MP looks more like a manager or director at a mid-sized company: an executive, not royalty.
 
@@ -94,8 +94,8 @@ Electorate staff, paid separately, and Comcar, the government car service with a
 Now a DPR member, after the allowances were cut at the end of August 2025.[^dpr]
 
 - **Base salary:** Rp4,200,000 a month. Small, because almost all of the money comes as allowances.
-- **Gross pay and allowances:** about Rp74.2 million a month. After 15% income tax, the take-home is Rp65,595,730.
-- **Before the cut**, which included a Rp50 million housing allowance: Rp104.1 million a month.
+- **Gross pay and allowances:** about Rp74.2 million a month. After about Rp8.6 million of income tax, the take-home is Rp65,595,730.
+- **Before several allowances were cut**, the Rp50 million housing allowance among them, the total was reported at Rp104.1 million a month.
 - **Recess funds (*dana reses*):** money for the recess, when members go back to their constituencies. About Rp500 million per recess since November 2025, cut from Rp702 million after a ruling by the DPR's ethics council (MKD), and about five recesses a year.[^reses] That is about Rp2.5 billion a year, or about Rp208 million a month.
 
 Against the average UMP of Rp3.51 million, the take-home is 18.7 times; gross pay is 21.1 times; before the 2025 cut it was 29.7 times. Gross pay plus recess funds comes to about Rp282 million a month: about 80 times.
@@ -123,7 +123,7 @@ Because in Australia, almost nobody in politics gets one. In almost two years in
 
 The Australian Federal Police (AFP) protects "high office holders": the Governor-General, the Prime Minister, ministers, the Presiding Officers of parliament, and the Leader and Deputy Leader of the Opposition, as well as visiting dignitaries such as heads of state, the King included when he visits.[^afp] In practice, only the Prime Minister has full-time close personal protection; ministers get it when a risk assessment calls for it. A backbench MP has no escort and no permanent security. MPs can use Comcar for parliamentary business, but that is a car with a driver, not a convoy that clears the road.
 
-In Jakarta, sirens and strobe lights for the president, ministers and even DPR members are a daily sight. In September 2025, ordinary road users had had enough: the "Stop tot tot wuk wuk" movement (named after the sound of the sirens) went viral, and the traffic police (Korlantas Polri) froze the use of sirens and strobes for escorts, though the escorts themselves continued. In late November 2025, they froze escort services altogether for evaluation.[^korlantas]
+In Jakarta, sirens and strobe lights for the president, ministers and even DPR members were a daily sight. In September 2025, ordinary road users had had enough: the "Stop tot tot wuk wuk" movement (named after the sound of the sirens) went viral, and the traffic police (Korlantas Polri) froze the use of sirens and strobes for escorts, though the escorts themselves continued. In late November 2025, they froze escort services altogether for evaluation.[^korlantas]
 
 It took a viral meme to get a pause button. In Perth, nobody ever pressed play.
 
@@ -139,13 +139,13 @@ I won't pretend this is nothing. Business-class flights for family members on th
 
 ## And what about Indonesia's *perjalanan dinas*?
 
-Official travel (*perjalanan dinas*) in Indonesia is where the comparison gets uncomfortable, because the public sees only audit totals, years later. In my view, the whole Australian "scandal" would look small next to it: the largest Australian case is perhaps the size of a single trip for some Indonesian officials.
+Official travel (*perjalanan dinas*) in Indonesia is where the comparison gets uncomfortable, because the public sees only audit totals, a year or more later. In my view, Australia's travel-expense scandals would look small next to it: the biggest bill any one Australian MP ran up, Don Farrell's A$116,306 in family travel since the 2022 election, is perhaps the size of a single trip for some Indonesian officials.
 
 That is my opinion, but here is a number to anchor it. In its audit of 2023 spending, reported in June 2024, Indonesia's state auditor (BPK) found irregularities in official-travel spending worth Rp39.26 billion across 46 ministries and agencies, mostly trips that didn't match the rules and overpayments. BPK called official-travel findings recurring, and said they are often deliberate and fictitious.[^bpk]
 
 Rp39.26 billion is the yearly minimum wage of about 930 workers at the 2026 average UMP. At about Rp12,500 to the dollar, it is about A$3.1 million.[^fx] That's for one year, and it is only the part that was irregular and that the auditors happened to catch. Australia's A$4 million family-travel bill covered more than three years and all of the spending, not just the irregular part, and it was still a scandal.
 
-The deeper difference isn't the size of the sums. In Indonesia, the public sees an audit total years later. In Australia, the public sees each person's bill every quarter.
+The deeper difference isn't the size of the sums. In Indonesia, the public sees an audit total a year or more later. In Australia, the public sees each person's bill every quarter.
 
 ## Is Indonesia an outlier, or is this normal?
 
@@ -183,7 +183,7 @@ Policy. In Australia, I spend far less of my political energy on what officials 
 
 That should be the bare minimum of political debate: arguing about what our leaders decide, not about what they help themselves to.
 
-So is Indonesia's gap just what a big, crowded country looks like? No. Indonesia is about as wide as Australia, and Australia's MPs still live like managers. What Indonesia has is f\*cked-up incentives and opacity: generous pay and perks, sirens on demand, and spending the public can only see in aggregate, years late. None of that is a law of nature. All of it is a choice, and choices can be changed.
+So is Indonesia's gap just what a big, crowded country looks like? No. Indonesia is about as wide as Australia, and Australia's MPs still live like managers. What Indonesia has is f\*cked-up incentives and opacity: generous pay and perks, sirens on demand, and spending the public can only see in aggregate, a year or more late. None of that is a law of nature. All of it is a choice, and choices can be changed.
 
 **In Jakarta, you see the motorcade but never the bill; in Perth, you see the bill but never the motorcade.**
 
@@ -217,7 +217,7 @@ If you are Indonesian, here is one small thing to start with: ask for the receip
 [^electorate]: Department of Finance, Members of Parliament Staff and Resources, [Electorate allowance](https://maps.finance.gov.au/node/1032), May 2025: A$39,700, A$47,200 or A$57,100 a year, depending on the size of the electorate.
 [^travel]: Independent Parliamentary Expenses Authority, [Travel allowance](https://www.ipea.gov.au/node/43085), rates set by the Remuneration Tribunal; about A$310 a night for Canberra, as reported in the press in 2025. The 80 nights a year is my own estimate for sitting days.
 [^office]: Department of Finance, [Office expenses budget](https://maps.finance.gov.au/offices-resources-and-budgets/office-expenses-budget), 2025-26: A$170,631.24 plus A$1.272 per enrolled voter for House members. My calculation for 121,000 voters: A$170,631 + A$1.272 x 121,000 = about A$324,000.
-[^dpr]: detik.com, [Take home pay DPR usai pangkas banyak tunjangan Rp 65,5 juta](https://news.detik.com/berita/d-8098119/take-home-pay-dpr-usai-pangkas-banyak-tunjangan-rp-65-5-juta), September 2025; Kontan, [Resmi, tunjangan perumahan dihapus](https://nasional.kontan.co.id/news/resmi-tunjangan-perumahan-dihapus-ini-sisa-gaji-tunjangan-anggota-dpr-terbaru), September 2025: base salary Rp4.2 million, gross about Rp74.2 million, take-home Rp65,595,730, Rp104.1 million before the Rp50 million housing allowance was dropped from 31 August 2025.
+[^dpr]: detik.com, [Take home pay DPR usai pangkas banyak tunjangan Rp 65,5 juta](https://news.detik.com/berita/d-8098119/take-home-pay-dpr-usai-pangkas-banyak-tunjangan-rp-65-5-juta), September 2025; Kontan, [Resmi, tunjangan perumahan dihapus](https://nasional.kontan.co.id/news/resmi-tunjangan-perumahan-dihapus-ini-sisa-gaji-tunjangan-anggota-dpr-terbaru), September 2025: base salary Rp4.2 million, gross about Rp74.2 million, income tax about Rp8.6 million, take-home Rp65,595,730; Rp104.1 million before several allowances were cut, including the Rp50 million housing allowance, dropped from 31 August 2025.
 [^reses]: CNN Indonesia, [DPR recess funds cut to Rp500 million after the MKD ruling](https://www.cnnindonesia.com/nasional/20251106111135-32-1292542/dasco-sebut-dana-reses-anggota-dpr-jadi-rp500-juta-imbas-putusan-mkd), 6 November 2025: from Rp702 million to about Rp500 million per recess, about five recesses a year.
 [^fx]: Market exchange rate, about Rp12,500 per Australian dollar, November 2026, rounded.
 [^pop]: Population about 284 million (BPS, 2025) and about 27.6 million (ABS, 2025); 580 DPR seats (DPR) and 150 House of Representatives seats (Parliament of Australia).
