@@ -141,7 +141,7 @@ Jarak antara gaji presiden dan upah pekerja di Indonesia termasuk yang paling le
 | Filipina | ₱449.157 sebulan[^ph] | ₱21.544 sebulan (rata-rata pekerja penuh waktu)[^ph] | 20,8 kali |
 
 ```mermaid
-xychart-beta
+xychart-beta horizontal
   title "Gaji pemimpin, berapa kali upah pekerja di negaranya"
   x-axis ["Tiongkok", "Norwegia", "Vietnam", "Inggris", "AS", "Malaysia", "Korsel", "Thailand", "Jepang", "Australia", "Indonesia", "Filipina"]
   y-axis "kali lipat" 0 --> 22
@@ -151,6 +151,31 @@ xychart-beta
 Untuk Indonesia dan Filipina, kelipatan di tabel ini bisa jadi masih terlalu rendah. Upah rata-rata Indonesia kemungkinan besar lebih tinggi daripada mediannya, karena segelintir orang bergaji sangat besar menarik rata-rata ke atas, sedangkan angka upah Filipina berasal dari survei perusahaan formal dengan sedikitnya 10 pekerja, sehingga pekerja sektor informal yang upahnya lebih rendah tidak ikut terhitung.
 
 Catatan itu justru mempertegas pesan tabel di atas: sebagian besar negara yang saya bandingkan, baik negara kaya seperti Norwegia dan Australia maupun negara Asia seperti Thailand, Vietnam, dan Korea Selatan, menggaji pemimpinnya kurang dari 9 kali upah rakyatnya, sementara Indonesia duduk di kelompok paling atas bersama Filipina. Angka 18,8 kali itu pun belum memasukkan fasilitas seumur hidup yang diterima presiden setelah lengser, sementara penghasilan anggota DPR, kalau dana reses ikut dihitung, setara sekitar 85 kali rata-rata upah buruh.
+
+Pola yang sama muncul ketika yang dibandingkan adalah anggota parlemen biasa. Untuk setiap negara, saya menjumlahkan gaji dan tunjangan tetap yang dibayarkan langsung kepada anggota parlemen, lalu membaginya dengan upah pekerja yang sama seperti pada perbandingan gaji pemimpin. Anggaran kantor, gaji staf, dan dana kegiatan di daerah pemilihan, termasuk dana reses, tidak saya hitung. Hasilnya, gaji dan tunjangan anggota DPR setara 22,3 kali rata-rata upah buruh, tertinggi di antara sepuluh negara dalam tabel berikut dan jauh melampaui Filipina yang berada di urutan kedua dengan 14,0 kali, sementara anggota parlemen di Norwegia, Inggris, dan Amerika Serikat hanya menerima 2 sampai 3,5 kali upah rakyatnya.
+
+| Negara | Gaji dan tunjangan anggota parlemen | Upah pekerja | Kelipatan |
+| --- | --- | --- | --- |
+| Norwegia | NOK 1.272.209 setahun[^mpnor] | NOK 669.600 setahun (median)[^nor] | 1,9 kali |
+| Inggris | £98.599 setahun[^mpuk] | £39.039 setahun (median penuh waktu)[^uk] | 2,5 kali |
+| Amerika Serikat | US$174.000 setahun[^mpus] | US$50.980 setahun (median)[^us] | 3,4 kali |
+| Australia | sekitar A$311.270 setahun (gaji pokok, tunjangan daerah pemilihan, dan uang perjalanan ke Canberra)[^rt][^ea][^ta] | A$74.100 setahun (median)[^absmed] | 4,2 kali |
+| Jepang | sekitar ¥21,7 juta setahun (gaji dan bonus)[^mpjp] | ¥4,87 juta setahun (rata-rata)[^jp] | 4,5 kali |
+| Korea Selatan | sekitar ₩161 juta setahun[^mpkr] | ₩2,88 juta sebulan (median)[^kr] | 4,7 kali |
+| Thailand | ฿113.560 sebulan[^mpth] | ฿15.675 sebulan (rata-rata pegawai)[^th] | 7,2 kali |
+| Malaysia | RM25.700 sebulan (gaji pokok RM16.000 ditambah tunjangan tetap)[^mpmy] | RM2.940 sebulan (median)[^my] | 8,7 kali |
+| Filipina | ₱300.961 sebulan (gaji pokok saja)[^mpph] | ₱21.544 sebulan (rata-rata pekerja penuh waktu)[^ph] | 14,0 kali |
+| Indonesia | sekitar Rp74,2 juta sebulan[^dpr] | Rp3,33 juta sebulan (rata-rata)[^bpsupah] | 22,3 kali |
+
+```mermaid
+xychart-beta horizontal
+  title "Gaji anggota parlemen, berapa kali upah pekerja di negaranya"
+  x-axis ["Norwegia", "Inggris", "AS", "Australia", "Jepang", "Korsel", "Thailand", "Malaysia", "Filipina", "Indonesia"]
+  y-axis "kali lipat" 0 --> 24
+  bar [1.9, 2.5, 3.4, 4.2, 4.5, 4.7, 7.2, 8.7, 14.0, 22.3]
+```
+
+Tiongkok dan Vietnam sengaja tidak saya masukkan ke tabel anggota parlemen, karena sebagian besar wakil rakyat di kedua negara itu bekerja paruh waktu dan tetap menjalani pekerjaan utamanya, sehingga tidak ada gaji anggota parlemen yang bisa dibandingkan secara adil. Kelipatan Filipina pun masih terlalu rendah, karena saya hanya memakai gaji pokok anggota House of Representatives (majelis rendah Filipina), padahal mereka juga menerima berbagai tunjangan yang besarnya tidak diumumkan secara rinci.
 
 ## Jadi, apa yang seharusnya kita perdebatkan?
 
@@ -220,3 +245,11 @@ Kita tentu tidak bisa mengubah semua itu dalam semalam, tetapi kita bisa mulai d
 [^bkturki]: JPNN, [Tanpa ketuanya, BK DPR tetap ke Yunani](https://www.jpnn.com/news/tanpa-ketuanya-bk-dpr-tetap-ke-yunani), 19 Oktober 2010, sumber pernyataan Gayus Lumbuun dan lama perjalanan enam hari; Kontan, [Pelesiran ke Turki, 8 anggota DPR diadukan ke Badan Kehormatan](https://nasional.kontan.co.id/news/pelesiran-ke-turki-8-anggota-dpr-diadukan-ke-badan-kehormatan-1), sumber pengaduan sepuluh LSM.
 [^uangharian]: CNN Indonesia, [Intip uang saku DPR ke luar negeri yang akan dimoratorium buntut demo](https://www.cnnindonesia.com/ekonomi/20250902182852-532-1269374/intip-uang-saku-dpr-ke-luar-negeri-yang-akan-dimoratorium-buntut-demo), 3 September 2025: uang harian tingkat A menurut PMK No. 32 Tahun 2025, US$347 sampai US$792 (Inggris) per orang per hari, dengan kurs Rp16.412 per dolar AS (September 2025). Hitungan saya: US$792 × Rp16.412 ≈ Rp13 juta, dan Rp13 juta ÷ Rp3,33 juta ≈ 3,9.
 [^moratorium]: Suara.com, [DPR setop kunjungan kerja ke luar negeri, Dasco janji buka-bukaan](https://www.suara.com/news/2025/09/05/211435/dpr-setop-kunjungan-kerja-ke-luar-negeri-dasco-janji-buka-bukaan), 5 September 2025: moratorium sejak 1 September 2025, kecuali untuk menghadiri undangan kenegaraan.
+[^mpnor]: Uang jasa tetap (*fast godtgjøring*) anggota Storting, parlemen Norwegia, NOK 1.272.209 setahun mulai 1 Mei 2026, menurut [Stortinget](https://stortinget.no/no/Stortinget-og-demokratiet/Representantene/representantordninger/godtgjoring/). Hitungan saya: NOK 1.272.209 ÷ NOK 669.600 ≈ 1,9.
+[^mpuk]: Gaji pokok anggota parlemen Inggris £98.599 setahun mulai 1 April 2026, menurut [IPSA](https://www.theipsa.org.uk/news/ipsa-confirms-decision-on-mps-pay-for-2026-27), Maret 2026. Hitungan saya: £98.599 ÷ £39.039 ≈ 2,5.
+[^mpus]: Gaji anggota Kongres Amerika Serikat US$174.000 setahun, tidak berubah sejak 2009, menurut [Clerk of the House of Representatives](https://clerk.house.gov/documents/Salary.pdf), per 21 Januari 2026. Hitungan saya: US$174.000 ÷ US$50.980 ≈ 3,4.
+[^mpjp]: Gaji (*saihi*) anggota Diet, parlemen Jepang, ¥1.294.000 sebulan atau ¥15.528.000 setahun, ditambah bonus (*kimatsu teate*) sekitar ¥6,2 juta setahun, menurut [Zeiri4](https://www.zeiri4.com/c_1076/n_1142/), 21 November 2023. Dana riset, komunikasi, dan akomodasi ¥1 juta sebulan tidak saya hitung karena dana itu bebas pajak dan dimaksudkan untuk kegiatan anggota. Hitungan saya: ¥21,7 juta ÷ ¥4,87 juta ≈ 4,5.
+[^mpkr]: Gaji dan tunjangan anggota Majelis Nasional Korea Selatan sekitar ₩161 juta setahun pada 2026, termasuk biaya kegiatan legislatif sekitar ₩37,63 juta dan biaya kegiatan khusus sekitar ₩9,41 juta, menurut [The Fact (더팩트)](https://v.daum.net/v/WdzvOHztov), 9 Februari 2026. Hitungan saya: ₩161 juta ÷ (₩2,88 juta × 12) ≈ 4,7.
+[^mpth]: Gaji anggota majelis rendah Thailand ฿71.230 sebulan ditambah tunjangan ฿42.330, sehingga totalnya ฿113.560 sebulan, menurut [Thai PBS](https://www.thaipbs.or.th/now/content/563196), 25 Mei 2023. Hitungan saya: ฿113.560 ÷ ฿15.675 ≈ 7,2.
+[^mpmy]: Gaji pokok anggota Dewan Rakyat Malaysia RM16.000 sebulan, ditambah tunjangan tetap untuk jamuan (RM2.500), transportasi (RM1.500), sopir (RM1.500), pakaian resmi (RM1.500), bahan bakar (RM1.500), telepon (RM900), dan tol (RM300), sehingga totalnya RM25.700 sebulan, menurut [Free Malaysia Today](https://www.freemalaysiatoday.com/category/nation/2025/09/07/doctors-grouse-over-why-mps-get-so-much-more-money), 7 September 2025. Tunjangan sidang harian RM400 tidak saya hitung. Hitungan saya: RM25.700 ÷ RM2.940 ≈ 8,7.
+[^mpph]: Gaji pokok anggota House of Representatives Filipina (Salary Grade 31, tahap pertama) ₱300.961 sebulan mulai 1 Januari 2026, berdasarkan [National Budget Circular No. 601](https://www.dbm.gov.ph/wp-content/uploads/Issuances/2026/National-Budget-Circular/NATIONAL-BUDGET-CIRCULAR-NO.-601_NEW.pdf) dari DBM, dikutip dari [Philstar](https://www.philstar.com/headlines/2026/01/03/2498499/how-much-will-govt-workers-get-3rd-tranche-salary-increase), 3 Januari 2026. Tunjangan tidak termasuk. Hitungan saya: ₱300.961 ÷ ₱21.544 ≈ 14,0.
