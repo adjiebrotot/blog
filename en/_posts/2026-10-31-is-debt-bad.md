@@ -161,3 +161,6 @@ One small thing to try: before you sign your next instalment plan, compare its a
 [^tool]: All worked figures in this post (the phone plans and the TV offer) were computed in [Finance vs Cash](https://tool.adjiebrotots.com/financingvscash/), Adjie Brotools, October 2026. The 4.5% savings rate is my assumption for a typical savings account in late 2026.
 [^mozo]: Mozo, [Credit cards](https://www.mozo.com.au/credit-cards), citing Reserve Bank of Australia data: average standard credit card purchase rate of 20.99% a year, 2026.
 [^moneysmart]: ASIC Moneysmart, [Credit cards](https://moneysmart.gov.au/credit-cards); interest-free periods of up to about 55 days are typical issuer terms.
+
+*[APR]: Annual Percentage Rate
+*[ASIC]: Australian Securities and Investments Commission

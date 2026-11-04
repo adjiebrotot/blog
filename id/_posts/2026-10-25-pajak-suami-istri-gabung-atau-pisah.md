@@ -23,9 +23,9 @@ Tiap musim lapor SPT, pertanyaan ini muncul lagi: istri mending punya NPWP sendi
 | Status | Siapa yang lapor | Cara pajaknya dihitung |
 |---|---|---|
 | **Gabung** (Kepala Keluarga, satu NPWP) | Suami saja, satu SPT untuk keluarga | Gaji istri dari satu pemberi kerja: **final**, tidak digabung. Penghasilan istri lainnya (usaha, *freelance*, dua kantor): digabung ke SPT suami |
-| **PH** (pisah harta) | Suami dan istri, masing-masing SPT | Penghasilan neto digabung, dikurangi PTKP K/I, lalu pajaknya dibagi sesuai porsi neto masing-masing |
-| **MT** (memilih terpisah) | Suami dan istri, masing-masing SPT | Sama persis dengan PH, bedanya tanpa perjanjian pisah harta |
-| **HB** (hidup berpisah) | Masing-masing | Benar-benar terpisah, karena ada putusan hakim. Tidak dibahas di sini |
+| **<span markdown="0">PH</span>** (pisah harta) | Suami dan istri, masing-masing SPT | Penghasilan neto digabung, dikurangi PTKP K/I, lalu pajaknya dibagi sesuai porsi neto masing-masing |
+| **<span markdown="0">MT</span>** (memilih terpisah) | Suami dan istri, masing-masing SPT | Sama persis dengan PH, bedanya tanpa perjanjian pisah harta |
+| **<span markdown="0">HB</span>** (hidup berpisah) | Masing-masing | Benar-benar terpisah, karena ada putusan hakim. Tidak dibahas di sini |
 
 Ada dua hal di tabel itu yang paling sering disalahpahami.
 
@@ -39,9 +39,9 @@ Kalau kamu baru sadar bahwa maknanya justru kebalikan dari yang kamu kira, tenan
 
 Sebelum masuk ke hitungan, ada tiga istilah yang perlu kita pahami terlebih dahulu.
 
-- **PTKP**, alias bagian penghasilan yang sama sekali tidak kena pajak. Besarnya diatur PMK 101/2016 dan belum berubah sampai sekarang:[^ptkp] Rp54 juta untuk wajib pajak sendiri, ditambah Rp4,5 juta kalau kawin, ditambah Rp54 juta untuk istri yang penghasilannya digabung, dan Rp4,5 juta per tanggungan (maksimal tiga).
-- **Kode PTKP** menyingkat semua itu. TK/0 berarti tidak kawin tanpa tanggungan (Rp54 juta). K/1 berarti kawin dengan satu tanggungan (Rp63 juta). K/I/1 berarti kawin, penghasilan istri digabung, satu tanggungan (Rp117 juta).
-- **PKP** adalah penghasilan neto dikurangi PTKP. Angka inilah yang dikenai tarif berlapis Pasal 17 UU PPh sebagaimana diubah UU HPP:[^hpp]
+- **<span markdown="0">PTKP</span>**, alias bagian penghasilan yang sama sekali tidak kena pajak. Besarnya diatur PMK 101/2016 dan belum berubah sampai sekarang:[^ptkp] Rp54 juta untuk wajib pajak sendiri, ditambah Rp4,5 juta kalau kawin, ditambah Rp54 juta untuk istri yang penghasilannya digabung, dan Rp4,5 juta per tanggungan (maksimal tiga).
+- **Kode PTKP** menyingkat semua itu. <span markdown="0">TK/0</span> berarti tidak kawin tanpa tanggungan (Rp54 juta). <span markdown="0">K/1</span> berarti kawin dengan satu tanggungan (Rp63 juta). <span markdown="0">K/I/1</span> berarti kawin, penghasilan istri digabung, satu tanggungan (Rp117 juta).
+- **<span markdown="0">PKP</span>** adalah penghasilan neto dikurangi PTKP. Angka inilah yang dikenai tarif berlapis Pasal 17 UU PPh sebagaimana diubah UU HPP:[^hpp]
 
 | PKP setahun | Tarif |
 |---|---|
@@ -63,7 +63,7 @@ Mulai tahun pajak 2025 (yang dilaporkan awal 2026), SPT Tahunan disampaikan lewa
 
 ### Kalau gabung
 
-1. Pastikan istri tercatat di **Data Unit Keluarga** (DUK) akun Coretax suami, dengan status tanggungan. Kalau istri dulu punya NPWP sendiri, ajukan permohonan agar NPWP itu dinonaktifkan, karena NPWP tersebut tidak otomatis nonaktif setelah menikah.
+1. Pastikan istri tercatat di **Data Unit Keluarga** (<span markdown="0">DUK</span>) akun Coretax suami, dengan status tanggungan. Kalau istri dulu punya NPWP sendiri, ajukan permohonan agar NPWP itu dinonaktifkan, karena NPWP tersebut tidak otomatis nonaktif setelah menikah.
 2. Istri memakai **NIK**-nya sendiri sebagai nomor identitas pajak. Bukti potong PPh 21 dari kantornya terbit atas NIK itu.
 3. Hanya suami yang melaporkan SPT, sedangkan istri tidak perlu lapor sendiri.
 4. **Jebakan yang sering menjerat:** bukti potong istri otomatis masuk ke Lampiran 1 SPT suami, seolah-olah gaji istri harus digabung. Kalau gaji istri memenuhi syarat final (satu pemberi kerja), pindahkan penghasilan bruto dan PPh 21-nya ke **Lampiran 2 Bagian A** (penghasilan final). Kalau tidak dipindahkan, SPT suami bisa tiba-tiba berstatus kurang bayar.[^ddtcfaq]
@@ -212,3 +212,9 @@ Langkah kecilnya hanya butuh lima menit: sebelum musim SPT berikutnya, buka *too
 *[K/I/1]: Kawin, penghasilan Istri digabung, satu tanggungan: PTKP Rp117 juta
 *[K/I]: Kawin, penghasilan Istri digabung: PTKP tambahan Rp54 juta untuk istri
 *[PER-11/PJ/2025]: Peraturan Direktur Jenderal Pajak tentang pelaporan SPT di Coretax
+*[CNBC]: Consumer News and Business Channel
+*[FAQ]: Frequently Asked Questions, pertanyaan yang sering diajukan
+*[IKPI]: Ikatan Konsultan Pajak Indonesia
+*[JDIH]: Jaringan Dokumentasi dan Informasi Hukum
+*[Kemenkeu]: Kementerian Keuangan
+*[MK]: Mahkamah Konstitusi

@@ -50,7 +50,7 @@ The other honest part is money. Australia's GDP per person was about US$65,000 i
 
 Australia's Prime Minister earns about 8.4 times the median Australian wage, and Indonesia's president about 18.8 times the average Indonesian wage.
 
-Why not the minimum wage? Because in Indonesia it says little about what most people earn. BPS puts the average employee wage at Rp3.33 million a month (August 2025), which is barely the average provincial minimum wage (UMP) of 2025, about Rp3.31 million, and already behind the 2026 average of Rp3.51 million.[^bpswage][^ump] The average worker earns roughly the legal minimum. BPS publishes only the average, and a few very high earners pull an average up, so the median is probably lower still. If anything, the Indonesian multiples in this post are conservative.
+Why not the minimum wage? Because in Indonesia it says little about what most people earn. BPS puts the average employee wage at Rp3.33 million a month (August 2025), which is barely the average provincial minimum wage (<span markdown="0">UMP</span>) of 2025, about Rp3.31 million, and already behind the 2026 average of Rp3.51 million.[^bpswage][^ump] The average worker earns roughly the legal minimum. BPS publishes only the average, and a few very high earners pull an average up, so the median is probably lower still. If anything, the Indonesian multiples in this post are conservative.
 
 In Australia, every federal MP gets a base salary of A$239,270 a year, and the Prime Minister gets a 160% loading on top: A$622,110 a year, or about A$51,843 a month. That rate has applied since 1 July 2025, and the Remuneration Tribunal decided on a 0% change from 1 July 2026, so it is still current.[^remtrib] The median Australian employee earned A$1,425 a week in August 2025: about A$74,100 a year.[^absmedian] A$622,110 / A$74,100 = 8.4 times.
 
@@ -99,7 +99,7 @@ Now a DPR member, after the allowances were cut at the end of August 2025.[^dpr]
 - **Base salary:** Rp4,200,000 a month. Small, because almost all of the money comes as allowances.
 - **Gross pay and allowances:** about Rp74.2 million a month. After about Rp8.6 million of income tax, the take-home is Rp65,595,730.
 - **Before several allowances were cut**, the Rp50 million housing allowance among them, the total was reported at Rp104.1 million a month.
-- **Recess funds (*dana reses*):** money for the recess, when members go back to their constituencies. About Rp500 million per recess since November 2025, cut from Rp702 million after a ruling by the DPR's ethics council (MKD), and about five recesses a year.[^reses] That is about Rp2.5 billion a year, or about Rp208 million a month.
+- **Recess funds (*dana reses*):** money for the recess, when members go back to their constituencies. About Rp500 million per recess since November 2025, cut from Rp702 million after a ruling by the DPR's ethics council (<span markdown="0">MKD</span>), and about five recesses a year.[^reses] That is about Rp2.5 billion a year, or about Rp208 million a month.
 
 Against the average wage of Rp3.33 million, the take-home is 19.7 times; gross pay is 22.3 times; before the 2025 cut it was 31.3 times. Gross pay plus recess funds comes to about Rp282 million a month: about 85 times.
 
@@ -116,7 +116,7 @@ Against the average wage of Rp3.33 million, the take-home is 19.7 times; gross p
 
 In the table above, the like-for-like comparison is the gross row: 4.2 times in Australia, 22.3 times in Indonesia.
 
-Now the DPR's side, because it deserves a hearing. Recess funds pay for constituency activities, not for the member's lifestyle, and the DPR will say so. Fair. But their use is reported in aggregate and is hard for the public to check, while Australia's comparable office budget is published per person, every quarter, by the Independent Parliamentary Expenses Authority (IPEA). Converted at about Rp12,500 to the Australian dollar (November 2026, rounded),[^fx] the DPR take-home is about A$5,250 a month, which sounds modest in Perth. That is exactly why the fair measure is local wages, not exchange rates.
+Now the DPR's side, because it deserves a hearing. Recess funds pay for constituency activities, not for the member's lifestyle, and the DPR will say so. Fair. But their use is reported in aggregate and is hard for the public to check, while Australia's comparable office budget is published per person, every quarter, by the Independent Parliamentary Expenses Authority (<span markdown="0">IPEA</span>). Converted at about Rp12,500 to the Australian dollar (November 2026, rounded),[^fx] the DPR take-home is about A$5,250 a month, which sounds modest in Perth. That is exactly why the fair measure is local wages, not exchange rates.
 
 What about size? Indonesia is about as wide as Australia: both span roughly 4,000 to 5,000 km, so travel distance doesn't explain a gap this big.
 
@@ -124,9 +124,9 @@ What about size? Indonesia is about as wide as Australia: both span roughly 4,00
 
 Because in Australia, almost nobody in politics gets one. In almost two years in Perth, I have not seen a single motorcade, not even for the WA Premier, who runs the state government.
 
-The Australian Federal Police (AFP) protects "high office holders": the Governor-General, the Prime Minister, ministers, the Presiding Officers of parliament, and the Leader and Deputy Leader of the Opposition, as well as visiting dignitaries such as heads of state, the King included when he visits.[^afp] In practice, only the Prime Minister has full-time close personal protection; ministers get it when a risk assessment calls for it. A backbench MP has no escort and no permanent security. MPs can use Comcar for parliamentary business, but that is a car with a driver, not a convoy that clears the road.
+The Australian Federal Police (<span markdown="0">AFP</span>) protects "high office holders": the Governor-General, the Prime Minister, ministers, the Presiding Officers of parliament, and the Leader and Deputy Leader of the Opposition, as well as visiting dignitaries such as heads of state, the King included when he visits.[^afp] In practice, only the Prime Minister has full-time close personal protection; ministers get it when a risk assessment calls for it. A backbench MP has no escort and no permanent security. MPs can use Comcar for parliamentary business, but that is a car with a driver, not a convoy that clears the road.
 
-In Jakarta, sirens and strobe lights for the president, ministers and even DPR members were a daily sight. In September 2025, ordinary road users had had enough: the "Stop tot tot wuk wuk" movement (named after the sound of the sirens) went viral, and the traffic police (Korlantas Polri) froze the use of sirens and strobes for escorts, though the escorts themselves continued. In late November 2025, they froze escort services altogether for evaluation.[^korlantas]
+In Jakarta, sirens and strobe lights for the president, ministers and even DPR members were a daily sight. In September 2025, ordinary road users had had enough: the "Stop tot tot wuk wuk" movement (named after the sound of the sirens) went viral, and the traffic police (<span markdown="0">Korlantas Polri</span>) froze the use of sirens and strobes for escorts, though the escorts themselves continued. In late November 2025, they froze escort services altogether for evaluation.[^korlantas]
 
 It took a viral meme to get a pause button. In Perth, nobody ever pressed play.
 
@@ -136,11 +136,11 @@ In Australia, a trip worth a few thousand dollars can become a national scandal 
 
 Take Anika Wells, the Communications and Sport Minister. From late 2025 she faced scrutiny over a two-day trip to Adelaide in June 2025, costing A$3,681, that coincided with a Labor friend's birthday party.[^wells-trip] The opposition nicknamed her "Air-Miles Anika". She referred herself to IPEA, whose 2026 audit found four claims outside the rules; she repaid A$10,116 (A$8,093 plus a 25% penalty) and apologised.[^wells-repay] Taxpayer-funded family travel got the same treatment: more than A$4 million since the 2022 election,[^family] enough for Prime Minister Albanese to restrict it in December 2025 and move those families from business class to economy.[^albanese]
 
-Now the Indonesian version. In October 2010, eight members of the DPR's ethics council (*Badan Kehormatan*, BK) and three expert staff flew to Greece for six days to study parliamentary ethics and Greece's smoke-free parliament. The budget was Rp2.2 billion, about Rp200 million per person.[^bk-greece] The council's own chair, Gayus Lumbuun, refused to go, saying the same material was available at the Greek embassy in Jakarta, and ten NGOs later complained to the ethics council itself that the eight had taken a sightseeing detour to Turkey.[^bk-turkey] At about Rp12,500 to the dollar,[^fx] Wells's Adelaide trip was about Rp46 million. Each ethics-council traveller cost more than four times that, in 2010 rupiah, before a cent of inflation. The irony: the BK's job is to police the DPR's ethics.
+Now the Indonesian version. In October 2010, eight members of the DPR's ethics council (*Badan Kehormatan*, <span markdown="0">BK</span>) and three expert staff flew to Greece for six days to study parliamentary ethics and Greece's smoke-free parliament. The budget was Rp2.2 billion, about Rp200 million per person.[^bk-greece] The council's own chair, Gayus Lumbuun, refused to go, saying the same material was available at the Greek embassy in Jakarta, and ten NGOs later complained to the ethics council itself that the eight had taken a sightseeing detour to Turkey.[^bk-turkey] At about Rp12,500 to the dollar,[^fx] Wells's Adelaide trip was about Rp46 million. Each ethics-council traveller cost more than four times that, in 2010 rupiah, before a cent of inflation. The irony: the BK's job is to police the DPR's ethics.
 
 Nor are today's rules any tighter. Under the Finance Minister's regulation PMK 32/2025, a DPR member travelling abroad gets a daily allowance of US$347 to US$792 (about Rp5.7 million to Rp13 million) per person, per day, before flights and hotels. The top rate is for the UK, where one day's allowance is almost four times the average Indonesian monthly wage.[^per-diem] It took the mass protests of late August 2025 for the DPR to put a moratorium on overseas working visits from 1 September 2025, and even that exempts state invitations.[^moratorium]
 
-And what the public does see comes as an audit total. In its audit of 2023 spending, reported in June 2024, about five months after that year closed, Indonesia's state auditor (BPK) found irregular official-travel spending worth Rp39.26 billion across 46 ministries and agencies, fictitious trips included.[^bpk] In Australia, IPEA publishes every politician's claims, per person, every quarter. That's why a A$3,681 flight to Adelaide became a national story, while Indonesians learn an aggregate total months later.
+And what the public does see comes as an audit total. In its audit of 2023 spending, reported in June 2024, about five months after that year closed, Indonesia's state auditor (<span markdown="0">BPK</span>) found irregular official-travel spending worth Rp39.26 billion across 46 ministries and agencies, fictitious trips included.[^bpk] In Australia, IPEA publishes every politician's claims, per person, every quarter. That's why a A$3,681 flight to Adelaide became a national story, while Indonesians learn an aggregate total months later.
 
 ## Is Indonesia an outlier, or is this normal?
 
@@ -202,13 +202,31 @@ If you are Indonesian, here is one small thing to start with: ask for the receip
 *[Polri]: Kepolisian Negara Republik Indonesia, the Indonesian National Police
 *[BK]: Badan Kehormatan, the DPR's ethics council
 *[PMK]: Peraturan Menteri Keuangan, a Finance Minister's regulation
-*[NGO]: Non-governmental organisation
 *[BLS]: Bureau of Labor Statistics (United States)
 *[MP]: Member of Parliament
 *[PM]: Prime Minister
 *[UK]: United Kingdom
 *[WA]: Western Australia
 *[NOK]: Norwegian krone
+*[AAP]: Australian Associated Press
+*[ABC]: Australian Broadcasting Corporation
+*[AFL-CIO]: American Federation of Labor and Congress of Industrial Organizations
+*[CN]: China, as in CN¥, the Chinese yuan
+*[CNN]: Cable News Network
+*[DBM]: Department of Budget and Management (Philippines)
+*[DOSM]: Department of Statistics Malaysia
+*[IMF]: International Monetary Fund
+*[JPNN]: Jawa Pos National Network, an Indonesian news site
+*[MPs]: Members of Parliament
+*[NGOs]: Non-governmental organisations
+*[NESDC]: National Economic and Social Development Council (Thailand)
+*[OECD]: Organisation for Economic Co-operation and Development
+*[ONS]: Office for National Statistics (United Kingdom)
+*[PNS]: Pegawai Negeri Sipil, an Indonesian civil servant
+*[PSA]: Philippine Statistics Authority
+*[Q1]: first quarter
+*[SSB]: Statistisk sentralbyrå, Statistics Norway
+*[VND]: Vietnamese dong
 
 ## References
 
@@ -235,7 +253,7 @@ If you are Indonesian, here is one small thing to start with: ask for the receip
 [^family]: AAP via newsbeep, [family travel costs](https://www.newsbeep.com/300998/), December 2025; ABC News, [Nationals MPs' high family travel bill highlights generous rules](https://www.abc.net.au/news/2025-12-11/nationals-mps-high-family-travel-bill-highlights-generous-rules/106126842), 11 December 2025.
 [^albanese]: The New Daily, [MP expenses change](https://www.thenewdaily.com.au/news/politics/australian-politics/2025/12/23/mp-expenses-change), 23 December 2025.
 [^bpk]: Bisnis.com, [Temuan BPK: masalah perjalanan dinas PNS bikin negara rugi Rp39,26 miliar](https://ekonomi.bisnis.com/read/20240609/9/1772443/temuan-bpk-masalah-perjalanan-dinas-pns-bikin-negara-rugi-rp3926-miliar), 9 June 2024, on BPK's audit of 2023 spending: mostly trips that didn't match the rules and overpayments, often deliberate and sometimes fictitious.
-[^norway]: Altinget, [Norges statsminister får lønstigning](https://www.altinget.dk/artikel/norges-statsminister-faar-loenstigning-men-er-stadig-langt-fra-mette-frederiksen), 2026: NOK 2,234,978 a year from 1 May 2026. Statistics Norway (SSB), [Hva er vanlig lønn i Norge?](https://www.ssb.no/arbeid-og-lonn/lonn-og-arbeidskraftkostnader/artikler/hva-er-vanlig-lonn-i-norge): median monthly earnings NOK 55,800, 2025.
+[^norway]: Altinget, [Norges statsminister får lønstigning](https://www.altinget.dk/artikel/norges-statsminister-faar-loenstigning-men-er-stadig-langt-fra-mette-frederiksen), 2026: NOK 2,234,978 a year from 1 May 2026. Statistics Norway (<span markdown="0">SSB</span>), [Hva er vanlig lønn i Norge?](https://www.ssb.no/arbeid-og-lonn/lonn-og-arbeidskraftkostnader/artikler/hva-er-vanlig-lonn-i-norge): median monthly earnings NOK 55,800, 2025.
 [^uk]: GOV.UK, [Ministerial salary data](https://www.gov.uk/government/publications/ministerial-salary-data), 2025-26: MP salary £93,904 plus Prime Minister's ministerial salary £80,807. ONS, [Annual Survey of Hours and Earnings 2025](https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearnings/2025): median gross annual earnings for full-time employees £39,039, April 2025.
 [^us]: AFL-CIO, [Executive Paywatch](https://aflcio.org/paywatch), 2025, citing the Bureau of Labor Statistics median annual wage of $50,980. The US President's salary is $400,000 a year.
 [^malaysia]: Malay Mail, [PM, ministers to take 20pc pay cut](https://www.malaymail.com/news/malaysia/2022/12/05/pm-ministers-to-take-20pc-pay-cut-until-countrys-economy-recovers/43593), 5 December 2022: Prime Minister's basic salary RM22,826.65 a month. DOSM, [Salaries and Wages Survey Report](https://www.dosm.gov.my/portal-main/release-content/salaries-and-wages-survey-report-2024): median monthly salary RM2,940 (2025).
@@ -251,3 +269,5 @@ If you are Indonesian, here is one small thing to start with: ask for the receip
 [^bk-turkey]: JPNN, [Tanpa ketuanya, BK DPR tetap ke Yunani](https://www.jpnn.com/news/tanpa-ketuanya-bk-dpr-tetap-ke-yunani), 19 October 2010 (Gayus Lumbuun's refusal, six-day trip); Kontan, [Pelesiran ke Turki, 8 anggota DPR diadukan ke Badan Kehormatan](https://nasional.kontan.co.id/news/pelesiran-ke-turki-8-anggota-dpr-diadukan-ke-badan-kehormatan-1) (the ten NGOs' complaint).
 [^per-diem]: CNN Indonesia, [Intip uang saku DPR ke luar negeri yang akan dimoratorium buntut demo](https://www.cnnindonesia.com/ekonomi/20250902182852-532-1269374/intip-uang-saku-dpr-ke-luar-negeri-yang-akan-dimoratorium-buntut-demo), 3 September 2025: tier-A daily allowance under PMK 32/2025, US$347 to US$792 (UK) per person per day, at Rp16,412 to the US dollar (September 2025). US$792 x Rp16,412 = about Rp13 million; Rp13 million / Rp3.33 million = 3.9.
 [^moratorium]: Suara.com, [DPR setop kunjungan kerja ke luar negeri](https://www.suara.com/news/2025/09/05/211435/dpr-setop-kunjungan-kerja-ke-luar-negeri-dasco-janji-buka-bukaan), 5 September 2025: moratorium from 1 September 2025, except for state invitations.
+
+<!-- abbr-ok: LSVN -->

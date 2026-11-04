@@ -26,7 +26,7 @@ Kondisinya sekarang sudah jauh berbeda, karena banyak perusahaan multinasional d
 <figcaption>Yang satu dijanjikan uang pensiun bulanan, yang satu lagi harus menyiapkannya sendiri.</figcaption>
 </figure>
 
-Pekerja swasta sebenarnya tidak berangkat dari nol. Setiap bulan, ada iuran yang disetor untuk dua program BPJS Ketenagakerjaan: Jaminan Hari Tua (JHT) sebesar 5,7% dari upah, dengan 3,7% dibayar perusahaan dan 2% dibayar pekerja, serta Jaminan Pensiun (JP) sebesar 3%, dengan 2% dari perusahaan dan 1% dari pekerja.[^bpjs] Kalau dijumlahkan, iurannya hanya 8,7% dari upah, dan menurut saya angka itu masih terlalu kecil untuk membiayai masa pensiun yang layak. Selebihnya harus kamu siapkan sendiri.
+Pekerja swasta sebenarnya tidak berangkat dari nol. Setiap bulan, ada iuran yang disetor untuk dua program BPJS Ketenagakerjaan: Jaminan Hari Tua (<span markdown="0">JHT</span>) sebesar 5,7% dari upah, dengan 3,7% dibayar perusahaan dan 2% dibayar pekerja, serta Jaminan Pensiun (<span markdown="0">JP</span>) sebesar 3%, dengan 2% dari perusahaan dan 1% dari pekerja.[^bpjs] Kalau dijumlahkan, iurannya hanya 8,7% dari upah, dan menurut saya angka itu masih terlalu kecil untuk membiayai masa pensiun yang layak. Selebihnya harus kamu siapkan sendiri.
 
 ## Kalau gajinya besar, kenapa tabungannya tetap tipis?
 
@@ -36,7 +36,7 @@ Kebiasaan seperti ini sebenarnya tidak wajib diikuti. Dua pekerja dengan gaji ya
 
 ## Apa itu FIRE, dan berapa dana yang kamu butuhkan?
 
-FIRE adalah singkatan dari *Financial Independence, Retire Early*, alias merdeka secara finansial dan pensiun lebih awal. Gerakan ini lahir di Amerika Serikat dan dipopulerkan oleh buku *Your Money or Your Life* karya Vicki Robin dan Joe Dominguez (1992).[^fire] Angka 4% yang menjadi tulang punggungnya berasal dari studi William Bengen di Journal of Financial Planning (1994), yang kemudian diperkuat oleh Trinity Study (1998).[^empat] Sekarang, istilah ini juga sudah akrab di telinga banyak orang Indonesia.
+<span markdown="0">FIRE</span> adalah singkatan dari *Financial Independence, Retire Early*, alias merdeka secara finansial dan pensiun lebih awal. Gerakan ini lahir di Amerika Serikat dan dipopulerkan oleh buku *Your Money or Your Life* karya Vicki Robin dan Joe Dominguez (1992).[^fire] Angka 4% yang menjadi tulang punggungnya berasal dari studi William Bengen di Journal of Financial Planning (1994), yang kemudian diperkuat oleh Trinity Study (1998).[^empat] Sekarang, istilah ini juga sudah akrab di telinga banyak orang Indonesia.
 
 Inti FIRE adalah *rule of 25* (aturan 25 kali): dana pensiun yang kamu butuhkan kira-kira 25 kali pengeluaranmu dalam setahun.
 
@@ -60,7 +60,7 @@ Kalau ingin menghitung rencanamu dengan lebih teliti, kamu bisa memakai [*tool* 
 
 ## Berapa yang harus ditabung agar setara uang pensiun PNS?
 
-Mari kita mulai dari target yang sederhana: menggaji diri sendiri Rp5 juta sebulan dengan nilai uang hari ini, kurang lebih setara uang pensiun PNS tertinggi (golongan IV/e) sebesar Rp4,96 juta.[^pp8] Gaji itu mulai dibayarkan di umur 58, batas usia pensiun (BUP) bagi sebagian besar PNS,[^bup] dan harus cukup sampai umur 90. Di [*tool* Financial Freedom Calculator](https://tool.adjiebrotots.com/financialfreedom/), saya memilih tujuan **Just Die**, artinya uangnya boleh habis tepat di umur 90.
+Mari kita mulai dari target yang sederhana: menggaji diri sendiri Rp5 juta sebulan dengan nilai uang hari ini, kurang lebih setara uang pensiun PNS tertinggi (golongan IV/e) sebesar Rp4,96 juta.[^pp8] Gaji itu mulai dibayarkan di umur 58, batas usia pensiun (<span markdown="0">BUP</span>) bagi sebagian besar PNS,[^bup] dan harus cukup sampai umur 90. Di [*tool* Financial Freedom Calculator](https://tool.adjiebrotots.com/financialfreedom/), saya memilih tujuan **Just Die**, artinya uangnya boleh habis tepat di umur 90.
 
 Asumsi yang saya pakai seperti ini:
 
@@ -68,7 +68,7 @@ Asumsi yang saya pakai seperti ini:
 - Jumlah tabungan bulanan naik 3% setiap tahun, sama dengan inflasi, sehingga nilainya tetap sama kalau diukur dengan nilai uang hari ini.
 - Imbal hasil investasi 9% setahun dalam rupiah, dengan volatilitas (naik-turunnya nilai investasi) 12%, dan inflasi 3%.
 
-Untuk bagian investasinya, ada baiknya kamu mempertimbangkan instrumen global seperti reksa dana indeks (*index fund*) yang mengikuti S&P 500 atau MSCI All Country World Index (ACWI). Dengan begitu, nilai tabunganmu tetap terlindungi kalau rupiah melemah atau ekonomi dalam negeri sedang goyah.
+Untuk bagian investasinya, ada baiknya kamu mempertimbangkan instrumen global seperti reksa dana indeks (*index fund*) yang mengikuti S&P 500 atau MSCI All Country World Index (<span markdown="0">ACWI</span>). Dengan begitu, nilai tabunganmu tetap terlindungi kalau rupiah melemah atau ekonomi dalam negeri sedang goyah.
 
 Hasilnya ternyata jauh lebih ringan daripada yang saya bayangkan. Kalau imbal hasil berjalan sesuai perkiraan, menabung sekitar Rp770 ribu sebulan (tepatnya Rp767.238) sejak umur 25 sudah cukup, dan dana yang dibutuhkan di umur 58 sekitar Rp889 juta dengan nilai uang hari ini. Kalau dibulatkan menjadi Rp800 ribu sebulan, kamu bahkan sudah bisa merdeka secara finansial di umur 57 tahun 6 bulan, tetapi peluang berhasilnya di umur 58 hanya sekitar 53%, karena hitungan yang memakai imbal hasil rata-rata memang selalu punya peluang meleset ke bawah. Untuk peluang berhasil sekitar 90% (tepatnya 92%), tabungannya perlu dinaikkan menjadi sekitar Rp1,25 juta sebulan.
 
@@ -153,7 +153,7 @@ Kalau kamu penasaran seberapa jauh beda gaji dan biaya hidup di Australia dengan
 
 ### "Indonesia kan juga punya BPJS Ketenagakerjaan?"
 
-Memang punya, tetapi cara kerjanya agak berbeda. *Super* lebih mirip rekening tabungan dan investasi pribadi atas namamu sendiri, dan pengelolanya bukan pemerintah. Kamu bebas memilih pengelola dana (*super fund*) sekaligus pilihan investasinya, entah saham, obligasi, properti, atau aset luar negeri. Kalau ingin kendali penuh, kamu bahkan bisa mengelolanya sendiri lewat SMSF (*self-managed super fund*). Karena itu, imbal hasilnya lebih transparan.
+Memang punya, tetapi cara kerjanya agak berbeda. *Super* lebih mirip rekening tabungan dan investasi pribadi atas namamu sendiri, dan pengelolanya bukan pemerintah. Kamu bebas memilih pengelola dana (*super fund*) sekaligus pilihan investasinya, entah saham, obligasi, properti, atau aset luar negeri. Kalau ingin kendali penuh, kamu bahkan bisa mengelolanya sendiri lewat <span markdown="0">SMSF</span> (*self-managed super fund*). Karena itu, imbal hasilnya lebih transparan.
 
 | | *Superannuation* (Australia) | BPJS Ketenagakerjaan (JHT dan JP) |
 | --- | --- | --- |
@@ -215,3 +215,18 @@ Semua hasil skenario dihitung dengan [*tool* Financial Freedom Calculator](https
 *[JP]: Jaminan Pensiun
 *[BUP]: Batas Usia Pensiun
 *[SMSF]: Self-Managed Super Fund
+*[ACWI]: All Country World Index
+*[ASFA]: Association of Superannuation Funds of Australia
+*[ATO]: Australian Taxation Office, kantor pajak Australia
+*[BPJS]: Badan Penyelenggara Jaminan Sosial
+*[CNN]: Cable News Network
+*[GNFI]: Good News From Indonesia
+*[IV/e]: golongan IV/e, jenjang pangkat tertinggi pegawai negeri sipil
+*[MSCI]: Morgan Stanley Capital International, penyedia indeks saham dunia
+*[PHK]: Pemutusan Hubungan Kerja
+*[PNS]: Pegawai Negeri Sipil
+*[PP]: Peraturan Pemerintah
+*[S&P]: Standard & Poor's
+*[S2]: Strata 2, jenjang pendidikan magister
+*[SG]: Superannuation Guarantee, iuran pensiun wajib dari pemberi kerja di Australia
+*[UBS]: bank asal Swiss yang menerbitkan Global Wealth Report

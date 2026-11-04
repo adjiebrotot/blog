@@ -60,7 +60,7 @@ Imbal hasil rumah di Perth sekitar satu persen di atas bunga pinjamannya, sedang
 
 Saya menyadari hal ini ketika pindah dari Jakarta ke Perth. Di Perth, membeli rumah lebih menguntungkan daripada menyewa, sementara di Jakarta yang terjadi justru sebaliknya. Orangnya sama, cara hitungnya sama, *tool*-nya pun sama. Bedanya ada di *input*-nya, dan *input* itu bergantung pada kota tempat kamu tinggal.
 
-Agar adil, mari kita bahas Perth terlebih dahulu. Australia sedang dilanda krisis perumahan. Ironisnya, negeri yang lagu kebangsaannya menjanjikan "*boundless plains to share*" (dataran luas tak bertepi untuk dibagi) justru kesulitan menyediakan rumah bagi warganya sendiri. Menurut REIWA (Real Estate Institute of Western Australia, asosiasi properti di Australia Barat), median harga rumah di Perth naik sekitar 17% untuk rumah tapak dan 22% untuk unit dalam 12 bulan hingga September 2026.[^reiwa] Itu *market* yang sangat *hot*, dan saya gak akan kira kenaikan segitu bakal terus berlanjut. Itulah sebabnya **Quick Start** di *tool* memakai angka yang jauh lebih moderat, yaitu 4,5% per tahun selama 30 tahun.
+Agar adil, mari kita bahas Perth terlebih dahulu. Australia sedang dilanda krisis perumahan. Ironisnya, negeri yang lagu kebangsaannya menjanjikan "*boundless plains to share*" (dataran luas tak bertepi untuk dibagi) justru kesulitan menyediakan rumah bagi warganya sendiri. Menurut <span markdown="0">REIWA</span> (Real Estate Institute of Western Australia, asosiasi properti di Australia Barat), median harga rumah di Perth naik sekitar 17% untuk rumah tapak dan 22% untuk unit dalam 12 bulan hingga September 2026.[^reiwa] Itu *market* yang sangat *hot*, dan saya gak akan kira kenaikan segitu bakal terus berlanjut. Itulah sebabnya **Quick Start** di *tool* memakai angka yang jauh lebih moderat, yaitu 4,5% per tahun selama 30 tahun.
 
 Ada dua perbedaan struktural yang membuat hasil Perth dan Jakarta berjauhan, dan satu faktor saja tidak cukup untuk menjelaskannya. Buktinya, kalau rumah di Perth dibeli dengan KPR berbunga 8,5% ala Jakarta, membeli tetap unggul sekitar A$495 ribu. Yang menentukan adalah kombinasi keduanya.
 
@@ -68,7 +68,7 @@ Ada dua perbedaan struktural yang membuat hasil Perth dan Jakarta berjauhan, dan
 
 Penduduk Australia bertambah terutama karena kedatangan orang dari luar negeri. Dalam 12 bulan hingga Desember 2025, penduduknya bertambah 412.500 orang: 301.000 berasal dari migrasi bersih dari luar negeri dan hanya 111.500 dari pertambahan alami. Australia Barat tumbuh paling cepat, yaitu 2,2%.[^abs] Setiap pendatang baru butuh atap, sementara membangun rumah butuh waktu bertahun-tahun. Ketika permintaan tumbuh lebih cepat daripada pasokan, harga rumahlah yang terkerek naik.
 
-Sebaliknya, penduduk Indonesia bertambah terutama dari kelahiran, dan angka kelahiran pelan-pelan menurun. Survei Penduduk Antar Sensus (SUPAS) 2025 dari BPS mencatat angka kelahiran total 2,13 anak per perempuan, sudah mendekati *replacement level* (sekitar 2,1 anak per perempuan, tingkat yang membuat jumlah penduduk tetap stabil).[^bps] Makin sedikit rumah tangga baru yang terbentuk, makin ringan pula tekanan terhadap harga rumah. Ditambah lagi, masih banyak apartemen yang belum terjual (catatan Jakarta di *tool* menyebut sekitar 29.000 unit baru belum laku pada kuartal I 2026). Tidak heran asumsi kenaikan harga rumah Jakarta di *tool* terbilang lambat: menurut konsultan properti Colliers, harga rata-rata apartemen di Jakarta hanya naik sekitar 2,2% per tahun dari 2014 sampai 2026.[^idprice]
+Sebaliknya, penduduk Indonesia bertambah terutama dari kelahiran, dan angka kelahiran pelan-pelan menurun. Survei Penduduk Antar Sensus (<span markdown="0">SUPAS</span>) 2025 dari BPS mencatat angka kelahiran total 2,13 anak per perempuan, sudah mendekati *replacement level* (sekitar 2,1 anak per perempuan, tingkat yang membuat jumlah penduduk tetap stabil).[^bps] Makin sedikit rumah tangga baru yang terbentuk, makin ringan pula tekanan terhadap harga rumah. Ditambah lagi, masih banyak apartemen yang belum terjual (catatan Jakarta di *tool* menyebut sekitar 29.000 unit baru belum laku pada kuartal I 2026). Tidak heran asumsi kenaikan harga rumah Jakarta di *tool* terbilang lambat: menurut konsultan properti Colliers, harga rata-rata apartemen di Jakarta hanya naik sekitar 2,2% per tahun dari 2014 sampai 2026.[^idprice]
 
 Kenaikan harga adalah "imbalan" bagi pembeli yang berani menanggung risiko, dan di Jakarta imbalan itu lebih kecil.
 
@@ -121,7 +121,7 @@ Saya membuat *tool* ini sebagai ekonom berlatar perbankan, tetapi tidak semua or
 
 1. Gunakan **Quick Start**, lalu pilih kota dan jenis rumah. Semua kolom akan terisi angka lokal yang sumbernya jelas.
 2. Fokus saja pada **Harga properti** dan **Biaya sewa**. Ganti angkanya dengan harga rumah yang benar-benar kamu incar dan sewa yang benar-benar kamu bayar.
-3. Lihat kartu **Modal awal** dan **Anggaran perumahan bulanan**. Kalau angkanya belum sesuai dengan kondisi keuanganmu, ubah **Uang Muka (DP)** sampai pas.
+3. Lihat kartu **Modal awal** dan **Anggaran perumahan bulanan**. Kalau angkanya belum sesuai dengan kondisi keuanganmu, ubah **Uang Muka (<span markdown="0">DP</span>)** sampai pas.
 
 <figure>
 <img src="/assets/img/rvo-basic-quickstart-id.webp" alt="Tool Sewa vs Beli Rumah: Quick Start diisi Perth dan rumah 2 kamar tidur, dengan Harga properti A$855.000 dan Uang Muka 20% di tab Rumah" width="760" height="1208" loading="lazy" style="max-width:340px">
@@ -230,3 +230,16 @@ Itulah sebabnya, alih-alih bertanya "sewa atau beli, mana yang lebih pintar?", l
 [^bca]: BCA, [suku bunga KPR](https://rumahsaya.bca.co.id/info-kpr/Sukubunga-kpr), berlaku sampai 31 Oktober 2026: bunga reguler *fixed* 5 tahun 8,5% (pembelian), promo *fixed* mulai 3,81%, dan bunga *floating* saat ini 11% yang ditinjau setiap 6 bulan. BI Rate 5,75%: [Bisnis.com, 23 September 2026](https://finansial.bisnis.com/read/20260923/11/2006495/breaking-bank-indonesia-tahan-bi-rate-575-di-era-suku-bunga-tinggi).
 [^ubs]: UBS, [Global Wealth Report 2026](https://www.ubs.com/global/en/media/display-page-ndp/en-20260630-gwr-2026.html) (data 2025), Tabel 1, kekayaan median per orang dewasa: Luksemburg US$394.005, Belgia US$277.166, Australia US$210.783.
 [^abc]: ABC News, [Australia ranks third-highest for median wealth globally, UBS data shows](https://www.abc.net.au/news/2026-07-02/ubs-global-wealth-report-australia-millionaires/106869298), 2 Juli 2026.
+
+*[KPR]: Kredit Pemilikan Rumah
+*[BCA]: Bank Central Asia
+*[BI]: Bank Indonesia
+*[BPS]: Badan Pusat Statistik
+*[SUPAS]: Survei Penduduk Antar Sensus
+*[BPHTB]: Bea Perolehan Hak atas Tanah dan Bangunan
+*[PBB]: Pajak Bumi dan Bangunan
+*[PPh]: Pajak Penghasilan
+*[DP]: Down Payment, uang muka pembelian rumah
+*[REIWA]: Real Estate Institute of Western Australia, asosiasi properti di Australia Barat
+*[UBS]: bank asal Swiss yang menerbitkan Global Wealth Report
+*[ABC]: Australian Broadcasting Corporation, lembaga penyiaran publik Australia

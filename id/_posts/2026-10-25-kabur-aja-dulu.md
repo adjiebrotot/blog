@@ -60,7 +60,7 @@ Skenario pertama memakai gaji pekerja bergaji rendah di ketiga kota.
 
 - **Jakarta:** UMP DKI 2026 sebesar Rp5.729.876 per bulan, yang saya anggap sebagai gaji bersih (*take-home pay*).[^ump]
 - **Perth:** upah minimum nasional Australia A$26,44 per jam. Untuk kerja penuh waktu 38 jam seminggu, upah mingguannya A$1.004,90 (berlaku sejak 1 Juli 2026).[^fwc] Setelah dipotong pajak penghasilan untuk penduduk pajak Australia (*resident tax*) dan *Medicare levy* (iuran 2% untuk layanan kesehatan publik), gaji bersihnya sekitar A$3.769 per bulan.[^ato]
-- **Singapura:** negara ini tidak punya upah minimum nasional. Yang ada adalah Progressive Wage Model (PWM), skema upah minimum per sektor yang naik mengikuti jenjang keterampilan. Untuk jenjang terbawah pekerja kebersihan, upahnya S$2.080 per bulan (1 Juli 2026 sampai 30 Juni 2027).[^pwm] Setelah dipotong iuran CPF (Central Provident Fund, tabungan pensiun wajib) sebesar 20%, gaji bersihnya S$1.664.[^cpf]
+- **Singapura:** negara ini tidak punya upah minimum nasional. Yang ada adalah Progressive Wage Model (<span markdown="0">PWM</span>), skema upah minimum per sektor yang naik mengikuti jenjang keterampilan. Untuk jenjang terbawah pekerja kebersihan, upahnya S$2.080 per bulan (1 Juli 2026 sampai 30 Juni 2027).[^pwm] Setelah dipotong iuran <span markdown="0">CPF</span> (Central Provident Fund, tabungan pensiun wajib) sebesar 20%, gaji bersihnya S$1.664.[^cpf]
 
 | Per bulan | Jakarta (Rp) | Perth (A$) | Singapura (S$) |
 | --- | --- | --- | --- |
@@ -79,7 +79,7 @@ Skenario pertama memakai gaji pekerja bergaji rendah di ketiga kota.
 
 *Angka dibulatkan. Kurs mengikuti bawaan Cost of Living Comparator: A$1 = Rp12.710 dan S$1 = Rp14.152.*
 
-Pekerja di Perth jelas paling untung: dalam rupiah, tabungannya sekitar 80 kali lipat tabungan pekerja di Jakarta. Di atas kertas, pekerja di Singapura juga lebih untung (6,9% versus 5,8%), tetapi selisihnya tipis sekali, dan di sinilah saya harus jujur. PWM hanya wajib diterapkan untuk warga negara dan penduduk tetap (PR), tidak untuk pemegang Work Permit (izin kerja Singapura untuk pekerja asing berketerampilan rendah).[^pwm] Artinya, skenario ini hanya menunjukkan bagaimana harga terbentuk, bukan jalur yang biasa ditempuh orang Indonesia yang pindah ke sana. Perlu dicatat juga bahwa potongan CPF tadi sebenarnya tabungan wajibmu sendiri, sehingga jumlah yang kamu tabung lebih besar daripada angka di tabel.
+Pekerja di Perth jelas paling untung: dalam rupiah, tabungannya sekitar 80 kali lipat tabungan pekerja di Jakarta. Di atas kertas, pekerja di Singapura juga lebih untung (6,9% versus 5,8%), tetapi selisihnya tipis sekali, dan di sinilah saya harus jujur. PWM hanya wajib diterapkan untuk warga negara dan penduduk tetap (<span markdown="0">PR</span>), tidak untuk pemegang Work Permit (izin kerja Singapura untuk pekerja asing berketerampilan rendah).[^pwm] Artinya, skenario ini hanya menunjukkan bagaimana harga terbentuk, bukan jalur yang biasa ditempuh orang Indonesia yang pindah ke sana. Perlu dicatat juga bahwa potongan CPF tadi sebenarnya tabungan wajibmu sendiri, sehingga jumlah yang kamu tabung lebih besar daripada angka di tabel.
 
 Bagaimana kalau perkiraan *tool* ini meleset? Saya mengujinya dengan *stress test* (uji ketahanan): semua pengeluaran selain sewa saya naikkan 50 persen, karena *tool* ini memakai indeks harga, bukan struk belanja sungguhan. Hasilnya, tabungan di Perth masih tersisa sekitar A$1.680 per bulan (sekitar Rp21,4 juta), sedangkan di Singapura tabungannya langsung tekor.
 
@@ -88,8 +88,8 @@ Bagaimana kalau perkiraan *tool* ini meleset? Saya mengujinya dengan *stress tes
 Skenario kedua lebih mirip jalur yang biasa ditempuh orang Indonesia, yaitu pindah karena mendapat pekerjaan dan visanya disponsori perusahaan.
 
 - **Jakarta:** gaji bersih Rp10 juta.
-- **Perth:** untuk visa kerja terampil, Australia menetapkan gaji minimum yang disebut Core Skills Income Threshold (CSIT), dulu dikenal sebagai TSMIT. Besarnya A$79.423 per tahun (sumber sekunder sedikit berbeda, lihat catatan kaki). Setelah dipotong pajak dan *Medicare levy*, gaji bersihnya sekitar A$5.291 per bulan.[^csit]
-- **Singapura:** pekerja profesional asing butuh Employment Pass (EP), izin kerja yang mensyaratkan gaji minimum S$5.600 per bulan. Setelah dipotong pajak penghasilan untuk penduduk pajak Singapura (*tax resident*), gaji bersihnya sekitar S$5.396, karena pemegang izin kerja asing tidak membayar CPF.[^ep]
+- **Perth:** untuk visa kerja terampil, Australia menetapkan gaji minimum yang disebut Core Skills Income Threshold (<span markdown="0">CSIT</span>), dulu dikenal sebagai TSMIT. Besarnya A$79.423 per tahun (sumber sekunder sedikit berbeda, lihat catatan kaki). Setelah dipotong pajak dan *Medicare levy*, gaji bersihnya sekitar A$5.291 per bulan.[^csit]
+- **Singapura:** pekerja profesional asing butuh Employment Pass (<span markdown="0">EP</span>), izin kerja yang mensyaratkan gaji minimum S$5.600 per bulan. Setelah dipotong pajak penghasilan untuk penduduk pajak Singapura (*tax resident*), gaji bersihnya sekitar S$5.396, karena pemegang izin kerja asing tidak membayar CPF.[^ep]
 
 Untuk skenario ini, pos-pos pengeluaran saya naikkan karena gaya hidup pekerja profesional biasanya ikut naik: tempat tinggal dengan satu kamar tidur, lebih sering makan di luar, dan biaya kesehatan yang lebih besar.
 
@@ -174,6 +174,23 @@ Kalau kamu sedang menimbang untuk pindah, mulailah dari selisih itu, bukan dari 
 [^pwm]: MOM, [Progressive Wage Model, sektor kebersihan](https://www.mom.gov.sg/maintenance/employment-practices/progressive-wage-model/cleaning-sector/): upah dasar pembersih umum S$2.080 per bulan yang berlaku 1 Juli 2026 sampai 30 Juni 2027 (sebelumnya S$1.910). Cakupan: [apa itu PWM](https://www.mom.gov.sg/maintenance/employment-practices/progressive-wage-model/what-is-pwm/), wajib untuk warga negara dan PR. Bonus PWM minimal dua minggu gaji per tahun tidak saya masukkan, sehingga angka ini sedikit konservatif.
 [^cpf]: CPF Board, tarif iuran 2026 untuk karyawan 55 tahun ke bawah: karyawan 20%, pemberi kerja 17%, menurut [CPF](https://www.cpf.gov.sg/service/article/what-are-the-changes-to-the-cpf-contribution-rates-for-senior-workers-from-1-january-2026). Pemegang izin kerja (*work pass*) asing tidak membayar CPF.
 [^csit]: Batas gaji minimum visa Skills in Demand (subclass 482) jalur Core Skills per 1 Juli 2026, dikutip dari [Ethos Migration Lawyers](https://ethosmigration.com.au/annual-indexation-of-the-core-skills-income-threshold-csit-and-specialist-skills-income-threshold-ssit-as-of-1-july-2026/) dan sumber lain. Sumber sekunder berbeda tipis (A$79.423 versus A$79.499, naik dari A$76.515); saya memakai A$79.423, dan selisih A$76 per tahun tidak mengubah kesimpulan. Angka resminya bisa dicek di [Home Affairs](https://immi.homeaffairs.gov.au/visas/employing-and-sponsoring-someone/sponsoring-workers/nominating-a-position/income-thresholds).
-[^ep]: MOM, [Employment Pass eligibility](https://www.mom.gov.sg/passes-and-permits/employment-pass/eligibility): gaji minimum S$5.600 per bulan untuk pelamar baru sebelum 1 Januari 2027 (S$6.000 setelahnya), naik sesuai usia sampai S$10.700. Saya memakai batas bawahnya. Pajak: tarif *resident* tahun pajak 2026 (YA2026) dari [IRAS](https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-residency-and-tax-rates/individual-income-tax-rates), tanpa potongan pajak (*relief*).
+[^ep]: MOM, [Employment Pass eligibility](https://www.mom.gov.sg/passes-and-permits/employment-pass/eligibility): gaji minimum S$5.600 per bulan untuk pelamar baru sebelum 1 Januari 2027 (S$6.000 setelahnya), naik sesuai usia sampai S$10.700. Saya memakai batas bawahnya. Pajak: tarif *resident* tahun pajak 2026 (<span markdown="0">YA2026</span>) dari [IRAS](https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-residency-and-tax-rates/individual-income-tax-rates), tanpa potongan pajak (*relief*).
 [^iphone]: Indonesia: [Selular.ID](https://selular.id/2026/10/daftar-harga-resmi-iphone-18-series-di-indonesia-iphone-18-pro-tembus-rp58-juta/), 7 Oktober 2026, Rp27.499.000. Australia: [Finder](https://www.finder.com.au/news/iphone-18-pro-and-pro-max-price-specs-availability-australia), A$2.099. Singapura: [TechRepublic](https://www.techrepublic.com/article/news-iphone-18-pro-sea-prices-apac-southeast-asia/), S$1.899. Ketiganya bersumber dari laporan media tentang harga resmi Apple, bukan langsung dari situs Apple.
 [^uu]: [UU No. 24 Tahun 1999](https://peraturan.go.id/files/uu24-1999.pdf) tentang Lalu Lintas Devisa dan Sistem Nilai Tukar, Pasal 2 ayat (1): penduduk dapat secara bebas memiliki dan menggunakan devisa.
+
+*[ABS]: Australian Bureau of Statistics, badan statistik Australia
+*[ATO]: Australian Taxation Office, kantor pajak Australia
+*[BPJS]: Badan Penyelenggara Jaminan Sosial
+*[BPS]: Badan Pusat Statistik
+*[CPF]: Central Provident Fund, tabungan pensiun wajib di Singapura
+*[CSIT]: Core Skills Income Threshold, gaji minimum visa kerja terampil di Australia
+*[DKI]: Daerah Khusus Ibukota Jakarta
+*[EP]: Employment Pass, izin kerja Singapura untuk profesional asing
+*[IRAS]: Inland Revenue Authority of Singapore, otoritas pajak Singapura
+*[MOM]: Ministry of Manpower, kementerian tenaga kerja Singapura
+*[PR]: Permanent Resident, penduduk tetap Singapura
+*[PWM]: Progressive Wage Model, skema upah minimum per sektor di Singapura
+*[TSMIT]: Temporary Skilled Migration Income Threshold, nama lama CSIT
+*[UMP]: Upah Minimum Provinsi
+*[UU]: Undang-Undang
+*[YA2026]: Year of Assessment 2026, tahun pajak 2026 di Singapura
