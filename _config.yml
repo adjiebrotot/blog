@@ -41,6 +41,7 @@ links:
   home: "https://www.adjiebrotots.com/"
   about: "https://www.adjiebrotots.com/about/"
   tools: "https://tool.adjiebrotots.com/"
+  support: "https://www.buymeacoffee.com/adjiebrotot"   # Buy Me a Coffee, a plain link (no widget script)
   privacy: "https://tool.adjiebrotots.com/privacy/"   # covers the blog too; the Indonesian page is privacy/id/
 
 # Social card when a post sets no image of its own.

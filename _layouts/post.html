@@ -96,6 +96,11 @@ layout: default
       <img src="{{ '/assets/img/adjie-160.webp' | relative_url }}" alt="{{ site.author.name }}" width="44" height="44" loading="lazy" decoding="async">
       <p><strong><a rel="author" href="{{ site.links.about }}">{{ site.author.name }}</a></strong><br>{{ t.about_author }}</p>
     </div>
+    {%- comment -%} Support, once, after the author: a plain link, never a floating widget, so it covers nothing and loads no script. {%- endcomment %}
+    <div class="support">
+      <p>{{ t.support_note }}</p>
+      <a class="bmc-btn" href="{{ site.links.support }}" target="_blank" rel="noopener" aria-label="{{ t.support_aria }}"><span aria-hidden="true">☕</span> {{ t.support_cta }}</a>
+    </div>
   </footer>
 </article>
 
