@@ -184,7 +184,9 @@ These override anything above.
   the source list. Spelling a term out in the sentence is good for the reader but does not
   replace the line. Plurals are separate terms (`MP` and `MPs`). Currency symbols, number
   suffixes (Rp, 850k), roman numerals, brand names that stand for nothing and the very
-  obvious (vs, US, TV, PDF, a.k.a, dll) are not defined. Write the definitions as you write the post, not after: every time you type
+  obvious (vs, US, TV, PDF, a.k.a, dll) are not defined. Where the sentence already spells
+  the term out beside it ("Produk domestik bruto (PDB)"), write that one occurrence as
+  `<span markdown="0">PDB</span>`: no tooltip that repeats what the reader just read. Write the definitions as you write the post, not after: every time you type
   an abbreviation you have not defined yet, add its line. Check every post with
   `python3 .claude/skills/adjie-writing-style/scripts/check-abbr.py <file>` (no ERROR), then
   read once for mixed-case short forms the script cannot see (Kemenkeu, MaPS). Full rule:

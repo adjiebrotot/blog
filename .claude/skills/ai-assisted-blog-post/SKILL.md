@@ -60,7 +60,9 @@ concept / points  →  Draft plan (v1)  →  Adjie: revision + answers  →  con
   short form it uses with a `*[TERM]: meaning` line (`CLAUDE.md`, "Abbreviations"), in its own
   language. The writer adds the line as it writes, the brief lists the abbreviations the
   facts bring (agencies, taxes, units), and the post passes `adjie-writing-style`'s
-  `scripts/check-abbr.py` before Adjie sees it.
+  `scripts/check-abbr.py` before Adjie sees it. Where the sentence already spells a term out
+  beside its abbreviation, that one occurrence is `<span markdown="0">ABBR</span>`, so it
+  gets no redundant tooltip.
 - **Indonesian passes the evaluator before Adjie sees it.** Every Indonesian text, the
   plan's opening narrative included, goes through `bahasa-indonesia`'s
   `scripts/cek.py` and its evaluator (`references/evaluator.md`), run by an agent that has

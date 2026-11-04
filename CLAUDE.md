@@ -77,6 +77,14 @@ source list alike, even when the post already spells the term out once in the se
 - The meaning is the full name plus, when a reader may not know it, a few words on what it is
   ("Badan Pusat Statistik, Statistics Indonesia"). In Indonesian, write it per the
   `bahasa-indonesia` skill.
+- **No tooltip where the text already explains the term.** When the full name or a gloss sits
+  right next to the abbreviation ("Produk domestik bruto (PDB)", "Employment Pass (EP)",
+  "REIWA (Real Estate Institute of Western Australia, ...)", "**PH** (pisah harta)",
+  "FIRE adalah singkatan dari *Financial Independence, Retire Early*"), the bubble repeats
+  what the reader just read. Wrap that one occurrence in `<span markdown="0">PDB</span>` so
+  kramdown leaves it alone. Every other use keeps its tooltip, and the definition line stays.
+  A UI label that merely contains the abbreviation ("Nominal annual (APR)") is not an
+  explanation, so it keeps the tooltip.
 - Not defined: very obvious ones that every reader knows (vs, US, UK, TV, PDF, a.k.a, dll;
   the checker skips them), currency symbols and number suffixes (Rp, A$, 850k, 1.27bn),
   roman numerals, hashtags, and brand or site names that stand for nothing (LinkedIn,

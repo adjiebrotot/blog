@@ -350,6 +350,9 @@ follows this skill:
   Amerika Serikat`, `*[NOK]: krone Norwegia`.
 - Short forms count: `*[Kemenkeu]: Kementerian Keuangan`. The very obvious ones (*vs*,
   *dll*, *US*, *AS*) get no line.
+- Where the sentence already gives the full name or a gloss beside the abbreviation
+  ("Produk domestik bruto (PDB)", "**PH** (pisah harta)"), write that one occurrence as
+  `<span markdown="0">PDB</span>`, so it has no tooltip repeating the text.
 - No em-dashes, no casual words: the meaning is factual layer.
 - Run `python3 .claude/skills/adjie-writing-style/scripts/check-abbr.py <file>` next to
   `cek.py`.
