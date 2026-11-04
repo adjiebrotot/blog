@@ -177,3 +177,21 @@ Kalau kamu sedang menimbang untuk pindah, mulailah dari selisih itu, bukan dari 
 [^ep]: MOM, [Employment Pass eligibility](https://www.mom.gov.sg/passes-and-permits/employment-pass/eligibility): gaji minimum S$5.600 per bulan untuk pelamar baru sebelum 1 Januari 2027 (S$6.000 setelahnya), naik sesuai usia sampai S$10.700. Saya memakai batas bawahnya. Pajak: tarif *resident* tahun pajak 2026 (YA2026) dari [IRAS](https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-residency-and-tax-rates/individual-income-tax-rates), tanpa potongan pajak (*relief*).
 [^iphone]: Indonesia: [Selular.ID](https://selular.id/2026/10/daftar-harga-resmi-iphone-18-series-di-indonesia-iphone-18-pro-tembus-rp58-juta/), 7 Oktober 2026, Rp27.499.000. Australia: [Finder](https://www.finder.com.au/news/iphone-18-pro-and-pro-max-price-specs-availability-australia), A$2.099. Singapura: [TechRepublic](https://www.techrepublic.com/article/news-iphone-18-pro-sea-prices-apac-southeast-asia/), S$1.899. Ketiganya bersumber dari laporan media tentang harga resmi Apple, bukan langsung dari situs Apple.
 [^uu]: [UU No. 24 Tahun 1999](https://peraturan.go.id/files/uu24-1999.pdf) tentang Lalu Lintas Devisa dan Sistem Nilai Tukar, Pasal 2 ayat (1): penduduk dapat secara bebas memiliki dan menggunakan devisa.
+
+*[ABS]: Australian Bureau of Statistics, badan statistik Australia
+*[ATO]: Australian Taxation Office, kantor pajak Australia
+*[BPJS]: Badan Penyelenggara Jaminan Sosial
+*[BPS]: Badan Pusat Statistik
+*[CPF]: Central Provident Fund, tabungan pensiun wajib di Singapura
+*[CSIT]: Core Skills Income Threshold, gaji minimum visa kerja terampil di Australia
+*[DKI]: Daerah Khusus Ibukota Jakarta
+*[EP]: Employment Pass, izin kerja Singapura untuk profesional asing
+*[IRAS]: Inland Revenue Authority of Singapore, otoritas pajak Singapura
+*[MOM]: Ministry of Manpower, kementerian tenaga kerja Singapura
+*[PR]: Permanent Resident, penduduk tetap Singapura
+*[PWM]: Progressive Wage Model, skema upah minimum per sektor di Singapura
+*[TSMIT]: Temporary Skilled Migration Income Threshold, nama lama CSIT
+*[UMP]: Upah Minimum Provinsi
+*[UU]: Undang-Undang
+*[YA2026]: Year of Assessment 2026, tahun pajak 2026 di Singapura
+*[dll]: dan lain-lain

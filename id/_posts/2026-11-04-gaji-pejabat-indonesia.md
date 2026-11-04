@@ -179,6 +179,27 @@ Kita tentu tidak bisa mengubah semua itu dalam semalam, tetapi kita bisa mulai d
 *[CGT]: Capital Gains Tax, pajak keuntungan modal
 *[Korlantas]: Korps Lalu Lintas
 *[Polri]: Kepolisian Negara Republik Indonesia
+*[AAP]: Australian Associated Press
+*[ABC]: Australian Broadcasting Corporation
+*[AFL-CIO]: American Federation of Labor and Congress of Industrial Organizations
+*[AS]: Amerika Serikat
+*[BLS]: Bureau of Labor Statistics, badan statistik tenaga kerja Amerika Serikat
+*[CN]: Tiongkok, seperti pada CN¥, yuan Tiongkok
+*[CNN]: Cable News Network
+*[DBM]: Department of Budget and Management, kementerian anggaran Filipina
+*[DOSM]: Department of Statistics Malaysia, badan statistik Malaysia
+*[GDP]: Gross Domestic Product
+*[IMF]: International Monetary Fund, Dana Moneter Internasional
+*[JPNN]: Jawa Pos National Network, situs berita Indonesia
+*[MP]: Member of Parliament, anggota parlemen
+*[MaPS]: Ministerial and Parliamentary Services, layanan administrasi menteri dan anggota parlemen Australia
+*[NESDC]: National Economic and Social Development Council, dewan pembangunan ekonomi dan sosial Thailand
+*[NOK]: krone Norwegia
+*[OECD]: Organisation for Economic Co-operation and Development
+*[ONS]: Office for National Statistics, badan statistik Inggris
+*[PSA]: Philippine Statistics Authority, badan statistik Filipina
+*[SSB]: Statistisk sentralbyrå, badan statistik Norwegia
+*[US]: United States, Amerika Serikat
 
 ## Referensi
 
@@ -220,3 +241,5 @@ Kita tentu tidak bisa mengubah semua itu dalam semalam, tetapi kita bisa mulai d
 [^bkturki]: JPNN, [Tanpa ketuanya, BK DPR tetap ke Yunani](https://www.jpnn.com/news/tanpa-ketuanya-bk-dpr-tetap-ke-yunani), 19 Oktober 2010, sumber pernyataan Gayus Lumbuun dan lama perjalanan enam hari; Kontan, [Pelesiran ke Turki, 8 anggota DPR diadukan ke Badan Kehormatan](https://nasional.kontan.co.id/news/pelesiran-ke-turki-8-anggota-dpr-diadukan-ke-badan-kehormatan-1), sumber pengaduan sepuluh LSM.
 [^uangharian]: CNN Indonesia, [Intip uang saku DPR ke luar negeri yang akan dimoratorium buntut demo](https://www.cnnindonesia.com/ekonomi/20250902182852-532-1269374/intip-uang-saku-dpr-ke-luar-negeri-yang-akan-dimoratorium-buntut-demo), 3 September 2025: uang harian tingkat A menurut PMK No. 32 Tahun 2025, US$347 sampai US$792 (Inggris) per orang per hari, dengan kurs Rp16.412 per dolar AS (September 2025). Hitungan saya: US$792 × Rp16.412 ≈ Rp13 juta, dan Rp13 juta ÷ Rp3,33 juta ≈ 3,9.
 [^moratorium]: Suara.com, [DPR setop kunjungan kerja ke luar negeri, Dasco janji buka-bukaan](https://www.suara.com/news/2025/09/05/211435/dpr-setop-kunjungan-kerja-ke-luar-negeri-dasco-janji-buka-bukaan), 5 September 2025: moratorium sejak 1 September 2025, kecuali untuk menghadiri undangan kenegaraan.
+
+<!-- abbr-ok: LSVN -->

@@ -56,6 +56,11 @@ concept / points  →  Draft plan (v1)  →  Adjie: revision + answers  →  con
   write "see below", "as I showed" or "details in the X section" across sections. Every
   post passes `adjie-writing-style`'s `scripts/check-references.py` and the
   reference-checker agent (`.claude/agents/reference-checker.md`) before Adjie sees it.
+- **Every abbreviation is wrapped in `<abbr>`.** Each post defines every acronym, code and
+  short form it uses with a `*[TERM]: meaning` line (`CLAUDE.md`, "Abbreviations"), in its own
+  language. The writer adds the line as it writes, the brief lists the abbreviations the
+  facts bring (agencies, taxes, units), and the post passes `adjie-writing-style`'s
+  `scripts/check-abbr.py` before Adjie sees it.
 - **Indonesian passes the evaluator before Adjie sees it.** Every Indonesian text, the
   plan's opening narrative included, goes through `bahasa-indonesia`'s
   `scripts/cek.py` and its evaluator (`references/evaluator.md`), run by an agent that has
@@ -302,7 +307,10 @@ no ERROR (and fixes every WARN it can). Each writer runs `adjie-writing-style`'s
 narrative with only the edits Adjie asked for, and puts every source in a footnote. Each
 writer is told the same-section rule and runs
 `python3 .claude/skills/adjie-writing-style/scripts/check-references.py <file>` until it
-shows no ERROR.
+shows no ERROR. Each writer defines every abbreviation it uses with a `*[TERM]: meaning`
+line in its own language and runs
+`python3 .claude/skills/adjie-writing-style/scripts/check-abbr.py <file>` until it shows no
+ERROR.
 
 If you cannot spawn agents, write the Indonesian post first, from the brief alone, run
 3d on it, and only then write the English.
@@ -347,4 +355,5 @@ Changes he asks for after this are ordinary edits to the post, not a new round o
 flow. An edit to the Indonesian still runs `scripts/cek.py` and the evaluator on the
 changed paragraphs before it is pushed, and any edit, in any language, runs
 `check-references.py` again: moving or deleting a figure can strand a "below" in another
-section.
+section. Any edit also runs `check-abbr.py` again: a new sentence may bring an abbreviation
+that has no `*[TERM]: meaning` line yet.

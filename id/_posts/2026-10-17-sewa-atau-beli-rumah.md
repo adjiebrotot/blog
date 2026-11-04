@@ -230,3 +230,18 @@ Itulah sebabnya, alih-alih bertanya "sewa atau beli, mana yang lebih pintar?", l
 [^bca]: BCA, [suku bunga KPR](https://rumahsaya.bca.co.id/info-kpr/Sukubunga-kpr), berlaku sampai 31 Oktober 2026: bunga reguler *fixed* 5 tahun 8,5% (pembelian), promo *fixed* mulai 3,81%, dan bunga *floating* saat ini 11% yang ditinjau setiap 6 bulan. BI Rate 5,75%: [Bisnis.com, 23 September 2026](https://finansial.bisnis.com/read/20260923/11/2006495/breaking-bank-indonesia-tahan-bi-rate-575-di-era-suku-bunga-tinggi).
 [^ubs]: UBS, [Global Wealth Report 2026](https://www.ubs.com/global/en/media/display-page-ndp/en-20260630-gwr-2026.html) (data 2025), Tabel 1, kekayaan median per orang dewasa: Luksemburg US$394.005, Belgia US$277.166, Australia US$210.783.
 [^abc]: ABC News, [Australia ranks third-highest for median wealth globally, UBS data shows](https://www.abc.net.au/news/2026-07-02/ubs-global-wealth-report-australia-millionaires/106869298), 2 Juli 2026.
+
+*[KPR]: Kredit Pemilikan Rumah
+*[BCA]: Bank Central Asia
+*[BI]: Bank Indonesia
+*[BPS]: Badan Pusat Statistik
+*[SUPAS]: Survei Penduduk Antar Sensus
+*[BPHTB]: Bea Perolehan Hak atas Tanah dan Bangunan
+*[PBB]: Pajak Bumi dan Bangunan
+*[PPh]: Pajak Penghasilan
+*[DP]: Down Payment, uang muka pembelian rumah
+*[REIWA]: Real Estate Institute of Western Australia, asosiasi properti di Australia Barat
+*[UBS]: bank asal Swiss yang menerbitkan Global Wealth Report
+*[US]: United States, Amerika Serikat
+*[ABC]: Australian Broadcasting Corporation, lembaga penyiaran publik Australia
+*[vs]: versus

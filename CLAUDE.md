@@ -35,6 +35,8 @@ LANG=C.UTF-8 bundle exec jekyll build
 ```
 
 Every post you touched, in any language, passes
+`python3 .claude/skills/adjie-writing-style/scripts/check-abbr.py <file>` (no ERROR: every
+abbreviation has its `*[TERM]: meaning` line, see "Abbreviations" below) and
 `python3 .claude/skills/adjie-writing-style/scripts/check-references.py <file>` (no ERROR):
 a sentence points only at a figure, table, chart or example in its own section, never at
 one in another section ("the screenshot below" three sections up is wrong). A new or
@@ -60,6 +62,27 @@ Write it natively from the case, never by translating the English post sentence 
 - **A post in both languages** is written by two writer agents from one language-neutral brief,
   in parallel, never by one context writing both (`ai-assisted-blog-post`, Step 3). The two may
   use different examples as long as the message and the verified numbers match.
+
+## Abbreviations
+
+**Every abbreviation in a post is wrapped in `<abbr>`.** Define each one once, anywhere in the
+post (the end is tidy), as a kramdown line `*[TERM]: meaning`, and the site renders every
+use as `<abbr title="meaning">` with a hover, focus and tap bubble. This covers acronyms and
+initialisms (DPR, KPR, GDP, ATO, CNN), codes and labels (TK/0, Q2, YA2026, IV/e), and short
+forms (vs, dll, a.k.a, Kemenkeu), in prose, headings, tables, link text, captions and the
+source list alike, even when the post already spells the term out once in the sentence.
+
+- Kramdown matches the exact term, as a whole word, case-sensitive. `MPs` needs its own line
+  next to `MP`, and `KPR-nya` is covered by `KPR`.
+- The meaning is the full name plus, when a reader may not know it, a few words on what it is
+  ("Badan Pusat Statistik, Statistics Indonesia"). In Indonesian, write it per the
+  `bahasa-indonesia` skill.
+- Not abbreviations, so not defined: currency symbols and number suffixes (Rp, A$, US$ is
+  covered through `US`, 850k, 1.27bn), roman numerals, hashtags, and brand or site names that
+  stand for nothing (LinkedIn, DDTCNews). A capitalised brand the checker flags goes in
+  `<!-- abbr-ok: TERM -->`.
+- Define a term in the post that uses it. Two posts never share definitions, and a pair in
+  two languages each carries its own (the meaning in that language).
 
 ## Page text
 

@@ -132,8 +132,13 @@ KaTeX and Mermaid load only on a post that uses them.
 - **Table of contents:** put `* TOC` on one line and `{:toc}` on the next.
 - **Summary box:** add `{: .tldr}` on the line after a paragraph. `{: .note}` and
   `{: .warning}` work the same way.
-- **Abbreviations:** define a term once, anywhere in the post, as `*[PTKP]: Penghasilan Tidak Kena Pajak`.
-  Every PTKP in the post then shows its meaning on hover, focus, click or tap.
+- **Abbreviations (required):** every abbreviation, acronym, code or short form in a post
+  (KPR, DPR, GDP, TK/0, Q2, vs, dll...) gets a definition line, anywhere in the post, as
+  `*[PTKP]: Penghasilan Tidak Kena Pajak`. Every PTKP in the post then shows its meaning on
+  hover, focus, click or tap. Kramdown matches the exact term as a whole word, so `MPs`
+  needs its own line next to `MP`. Currency symbols, number suffixes and brand names are
+  not abbreviations. Check with
+  `python3 .claude/skills/adjie-writing-style/scripts/check-abbr.py <post>.md` (no ERROR).
 - **Images:** keep them in `assets/img/`, and always write alt text:
   `![Net equity chart](/assets/img/net-equity.png)`.
 

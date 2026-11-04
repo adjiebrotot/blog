@@ -212,3 +212,10 @@ Langkah kecilnya hanya butuh lima menit: sebelum musim SPT berikutnya, buka *too
 *[K/I/1]: Kawin, penghasilan Istri digabung, satu tanggungan: PTKP Rp117 juta
 *[K/I]: Kawin, penghasilan Istri digabung: PTKP tambahan Rp54 juta untuk istri
 *[PER-11/PJ/2025]: Peraturan Direktur Jenderal Pajak tentang pelaporan SPT di Coretax
+*[CNBC]: Consumer News and Business Channel
+*[FAQ]: Frequently Asked Questions, pertanyaan yang sering diajukan
+*[IKPI]: Ikatan Konsultan Pajak Indonesia
+*[JDIH]: Jaringan Dokumentasi dan Informasi Hukum
+*[Kemenkeu]: Kementerian Keuangan
+*[MK]: Mahkamah Konstitusi
+*[vs]: versus

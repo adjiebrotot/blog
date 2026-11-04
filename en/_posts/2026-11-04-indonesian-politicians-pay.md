@@ -202,13 +202,33 @@ If you are Indonesian, here is one small thing to start with: ask for the receip
 *[Polri]: Kepolisian Negara Republik Indonesia, the Indonesian National Police
 *[BK]: Badan Kehormatan, the DPR's ethics council
 *[PMK]: Peraturan Menteri Keuangan, a Finance Minister's regulation
-*[NGO]: Non-governmental organisation
 *[BLS]: Bureau of Labor Statistics (United States)
 *[MP]: Member of Parliament
 *[PM]: Prime Minister
 *[UK]: United Kingdom
 *[WA]: Western Australia
 *[NOK]: Norwegian krone
+*[AAP]: Australian Associated Press
+*[ABC]: Australian Broadcasting Corporation
+*[AFL-CIO]: American Federation of Labor and Congress of Industrial Organizations
+*[CN]: China, as in CN¥, the Chinese yuan
+*[CNN]: Cable News Network
+*[DBM]: Department of Budget and Management (Philippines)
+*[DOSM]: Department of Statistics Malaysia
+*[IMF]: International Monetary Fund
+*[JPNN]: Jawa Pos National Network, an Indonesian news site
+*[MPs]: Members of Parliament
+*[NGOs]: Non-governmental organisations
+*[NESDC]: National Economic and Social Development Council (Thailand)
+*[OECD]: Organisation for Economic Co-operation and Development
+*[ONS]: Office for National Statistics (United Kingdom)
+*[PNS]: Pegawai Negeri Sipil, an Indonesian civil servant
+*[PSA]: Philippine Statistics Authority
+*[Q1]: first quarter
+*[SSB]: Statistisk sentralbyrå, Statistics Norway
+*[SUVs]: sport utility vehicles
+*[US]: United States
+*[VND]: Vietnamese dong
 
 ## References
 
@@ -251,3 +271,5 @@ If you are Indonesian, here is one small thing to start with: ask for the receip
 [^bk-turkey]: JPNN, [Tanpa ketuanya, BK DPR tetap ke Yunani](https://www.jpnn.com/news/tanpa-ketuanya-bk-dpr-tetap-ke-yunani), 19 October 2010 (Gayus Lumbuun's refusal, six-day trip); Kontan, [Pelesiran ke Turki, 8 anggota DPR diadukan ke Badan Kehormatan](https://nasional.kontan.co.id/news/pelesiran-ke-turki-8-anggota-dpr-diadukan-ke-badan-kehormatan-1) (the ten NGOs' complaint).
 [^per-diem]: CNN Indonesia, [Intip uang saku DPR ke luar negeri yang akan dimoratorium buntut demo](https://www.cnnindonesia.com/ekonomi/20250902182852-532-1269374/intip-uang-saku-dpr-ke-luar-negeri-yang-akan-dimoratorium-buntut-demo), 3 September 2025: tier-A daily allowance under PMK 32/2025, US$347 to US$792 (UK) per person per day, at Rp16,412 to the US dollar (September 2025). US$792 x Rp16,412 = about Rp13 million; Rp13 million / Rp3.33 million = 3.9.
 [^moratorium]: Suara.com, [DPR setop kunjungan kerja ke luar negeri](https://www.suara.com/news/2025/09/05/211435/dpr-setop-kunjungan-kerja-ke-luar-negeri-dasco-janji-buka-bukaan), 5 September 2025: moratorium from 1 September 2025, except for state invitations.
+
+<!-- abbr-ok: LSVN -->
