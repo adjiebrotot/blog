@@ -154,3 +154,6 @@ Semua hasil skenario (cicilan HP dan laptop) dihitung dengan [*tool* Finance vs 
 *[OJK]: Otoritas Jasa Keuangan
 *[KPR]: Kredit Pemilikan Rumah
 *[SEOJK]: Surat Edaran Otoritas Jasa Keuangan
+*[APR]: Annual Percentage Rate
+*[BI]: Bank Indonesia
+*[HP]: handphone, telepon seluler

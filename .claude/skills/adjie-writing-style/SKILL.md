@@ -178,6 +178,19 @@ These override anything above.
     (`.claude/agents/reference-checker.md`) read for the pointers a regex misses.
   - Plan for it: put each figure in the section that talks about it, and don't promise a
     later section ("I will show that further down"). Show it there, or say it here.
+- **Every abbreviation is wrapped in `<abbr>`.** Acronyms, codes and short forms (DPR, KPR,
+  GDP, TK/0, Q2) each get one `*[TERM]: meaning` line in the post, which kramdown
+  turns into `<abbr title="meaning">` on every use, in prose, headings, tables, link text and
+  the source list. Spelling a term out in the sentence is good for the reader but does not
+  replace the line. Plurals are separate terms (`MP` and `MPs`). Currency symbols, number
+  suffixes (Rp, 850k), roman numerals, brand names that stand for nothing and the very
+  obvious (vs, US, TV, PDF, a.k.a, dll) are not defined. Where the sentence already spells
+  the term out beside it ("Produk domestik bruto (PDB)"), write that one occurrence as
+  `<span markdown="0">PDB</span>`: no tooltip that repeats what the reader just read. Write the definitions as you write the post, not after: every time you type
+  an abbreviation you have not defined yet, add its line. Check every post with
+  `python3 .claude/skills/adjie-writing-style/scripts/check-abbr.py <file>` (no ERROR), then
+  read once for mixed-case short forms the script cannot see (Kemenkeu, MaPS). Full rule:
+  `CLAUDE.md`, "Abbreviations".
 - Follow `README.md` for the rest: question-style `##` headings, short paragraphs, the
   "In short" summary, a source and date for every figure.
 - **Two languages.** Write each language natively with the same moves and message. Don't
@@ -221,3 +234,5 @@ and the shape of the sentences.
     figure, table or section points at something in the same section (or at a whole
     section, named by its heading). `scripts/check-references.py` shows no ERROR, and the
     reference-checker agent passed it.
+12. Every abbreviation, code and short form has its `*[TERM]: meaning` line, so it shows as
+    `<abbr>`. `scripts/check-abbr.py` shows no ERROR.

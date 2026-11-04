@@ -334,6 +334,29 @@ Spelling with English words: a suffix takes a hyphen ("*input*-nya", "*tool*-nya
 "KPR-nya", "*browser*-mu"); an Indonesian prefix on an English verb takes one too
 ("di-*deploy*"). Prefer an Indonesian verb when one is natural ("menginvestasikan").
 
+## Abbreviations in Indonesian
+
+Every abbreviation in an Indonesian post gets a `*[SINGKATAN]: arti` line, which the site
+shows as `<abbr>` (`CLAUDE.md`, "Abbreviations"). The meaning is Indonesian text, so it
+follows this skill:
+
+- An Indonesian term gives its full name: `*[PTKP]: Penghasilan Tidak Kena Pajak`. Add a few
+  words when the reader may not know what it is: `*[DJP]: Direktorat Jenderal Pajak`,
+  `*[SPT]: Surat Pemberitahuan, laporan pajak tahunan`.
+- A foreign body gives its original name, then what it is in Indonesian:
+  `*[ATO]: Australian Taxation Office, kantor pajak Australia`. The name is a proper name, so
+  no italics (a `title` attribute cannot hold them anyway).
+- A foreign country or currency code is explained in Indonesian: `*[US]: United States,
+  Amerika Serikat`, `*[NOK]: krone Norwegia`.
+- Short forms count: `*[Kemenkeu]: Kementerian Keuangan`. The very obvious ones (*vs*,
+  *dll*, *US*, *AS*) get no line.
+- Where the sentence already gives the full name or a gloss beside the abbreviation
+  ("Produk domestik bruto (PDB)", "**PH** (pisah harta)"), write that one occurrence as
+  `<span markdown="0">PDB</span>`, so it has no tooltip repeating the text.
+- No em-dashes, no casual words: the meaning is factual layer.
+- Run `python3 .claude/skills/adjie-writing-style/scripts/check-abbr.py <file>` next to
+  `cek.py`.
+
 ## No bragging
 
 "My tool" or "the calculator I built" does not become "*buatan saya*" or "*milik saya*".

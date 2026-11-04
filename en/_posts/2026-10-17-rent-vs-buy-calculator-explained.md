@@ -230,3 +230,14 @@ Don't ask "is renting or buying smarter?" Ask "what does this house earn, and wh
 [^bca]: BCA, [KPR interest rates](https://rumahsaya.bca.co.id/info-kpr/Sukubunga-kpr), valid to 31 October 2026: regular 5-year fixed rate 8.5% (purchase), promotional fixes from 3.81%, current floating rate 11% reviewed every six months. Bank Indonesia rate of 5.75%: [Bisnis.com, 23 September 2026](https://finansial.bisnis.com/read/20260923/11/2006495/breaking-bank-indonesia-tahan-bi-rate-575-di-era-suku-bunga-tinggi).
 [^ubs]: UBS, [Global Wealth Report 2026](https://www.ubs.com/global/en/media/display-page-ndp/en-20260630-gwr-2026.html) (covers 2025), Table 1, median wealth per adult: Luxembourg US$394,005, Belgium US$277,166, Australia US$210,783.
 [^abc]: ABC News, [Australia ranks third-highest for median wealth globally, UBS data shows](https://www.abc.net.au/news/2026-07-02/ubs-global-wealth-report-australia-millionaires/106869298), 2 July 2026.
+
+*[KPR]: Kredit Pemilikan Rumah, the Indonesian home loan (mortgage)
+*[BCA]: Bank Central Asia, an Indonesian private bank
+*[BI]: Bank Indonesia, the central bank
+*[BPS]: Badan Pusat Statistik, Statistics Indonesia
+*[SUPAS]: Survei Penduduk Antar Sensus, Indonesia's inter-census population survey
+*[BPHTB]: Bea Perolehan Hak atas Tanah dan Bangunan, Indonesia's land and building acquisition duty
+*[REIWA]: Real Estate Institute of Western Australia
+*[UBS]: the Swiss bank that publishes the Global Wealth Report
+*[ABC]: Australian Broadcasting Corporation
+*[Q2]: second quarter
