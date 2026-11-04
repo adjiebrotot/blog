@@ -12,7 +12,7 @@ keywords: [Indonesian politicians pay, DPR salary, Indonesian president salary, 
 bmc_message: "I get no politician's allowance, so buy me a coffee to keep me writing!"
 ---
 
-**In short:** Indonesian politicians' pay is far higher than Australia's once you measure it against what ordinary workers earn. Australia's Prime Minister earns 11.9 times the national minimum wage; Indonesia's president, 17.9 times the average provincial minimum wage. An Australian backbench MP's pay and allowances come to 6.0 times the minimum wage; a DPR member's to 21.1 times (18.7 after tax). With constituency funds, it is about 12 times against about 80. Then add Indonesia's lifetime perks for ex-presidents and its motorcades, against Australia's per-person expense reports, published every quarter.
+**In short:** Indonesian politicians' pay is far higher than Australia's once you measure it against what ordinary workers earn. Australia's Prime Minister earns 8.4 times the median Australian wage; Indonesia's president, 18.8 times the average Indonesian wage. In parliament the gap is wider still: an Australian backbench MP's pay and allowances come to 4.2 times the median wage, a DPR member's to 22.3 times (19.7 after tax). With constituency funds, it is about 8.6 times against about 85. Then add Indonesia's lifetime perks for ex-presidents, its motorcades and its billion-rupiah study tours, against Australia's per-person expense reports, published every quarter.
 {: .tldr}
 
 * TOC
@@ -46,20 +46,22 @@ Now the honest part. Australia is not the most equal country in the world. Its i
 
 The other honest part is money. Australia's GDP per person was about US$65,000 in 2025, Indonesia's about US$5,100: roughly 13 times less.[^imf] The average Australian punter is rich by world standards, which is why they walk around Bali like its de facto kings.
 
-## How much does the Prime Minister earn compared with a minimum-wage worker?
+## How much does the Prime Minister earn compared with a typical worker?
 
-Australia's Prime Minister earns about 11.9 times the national minimum wage, and Indonesia's president about 17.9 times the average provincial minimum wage.
+Australia's Prime Minister earns about 8.4 times the median Australian wage, and Indonesia's president about 18.8 times the average Indonesian wage.
 
-In Australia, every federal MP gets a base salary of A$239,270 a year, and the Prime Minister gets a 160% loading on top: A$622,110 a year, or about A$51,843 a month. That rate has applied since 1 July 2025, and the Remuneration Tribunal decided on a 0% change from 1 July 2026, so it is still current.[^remtrib] The national minimum wage from 1 July 2026 is A$1,004.90 a week, the same in every state: A$52,255 a year, or about A$4,355 a month.[^fwo] A$622,110 / A$52,255 = 11.9 times.
+Why not the minimum wage? Because in Indonesia it says little about what most people earn. BPS puts the average employee wage at Rp3.33 million a month (August 2025), which is barely the average provincial minimum wage (UMP) of 2025, about Rp3.31 million, and already behind the 2026 average of Rp3.51 million.[^bpswage][^ump] The average worker earns roughly the legal minimum. BPS publishes only the average, and a few very high earners pull an average up, so the median is probably lower still. If anything, the Indonesian multiples in this post are conservative.
 
-In Indonesia, the president's pay is a base salary (*gaji pokok*) of Rp30,240,000 plus a position allowance of Rp32,500,000: Rp62,740,000 a month, unchanged since 2001.[^setkab] Indonesia has no single national minimum wage; each province sets its own UMP. The average across all 38 provinces in 2026 is Rp3,508,714 a month.[^ump] Rp62,740,000 / Rp3,508,714 = 17.9 times.
+In Australia, every federal MP gets a base salary of A$239,270 a year, and the Prime Minister gets a 160% loading on top: A$622,110 a year, or about A$51,843 a month. That rate has applied since 1 July 2025, and the Remuneration Tribunal decided on a 0% change from 1 July 2026, so it is still current.[^remtrib] The median Australian employee earned A$1,425 a week in August 2025: about A$74,100 a year.[^absmedian] A$622,110 / A$74,100 = 8.4 times.
+
+In Indonesia, the president's pay is a base salary (*gaji pokok*) of Rp30,240,000 plus a position allowance of Rp32,500,000: Rp62,740,000 a month, unchanged since 2001.[^setkab] Rp62,740,000 / Rp3,330,000 = 18.8 times.
 
 Fair's fair: a salary frozen for 25 years sounds almost modest. But the headline is not the full story, and the table below is where the two jobs really part ways.
 
 | Item | Australia: Prime Minister | Indonesia: President |
 | --- | --- | --- |
 | Monthly salary | A$51,843 (A$622,110 a year) | Rp62,740,000 (base Rp30.24 million + allowance Rp32.5 million) |
-| Multiple of the minimum wage | 11.9x the national minimum wage | 17.9x the average UMP |
+| Multiple of a typical wage | 8.4x the median wage | 18.8x the average wage |
 | Extras in office | Official residence, full-time AFP protection | Palace; household, health and transport paid from the state's operational budget |
 | Pension after office | No special PM pension: ordinary super, or the old MPs' scheme only if elected before 9 Oct 2004 | 100% of the last base salary (Rp30.24 million a month) |
 | House after office | No | A house, furnished |
@@ -72,7 +74,7 @@ An Indonesian ex-president, under Law 7 of 1978, keeps a pension of 100% of the 
 
 ## How much does an MP take home in Jakarta versus Canberra?
 
-A member of the DPR, Indonesia's 580-member House of Representatives, gets pay and allowances worth 21.1 times the average provincial minimum wage (18.7 times after tax), and about 80 times once recess funds are counted. An Australian backbench MP's pay and allowances come to 6.0 times the minimum wage, and about 12 times with everything included.
+A member of the DPR, Indonesia's 580-member House of Representatives, gets pay and allowances worth 22.3 times the average Indonesian wage (19.7 times after tax), and about 85 times once recess funds are counted. An Australian backbench MP's pay and allowances come to 4.2 times the median Australian wage, and about 8.6 times with everything included.
 
 When you hear "DPR" in Indonesia, you picture immense power and a lot of money. In Australia, a backbench MP looks more like a manager or director at a mid-sized company: an executive, not royalty.
 
@@ -86,9 +88,9 @@ Here is an Australian backbench MP in the House of Representatives, per month:
 - **Base salary:** A$239,270 a year, or A$19,939 a month.[^remtrib]
 - **Electorate allowance:** paid to the MP and taxed, for the costs of serving the electorate. It is A$39,700, A$47,200 or A$57,100 a year depending on the electorate's size (May 2025).[^electorate] Taking the middle tier: A$3,933 a month.
 - **Canberra travel allowance:** a fixed nightly rate, reported at about A$310 a night, for sitting days.[^travel] My estimate of about 80 nights a year gives about A$24,800 a year, or about A$2,067 a month.
-- **Pay plus allowances:** about A$311,270 a year, or A$25,939 a month: 6.0 times the minimum wage of A$4,355 a month.
+- **Pay plus allowances:** about A$311,270 a year, or A$25,939 a month: 4.2 times the median wage of A$6,175 a month.[^absmedian]
 - **Office expenses budget**, money for constituency work rather than personal pay: A$170,631 plus A$1.272 per enrolled voter in 2025-26.[^office] For an electorate of about 121,000 voters, that is about A$324,000 a year, or about A$27,000 a month.
-- **Everything together:** about A$636,000 a year, or about A$53,000 a month: roughly 12 times the minimum wage.
+- **Everything together:** about A$636,000 a year, or about A$53,000 a month: roughly 8.6 times the median wage.
 
 Electorate staff, paid separately, and Comcar, the government car service with a driver for parliamentary business, come on top, and I left them out of these totals.
 
@@ -99,26 +101,26 @@ Now a DPR member, after the allowances were cut at the end of August 2025.[^dpr]
 - **Before several allowances were cut**, the Rp50 million housing allowance among them, the total was reported at Rp104.1 million a month.
 - **Recess funds (*dana reses*):** money for the recess, when members go back to their constituencies. About Rp500 million per recess since November 2025, cut from Rp702 million after a ruling by the DPR's ethics council (MKD), and about five recesses a year.[^reses] That is about Rp2.5 billion a year, or about Rp208 million a month.
 
-Against the average UMP of Rp3.51 million, the take-home is 18.7 times; gross pay is 21.1 times; before the 2025 cut it was 29.7 times. Gross pay plus recess funds comes to about Rp282 million a month: about 80 times.
+Against the average wage of Rp3.33 million, the take-home is 19.7 times; gross pay is 22.3 times; before the 2025 cut it was 31.3 times. Gross pay plus recess funds comes to about Rp282 million a month: about 85 times.
 
-| Per month | Australian backbench MP (A$) | DPR member (Rp) |
+| Per month | Australian backbench MP | DPR member |
 | --- | --- | --- |
-| Base pay | 19,939 | 4,200,000 |
-| Allowances | 6,000 (electorate 3,933 + Canberra travel about 2,067, estimate) | about 70,000,000 |
-| Gross pay | 25,939 | about 74,200,000 |
-| Take-home | not computed (figures here are before tax) | 65,595,730 |
-| Constituency funds | about 27,000 (office expenses budget) | about 208,000,000 (recess funds) |
-| Total | about 53,000 | about 282,000,000 |
-| Multiple of the minimum wage, pay only | 6.0x gross (4.6x base) | 21.1x gross (18.7x take-home) |
-| Multiple of the minimum wage, everything | about 12x | about 80x |
+| Base pay | A$19,939 | Rp4,200,000 |
+| Allowances | A$6,000 (electorate A$3,933 + Canberra travel about A$2,067, estimate) | about Rp70 million |
+| Gross pay | A$25,939 | about Rp74.2 million |
+| Take-home | not computed (figures here are before tax) | Rp65,595,730 |
+| Constituency funds | about A$27,000 (office expenses budget) | about Rp208 million (recess funds) |
+| Total | about A$53,000 | about Rp282 million |
+| Multiple of a typical wage, pay only | 4.2x the median (3.2x base) | 22.3x the average (19.7x take-home) |
+| Multiple of a typical wage, everything | about 8.6x | about 85x |
 
-In the table above, the like-for-like comparison is the gross row: 6.0 times in Australia, 21.1 times in Indonesia.
+In the table above, the like-for-like comparison is the gross row: 4.2 times in Australia, 22.3 times in Indonesia.
 
 Now the DPR's side, because it deserves a hearing. Recess funds pay for constituency activities, not for the member's lifestyle, and the DPR will say so. Fair. But their use is reported in aggregate and is hard for the public to check, while Australia's comparable office budget is published per person, every quarter, by the Independent Parliamentary Expenses Authority (IPEA). Converted at about Rp12,500 to the Australian dollar (November 2026, rounded),[^fx] the DPR take-home is about A$5,250 a month, which sounds modest in Perth. That is exactly why the fair measure is local wages, not exchange rates.
 
-What about size? Indonesia is about as wide as Australia: both span roughly 4,000 to 5,000 km, so travel distance doesn't explain the gap. Indonesia does have far more people per seat: about 284 million people for 580 DPR seats, or about 490,000 per member, against about 27.6 million for 150 House seats, or about 184,000 per member.[^pop] A DPR member represents about 2.7 times as many people. That is real. But measured against local wages, the pay gap is far bigger than 2.7 times.
+What about size? Indonesia is about as wide as Australia: both span roughly 4,000 to 5,000 km, so travel distance doesn't explain a gap this big.
 
-## Why have I never seen a motorcade in Perth?
+## Beyond the pay, why do Indonesian officials act as if they own the road?
 
 Because in Australia, almost nobody in politics gets one. In almost two years in Perth, I have not seen a single motorcade, not even for the WA Premier, who runs the state government.
 
@@ -128,55 +130,50 @@ In Jakarta, sirens and strobe lights for the president, ministers and even DPR m
 
 It took a viral meme to get a pause button. In Perth, nobody ever pressed play.
 
-## What happens when an Australian politician misuses taxpayers' money?
+## What happens when officials blow taxpayers' money on travel?
 
-It becomes national news, because every claim is published, per person, and anyone can read it.
+In Australia, a trip worth a few thousand dollars can become a national scandal and end in a refund. In Indonesia, a study tour worth billions of rupiah goes ahead over the protests.
 
-Take Anika Wells, the Communications and Sport Minister. From late 2025 she faced scrutiny over taxpayer-funded travel, including a A$3,681 two-day trip to Adelaide in June 2025 that coincided with a Labor friend's birthday party. She said the trip was within the rules, and pointed out that the public only knew the details because she and her department had released them.[^wells-trip] The opposition still nicknamed her "Air-Miles Anika". She referred herself to IPEA; its 2026 audit cleared her New York trip but found four claims outside the rules. She repaid A$10,116 (A$8,093 plus a 25% penalty) and apologised for "honest mistakes".[^wells-repay]
+Take Anika Wells, the Communications and Sport Minister. From late 2025 she faced scrutiny over a two-day trip to Adelaide in June 2025, costing A$3,681, that coincided with a Labor friend's birthday party.[^wells-trip] The opposition nicknamed her "Air-Miles Anika". She referred herself to IPEA, whose 2026 audit found four claims outside the rules; she repaid A$10,116 (A$8,093 plus a 25% penalty) and apologised.[^wells-repay] Taxpayer-funded family travel got the same treatment: more than A$4 million since the 2022 election,[^family] enough for Prime Minister Albanese to restrict it in December 2025 and move those families from business class to economy.[^albanese]
 
-Then there was family travel. Taxpayers spent more than A$4 million on travel for politicians' families since the 2022 election, as reported in December 2025. Four MPs charged more than A$100,000 each: Don Farrell, Fatima Payman, Patrick Gorman and Andrew Willcox, while others claimed less than A$1,000. Farrell's bill was A$116,306.[^family] After weeks of backlash, Prime Minister Albanese moved in December 2025 to restrict family reunion travel, including downgrading it from business class to economy.[^albanese]
+Now the Indonesian version. In October 2010, eight members of the DPR's ethics council (*Badan Kehormatan*, BK) and three expert staff flew to Greece for six days to study parliamentary ethics and Greece's smoke-free parliament. The budget was Rp2.2 billion, about Rp200 million per person.[^bk-greece] The council's own chair, Gayus Lumbuun, refused to go, saying the same material was available at the Greek embassy in Jakarta, and ten NGOs later complained to the ethics council itself that the eight had taken a sightseeing detour to Turkey.[^bk-turkey] At about Rp12,500 to the dollar,[^fx] Wells's Adelaide trip was about Rp46 million. Each ethics-council traveller cost more than four times that, in 2010 rupiah, before a cent of inflation. The irony: the BK's job is to police the DPR's ethics.
 
-I won't pretend this is nothing. Business-class flights for family members on the public's money is exactly the kind of thing a fair go should frown on, and Australians did frown. But look at the mechanism: the details were public because IPEA publishes every claim, per person, in quarterly reports. That's why a A$3,681 flight to Adelaide became a national story.
+Nor are today's rules any tighter. Under the Finance Minister's regulation PMK 32/2025, a DPR member travelling abroad gets a daily allowance of US$347 to US$792 (about Rp5.7 million to Rp13 million) per person, per day, before flights and hotels. The top rate is for the UK, where one day's allowance is almost four times the average Indonesian monthly wage.[^per-diem] It took the mass protests of late August 2025 for the DPR to put a moratorium on overseas working visits from 1 September 2025, and even that exempts state invitations.[^moratorium]
 
-## And what about Indonesia's *perjalanan dinas*?
-
-Official travel (*perjalanan dinas*) in Indonesia is where the comparison gets uncomfortable, because the public sees only audit totals, a year or more later. In my view, Australia's travel-expense scandals would look small next to it: the biggest bill any one Australian MP ran up, Don Farrell's A$116,306 in family travel since the 2022 election, is perhaps the size of a single trip for some Indonesian officials.
-
-That is my opinion, but here is a number to anchor it. In its audit of 2023 spending, reported in June 2024, Indonesia's state auditor (BPK) found irregularities in official-travel spending worth Rp39.26 billion across 46 ministries and agencies, mostly trips that didn't match the rules and overpayments. BPK called official-travel findings recurring, and said they are often deliberate and fictitious.[^bpk]
-
-Rp39.26 billion is the yearly minimum wage of about 930 workers at the 2026 average UMP. At about Rp12,500 to the dollar, it is about A$3.1 million.[^fx] That's for one year, and it is only the part that was irregular and that the auditors happened to catch. Australia's A$4 million family-travel bill covered more than three years and all of the spending, not just the irregular part, and it was still a scandal.
-
-The deeper difference isn't the size of the sums. In Indonesia, the public sees an audit total a year or more later. In Australia, the public sees each person's bill every quarter.
+And what the public does see comes as an audit total. In its audit of 2023 spending, reported in June 2024, about five months after that year closed, Indonesia's state auditor (BPK) found irregular official-travel spending worth Rp39.26 billion across 46 ministries and agencies, fictitious trips included.[^bpk] In Australia, IPEA publishes every politician's claims, per person, every quarter. That's why a A$3,681 flight to Adelaide became a national story, while Indonesians learn an aggregate total months later.
 
 ## Is Indonesia an outlier, or is this normal?
 
-Among the countries I compared, Indonesia is the outlier: its president earns 18.8 times a typical worker's wage, more than double the next country on the list.
+Among the countries I compared, Indonesia is near the very top: its president earns 18.8 times the average Indonesian wage, second only to the Philippines at 20.8 times. The other ten, neighbours such as Malaysia, Thailand, Vietnam and South Korea included, all sit below 9 times.
 
-To compare across countries, I divided the head of government's salary by a typical annual wage, using the median where one is published. The median works better than the minimum wage here, because some countries have no national minimum wage at all.
+I used the same yardstick as for Australia and Indonesia: the leader's salary divided by the median wage, or by the average wage where no official median is published.
 
 | Country | Leader's pay | Typical wage | Multiple |
 | --- | --- | --- | --- |
+| China | President: CN¥136,620 a year (base pay, set in 2015)[^china] | Average urban private-sector wage CN¥71,590 a year (2025) | 1.9x |
 | Norway | PM: NOK 2,234,978 a year (from 1 May 2026)[^norway] | Median NOK 55,800 a month x 12 = NOK 669,600 (2025) | 3.3x |
+| Vietnam | PM: ₫31,625,000 a month (from 1 July 2026)[^vietnam] | Average worker income ₫8,400,000 a month (2025) | 3.8x |
 | United Kingdom | PM: £174,711 (MP £93,904 + ministerial £80,807, 2025-26)[^uk] | Median full-time £39,039 (April 2025) | 4.5x |
-| Malaysia | PM: RM22,826.65 a month (declined by Anwar since November 2022)[^malaysia] | Median RM2,940 a month (2025) | 7.8x |
-| United States | President: $400,000[^us] | BLS median annual wage $50,980 (2025) | 7.8x |
-| Japan | PM: ¥40.49 million a year (statutory; Takaichi cut her own)[^japan] | National Tax Agency average private-sector salary ¥4.87 million (2025; no official median) | 8.3x |
+| Malaysia | PM: RM22,826.65 a month[^malaysia] | Median RM2,940 a month (2025) | 7.8x |
+| United States | President: US$400,000[^us] | BLS median annual wage US$50,980 (2025) | 7.8x |
+| South Korea | President: ₩271.77 million a year (2026)[^korea] | Median ₩2.88 million a month (December 2024) | 7.9x |
+| Thailand | PM: ฿125,590 a month[^thailand] | Average employee wage ฿15,675 a month (Q1 2026) | 8.0x |
+| Japan | PM: ¥40.49 million a year (statutory)[^japan] | National Tax Agency average private-sector salary ¥4.87 million (2025; no official median) | 8.3x |
 | Australia | PM: A$622,110 (from 1 July 2025)[^remtrib] | Median A$1,425 a week x 52 = A$74,100 (August 2025)[^absmedian] | 8.4x |
 | Indonesia | President: Rp62.74 million a month (since 2001)[^setkab] | BPS average wage of employees Rp3.33 million a month (August 2025)[^bpswage] | 18.8x |
+| Philippines | President: ₱449,157 a month (from 1 January 2026)[^philippines] | Average full-time wage ₱21,544 a month (2024) | 20.8x |
 
 ```mermaid
 xychart-beta
   title "Leader's pay as a multiple of a typical wage"
-  x-axis [Norway, UK, Malaysia, US, Japan, Australia, Indonesia]
-  y-axis "Multiple of a typical wage" 0 --> 20
-  bar [3.3, 4.5, 7.8, 7.8, 8.3, 8.4, 18.8]
+  x-axis [China, Norway, Vietnam, UK, Malaysia, US, "S. Korea", Thailand, Japan, Australia, Indonesia, Philippines]
+  y-axis "Multiple of a typical wage" 0 --> 22
+  bar [1.9, 3.3, 3.8, 4.5, 7.8, 7.8, 7.9, 8.0, 8.3, 8.4, 18.8, 20.8]
 ```
 
-The Indonesian number in the table above is, if anything, generous to Indonesia: BPS publishes an average wage, and a median would be lower, so the true multiple is likely higher.
+The two highest multiples, Indonesia's 18.8 and the Philippines' 20.8, are if anything too low. Indonesia's is an average, and a median would most likely be lower. The Philippine wage comes from a survey of formal businesses with at least ten workers, which leaves out the informal sector, where pay is lower.
 
-I'll be honest about the selection, too. I left Singapore out, because it is a deliberate outlier: a city-state that pays its ministers like CEOs as an anti-corruption policy. Its Prime Minister earns S$3.6 million a year from 15 October 2026, against a median of S$5,775 a month: about 52 times.[^singapore] So Indonesia is not the highest in the world, and I'm not claiming it is.
-
-The point is narrower and, I think, worse. Indonesia's president takes a bigger slice of his people's income than the leaders of richer, more equal democracies take of theirs. And this number doesn't even include the perks, the pension, or the DPR's allowances and recess funds.
+The point is simple. Most countries in the table, rich ones like Norway and Australia and Asian ones like Thailand, Vietnam and South Korea, pay their leader less than 9 times what their people earn. Indonesia sits in the top group with the Philippines. And the 18.8 doesn't even include an ex-president's lifetime perks, while a DPR member, recess funds counted, is at about 85 times the average wage.
 
 ## What would I rather argue about?
 
@@ -184,7 +181,7 @@ Policy. In Australia, I spend far less of my political energy on what officials 
 
 That should be the bare minimum of political debate: arguing about what our leaders decide, not about what they help themselves to.
 
-So is Indonesia's gap just what a big, crowded country looks like? No. Indonesia is about as wide as Australia, and Australia's MPs still live like managers. What Indonesia has is f\*cked-up incentives and opacity: generous pay and perks, sirens on demand, and spending the public can only see in aggregate, a year or more late. None of that is a law of nature. All of it is a choice, and choices can be changed.
+So is Indonesia's gap just what a big country looks like? No. Indonesia is about as wide as Australia, and Australia's MPs still live like managers. What Indonesia has is f\*cked-up incentives and opacity: generous pay and perks, sirens on demand, and spending the public can only see in aggregate, months late. None of that is a law of nature. All of it is a choice, and choices can be changed.
 
 **In Jakarta, you see the motorcade but never the bill; in Perth, you see the bill but never the motorcade.**
 
@@ -201,6 +198,17 @@ If you are Indonesian, here is one small thing to start with: ask for the receip
 *[MKD]: Mahkamah Kehormatan Dewan, the DPR's ethics council
 *[GST]: Goods and Services Tax
 *[GDP]: Gross Domestic Product
+*[Korlantas]: Korps Lalu Lintas, the national traffic police corps
+*[Polri]: Kepolisian Negara Republik Indonesia, the Indonesian National Police
+*[BK]: Badan Kehormatan, the DPR's ethics council
+*[PMK]: Peraturan Menteri Keuangan, a Finance Minister's regulation
+*[NGO]: Non-governmental organisation
+*[BLS]: Bureau of Labor Statistics (United States)
+*[MP]: Member of Parliament
+*[PM]: Prime Minister
+*[UK]: United Kingdom
+*[WA]: Western Australia
+*[NOK]: Norwegian krone
 
 ## References
 
@@ -209,9 +217,8 @@ If you are Indonesian, here is one small thing to start with: ask for the receip
 [^oecd]: OECD, Income Distribution Database: the Nordic countries (Iceland, Norway, Denmark, Sweden and others) have lower income Gini coefficients than Australia.
 [^imf]: IMF, [World Economic Outlook, GDP per capita, current prices](https://www.imf.org/external/datamapper/NGDPDPC@WEO), October 2025: about US$65,000 for Australia and about US$5,100 for Indonesia in 2025.
 [^remtrib]: Remuneration Tribunal, [2026 Remuneration Review Statement](https://www.remtribunal.gov.au/sites/default/files/2026-06/2026%20Remuneration%20Review%20Statement%20-%20FINAL.pdf) (0% change from 1 July 2026) and [Members of Parliament Determination 2026](https://www.remtribunal.gov.au/sites/default/files/2026-08/RT%20Members%20of%20Parliament%20determination%202026.PDF): base salary A$239,270 from 1 July 2025, Prime Minister's loading 160%, so A$622,110 a year.
-[^fwo]: Fair Work Ombudsman, [Annual Wage Review 2026](https://www.fairwork.gov.au/about-us/workplace-laws/annual-wage-review/annual-wage-review-2026): national minimum wage A$1,004.90 a week (A$26.44 an hour) from 1 July 2026. A$1,004.90 x 52 = A$52,255 a year.
 [^setkab]: Sekretariat Kabinet, [Gaji Presiden dan Wakil Presiden tidak berubah sejak 2001](https://setkab.go.id/bantah-kabar-kenaikan-istana-gaji-presiden-dan-wakil-presiden-tidak-berubah-sejak-2001/): base salary Rp30,240,000 plus position allowance Rp32,500,000 a month.
-[^ump]: Bisnis.com, [Kenaikan rata-rata UMP 2026](https://ekonomi.bisnis.com/read/20260121/12/1946028/kenaikan-rata-rata-ump-2026-di-bawah-khl-menaker-bilang-begini), 21 January 2026, citing the Ministry of Manpower: average UMP 2026 across 38 provinces Rp3,508,714 a month, up 5.91%.
+[^ump]: Bisnis.com, [Kenaikan rata-rata UMP 2026](https://ekonomi.bisnis.com/read/20260121/12/1946028/kenaikan-rata-rata-ump-2026-di-bawah-khl-menaker-bilang-begini), 21 January 2026, citing the Ministry of Manpower: average UMP 2026 across 38 provinces Rp3,508,714 a month, up 5.91%, so the 2025 average was about Rp3,508,714 / 1.0591 = Rp3.31 million.
 [^pcss]: Department of Finance, [Overview of the Parliamentary Superannuation Act 2004](https://finance.gov.au/government/superannuation/parliamentary-superannuation/overview-parliamentary-superannuation-act-2004): the Parliamentary Contributory Superannuation Scheme closed to new members on 9 October 2004. AAP FactCheck, [Hanson's $300,000 PM pension claim way off the money](https://www.aap.com.au/factcheck/hansons-300000-pm-pension-claim-way-off-the-money/), 2025: there is no special pension for being Prime Minister.
 [^formerpm]: Parliamentary Library, [Former Prime Ministers' entitlements](https://www.aph.gov.au/About_Parliament/Parliamentary_departments/Parliamentary_Library/Research/FlagPost/2026/February/FormerPrimeMinistersEntitlements), FlagPost, February 2026: an office, three staff and a capped number of domestic trips, for public duties.
 [^uu7]: Law No. 7 of 1978 on the financial and administrative rights of the President and Vice President and former Presidents and Vice Presidents, [BPK legal database](https://peraturan.bpk.go.id/Details/47167): pension of 100% of the last base salary, a furnished house, a state car with a driver, household water, electricity and phone bills, and healthcare for the former president and family.
@@ -221,14 +228,13 @@ If you are Indonesian, here is one small thing to start with: ask for the receip
 [^dpr]: detik.com, [Take home pay DPR usai pangkas banyak tunjangan Rp 65,5 juta](https://news.detik.com/berita/d-8098119/take-home-pay-dpr-usai-pangkas-banyak-tunjangan-rp-65-5-juta), September 2025; Kontan, [Resmi, tunjangan perumahan dihapus](https://nasional.kontan.co.id/news/resmi-tunjangan-perumahan-dihapus-ini-sisa-gaji-tunjangan-anggota-dpr-terbaru), September 2025: base salary Rp4.2 million, gross about Rp74.2 million, income tax about Rp8.6 million, take-home Rp65,595,730; Rp104.1 million before several allowances were cut, including the Rp50 million housing allowance, dropped from 31 August 2025.
 [^reses]: CNN Indonesia, [DPR recess funds cut to Rp500 million after the MKD ruling](https://www.cnnindonesia.com/nasional/20251106111135-32-1292542/dasco-sebut-dana-reses-anggota-dpr-jadi-rp500-juta-imbas-putusan-mkd), 6 November 2025: from Rp702 million to about Rp500 million per recess, about five recesses a year.
 [^fx]: Market exchange rate, about Rp12,500 per Australian dollar, November 2026, rounded.
-[^pop]: Population about 284 million (BPS, 2025) and about 27.6 million (ABS, 2025); 580 DPR seats (DPR) and 150 House of Representatives seats (Parliament of Australia).
 [^afp]: Australian Federal Police, [Close personal protection](https://afp.gov.au/our-services/national-policing-services/personal-protection-close-personal-protection/MPprotection): protection for high office holders and visiting dignitaries.
 [^korlantas]: The Jakarta Post, [Police halt use of sirens, strobe lights following public outcry](https://www.thejakartapost.com/indonesia/2025/09/22/police-halt-use-of-sirens-strobe-lights-following-public-outcry), 22 September 2025; Antara, [Police suspend sirens and strobes in escorts amid public backlash](https://en.antaranews.com/amp/news/381173/police-suspend-sirens-and-strobes-in-escorts-amid-public-backlash), September 2025; Kontan, [Layanan pengawalan tot tot wuk wuk dibekukan](https://nasional.kontan.co.id/news/layanan-pengawalan-tot-tot-wuk-wuk-dibekukan-aturan-sirene-dan-strobo-diperketat), November 2025.
 [^wells-trip]: The Nightly, [Anika Wells forced to defend taxpayer-funded trips](https://thenightly.com.au/politics/anika-wells-forced-to-defend-taxpayer-funded-trips-as-new-details-emerge-about-other-costs-c-20918274), December 2025.
 [^wells-repay]: AAP via The Leader, [Minister repays taxpayers after travel rule breaches](https://www.theleader.com.au/story/9242403/minister-repays-taxpayers-after-travel-rule-breaches/), 2026.
 [^family]: AAP via newsbeep, [family travel costs](https://www.newsbeep.com/300998/), December 2025; ABC News, [Nationals MPs' high family travel bill highlights generous rules](https://www.abc.net.au/news/2025-12-11/nationals-mps-high-family-travel-bill-highlights-generous-rules/106126842), 11 December 2025.
 [^albanese]: The New Daily, [MP expenses change](https://www.thenewdaily.com.au/news/politics/australian-politics/2025/12/23/mp-expenses-change), 23 December 2025.
-[^bpk]: Bisnis.com, [Temuan BPK: masalah perjalanan dinas PNS bikin negara rugi Rp39,26 miliar](https://ekonomi.bisnis.com/read/20240609/9/1772443/temuan-bpk-masalah-perjalanan-dinas-pns-bikin-negara-rugi-rp3926-miliar), 9 June 2024, on BPK's audit of 2023 spending. Rp39.26 billion / (Rp3,508,714 x 12) = about 930 workers' yearly UMP.
+[^bpk]: Bisnis.com, [Temuan BPK: masalah perjalanan dinas PNS bikin negara rugi Rp39,26 miliar](https://ekonomi.bisnis.com/read/20240609/9/1772443/temuan-bpk-masalah-perjalanan-dinas-pns-bikin-negara-rugi-rp3926-miliar), 9 June 2024, on BPK's audit of 2023 spending: mostly trips that didn't match the rules and overpayments, often deliberate and sometimes fictitious.
 [^norway]: Altinget, [Norges statsminister får lønstigning](https://www.altinget.dk/artikel/norges-statsminister-faar-loenstigning-men-er-stadig-langt-fra-mette-frederiksen), 2026: NOK 2,234,978 a year from 1 May 2026. Statistics Norway (SSB), [Hva er vanlig lønn i Norge?](https://www.ssb.no/arbeid-og-lonn/lonn-og-arbeidskraftkostnader/artikler/hva-er-vanlig-lonn-i-norge): median monthly earnings NOK 55,800, 2025.
 [^uk]: GOV.UK, [Ministerial salary data](https://www.gov.uk/government/publications/ministerial-salary-data), 2025-26: MP salary £93,904 plus Prime Minister's ministerial salary £80,807. ONS, [Annual Survey of Hours and Earnings 2025](https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearnings/2025): median gross annual earnings for full-time employees £39,039, April 2025.
 [^us]: AFL-CIO, [Executive Paywatch](https://aflcio.org/paywatch), 2025, citing the Bureau of Labor Statistics median annual wage of $50,980. The US President's salary is $400,000 a year.
@@ -236,4 +242,12 @@ If you are Indonesian, here is one small thing to start with: ask for the receip
 [^japan]: [Prime Minister of Japan](https://en.wikipedia.org/wiki/Prime_Minister_of_Japan), Wikipedia: statutory annual pay ¥40.49 million. nippon.com, reporting the National Tax Agency's survey of private-sector salaries: average ¥4.87 million (2025).
 [^absmedian]: Australian Bureau of Statistics, [Employee earnings, August 2025](https://www.abs.gov.au/statistics/labour/earnings-and-working-conditions/employee-earnings/aug-2025): median weekly earnings A$1,425. A$1,425 x 52 = A$74,100.
 [^bpswage]: BPS, [Keadaan ketenagakerjaan Indonesia Agustus 2025](https://www.bps.go.id/id/pressrelease/2025/11/05/2479/keadaan-ketenagakerjaan-.html), 5 November 2025: average wage of employees Rp3.33 million a month.
-[^singapore]: The Jakarta Post / Reuters, [Singapore PM's annual salary to rise](https://www.thejakartapost.com/world/2026/09/08/singapore-pms-annual-salary-to-rise-64-to-285-million-), 8 September 2026: S$3.6 million a year from 15 October 2026. Ministry of Manpower, [Gross monthly income tables 2025](https://stats.mom.gov.sg/Pages/Gross-Monthly-Income-Tables2025.aspx): median S$5,775 a month. S$3.6 million / (S$5,775 x 12) = about 52 times.
+[^china]: CNN Money, [China's president gets a 62% pay raise](https://money.cnn.com/2015/01/20/news/china-president-salary/index.html), 20 January 2015, citing China Daily: basic pay CN¥11,385 a month (CN¥136,620 a year), the latest official figure I could find. National Bureau of Statistics, [Average annual wages of employees in urban units in 2025](https://www.stats.gov.cn/english/PressRelease/202605/t20260518_1963740.html): urban private units CN¥71,590. CN¥136,620 / CN¥71,590 = 1.9.
+[^vietnam]: LawNet, [Prime Minister's salary calculation based on salary coefficient](https://lawnet.vn/en/laws/current-prime-ministers-salary-calculation-based-on-salary-coefficient-and-statutory-pay-rate-166313.html): coefficient 12.5 times the base salary. VietnamPlus, [Basic salary to increase to 2.53 million VND per month from July](https://en.vietnamplus.vn/basic-salary-to-increase-to-253-million-vnd-per-month-from-july-post342937.vnp), 2026: 12.5 x ₫2.53 million = ₫31,625,000. LSVN, [Average worker income in 2025: 8.4 million dong a month](https://lsvn.vn/thu-nhap-binh-quan-cua-nguoi-lao-dong-nam-2025-dat-8-4-trieu-dong-thang-a167972.html), citing Vietnam's statistics office.
+[^korea]: Newsis, [2026 civil service pay up 3.5%; President Lee's salary ₩271.77 million](https://www.newsis.com/view/NISX20251230_0003459678), 30 December 2025. Newsis, [2024 wage-job income results](https://www.newsis.com/view/NISX20260223_0003523081), 23 February 2026, reporting the National Data Office: median monthly income of wage jobs ₩2.88 million, December 2024. ₩271.77 million / (₩2.88 million x 12) = 7.9.
+[^thailand]: Thairath, [interview](https://en.thairath.co.th/scoop/interview/2921078), 19 March 2026: Prime Minister's pay ฿125,590 a month (salary ฿75,590 plus ฿50,000 position allowance). The Nation, [Thai wages](https://www.nationthailand.com/business/economy/40066648), 26 May 2026, reporting NESDC: average employee wage ฿15,675 a month, Q1 2026.
+[^philippines]: Manila Bulletin, [Higher pay for gov't workers starts this month](https://mb.com.ph/2026/01/26/higher-pay-for-govt-workers-starts-this-month), 26 January 2026, and DBM, [National Budget Circular No. 601](https://www.dbm.gov.ph/wp-content/uploads/Issuances/2026/National-Budget-Circular/NATIONAL-BUDGET-CIRCULAR-NO.-601_NEW.pdf): Salary Grade 33 (the President), step 1, ₱449,157 a month from 1 January 2026. PhilstarLife, [Top-paying jobs and average monthly wages, per PSA](https://philstarlife.com/self/479996-top-paying-jobs-average-monthly-wages-psa), 1 December 2025: 2024 Occupational Wages Survey, average monthly wage of full-time workers ₱21,544, covering formal businesses with at least ten workers.
+[^bk-greece]: detik.com, [Tiba di bandara, massa Bendera sweeping anggota BK ke Yunani](https://news.detik.com/berita/d-1473073/tiba-di-bandara-massa-bendera-sweeping-anggota-bk-ke-yunani), 23 October 2010: a Rp2.2 billion budget for eight BK members and three expert staff. My calculation: Rp2.2 billion / 11 people = Rp200 million; Rp200 million / Rp46 million = about 4.3.
+[^bk-turkey]: JPNN, [Tanpa ketuanya, BK DPR tetap ke Yunani](https://www.jpnn.com/news/tanpa-ketuanya-bk-dpr-tetap-ke-yunani), 19 October 2010 (Gayus Lumbuun's refusal, six-day trip); Kontan, [Pelesiran ke Turki, 8 anggota DPR diadukan ke Badan Kehormatan](https://nasional.kontan.co.id/news/pelesiran-ke-turki-8-anggota-dpr-diadukan-ke-badan-kehormatan-1) (the ten NGOs' complaint).
+[^per-diem]: CNN Indonesia, [Intip uang saku DPR ke luar negeri yang akan dimoratorium buntut demo](https://www.cnnindonesia.com/ekonomi/20250902182852-532-1269374/intip-uang-saku-dpr-ke-luar-negeri-yang-akan-dimoratorium-buntut-demo), 3 September 2025: tier-A daily allowance under PMK 32/2025, US$347 to US$792 (UK) per person per day, at Rp16,412 to the US dollar (September 2025). US$792 x Rp16,412 = about Rp13 million; Rp13 million / Rp3.33 million = 3.9.
+[^moratorium]: Suara.com, [DPR setop kunjungan kerja ke luar negeri](https://www.suara.com/news/2025/09/05/211435/dpr-setop-kunjungan-kerja-ke-luar-negeri-dasco-janji-buka-bukaan), 5 September 2025: moratorium from 1 September 2025, except for state invitations.
