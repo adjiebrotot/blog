@@ -1,0 +1,7 @@
+---
+layout: null
+permalink: /en/indonesian-politicians-pay/index.md
+md_of: /en/indonesian-politicians-pay/
+sitemap: false
+---
+{% include post-markdown.txt url=page.md_of %}
