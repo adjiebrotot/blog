@@ -30,7 +30,7 @@ publishes it. The look comes from the design system of
    share_image: /assets/img/<file>.webp  # picture on the Instagram Story/Post poster; else the first *-ill-* illustration
    translation: rent-vs-buy        # only when the same topic exists in the other language
    keywords: [rent vs buy, KPR]    # extra keywords for structured data
-   bmc_message: "Paid off the KPR? Toast it with a coffee for me!"  # the Buy Me a Coffee note; else bmc_message in _data/i18n.yml
+   bmc_message: "Paid off the KPR? Toast it with a coffee for me!"  # the note beside the support button (Buy Me a Coffee, or Trakteer for a reader in Indonesia); else bmc_message in _data/i18n.yml
    ---
    ```
 
