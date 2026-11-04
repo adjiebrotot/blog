@@ -1,0 +1,7 @@
+---
+layout: null
+permalink: /id/gaji-pejabat-indonesia/index.md
+md_of: /id/gaji-pejabat-indonesia/
+sitemap: false
+---
+{% include post-markdown.txt url=page.md_of %}
