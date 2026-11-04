@@ -573,6 +573,8 @@ a.btn-primary { color: var(--text-inv); }
   transition: opacity var(--motion-base), visibility var(--motion-base), transform var(--motion-base);
 }
 .share-float.is-shown { opacity: 1; visibility: visible; transform: none; }
+/* Below 1280px the share button stands above the Buy Me a Coffee button (52px, 16px from the corner; assets/js/bmc.js), right edges aligned. */
+@media (max-width: 1279.98px) { .share-float { bottom: calc(16px + 52px + 12px + env(safe-area-inset-bottom)); } }
 .share-float .share-toggle { padding: 8px 15px; font-size: var(--fs-sm); box-shadow: var(--sticker), var(--shadow-lg); }
 @media (min-width: 1280px) {
   .share-float { top: 6rem; bottom: auto; right: auto; left: calc(50% + (var(--measure) + 5rem) / 2 + 1.5rem); }
