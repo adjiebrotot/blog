@@ -40,6 +40,8 @@ en:
   not_found_hand: "oops, wrong stop"
   not_found_heading: "This page took a different train."
   not_found_lead: "The address doesn't exist, or it moved. Hop back on at one of these:"
+  bmc_message: "Buy me a coffee so I can write more articles!"
+  not_found_bmc: "Wrong stop, but a coffee for me is never the wrong one!"
   # The Share menu on a post, and the dialog that draws an Instagram poster.
   share: Share
   share_title: Share this post
@@ -108,6 +110,8 @@ id:
   not_found_hand: "ups salah stasiun"
   not_found_heading: "Halaman ini salah naik kereta."
   not_found_lead: "Alamatnya gak ada, atau sudah pindah. Naik lagi dari salah satu stasiun ini:"
+  bmc_message: "Traktir saya kopi susu supaya saya bisa terus menulis artikel baru!"
+  not_found_bmc: "Salah stasiun boleh saja, tetapi traktiran kopi susu untuk saya tidak pernah salah alamat!"
   # Menu Bagikan di artikel, dan dialog yang menggambar poster Instagram.
   share: Bagikan
   share_title: Bagikan artikel ini
