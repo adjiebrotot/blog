@@ -7,6 +7,7 @@ tags: [finance]
 image: /assets/img/og/pajak-suami-istri-gabung-atau-pisah.jpg
 image_alt: "Pasangan suami istri duduk di meja makan, istri menunjuk layar laptop, suami memegang selembar kertas"
 keywords: [lapor pajak suami istri gabung atau pisah, lebih untung gabung atau pisah SPT, NPWP istri gabung atau pisah, pisah harta pajak, memilih terpisah MT, PTKP K/I, SPT suami istri Coretax, kalkulator pajak suami istri]
+bmc_message: "Sudah hemat pajak? Sisihkan sedikit untuk mentraktir saya kopi susu supaya saya bisa terus menulis!"
 ---
 
 **Singkatnya:** bagi kebanyakan pasangan, pajak gabung dan pisah itu **sama persis**, karena aturannya memang dirancang netral. Bedanya baru terasa di dua kondisi. Kalau suami dan istri sama-sama bergaji besar, **gabung** lebih hemat, bisa sampai puluhan juta setahun. Kalau gaji salah satunya di bawah PTKP-nya sendiri (Rp54 juta setahun), **pisah** yang lebih hemat. Untuk menghitung pajakmu, pakai [*tool* Pisah vs Gabung](https://tool.adjiebrotots.com/pisahvsgabung/id/).

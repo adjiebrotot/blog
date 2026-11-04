@@ -8,6 +8,7 @@ image: /assets/img/og/sewa-atau-beli-rumah.jpg
 image_alt: "Dua sahabat berdampingan: yang satu mengecat dinding ruang tamunya dengan rol cat, yang lain memegang buku kecil di samping koper dorongnya"
 translation: rent-vs-buy
 keywords: [sewa atau beli rumah, KPR, kalkulator sewa vs beli, Perth, Jakarta, bunga KPR floating, investasi properti]
+bmc_message: "Sewa atau beli, kopi tetap jauh lebih murah. Traktir saya secangkir supaya saya bisa terus menghitung skenario lainnya!"
 ---
 
 **Singkatnya:** membeli rumah lebih untung kalau rumah itu menghasilkan lebih banyak daripada uang yang sama bila diputar di tempat lain. Kalau tidak, menyewa yang lebih untung. Di [*tool* Sewa vs Beli Rumah](https://tool.adjiebrotots.com/rentvsownhouse/id/), membeli rumah 2 kamar tidur di Perth unggul sekitar A$850 ribu dibandingkan menyewa setelah 30 tahun, sedangkan di Jakarta membeli rumah sejenis justru kalah dari menyewa setelah 20 tahun. Cara hitungnya sama, yang berbeda hanya *input*-nya.

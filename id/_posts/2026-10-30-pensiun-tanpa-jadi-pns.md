@@ -6,6 +6,7 @@ tags: [finance]
 image: /assets/img/og/pensiun-tanpa-jadi-pns.jpg
 image_alt: "Dua pria berdiri berdampingan: kiri berseragam dinas PNS di depan kantor pemerintahan, kanan berkemeja putih ala pegawai kantoran di depan gedung pencakar langit Jakarta"
 keywords: [pensiun PNS, dana pensiun, FIRE, financial independence retire early, rule of 25, aturan 4%, safe withdrawal rate, superannuation, Age Pension, BPJS Ketenagakerjaan, JHT, Jaminan Pensiun, financial freedom calculator]
+bmc_message: "Sambil menyiapkan gaji pensiunmu sendiri, traktir saya kopi susu supaya saya bisa terus menulis!"
 ---
 
 **Singkatnya:** kamu tidak perlu menjadi PNS untuk punya penghasilan bulanan di masa pensiun. Pekerja swasta bisa menggaji dirinya sendiri dengan menabung dan menginvestasikan uangnya sampai terkumpul dana sekitar 25 kali pengeluaran setahun, lalu menarik sekitar 4% dari dana itu setiap tahun. Menurut hitungan saya, menabung sekitar Rp770 ribu sebulan sejak umur 25 sudah cukup untuk menyamai uang pensiun PNS tertinggi (sekitar Rp5 juta sebulan) mulai umur 58, dan pekerja yang sanggup menyisihkan separuh gajinya sejak umur 25 bisa berhenti bekerja sebelum umur 40. Yang menentukan bukan siapa pemberi kerjamu, melainkan selisih antara penghasilan dan pengeluaran, serta seberapa cepat kamu mulai.

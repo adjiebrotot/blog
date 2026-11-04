@@ -8,6 +8,7 @@ image: /assets/img/og/rent-vs-buy-calculator-explained.jpg
 image_alt: "Two friends side by side: one paints his living room wall with a roller, the other holds a passport-sized booklet beside his rolling suitcase"
 translation: rent-vs-buy
 keywords: [rent vs buy, rent or buy house, Perth, Jakarta, KPR, mortgage, property investment, rent vs own calculator]
+bmc_message: "Rent or buy, a coffee still costs less. Buy me one so I can keep running the numbers!"
 ---
 
 **In short:** buying wins when the house earns more than the money tied up in it would earn elsewhere. Renting wins when it doesn't. In my [Rent vs Own calculator](https://tool.adjiebrotots.com/rentvsownhouse/), a 2-bedroom house in Perth ends 30 years about A$850k ahead of renting, while the same kind of house in Jakarta ends 20 years behind. Same maths, different inputs.
