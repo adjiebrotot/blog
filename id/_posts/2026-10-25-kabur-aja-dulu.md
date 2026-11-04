@@ -7,6 +7,7 @@ tags: [finance, personal]
 image: /assets/img/og/kabur-aja-dulu.jpg
 image_alt: "Seorang pria duduk di warung sambil memegang struk dan tersenyum, di depannya ada sepiring nasi goreng dan segelas es teh"
 keywords: [KaburAjaDulu, kabur aja dulu, kerja di luar negeri, gaji Australia, gaji Singapura, tradable non-tradable, biaya hidup Perth, biaya hidup Singapura, cost of living]
+bmc_message: "Di mana pun kamu menabung, traktir saya kopi susu supaya saya bisa terus membandingkan biaya hidup di negara lain!"
 ---
 
 **Singkatnya:** nasi goreng memang jauh lebih murah di Indonesia, tetapi tabungan di akhir bulan bisa jauh lebih tebal di Australia dan Singapura. Sebabnya, selisih gaji antarnegara jauh lebih lebar daripada selisih harga, apalagi banyak barang seperti ponsel, baju, dan bensin harganya kurang lebih sama di mana pun. Menurut hitungan saya, pekerja profesional di Perth bisa menyisihkan sekitar Rp32 juta sebulan dan di Singapura sekitar Rp40 juta, sedangkan di Jakarta hanya Rp1,3 juta. Ada catatannya: yang paling megap-megap justru pekerja bergaji rendah di Singapura.

@@ -7,6 +7,7 @@ image: /assets/img/og/is-debt-bad.jpg
 image_alt: "Three people side by side: a young man on a stool looks sadly at his phone showing DEBT $10K, a smiling woman hugs a pink piggy bank, and a grey-haired man in a suit on a red and gold throne-like chair holds out a gold credit card"
 translation: debt-good-or-bad
 keywords: [is debt bad, good debt vs bad debt, interest free installments, buy now pay later, credit card interest, finance or pay cash, Finance vs Cash]
+bmc_message: "Call it good debt: buy me a coffee and I'll repay it with the next article!"
 ---
 
 **In short:** whether a debt is good is not decided by "productive" or "consumptive". It is decided by maths: a debt is good when it costs less than what your money earns safely while you keep it. That holds even for a phone on installments. In my [Finance vs Cash](https://tool.adjiebrotots.com/financingvscash/) tool, a 36-month plan at 2.5% on an $1,800 phone costs $69 in interest and still ends $59 ahead of paying cash (more than a 0% plan's $44), because the cash earns 4.5% in the meantime, while a 36-month plan at about 9% ends $136 behind (all $ in this post are Australian dollars).

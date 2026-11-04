@@ -9,6 +9,7 @@ image_alt: "Seorang politisi bertubuh tambun berjas gelap dan berpeci hitam dudu
 share_image: /assets/img/gpi-ill-raja-pejabat.webp
 translation: politician-pay
 keywords: [gaji pejabat Indonesia, gaji anggota DPR, gaji presiden Indonesia, dana reses DPR, tunjangan DPR, gaji perdana menteri Australia, tot tot wuk wuk, perjalanan dinas]
+bmc_message: "Saya tidak dapat tunjangan seperti pejabat, jadi traktir saya kopi susu supaya saya bisa terus menulis!"
 ---
 
 **Singkatnya:** kalau diukur dengan upah rakyatnya sendiri, gaji pejabat Indonesia jauh lebih tinggi daripada gaji politisi Australia. Gaji presiden setara 17,9 kali rata-rata UMP, sedangkan gaji Perdana Menteri Australia 11,9 kali upah minimum. Gaji dan tunjangan anggota DPR setara 21,1 kali rata-rata UMP (18,7 kali setelah pajak), sementara gaji dan tunjangan anggota parlemen Australia 6,0 kali upah minimum, dan kalau dana reses serta anggaran kantor ikut dihitung, perbandingannya menjadi sekitar 80 kali berbanding 12 kali. Belum lagi fasilitas seumur hidup setelah lengser, iring-iringan bersirene, dan laporan pengeluaran yang nyaris mustahil diperiksa publik.

@@ -7,6 +7,7 @@ image: /assets/img/og/utang-baik-atau-buruk.jpg
 image_alt: "Tiga orang berdampingan: kiri, pemuda di kursi plastik menatap sedih ponsel bertuliskan UTANG Rp10jt; tengah, perempuan berhijab merah muda tersenyum memeluk celengan ayam; kanan, bapak berkacamata dan berbatik duduk di kursi besar merah keemasan sambil menyodorkan kartu kredit emas"
 translation: debt-good-or-bad
 keywords: [utang baik atau buruk, utang produktif dan konsumtif, cicilan 0%, pinjol, paylater, bunga kartu kredit, beli tunai atau cicilan, Finance vs Cash]
+bmc_message: "Anggap saja utang yang baik: traktir saya kopi susu, nanti saya bayar dengan artikel berikutnya!"
 ---
 
 **Singkatnya:** baik atau buruknya sebuah utang tidak ditentukan oleh labelnya, produktif atau konsumtif, melainkan oleh hitungan. Utang itu baik kalau biayanya lebih rendah daripada imbal hasil yang bisa didapat uangmu secara aman selama uang itu masih kamu pegang, dan aturan ini berlaku bahkan untuk cicilan HP. Untuk HP seharga Rp20 juta, cicilan 36 bulan dengan bunga 0,25% per bulan dari sisa pokok memang membebanimu bunga Rp938 ribu, tetapi tetap unggul sekitar Rp650 ribu dibandingkan dengan bayar tunai, bahkan mengalahkan cicilan 0% yang unggul Rp546 ribu, karena uang yang belum kamu bayarkan tetap berbunga 5% di deposito. Sebaliknya, cicilan "0%" yang dibebani biaya 3% justru kalah dari bayar tunai.

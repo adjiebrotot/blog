@@ -9,6 +9,7 @@ image_alt: "A heavy-set Indonesian politician in a dark suit and black peci sits
 share_image: /assets/img/gpi-ill-raja-pejabat.webp
 translation: politician-pay
 keywords: [Indonesian politicians pay, DPR salary, Indonesian president salary, Australian MP salary, Australian prime minister salary, politician pay vs minimum wage, DPR allowances, reses funds]
+bmc_message: "I get no politician's allowance, so buy me a coffee to keep me writing!"
 ---
 
 **In short:** Indonesian politicians' pay is far higher than Australia's once you measure it against what ordinary workers earn. Australia's Prime Minister earns 11.9 times the national minimum wage; Indonesia's president, 17.9 times the average provincial minimum wage. An Australian backbench MP's pay and allowances come to 6.0 times the minimum wage; a DPR member's to 21.1 times (18.7 after tax). With constituency funds, it is about 12 times against about 80. Then add Indonesia's lifetime perks for ex-presidents and its motorcades, against Australia's per-person expense reports, published every quarter.
