@@ -3,7 +3,7 @@ title: "Kebobrokan gaji pejabat Indonesia"
 seo_title: "Gaji pejabat Indonesia: kenapa mereka begitu dimanjakan?"
 description: "Di Jakarta, iring-iringan pejabat bersirene dulu lewat hampir tiap hari, tetapi di Perth belum sekali pun saya lihat. Kenapa pejabat kita diperlakukan bak raja?"
 date: 2026-11-04 09:00:00 +0800
-tags: [others, personal]
+tags: [politics, personal]
 image: /assets/img/og/gaji-pejabat-indonesia.jpg
 image_alt: "Seorang politisi bertubuh tambun berjas gelap dan berpeci hitam duduk di singgasana emas sambil makan paha ayam goreng, warga biasa di satu sisi menatapnya dengan kaget, dan di sisi lain seorang pejabat Australia berjas sederhana berdiri santai sambil melambaikan bendera kecil Australia"
 share_image: /assets/img/gpi-ill-raja-pejabat.webp
