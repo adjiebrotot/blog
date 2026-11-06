@@ -22,7 +22,7 @@ publishes it. The look comes from the design system of
    title: "Rent or buy a house? How to read the Rent vs Own calculator"
    description: "One or two plain sentences that set up the post's question and make the reader curious, without giving the answer away. Shown under the title, in search results and to AI answer engines."
    date: 2026-10-17 09:00:00 +0800
-   tags: [finance]                 # finance | engineering | personal | others (one or more)
+   tags: [finance]                 # finance | engineering | personal | politics | others (one or more)
    # Optional:
    last_modified_at: 2026-11-02    # shown as "Updated", tells search engines it changed
    image: /assets/img/og/<slug>.jpg  # social preview card, drawn by `node _build/og.mjs`; else the blog card
@@ -53,11 +53,11 @@ of `hreflang` until its first post lands, so search engines never see an empty p
 
 ### Categories
 
-`tags:` takes the keys `finance`, `engineering`, `personal` and `others`, and a post can
+`tags:` takes the keys `finance`, `engineering`, `personal`, `politics` and `others`, and a post can
 carry several: `tags: [finance, engineering]` shows both pills, lists the post on both category
 pages, and the first one is the breadcrumb. A label works too, in either language and any case
 (`Finance`, `Keuangan`). Each key shows as
-Finance / Keuangan, Engineering / Teknik, Personal / Pribadi or Others / Lainnya, and has a
+Finance / Keuangan, Engineering / Teknik, Personal / Pribadi, Politics / Politik or Others / Lainnya, and has a
 page per language (`/en/category/finance/`, `/id/kategori/keuangan/`). A misspelt or unknown
 tag shows as Others, so it never breaks the site. Labels and descriptions live in
 `_data/categories.yml`.

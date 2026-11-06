@@ -25,8 +25,8 @@ import sys
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", ".."))
 SITE_TITLE = "Adjie Brotot Blog"
-CATEGORY_KEYS = {"finance", "engineering", "personal", "others",
-                 "keuangan", "teknik", "pribadi", "lainnya"}
+CATEGORY_KEYS = {"finance", "engineering", "personal", "politics", "others",
+                 "keuangan", "teknik", "pribadi", "politik", "lainnya"}
 
 
 def front_matter(text):

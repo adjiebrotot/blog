@@ -114,7 +114,7 @@ what the plan does about them. "None I can see" is allowed, but check hard first
 - **Title:** "<title>"  (alt: "<second option>")
 - **Description:** "<one or two plain sentences that set up the question and make the reader curious, without the answer>"
 - **Slug:** `<slug>` → https://blog.adjiebrotots.com/<lang>/<slug>/
-- **Tags:** [<finance | engineering | personal | others>]
+- **Tags:** [<finance | engineering | personal | politics | others>]
 - **Shape:** <argument / personal story / technical notes>, dial: humour <low/med/high>,
   data <...>, personal stake <...>
 

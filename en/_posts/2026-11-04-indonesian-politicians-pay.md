@@ -3,7 +3,7 @@ title: "Indonesian politicians' pay is so f*cked up"
 seo_title: "Indonesian politicians' pay vs Australia's: a migrant's view"
 description: "In almost two years in Perth, I've never seen a politician's motorcade. In Jakarta it was a daily sight. What does each country pay the people at the top?"
 date: 2026-11-04 09:00:00 +0800
-tags: [others, personal]
+tags: [politics, personal]
 image: /assets/img/og/indonesian-politicians-pay.jpg
 image_alt: "A heavy-set Indonesian politician in a dark suit and black peci sits on a gold throne eating a fried chicken leg while ordinary Indonesians look on in shock, and an Australian official in a plain suit stands to one side waving a small Australian flag"
 share_image: /assets/img/gpi-ill-raja-pejabat.webp
