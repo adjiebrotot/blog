@@ -6,6 +6,7 @@ date: 2026-11-08 09:00:00 +0800
 tags: [politics]
 image: /assets/img/og/pemerintah-berbohong-dengan-data.jpg
 image_alt: "Seorang pria bertubuh tambun berkemeja biru muda dan berpeci hitam berdiri di podium, telunjuknya mengacung ke atas sambil berseru 'Ekonomi Kita Meroket!', dengan kerumunan yang bersorak di belakangnya"
+og_position: "4% 50%"
 share_image: /assets/img/gsl-ill-podium-id.webp
 translation: government-statistics
 keywords: [manipulasi data pemerintah, cara membaca data BPS, angka kemiskinan BPS, tingkat pengangguran terbuka, pekerja informal Indonesia, PDB per kapita Indonesia, bunga utang pemerintah, rasio Gini Indonesia]
@@ -69,7 +70,7 @@ Ukuran berikutnya adalah jam kerja. Rata-rata orang yang bekerja di Indonesia ha
 
 Ukuran terbaiknya adalah median pendapatan rumah tangga yang bisa dibelanjakan (*median household disposable income*). Median tidak ikut tertarik oleh segelintir orang superkaya, sedangkan pendapatan yang bisa dibelanjakan sudah dikurangi pajak dan ditambah bantuan sosial. Sayangnya, angka ini tidak tersedia untuk Indonesia, sebab Survei Sosial Ekonomi Nasional (<span markdown="0">Susenas</span>) yang digelar BPS mengukur pengeluaran, bukan pendapatan.
 
-Pengganti terbaik yang tersedia adalah median pengeluaran (atau pendapatan) per orang dari Poverty and Inequality Platform (<span markdown="0">PIP</span>) milik Bank Dunia, yang saya bagi dengan PDB per kapita. Hasilnya bisa kamu lihat pada grafik di bawah: pengeluaran setahun orang Indonesia yang berada persis di tengah hanya 16,4% dari PDB per kapita, atau sekitar seperenamnya.[^pipmedian] Angka ini paling rendah di ASEAN, di bawah Filipina (20,9%), Thailand dan Laos (masing-masing 26,2%), Myanmar (33,8%), serta Vietnam (37,5%), dan dari 47 negara yang saya hitung, hanya Irlandia (15,7%), contoh klasik PDB yang terdistorsi, yang lebih rendah. Di Australia angkanya 38,1%, sedangkan rata-rata OECD sekitar 32%. Kalau dihitung per hari, median pengeluaran orang Indonesia hanya US$6,77 per orang (PPP 2021).[^pipdaily]
+Pengganti terbaik yang tersedia adalah median pengeluaran (atau pendapatan) per orang dari Poverty and Inequality Platform (<span markdown="0">PIP</span>) milik Bank Dunia, yang saya bagi dengan PDB per kapita. Hasilnya bisa kamu lihat pada grafik di bawah: pengeluaran setahun orang Indonesia yang berada persis di tengah hanya 16,4% dari PDB per kapita, atau sekitar seperenamnya.[^pipmedian] Angka ini paling rendah di ASEAN, lebih rendah daripada Filipina (20,9%), Thailand dan Laos (masing-masing 26,2%), Myanmar (33,8%), serta Vietnam (37,5%), dan dari 47 negara yang saya hitung, hanya Irlandia (15,7%), contoh klasik PDB yang terdistorsi, yang lebih rendah. Di Australia angkanya 38,1%, sedangkan rata-rata OECD sekitar 32%. Kalau dihitung per hari, median pengeluaran orang Indonesia hanya US$6,77 per orang (PPP 2021).[^pipdaily]
 
 {% include hbar.html id="gsl-median-share" %}
 
@@ -177,7 +178,7 @@ Harus saya akui, kalau dilihat dari angka utama ini saja, pemerintah Indonesia m
 
 Angka dari APBN sendiri bahkan lebih tinggi. Pada 2025, pemerintah pusat membayar bunga utang Rp514,4 triliun, atau 93,04% dari pagu Rp552,85 triliun, sementara pendapatan negara Rp2.765,1 triliun, sehingga bunga utang menelan 18,6% pendapatan negara.[^bunga] Penyebab utamanya adalah pendapatan yang rendah: pendapatan pemerintah Indonesia hanya 13,3% PDB, terendah di antara negara yang saya bandingkan, sehingga utang yang tampak sedang pun terasa berat untuk dipikul.[^imfrev] Utang tidak selalu buruk, seperti yang pernah saya bahas di tulisan [utang baik atau buruk](/id/utang-baik-atau-buruk/), tetapi utang yang bunganya menelan hampir seperlima pendapatan jelas menyempitkan ruang untuk belanja lain.
 
-Ketiga, lihat komposisinya. Utang Jepang yang 205% PDB itu sebagian besar dalam yen dan dipegang oleh pihak di dalam negeri, terutama Bank of Japan dan lembaga keuangan Jepang, sehingga pemerintah Jepang tidak mungkin kehabisan yen untuk membayarnya. Lain halnya dengan Indonesia, yang sebagian utangnya berdenominasi mata uang asing dan dipegang investor asing, sehingga ketika rupiah melemah, nilai utang dalam rupiah langsung membengkak dalam semalam.
+Ketiga, lihat komposisi utangnya, karena di sinilah perbedaan Indonesia dan Jepang paling terasa. Utang Jepang yang 205% PDB itu sebagian besar dalam yen dan dipegang oleh pihak di dalam negeri, terutama Bank of Japan dan lembaga keuangan Jepang, sehingga pemerintah Jepang tidak mungkin kehabisan yen untuk membayarnya. Lain halnya dengan Indonesia, yang sebagian utangnya berdenominasi mata uang asing dan dipegang investor asing, sehingga ketika rupiah melemah, nilai utang dalam rupiah langsung membengkak dalam semalam.
 <!-- PENDING: share of government debt in foreign currency and share held by foreign investors, with footnote. -->
 
 **Kesimpulannya:** besar kecilnya utang tidak sepenting berapa ongkosnya dan kepada siapa utang itu harus dibayar.
@@ -236,6 +237,12 @@ Mulailah dari angka berikutnya yang kamu dengar, entah di pidato, di berita, ata
 *[BPK]: Badan Pemeriksa Keuangan
 *[SDG]: Sustainable Development Goals, Tujuan Pembangunan Berkelanjutan PBB
 *[CNBC]: Consumer News and Business Channel, kanal berita bisnis
+*[GDP]: Gross Domestic Product, produk domestik bruto (PDB)
+*[GNI]: Gross National Income, pendapatan nasional bruto (PNB)
+*[RI]: Republik Indonesia
+*[FY24]: Fiscal Year 2024, tahun fiskal 2024 Bank Dunia (Juli 2023 sampai Juni 2024)
+
+<!-- abbr-ok: ILOSTAT -->
 
 ## Referensi
 

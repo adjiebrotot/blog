@@ -5,6 +5,8 @@
 // Then point the post at its card in the front matter:
 //   image: /assets/img/og/<slug>.jpg
 //   image_alt: "..."
+// A post can move the crop of its illustration with og_position: "<x> <y>" (CSS object-position,
+// e.g. "0% 50%" to keep the left edge).
 // This folder starts with _, so Jekyll does not publish it.
 import { createRequire } from 'module';
 import fs from 'fs';
@@ -34,13 +36,13 @@ function posts() {
       const get = k => (fm.match(new RegExp(`^${k}:(.*)$`, 'm')) || [, ''])[1];
       const tag = (get('tags').match(/\w+/) || ['others'])[0];
       const ill = (src.match(/\/assets\/img\/([\w-]+-ill-[\w-]+\.webp)/) || [])[1];
-      list.push({ slug: f.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.md$/, ''), lang, title: unq(get('title')), eyebrow: (labels[tag] || labels.others)[lang], ill });
+      list.push({ slug: f.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.md$/, ''), lang, title: unq(get('title')), eyebrow: (labels[tag] || labels.others)[lang], ill, pos: unq(get('og_position')) || null });
     }
   }
   return list;
 }
 
-function card({ title, eyebrow, ill, lang }) {
+function card({ title, eyebrow, ill, lang, pos }) {
   return `<!DOCTYPE html><html lang="${lang}"><head>
 <link rel="stylesheet" href="${url('assets/css/fonts.css')}">
 <style>
@@ -60,7 +62,7 @@ function card({ title, eyebrow, ill, lang }) {
     <h1>${esc(title)}</h1>
     <div class="brand"><img src="${url('assets/img/logo.svg')}" alt="">Adjie Brotot Blog <span>blog.adjiebrotots.com</span></div>
   </div>
-  ${ill ? `<div class="ill"><img src="${url('assets/img/' + ill)}"></div>` : ''}
+  ${ill ? `<div class="ill"><img src="${url('assets/img/' + ill)}"${pos ? ` style="object-position: ${esc(pos)}"` : ''}></div>` : ''}
 </body></html>`;
 }
 

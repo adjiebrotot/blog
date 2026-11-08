@@ -1,0 +1,7 @@
+---
+layout: null
+permalink: /en/how-governments-lie-with-statistics/index.md
+md_of: /en/how-governments-lie-with-statistics/
+sitemap: false
+---
+{% include post-markdown.txt url=page.md_of %}

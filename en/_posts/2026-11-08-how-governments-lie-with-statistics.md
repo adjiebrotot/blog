@@ -6,6 +6,7 @@ date: 2026-11-08 09:00:00 +0800
 tags: [politics]
 image: /assets/img/og/how-governments-lie-with-statistics.jpg
 image_alt: "A heavy-set man in a light blue shirt and black peci shouts \"Our economy is skyrocketing!\" from a podium, one finger pointing up, while a crowd cheers behind him"
+og_position: "4% 50%"
 share_image: /assets/img/gsl-ill-podium-en.webp
 translation: government-statistics
 keywords: [how governments lie with statistics, Indonesia economic data, BPS statistics, Indonesia unemployment rate, Indonesia poverty rate, Indonesia GDP per capita, Indonesia government debt, how to read economic statistics]
