@@ -197,7 +197,7 @@ Ketujuh angka andalan pemerintah, cara memolesnya, dan angka pembandingnya bisa 
 | Rasio Gini 0,375 | Diukur dari pengeluaran | Porsi pendapatan 10% teratas | 46,9%, setara Amerika Serikat |
 | Utang 40,9% PDB | Utang BUMN, tagihan yang ditunda, pensiun PNS | Bunga dibagi pendapatan, komposisi mata uang | Bunga menelan 16,3% pendapatan (IMF), 18,6% pendapatan negara (APBN) |
 
-*Sumber setiap angka ada di catatan kaki pada bagian masing-masing angka.*
+*Sumber setiap angka ada di bagian [Referensi](#referensi).*
 
 ## Jadi, apakah ekonomi kita benar-benar meroket?
 
