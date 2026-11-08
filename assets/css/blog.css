@@ -563,8 +563,8 @@ a.btn-primary { color: var(--text-inv); }
 .share-ico svg[fill="none"] { fill: none; }
 
 /* The floating Share: at the article's right edge on a wide screen (the
-   mirror of the reading rail on its left), at the bottom right corner on a
-   narrow one. blog.js shows it while neither the header's nor the footer's
+   mirror of the reading rail on its left), at the top right corner, under the
+   header, on a narrow one. blog.js shows it while neither the header's nor the footer's
    Share is on screen. */
 .share-float {
   position: fixed; z-index: 45;
@@ -573,8 +573,11 @@ a.btn-primary { color: var(--text-inv); }
   transition: opacity var(--motion-base), visibility var(--motion-base), transform var(--motion-base);
 }
 .share-float.is-shown { opacity: 1; visibility: visible; transform: none; }
-/* Below 1280px the share button stands above the Buy Me a Coffee button (52px, 16px from the corner; assets/js/bmc.js), right edges aligned. */
-@media (max-width: 1279.98px) { .share-float { bottom: calc(16px + 52px + 12px + env(safe-area-inset-bottom)); } }
+/* Below 1280px the share button sits at the top right, just under the sticky header (about 60px tall), so it stays clear of the text being read and of the Buy Me a Coffee button in the bottom corner (assets/js/bmc.js). */
+@media (max-width: 1279.98px) {
+  .share-float { top: 4.6rem; bottom: auto; transform: translateY(-8px); }
+  .share-float.is-shown { transform: none; }
+}
 .share-float .share-toggle { padding: 8px 15px; font-size: var(--fs-sm); box-shadow: var(--sticker), var(--shadow-lg); }
 @media (min-width: 1280px) {
   .share-float { top: 6rem; bottom: auto; right: auto; left: calc(50% + (var(--measure) + 5rem) / 2 + 1.5rem); }
