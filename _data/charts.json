@@ -7,11 +7,11 @@
   },
   "sub": {
    "en": "Share of the labour force with no paid work at all, not even one hour in the survey week",
-   "id": "Persentase angkatan kerja yang sama sekali tidak bekerja, bahkan satu jam pun, dalam minggu survei"
+   "id": "Persentase angkatan kerja yang sama sekali tidak bekerja, satu jam pun, selama seminggu sebelum survei"
   },
   "source": {
-   "en": "ILO modelled estimates, via World Bank (SL.UEM.TOTL.ZS). OECD average: simple mean of the 38 members with data",
-   "id": "Estimasi model ILO, melalui Bank Dunia (SL.UEM.TOTL.ZS). Rata-rata OECD: rata-rata sederhana dari 38 anggota yang datanya tersedia"
+   "en": "ILO modelled estimates, from the World Bank (SL.UEM.TOTL.ZS). OECD average: simple mean of the 38 members with data",
+   "id": "Estimasi model ILO, dikutip dari Bank Dunia (SL.UEM.TOTL.ZS). Rata-rata OECD: rata-rata sederhana dari 38 anggota yang datanya tersedia"
   },
   "has_avg": true,
   "rows": [
@@ -231,11 +231,11 @@
   },
   "sub": {
    "en": "Share of workers in informal jobs (no written contract, no social protection), latest year (Indonesia: 2024)",
-   "id": "Persentase pekerja di pekerjaan informal (tanpa kontrak tertulis dan jaminan sosial), tahun terbaru (Indonesia: 2024)"
+   "id": "Persentase pekerja yang tergolong informal (tanpa kontrak tertulis dan jaminan sosial), tahun terbaru (Indonesia: 2024)"
   },
   "source": {
    "en": "ILOSTAT, SDG indicator 8.3.1 (ILO harmonised definition). OECD average: simple mean of the 31 members with data",
-   "id": "ILOSTAT, indikator SDG 8.3.1 (definisi harmonisasi ILO). Rata-rata OECD: rata-rata sederhana dari 31 anggota yang datanya tersedia"
+   "id": "ILOSTAT, indikator SDG 8.3.1 (definisi ILO yang diselaraskan antarnegara). Rata-rata OECD: rata-rata sederhana dari 31 anggota yang datanya tersedia"
   },
   "has_avg": true,
   "rows": [
@@ -625,7 +625,7 @@
   },
   "sub": {
    "en": "Median income (or spending) per person in a year, as a share of GDP per capita, latest survey. Indonesia and most of ASEAN survey spending; OECD countries survey income",
-   "id": "Median pendapatan (atau pengeluaran) per orang setahun dibagi PDB per kapita, survei terbaru. Indonesia dan sebagian besar ASEAN mensurvei pengeluaran, negara OECD mensurvei pendapatan"
+   "id": "Median pendapatan (atau pengeluaran) per orang setahun dibagi PDB per kapita, survei terbaru. Indonesia dan sebagian besar negara ASEAN mensurvei pengeluaran, sedangkan negara OECD mensurvei pendapatan"
   },
   "source": {
    "en": "World Bank Poverty and Inequality Platform and World Development Indicators (2021 PPP), author's calculation. OECD average: simple mean of the 37 members with data",
@@ -853,7 +853,7 @@
   },
   "source": {
    "en": "World Bank, GNI and GDP per capita (PPP, current international dollars). OECD average: simple mean of the 38 members with data",
-   "id": "Bank Dunia, PNB dan PDB per kapita (PPP, dolar internasional berlaku). Rata-rata OECD: rata-rata sederhana dari 38 anggota yang datanya tersedia"
+   "id": "Bank Dunia, PNB dan PDB per kapita (PPP, dolar internasional atas dasar harga berlaku). Rata-rata OECD: rata-rata sederhana dari 38 anggota yang datanya tersedia"
   },
   "has_avg": true,
   "rows": [
@@ -1356,7 +1356,7 @@
     },
     "note": {
      "en": "line for upper-middle-income countries, Indonesia's group",
-     "id": "garis untuk negara berpendapatan menengah atas, kelompok Indonesia"
+     "id": "garis untuk negara berpendapatan menengah atas, kelompok tempat Indonesia berada"
     },
     "g": "hl",
     "w": 100.0,
@@ -1542,12 +1542,12 @@
  },
  "gsl-gini": {
   "title": {
-   "en": "The Gini index, the official way",
-   "id": "Indeks Gini versi resmi"
+   "en": "The Gini index from household surveys",
+   "id": "Indeks Gini dari survei rumah tangga"
   },
   "sub": {
    "en": "0 = everyone equal, 100 = one person has everything; latest survey. Indonesia and most of ASEAN measure spending, OECD countries measure income",
-   "id": "0 berarti semua orang setara, 100 berarti satu orang memiliki segalanya; survei terbaru. Indonesia dan sebagian besar ASEAN mengukur pengeluaran, negara OECD mengukur pendapatan"
+   "id": "0 berarti semua orang setara, 100 berarti satu orang memiliki segalanya; survei terbaru. Indonesia dan sebagian besar negara ASEAN mengukur pengeluaran, sedangkan negara OECD mengukur pendapatan"
   },
   "source": {
    "en": "World Bank Poverty and Inequality Platform. OECD average: simple mean of the 37 members with data",
@@ -1748,7 +1748,7 @@
   },
   "source": {
    "en": "World Inequality Database, via Our World in Data. OECD average: simple mean of the 38 members with data",
-   "id": "World Inequality Database, melalui Our World in Data. Rata-rata OECD: rata-rata sederhana dari 38 anggota yang datanya tersedia"
+   "id": "World Inequality Database, dikutip dari Our World in Data. Rata-rata OECD: rata-rata sederhana dari 38 anggota yang datanya tersedia"
   },
   "has_avg": true,
   "rows": [
@@ -2205,7 +2205,7 @@
   },
   "source": {
    "en": "IMF Fiscal Monitor (primary balance minus overall balance, over revenue), author's calculation. OECD average: simple mean of the 38 members with data",
-   "id": "IMF Fiscal Monitor (keseimbangan primer dikurangi keseimbangan total, dibagi pendapatan), dihitung penulis. Rata-rata OECD: rata-rata sederhana dari 38 anggota yang datanya tersedia"
+   "id": "IMF Fiscal Monitor (keseimbangan primer dikurangi surplus atau defisit anggaran secara keseluruhan, dibagi pendapatan), dihitung penulis. Rata-rata OECD: rata-rata sederhana dari 38 anggota yang datanya tersedia"
   },
   "has_avg": true,
   "rows": [

@@ -143,6 +143,6 @@ id:
   date_format: "{d} {m} {y}"
   chart_source: Sumber
   chart_highlight: Indonesia
-  chart_asean: ASEAN lainnya
+  chart_asean: Negara ASEAN lainnya
   chart_oecd: Anggota OECD
   chart_oecd_avg: Rata-rata OECD
