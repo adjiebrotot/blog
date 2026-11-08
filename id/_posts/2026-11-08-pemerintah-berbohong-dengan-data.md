@@ -122,6 +122,7 @@ Masalahnya, menurut metodologi yang diterbitkan BPS (2013), harga dicatat dengan
 Grafik di bawah menunjukkan upah riil, yaitu upah dibagi IHK, dengan 2019 sebagai titik awal (2019 = 100). Garis biru menunjukkan Australia, sedangkan garis merah menunjukkan Indonesia.[^upahriil]
 
 ```mermaid
+%%{init: {"themeVariables": {"xyChart": {"plotColorPalette": "#5A91E8, #E63939"}}}}%%
 xychart-beta
   title "Upah riil, 2019 = 100"
   x-axis [2019, 2020, 2021, 2022, 2023, 2024, 2025]
@@ -186,6 +187,7 @@ Harus saya akui, kalau dilihat dari angka resmi yang biasa dikutip ini saja, pem
 Seberapa besar utang yang dititipkan ke BUMN Karya terlihat dari empat perusahaan yang sahamnya tercatat di bursa, yaitu Waskita Karya, Wijaya Karya, Adhi Karya, dan PP. Grafik di bawah menunjukkan total liabilitas (kewajiban) keempatnya. Hanya dalam tiga tahun, totalnya melonjak lebih dari tiga kali lipat, dari Rp60,4 triliun pada 2015 menjadi Rp197,5 triliun pada 2018, di tengah gencarnya pembangunan jalan tol dan infrastruktur, lalu bertahan di kisaran Rp190 triliun sampai Rp215 triliun sejak itu. Liabilitas Waskita Karya sendiri naik dari Rp20,6 triliun menjadi Rp95,5 triliun pada periode yang sama, dan Waskita Karya serta Wijaya Karya akhirnya harus merestrukturisasi utangnya dengan bank pada 2023 sampai 2024.[^karya] Tidak satu rupiah pun dari utang itu dihitung sebagai utang pemerintah.
 
 ```mermaid
+%%{init: {"themeVariables": {"xyChart": {"plotColorPalette": "#E63939"}}}}%%
 xychart-beta
   title "Total liabilitas WSKT, WIKA, ADHI, dan PTPP (Rp triliun)"
   x-axis [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
