@@ -1,0 +1,7 @@
+---
+layout: null
+permalink: /id/pemerintah-berbohong-dengan-data/index.md
+md_of: /id/pemerintah-berbohong-dengan-data/
+sitemap: false
+---
+{% include post-markdown.txt url=page.md_of %}

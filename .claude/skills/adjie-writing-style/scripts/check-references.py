@@ -95,7 +95,7 @@ def blocks(lines):
             out.append("heading")
         elif s.startswith("|"):
             out.append("table")
-        elif "<iframe" in s or "{% include tool-embed" in s:
+        elif "<iframe" in s or "{% include tool-embed" in s or "{% include hbar" in s:
             out.append("chart")
         elif "<img" in s or re.match(r"!\[", s):
             out.append("image")
