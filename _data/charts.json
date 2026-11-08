@@ -1,0 +1,2421 @@
+{
+ "_about": "Data for the country bar charts ({% include hbar.html id=... %}), generated from World Bank, ILO, IMF, PIP and WID data. Edit a number only together with its source.",
+ "gsl-unemployment": {
+  "title": {
+   "en": "Unemployment rate, 2025",
+   "id": "Tingkat pengangguran, 2025"
+  },
+  "sub": {
+   "en": "Share of the labour force with no paid work at all, not even one hour in the survey week",
+   "id": "Persentase angkatan kerja yang sama sekali tidak bekerja, bahkan satu jam pun, dalam minggu survei"
+  },
+  "source": {
+   "en": "ILO modelled estimates, via World Bank (SL.UEM.TOTL.ZS). OECD average: simple mean of the 38 members with data",
+   "id": "Estimasi model ILO, melalui Bank Dunia (SL.UEM.TOTL.ZS). Rata-rata OECD: rata-rata sederhana dari 38 anggota yang datanya tersedia"
+  },
+  "has_avg": true,
+  "rows": [
+   {
+    "c": "CHL",
+    "g": "oecd",
+    "w": 100.0,
+    "v": {
+     "en": "9.0%",
+     "id": "9,0%"
+    }
+   },
+   {
+    "c": "TUR",
+    "g": "oecd",
+    "w": 94.9,
+    "v": {
+     "en": "8.5%",
+     "id": "8,5%"
+    }
+   },
+   {
+    "c": "COL",
+    "g": "oecd",
+    "w": 92.4,
+    "v": {
+     "en": "8.3%",
+     "id": "8,3%"
+    }
+   },
+   {
+    "c": "FRA",
+    "g": "oecd",
+    "w": 84.0,
+    "v": {
+     "en": "7.5%",
+     "id": "7,5%"
+    }
+   },
+   {
+    "c": "OECD",
+    "g": "avg",
+    "w": 63.1,
+    "v": {
+     "en": "5.7%",
+     "id": "5,7%"
+    }
+   },
+   {
+    "c": "BRN",
+    "g": "asean",
+    "w": 58.8,
+    "v": {
+     "en": "5.3%",
+     "id": "5,3%"
+    }
+   },
+   {
+    "c": "CHE",
+    "g": "oecd",
+    "w": 54.3,
+    "v": {
+     "en": "4.9%",
+     "id": "4,9%"
+    }
+   },
+   {
+    "c": "GBR",
+    "g": "oecd",
+    "w": 52.9,
+    "v": {
+     "en": "4.7%",
+     "id": "4,7%"
+    }
+   },
+   {
+    "c": "USA",
+    "g": "oecd",
+    "w": 46.8,
+    "v": {
+     "en": "4.2%",
+     "id": "4,2%"
+    }
+   },
+   {
+    "c": "AUS",
+    "g": "oecd",
+    "w": 45.6,
+    "v": {
+     "en": "4.1%",
+     "id": "4,1%"
+    }
+   },
+   {
+    "c": "MYS",
+    "g": "asean",
+    "w": 41.9,
+    "v": {
+     "en": "3.8%",
+     "id": "3,8%"
+    }
+   },
+   {
+    "c": "DEU",
+    "g": "oecd",
+    "w": 41.4,
+    "v": {
+     "en": "3.7%",
+     "id": "3,7%"
+    }
+   },
+   {
+    "c": "IDN",
+    "g": "hl",
+    "w": 36.1,
+    "v": {
+     "en": "3.2%",
+     "id": "3,2%"
+    }
+   },
+   {
+    "c": "MMR",
+    "g": "asean",
+    "w": 34.0,
+    "v": {
+     "en": "3.0%",
+     "id": "3,0%"
+    }
+   },
+   {
+    "c": "SGP",
+    "g": "asean",
+    "w": 31.4,
+    "v": {
+     "en": "2.8%",
+     "id": "2,8%"
+    }
+   },
+   {
+    "c": "KOR",
+    "g": "oecd",
+    "w": 29.9,
+    "v": {
+     "en": "2.7%",
+     "id": "2,7%"
+    }
+   },
+   {
+    "c": "MEX",
+    "g": "oecd",
+    "w": 29.8,
+    "v": {
+     "en": "2.7%",
+     "id": "2,7%"
+    }
+   },
+   {
+    "c": "JPN",
+    "g": "oecd",
+    "w": 27.3,
+    "v": {
+     "en": "2.5%",
+     "id": "2,5%"
+    }
+   },
+   {
+    "c": "PHL",
+    "g": "asean",
+    "w": 24.9,
+    "v": {
+     "en": "2.2%",
+     "id": "2,2%"
+    }
+   },
+   {
+    "c": "VNM",
+    "g": "asean",
+    "w": 17.0,
+    "v": {
+     "en": "1.5%",
+     "id": "1,5%"
+    }
+   },
+   {
+    "c": "LAO",
+    "g": "asean",
+    "w": 13.2,
+    "v": {
+     "en": "1.2%",
+     "id": "1,2%"
+    }
+   },
+   {
+    "c": "THA",
+    "g": "asean",
+    "w": 8.7,
+    "v": {
+     "en": "0.8%",
+     "id": "0,8%"
+    }
+   },
+   {
+    "c": "KHM",
+    "g": "asean",
+    "w": 2.9,
+    "v": {
+     "en": "0.3%",
+     "id": "0,3%"
+    }
+   }
+  ]
+ },
+ "gsl-informal": {
+  "title": {
+   "en": "Informal employment",
+   "id": "Pekerja informal"
+  },
+  "sub": {
+   "en": "Share of workers in informal jobs (no written contract, no social protection), latest year (Indonesia: 2024)",
+   "id": "Persentase pekerja di pekerjaan informal (tanpa kontrak tertulis dan jaminan sosial), tahun terbaru (Indonesia: 2024)"
+  },
+  "source": {
+   "en": "ILOSTAT, SDG indicator 8.3.1 (ILO harmonised definition). OECD average: simple mean of the 31 members with data",
+   "id": "ILOSTAT, indikator SDG 8.3.1 (definisi harmonisasi ILO). Rata-rata OECD: rata-rata sederhana dari 31 anggota yang datanya tersedia"
+  },
+  "has_avg": true,
+  "rows": [
+   {
+    "c": "LAO",
+    "g": "asean",
+    "w": 100.0,
+    "v": {
+     "en": "90.5%",
+     "id": "90,5%"
+    }
+   },
+   {
+    "c": "IDN",
+    "g": "hl",
+    "w": 97.6,
+    "v": {
+     "en": "88.3%",
+     "id": "88,3%"
+    }
+   },
+   {
+    "c": "MMR",
+    "g": "asean",
+    "w": 89.2,
+    "v": {
+     "en": "80.7%",
+     "id": "80,7%"
+    }
+   },
+   {
+    "c": "KHM",
+    "g": "asean",
+    "w": 86.8,
+    "v": {
+     "en": "78.5%",
+     "id": "78,5%"
+    }
+   },
+   {
+    "c": "VNM",
+    "g": "asean",
+    "w": 74.1,
+    "v": {
+     "en": "67.0%",
+     "id": "67,0%"
+    }
+   },
+   {
+    "c": "THA",
+    "g": "asean",
+    "w": 69.8,
+    "v": {
+     "en": "63.2%",
+     "id": "63,2%"
+    }
+   },
+   {
+    "c": "MEX",
+    "g": "oecd",
+    "w": 62.9,
+    "v": {
+     "en": "56.9%",
+     "id": "56,9%"
+    }
+   },
+   {
+    "c": "COL",
+    "g": "oecd",
+    "w": 61.9,
+    "v": {
+     "en": "56.0%",
+     "id": "56,0%"
+    }
+   },
+   {
+    "c": "BRN",
+    "g": "asean",
+    "w": 36.9,
+    "v": {
+     "en": "33.4%",
+     "id": "33,4%"
+    }
+   },
+   {
+    "c": "KOR",
+    "g": "oecd",
+    "w": 32.2,
+    "v": {
+     "en": "29.1%",
+     "id": "29,1%"
+    }
+   },
+   {
+    "c": "TUR",
+    "g": "oecd",
+    "w": 29.4,
+    "v": {
+     "en": "26.6%",
+     "id": "26,6%"
+    }
+   },
+   {
+    "c": "CHL",
+    "g": "oecd",
+    "w": 29.1,
+    "v": {
+     "en": "26.4%",
+     "id": "26,4%"
+    }
+   },
+   {
+    "c": "OECD",
+    "g": "avg",
+    "w": 12.1,
+    "v": {
+     "en": "10.9%",
+     "id": "10,9%"
+    }
+   },
+   {
+    "c": "DEU",
+    "g": "oecd",
+    "w": 4.4,
+    "v": {
+     "en": "3.9%",
+     "id": "3,9%"
+    }
+   },
+   {
+    "c": "FRA",
+    "g": "oecd",
+    "w": 3.8,
+    "v": {
+     "en": "3.4%",
+     "id": "3,4%"
+    }
+   },
+   {
+    "c": "CHE",
+    "g": "oecd",
+    "w": 1.2,
+    "v": {
+     "en": "1.1%",
+     "id": "1,1%"
+    }
+   },
+   {
+    "c": "AUS",
+    "g": "na",
+    "w": 0,
+    "v": {
+     "en": "not reported",
+     "id": "tidak dilaporkan"
+    }
+   }
+  ]
+ },
+ "gsl-hours": {
+  "title": {
+   "en": "Hours actually worked, 2025",
+   "id": "Jam kerja aktual, 2025"
+  },
+  "sub": {
+   "en": "Average hours a week per employed person",
+   "id": "Rata-rata jam kerja per minggu setiap orang yang bekerja"
+  },
+  "source": {
+   "en": "ILO modelled estimates. OECD average: simple mean of the 38 members with data",
+   "id": "Estimasi model ILO. Rata-rata OECD: rata-rata sederhana dari 38 anggota yang datanya tersedia"
+  },
+  "has_avg": true,
+  "rows": [
+   {
+    "c": "KHM",
+    "g": "asean",
+    "w": 100.0,
+    "v": {
+     "en": "46.2 h",
+     "id": "46,2 jam"
+    }
+   },
+   {
+    "c": "BRN",
+    "g": "asean",
+    "w": 96.9,
+    "v": {
+     "en": "44.8 h",
+     "id": "44,8 jam"
+    }
+   },
+   {
+    "c": "SGP",
+    "g": "asean",
+    "w": 96.6,
+    "v": {
+     "en": "44.6 h",
+     "id": "44,6 jam"
+    }
+   },
+   {
+    "c": "MYS",
+    "g": "asean",
+    "w": 96.3,
+    "v": {
+     "en": "44.5 h",
+     "id": "44,5 jam"
+    }
+   },
+   {
+    "c": "TUR",
+    "g": "oecd",
+    "w": 92.5,
+    "v": {
+     "en": "42.7 h",
+     "id": "42,7 jam"
+    }
+   },
+   {
+    "c": "COL",
+    "g": "oecd",
+    "w": 91.7,
+    "v": {
+     "en": "42.3 h",
+     "id": "42,3 jam"
+    }
+   },
+   {
+    "c": "THA",
+    "g": "asean",
+    "w": 91.2,
+    "v": {
+     "en": "42.1 h",
+     "id": "42,1 jam"
+    }
+   },
+   {
+    "c": "VNM",
+    "g": "asean",
+    "w": 90.4,
+    "v": {
+     "en": "41.8 h",
+     "id": "41,8 jam"
+    }
+   },
+   {
+    "c": "MMR",
+    "g": "asean",
+    "w": 90.4,
+    "v": {
+     "en": "41.7 h",
+     "id": "41,7 jam"
+    }
+   },
+   {
+    "c": "LAO",
+    "g": "asean",
+    "w": 89.9,
+    "v": {
+     "en": "41.5 h",
+     "id": "41,5 jam"
+    }
+   },
+   {
+    "c": "MEX",
+    "g": "oecd",
+    "w": 88.9,
+    "v": {
+     "en": "41.1 h",
+     "id": "41,1 jam"
+    }
+   },
+   {
+    "c": "PHL",
+    "g": "asean",
+    "w": 86.1,
+    "v": {
+     "en": "39.8 h",
+     "id": "39,8 jam"
+    }
+   },
+   {
+    "c": "IDN",
+    "g": "hl",
+    "w": 81.4,
+    "v": {
+     "en": "37.6 h",
+     "id": "37,6 jam"
+    }
+   },
+   {
+    "c": "KOR",
+    "g": "oecd",
+    "w": 80.7,
+    "v": {
+     "en": "37.3 h",
+     "id": "37,3 jam"
+    }
+   },
+   {
+    "c": "CHL",
+    "g": "oecd",
+    "w": 78.8,
+    "v": {
+     "en": "36.4 h",
+     "id": "36,4 jam"
+    }
+   },
+   {
+    "c": "USA",
+    "g": "oecd",
+    "w": 78.5,
+    "v": {
+     "en": "36.3 h",
+     "id": "36,3 jam"
+    }
+   },
+   {
+    "c": "CHE",
+    "g": "oecd",
+    "w": 74.9,
+    "v": {
+     "en": "34.6 h",
+     "id": "34,6 jam"
+    }
+   },
+   {
+    "c": "OECD",
+    "g": "avg",
+    "w": 72.7,
+    "v": {
+     "en": "33.6 h",
+     "id": "33,6 jam"
+    }
+   },
+   {
+    "c": "AUS",
+    "g": "oecd",
+    "w": 67.7,
+    "v": {
+     "en": "31.3 h",
+     "id": "31,3 jam"
+    }
+   },
+   {
+    "c": "GBR",
+    "g": "oecd",
+    "w": 67.5,
+    "v": {
+     "en": "31.2 h",
+     "id": "31,2 jam"
+    }
+   },
+   {
+    "c": "JPN",
+    "g": "oecd",
+    "w": 67.3,
+    "v": {
+     "en": "31.1 h",
+     "id": "31,1 jam"
+    }
+   },
+   {
+    "c": "FRA",
+    "g": "oecd",
+    "w": 66.8,
+    "v": {
+     "en": "30.9 h",
+     "id": "30,9 jam"
+    }
+   },
+   {
+    "c": "DEU",
+    "g": "oecd",
+    "w": 64.2,
+    "v": {
+     "en": "29.7 h",
+     "id": "29,7 jam"
+    }
+   }
+  ]
+ },
+ "gsl-median-share": {
+  "title": {
+   "en": "How much of GDP per capita reaches the typical person",
+   "id": "Berapa bagian PDB per kapita yang sampai ke orang biasa"
+  },
+  "sub": {
+   "en": "Median income (or spending) per person in a year, as a share of GDP per capita, latest survey. Indonesia and most of ASEAN survey spending; OECD countries survey income",
+   "id": "Median pendapatan (atau pengeluaran) per orang setahun dibagi PDB per kapita, survei terbaru. Indonesia dan sebagian besar ASEAN mensurvei pengeluaran, negara OECD mensurvei pendapatan"
+  },
+  "source": {
+   "en": "World Bank Poverty and Inequality Platform and World Development Indicators (2021 PPP), author's calculation. OECD average: simple mean of the 37 members with data",
+   "id": "Poverty and Inequality Platform dan World Development Indicators Bank Dunia (PPP 2021), dihitung penulis. Rata-rata OECD: rata-rata sederhana dari 37 anggota yang datanya tersedia"
+  },
+  "has_avg": true,
+  "rows": [
+   {
+    "c": "FRA",
+    "g": "oecd",
+    "w": 100.0,
+    "v": {
+     "en": "38.5%",
+     "id": "38,5%"
+    }
+   },
+   {
+    "c": "GBR",
+    "g": "oecd",
+    "w": 99.9,
+    "v": {
+     "en": "38.4%",
+     "id": "38,4%"
+    }
+   },
+   {
+    "c": "KOR",
+    "g": "oecd",
+    "w": 99.6,
+    "v": {
+     "en": "38.3%",
+     "id": "38,3%"
+    }
+   },
+   {
+    "c": "AUS",
+    "g": "oecd",
+    "w": 99.0,
+    "v": {
+     "en": "38.1%",
+     "id": "38,1%"
+    }
+   },
+   {
+    "c": "VNM",
+    "g": "asean",
+    "w": 97.4,
+    "v": {
+     "en": "37.5%",
+     "id": "37,5%"
+    }
+   },
+   {
+    "c": "DEU",
+    "g": "oecd",
+    "w": 95.5,
+    "v": {
+     "en": "36.7%",
+     "id": "36,7%"
+    }
+   },
+   {
+    "c": "MYS",
+    "g": "asean",
+    "w": 94.1,
+    "v": {
+     "en": "36.2%",
+     "id": "36,2%"
+    }
+   },
+   {
+    "c": "JPN",
+    "g": "oecd",
+    "w": 90.5,
+    "v": {
+     "en": "34.8%",
+     "id": "34,8%"
+    }
+   },
+   {
+    "c": "USA",
+    "g": "oecd",
+    "w": 90.4,
+    "v": {
+     "en": "34.7%",
+     "id": "34,7%"
+    }
+   },
+   {
+    "c": "MMR",
+    "g": "asean",
+    "w": 87.8,
+    "v": {
+     "en": "33.8%",
+     "id": "33,8%"
+    }
+   },
+   {
+    "c": "OECD",
+    "g": "avg",
+    "w": 83.1,
+    "v": {
+     "en": "31.9%",
+     "id": "31,9%"
+    }
+   },
+   {
+    "c": "CHE",
+    "g": "oecd",
+    "w": 79.8,
+    "v": {
+     "en": "30.7%",
+     "id": "30,7%"
+    }
+   },
+   {
+    "c": "NOR",
+    "g": "oecd",
+    "w": 78.2,
+    "v": {
+     "en": "30.1%",
+     "id": "30,1%"
+    }
+   },
+   {
+    "c": "CHL",
+    "g": "oecd",
+    "w": 77.0,
+    "v": {
+     "en": "29.6%",
+     "id": "29,6%"
+    }
+   },
+   {
+    "c": "TUR",
+    "g": "oecd",
+    "w": 75.1,
+    "v": {
+     "en": "28.9%",
+     "id": "28,9%"
+    }
+   },
+   {
+    "c": "THA",
+    "g": "asean",
+    "w": 68.2,
+    "v": {
+     "en": "26.2%",
+     "id": "26,2%"
+    }
+   },
+   {
+    "c": "LAO",
+    "g": "asean",
+    "w": 68.1,
+    "v": {
+     "en": "26.2%",
+     "id": "26,2%"
+    }
+   },
+   {
+    "c": "LUX",
+    "g": "oecd",
+    "w": 65.3,
+    "v": {
+     "en": "25.1%",
+     "id": "25,1%"
+    }
+   },
+   {
+    "c": "MEX",
+    "g": "oecd",
+    "w": 61.7,
+    "v": {
+     "en": "23.7%",
+     "id": "23,7%"
+    }
+   },
+   {
+    "c": "COL",
+    "g": "oecd",
+    "w": 57.9,
+    "v": {
+     "en": "22.3%",
+     "id": "22,3%"
+    }
+   },
+   {
+    "c": "PHL",
+    "g": "asean",
+    "w": 54.3,
+    "v": {
+     "en": "20.9%",
+     "id": "20,9%"
+    }
+   },
+   {
+    "c": "IDN",
+    "g": "hl",
+    "w": 42.5,
+    "v": {
+     "en": "16.4%",
+     "id": "16,4%"
+    }
+   },
+   {
+    "c": "IRL",
+    "g": "oecd",
+    "w": 40.7,
+    "v": {
+     "en": "15.7%",
+     "id": "15,7%"
+    }
+   }
+  ]
+ },
+ "gsl-gni-gdp": {
+  "title": {
+   "en": "Income that stays at home: GNI as a share of GDP, 2025",
+   "id": "Pendapatan yang tinggal di dalam negeri: PNB dibagi PDB, 2025"
+  },
+  "sub": {
+   "en": "Below 100%: part of what is produced in the country is paid out to foreign owners and lenders",
+   "id": "Di bawah 100%: sebagian hasil produksi di dalam negeri mengalir ke pemilik modal dan pemberi pinjaman asing"
+  },
+  "source": {
+   "en": "World Bank, GNI and GDP per capita (PPP, current international dollars). OECD average: simple mean of the 38 members with data",
+   "id": "Bank Dunia, PNB dan PDB per kapita (PPP, dolar internasional berlaku). Rata-rata OECD: rata-rata sederhana dari 38 anggota yang datanya tersedia"
+  },
+  "has_avg": true,
+  "rows": [
+   {
+    "c": "PHL",
+    "g": "asean",
+    "w": 100.0,
+    "v": {
+     "en": "115.0%",
+     "id": "115,0%"
+    }
+   },
+   {
+    "c": "JPN",
+    "g": "oecd",
+    "w": 92.5,
+    "v": {
+     "en": "106.3%",
+     "id": "106,3%"
+    }
+   },
+   {
+    "c": "DEU",
+    "g": "oecd",
+    "w": 90.1,
+    "v": {
+     "en": "103.6%",
+     "id": "103,6%"
+    }
+   },
+   {
+    "c": "BRN",
+    "g": "asean",
+    "w": 89.8,
+    "v": {
+     "en": "103.2%",
+     "id": "103,2%"
+    }
+   },
+   {
+    "c": "FRA",
+    "g": "oecd",
+    "w": 88.5,
+    "v": {
+     "en": "101.8%",
+     "id": "101,8%"
+    }
+   },
+   {
+    "c": "KOR",
+    "g": "oecd",
+    "w": 88.5,
+    "v": {
+     "en": "101.7%",
+     "id": "101,7%"
+    }
+   },
+   {
+    "c": "USA",
+    "g": "oecd",
+    "w": 86.5,
+    "v": {
+     "en": "99.4%",
+     "id": "99,4%"
+    }
+   },
+   {
+    "c": "GBR",
+    "g": "oecd",
+    "w": 86.4,
+    "v": {
+     "en": "99.4%",
+     "id": "99,4%"
+    }
+   },
+   {
+    "c": "CHE",
+    "g": "oecd",
+    "w": 86.3,
+    "v": {
+     "en": "99.2%",
+     "id": "99,2%"
+    }
+   },
+   {
+    "c": "TUR",
+    "g": "oecd",
+    "w": 85.7,
+    "v": {
+     "en": "98.5%",
+     "id": "98,5%"
+    }
+   },
+   {
+    "c": "COL",
+    "g": "oecd",
+    "w": 85.5,
+    "v": {
+     "en": "98.3%",
+     "id": "98,3%"
+    }
+   },
+   {
+    "c": "KHM",
+    "g": "asean",
+    "w": 85.4,
+    "v": {
+     "en": "98.2%",
+     "id": "98,2%"
+    }
+   },
+   {
+    "c": "MMR",
+    "g": "asean",
+    "w": 85.2,
+    "v": {
+     "en": "98.0%",
+     "id": "98,0%"
+    }
+   },
+   {
+    "c": "OECD",
+    "g": "avg",
+    "w": 84.8,
+    "v": {
+     "en": "97.5%",
+     "id": "97,5%"
+    }
+   },
+   {
+    "c": "THA",
+    "g": "asean",
+    "w": 84.7,
+    "v": {
+     "en": "97.4%",
+     "id": "97,4%"
+    }
+   },
+   {
+    "c": "IDN",
+    "g": "hl",
+    "w": 84.7,
+    "v": {
+     "en": "97.3%",
+     "id": "97,3%"
+    }
+   },
+   {
+    "c": "AUS",
+    "g": "oecd",
+    "w": 84.6,
+    "v": {
+     "en": "97.2%",
+     "id": "97,2%"
+    }
+   },
+   {
+    "c": "VNM",
+    "g": "asean",
+    "w": 84.5,
+    "v": {
+     "en": "97.2%",
+     "id": "97,2%"
+    }
+   },
+   {
+    "c": "MEX",
+    "g": "oecd",
+    "w": 84.3,
+    "v": {
+     "en": "96.9%",
+     "id": "96,9%"
+    }
+   },
+   {
+    "c": "MYS",
+    "g": "asean",
+    "w": 84.0,
+    "v": {
+     "en": "96.6%",
+     "id": "96,6%"
+    }
+   },
+   {
+    "c": "CHL",
+    "g": "oecd",
+    "w": 82.3,
+    "v": {
+     "en": "94.6%",
+     "id": "94,6%"
+    }
+   },
+   {
+    "c": "LAO",
+    "g": "asean",
+    "w": 82.1,
+    "v": {
+     "en": "94.4%",
+     "id": "94,4%"
+    }
+   },
+   {
+    "c": "SGP",
+    "g": "asean",
+    "w": 72.3,
+    "v": {
+     "en": "83.1%",
+     "id": "83,1%"
+    }
+   },
+   {
+    "c": "IRL",
+    "g": "oecd",
+    "w": 59.6,
+    "v": {
+     "en": "68.5%",
+     "id": "68,5%"
+    }
+   },
+   {
+    "c": "LUX",
+    "g": "oecd",
+    "w": 59.3,
+    "v": {
+     "en": "68.1%",
+     "id": "68,1%"
+    }
+   }
+  ]
+ },
+ "gsl-icor": {
+  "title": {
+   "en": "Investment needed for one point of growth (ICOR)",
+   "id": "Investasi yang dibutuhkan untuk satu persen pertumbuhan (ICOR)"
+  },
+  "sub": {
+   "en": "Investment as a share of GDP divided by real GDP growth, average of 2015 to 2024 without 2020 and 2021. Lower means each rupiah of investment buys more growth",
+   "id": "Investasi sebagai persentase PDB dibagi pertumbuhan PDB riil, rata-rata 2015 sampai 2024 tanpa 2020 dan 2021. Makin rendah, makin banyak pertumbuhan yang dihasilkan setiap rupiah investasi"
+  },
+  "source": {
+   "en": "World Bank (NE.GDI.FTOT.ZS, NY.GDP.MKTP.KD.ZG), author's calculation. OECD average: simple mean of the 38 members with data",
+   "id": "Bank Dunia (NE.GDI.FTOT.ZS, NY.GDP.MKTP.KD.ZG), dihitung penulis. Rata-rata OECD: rata-rata sederhana dari 38 anggota yang datanya tersedia"
+  },
+  "has_avg": true,
+  "rows": [
+   {
+    "c": "JPN",
+    "g": "oecd",
+    "w": 100.0,
+    "v": {
+     "en": "33.5",
+     "id": "33,5"
+    }
+   },
+   {
+    "c": "DEU",
+    "g": "oecd",
+    "w": 53.4,
+    "v": {
+     "en": "17.9",
+     "id": "17,9"
+    }
+   },
+   {
+    "c": "CHE",
+    "g": "oecd",
+    "w": 42.8,
+    "v": {
+     "en": "14.3",
+     "id": "14,3"
+    }
+   },
+   {
+    "c": "FRA",
+    "g": "oecd",
+    "w": 40.3,
+    "v": {
+     "en": "13.5",
+     "id": "13,5"
+    }
+   },
+   {
+    "c": "CHL",
+    "g": "oecd",
+    "w": 37.4,
+    "v": {
+     "en": "12.5",
+     "id": "12,5"
+    }
+   },
+   {
+    "c": "KOR",
+    "g": "oecd",
+    "w": 34.3,
+    "v": {
+     "en": "11.5",
+     "id": "11,5"
+    }
+   },
+   {
+    "c": "MEX",
+    "g": "oecd",
+    "w": 34.2,
+    "v": {
+     "en": "11.5",
+     "id": "11,5"
+    }
+   },
+   {
+    "c": "OECD",
+    "g": "avg",
+    "w": 31.5,
+    "v": {
+     "en": "10.5",
+     "id": "10,5"
+    }
+   },
+   {
+    "c": "AUS",
+    "g": "oecd",
+    "w": 26.9,
+    "v": {
+     "en": "9.0",
+     "id": "9,0"
+    }
+   },
+   {
+    "c": "GBR",
+    "g": "oecd",
+    "w": 26.8,
+    "v": {
+     "en": "9.0",
+     "id": "9,0"
+    }
+   },
+   {
+    "c": "USA",
+    "g": "oecd",
+    "w": 24.0,
+    "v": {
+     "en": "8.0",
+     "id": "8,0"
+    }
+   },
+   {
+    "c": "THA",
+    "g": "asean",
+    "w": 22.2,
+    "v": {
+     "en": "7.4",
+     "id": "7,4"
+    }
+   },
+   {
+    "c": "COL",
+    "g": "oecd",
+    "w": 22.1,
+    "v": {
+     "en": "7.4",
+     "id": "7,4"
+    }
+   },
+   {
+    "c": "SGP",
+    "g": "asean",
+    "w": 21.2,
+    "v": {
+     "en": "7.1",
+     "id": "7,1"
+    }
+   },
+   {
+    "c": "TUR",
+    "g": "oecd",
+    "w": 20.3,
+    "v": {
+     "en": "6.8",
+     "id": "6,8"
+    }
+   },
+   {
+    "c": "IDN",
+    "g": "hl",
+    "w": 18.4,
+    "v": {
+     "en": "6.2",
+     "id": "6,2"
+    }
+   },
+   {
+    "c": "KHM",
+    "g": "asean",
+    "w": 13.2,
+    "v": {
+     "en": "4.4",
+     "id": "4,4"
+    }
+   },
+   {
+    "c": "VNM",
+    "g": "asean",
+    "w": 12.9,
+    "v": {
+     "en": "4.3",
+     "id": "4,3"
+    }
+   },
+   {
+    "c": "MYS",
+    "g": "asean",
+    "w": 12.8,
+    "v": {
+     "en": "4.3",
+     "id": "4,3"
+    }
+   },
+   {
+    "c": "PHL",
+    "g": "asean",
+    "w": 11.4,
+    "v": {
+     "en": "3.8",
+     "id": "3,8"
+    }
+   }
+  ]
+ },
+ "gsl-poverty-lines": {
+  "title": {
+   "en": "Indonesia's poverty rate depends on the line you draw",
+   "id": "Angka kemiskinan Indonesia bergantung pada garis yang dipakai"
+  },
+  "sub": {
+   "en": "Share of Indonesians below each line (BPS: March 2025; World Bank: 2025 survey, 2021 PPP)",
+   "id": "Persentase penduduk Indonesia di bawah setiap garis (BPS: Maret 2025; Bank Dunia: survei 2025, PPP 2021)"
+  },
+  "source": {
+   "en": "BPS, poverty release of July 2025; World Bank Poverty and Inequality Platform",
+   "id": "BPS, rilis kemiskinan Juli 2025; Poverty and Inequality Platform Bank Dunia"
+  },
+  "no_groups": true,
+  "has_avg": false,
+  "rows": [
+   {
+    "c": "x",
+    "label": {
+     "en": "BPS national line",
+     "id": "Garis kemiskinan BPS"
+    },
+    "note": {
+     "en": "Rp609,160 a person a month",
+     "id": "Rp609.160 per orang per bulan"
+    },
+    "g": "asean",
+    "w": 13.2,
+    "v": {
+     "en": "8.47%",
+     "id": "8,47%"
+    }
+   },
+   {
+    "c": "x",
+    "label": {
+     "en": "World Bank, US$3.00 a day",
+     "id": "Bank Dunia, US$3,00 per hari"
+    },
+    "note": {
+     "en": "line for low-income countries",
+     "id": "garis untuk negara berpendapatan rendah"
+    },
+    "g": "asean",
+    "w": 5.8,
+    "v": {
+     "en": "3.7%",
+     "id": "3,7%"
+    }
+   },
+   {
+    "c": "x",
+    "label": {
+     "en": "World Bank, US$4.20 a day",
+     "id": "Bank Dunia, US$4,20 per hari"
+    },
+    "note": {
+     "en": "line for lower-middle-income countries",
+     "id": "garis untuk negara berpendapatan menengah bawah"
+    },
+    "g": "asean",
+    "w": 24.2,
+    "v": {
+     "en": "15.5%",
+     "id": "15,5%"
+    }
+   },
+   {
+    "c": "x",
+    "label": {
+     "en": "World Bank, US$8.30 a day",
+     "id": "Bank Dunia, US$8,30 per hari"
+    },
+    "note": {
+     "en": "line for upper-middle-income countries, Indonesia's group",
+     "id": "garis untuk negara berpendapatan menengah atas, kelompok Indonesia"
+    },
+    "g": "hl",
+    "w": 100.0,
+    "v": {
+     "en": "64.1%",
+     "id": "64,1%"
+    }
+   }
+  ]
+ },
+ "gsl-poverty-830": {
+  "title": {
+   "en": "Poverty at the line for Indonesia's income group",
+   "id": "Kemiskinan pada garis untuk kelompok pendapatan Indonesia"
+  },
+  "sub": {
+   "en": "Share of people below US$8.30 a day (2021 PPP), latest survey, with 2025 GDP per capita (PPP) under each name",
+   "id": "Persentase penduduk di bawah US$8,30 per hari (PPP 2021), survei terbaru, dengan PDB per kapita 2025 (PPP) di bawah nama negara"
+  },
+  "source": {
+   "en": "World Bank Poverty and Inequality Platform; World Bank GDP per capita",
+   "id": "Poverty and Inequality Platform Bank Dunia; PDB per kapita Bank Dunia"
+  },
+  "has_avg": false,
+  "rows": [
+   {
+    "c": "MMR",
+    "g": "asean",
+    "w": 100.0,
+    "v": {
+     "en": "79.8%",
+     "id": "79,8%"
+    },
+    "note": {
+     "en": "GDP/capita US$6.0k",
+     "id": "PDB/kapita US$6,0 ribu"
+    }
+   },
+   {
+    "c": "PHL",
+    "g": "asean",
+    "w": 92.5,
+    "v": {
+     "en": "73.9%",
+     "id": "73,9%"
+    },
+    "note": {
+     "en": "GDP/capita US$12.6k",
+     "id": "PDB/kapita US$12,6 ribu"
+    }
+   },
+   {
+    "c": "LAO",
+    "g": "asean",
+    "w": 88.0,
+    "v": {
+     "en": "70.3%",
+     "id": "70,3%"
+    },
+    "note": {
+     "en": "GDP/capita US$10.4k",
+     "id": "PDB/kapita US$10,4 ribu"
+    }
+   },
+   {
+    "c": "IDN",
+    "g": "hl",
+    "w": 80.3,
+    "v": {
+     "en": "64.1%",
+     "id": "64,1%"
+    },
+    "note": {
+     "en": "GDP/capita US$17.7k",
+     "id": "PDB/kapita US$17,7 ribu"
+    }
+   },
+   {
+    "c": "COL",
+    "g": "oecd",
+    "w": 46.4,
+    "v": {
+     "en": "37.0%",
+     "id": "37,0%"
+    },
+    "note": {
+     "en": "GDP/capita US$22.6k",
+     "id": "PDB/kapita US$22,6 ribu"
+    }
+   },
+   {
+    "c": "VNM",
+    "g": "asean",
+    "w": 26.9,
+    "v": {
+     "en": "21.5%",
+     "id": "21,5%"
+    },
+    "note": {
+     "en": "GDP/capita US$18.1k",
+     "id": "PDB/kapita US$18,1 ribu"
+    }
+   },
+   {
+    "c": "MEX",
+    "g": "oecd",
+    "w": 26.8,
+    "v": {
+     "en": "21.4%",
+     "id": "21,4%"
+    },
+    "note": {
+     "en": "GDP/capita US$25.9k",
+     "id": "PDB/kapita US$25,9 ribu"
+    }
+   },
+   {
+    "c": "THA",
+    "g": "asean",
+    "w": 14.6,
+    "v": {
+     "en": "11.7%",
+     "id": "11,7%"
+    },
+    "note": {
+     "en": "GDP/capita US$26.3k",
+     "id": "PDB/kapita US$26,3 ribu"
+    }
+   },
+   {
+    "c": "CHL",
+    "g": "oecd",
+    "w": 5.6,
+    "v": {
+     "en": "4.5%",
+     "id": "4,5%"
+    },
+    "note": {
+     "en": "GDP/capita US$37.8k",
+     "id": "PDB/kapita US$37,8 ribu"
+    }
+   },
+   {
+    "c": "TUR",
+    "g": "oecd",
+    "w": 5.2,
+    "v": {
+     "en": "4.1%",
+     "id": "4,1%"
+    },
+    "note": {
+     "en": "GDP/capita US$45.3k",
+     "id": "PDB/kapita US$45,3 ribu"
+    }
+   },
+   {
+    "c": "MYS",
+    "g": "asean",
+    "w": 3.6,
+    "v": {
+     "en": "2.9%",
+     "id": "2,9%"
+    },
+    "note": {
+     "en": "GDP/capita US$41.5k",
+     "id": "PDB/kapita US$41,5 ribu"
+    }
+   },
+   {
+    "c": "AUS",
+    "g": "oecd",
+    "w": 1.9,
+    "v": {
+     "en": "1.5%",
+     "id": "1,5%"
+    },
+    "note": {
+     "en": "GDP/capita US$71.9k",
+     "id": "PDB/kapita US$71,9 ribu"
+    }
+   }
+  ]
+ },
+ "gsl-gini": {
+  "title": {
+   "en": "The Gini index, the official way",
+   "id": "Indeks Gini versi resmi"
+  },
+  "sub": {
+   "en": "0 = everyone equal, 100 = one person has everything; latest survey. Indonesia and most of ASEAN measure spending, OECD countries measure income",
+   "id": "0 berarti semua orang setara, 100 berarti satu orang memiliki segalanya; survei terbaru. Indonesia dan sebagian besar ASEAN mengukur pengeluaran, negara OECD mengukur pendapatan"
+  },
+  "source": {
+   "en": "World Bank Poverty and Inequality Platform. OECD average: simple mean of the 37 members with data",
+   "id": "Poverty and Inequality Platform Bank Dunia. Rata-rata OECD: rata-rata sederhana dari 37 anggota yang datanya tersedia"
+  },
+  "has_avg": true,
+  "rows": [
+   {
+    "c": "COL",
+    "g": "oecd",
+    "w": 100.0,
+    "v": {
+     "en": "54.4",
+     "id": "54,4"
+    }
+   },
+   {
+    "c": "TUR",
+    "g": "oecd",
+    "w": 80.3,
+    "v": {
+     "en": "43.7",
+     "id": "43,7"
+    }
+   },
+   {
+    "c": "CHL",
+    "g": "oecd",
+    "w": 79.1,
+    "v": {
+     "en": "43.0",
+     "id": "43,0"
+    }
+   },
+   {
+    "c": "MEX",
+    "g": "oecd",
+    "w": 78.4,
+    "v": {
+     "en": "42.6",
+     "id": "42,6"
+    }
+   },
+   {
+    "c": "USA",
+    "g": "oecd",
+    "w": 76.8,
+    "v": {
+     "en": "41.8",
+     "id": "41,8"
+    }
+   },
+   {
+    "c": "MYS",
+    "g": "asean",
+    "w": 74.8,
+    "v": {
+     "en": "40.7",
+     "id": "40,7"
+    }
+   },
+   {
+    "c": "VNM",
+    "g": "asean",
+    "w": 66.4,
+    "v": {
+     "en": "36.1",
+     "id": "36,1"
+    }
+   },
+   {
+    "c": "PHL",
+    "g": "asean",
+    "w": 64.7,
+    "v": {
+     "en": "35.2",
+     "id": "35,2"
+    }
+   },
+   {
+    "c": "LAO",
+    "g": "asean",
+    "w": 63.9,
+    "v": {
+     "en": "34.8",
+     "id": "34,8"
+    }
+   },
+   {
+    "c": "IDN",
+    "g": "hl",
+    "w": 63.3,
+    "v": {
+     "en": "34.4",
+     "id": "34,4"
+    }
+   },
+   {
+    "c": "AUS",
+    "g": "oecd",
+    "w": 62.2,
+    "v": {
+     "en": "33.8",
+     "id": "33,8"
+    }
+   },
+   {
+    "c": "DEU",
+    "g": "oecd",
+    "w": 61.9,
+    "v": {
+     "en": "33.7",
+     "id": "33,7"
+    }
+   },
+   {
+    "c": "CHE",
+    "g": "oecd",
+    "w": 61.5,
+    "v": {
+     "en": "33.5",
+     "id": "33,5"
+    }
+   },
+   {
+    "c": "THA",
+    "g": "asean",
+    "w": 61.3,
+    "v": {
+     "en": "33.3",
+     "id": "33,3"
+    }
+   },
+   {
+    "c": "OECD",
+    "g": "avg",
+    "w": 61.0,
+    "v": {
+     "en": "33.1",
+     "id": "33,1"
+    }
+   },
+   {
+    "c": "KOR",
+    "g": "oecd",
+    "w": 60.5,
+    "v": {
+     "en": "32.9",
+     "id": "32,9"
+    }
+   },
+   {
+    "c": "GBR",
+    "g": "oecd",
+    "w": 59.6,
+    "v": {
+     "en": "32.4",
+     "id": "32,4"
+    }
+   },
+   {
+    "c": "JPN",
+    "g": "oecd",
+    "w": 59.5,
+    "v": {
+     "en": "32.3",
+     "id": "32,3"
+    }
+   },
+   {
+    "c": "FRA",
+    "g": "oecd",
+    "w": 58.5,
+    "v": {
+     "en": "31.8",
+     "id": "31,8"
+    }
+   },
+   {
+    "c": "MMR",
+    "g": "asean",
+    "w": 56.5,
+    "v": {
+     "en": "30.7",
+     "id": "30,7"
+    }
+   }
+  ]
+ },
+ "gsl-top10": {
+  "title": {
+   "en": "How much of national income goes to the top 10%",
+   "id": "Porsi pendapatan nasional yang diterima 10% teratas"
+  },
+  "sub": {
+   "en": "Share of pre-tax national income, latest year available (Indonesia: 2018)",
+   "id": "Persentase pendapatan nasional sebelum pajak, tahun terbaru yang tersedia (Indonesia: 2018)"
+  },
+  "source": {
+   "en": "World Inequality Database, via Our World in Data. OECD average: simple mean of the 38 members with data",
+   "id": "World Inequality Database, melalui Our World in Data. Rata-rata OECD: rata-rata sederhana dari 38 anggota yang datanya tersedia"
+  },
+  "has_avg": true,
+  "rows": [
+   {
+    "c": "COL",
+    "g": "oecd",
+    "w": 100.0,
+    "v": {
+     "en": "63.3%",
+     "id": "63,3%"
+    }
+   },
+   {
+    "c": "CHL",
+    "g": "oecd",
+    "w": 93.9,
+    "v": {
+     "en": "59.5%",
+     "id": "59,5%"
+    }
+   },
+   {
+    "c": "MEX",
+    "g": "oecd",
+    "w": 93.3,
+    "v": {
+     "en": "59.1%",
+     "id": "59,1%"
+    }
+   },
+   {
+    "c": "TUR",
+    "g": "oecd",
+    "w": 86.0,
+    "v": {
+     "en": "54.4%",
+     "id": "54,4%"
+    }
+   },
+   {
+    "c": "THA",
+    "g": "asean",
+    "w": 82.7,
+    "v": {
+     "en": "52.4%",
+     "id": "52,4%"
+    }
+   },
+   {
+    "c": "LAO",
+    "g": "asean",
+    "w": 76.3,
+    "v": {
+     "en": "48.3%",
+     "id": "48,3%"
+    }
+   },
+   {
+    "c": "IDN",
+    "g": "hl",
+    "w": 74.0,
+    "v": {
+     "en": "46.9%",
+     "id": "46,9%"
+    }
+   },
+   {
+    "c": "USA",
+    "g": "oecd",
+    "w": 73.9,
+    "v": {
+     "en": "46.8%",
+     "id": "46,8%"
+    }
+   },
+   {
+    "c": "SGP",
+    "g": "asean",
+    "w": 72.9,
+    "v": {
+     "en": "46.2%",
+     "id": "46,2%"
+    }
+   },
+   {
+    "c": "KHM",
+    "g": "asean",
+    "w": 71.8,
+    "v": {
+     "en": "45.5%",
+     "id": "45,5%"
+    }
+   },
+   {
+    "c": "PHL",
+    "g": "asean",
+    "w": 71.7,
+    "v": {
+     "en": "45.4%",
+     "id": "45,4%"
+    }
+   },
+   {
+    "c": "VNM",
+    "g": "asean",
+    "w": 69.1,
+    "v": {
+     "en": "43.8%",
+     "id": "43,8%"
+    }
+   },
+   {
+    "c": "JPN",
+    "g": "oecd",
+    "w": 68.7,
+    "v": {
+     "en": "43.5%",
+     "id": "43,5%"
+    }
+   },
+   {
+    "c": "MMR",
+    "g": "asean",
+    "w": 67.9,
+    "v": {
+     "en": "43.0%",
+     "id": "43,0%"
+    }
+   },
+   {
+    "c": "OECD",
+    "g": "avg",
+    "w": 59.7,
+    "v": {
+     "en": "37.8%",
+     "id": "37,8%"
+    }
+   },
+   {
+    "c": "KOR",
+    "g": "oecd",
+    "w": 59.6,
+    "v": {
+     "en": "37.8%",
+     "id": "37,8%"
+    }
+   },
+   {
+    "c": "DEU",
+    "g": "oecd",
+    "w": 59.5,
+    "v": {
+     "en": "37.6%",
+     "id": "37,6%"
+    }
+   },
+   {
+    "c": "BRN",
+    "g": "asean",
+    "w": 58.1,
+    "v": {
+     "en": "36.8%",
+     "id": "36,8%"
+    }
+   },
+   {
+    "c": "MYS",
+    "g": "asean",
+    "w": 57.7,
+    "v": {
+     "en": "36.5%",
+     "id": "36,5%"
+    }
+   },
+   {
+    "c": "GBR",
+    "g": "oecd",
+    "w": 56.9,
+    "v": {
+     "en": "36.0%",
+     "id": "36,0%"
+    }
+   },
+   {
+    "c": "AUS",
+    "g": "oecd",
+    "w": 55.6,
+    "v": {
+     "en": "35.2%",
+     "id": "35,2%"
+    }
+   },
+   {
+    "c": "FRA",
+    "g": "oecd",
+    "w": 54.3,
+    "v": {
+     "en": "34.4%",
+     "id": "34,4%"
+    }
+   },
+   {
+    "c": "CHE",
+    "g": "oecd",
+    "w": 50.6,
+    "v": {
+     "en": "32.0%",
+     "id": "32,0%"
+    }
+   }
+  ]
+ },
+ "gsl-debt": {
+  "title": {
+   "en": "Government debt, 2025",
+   "id": "Utang pemerintah, 2025"
+  },
+  "sub": {
+   "en": "General government gross debt, as a share of GDP",
+   "id": "Utang bruto pemerintah (pusat dan daerah) sebagai persentase PDB"
+  },
+  "source": {
+   "en": "IMF World Economic Outlook. OECD average: simple mean of the 38 members with data",
+   "id": "IMF World Economic Outlook. Rata-rata OECD: rata-rata sederhana dari 38 anggota yang datanya tersedia"
+  },
+  "has_avg": true,
+  "rows": [
+   {
+    "c": "JPN",
+    "g": "oecd",
+    "w": 100.0,
+    "v": {
+     "en": "204.8%",
+     "id": "204,8%"
+    }
+   },
+   {
+    "c": "SGP",
+    "g": "asean",
+    "w": 80.9,
+    "v": {
+     "en": "165.7%",
+     "id": "165,7%"
+    }
+   },
+   {
+    "c": "ITA",
+    "g": "oecd",
+    "w": 66.9,
+    "v": {
+     "en": "137.1%",
+     "id": "137,1%"
+    }
+   },
+   {
+    "c": "USA",
+    "g": "oecd",
+    "w": 60.7,
+    "v": {
+     "en": "124.4%",
+     "id": "124,4%"
+    }
+   },
+   {
+    "c": "FRA",
+    "g": "oecd",
+    "w": 56.4,
+    "v": {
+     "en": "115.5%",
+     "id": "115,5%"
+    }
+   },
+   {
+    "c": "GBR",
+    "g": "oecd",
+    "w": 49.9,
+    "v": {
+     "en": "102.1%",
+     "id": "102,1%"
+    }
+   },
+   {
+    "c": "LAO",
+    "g": "asean",
+    "w": 43.4,
+    "v": {
+     "en": "88.8%",
+     "id": "88,8%"
+    }
+   },
+   {
+    "c": "OECD",
+    "g": "avg",
+    "w": 34.5,
+    "v": {
+     "en": "70.6%",
+     "id": "70,6%"
+    }
+   },
+   {
+    "c": "MYS",
+    "g": "asean",
+    "w": 34.4,
+    "v": {
+     "en": "70.5%",
+     "id": "70,5%"
+    }
+   },
+   {
+    "c": "THA",
+    "g": "asean",
+    "w": 31.6,
+    "v": {
+     "en": "64.7%",
+     "id": "64,7%"
+    }
+   },
+   {
+    "c": "DEU",
+    "g": "oecd",
+    "w": 30.6,
+    "v": {
+     "en": "62.7%",
+     "id": "62,7%"
+    }
+   },
+   {
+    "c": "MEX",
+    "g": "oecd",
+    "w": 30.1,
+    "v": {
+     "en": "61.7%",
+     "id": "61,7%"
+    }
+   },
+   {
+    "c": "COL",
+    "g": "oecd",
+    "w": 29.2,
+    "v": {
+     "en": "59.9%",
+     "id": "59,9%"
+    }
+   },
+   {
+    "c": "PHL",
+    "g": "asean",
+    "w": 28.9,
+    "v": {
+     "en": "59.1%",
+     "id": "59,1%"
+    }
+   },
+   {
+    "c": "KOR",
+    "g": "oecd",
+    "w": 25.6,
+    "v": {
+     "en": "52.4%",
+     "id": "52,4%"
+    }
+   },
+   {
+    "c": "MMR",
+    "g": "asean",
+    "w": 25.3,
+    "v": {
+     "en": "51.9%",
+     "id": "51,9%"
+    }
+   },
+   {
+    "c": "AUS",
+    "g": "oecd",
+    "w": 25.3,
+    "v": {
+     "en": "51.9%",
+     "id": "51,9%"
+    }
+   },
+   {
+    "c": "CHL",
+    "g": "oecd",
+    "w": 20.3,
+    "v": {
+     "en": "41.5%",
+     "id": "41,5%"
+    }
+   },
+   {
+    "c": "IDN",
+    "g": "hl",
+    "w": 20.0,
+    "v": {
+     "en": "40.9%",
+     "id": "40,9%"
+    }
+   },
+   {
+    "c": "CHE",
+    "g": "oecd",
+    "w": 19.6,
+    "v": {
+     "en": "40.1%",
+     "id": "40,1%"
+    }
+   },
+   {
+    "c": "VNM",
+    "g": "asean",
+    "w": 14.9,
+    "v": {
+     "en": "30.5%",
+     "id": "30,5%"
+    }
+   },
+   {
+    "c": "KHM",
+    "g": "asean",
+    "w": 12.5,
+    "v": {
+     "en": "25.5%",
+     "id": "25,5%"
+    }
+   },
+   {
+    "c": "TUR",
+    "g": "oecd",
+    "w": 11.6,
+    "v": {
+     "en": "23.7%",
+     "id": "23,7%"
+    }
+   },
+   {
+    "c": "BRN",
+    "g": "asean",
+    "w": 0.8,
+    "v": {
+     "en": "1.6%",
+     "id": "1,6%"
+    }
+   }
+  ]
+ },
+ "gsl-interest": {
+  "title": {
+   "en": "How much of the government's revenue goes on interest, 2025",
+   "id": "Berapa bagian pendapatan pemerintah yang habis untuk bunga utang, 2025"
+  },
+  "sub": {
+   "en": "Net interest paid by general government divided by its revenue. Below zero: the government earns more interest than it pays",
+   "id": "Bunga bersih yang dibayar pemerintah (pusat dan daerah) dibagi pendapatannya. Di bawah nol: pemerintah menerima bunga lebih besar daripada yang dibayarnya"
+  },
+  "source": {
+   "en": "IMF Fiscal Monitor (primary balance minus overall balance, over revenue), author's calculation. OECD average: simple mean of the 38 members with data",
+   "id": "IMF Fiscal Monitor (keseimbangan primer dikurangi keseimbangan total, dibagi pendapatan), dihitung penulis. Rata-rata OECD: rata-rata sederhana dari 38 anggota yang datanya tersedia"
+  },
+  "has_avg": true,
+  "rows": [
+   {
+    "c": "MEX",
+    "g": "oecd",
+    "w": 100.0,
+    "v": {
+     "en": "24.4%",
+     "id": "24,4%"
+    }
+   },
+   {
+    "c": "IDN",
+    "g": "hl",
+    "w": 66.8,
+    "v": {
+     "en": "16.3%",
+     "id": "16,3%"
+    }
+   },
+   {
+    "c": "LAO",
+    "g": "asean",
+    "w": 59.0,
+    "v": {
+     "en": "14.4%",
+     "id": "14,4%"
+    }
+   },
+   {
+    "c": "PHL",
+    "g": "asean",
+    "w": 56.6,
+    "v": {
+     "en": "13.8%",
+     "id": "13,8%"
+    }
+   },
+   {
+    "c": "MMR",
+    "g": "asean",
+    "w": 48.0,
+    "v": {
+     "en": "11.7%",
+     "id": "11,7%"
+    }
+   },
+   {
+    "c": "USA",
+    "g": "oecd",
+    "w": 42.6,
+    "v": {
+     "en": "10.4%",
+     "id": "10,4%"
+    }
+   },
+   {
+    "c": "MYS",
+    "g": "asean",
+    "w": 41.0,
+    "v": {
+     "en": "10.0%",
+     "id": "10,0%"
+    }
+   },
+   {
+    "c": "TUR",
+    "g": "oecd",
+    "w": 36.1,
+    "v": {
+     "en": "8.8%",
+     "id": "8,8%"
+    }
+   },
+   {
+    "c": "COL",
+    "g": "oecd",
+    "w": 34.4,
+    "v": {
+     "en": "8.4%",
+     "id": "8,4%"
+    }
+   },
+   {
+    "c": "ITA",
+    "g": "oecd",
+    "w": 30.7,
+    "v": {
+     "en": "7.5%",
+     "id": "7,5%"
+    }
+   },
+   {
+    "c": "GBR",
+    "g": "oecd",
+    "w": 27.9,
+    "v": {
+     "en": "6.8%",
+     "id": "6,8%"
+    }
+   },
+   {
+    "c": "THA",
+    "g": "asean",
+    "w": 22.5,
+    "v": {
+     "en": "5.5%",
+     "id": "5,5%"
+    }
+   },
+   {
+    "c": "OECD",
+    "g": "avg",
+    "w": 17.6,
+    "v": {
+     "en": "4.3%",
+     "id": "4,3%"
+    }
+   },
+   {
+    "c": "VNM",
+    "g": "asean",
+    "w": 16.4,
+    "v": {
+     "en": "4.0%",
+     "id": "4,0%"
+    }
+   },
+   {
+    "c": "FRA",
+    "g": "oecd",
+    "w": 16.4,
+    "v": {
+     "en": "4.0%",
+     "id": "4,0%"
+    }
+   },
+   {
+    "c": "CHL",
+    "g": "oecd",
+    "w": 13.5,
+    "v": {
+     "en": "3.3%",
+     "id": "3,3%"
+    }
+   },
+   {
+    "c": "AUS",
+    "g": "oecd",
+    "w": 10.7,
+    "v": {
+     "en": "2.6%",
+     "id": "2,6%"
+    }
+   },
+   {
+    "c": "DEU",
+    "g": "oecd",
+    "w": 7.4,
+    "v": {
+     "en": "1.8%",
+     "id": "1,8%"
+    }
+   },
+   {
+    "c": "KHM",
+    "g": "asean",
+    "w": 7.0,
+    "v": {
+     "en": "1.7%",
+     "id": "1,7%"
+    }
+   },
+   {
+    "c": "KOR",
+    "g": "oecd",
+    "w": 3.7,
+    "v": {
+     "en": "0.9%",
+     "id": "0,9%"
+    }
+   },
+   {
+    "c": "JPN",
+    "g": "oecd",
+    "w": 2.0,
+    "v": {
+     "en": "0.5%",
+     "id": "0,5%"
+    }
+   },
+   {
+    "c": "BRN",
+    "g": "asean",
+    "w": 0.0,
+    "v": {
+     "en": "0.0%",
+     "id": "0,0%"
+    }
+   },
+   {
+    "c": "CHE",
+    "g": "oecd",
+    "w": 0.0,
+    "v": {
+     "en": "-0.1%",
+     "id": "-0,1%"
+    }
+   }
+  ]
+ }
+}

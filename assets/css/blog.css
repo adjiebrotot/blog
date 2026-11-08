@@ -656,3 +656,37 @@ a.btn-primary { color: var(--text-inv); }
   transition: opacity var(--motion-fast);
 }
 .abbr-tip.is-shown { opacity: 1; visibility: visible; }
+
+/* ── Country bar chart: {% include hbar.html id="..." %}, data in _data/charts.yml.
+   One highlighted country (red), ASEAN (blue), OECD members (neutral grey), the OECD
+   average (ink). Every bar carries its name and value as text, so colour is never the
+   only cue. Names wrap to two lines on a phone instead of being cut. ── */
+.hbar { --hb-hl:#F05252; --hb-asean:#5A91E8; --hb-oecd:#7A7873; --hb-avg:var(--text);
+  background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius-lg);
+  padding: 1rem 1rem 0.85rem; }
+:root.light .hbar { --hb-hl:#E63939; --hb-asean:#3A71C8; --hb-oecd:#8A8782; }
+.prose .hbar figcaption { margin: 0; text-align: left; color: var(--text); }
+.hbar figcaption strong { display: block; font-size: 1rem; line-height: 1.35; }
+.hbar figcaption span { display: block; color: var(--muted); font-size: 0.82rem; line-height: 1.4; margin-top: 0.15rem; }
+.prose .hbar ul.hbar-key { list-style: none; padding: 0; margin: 0.6rem 0 0.5rem; display: flex; flex-wrap: wrap; gap: 0.2rem 0.9rem; font-size: 0.78rem; color: var(--muted); }
+.prose .hbar ul.hbar-key li { margin: 0; display: flex; align-items: center; gap: 0.35rem; }
+.hbar-key li::before { content: ""; width: 0.75rem; height: 0.75rem; border-radius: 3px; background: var(--hb-oecd); }
+.hbar-key li.hl::before { background: var(--hb-hl); }
+.hbar-key li.asean::before { background: var(--hb-asean); }
+.hbar-key li.avg::before { background: var(--hb-avg); }
+.prose .hbar ol { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
+.prose .hbar ol li { margin: 0; display: grid; grid-template-columns: minmax(5.5rem, 28%) 1fr auto; gap: 0.5rem; align-items: center; font-size: 0.82rem; line-height: 1.2; }
+.hbar .k { color: var(--muted); text-align: right; overflow-wrap: anywhere; }
+.hbar .b { height: 0.8rem; min-width: 0; }
+.hbar .b i { display: block; height: 100%; min-width: 2px; border-radius: 0 4px 4px 0; background: var(--hb-oecd); }
+.hbar li.hl .b i { background: var(--hb-hl); }
+.hbar li.asean .b i { background: var(--hb-asean); }
+.hbar li.avg .b i { background: var(--hb-avg); }
+.hbar li.na .b i { display: none; }
+.hbar li.na .v { color: var(--muted); font-style: italic; }
+.hbar li.hl .k, .hbar li.hl .v, .hbar li.avg .k { color: var(--text); font-weight: 700; }
+.hbar .v { font-variant-numeric: tabular-nums; white-space: nowrap; min-width: 3rem; }
+.hbar .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.prose .hbar .hbar-src { margin: 0.7rem 0 0; color: var(--muted); font-size: 0.75rem; line-height: 1.4; }
+@media (forced-colors: active) { .hbar .b i { border: 1px solid CanvasText; } }
+.hbar .k small { display: block; font-size: 0.72rem; color: var(--muted); font-weight: 400; }

@@ -1,0 +1,30 @@
+# Country names per language, keyed by ISO 3166-1 alpha-3 code, for charts
+# ({% include hbar.html %}). Add a country when a chart needs it.
+AUS: { en: Australia, id: Australia }
+BRN: { en: Brunei, id: Brunei Darussalam }
+CHE: { en: Switzerland, id: Swiss }
+CHL: { en: Chile, id: Chili }
+COL: { en: Colombia, id: Kolombia }
+CRI: { en: Costa Rica, id: Kosta Rika }
+DEU: { en: Germany, id: Jerman }
+FRA: { en: France, id: Prancis }
+GBR: { en: United Kingdom, id: Inggris }
+IDN: { en: Indonesia, id: Indonesia }
+IRL: { en: Ireland, id: Irlandia }
+ITA: { en: Italy, id: Italia }
+JPN: { en: Japan, id: Jepang }
+KHM: { en: Cambodia, id: Kamboja }
+KOR: { en: South Korea, id: Korea Selatan }
+LAO: { en: Laos, id: Laos }
+LUX: { en: Luxembourg, id: Luksemburg }
+MEX: { en: Mexico, id: Meksiko }
+MMR: { en: Myanmar, id: Myanmar }
+MYS: { en: Malaysia, id: Malaysia }
+NOR: { en: Norway, id: Norwegia }
+PHL: { en: Philippines, id: Filipina }
+SGP: { en: Singapore, id: Singapura }
+THA: { en: Thailand, id: Thailand }
+TUR: { en: Türkiye, id: Turki }
+USA: { en: United States, id: Amerika Serikat }
+VNM: { en: Vietnam, id: Vietnam }
+OECD: { en: OECD average, id: Rata-rata OECD }

@@ -1,0 +1,22 @@
+{%- comment -%}
+  A horizontal bar chart that compares countries, with one country highlighted.
+  Usage in a post: {% include hbar.html id="gsl-informal" %}
+  The data lives in _data/charts.json under that id (title, sub, source and each row's
+  label and value text per language, plus the bar width in percent and the row's group:
+  hl = the highlighted country, asean, oecd, avg, or na for "no data"). Country names come
+  from _data/countries.yml. Colours follow the theme (blog.css, .hbar).
+{%- endcomment -%}
+{%- assign _c = site.data.charts[include.id] -%}
+{%- assign _l = page.lang | default: site.default_lang -%}
+{%- assign _t = site.data.i18n[_l] -%}
+<figure class="hbar" role="group" aria-labelledby="hbar-{{ include.id }}">
+<figcaption id="hbar-{{ include.id }}"><strong>{{ _c.title[_l] }}</strong><span>{{ _c.sub[_l] }}</span></figcaption>
+<ul class="hbar-key" aria-hidden="true"><li class="hl">{{ _t.chart_highlight }}</li>{% unless _c.no_groups %}<li class="asean">{{ _t.chart_asean }}</li><li class="oecd">{{ _t.chart_oecd }}</li>{% if _c.has_avg %}<li class="avg">{{ _t.chart_oecd_avg }}</li>{% endif %}{% endunless %}</ul>
+<ol>
+{%- for _r in _c.rows -%}
+{%- assign _name = site.data.countries[_r.c][_l] | default: _r.label[_l] %}
+<li class="{{ _r.g }}"><span class="k">{{ _name }}{% if _r.note %}<small>{{ _r.note[_l] }}</small>{% endif %}</span><span class="sr">: </span><span class="b"><i style="width:{{ _r.w }}%"></i></span><span class="v">{{ _r.v[_l] }}</span></li>
+{%- endfor %}
+</ol>
+<p class="hbar-src">{{ _t.chart_source }}: {{ _c.source[_l] }}</p>
+</figure>
