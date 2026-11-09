@@ -192,11 +192,8 @@ Langkah kecilnya hanya butuh lima menit: sebelum musim SPT berikutnya, buka *too
 [^karyawati]: PMK Nomor 168 Tahun 2023, Pasal 9 ayat (2) huruf a dan ayat (3). [DDTCNews, "Begini Ketentuan PTKP bagi Karyawati Kawin dan Tidak Kawin"](https://news.ddtc.co.id/berita/nasional/1807307/begini-ketentuan-ptkp-bagi-karyawati-kawin-dan-tidak-kawin).
 
 *[PPh]: Pajak Penghasilan
-*[UU]: Undang-Undang
 *[HPP]: Harmonisasi Peraturan Perpajakan, undang-undang yang mengubah tarif PPh mulai 2022
 *[SPT]: Surat Pemberitahuan, laporan pajak tahunan
-*[NPWP]: Nomor Pokok Wajib Pajak. Sejak 2024 NIK berfungsi sebagai NPWP
-*[NIK]: Nomor Induk Kependudukan, nomor di KTP
 *[PH]: Pisah Harta, suami dan istri punya perjanjian pemisahan harta dan penghasilan
 *[MT]: Memilih Terpisah, istri memilih menjalankan kewajiban pajaknya sendiri tanpa perjanjian pisah harta
 *[HB]: Hidup Berpisah, berdasarkan putusan hakim
@@ -206,14 +203,11 @@ Langkah kecilnya hanya butuh lima menit: sebelum musim SPT berikutnya, buka *too
 *[DJP]: Direktorat Jenderal Pajak
 *[KPP]: Kantor Pelayanan Pajak
 *[DUK]: Data Unit Keluarga, daftar anggota keluarga di akun Coretax
-*[BPS]: Badan Pusat Statistik
 *[TK/0]: Tidak Kawin, tanpa tanggungan: PTKP Rp54 juta
 *[K/1]: Kawin, satu tanggungan: PTKP Rp63 juta
 *[K/I/1]: Kawin, penghasilan Istri digabung, satu tanggungan: PTKP Rp117 juta
 *[K/I]: Kawin, penghasilan Istri digabung: PTKP tambahan Rp54 juta untuk istri
 *[PER-11/PJ/2025]: Peraturan Direktur Jenderal Pajak tentang pelaporan SPT di Coretax
-*[CNBC]: Consumer News and Business Channel
-*[FAQ]: Frequently Asked Questions, pertanyaan yang sering diajukan
 *[IKPI]: Ikatan Konsultan Pajak Indonesia
 *[JDIH]: Jaringan Dokumentasi dan Informasi Hukum
 *[Kemenkeu]: Kementerian Keuangan

@@ -264,16 +264,11 @@ So here is the small action. Next time a headline number is quoted, at you, on t
 *[ABS]: Australian Bureau of Statistics
 *[ADHI]: Adhi Karya, a state-owned construction company (stock code)
 *[APBN]: Anggaran Pendapatan dan Belanja Negara, Indonesia's central government budget
-*[ASEAN]: Association of Southeast Asian Nations
 *[BPK]: Badan Pemeriksa Keuangan, Indonesia's state audit agency
 *[BPS]: Badan Pusat Statistik, Statistics Indonesia
 *[BUMN]: Badan Usaha Milik Negara, a state-owned enterprise
 *[CELIOS]: Center of Economic and Law Studies, a Jakarta think tank
-*[CNBC]: Consumer News and Business Channel
-*[COVID]: Coronavirus disease 2019
 *[CPI]: Consumer Price Index
-*[EU]: European Union
-*[GDP]: Gross Domestic Product, the value of everything produced inside a country in a year
 *[GNI]: Gross National Income, what a country's residents earn, at home and abroad
 *[ICOR]: Incremental Capital-Output Ratio, investment needed for one point of growth
 *[ILO]: International Labour Organization
@@ -299,7 +294,6 @@ So here is the small action. Next time a headline number is quoted, at you, on t
 *[Sakernas]: Survei Angkatan Kerja Nasional, Indonesia's labour force survey
 *[Susenas]: Survei Sosial Ekonomi Nasional, Indonesia's household socio-economic survey
 *[TPT]: Tingkat Pengangguran Terbuka, the open unemployment rate
-*[UN]: United Nations
 *[WID]: World Inequality Database
 *[WIKA]: Wijaya Karya, a state-owned construction company (stock code)
 *[WSKT]: Waskita Karya, a state-owned construction company (stock code)

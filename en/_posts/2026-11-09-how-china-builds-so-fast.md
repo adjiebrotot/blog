@@ -228,7 +228,6 @@ And an honest question back to you: which project in your city would you build f
 *[CDB]: China Development Bank
 *[Cisumdawu]: Cileunyi-Sumedang-Dawuan, the toll road east of Bandung towards Kertajati
 *[DPR]: Dewan Perwakilan Rakyat, Indonesia's House of Representatives
-*[GDP]: Gross Domestic Product, the value of everything produced in a place in a year
 *[GRDP]: Gross Regional Domestic Product, GDP for a province, city or district
 *[HSR]: High-speed rail
 *[IKN]: Ibu Kota Nusantara, Indonesia's planned new capital in East Kalimantan
@@ -255,7 +254,6 @@ And an honest question back to you: which project in your city would you build f
 *[Perpres]: Peraturan Presiden, a presidential regulation
 *[PSBI]: PT Pilar Sinergi BUMN Indonesia, the consortium of Indonesian state companies that holds Indonesia's stake in KCIC
 *[PT]: Perseroan Terbatas, a limited company
-*[RMB]: Renminbi, China's currency
 *[RPJPN]: Rencana Pembangunan Jangka Panjang Nasional, Indonesia's 20-year national development plan
 *[SARs]: Special Administrative Regions, Hong Kong and Macau
 *[SCMP]: South China Morning Post
@@ -264,13 +262,11 @@ And an honest question back to you: which project in your city would you build f
 *[UI]: Universitas Indonesia
 *[UU]: Undang-Undang, a law passed by parliament
 *[WA]: Western Australia
-*[Whoosh]: Waktu Hemat, Operasi Optimal, Sistem Hebat (time saved, optimal operation, great system), the brand of the Jakarta-Bandung high-speed railway
 *[BPK]: Badan Pemeriksa Keuangan, Indonesia's state audit agency
 *[JICA]: Japan International Cooperation Agency
 *[Menhub]: Menteri Perhubungan, Indonesia's Minister of Transportation
 *[RAPBN]: Rancangan Anggaran Pendapatan dan Belanja Negara, the draft state budget
 *[IDN]: Indonesia
-*[CNBC]: Consumer News and Business Channel
 *[HI]: Hotel Indonesia, the roundabout in central Jakarta
 *[RRI]: Radio Republik Indonesia, the public radio broadcaster
 *[RI]: Republik Indonesia, the Republic of Indonesia

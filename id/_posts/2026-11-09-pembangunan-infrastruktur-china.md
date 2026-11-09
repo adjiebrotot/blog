@@ -202,17 +202,11 @@ Lain kali, saat kamu membaca berita peresmian proyek besar, lengkap dengan gunti
 
 *[CR400BF]: China Railway 400, model kereta cepat Fuxing yang dirancang untuk kecepatan 400 km/jam; BF adalah versi buatan CRRC Changchun
 *[SAR]: Special Administrative Region, daerah administratif khusus di China
-*[MRT]: Mass Rapid Transit, angkutan massal berbasis rel
-*[LRT]: Light Rail Transit, kereta ringan perkotaan
-*[KRL]: Kereta Rel Listrik, kereta komuter Jabodetabek
 *[BRT]: Bus Rapid Transit, bus cepat dengan jalur khusus
-*[PDB]: Produk Domestik Bruto, nilai seluruh barang dan jasa yang dihasilkan di dalam suatu wilayah
 *[PDRB]: Produk Domestik Regional Bruto, PDB untuk tingkat provinsi atau kabupaten dan kota
-*[RMB]: renminbi, mata uang China
 *[LGFV]: Local Government Financing Vehicle, perusahaan pembiayaan milik pemerintah daerah di China
 *[CBD]: Central Business District, kawasan pusat bisnis
 *[IMF]: International Monetary Fund, Dana Moneter Internasional
-*[HI]: Hotel Indonesia
 *[SCMP]: South China Morning Post, surat kabar berbahasa Inggris di Hong Kong
 *[NHSAC]: National Housing Supply and Affordability Council, dewan penasihat pemerintah Australia untuk pasokan dan keterjangkauan rumah
 *[DED]: Detailed Engineering Design, desain teknis terperinci
@@ -222,24 +216,16 @@ Lain kali, saat kamu membaca berita peresmian proyek besar, lengkap dengan gunti
 *[IPB]: Institut Pertanian Bogor
 *[UI]: Universitas Indonesia
 *[Pantura]: Pantai Utara Jawa
-*[IKN]: Ibu Kota Nusantara
 *[OIKN]: Otorita Ibu Kota Nusantara, badan pengelola IKN
 *[Cisumdawu]: Cileunyi, Sumedang, dan Dawuan
 *[CDB]: China Development Bank, bank pembangunan milik pemerintah China
 *[PSBI]: PT Pilar Sinergi BUMN Indonesia, konsorsium BUMN yang memegang porsi saham Indonesia di Whoosh
-*[BUMN]: Badan Usaha Milik Negara
-*[KAI]: PT Kereta Api Indonesia
-*[PT]: Perseroan Terbatas
-*[RI]: Republik Indonesia
 *[RRI]: Radio Republik Indonesia
-*[CNBC]: Consumer News and Business Channel, kanal berita bisnis
 *[P3DI]: Pusat Penelitian, Pengolahan Data dan Informasi, unit riset Sekretariat Jenderal DPR
 *[KCIC]: PT Kereta Cepat Indonesia China, operator Whoosh
 *[BPKP]: Badan Pengawasan Keuangan dan Pembangunan
 *[Perpres]: Peraturan Presiden
 *[RAPBN]: Rancangan Anggaran Pendapatan dan Belanja Negara
-*[DPR]: Dewan Perwakilan Rakyat
-*[UU]: Undang-Undang
 *[RPJPN]: Rencana Pembangunan Jangka Panjang Nasional
 *[RKP]: Rencana Kerja Pemerintah
 *[Maglev]: magnetic levitation, kereta yang melayang dengan gaya magnet

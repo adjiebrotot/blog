@@ -152,8 +152,6 @@ Sebelum meneken cicilan berikutnya, bandingkan dulu bunga efektifnya dengan imba
 Semua hasil skenario (cicilan HP dan laptop) dihitung dengan [*tool* Finance vs Cash](https://tool.adjiebrotots.com/financingvscash/) pada Oktober 2026.
 
 *[OJK]: Otoritas Jasa Keuangan
-*[KPR]: Kredit Pemilikan Rumah
 *[SEOJK]: Surat Edaran Otoritas Jasa Keuangan
 *[APR]: Annual Percentage Rate
 *[BI]: Bank Indonesia
-*[HP]: handphone, telepon seluler

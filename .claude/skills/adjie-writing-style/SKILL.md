@@ -181,13 +181,18 @@ These override anything above.
     (`.claude/agents/reference-checker.md`) read for the pointers a regex misses.
   - Plan for it: put each figure in the section that talks about it, and don't promise a
     later section ("I will show that further down"). Show it there, or say it here.
-- **Every abbreviation is wrapped in `<abbr>`.** Acronyms, codes and short forms (DPR, KPR,
-  GDP, TK/0, Q2) each get one `*[TERM]: meaning` line in the post, which kramdown
+- **Every abbreviation is wrapped in `<abbr>`.** Acronyms, codes and short forms (PTKP, LGFV,
+  OECD, TK/0, Q2) each get one `*[TERM]: meaning` line in the post, which kramdown
   turns into `<abbr title="meaning">` on every use, in prose, headings, tables, link text and
   the source list. Spelling a term out in the sentence is good for the reader but does not
-  replace the line. Plurals are separate terms (`MP` and `MPs`). Currency symbols, number
+  replace the line. Plurals are separate terms (`SOE` and `SOEs`). Currency symbols, number
   suffixes (Rp, 850k), roman numerals, brand names that stand for nothing and the very
-  obvious (vs, US, TV, PDF, a.k.a, dll) are not defined. Where the sentence already spells
+  obvious (vs, US, TV, PDF, a.k.a, dll) are not defined, and neither are physical and
+  currency units (km, MW, RMB, NOK), everyday terms the post's readers already know (HP,
+  UU, PNS, DPR, S2 in Indonesian; PM, GDP, EU in English) or codes that abbreviate nothing
+  (golongan IV/e): only a technical or domain-specific term earns a tooltip. When a
+  term appears more than 3 times, ask whether every reader knows it; if so, drop its
+  line (`CLAUDE.md`, "Abbreviations"). Where the sentence already spells
   the term out beside it ("Produk domestik bruto (PDB)"), write that one occurrence as
   `<span markdown="0">PDB</span>`: no tooltip that repeats what the reader just read. Write the definitions as you write the post, not after: every time you type
   an abbreviation you have not defined yet, add its line. Check every post with

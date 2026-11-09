@@ -133,11 +133,13 @@ KaTeX and Mermaid load only on a post that uses them.
 - **Summary box:** add `{: .tldr}` on the line after a paragraph. `{: .note}` and
   `{: .warning}` work the same way.
 - **Abbreviations (required):** every abbreviation, acronym, code or short form in a post
-  (KPR, DPR, GDP, TK/0, Q2...) gets a definition line, anywhere in the post, as
+  (PTKP, LGFV, OECD, TK/0, Q2...) gets a definition line, anywhere in the post, as
   `*[PTKP]: Penghasilan Tidak Kena Pajak`. Every PTKP in the post then shows its meaning on
-  hover, focus, click or tap. Kramdown matches the exact term as a whole word, so `MPs`
-  needs its own line next to `MP`. Skip the very obvious (vs, US, TV, PDF), currency symbols,
-  number suffixes and brand names. Where the text already spells the term out next to it
+  hover, focus, click or tap. Kramdown matches the exact term as a whole word, so `SOEs`
+  needs its own line next to `SOE`. Skip the very obvious (vs, US, TV, PDF), physical and
+  currency units (km, MW, RMB, NOK), everyday terms the readers already know (HP, UU, PNS,
+  DPR, S2 in Indonesian; PM, GDP, EU in English), codes that abbreviate nothing (golongan
+  IV/e), currency symbols, number suffixes and brand names (`CLAUDE.md`, "Abbreviations"). Where the text already spells the term out next to it
   ("Produk domestik bruto (PDB)"), write the abbreviation as
   `<span markdown="0">PDB</span>` so that one occurrence gets no tooltip. Check with
   `python3 .claude/skills/adjie-writing-style/scripts/check-abbr.py <post>.md` (no ERROR).

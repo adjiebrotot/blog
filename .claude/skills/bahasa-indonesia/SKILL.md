@@ -346,10 +346,20 @@ follows this skill:
 - A foreign body gives its original name, then what it is in Indonesian:
   `*[ATO]: Australian Taxation Office, kantor pajak Australia`. The name is a proper name, so
   no italics (a `title` attribute cannot hold them anyway).
-- A foreign country or currency code is explained in Indonesian: `*[US]: United States,
-  Amerika Serikat`, `*[NOK]: krone Norwegia`.
-- Short forms count: `*[Kemenkeu]: Kementerian Keuangan`. The very obvious ones (*vs*,
-  *dll*, *US*, *AS*) get no line.
+- A foreign country code that readers may not know is explained in Indonesian:
+  `*[NSW]: New South Wales, negara bagian di Australia`.
+- Short forms count: `*[Kemenkeu]: Kementerian Keuangan`.
+- **Only what needs explaining.** A tooltip is for a technical or domain-specific term.
+  No line for:
+  - physical and currency units: m, cm, km, MW, kWh, RMB, CNY, NOK, CN (dalam CN¥);
+  - everyday words for Indonesian readers: HP, UU, PNS, DPR, S2, BUMN, PT, RI, KPR, DP,
+    BPS, PDB, BPJS, NIK, NPWP, PHK, BBM, UMKM, APBN, PLN, LSM, Polri, MRT, LRT, KRL, IKN,
+    KAI, and the very obvious (*vs*, *dll*, *US*, *AS*). The rule of thumb: when a term
+    appears more than 3 times, ask whether even the least specialised reader knows it;
+    if so, delete its line instead of putting a tooltip on every use;
+  - codes that abbreviate nothing, such as golongan IV/e (a grade, not an abbreviation).
+    TK/0 does stand for words (Tidak Kawin), so it keeps its line.
+  `check-abbr.py` reports a line for any of these as an ERROR.
 - Where the sentence already gives the full name or a gloss beside the abbreviation
   ("Produk domestik bruto (PDB)", "**PH** (pisah harta)"), write that one occurrence as
   `<span markdown="0">PDB</span>`, so it has no tooltip repeating the text.
