@@ -19,20 +19,20 @@ bmc_message: "Traktir saya segelas kopi: tulisan berikutnya saya bangun dulu, pe
 
 ## Apa yang membuat saya takjub setiap kali berkunjung ke China?
 
-Saya menghabiskan lebih dari 25 tahun pertama hidup saya di Indonesia, hampir dua tahun terakhir ini saya tinggal di Australia, dan sejak 2023 saya selalu menyempatkan diri berkunjung ke China setidaknya sekali setahun. Sampai tulisan ini dibuat, saya sudah menjejakkan kaki di 14 wilayah. Di antaranya ada dua daerah administratif khusus (<span markdown="0">SAR</span>, *special administrative region*), yaitu Hong Kong dan Makau, serta keempat kota setingkat provinsi yang langsung berada di bawah pemerintah pusat (*municipality*): Beijing, Tianjin, Shanghai, dan Chongqing. Yang selalu membuat saya takjub adalah skala pembangunannya: jaringan kereta cepat yang menjangkau hampir ke mana-mana, stasiun kereta yang luasnya menyaingi bandara, jaringan metro yang tidak kalah panjang dari jaringan MRT Singapura di hampir setiap kota besar, dan gedung pencakar langit yang menjulang bahkan di kota-kota lapis kedua dan ketiga (sebutan untuk kota menengah dan kecil di China) yang namanya jarang kita dengar.
+Saya menghabiskan lebih dari 25 tahun pertama hidup saya di Indonesia, hampir dua tahun terakhir ini saya tinggal di Australia, dan sejak 2023 saya selalu menyempatkan diri berkunjung ke China setidaknya sekali setahun. Sampai tulisan ini dibuat, saya sudah menjejakkan kaki di 14 wilayah: empat kota setingkat provinsi yang langsung berada di bawah pemerintah pusat (*municipality*), yaitu Beijing, Tianjin, Shanghai, dan Chongqing; Jiangsu, Heilongjiang, Hunan, Shaanxi, Sichuan, Guangdong, Fujian, dan Taiwan; serta dua daerah administratif khusus (<span markdown="0">SAR</span>, *special administrative region*), yaitu Hong Kong dan Makau.
+
+<figure>
+{% include cbf-china-map.html lang="id" title="Peta China yang menandai 14 wilayah yang pernah saya kunjungi: Beijing, Tianjin, Shanghai, Chongqing, Jiangsu, Heilongjiang, Hunan, Shaanxi, Sichuan, Guangdong, Fujian, Taiwan, Hong Kong, dan Makau" %}
+<figcaption>Keempat belas wilayah yang sudah saya jejaki sejak 2023. Peta: data batas wilayah DataV (Alibaba Cloud).</figcaption>
+</figure>
+
+Yang selalu membuat saya takjub adalah skala pembangunannya: jaringan kereta cepat yang menjangkau hampir ke mana-mana, stasiun kereta yang luasnya menyaingi bandara, jaringan metro yang tidak kalah panjang dari jaringan MRT Singapura di hampir setiap kota besar, dan gedung pencakar langit yang menjulang bahkan di kota-kota lapis kedua dan ketiga (sebutan untuk kota menengah dan kecil di China) yang namanya jarang kita dengar.
 
 Sebagai orang yang tumbuh di Indonesia, saya terbiasa dengan urutan yang sebaliknya. Di kota-kota kita, jalan biasanya baru dilebarkan dan rel baru dibangun setelah macetnya tidak tertahankan lagi, sedangkan di China saya berkali-kali melihat stasiun megah dan jalan lebar yang berdiri di lahan yang sekelilingnya masih kosong, seolah-olah penghuninya memang sengaja disuruh datang belakangan.
 
 <figure>
 <img src="/assets/img/cbf-ill-two-engineers.webp" alt="Ilustrasi dua insinyur dalam satu gambar terbelah: di kiri, insinyur berhelm oranye memegangi kepalanya dengan panik di tengah jalan yang macet oleh mobil, motor, dan bus penuh sesak; di kanan, insinyur berhelm putih menunjuk ke depan sambil mengepit gulungan cetak biru, berlatar stasiun baru yang sedang dibangun, dua derek, dan jalan lebar yang masih kosong" width="1456" height="813">
 <figcaption>Dua cara membangun kota: menambal setelah macet (<em>demand-pull</em>) atau membangun sebelum penghuninya datang (<em>supply-push</em>).</figcaption>
-</figure>
-
-Selain keempat kota setingkat provinsi dan dua daerah administratif khusus tadi, delapan wilayah lain yang sudah saya kunjungi adalah Jiangsu, Heilongjiang, Hunan, Shaanxi, Sichuan, Guangdong, Fujian, dan Taiwan. Peta berikut menandai keempat belas wilayah itu.
-
-<figure>
-{% include cbf-china-map.html lang="id" title="Peta China yang menandai 14 wilayah yang pernah saya kunjungi: Beijing, Tianjin, Shanghai, Chongqing, Jiangsu, Heilongjiang, Hunan, Shaanxi, Sichuan, Guangdong, Fujian, Taiwan, Hong Kong, dan Makau" %}
-<figcaption>Keempat belas wilayah yang sudah saya jejaki sejak 2023. Peta: data batas wilayah DataV (Alibaba Cloud).</figcaption>
 </figure>
 
 Angka resminya pun tidak kalah mencengangkan dibandingkan pemandangan yang saya saksikan langsung. Menurut Administrasi Perkeretaapian Nasional China, panjang jaringan kereta di China mencapai 165.000 km pada akhir 2025, dan 50.000 km di antaranya adalah jalur kereta cepat, kira-kira 350 kali panjang jalur Whoosh, yang hanya 142,3 km.[^nra][^whoosh] Sepanjang 2025 saja, China membuka 3.109 km jalur baru, dan 2.862 km di antaranya jalur kereta cepat.[^nra]
@@ -127,8 +127,6 @@ Citra satelit berikut membandingkan kawasan di sekitar ketiga stasiun itu pada 2
 <figcaption>Stasiun Alkimos, Eglinton, dan Yanchep (dari atas ke bawah), sebelum dan sesudah. Citra satelit: Esri World Imagery, rilis Wayback Agustus 2024 dan Oktober 2026; Esri, Maxar, Earthstar Geographics.</figcaption>
 </figure>
 
-Tidak semua janji METRONET sudah terwujud. Pembangunan Stasiun Karnup, misalnya, baru dipastikan pada 2 Agustus 2026, dan pekerjaannya dijadwalkan dimulai pada 2028.[^karnup]
-
 Contoh *supply-push* yang lebih besar ada di Sydney bagian barat. Western Sydney International Airport dibangun bersama kota baru Bradfield di lahan yang masih lapang, dan bandara itu mulai melayani penumpang pada 25 Oktober 2026, diawali penerbangan Jetstar ke Gold Coast.[^wsi] Masalahnya, jalur metro dari St Marys ke Bradfield sepanjang 23 km baru dijadwalkan dibuka pada 2027, sehingga untuk sementara penumpang harus naik bus gratis ke jaringan kereta.[^wsi] Membuka bandara sebelum relnya tersambung adalah risiko yang patut diwaspadai, karena kebiasaan penumpang yang terbentuk di bulan-bulan pertama sulit diubah belakangan.
 
 ## Kenapa pembangunan ala China belum berhasil di Indonesia?
@@ -143,14 +141,18 @@ Surabaya, Bandung, dan Medan, tiga kota besar yang masing-masing berpenduduk jut
 
 ### Apa tiga resep Presiden Xi yang diceritakan Jokowi?
 
-Pergeseran ke arah *supply-push* baru terasa pada era Presiden Joko Widodo. Pada 18 November 2014, di hadapan peserta pendidikan Lemhannas di Istana Negara, Jokowi menceritakan tiga resep yang ia dengar langsung dari Presiden Xi Jinping tentang cara China membangun.[^lemhannas] Yang pertama, kata Jokowi, adalah "partai yang harus bersatu". Yang berikutnya, sebuah negara harus "punya gagasan besar, punya visi besar, punya mimpi besar", yang menurut Jokowi berarti "harus punya rencana jangka panjang", untuk lima puluh sampai seratus tahun ke depan. Resep terakhir ia sampaikan dengan kalimat seperti ini: "Kejar infrastrukturnya. *Connectivity* antar kota, *connectivity* kalau kita antar pulau, itu harus. Jangan ditunda-tunda."[^lemhannas]
+Pergeseran ke arah *supply-push* baru terasa pada era Presiden Joko Widodo. Pada 18 November 2014, di hadapan peserta pendidikan Lemhannas di Istana Negara, Jokowi menceritakan tiga resep yang ia dengar langsung dari Presiden Xi Jinping tentang cara China membangun.[^lemhannas] Ketiga resep itu adalah:
+
+1. Partai yang harus bersatu.
+2. Punya gagasan besar, visi besar, dan mimpi besar, berupa rencana jangka panjang untuk lima puluh sampai seratus tahun ke depan.
+3. Kejar infrastrukturnya. Kata Jokowi, "*Connectivity* antar kota, *connectivity* kalau kita antar pulau, itu harus. Jangan ditunda-tunda."[^lemhannas]
 
 <figure>
 <img src="/assets/img/cbf-ill-three-keys.webp" alt="Karikatur Xi Jinping berjas biru tua dan berdasi merah yang berbisik ke telinga Jokowi, yang berkemeja putih dan mendengarkan sambil memegang dagu. Di atas mereka ada awan pikiran berisi tiga gambar: lima orang bergandengan tangan, bola lampu di atas gedung-gedung kota dan pelabuhan dengan kapal kargo, serta kereta di atas jembatan panjang antara dua pulau dengan jalan raya dan pesawat" width="1456" height="1087" loading="lazy">
 <figcaption>Tiga resep yang dibisikkan: partai yang bersatu, mimpi besar dengan rencana jangka panjang, dan konektivitas yang tidak ditunda-tunda.</figcaption>
 </figure>
 
-Bagi saya, ketiga resep itu bisa dirangkum sebagai pembangunan yang terencana dan strategis. Resep ketigalah yang paling getol dijalankan pemerintahan Jokowi, sementara resep kedua dan terutama resep pertama jauh lebih sulit ditiru oleh negara yang pemerintahannya bisa berganti setiap lima tahun.
+Bagi saya, ketiga resep itu bisa dirangkum sebagai pembangunan yang terencana dan strategis, dan resep ketigalah yang paling getol dijalankan pemerintahan Jokowi: jalan tol, bandara, pelabuhan, bendungan, dan kereta cepat.
 
 ### Apakah Tol Trans-Jawa membuktikan bahwa warga dan pelaku usaha bisa datang?
 
@@ -188,7 +190,7 @@ Menurut saya tidak harus, meski perlu saya akui bahwa sistem satu partai memberi
 
 Meski begitu, keuntungan itu juga ada harganya. Kasus Yujiapu di Tianjin memperlihatkan bahwa keputusan dari atas bisa salah besar tanpa ada yang berani menghentikannya: investasi di kawasan keuangan itu setidaknya RMB 200 miliar, tetapi sekitar 2019 kira-kira 80% ruang kantornya masih kosong.[^yujiapu] Utang LGFV yang mencapai 50,9% PDB China pada 2025 menunjukkan bahwa cara membangun dengan utang, lalu melunasinya dari penjualan hak guna tanah, bisa macet, dan penggusuran warga demi proyek besar jarang bisa digugat ketika pengawasan dari parlemen, pengadilan, dan pers lemah.[^imf] Kecepatan yang mengagumkan itu dibayar mahal: sistemnya nyaris tidak punya rem.
 
-Di sisi lain, negara demokrasi juga bisa punya rencana jangka panjang. METRONET di Perth tetap berjalan dari satu perdana menteri negara bagian ke penerusnya, dan Australia punya Infrastructure Australia, lembaga independen yang menilai proyek-proyek besar sebelum uang negara dibelanjakan. Indonesia sendiri sudah punya UU Nomor 59 Tahun 2024 tentang RPJPN 2025-2045, yang disahkan pada 13 September 2024 dan seharusnya mengikat setiap presiden selama dua puluh tahun.[^rpjpn] Yang perlu ditiru dari China, menurut saya, bukan sistem politiknya, melainkan kesinambungan rencananya, disiplin untuk menyambungkan setiap proyek sejak hari pertama, dan kecerdikan membiayai proyek dari nilai yang diciptakannya sendiri. Demokrasi bisa mendapatkan ketiganya lewat undang-undang dan lembaga yang kuat, sementara negara otoriter pun tetap bisa melahirkan kawasan kosong seperti Yujiapu.
+Di sisi lain, negara demokrasi juga bisa punya rencana jangka panjang. METRONET di Perth tetap berjalan dari satu *premier* Australia Barat ke penerusnya, dan Australia punya Infrastructure Australia, lembaga independen yang menilai proyek-proyek besar sebelum uang negara dibelanjakan. Indonesia sendiri sudah punya UU Nomor 59 Tahun 2024 tentang RPJPN 2025-2045, yang disahkan pada 13 September 2024 dan seharusnya mengikat setiap presiden selama dua puluh tahun.[^rpjpn] Yang perlu ditiru dari China, menurut saya, bukan sistem politiknya, melainkan kesinambungan rencananya, disiplin untuk menyambungkan setiap proyek sejak hari pertama, dan kecerdikan membiayai proyek dari nilai yang diciptakannya sendiri. Demokrasi bisa mendapatkan ketiganya lewat undang-undang dan lembaga yang kuat, sementara negara otoriter pun tetap bisa melahirkan kawasan kosong seperti Yujiapu.
 
 ## Jadi, bagaimana China bisa membangun secepat itu?
 
@@ -273,7 +275,6 @@ Lain kali, saat kamu membaca berita peresmian proyek besar, lengkap dengan gunti
 [^melbourne]: AAP, [Questions remain over Melbourne Airport Rail link](https://aapnews.aap.com.au/news/questions-remain-over-melbourne-airport-rail-link), 2024: perkiraan biaya 2018 sebesar A$8 sampai 13 miliar, ditunda setidaknya empat tahun menjadi paling cepat 2033; Victoria's Big Build, [First stage of Melbourne Airport Rail gets underway](https://bigbuild.vic.gov.au/library/melbourne-airport-rail/fact-sheets/first-stage-of-melbourne-airport-rail-gets-underway): tahap pertama lebih dari A$4 miliar; [daftar proyek pemerintah federal](https://investment.infrastructure.gov.au/projects/097140-17vic).
 [^housing]: NHSAC, [State of the Housing System 2026](https://nhsac.gov.au/sites/nhsac.gov.au/files/2026-04/ar-state-housing-system-2026.pdf), 30 April 2026: target 1,2 juta rumah dari pertengahan 2024 sampai Juni 2029, perkiraan 980.000 rumah dalam periode itu, dan target baru tercapai pada triwulan III 2030. Hitungan saya: kekurangan sekitar 220.000 rumah.
 [^yanchep]: Pemerintah Australia Barat, [METRONET Yanchep Rail Extension officially open](https://www.wa.gov.au/government/media-statements/Cook-Labor-Government/Joint-media-statement---METRONET-Yanchep-Rail-Extension-officially-open-20240714), 14 Juli 2024: 14,5 km dari Butler dengan Stasiun Alkimos, Eglinton, dan Yanchep. Biaya dari [International Railway Journal](https://www.railjournal.com/passenger/commuter-rail/perth-opens-commuter-rail-extension/): perkiraan awal sekitar A$531,7 juta, biaya akhir sekitar A$1 miliar.
-[^karnup]: Pemerintah Australia Barat, [Cook Government commits to building METRONET Karnup Station](https://www.wa.gov.au/government/media-statements/Cook%20Labor%20Government/Cook-Government-commits-to-building-METRONET-Karnup-Station-20260802), 2 Agustus 2026: pekerjaan dijadwalkan dimulai pada 2028.
 [^wsi]: Perdana Menteri Australia, [It's official: Western Sydney open for passengers 25 October](https://www.pm.gov.au/media/its-official-western-sydney-open-passengers-25-october-and-freight-26-july-2026); The Star, [First international flight lands at new Western Sydney Airport](https://www.thestar.com.my/aseanplus/aseanplus-news/2026/10/26/first-international-flight-lands-at-new-western-sydney-airport), 26 Oktober 2026; Pemerintah New South Wales, [Airport will take off with free bus connection to train network](https://www.nsw.gov.au/ministerial-releases/airport-will-take-off-free-bus-connection-to-train-network): metro St Marys sampai Bradfield sepanjang 23 km dijadwalkan dibuka pada 2027, dengan bus gratis untuk sementara.
 [^mrtj]: Setkab, [President Jokowi inaugurates Indonesia's first MRT](https://setkab.go.id/en/president-jokowi-inaugurates-indonesias-first-mrt/), 24 Maret 2019: 15,7 km dan 13 stasiun. Biaya sekitar Rp16 triliun dari PT MRT Jakarta, dikutip dari [Eastspring](https://www.eastspring.com/docs/librariesprovider6/Our-Perspectives/spring-of-life/2019/spring-of-life---maret-2019---wajah-baru-ibukota-jakarta.pdf), Maret 2019. Hitungan saya: sekitar Rp1 triliun per km.
 [^palembang]: [Republika](https://news.republika.co.id/berita/pbt7ss349/jajal-lrt-palembang-jokowi-lebih-dari-eropa), Juli 2018: beroperasi untuk umum sejak 1 Agustus 2018; [Koran Jakarta](https://koran-jakarta.com/2025-10-09/jumlah-penumpang-lrt-sumsel-tembus-33-juta), 9 Oktober 2025: 3.386.357 penumpang pada Januari sampai September 2025; [BPS Sumsel](https://satudata.sumselprov.go.id/storage/brs/69835a1acf503.pdf): 403.889, 392.086, dan 444.155 penumpang pada Oktober, November, dan Desember 2025. Hitungan saya: sekitar 4,63 juta penumpang pada 2025.

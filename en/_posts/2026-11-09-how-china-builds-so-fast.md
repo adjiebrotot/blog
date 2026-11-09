@@ -133,7 +133,7 @@ Now the change. Perth's METRONET extended the northern line 14.5 km from Butler 
 <figcaption>Alkimos, Eglinton and Yanchep stations (yellow circles), each about 2.6 km across, in 2024 and 2026. The stations came first; the streets are catching up. Satellite imagery: Esri World Imagery, Esri releases of August 2024 and October 2026; Esri, Maxar, Earthstar Geographics.</figcaption>
 </figure>
 
-They came. In two years, new street grids and house lots have grown around Eglinton and Yanchep, and new estates are rising near Alkimos. The next station on the line, Karnup, is still a promise: final planning starts with A$10m over 2026-27 and 2027-28, works begin in 2028, and half of its total of about A$156m is meant to come from land sales.[^karnup] Paying for a station with the land it makes valuable is a very Chinese idea.
+They came. In two years, new street grids and house lots have grown around Eglinton and Yanchep, and new estates are rising near Alkimos.
 
 Sydney's new airport is the bigger bet, and it comes with a warning. Western Sydney International Airport opened to passengers on 25 October 2026; the first flight was Jetstar to the Gold Coast.[^wsi] Around it, the plan is a whole new city, Bradfield. But its metro line, 23 km from St Marys to Bradfield, opens only in 2027, so for now passengers ride a free interim bus to the train network.[^wsi] An airport that opens before its rail link is the classic way a supply-push project starts life looking empty. Australia's saving grace is that the line is already being built and is due next year, not merely promised.
 
@@ -153,8 +153,8 @@ Three of Indonesia's biggest cities, millions of people each, and the first prop
 
 On 18 November 2014, President Jokowi told participants of Lemhannas, the national resilience institute, that China's President Xi Jinping had given him three keys to building a developed country.[^lemhannas][^detik] In the official transcript, they were:
 
-1. **Political unity:** "partai yang harus bersatu", a party that must be united.
-2. **A big plan:** "punya gagasan besar, punya visi besar, punya mimpi besar", big ideas, a big vision and big dreams, which in Jokowi's words meant a long-term plan for "fifty years ahead, a hundred years ahead".
+1. A united party.
+2. A big, long-term plan.
 3. **Connectivity now:** "Kejar infrastrukturnya", chase the infrastructure: connectivity between cities and between islands, and "jangan ditunda-tunda", don't keep putting it off.[^lemhannas]
 
 <figure>
@@ -162,7 +162,7 @@ On 18 November 2014, President Jokowi told participants of Lemhannas, the nation
 <figcaption>Three keys, as Jokowi retold them: a united party, a big long-term plan, and connectivity built now. Indonesia took the third one most to heart.</figcaption>
 </figure>
 
-I'd call the three keys "planned and strategic development", and in my view it was the right lesson. Jokowi then did build: toll roads, airports, ports, dams and a high-speed railway. The question is what happened to the other two keys, the united plan and the long horizon, in a democracy where each president gets at most ten years.
+I'd call the three keys "planned and strategic development", and the third is the one the Jokowi government took most to heart: toll roads, airports, ports, dams and a high-speed railway.
 
 ### Did "they" come to the Trans-Java Toll Road?
 
@@ -307,7 +307,6 @@ And an honest question back to you: which project in your city would you build f
 [^nhsac]: NHSAC, [State of the Housing System 2026](https://nhsac.gov.au/sites/nhsac.gov.au/files/2026-04/ar-state-housing-system-2026.pdf), 30 April 2026: 980,000 homes expected in the Accord period against a 1.2 million target, reached in the September quarter of 2030. The 220,000 shortfall is my own subtraction.
 [^yanchep]: WA Government, [METRONET Yanchep Rail Extension officially open](https://www.wa.gov.au/government/media-statements/Cook-Labor-Government/Joint-media-statement---METRONET-Yanchep-Rail-Extension-officially-open-20240714), 14 July 2024: 14.5 km north of Butler, stations at Alkimos, Eglinton and Yanchep.
 [^yanchep-cost]: International Railway Journal, [Perth opens commuter rail extension](https://www.railjournal.com/passenger/commuter-rail/perth-opens-commuter-rail-extension/), July 2024: original estimate about A$531.7m, final cost about A$1 bn.
-[^karnup]: WA Government, [Cook Government commits to building METRONET Karnup Station](https://www.wa.gov.au/government/media-statements/Cook%20Labor%20Government/Cook-Government-commits-to-building-METRONET-Karnup-Station-20260802), 2 August 2026: A$10m over 2026-27 and 2027-28 for planning, design and approvals; works start in 2028; total about A$156m, half from land sales.
 [^wsi]: Prime Minister of Australia, [It's official: Western Sydney open for passengers 25 October](https://www.pm.gov.au/media/its-official-western-sydney-open-passengers-25-october-and-freight-26-july-2026); The Star, [First international flight lands at new Western Sydney airport](https://www.thestar.com.my/aseanplus/aseanplus-news/2026/10/26/first-international-flight-lands-at-new-western-sydney-airport), 26 October 2026: first passenger flight Jetstar to the Gold Coast on 25 October 2026. NSW Government, [Airport will take off with free bus connection to train network](https://www.nsw.gov.au/ministerial-releases/airport-will-take-off-free-bus-connection-to-train-network): the St Marys to Bradfield metro line (23 km) opens in 2027, with a free interim bus until then.
 [^lrt]: Republika, [Jajal LRT Palembang, Jokowi: lebih dari Eropa](https://news.republika.co.id/berita/pbt7ss349/jajal-lrt-palembang-jokowi-lebih-dari-eropa), July 2018: public service from 1 August 2018, about 23 km, 13 stations. Ridership: Koran Jakarta, [Jumlah penumpang LRT Sumsel tembus 3,3 juta](https://koran-jakarta.com/2025-10-09/jumlah-penumpang-lrt-sumsel-tembus-33-juta), 9 October 2025: 3,386,357 in January to September 2025; BPS South Sumatra, [monthly release](https://satudata.sumselprov.go.id/storage/brs/69835a1acf503.pdf): 403,889, 392,086 and 444,155 in October, November and December 2025. The 4.63 million total is my own sum.
 [^brt]: Bisnis.com, [Proyek BRT Cekungan Bandung dimulai, telan anggaran Rp1,3 triliun](https://ekonomi.bisnis.com/read/20260723/98/1990366/proyek-brt-cekungan-bandung-dimulai-telan-anggaran-rp13-triliun), 23 July 2026; RRI, [Indonesia develops BRT systems in Medan and Bandung with French support](https://rri.co.id/en/archipelago/2606092/indonesia-develops-brt-systems-in-medan-and-bandung-with-french-support), 2026: MASTRAN, World Bank and AFD, about US$224 to 264m; Mebidang service target 2027. Investortrust, [BRT MASTRAN diperluas ke Semarang dan Surabaya](https://investortrust.id/business/111925/brt-mastran-diperluas-ke-semarang-dan-surabaya-ini-progresnya), 2026: Surabaya at the detailed design stage.
