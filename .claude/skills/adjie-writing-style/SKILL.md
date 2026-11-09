@@ -43,7 +43,9 @@ but concedes first. He laughs at himself more than at anyone else.
 Functional, never decorative. Every figure makes an idea graspable or memorable.
 
 - **A small parable with a named everyday character** who carries the argument, and
-  who returns at the end as the one the solution helps.
+  who returns at the end as the one the solution helps. Only when Adjie asks for one:
+  by default the post does not open with a persona (see "Open with the case, not a
+  persona" below).
 - **Technology metaphors for human things** (a mind in power-saving mode, a message
   left on read).
 - **Pop-culture similes** dropped lightly into an explanation.
@@ -91,7 +93,8 @@ Avoid scenery for its own sake, mixed metaphors and metaphors that need explaini
 
 **Argument or explainer** (finance, engineering, civic topics):
 1. Hook: an invitation to imagine, a provocative question, or a claim to challenge.
-2. A concrete case or parable, with the numbers worked in.
+2. A concrete case, with the numbers worked in (a parable with a named character only
+   when Adjie asks for one).
 3. The problem, often two opposing problems that one idea will solve, under short
    concept-style headings.
 4. Evidence: sourced, dated figures, a table or a worked comparison.
@@ -217,10 +220,43 @@ explanations for foreign terms, casual versus factual words, the finance terms, 
 to avoid and Adjie's own corrections. Use the moves above; let that skill choose the words
 and the shape of the sentences.
 
+### Open with the case, not a persona
+
+No personification in the opening paragraph unless Adjie asks for it: no invented,
+named character ("Meet Robert, 34, who ..."), no imagined reader acting out a scene, and
+no place or thing given a voice. Open with the question, the claim to challenge, the real
+case or Adjie's own experience, stated plainly. When he asks for a parable, the character
+carries the post and returns at the end.
+
+### Every sentence earns its place
+
+A post answers one question. Each sentence either moves that answer forward or it goes:
+a reader fed detail the argument does not use gets information fatigue and stops
+trusting the rest. After a draft is written, read it once only for this, paragraph by
+paragraph, and for each sentence ask: **if I delete it, does the argument lose a step,
+a number it uses, or the proof of a claim?** If not, delete it.
+
+- **A side example stops at the point it makes.** When a case is there to show one thing
+  (Palembang has an LRT, so Jakarta is not the only city with rapid transit), name it
+  and move on. Its opening date, length, number of stations and ridership belong in a
+  post about that case, not this one.
+- **No trivia about the funding, the contractor or the programme name** unless the
+  argument is about who pays or who builds. "Both BRT projects are funded through the
+  MASTRAN programme with World Bank and AFD loans" adds three names and nothing the
+  reader needs.
+- **One number per claim.** Keep the figure that proves the point (the overrun, the
+  empty floors, the shortfall) and drop the ones that only describe the object (track
+  length, platforms, area in km², the airline of the first flight).
+- **Don't say the same fact twice** in two sections, and don't add a second, smaller
+  version of a number already given.
+- A sourced, verified figure is not a reason to keep a sentence. Cut the sentence and
+  its footnote with it, and the `*[TERM]:` lines it alone used.
+
 ## Check a draft
 
-1. It opens with a question, an invitation to imagine, or a claim to challenge.
-2. One concrete case or character, and the ending returns to it.
+1. It opens with a question, an invitation to imagine, or a claim to challenge, not
+   with a persona or a personified place (unless Adjie asked for one).
+2. One concrete case, and the ending returns to it.
 3. Every claim rests on a sourced number or first-hand experience.
 4. At least one worked sum, comparison table or scale comparison.
 5. The strongest objection is raised, and something real is conceded.
@@ -236,3 +272,7 @@ and the shape of the sentences.
     reference-checker agent passed it.
 12. Every abbreviation, code and short form has its `*[TERM]: meaning` line, so it shows as
     `<abbr>`. `scripts/check-abbr.py` shows no ERROR.
+13. The conciseness pass is done ("Every sentence earns its place"): no side example
+    carries detail the argument does not use, and no sentence is there only because its
+    number was sourced. `check-abbr.py` shows no "defined but never used" WARN left by
+    the cuts.
