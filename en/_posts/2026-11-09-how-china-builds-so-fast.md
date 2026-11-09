@@ -36,6 +36,11 @@ The impression repeats wherever I go. A high-speed rail network that reaches cit
 
 The numbers back the impression up. At the end of 2025, China had 165,000 km of railway, 50,000 km of it high-speed rail (<span markdown="0">HSR</span>).[^nra] Fifty-eight mainland cities had urban rail, 13,068 km of it in total.[^camet] For scale, Singapore, the city most of Southeast Asia treats as the gold standard for public transport, has 271.3 km of MRT and LRT.[^lta] Shanghai's metro alone runs 906 km.[^sh906] Chengdu, a city many people outside China couldn't place on a map, has 870 km of urban rail.[^camet] That is more than three Singapores in a single city.
 
+<figure>
+<img src="/assets/img/cbf-hsr-selfie.webp" alt="Adjie in a grey fur trapper hat and a checked scarf takes a selfie on a station platform beside the long, pointed nose of a white and gold Fuxing high-speed train, with a second Fuxing train on the next track" width="1600" height="901" loading="lazy">
+<figcaption>Me and a Fuxing (复兴号) CR400BF in winter. The fur hat was for the cold, not for the photo. Photo: Adjie.</figcaption>
+</figure>
+
 My stake: I spent my first 25-plus years in Indonesia, and I have lived in Australia for almost two. Both countries build. Both argue about it endlessly. Neither builds like this.
 
 So this post asks two things. How does China build so fast? And why can't Indonesia, which has tried hard to copy it, simply do the same?
@@ -213,6 +218,7 @@ So here is the small action. Next time you see a ribbon-cutting, on the news, on
 
 And an honest question back to you: which project in your city would you build first, before anyone asks for it?
 
+*[CR400BF]: China Railway 400, a Fuxing high-speed train model designed for 400 km/h; BF is the version built by CRRC Changchun
 *[AAP]: Australian Associated Press, a news agency
 *[AFD]: Agence Française de Développement, the French development agency
 *[BIJB]: Bandara Internasional Jawa Barat, West Java International Airport (Kertajati)

@@ -37,6 +37,11 @@ Selain keempat kota setingkat provinsi dan dua daerah administratif khusus tadi,
 
 Angka resminya pun tidak kalah mencengangkan dibandingkan pemandangan yang saya saksikan langsung. Menurut Administrasi Perkeretaapian Nasional China, panjang jaringan kereta di China mencapai 165.000 km pada akhir 2025, dan 50.000 km di antaranya adalah jalur kereta cepat, kira-kira 350 kali panjang jalur Whoosh, yang hanya 142,3 km.[^nra][^whoosh] Sepanjang 2025 saja, China membuka 3.109 km jalur baru, dan 2.862 km di antaranya jalur kereta cepat.[^nra]
 
+<figure>
+<img src="/assets/img/cbf-hsr-selfie.webp" alt="Adjie bertopi bulu abu-abu dan bersyal kotak-kotak berswafoto di peron stasiun, di samping moncong panjang kereta cepat Fuxing berwarna putih keemasan, dengan satu kereta Fuxing lain di jalur sebelah" width="1600" height="901" loading="lazy">
+<figcaption>Saya bersama kereta cepat Fuxing (复兴号) seri CR400BF di musim dingin. Topi bulu itu saya pakai untuk menahan dingin, bukan untuk bergaya. Foto: Adjie.</figcaption>
+</figure>
+
 Untuk transportasi dalam kota, pada akhir 2025 ada 58 kota di China daratan yang memiliki jaringan kereta perkotaan (metro, LRT, trem, dan sejenisnya) dengan total panjang sekitar 13.068 km.[^camet] Kalau hanya jalur metronya yang dihitung, tanpa moda lain, panjangnya menurut CAMET mencapai 836 km di Beijing, 812 km di Shanghai, dan 680 km di Chengdu, ibu kota Provinsi Sichuan, sementara seluruh jaringan MRT dan LRT Singapura, yang sering kita jadikan patokan di Asia Tenggara, panjangnya 271,3 km.[^camet][^lta] Artinya, panjang jaringan metro Chengdu saja sudah sekitar 2,5 kali panjang seluruh jaringan rel perkotaan Singapura.
 
 Pertanyaannya, bagaimana China bisa membangun secepat dan sebanyak itu, dan kenapa Indonesia, yang ambisinya juga besar, sulit menirunya? Menurut saya, jawabannya bukan sekadar soal uang atau tenaga kerja, melainkan soal urutan: mana yang datang lebih dulu, jalannya atau penggunanya.
@@ -193,6 +198,7 @@ Menurut saya, Indonesia tidak perlu memilih antara membangun setelah macet dan m
 
 Lain kali, saat kamu membaca berita peresmian proyek besar, lengkap dengan gunting pita dan tepuk tangannya, cobalah ajukan dua pertanyaan sederhana. Pertama, apa saja yang sudah tersambung ke proyek ini pada hari pertama proyek itu dibuka? Kedua, siapa yang akan membayar dan melanjutkan tahap berikutnya setelah pemerintahan ini berganti? Kalau kedua pertanyaan itu tidak punya jawaban, bisa jadi yang sedang diresmikan bukan awal sebuah kota baru, melainkan calon kawasan kosong berikutnya. Menurutmu, proyek mana di Indonesia yang paling layak diuji dengan dua pertanyaan itu?
 
+*[CR400BF]: China Railway 400, model kereta cepat Fuxing yang dirancang untuk kecepatan 400 km/jam; BF adalah versi buatan CRRC Changchun
 *[SAR]: Special Administrative Region, daerah administratif khusus di China
 *[MRT]: Mass Rapid Transit, angkutan massal berbasis rel
 *[LRT]: Light Rail Transit, kereta ringan perkotaan
