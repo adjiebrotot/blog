@@ -180,11 +180,8 @@ Kalau kamu sedang menimbang untuk pindah, mulailah dari selisih itu, bukan dari 
 
 *[ABS]: Australian Bureau of Statistics, badan statistik Australia
 *[ATO]: Australian Taxation Office, kantor pajak Australia
-*[BPJS]: Badan Penyelenggara Jaminan Sosial
-*[BPS]: Badan Pusat Statistik
 *[CPF]: Central Provident Fund, tabungan pensiun wajib di Singapura
 *[CSIT]: Core Skills Income Threshold, gaji minimum visa kerja terampil di Australia
-*[DKI]: Daerah Khusus Ibukota Jakarta
 *[EP]: Employment Pass, izin kerja Singapura untuk profesional asing
 *[IRAS]: Inland Revenue Authority of Singapore, otoritas pajak Singapura
 *[MOM]: Ministry of Manpower, kementerian tenaga kerja Singapura
@@ -192,5 +189,4 @@ Kalau kamu sedang menimbang untuk pindah, mulailah dari selisih itu, bukan dari 
 *[PWM]: Progressive Wage Model, skema upah minimum per sektor di Singapura
 *[TSMIT]: Temporary Skilled Migration Income Threshold, nama lama CSIT
 *[UMP]: Upah Minimum Provinsi
-*[UU]: Undang-Undang
 *[YA2026]: Year of Assessment 2026, tahun pajak 2026 di Singapura

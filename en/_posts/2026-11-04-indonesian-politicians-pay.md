@@ -222,28 +222,19 @@ If you are Indonesian, here is one small thing to start with: ask for the receip
 *[BPS]: Badan Pusat Statistik, Statistics Indonesia
 *[MKD]: Mahkamah Kehormatan Dewan, the DPR's ethics council
 *[GST]: Goods and Services Tax
-*[GDP]: Gross Domestic Product
 *[Korlantas]: Korps Lalu Lintas, the national traffic police corps
 *[Polri]: Kepolisian Negara Republik Indonesia, the Indonesian National Police
 *[BK]: Badan Kehormatan, the DPR's ethics council
 *[PMK]: Peraturan Menteri Keuangan, a Finance Minister's regulation
 *[BLS]: Bureau of Labor Statistics (United States)
-*[MP]: Member of Parliament
-*[PM]: Prime Minister
-*[UK]: United Kingdom
 *[WA]: Western Australia
-*[NOK]: Norwegian krone
 *[AAP]: Australian Associated Press
 *[ABC]: Australian Broadcasting Corporation
 *[AFL-CIO]: American Federation of Labor and Congress of Industrial Organizations
-*[CN]: China, as in CN¥, the Chinese yuan
-*[CNN]: Cable News Network
 *[DBM]: Department of Budget and Management (Philippines)
 *[DOSM]: Department of Statistics Malaysia
 *[IMF]: International Monetary Fund
 *[JPNN]: Jawa Pos National Network, an Indonesian news site
-*[MPs]: Members of Parliament
-*[NGOs]: Non-governmental organisations
 *[NESDC]: National Economic and Social Development Council (Thailand)
 *[OECD]: Organisation for Economic Co-operation and Development
 *[ONS]: Office for National Statistics (United Kingdom)
@@ -251,7 +242,6 @@ If you are Indonesian, here is one small thing to start with: ask for the receip
 *[PSA]: Philippine Statistics Authority
 *[Q1]: first quarter
 *[SSB]: Statistisk sentralbyrå, Statistics Norway
-*[VND]: Vietnamese dong
 *[IPSA]: Independent Parliamentary Standards Authority, which sets and pays UK MPs' salaries
 *[PBS]: Public Broadcasting Service (Thai PBS, Thailand's public broadcaster)
 

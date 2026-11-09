@@ -185,31 +185,22 @@ Masalah Indonesia bukan takdir. Luas wilayah juga bukan alasan, karena bentang I
 
 Kita tentu tidak bisa mengubah semua itu dalam semalam, tetapi kita bisa mulai dari tuntutan yang sederhana, yaitu meminta DPR dan setiap kementerian menerbitkan laporan pengeluaran per orang, dirinci per pos, seperti laporan triwulanan IPEA, lembaga pengawas pengeluaran anggota parlemen Australia. Setelah itu, nilailah wakil rakyatmu dari apa yang berani mereka umumkan, bukan dari seberapa keras sirene mereka berbunyi. Tahun lalu, warga harus ramai-ramai bersuara supaya "tot tot wuk wuk" berhenti, dan saya berharap suara yang sama suatu hari nanti juga cukup untuk membuat setiap rupiah yang dipakai pejabat kita bisa dilihat oleh rakyat yang membayarnya.
 
-*[DPR]: Dewan Perwakilan Rakyat
 *[UMP]: Upah Minimum Provinsi
-*[BPS]: Badan Pusat Statistik
 *[BPK]: Badan Pemeriksa Keuangan
 *[BK]: Badan Kehormatan DPR
 *[MKD]: Mahkamah Kehormatan Dewan
 *[PPh]: Pajak Penghasilan
 *[PMK]: Peraturan Menteri Keuangan
-*[UU]: Undang-Undang
-*[PNS]: Pegawai Negeri Sipil
-*[LSM]: Lembaga Swadaya Masyarakat
-*[PDB]: Produk Domestik Bruto
 *[IPEA]: Independent Parliamentary Expenses Authority, lembaga pengawas pengeluaran anggota parlemen Australia
 *[AFP]: Australian Federal Police, polisi federal Australia
 *[ABS]: Australian Bureau of Statistics, badan statistik Australia
 *[GST]: Goods and Services Tax, pajak pertambahan nilai di Australia
 *[CGT]: Capital Gains Tax, pajak keuntungan modal
 *[Korlantas]: Korps Lalu Lintas
-*[Polri]: Kepolisian Negara Republik Indonesia
 *[AAP]: Australian Associated Press
 *[ABC]: Australian Broadcasting Corporation
 *[AFL-CIO]: American Federation of Labor and Congress of Industrial Organizations
 *[BLS]: Bureau of Labor Statistics, badan statistik tenaga kerja Amerika Serikat
-*[CN]: Tiongkok, seperti pada CN¥, yuan Tiongkok
-*[CNN]: Cable News Network
 *[DBM]: Department of Budget and Management, kementerian anggaran Filipina
 *[DOSM]: Department of Statistics Malaysia, badan statistik Malaysia
 *[GDP]: Gross Domestic Product
@@ -218,7 +209,6 @@ Kita tentu tidak bisa mengubah semua itu dalam semalam, tetapi kita bisa mulai d
 *[MP]: Member of Parliament, anggota parlemen
 *[MaPS]: Ministerial and Parliamentary Services, layanan administrasi menteri dan anggota parlemen Australia
 *[NESDC]: National Economic and Social Development Council, dewan pembangunan ekonomi dan sosial Thailand
-*[NOK]: krone Norwegia
 *[OECD]: Organisation for Economic Co-operation and Development
 *[ONS]: Office for National Statistics, badan statistik Inggris
 *[PSA]: Philippine Statistics Authority, badan statistik Filipina

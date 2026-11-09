@@ -218,15 +218,9 @@ Semua hasil skenario dihitung dengan [*tool* Financial Freedom Calculator](https
 *[ACWI]: All Country World Index
 *[ASFA]: Association of Superannuation Funds of Australia
 *[ATO]: Australian Taxation Office, kantor pajak Australia
-*[BPJS]: Badan Penyelenggara Jaminan Sosial
-*[CNN]: Cable News Network
 *[GNFI]: Good News From Indonesia
-*[IV/e]: golongan IV/e, jenjang pangkat tertinggi pegawai negeri sipil
 *[MSCI]: Morgan Stanley Capital International, penyedia indeks saham dunia
-*[PHK]: Pemutusan Hubungan Kerja
-*[PNS]: Pegawai Negeri Sipil
 *[PP]: Peraturan Pemerintah
 *[S&P]: Standard & Poor's
-*[S2]: Strata 2, jenjang pendidikan magister
 *[SG]: Superannuation Guarantee, iuran pensiun wajib dari pemberi kerja di Australia
 *[UBS]: bank asal Swiss yang menerbitkan Global Wealth Report

@@ -13,11 +13,19 @@ It prints:
 - ERROR: an all-caps term (DPR, KPR, Q2, TK/0, S&P, AFL-CIO...) or a known short form
   (dkk, e.g...) that is used but not defined. Define it, or, if it is a brand and not an
   abbreviation, add `<!-- abbr-ok: TERM -->` anywhere in the post.
+- ERROR: a definition that is not needed, so the tooltip is clutter: a physical or
+  currency unit (MW, km, NOK, RMB, CN as in CN¥), an everyday term every reader of that
+  language already knows (DPR, UU, PNS, HP, S2 in Indonesian; PM, MP, EU, CEO in English),
+  or a code that abbreviates nothing (golongan IV/e). Delete the `*[TERM]:` line.
+- REVIEW: a defined term used more than 3 times. Ask whether it is a generic term that even
+  the least specialised reader knows; if so, delete its definition (the rule of thumb in
+  CLAUDE.md, "Abbreviations").
 - WARN: a definition the post never uses (stale), or a definition written twice.
 
-Not checked, on purpose: very obvious ones (vs, US, UK, TV, PDF, a.k.a, dll), currency symbols and number suffixes (Rp, A$, 850k, 1.27bn), roman
+Not checked, on purpose: currency symbols and number suffixes (Rp, A$, 850k, 1.27bn), roman
 numerals, and mixed-case short forms such as Kemenkeu or MaPS. Those are the writer's call, so
-read the post once for them. Exit code 1 if any ERROR.
+read the post once for them. The language comes from the path (`id/` is Indonesian,
+anything else English). Exit code 1 if any ERROR.
 """
 import re
 import sys
@@ -28,6 +36,33 @@ SHORT_FORMS = ["dkk", "dsb", "dst", "e.g", "i.e", "approx", "yg", "dgn"]
 # abbreviations so obvious that a tooltip is clutter (vs, a.k.a, dll are not in SHORT_FORMS).
 SKIP = {"TOC", "NOTE", "TIP", "IMPORTANT", "WARNING", "CAUTION",
         "US", "UK", "AS", "TV", "PDF", "SUV", "SUVs", "ID", "OK", "AI"}
+# Physical and currency units: never defined, in any language.
+UNITS = {
+    # currency codes and prefixes
+    "IDR", "USD", "AUD", "SGD", "MYR", "EUR", "GBP", "JPY", "CNY", "RMB", "HKD", "NZD",
+    "THB", "PHP", "VND", "INR", "KRW", "CAD", "CHF", "NOK", "SEK", "DKK", "TWD", "BRL",
+    "CN",  # as in CN¥ (other prefixes, A$ S$ HK$, are caught by the amount rule)
+    # physical units
+    "km", "cm", "mm", "m", "kg", "g", "ha", "km2", "m2", "MW", "GW", "TW", "kW", "kWh",
+    "MWh", "GWh", "TWh", "kV", "Hz", "MHz", "GHz", "KB", "MB", "GB", "TB", "mph", "kph",
+    "rpm", "psi", "dB", "mAh",
+}
+# Everyday terms the readers of each language already know: a tooltip on them is clutter.
+# Add a term here when it appears often and every reader knows it (CLAUDE.md, "Abbreviations").
+EVERYDAY_ANY = {"UN", "EU", "ASEAN", "COVID", "CNN", "CNBC", "BBC", "FAQ", "CEO", "NATO",
+                "ATM", "SMS", "GPS", "USB", "DIY", "VIP", "HR", "IT"}
+EVERYDAY = {
+    "id": EVERYDAY_ANY | {
+        "DPR", "MPR", "UU", "PNS", "ASN", "HP", "S1", "S2", "S3", "SD", "SMP", "SMA", "SMK",
+        "KTP", "SIM", "NIK", "BUMN", "PT", "CV", "Tbk", "RI", "TNI", "Polri", "KRL", "MRT",
+        "LRT", "BBM", "PHK", "UMKM", "DKI", "BPJS", "PLN", "LSM", "DP", "KPR", "PBB", "WNI",
+        "WNA", "PDB", "HI", "Pemda", "pemda", "Plt", "Plt.", "Presiden", "BPS", "APBN",
+        "Jabodetabek", "IKN", "KAI", "NPWP",
+    },
+    "en": EVERYDAY_ANY | {"PM", "MP", "MPs", "NGO", "NGOs", "GDP"},
+}
+# Codes that abbreviate nothing: a civil-service grade (golongan IV/e, III/a).
+NOT_ABBR = re.compile(r"(?:I|II|III|IV)/[a-e]")
 
 DEF = re.compile(r"^\*\[([^\]]+)\]:\s*(.*)$")
 TOKEN = re.compile(r"(?<![\w/@.#$&-])([A-Z][A-Z0-9]*[A-Z0-9](?:[/&-][A-Za-z0-9]+)*s?)(?![\w])")
@@ -62,7 +97,18 @@ def strip_markdown(lines):
         yield n, s
 
 
+def lang_of(path):
+    return "id" if re.search(r"(^|/)id/", path) else "en"
+
+
+def not_needed(term, lang):
+    if term in SKIP or term in UNITS or term in EVERYDAY[lang] or NOT_ABBR.fullmatch(term):
+        return True
+    return False
+
+
 def check(path):
+    lang = lang_of(path)
     text = open(path, encoding="utf-8").read()
     lines = text.split("\n")
     defs, found = {}, []
@@ -77,14 +123,18 @@ def check(path):
     for m in re.finditer(r"<!--\s*abbr-ok:\s*([^>]*?)\s*-->", text):
         ok.update(t.strip() for t in m.group(1).split(","))
 
-    used, seen = set(), set()
+    used, seen, count = set(), set(), {}
     for n, s in strip_markdown(lines):
         for term in defs:
-            if re.search(r"(?<![\w])" + re.escape(term) + r"(?![\w])", s):
+            k = len(re.findall(r"(?<![\w])" + re.escape(term) + r"(?![\w])", s))
+            if k:
                 used.add(term)
+                count[term] = count.get(term, 0) + k
         for m in TOKEN.finditer(s):
             tok = m.group(1)
-            if tok in SKIP or tok in ok or tok in defs or tok in seen:
+            if tok in SKIP or tok in ok or tok in defs or tok in seen or not_needed(tok, lang):
+                continue
+            if NOT_ABBR.match(tok):
                 continue
             if re.fullmatch(r"[IVXLC]+", tok):                # roman numerals
                 continue
@@ -93,7 +143,7 @@ def check(path):
             # PH/MT, KPR-nya, BPS-Statistics: every all-caps part must be defined, the rest is a suffix
             parts = [p for p in re.split(r"[/&-]", tok) if p and not p.isdigit()]
             caps = [p for p in parts if re.fullmatch(r"[A-Z][A-Z0-9]*s?", p)]
-            if len(parts) > 1 and caps and all(p in defs for p in caps):
+            if len(parts) > 1 and caps and all(p in defs or not_needed(p, lang) for p in caps):
                 continue
             if len(re.findall(r"[A-Z]", tok)) < 2:
                 continue
@@ -108,6 +158,12 @@ def check(path):
             seen.add(tok)
             found.append(("ERROR", n, tok, "short form without a *[%s]: definition" % tok))
     for term, n in defs.items():
+        if not_needed(term, lang):
+            found.append(("ERROR", n, term, "definition not needed (a unit, an everyday "
+                          "term or not an abbreviation): delete this line"))
+        elif count.get(term, 0) > 3:
+            found.append(("REVIEW", n, term, f"used {count[term]} times: if every reader "
+                          "knows it, delete the definition"))
         if term not in used:
             found.append(("WARN", n, term, "defined but never used in the post"))
     return sorted(found, key=lambda f: (f[1], f[2]))

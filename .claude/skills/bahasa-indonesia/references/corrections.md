@@ -129,3 +129,16 @@ friends in finance" sections of `SKILL.md`. The most instructive ones:
 | Kurang bayar ... bukan denda. Itu selisih antara ... | ... bukan denda, melainkan selisih antara ... | "X isn't A. It's B." slogan shape. |
 | Contohnya, suami Rp400 juta setahun, istri Rp300 juta, satu anak. | Ambil contoh pasangan dengan satu anak: suami bergaji Rp400 juta setahun dan istri Rp300 juta. | A worked example written as notes, with no verb. |
 | sebagian besar belanja kita adalah barang yang harganya kurang lebih sama di mana pun | selisih gaji antarnegara jauh lebih lebar daripada selisih harga, apalagi banyak barang ... harganya kurang lebih sama di mana pun | The old line contradicted the post's own table (rent, the biggest item, is non-tradable). |
+
+## Pembangunan infrastruktur China (November 2026)
+
+Too much detail that the argument does not use: the reader gets information fatigue. The
+rule is language-neutral and lives in `adjie-writing-style`, "Every sentence earns its
+place"; the evaluator reports such a sentence as *wajib*.
+
+| Before | After | Why |
+| --- | --- | --- |
+| ... serta di Palembang, yang punya LRT. LRT Palembang mulai melayani penumpang pada 1 Agustus 2018, menjelang Asian Games. Jalurnya sekitar 23 km dan melewati 13 stasiun dari bandara sampai Jakabaring, dan pada 2025 kereta ini mengangkut sekitar 4,63 juta penumpang. | ... serta di Palembang, yang punya LRT. | "This is not an article about Palembang LRT." The side example stops at the point it makes. |
+| Kedua proyek BRT itu dibiayai lewat program MASTRAN dengan pinjaman Bank Dunia dan AFD. | (deleted) | Who funds the BRT is not what the section argues. |
+| Jalur ... sepanjang 15,7 km, yang punya 13 stasiun (tujuh stasiun layang dan enam stasiun bawah tanah), ... dan didanai pinjaman JICA. | Jalur ... sepanjang 15,7 km ... atau kira-kira Rp1 triliun per kilometer. | Keep the number that proves the point (cost per km), drop the ones that describe the object. |
+| Stasiun Kereta Hongqiao, yang punya 16 peron dan 30 jalur, dibuka pada 1 Juli 2010 | Stasiun Kereta Hongqiao dibuka pada 2010 | Platform counts and exact dates are trivia here. |

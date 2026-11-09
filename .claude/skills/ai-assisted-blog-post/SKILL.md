@@ -67,6 +67,19 @@ concept / points  →  Draft plan (v1)  →  Adjie: revision + answers  →  con
   plan's opening narrative included, goes through `bahasa-indonesia`'s
   `scripts/cek.py` and its evaluator (`references/evaluator.md`), run by an agent that has
   not seen the English.
+- **No persona in the opening unless Adjie asks.** The opening narrative does not
+  introduce an invented, named character or give a place a voice
+  (`adjie-writing-style`, "Open with the case, not a persona"). If a parable would help,
+  offer it as a decision in "For your judgement", with "no parable" as the default.
+- **Only what the argument needs.** The plan's data table holds the figures that prove a
+  point, not every figure the research found. A side example gets its one fact (the city
+  has an LRT), not its opening date, length, stations and ridership. The writers and the
+  final review apply `adjie-writing-style`'s "Every sentence earns its place".
+- **Sonnet does the work, Opus only orchestrates.** Spawn every writer, evaluator,
+  reference-checker and research agent with `model: "sonnet"` (the Agent tool's `model`
+  parameter). The main context, which plans, talks to Adjie, merges the results and
+  makes the final calls, may run on Opus; it does not write the posts itself. Use Opus
+  for a sub-agent only when Adjie asks for it.
 - Read the concept critically before planning. If the argument has a weak premise, a
   missing counterargument or a claim the data may not support, say so at the top of the
   plan. Adjie wants the weakness first, not applause.
@@ -132,9 +145,9 @@ what the plan does about them. "None I can see" is allowed, but check hard first
 
 ## 3. Opening narrative
 > <One or two short paragraphs, written for real in Adjie's voice: the hook, the
-> character or question that carries the post. Like "Who is right, the buyer or the
-> renter?" with Robert and Geoff in the Rent vs Own post. One per language, each written
-> natively by its own writer; the Indonesian one has passed the evaluator.>
+> question or the real case that carries the post, stated plainly, with no persona or
+> personified place unless Adjie asked for one. One per language, each written natively
+> by its own writer; the Indonesian one has passed the evaluator.>
 
 **Per-language examples:** <where the two posts use different characters, cities or
 examples, and why each fits its readers. "Same in both" is fine.>
@@ -189,8 +202,8 @@ in words and the later one the figure, or repeat the figure; never plan "see the
 section X".
 
 **Opening narrative.** The only finished prose in the plan. It follows
-`adjie-writing-style` (a question, an invitation to imagine or a claim to challenge; a
-named everyday character if the shape uses one) and the blog rules (no em-dashes,
+`adjie-writing-style` (a question, an invitation to imagine or a claim to challenge) and
+the blog rules (no em-dashes,
 saya-kamu in Indonesian). For a post in both languages, each one is written natively by
 its own writer, with different characters or examples if that suits each readership.
 
@@ -294,8 +307,9 @@ notes in the language you think in, never as draft prose.
 
 ### 3c. Two writers, in parallel
 
-Spawn one writer agent per language in the same turn (Agent tool, in the background).
-Each gets only the brief, its own slug and file path, and its own skills:
+Spawn one writer agent per language in the same turn (Agent tool, in the background,
+`model: "sonnet"`). Each gets only the brief, its own slug and file path, and its own
+skills:
 
 - **English writer:** `README.md`, `adjie-writing-style`; writes `en/_posts/<file>`.
 - **Indonesian writer:** loads `bahasa-indonesia` first, then `README.md` and
@@ -307,6 +321,9 @@ Each writer follows the "Search and answer engines" rules in Step 2 and runs
 `python3 .claude/skills/ai-assisted-blog-post/scripts/check-seo.py <file>` until it shows
 no ERROR (and fixes every WARN it can). Each writer runs `adjie-writing-style`'s "Check a draft" list, keeps its approved opening
 narrative with only the edits Adjie asked for, and puts every source in a footnote. Each
+writer does the conciseness pass (`adjie-writing-style`, "Every sentence earns its
+place") on its finished draft before it reports back: it deletes every sentence the
+argument does not use, with its footnote and its now-unused `*[TERM]:` lines. Each
 writer is told the same-section rule and runs
 `python3 .claude/skills/adjie-writing-style/scripts/check-references.py <file>` until it
 shows no ERROR. Each writer defines every abbreviation it uses with a `*[TERM]: meaning`
@@ -319,7 +336,7 @@ If you cannot spawn agents, write the Indonesian post first, from the brief alon
 
 ### 3d. Evaluate the Indonesian
 
-Spawn a fresh evaluator agent with the prompt in `bahasa-indonesia`'s
+Spawn a fresh evaluator agent (`model: "sonnet"`) with the prompt in `bahasa-indonesia`'s
 `references/evaluator.md`. It must not be the writer and must not read the English. Send
 its findings to the Indonesian writer (SendMessage) or apply them yourself, run
 `scripts/cek.py` again, and send the changed paragraphs back to the evaluator. Repeat until
@@ -327,7 +344,7 @@ the verdict is LULUS. Keep the last report for the delivery message.
 
 ### 3e. Check the references
 
-For each post, spawn a fresh reference-checker agent (`subagent_type: reference-checker`,
+For each post, spawn a fresh reference-checker agent (`subagent_type: reference-checker`, which runs on Sonnet,
 or a general-purpose agent told to follow `.claude/agents/reference-checker.md`), in
 parallel, with only the post's path. Apply every finding: delete the pointer and let the
 sentence state its fact. An Indonesian fix is written under `bahasa-indonesia`, runs
@@ -336,20 +353,26 @@ paragraphs. Repeat until the checker says PASS.
 
 ### 3f. Put it together
 
-1. **Consistency, not alignment.** Compare the two posts on the message, the verdict, the
+1. **Cut what the reader doesn't need.** Read each post once more only for
+   "Every sentence earns its place" (`adjie-writing-style`). Too much detail on a side
+   example is the mistake Adjie corrects most after delivery ("LRT Palembang mulai
+   melayani penumpang pada 1 Agustus 2018 ... 4,63 juta penumpang" in a post about how
+   China builds). Delete such sentences in both posts, run `check-abbr.py`, and send an
+   Indonesian paragraph you changed back through `cek.py`.
+2. **Consistency, not alignment.** Compare the two posts on the message, the verdict, the
    shared numbers, the sources and the fixed pieces. Never compare them sentence by
    sentence, and never "fix" one to mirror the other's wording or examples.
-2. Make sure both files are saved as `<lang>/_posts/YYYY-MM-DD-<slug>.md`, with the
+3. Make sure both files are saved as `<lang>/_posts/YYYY-MM-DD-<slug>.md`, with the
    `translation:` key on both if the post is in two languages.
-3. Add the `md/<lang>-<slug>.txt` stub for each post, then run the checks in `CLAUDE.md`
+4. Add the `md/<lang>-<slug>.txt` stub for each post, then run the checks in `CLAUDE.md`
    (`LANG=C.UTF-8 bundle exec jekyll build`, `scripts/check-seo.py` with no ERROR, one
    `<h1>`, valid JSON-LD, feeds and sitemap parse, `hreflang` pairs, no sideways scroll at
    390px). List any WARN you left, with the reason.
-4. Deliver: the file path(s), the defaults you applied for skipped answers, any figure you
+5. Deliver: the file path(s), the defaults you applied for skipped answers, any figure you
    changed or dropped, where the two languages use different examples, the evaluator's
    verdict and any finding you chose not to apply, and anything still waiting on him (an
    embed code, a screenshot). Commit and push as the session's git instructions say.
-5. Remind him of the one step only he can do, once the post is live: in Google Search
+6. Remind him of the one step only he can do, once the post is live: in Google Search
    Console, URL Inspection → paste each post URL → **Request indexing** (Google does not
    take IndexNow), and `node ../tool/_ref/indexnow.mjs <post URL>` for Bing.
 

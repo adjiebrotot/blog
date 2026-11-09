@@ -229,10 +229,7 @@ Statistik tetap alat terbaik yang kita punya untuk memahami negeri ini, dan BPS 
 
 Mulailah dari angka berikutnya yang kamu dengar, entah di pidato, di berita, atau di unggahan media sosial, lalu cari pasangannya: pekerja informal untuk angka pengangguran, median untuk PDB per kapita, garis Bank Dunia untuk angka kemiskinan, dan bunga utang untuk rasio utang. Angka memang tidak pernah berbohong, tetapi orang yang memilih angka mana yang ditampilkan bisa saja berbohong, dan pada akhirnya hanya pembaca yang mau mencari angka kedualah yang tidak ikut terkecoh.
 
-*[BPS]: Badan Pusat Statistik, lembaga statistik resmi pemerintah
-*[PDB]: Produk Domestik Bruto, nilai seluruh barang dan jasa yang dihasilkan di dalam suatu negara
 *[PNB]: Pendapatan Nasional Bruto, PDB ditambah pendapatan bersih dari luar negeri
-*[ASEAN]: Association of Southeast Asian Nations, Perhimpunan Bangsa-Bangsa Asia Tenggara
 *[OECD]: Organisation for Economic Co-operation and Development, organisasi kerja sama ekonomi yang sebagian besar anggotanya negara maju
 *[ILO]: International Labour Organization, Organisasi Perburuhan Internasional
 *[TPT]: Tingkat Pengangguran Terbuka
@@ -243,19 +240,11 @@ Mulailah dari angka berikutnya yang kamu dengar, entah di pidato, di berita, ata
 *[ICOR]: Incremental Capital-Output Ratio, investasi yang dibutuhkan untuk setiap satu persen pertumbuhan
 *[MBG]: Makan Bergizi Gratis, program makan bergizi gratis dari pemerintah untuk siswa dan kelompok rentan
 *[CELIOS]: Center of Economic and Law Studies, lembaga kajian ekonomi di Jakarta
-*[PBB]: Perserikatan Bangsa-Bangsa
 *[IHK]: Indeks Harga Konsumen, dasar penghitungan inflasi
 *[SBH]: Survei Biaya Hidup, survei BPS yang menentukan bobot keranjang IHK
-*[BBM]: Bahan Bakar Minyak
-*[APBN]: Anggaran Pendapatan dan Belanja Negara
-*[PLN]: Perusahaan Listrik Negara
 *[PMK]: Peraturan Menteri Keuangan
 *[KMK]: Keputusan Menteri Keuangan
-*[UMKM]: Usaha Mikro, Kecil, dan Menengah
-*[Plt.]: Pelaksana Tugas
-*[UU]: Undang-Undang
 *[IMF]: International Monetary Fund, Dana Moneter Internasional
-*[BUMN]: Badan Usaha Milik Negara
 *[SBN]: Surat Berharga Negara, obligasi dan sukuk yang diterbitkan pemerintah
 *[valas]: valuta asing, mata uang asing
 *[WSKT]: kode saham PT Waskita Karya (Persero) Tbk, BUMN Karya
@@ -263,15 +252,12 @@ Mulailah dari angka berikutnya yang kamu dengar, entah di pidato, di berita, ata
 *[ADHI]: kode saham PT Adhi Karya (Persero) Tbk, BUMN Karya
 *[PP]: PT PP (Persero) Tbk, dulu bernama Pembangunan Perumahan, BUMN Karya
 *[PTPP]: kode saham PT PP (Persero) Tbk, dulu Pembangunan Perumahan, BUMN Karya
-*[PNS]: Pegawai Negeri Sipil
 *[Taspen]: Tabungan dan Asuransi Pegawai Negeri, BUMN pengelola tabungan hari tua dan pensiun PNS
 *[ABS]: Australian Bureau of Statistics, badan statistik Australia
 *[BPK]: Badan Pemeriksa Keuangan
 *[SDG]: Sustainable Development Goals, Tujuan Pembangunan Berkelanjutan PBB
-*[CNBC]: Consumer News and Business Channel, kanal berita bisnis
 *[GDP]: Gross Domestic Product, produk domestik bruto (PDB)
 *[GNI]: Gross National Income, pendapatan nasional bruto (PNB)
-*[RI]: Republik Indonesia
 *[FY24]: Fiscal Year 2024, tahun fiskal 2024 Bank Dunia (Juli 2023 sampai Juni 2024)
 *[DJPPR]: Direktorat Jenderal Pengelolaan Pembiayaan dan Risiko, Kementerian Keuangan
 

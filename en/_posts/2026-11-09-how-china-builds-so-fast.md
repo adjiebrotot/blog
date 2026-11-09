@@ -51,7 +51,7 @@ Most countries build **demand-pull**: they build in response to proof. They wait
 
 Demand-pull has real strengths. Little capital sits idle, because every rupiah goes where the need is already proven. The commercial risk is lower too, because the users already exist: you know the train will be full, since the road beside it is full today.
 
-Its weakness is the price of waiting. By the time demand is undeniable, the city has grown around the problem, so you build inside the congestion: you tunnel under it, you buy land in a built-up city, and you disrupt everyone while you work. Jakarta is the example I know best. Its first MRT line, Phase 1 from Lebak Bulus to Bundaran HI, opened on 24 March 2019: 15.7 km and 13 stations, six of them underground, for about Rp16 trn.[^mrt] That is about Rp1 trn per kilometre (my own calculation). Jakarta built it when the traffic had become unbearable, which is exactly the point at which building is hardest.
+Its weakness is the price of waiting. By the time demand is undeniable, the city has grown around the problem, so you build inside the congestion: you tunnel under it, you buy land in a built-up city, and you disrupt everyone while you work. Jakarta is the example I know best. Its first MRT line, Phase 1 from Lebak Bulus to Bundaran HI, opened on 24 March 2019: 15.7 km for about Rp16 trn.[^mrt] That is about Rp1 trn per kilometre (my own calculation). Jakarta built it when the traffic had become unbearable, which is exactly the point at which building is hardest.
 
 Supply-push has the opposite profile. Its strength is scale: coordinated, multi-decade projects that shape where a region grows, which industries settle and how much capacity it will have. Building in bulk, on a long plan, also lowers the cost per unit and prevents the chronic under-capacity that demand-pull cities live with. Its weakness is the bet. If the plan is wrong, you have built idle capacity: stations and towers that cost money to run and maintain every year, plus interest if you borrowed to build them.
 
@@ -91,7 +91,7 @@ Does it work? Sometimes spectacularly. Sometimes not at all.
 
 ### Where did "they" actually come?
 
-**Shenzhen** is the most famous case. In 1979, when Bao'an county became Shenzhen city, it had 314,100 residents.[^sz1979] The special economic zone (<span markdown="0">SEZ</span>) was approved on 26 August 1980.[^sez] By the end of 2025, Shenzhen had 18,248,500 residents and a GDP of RMB 3,873.18 bn.[^sz2025] That is 58 times the population of 1979. A fair concession: Shenzhen wasn't built by roads alone. It got market reforms that the rest of China didn't have yet, and it sits right next to Hong Kong, which supplied capital, know-how and a door to the world. The infrastructure made the growth possible; the reforms and the neighbour gave it a reason.
+**Shenzhen** is the most famous case. In 1979 it had 314,100 residents,[^sz1979] and a year later it became a special economic zone (<span markdown="0">SEZ</span>).[^sez] By the end of 2025, Shenzhen had 18,248,500 residents and a GDP of RMB 3,873.18 bn.[^sz2025] That is 58 times the population of 1979. A fair concession: Shenzhen wasn't built by roads alone. It got market reforms that the rest of China didn't have yet, and it sits right next to Hong Kong, which supplied capital, know-how and a door to the world. The infrastructure made the growth possible; the reforms and the neighbour gave it a reason.
 
 **Shanghai's Pudong** is the case I have seen with my own eyes. The opening up of Pudong was announced on 18 April 1990, when the east bank of the Huangpu was mostly farmland and warehouses.[^pudong1990] In 2025 Pudong's GDP was RMB 1,876.91 bn: about a third of Shanghai's, which was RMB 5,670.87 bn (33.1%, my own calculation).[^pudong]
 
@@ -100,9 +100,9 @@ Does it work? Sometimes spectacularly. Sometimes not at all.
 <figcaption>Pudong from the Bund. In 1990, most of this side of the river was farmland and warehouses. Photo: Adjie.</figcaption>
 </figure>
 
-**Shanghai Hongqiao** is the hub done right. On the city's western edge, Shanghai put an airport, a high-speed rail station and the metro in one place. The rail station opened on 1 July 2010, with 16 platforms and 30 tracks.[^hongqiao] The airport sits about 13 km from the city centre in a straight line, and Metro Line 2 links it to the centre.[^hongqiao][^line2] A business district then grew around the hub: the offices came to where the trains and planes already were.
+**Shanghai Hongqiao** is the hub done right. On the city's western edge, Shanghai put an airport, a high-speed rail station and the metro in one place. The rail station opened in 2010.[^hongqiao] The airport sits about 13 km from the city centre in a straight line, and Metro Line 2 links it to the centre.[^hongqiao][^line2] A business district then grew around the hub: the offices came to where the trains and planes already were.
 
-**Beijing's Chaoyang CBD** was planned and launched in 1993, in that year's Beijing master plan: a core of 7.04 km² inside a functional zone of 84 km².[^bjcbd] In 2025 Chaoyang counted more than 140 buildings that each paid over RMB 100m in tax, and 125 regional headquarters of multinationals.[^bjcbd]
+**Beijing's Chaoyang CBD** was planned and launched in 1993, in that year's Beijing master plan.[^bjcbd] In 2025 Chaoyang counted more than 140 buildings that each paid over RMB 100m in tax, and 125 regional headquarters of multinationals.[^bjcbd]
 
 What the four have in common: each had an economic reason to exist (a border with Hong Kong, a port and a financial centre, a national transport hub, a capital's business district), each was connected from day one, and each plan kept going across several sets of leaders.
 
@@ -118,13 +118,13 @@ This is the concession that matters. Supply-push is borrowing against the future
 
 ## Is Australia turning towards the Chinese model?
 
-Partly, yes, and it is a sign that supply-push isn't only for one-party states. Australia's tradition is firmly demand-pull, though. Sydney Metro North West opened on 26 May 2019, 36 km and 13 stations from Tallawong to Chatswood, into a city that had been congested for years.[^sydmetro] Sydney's suburban trains are double-deckers, which tells you how long the city has been squeezing more people into the network it has.
+Partly, yes, and it is a sign that supply-push isn't only for one-party states. Australia's tradition is firmly demand-pull, though. Sydney Metro North West opened on 26 May 2019, into a city that had been congested for years.[^sydmetro] Sydney's suburban trains are double-deckers, which tells you how long the city has been squeezing more people into the network it has.
 
-Melbourne's airport line shows the cost of waiting. In 2018 the Melbourne Airport Rail link was estimated at A$8 to 13 bn, with A$5 bn each promised by the federal and Victorian governments. The 2024 Victorian budget delayed it by at least four years, to 2033 at the earliest. Stage 1 alone, from West Footscray to Albion, costs more than A$4 bn.[^mar]
+Melbourne's airport line shows the cost of waiting. In 2018 the Melbourne Airport Rail link was estimated at A$8 to 13 bn. The 2024 Victorian budget delayed it by at least four years, to 2033 at the earliest.[^mar]
 
-Housing is the most visible demand-pull failure. The national Housing Accord aims for 1.2 million new homes in the five years from mid-2024 to June 2029. In April 2026 the National Housing Supply and Affordability Council (<span markdown="0">NHSAC</span>) estimated that only 980,000 would be built in that period, about 220,000 short (my own subtraction), and that the target would be reached only in the September quarter of 2030.[^nhsac]
+Housing is the most visible demand-pull failure. The national Housing Accord aims for 1.2 million new homes in the five years from mid-2024 to June 2029. In April 2026 the National Housing Supply and Affordability Council (<span markdown="0">NHSAC</span>) estimated that only 980,000 would be built in that period, about 220,000 short (my own subtraction).[^nhsac]
 
-Now the change. Perth's METRONET extended the northern line 14.5 km from Butler to Yanchep, with stations at Alkimos, Eglinton and Yanchep. It opened on 14 July 2024.[^yanchep] The original estimate was about A$531.7m; the reported final cost is about A$1 bn.[^yanchep-cost] And crucially, those stations were built before the suburbs around them. The satellite images below compare each station in 2024 and 2026.
+Now the change. Perth's METRONET extended the northern line to Yanchep, with stations at Alkimos, Eglinton and Yanchep. It opened on 14 July 2024.[^yanchep] And crucially, those stations were built before the suburbs around them. The satellite images below compare each station in 2024 and 2026.
 
 <figure>
 <img src="/assets/img/cbf-sat-alkimos.webp" alt="Satellite image pair of Alkimos station, 2024 on the left and 2026 on the right, the station inside a yellow circle: in 2024 it stands in cleared sand and bush with housing estates to the north and south; by 2026 the station, its car park and roads are finished, and new estates are filling in nearby, while bush still lies beside it" width="1288" height="640" loading="lazy">
@@ -135,7 +135,7 @@ Now the change. Perth's METRONET extended the northern line 14.5 km from Butler 
 
 They came. In two years, new street grids and house lots have grown around Eglinton and Yanchep, and new estates are rising near Alkimos.
 
-Sydney's new airport is the bigger bet, and it comes with a warning. Western Sydney International Airport opened to passengers on 25 October 2026; the first flight was Jetstar to the Gold Coast.[^wsi] Around it, the plan is a whole new city, Bradfield. But its metro line, 23 km from St Marys to Bradfield, opens only in 2027, so for now passengers ride a free interim bus to the train network.[^wsi] An airport that opens before its rail link is the classic way a supply-push project starts life looking empty. Australia's saving grace is that the line is already being built and is due next year, not merely promised.
+Sydney's new airport is the bigger bet, and it comes with a warning. Western Sydney International Airport opened to passengers on 25 October 2026.[^wsi] Around it, the plan is a whole new city, Bradfield. But its metro line opens only in 2027, so for now passengers ride a free interim bus to the train network.[^wsi] An airport that opens before its rail link is the classic way a supply-push project starts life looking empty. Australia's saving grace is that the line is already being built and is due next year, not merely promised.
 
 ## Why hasn't it worked as well in Indonesia (yet)?
 
@@ -143,9 +143,9 @@ Because Indonesia copied the "build" and skipped the rest. For most of its histo
 
 ### Why does Indonesia wait for the jam, and then still not build?
 
-Indonesia's demand-pull is extreme: even where the demand is undeniable, the proper infrastructure often still doesn't arrive. Proper rapid transit exists in only two Indonesian cities. Jakarta has its MRT (Phase 1 opened on 24 March 2019, 15.7 km),[^mrt] its LRT and its KRL commuter trains. Palembang has an LRT, about 23 km and 13 stations from the airport to Jakabaring, which opened to the public on 1 August 2018, built for the Asian Games.[^lrt] It carried about 4.63 million passengers in 2025 (my own sum of the monthly figures).[^lrt]
+Indonesia's demand-pull is extreme: even where the demand is undeniable, the proper infrastructure often still doesn't arrive. Proper rapid transit exists in only two Indonesian cities. Jakarta has its MRT (Phase 1 opened on 24 March 2019, 15.7 km),[^mrt] its LRT and its KRL commuter trains. Palembang has an LRT.
 
-Then look at Indonesia's next three big cities. Surabaya, Bandung and Medan have no metro and no LRT, and until recently not even a proper bus rapid transit (<span markdown="0">BRT</span>) system. Under MASTRAN, a mass-transit programme funded by the World Bank and the French development agency AFD (about US$224 to 264m), construction of the Bandung Basin BRT finally started in July 2026: about Rp1.3 trn for 18 routes. Medan's Mebidang BRT is due to start service in 2027, and Surabaya is still at the detailed-design stage.[^brt]
+Then look at Indonesia's next three big cities. Surabaya, Bandung and Medan have no metro and no LRT, and until recently not even a proper bus rapid transit (<span markdown="0">BRT</span>) system. Construction of the Bandung Basin BRT finally started in July 2026: about Rp1.3 trn for 18 routes. Medan's Mebidang BRT is due to start service in 2027, and Surabaya is still at the detailed-design stage.[^brt]
 
 Three of Indonesia's biggest cities, millions of people each, and the first proper mass transit for any of them is a bus, starting this year. That is not demand-pull. That is demand, ignored.
 
@@ -166,7 +166,7 @@ I'd call the three keys "planned and strategic development", and the third is th
 
 ### Did "they" come to the Trans-Java Toll Road?
 
-Mostly yes, slowly and unevenly, and it is the best Indonesian example of supply-push I know. The Trans-Java Toll Road runs about 1,167 km from Merak to Banyuwangi. Merak to Surabaya, about 930 km, was connected in December 2018, and Surabaya to Probolinggo a year later.[^tj]
+Mostly yes, slowly and unevenly, and it is the best Indonesian example of supply-push I know. The Trans-Java Toll Road runs about 1,167 km from Merak to Banyuwangi. Merak to Surabaya, about 930 km, was connected in December 2018.[^tj]
 
 The evidence of "they came" is real but mixed. A panel study from IPB, the Bogor agricultural university, finds a positive effect on growth in the Central Java districts the road passes.[^ipb] A study from Universitas Indonesia (<span markdown="0">UI</span>) finds no stable effect yet on gross regional domestic product (<span markdown="0">GRDP</span>) per capita, unemployment or poverty in the medium term.[^ui] And there are losers: in towns along the old north-coast road, Pantura, a Pekalongan study reports that batik sellers lost the passing trade that used to stop on their street.[^pekalongan]
 
@@ -192,11 +192,11 @@ Pudong airport is more than twice as far from the centre as Hongqiao, and it sti
 
 Whoosh has the same problem at its ends. The Jakarta-Bandung high-speed railway was inaugurated on 2 October 2023, with stations at Halim, Karawang, Padalarang and Tegalluar.[^whoosh] Tegalluar, the station built for Bandung, is more than 10 km from central Bandung. Halim is in East Jakarta, not the centre. So most Bandung riders get off at Padalarang and take a 15-to-22-minute feeder train to Bandung station.[^tegalluar] In 2025 Whoosh carried 6.2 million passengers: 3.1 million at Halim, 2.2 million at Padalarang and only 750,000 at Tegalluar.[^whoosh-riders] The station built for Bandung is the least used.
 
-**3. No land-value capture.** China pays for a line by selling the land the line made valuable. Whoosh carries its cost without that land. It cost about US$7.2 to 7.27 bn, including a US$1.2 bn overrun, 75% of it borrowed from the China Development Bank (<span markdown="0">CDB</span>), and the debt is about Rp116 trn (US$7.3 bn).[^whoosh] PSBI, the consortium that holds the Indonesian stake and is 58.53% owned by KAI, the state railway, lost Rp4.99 trn in 2025 and Rp5.13 trn in the first half of 2026 alone.[^whoosh-loss] The restructuring of that debt was still being finalised in August 2026, and its final terms are not public.[^danantara]
+**3. No land-value capture.** China pays for a line by selling the land the line made valuable. Whoosh carries its cost without that land. It cost about US$7.2 bn, 75% of it borrowed from the China Development Bank (<span markdown="0">CDB</span>), and the debt is about Rp116 trn (US$7.3 bn).[^whoosh] PSBI, the consortium that holds the Indonesian stake and is 58.53% owned by KAI, the state railway, lost Rp4.99 trn in 2025 and Rp5.13 trn in the first half of 2026 alone.[^whoosh-loss]
 
 **4. Slow, expensive land acquisition, and projects that start before they are settled.** Land acquisition (*pembebasan lahan*) in Indonesia is a negotiation with every owner along the route, and projects often break ground before the feasibility study, the financing and the connections are agreed. Each of those, settled late, comes back as a delay, an overrun or a missing link.
 
-**5. Building where there isn't yet a reason to come.** IKN, the new capital in East Kalimantan, is the purest supply-push project Indonesia has. Under Perpres 79/2025, promulgated on 30 June 2025, IKN is to become the "political capital" in 2028, with Rp48.8 trn budgeted for 2025 to 2028 (2025 to 2029 in parliament's own research brief).[^ikn] For 2026, the IKN Authority (<span markdown="0">OIKN</span>) got Rp6.3 trn in the draft budget, and the DPR rejected a Rp14.92 trn top-up.[^ikn] The open question is the one that left Tianjin's Yujiapu, billed as China's Manhattan, about 80% empty around 2019,[^yjp2019] beyond the civil servants who are told to move, who comes, and when?
+**5. Building where there isn't yet a reason to come.** IKN, the new capital in East Kalimantan, is the purest supply-push project Indonesia has. Under Perpres 79/2025, IKN is to become the "political capital" in 2028, with Rp48.8 trn budgeted for 2025 to 2028.[^ikn] For 2026, the IKN Authority (<span markdown="0">OIKN</span>) got Rp6.3 trn in the draft budget, and the DPR rejected a Rp14.92 trn top-up.[^ikn] The open question is the one that left Tianjin's Yujiapu, billed as China's Manhattan, about 80% empty around 2019,[^yjp2019] beyond the civil servants who are told to move, who comes, and when?
 
 ## Do you need a one-party state to build like this?
 
@@ -204,7 +204,7 @@ No, but it would be dishonest to pretend the system doesn't help. Let me concede
 
 The costs are just as real. The same system built Yujiapu, with at least RMB 200 bn invested and about 80% of its offices empty around 2019.[^yjp2019] It left local financing vehicles with debt the IMF estimates at RMB 71.4 trn, 50.9% of GDP, in 2025.[^imf] It moves people out of their homes with weak ways to say no, and nobody in the system has much reason to tell the planners they are wrong until the towers are already standing empty.
 
-Democracies can keep long plans too; they just have to write them into law and institutions instead of a party. Perth's METRONET has run as a state programme across more than one term of government, and its Yanchep extension opened in 2024. Australia has an independent body, Infrastructure Australia, to vet the big projects. And Indonesia already has the legal tool: Law No. 59 of 2024 on the long-term development plan (<span markdown="0">RPJPN</span>, *Rencana Pembangunan Jangka Panjang Nasional*) for 2025 to 2045, enacted on 13 September 2024.[^rpjpn] A twenty-year plan in law is exactly the "fifty years ahead" that Jokowi was told about. The hard part is making each new government build on it, not around it.
+Democracies can keep long plans too; they just have to write them into law and institutions instead of a party. Perth's METRONET has run as a state programme across more than one term of government, and its Yanchep extension opened in 2024. Australia has an independent body, Infrastructure Australia, to vet the big projects. And Indonesia already has the legal tool: Law No. 59 of 2024 on the long-term development plan (<span markdown="0">RPJPN</span>, *Rencana Pembangunan Jangka Panjang Nasional*) for 2025 to 2045.[^rpjpn] A twenty-year plan in law is exactly the "fifty years ahead" that Jokowi was told about. The hard part is making each new government build on it, not around it.
 
 So the lesson worth copying isn't the political system. It is the discipline: plan long, connect everything on day one, pay for it with the value it creates, and keep going after the ribbon is cut.
 
@@ -222,14 +222,12 @@ And an honest question back to you: which project in your city would you build f
 *[AAP]: Australian Associated Press, a news agency
 *[AFD]: Agence Française de Développement, the French development agency
 *[BIJB]: Bandara Internasional Jawa Barat, West Java International Airport (Kertajati)
-*[BPS]: Badan Pusat Statistik, Statistics Indonesia
 *[BRT]: Bus Rapid Transit, buses on their own dedicated lanes with stations, run like a train line
 *[CAMET]: China Association of Metros
 *[CBD]: Central Business District
 *[CDB]: China Development Bank
 *[Cisumdawu]: Cileunyi-Sumedang-Dawuan, the toll road east of Bandung towards Kertajati
 *[DPR]: Dewan Perwakilan Rakyat, Indonesia's House of Representatives
-*[GDP]: Gross Domestic Product, the value of everything produced in a place in a year
 *[GRDP]: Gross Regional Domestic Product, GDP for a province, city or district
 *[HSR]: High-speed rail
 *[IKN]: Ibu Kota Nusantara, Indonesia's planned new capital in East Kalimantan
@@ -256,7 +254,6 @@ And an honest question back to you: which project in your city would you build f
 *[Perpres]: Peraturan Presiden, a presidential regulation
 *[PSBI]: PT Pilar Sinergi BUMN Indonesia, the consortium of Indonesian state companies that holds Indonesia's stake in KCIC
 *[PT]: Perseroan Terbatas, a limited company
-*[RMB]: Renminbi, China's currency
 *[RPJPN]: Rencana Pembangunan Jangka Panjang Nasional, Indonesia's 20-year national development plan
 *[SARs]: Special Administrative Regions, Hong Kong and Macau
 *[SCMP]: South China Morning Post
@@ -265,14 +262,11 @@ And an honest question back to you: which project in your city would you build f
 *[UI]: Universitas Indonesia
 *[UU]: Undang-Undang, a law passed by parliament
 *[WA]: Western Australia
-*[Whoosh]: Waktu Hemat, Operasi Optimal, Sistem Hebat (time saved, optimal operation, great system), the brand of the Jakarta-Bandung high-speed railway
 *[BPK]: Badan Pemeriksa Keuangan, Indonesia's state audit agency
 *[JICA]: Japan International Cooperation Agency
 *[Menhub]: Menteri Perhubungan, Indonesia's Minister of Transportation
 *[RAPBN]: Rancangan Anggaran Pendapatan dan Belanja Negara, the draft state budget
 *[IDN]: Indonesia
-*[CNBC]: Consumer News and Business Channel
-*[Sumsel]: Sumatera Selatan, South Sumatra province
 *[HI]: Hotel Indonesia, the roundabout in central Jakarta
 *[RRI]: Radio Republik Indonesia, the public radio broadcaster
 *[RI]: Republik Indonesia, the Republic of Indonesia
@@ -306,9 +300,7 @@ And an honest question back to you: which project in your city would you build f
 [^mar]: AAP, [Questions remain over Melbourne Airport Rail link](https://aapnews.aap.com.au/news/questions-remain-over-melbourne-airport-rail-link), 2024: 2018 estimate A$8 to 13 bn, A$5 bn each from the federal and Victorian governments; delayed at least four years, to 2033 at the earliest. Victoria's Big Build, [First stage of Melbourne Airport Rail gets underway](https://bigbuild.vic.gov.au/library/melbourne-airport-rail/fact-sheets/first-stage-of-melbourne-airport-rail-gets-underway): Stage 1, West Footscray to Albion, more than A$4 bn. Federal project register: [Melbourne Airport Rail](https://investment.infrastructure.gov.au/projects/097140-17vic).
 [^nhsac]: NHSAC, [State of the Housing System 2026](https://nhsac.gov.au/sites/nhsac.gov.au/files/2026-04/ar-state-housing-system-2026.pdf), 30 April 2026: 980,000 homes expected in the Accord period against a 1.2 million target, reached in the September quarter of 2030. The 220,000 shortfall is my own subtraction.
 [^yanchep]: WA Government, [METRONET Yanchep Rail Extension officially open](https://www.wa.gov.au/government/media-statements/Cook-Labor-Government/Joint-media-statement---METRONET-Yanchep-Rail-Extension-officially-open-20240714), 14 July 2024: 14.5 km north of Butler, stations at Alkimos, Eglinton and Yanchep.
-[^yanchep-cost]: International Railway Journal, [Perth opens commuter rail extension](https://www.railjournal.com/passenger/commuter-rail/perth-opens-commuter-rail-extension/), July 2024: original estimate about A$531.7m, final cost about A$1 bn.
 [^wsi]: Prime Minister of Australia, [It's official: Western Sydney open for passengers 25 October](https://www.pm.gov.au/media/its-official-western-sydney-open-passengers-25-october-and-freight-26-july-2026); The Star, [First international flight lands at new Western Sydney airport](https://www.thestar.com.my/aseanplus/aseanplus-news/2026/10/26/first-international-flight-lands-at-new-western-sydney-airport), 26 October 2026: first passenger flight Jetstar to the Gold Coast on 25 October 2026. NSW Government, [Airport will take off with free bus connection to train network](https://www.nsw.gov.au/ministerial-releases/airport-will-take-off-free-bus-connection-to-train-network): the St Marys to Bradfield metro line (23 km) opens in 2027, with a free interim bus until then.
-[^lrt]: Republika, [Jajal LRT Palembang, Jokowi: lebih dari Eropa](https://news.republika.co.id/berita/pbt7ss349/jajal-lrt-palembang-jokowi-lebih-dari-eropa), July 2018: public service from 1 August 2018, about 23 km, 13 stations. Ridership: Koran Jakarta, [Jumlah penumpang LRT Sumsel tembus 3,3 juta](https://koran-jakarta.com/2025-10-09/jumlah-penumpang-lrt-sumsel-tembus-33-juta), 9 October 2025: 3,386,357 in January to September 2025; BPS South Sumatra, [monthly release](https://satudata.sumselprov.go.id/storage/brs/69835a1acf503.pdf): 403,889, 392,086 and 444,155 in October, November and December 2025. The 4.63 million total is my own sum.
 [^brt]: Bisnis.com, [Proyek BRT Cekungan Bandung dimulai, telan anggaran Rp1,3 triliun](https://ekonomi.bisnis.com/read/20260723/98/1990366/proyek-brt-cekungan-bandung-dimulai-telan-anggaran-rp13-triliun), 23 July 2026; RRI, [Indonesia develops BRT systems in Medan and Bandung with French support](https://rri.co.id/en/archipelago/2606092/indonesia-develops-brt-systems-in-medan-and-bandung-with-french-support), 2026: MASTRAN, World Bank and AFD, about US$224 to 264m; Mebidang service target 2027. Investortrust, [BRT MASTRAN diperluas ke Semarang dan Surabaya](https://investortrust.id/business/111925/brt-mastran-diperluas-ke-semarang-dan-surabaya-ini-progresnya), 2026: Surabaya at the detailed design stage.
 [^lemhannas]: Setkab, [Arahan Presiden RI Joko Widodo pada penerimaan peserta Lemhanas](https://setkab.go.id/arahan-presiden-ri-joko-widodo-pada-penerimaan-peserta-program-pendidikan-reguler-lemhanas-di-istana-negara-jakarta-18-november-2014/), 18 November 2014, transcript.
 [^detik]: detikNews, [Di depan peserta Lemhannas, Jokowi sampaikan 3 resep jitu bikin negara maju](https://news.detik.com/berita/d-2751470/di-depan-peserta-lemhannas-jokowi-sampaikan-3-resep-jitu-bikin-negara-maju), 18 November 2014.
@@ -323,6 +315,5 @@ And an honest question back to you: which project in your city would you build f
 [^tegalluar]: Bisnis.com, [Ini akses transportasi ke Kota Bandung dari stasiun kereta cepat](https://ekonomi.bisnis.com/read/20231209/98/1722450/ini-akses-transportasi-ke-kota-bandung-dari-stasiun-kereta-cepat), 9 December 2023: Tegalluar is more than 10 km from central Bandung; the Padalarang feeder train to Bandung station takes 15 to 22 minutes.
 [^whoosh-riders]: Republika, [KCIC: Whoosh angkut 6,2 juta penumpang pada 2025](https://ekonomi.republika.co.id/berita/t8qjcx423/kcic-whoosh-angkut-62-juta-penumpang-pada-2025-naik-200-ribu-dari-2024), quoting KCIC: 6.2 million passengers in 2025; Halim 3.1 million, Padalarang 2.2 million, Tegalluar 750,000.
 [^whoosh-loss]: CNBC Indonesia, [Makin bengkak, rugi pemegang saham Whoosh tembus Rp5,13 T](https://www.cnbcindonesia.com/market/20260731101421-17-755343/makin-bengkak-rugi-pemegang-saham-whoosh-tembus-rp-513-t), 31 July 2026, from KAI filings: PSBI (KAI 58.53%) lost Rp4.99 trn in 2025 and Rp5.13 trn in the first half of 2026.
-[^danantara]: Antara, [Danantara sebut skema restrukturisasi Whoosh dalam tahap penyempurnaan](https://jogja.antaranews.com/berita/823324/danantara-sebut-skema-restrukturisasi-whoosh-dalam-tahap-penyempurnaan), August 2026: restructuring still being finalised; final terms not public.
 [^ikn]: Kontan, [Presiden Prabowo teken Perpres 79/2025, IKN akan jadi ibu kota politik pada 2028](https://nasional.kontan.co.id/news/presiden-prabowo-teken-perpres-792025-ikn-akan-jadi-ibu-kota-politik-pada-2028), 2025; Antara, [Anggaran pembangunan IKN hingga 2028 disetujui Rp48,8 triliun](https://www.antaranews.com/berita/4964169/otorita-anggaran-pembangunan-ikn-hingga-2028-disetujui-rp488-triliun), 2025; DPR research centre, [Info Singkat, November 2025](https://berkas.dpr.go.id/pusaka/files/info_singkat/Info%20Singkat-XVII-22-II-P3DI-November-2025-172.pdf): Rp48.8 trn for 2025 to 2029, and the rejected Rp14.92 trn top-up; Bisnis.com, [Sri Mulyani ungkap OIKN dapat pagu Rp6,3 triliun di RAPBN 2026](https://ekonomi.bisnis.com/read/20250815/45/1902838/sri-mulyani-ungkap-oikn-dapat-pagu-rp63-triliun-di-rapbn-2026), 15 August 2025.
 [^rpjpn]: Audit Board (BPK) legal database, [UU No. 59 Tahun 2024](https://peraturan.bpk.go.id/Details/299728/uu-no-59-tahun-2024): the RPJPN 2025-2045, enacted on 13 September 2024.

@@ -68,12 +68,12 @@ Write it natively from the case, never by translating the English post sentence 
 **Every abbreviation in a post is wrapped in `<abbr>`.** Define each one once, anywhere in the
 post (the end is tidy), as a kramdown line `*[TERM]: meaning`, and the site renders every
 use as `<abbr title="meaning">` with a hover, focus and tap bubble. This covers acronyms and
-initialisms (DPR, KPR, GDP, ATO, CNN), codes and labels (TK/0, Q2, YA2026, IV/e), and short
+initialisms (ATO, LGFV, PTKP, OECD), codes and labels (TK/0, Q2, YA2026), and short
 forms (dkk, Kemenkeu), in prose, headings, tables, link text, captions and the
 source list alike, even when the post already spells the term out once in the sentence.
 
-- Kramdown matches the exact term, as a whole word, case-sensitive. `MPs` needs its own line
-  next to `MP`, and `KPR-nya` is covered by `KPR`.
+- Kramdown matches the exact term, as a whole word, case-sensitive. `SOEs` needs its own line
+  next to `SOE`, and `PTKP-nya` is covered by `PTKP`.
 - The meaning is the full name plus, when a reader may not know it, a few words on what it is
   ("Badan Pusat Statistik, Statistics Indonesia"). In Indonesian, write it per the
   `bahasa-indonesia` skill.
@@ -85,8 +85,26 @@ source list alike, even when the post already spells the term out once in the se
   kramdown leaves it alone. Every other use keeps its tooltip, and the definition line stays.
   A UI label that merely contains the abbreviation ("Nominal annual (APR)") is not an
   explanation, so it keeps the tooltip.
-- Not defined: very obvious ones that every reader knows (vs, US, UK, TV, PDF, a.k.a, dll;
-  the checker skips them), currency symbols and number suffixes (Rp, A$, 850k, 1.27bn),
+- **Only the abbreviations a reader needs.** A tooltip is for a technical or
+  domain-specific term. Three kinds get no definition line, and the checker reports an
+  ERROR if one has it:
+  1. **Physical and currency units:** m, cm, km, kg, MW, kWh, GB, and currency codes or
+     prefixes such as CNY, RMB, NOK, VND, CN (in CN¥).
+  2. **Everyday terms** that have become ordinary words for the post's readers: in
+     Indonesian HP, UU, PNS, DPR, S2, BUMN, KPR, BPS, PDB, BPJS, MRT, IKN; in English PM,
+     MP, GDP, EU, UN, NGO; in both ASEAN, COVID, CNN, CNBC, FAQ. The readers decide, so
+     the same term can be everyday in one language and not in the other (DPR is everyday
+     in an Indonesian post, foreign in an English one). The rule of thumb: (1) count how
+     often the term appears in the post (the checker flags more than 3 as REVIEW);
+     (2) if it is frequent, ask whether it is a generic term that even the least
+     specialised reader of that language knows; (3) if it is, delete the definition
+     instead of keeping the tooltip on every use. Add such a term to `EVERYDAY` in
+     `check-abbr.py` so the next post doesn't define it.
+  3. **Codes that abbreviate nothing:** a grade or level such as golongan IV/e or III/a.
+     A code whose letters do stand for words (TK/0, Tidak Kawin) is an abbreviation and
+     keeps its line.
+- Not defined either: very obvious ones that every reader knows (vs, US, UK, TV, PDF,
+  a.k.a, dll; the checker skips them), currency symbols and number suffixes (Rp, A$, 850k, 1.27bn),
   roman numerals, hashtags, and brand or site names that stand for nothing (LinkedIn,
   DDTCNews). A capitalised brand the checker flags goes in
   `<!-- abbr-ok: TERM -->`.
