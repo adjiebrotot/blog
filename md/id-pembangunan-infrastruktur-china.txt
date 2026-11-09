@@ -1,0 +1,7 @@
+---
+layout: null
+permalink: /id/pembangunan-infrastruktur-china/index.md
+md_of: /id/pembangunan-infrastruktur-china/
+sitemap: false
+---
+{% include post-markdown.txt url=page.md_of %}

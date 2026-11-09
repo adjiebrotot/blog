@@ -1,0 +1,7 @@
+---
+layout: null
+permalink: /en/how-china-builds-so-fast/index.md
+md_of: /en/how-china-builds-so-fast/
+sitemap: false
+---
+{% include post-markdown.txt url=page.md_of %}
