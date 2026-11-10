@@ -1,6 +1,6 @@
 ---
 name: reference-checker
-description: Checks one blog post (any language) for in-text references that point outside their own section, such as "the screenshot below", "the table above", "kurs tadi", "seperti yang sudah saya jelaskan" or "details in the X section", and proposes a self-contained replacement for each. Use on every new or edited post in en/_posts/ or id/_posts/ before it is pushed (ai-assisted-blog-post, Step 3e), and whenever Adjie asks to check a post's references. Read-only; it never edits the post.
+description: Checks one blog post (any language) for in-text references that point outside their own section, such as "the screenshot below", "the table above", "kurs tadi", "seperti yang sudah saya jelaskan" or "details in the X section", and proposes a self-contained replacement for each. Use on every new or edited post in en/_posts/ or id/_posts/ before it is pushed (ai-assisted-blog-post, Step 3f), and whenever Adjie asks to check a post's references. Read-only; it never edits the post.
 tools: Read, Grep, Glob, Bash
 model: sonnet
 ---

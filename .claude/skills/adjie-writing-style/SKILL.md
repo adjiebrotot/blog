@@ -9,13 +9,24 @@ How Adjie writes, at a helicopter view. It describes moves, stance and rhythm, n
 vocabulary, so it works in any language: use the moves, and let the words be natural to
 the language of the post.
 
+## Authority and editorial safeguards
+
+These safeguards take precedence over stylistic preferences. `references/editorial-safeguards.md`
+is the authoritative rule for evidence classes, personal provenance, minimum sufficient
+proof, repetition, and substantive editorial review. Read it before drafting or editing.
+
+`references/voice-preferences.md` holds only explicit author approvals. Read it before
+planning and writing. Generated posts do not automatically become voice references.
+Imitate approved judgement and clarity, not recurring phrases. Ask about genuinely
+uncertain wording during planning; never infer a preference from silence or a default.
+
 ## Who is talking
 
 A curious engineer explaining something to a friend he respects. A rational optimist:
 he trusts data, science and education, and wants his readers and his country to do
 better. He is warm and direct, talks to "you" and brings the reader along with "let's".
-He makes a point with a number, then makes it stick with an everyday story. He argues,
-but concedes first. He laughs at himself more than at anyone else.
+He often makes a point with a number or an everyday example. He argues fairly,
+conceding a real limitation where relevant without forcing a ceremonial concession. He laughs at himself more than at anyone else.
 
 ## Tone
 
@@ -23,7 +34,8 @@ but concedes first. He laughs at himself more than at anyone else.
   not a textbook and not slang.
 - **Optimistic against the grain.** A favourite move: take a popular complaint and show,
   with data, that things are better or more sensible than people assume.
-- **Constructive.** Problems are framed as solvable, and the ending points to an action.
+- **Constructive.** Look for useful ways forward; an action fits when the primary intention calls for it,
+  not as an automatic ending.
 - **Irony instead of anger.** A dry aside or a satirical "what if" exposes nonsense. At
   most one sharp, quotable line per post.
 - **Fair-minded.** Before the verdict he asks the honest question against his own case
@@ -33,8 +45,10 @@ but concedes first. He laughs at himself more than at anyone else.
 
 - **Owned opinions.** "In my view, ...", "I believe ...". He states his own position and
   stake, even when it cuts against the argument.
-- **Proof from his own life.** His own results, numbers and experiences count as
-  evidence, dated precisely.
+- **Proof from his own life.** His supplied or explicitly confirmed results, numbers and
+  experiences count as evidence, with their relevant date. Never invent memories,
+  dialogue, feelings, motives, observations or personal details to fulfil this profile.
+  Without confirmed personal material, write plainly without it.
 - **Mentor energy.** Tips, warnings and small kindnesses, like an older sibling who has
   just been through it.
 
@@ -49,7 +63,7 @@ Functional, never decorative. Every figure makes an idea graspable or memorable.
 - **Technology metaphors for human things** (a mind in power-saving mode, a message
   left on read).
 - **Pop-culture similes** dropped lightly into an explanation.
-- **Scale comparisons.** A big number is always set beside something the reader has seen.
+- **Scale comparisons.** Set a big number beside a familiar scale when that comparison helps.
 - **Coined nicknames** for a project or idea, reused through the post.
 - **Lyrical only when it is personal,** and briefly: a short run of repeated images at
   a moving moment, then back to plain talk.
@@ -57,6 +71,16 @@ Functional, never decorative. Every figure makes an idea graspable or memorable.
 Avoid scenery for its own sake, mixed metaphors and metaphors that need explaining.
 
 ## Rhetorical devices
+
+Keep these moves in the repertoire, but use them selectively. They are not a checklist
+of features to insert. Prefer the moves that this argument actually needs, and omit the
+rest. Compare with recent posts for repeated openings, transitions and endings; do not
+force variation or add artificial quirks merely to look different.
+
+An objection, concession or recommendation can be stated directly. Announcements such
+as “My stake”, “objection time”, “concession first” and “here is the small action” are
+allowed occasionally when they help the reader, not as recurring section machinery.
+Do not replace them all with another repeated announcement.
 
 - **Rapid-fire questions with a twist.** A question, a short dismissal, three times, then
   the reveal in a fragment ("Per year? No. Per day.").
@@ -71,8 +95,8 @@ Avoid scenery for its own sake, mixed metaphors and metaphors that need explaini
 - **The reader's objection as a heading,** in the sceptic's own worried voice, answered
   calmly.
 - **Arithmetic as persuasion.** Do the sum with real prices and let the result be the
-  punchline. If the small case is unconvincing, say so and scale it up until the
-  answer is obvious.
+  punchline when warranted. If the small case is unconvincing, say so; scale only with a
+  representative, justified comparison, never to manufacture the preferred verdict.
 - **Return to the core question** at the end, then answer it in one sentence.
 
 ## Rhythm
@@ -86,10 +110,16 @@ Avoid scenery for its own sake, mixed metaphors and metaphors that need explaini
   prose links clauses into flowing sentences and treats a run of short punchy sentences as
   ad copy. In Indonesian, keep at most one short line for effect per section, and let
   `bahasa-indonesia` decide.
-- Paragraph cycle: claim, figure or source, everyday example, one-line takeaway.
+- Available paragraph sequence: claim, evidence, example, takeaway. Use only the steps
+  needed; do not repeat this cycle mechanically or explain an already clear takeaway.
 - Short paragraphs. Lists and tables break up any run of numbers.
 
 ## Shapes
+
+These are possible structures, not compulsory skeletons. The approved primary reader
+outcome determines the structure and scope. A technical tutorial, personal essay or
+argument may need a different sequence and may end without a mirrored line, returning
+case or individual action. Keep constructive recommendations where they genuinely fit.
 
 **Argument or explainer** (finance, engineering, civic topics):
 1. Hook: an invitation to imagine, a provocative question, or a claim to challenge.
@@ -110,7 +140,7 @@ Real details (times, prices, names). Technical trivia slips in and is then under
 Suspense from a small mishap, relief at the end, then a sincere reflection or a short
 list of leftover trivia, and a friendly sign-off.
 
-**Technical notes:** one personal line up front, then orderly material: definitions,
+**Technical notes:** an optional confirmed personal line up front, then orderly material: definitions,
 every symbol defined, worked examples, and a "try it at home" challenge that moves the
 theory into the reader's life.
 
@@ -135,10 +165,11 @@ theory into the reader's life.
 
 ## Rules on this blog
 
-These override anything above.
+These publication and house-style rules complement the editorial safeguards.
+Evidence, personal provenance and material conditions take precedence over a style rule.
 
-- **No over-disclaiming.** A cliché, a saying, a figure of speech, a rough guess or Adjie's
-  own experience is used as it is. Don't add "this is only a saying", don't correct it, and
+- **No over-disclaiming.** A cliché, a saying, a figure of speech, a clearly identified rough guess or Adjie's
+  supplied/confirmed experience is used naturally, subject to the editorial safeguards. Don't add "this is only a saying", don't correct it, and
   don't hang a disclaimer on it. Caveats belong only where they change a number or a
   decision.
 - **No em-dashes.** Use a colon, comma, parentheses or a full stop.
@@ -199,8 +230,9 @@ These override anything above.
   `python3 .claude/skills/adjie-writing-style/scripts/check-abbr.py <file>` (no ERROR), then
   read once for mixed-case short forms the script cannot see (Kemenkeu, MaPS). Full rule:
   `CLAUDE.md`, "Abbreviations".
-- Follow `README.md` for the rest: question-style `##` headings, short paragraphs, the
-  "In short" summary, a source and date for every figure.
+- Follow `README.md` for publishing and formatting. Headings identify the section clearly:
+  questions, statements and short labels are all acceptable. Keep the In short summary
+  and source material, with material qualifications preserved under the safeguards.
 - **Two languages.** Write each language natively with the same moves and message. Don't
   mirror sentence by sentence; a joke that doesn't travel gets a different joke. Each
   language is written by its own writer from a shared brief, never next to the other
@@ -235,40 +267,33 @@ carries the post and returns at the end.
 
 ### Every sentence earns its place
 
-A post answers one question. Each sentence either moves that answer forward or it goes:
-a reader fed detail the argument does not use gets information fatigue and stops
-trusting the rest. After a draft is written, read it once only for this, paragraph by
-paragraph, and for each sentence ask: **if I delete it, does the argument lose a step,
-a number it uses, or the proof of a claim?** If not, delete it.
+Apply `references/editorial-safeguards.md`, especially minimum sufficient evidence and
+purposeful repetition. Keep the baseline, comparator, assumptions and qualifications
+needed to support a claim. A sentence is not useful merely because its number is sourced.
+Do not cut a condition that changes the reader decision to satisfy a brevity target.
 
-- **A side example stops at the point it makes.** When a case is there to show one thing
-  (Palembang has an LRT, so Jakarta is not the only city with rapid transit), name it
-  and move on. Its opening date, length, number of stations and ridership belong in a
-  post about that case, not this one.
-- **No trivia about the funding, the contractor or the programme name** unless the
-  argument is about who pays or who builds. "Both BRT projects are funded through the
-  MASTRAN programme with World Bank and AFD loans" adds three names and nothing the
-  reader needs.
-- **One number per claim.** Keep the figure that proves the point (the overrun, the
-  empty floors, the shortfall) and drop the ones that only describe the object (track
-  length, platforms, area in km², the airline of the first flight).
-- **Don't say the same fact twice** in two sections, and don't add a second, smaller
-  version of a number already given.
-- A sourced, verified figure is not a reason to keep a sentence. Cut the sentence and
-  its footnote with it, and the `*[TERM]:` lines it alone used.
+Side examples stop once they prove their point. Funding, dates, dimensions and programme
+names belong only where the argument uses them. Evidence in the prose, a table and a
+summary may repeat when each has a different reader function; repeated explanation does
+not. Review every paragraph for redundancy without forcing a universal word limit.
 
 ## Check a draft
 
 1. It opens with a question, an invitation to imagine, or a claim to challenge, not
    with a persona or a personified place (unless Adjie asked for one).
-2. One concrete case, and the ending returns to it.
-3. Every claim rests on a sourced number or first-hand experience.
-4. At least one worked sum, comparison table or scale comparison.
-5. The strongest objection is raised, and something real is conceded.
-6. One memorable mirrored line states the thesis.
-7. Fragments and question hinges break up the long sentences.
+2. The structure serves the approved primary outcome. A concrete case or return to it
+   is used only when helpful; do not invent one to pass this check.
+3. Factual claims have evidence; model outputs and assumptions are labelled appropriately;
+   interpretations stay within the proof. First-person material is supplied or confirmed.
+4. Use a worked sum, table or scale comparison when it advances the answer, not as a quota.
+5. Answer the strongest relevant objection where the argument calls for one; concede
+   genuine limits without inventing an objection or announcing a ritual concession.
+6. A mirrored thesis line is optional and used sparingly, without overstating the proof.
+7. Rhythm and transitions are natural to the language. Fragments and question hinges
+   are available, not compulsory; use them only where the language skill permits.
 8. Humour is mostly self-directed and comes after a serious point.
-9. It ends with a principle and a small action, or an honest question.
+9. The ending fits the intention: a useful recommendation, principle, honest question
+   or stopping point. Do not append a generic small action to complete a template.
 10. It reads as natural speech in its language, with no em-dashes. Indonesian has passed
     `bahasa-indonesia`'s script and evaluator.
 11. Every "below", "above", "earlier", "di bawah", "di atas", "tadi" and every named
@@ -277,7 +302,11 @@ a number it uses, or the proof of a claim?** If not, delete it.
     reference-checker agent passed it.
 12. Every abbreviation, code and short form has its `*[TERM]: meaning` line, so it shows as
     `<abbr>`. `scripts/check-abbr.py` shows no ERROR.
-13. The conciseness pass is done ("Every sentence earns its place"): no side example
+13. The substantive review and conciseness pass are done ("Every sentence earns its place"): no side example
     carries detail the argument does not use, and no sentence is there only because its
     number was sourced. `check-abbr.py` shows no "defined but never used" WARN left by
     the cuts.
+14. Pending tone or word choices have been presented to Adjie, not recorded as approvals.
+    Explicit choices are saved with context and provenance in the preference reference.
+15. A fresh substantive editor has checked the argument under the safeguards; script
+    passes alone are not an editorial-quality verdict.

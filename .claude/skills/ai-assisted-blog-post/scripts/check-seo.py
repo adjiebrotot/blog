@@ -10,7 +10,7 @@ work with what the post gives them, so this checks the post itself:
 - front matter: title, description, tags, image, image_alt, keywords, date
 - slug: lowercase ASCII words with hyphens, short, in the post's language
 - the answer up front: an "In short" / "Singkatnya" block with `{: .tldr}`
-- question-style headings, footnoted sources, a link to a related post
+- clear headings, footnoted sources, a link to a related post
 - images with alt text, width and height
 - the Markdown copy for AI readers (`md/<lang>-<slug>.txt`) and the social card
 - the `translation:` partner, when the key is set
@@ -109,7 +109,7 @@ def check(path):
     elif len(desc) > 160:
         W(f"description is {len(desc)} characters, Google cuts it near 155 to 160: "
           "keep the hook and the main search words in the first 150")
-    elif len(desc) < 70:
+    elif len(desc) < 110:
         W(f"description is only {len(desc)} characters: aim for 110 to 160")
     if desc and title and desc.strip().lower() == title.strip().lower():
         E("description repeats the title")
@@ -127,6 +127,9 @@ def check(path):
     if len(kws) < 3:
         W("fewer than 3 keywords: list the phrases people type or ask, in the post's language "
           "(the question, the tool's name, the local terms)")
+
+    if len(kws) > 8:
+        W(f"{len(kws)} keywords: target 3 to 8 useful phrases, not repetition")
 
     # Date: Jekyll does not publish a post dated in the future until the next build after it.
     try:
@@ -151,18 +154,16 @@ def check(path):
     else:
         tldr = body.split("{: .tldr}")[0].strip().split("\n\n")[-1]
         n = len(re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", tldr).split())
-        if n > 120:
-            W(f"the In short block is {n} words: answer engines quote 40 to 90 well")
+        if n > 90:
+            W(f"the In short block is {n} words: target 40 to 90; preserve material conditions or justify an exception")
+
+    # Summary targets are warnings, never permission to remove material conditions.
+    if re.search(r"\{:\s*\.tldr\s*\}", body) and n < 40:
+        W(f"the In short block is {n} words: target 40 to 90 when it improves the summary")
 
     heads = re.findall(r"^(##+)\s+(.+)$", body, re.M)
     h2 = [h for lvl, h in heads if lvl == "##" and not re.match(r"(References|Referensi)\b", h)]
-    if len(h2) < 3:
-        W(f"only {len(h2)} sections (##): a post that answers one question in several steps "
-          "reads and ranks better with 3 or more")
-    q = [h for h in h2 if h.rstrip().endswith("?")]
-    if h2 and len(q) * 2 < len(h2):
-        W(f"{len(q)} of {len(h2)} section headings are questions: phrase most of them as the "
-          "question a reader would type or ask")
+    # Questions, statements and labels are all valid headings. No question or section quota.
     if re.search(r"^#\s", body, re.M):
         E("a '# heading' in the body: the layout writes the only <h1> from the title")
 

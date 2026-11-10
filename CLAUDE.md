@@ -42,7 +42,9 @@ a sentence points only at a figure, table, chart or example in its own section, 
 one in another section ("the screenshot below" three sections up is wrong). A new or
 rewritten post also passes the reference-checker agent (`.claude/agents/reference-checker.md`)
 and `python3 .claude/skills/ai-assisted-blog-post/scripts/check-seo.py <file>` (no ERROR),
-and has its `md/<lang>-<slug>.txt` stub.
+and has its `md/<lang>-<slug>.txt` stub. It also has a substantive-editor PASS under
+`.claude/skills/adjie-writing-style/references/editorial-safeguards.md`, with evidence and
+personal provenance settled. A clean checker run is not an editorial-quality verdict.
 
 Then, in `_site/`: each page has exactly one `<h1>` and valid JSON-LD; `sitemap.xml` and
 `*/feed.xml` parse as XML; paired posts list each other in `hreflang`; and at 390px no page
@@ -115,3 +117,16 @@ source list alike, even when the post already spells the term out once in the se
 
 No em-dashes in UI text (same rule as the tool site). Every UI string lives in
 `_data/i18n.yml` in both languages, never hard-coded in a layout.
+
+## Planning, approval and editorial authority
+
+Use `ai-assisted-blog-post/SKILL.md` for the workflow. Primary intention requires an explicit
+answer during planning, not a silent default. Offer short tone/word alternatives only for
+genuinely doubtful passages. Save explicit selections and context in the shared voice and
+Indonesian word preference references. Silence and evaluator rewrites are not author approval.
+Native-language evaluation remains required; contextual author choices resolve style doubts.
+Evidence classes, minimum sufficient proof, material qualifications and purposeful repetition
+are authoritative in `adjie-writing-style/references/editorial-safeguards.md`. A preference
+must not turn an assumption/model output into a fact or fabricate autobiographical material.
+Headings may be questions, statements or short labels. Do not impose rhetorical-device,
+question-heading or section-count quotas; retain publication and same-section pointer checks.

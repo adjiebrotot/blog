@@ -31,7 +31,6 @@ CALQUES = [
     (r"\bbiaya peluang\b", "'opportunity cost'"),
     (r"\bnilai hidup\b", "'values'"),
     (r"\b(tiga|dua|empat|lima) titik\b", "data points are 'contoh', 'jenis', 'kasus'"),
-    (r"\bsatu poin\b|\bpoin persentase\b", "'persen' (poin reads like a score)"),
     (r"\bjauh lebih tenang\b", "'jauh lebih moderat'"),
     (r"\banggap saja seperti\b", "'anggap saja X' (anggap already compares)"),
     (r"\bpengakuan dulu\b", "'mari jujur-jujuran dulu'"),
@@ -47,6 +46,8 @@ CALQUES = [
     (r"\btidak mengklaim apa-apa\b", "calque of 'I make no claim'"),
 ]
 
+# Percentage points are valid terminology, not a calque. Never substitute persen
+# automatically: absolute rate gaps and relative changes have different meanings.
 # False friends: read the sentence and check the meaning.
 FALSE_FRIENDS = [
     (r"\bbunga \*?flat\*?|\*flat\* \d", "in Indonesia 'bunga flat' is a calculation method; a whole-term rate is 'fixed'"),

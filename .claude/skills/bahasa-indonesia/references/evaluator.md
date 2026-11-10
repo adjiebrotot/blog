@@ -29,13 +29,34 @@ Prompt for the evaluator agent (fill in the path):
 > `evaluator.md` describes. Be strict: when in doubt, report it. Do not edit the file.
 > Return the report in the format of `evaluator.md`.
 
+## Preference-aware judgement
+
+Keep the ten lenses and native-language checks. Read `references/word-preferences.md`
+and the shared voice preference reference. Apply explicit approvals in their recorded
+contexts. Do not invent author selections or generalise one choice globally.
+
+The column and back-translation tests are diagnostic prompts, not standalone proof of an
+error. For an uncertain acceptable word or tone, report a **pilihan Adjie** with actual
+short alternatives, identical facts/conditions, and the trade-off. Ask through the
+orchestrator; do not edit or log a preference yourself. A plain word is not an error solely
+because a livelier synonym exists. An author-approved contextual exception takes priority
+over an older style preference; technical meaning and genuine clarity remain protected.
+
+Retain genuine language rules and established corrections. Do not remove conjunction,
+fragment or register guidance wholesale. If an explicit choice conflicts with a style-only
+rule, have the orchestrator record a scoped exception and keep rule/checker guidance in
+sync. Pending optional word choices alone do not block publication of acceptable text;
+uncertain meaning or a necessary unresolved rule conflict does require clarification.
+
 ## Step 1: the script
 
 ```sh
 python3 .claude/skills/bahasa-indonesia/scripts/cek.py <file>
 ```
 
-Every ERROR is a *wajib* finding. Read every REVIEW line in its paragraph and decide: a
+Every ERROR is a *wajib* finding unless a recorded author-approved style-only exception
+applies and the conflicting rule/checker is updated consistently. Accuracy exceptions
+are not permitted. Read every REVIEW line in its paragraph and decide: a
 finding, or a deliberate choice (say which and why in the report). The script only finds
 patterns; a clean run proves nothing about flow or diction.
 
@@ -57,7 +78,7 @@ captions, alt text and footnotes. For each sentence ask the two tests, then the 
 
 1. **Diksi.** Is there a livelier, more idiomatic word a native writer would choose?
    (*lebih tebal* for savings, *megap-megap* for the one barely coping, *turun kelas*,
-   *meneken*.) Flat dictionary equivalents of English words are findings.
+   *meneken*.) Flat dictionary equivalents warrant inspection; acceptable alternative diction is a suggestion or author choice, not automatically an error.
 2. **Transisi dan kedekatan.** Does each paragraph and each turn open with a transition
    that builds rapport ("Sekarang, mari jujur-jujuran dulu", "Mungkin kamu akan
    menyanggah"), or does it start abruptly with a label?
@@ -67,8 +88,8 @@ captions, alt text and footnotes. For each sentence ask the two tests, then the 
    Threshold) woven into the sentence with what it is and why it matters, not dropped in
    bare.
 4. **Penekanan retoris.** Do the rhetorical lines and the closing paragraph land? The
-   ending should build in full sentences to one memorable point (*-lah*, *hanya ... yang*,
-   *pada akhirnya*), not end in fragments.
+   ending should fit the approved intention in natural full sentences. A memorable
+   rhetorical point is optional; do not insert a slogan merely to pass the evaluator.
 5. **Calque struktur.** English word order, English subject-verb-object frames, invented
    affixed words, *-nya* chains standing for English pronouns, *yang mana*/*di mana* as
    relatives, heavy nominalisation, bare verbs where a model result needs *bisa*/*akan*.
@@ -86,7 +107,7 @@ captions, alt text and footnotes. For each sentence ask the two tests, then the 
 
 **Also check** the house rules: *saya-kamu* only; *gak* never standing alone; casual and
 factual words each in their layer; finance terms from the table (*imbal hasil*, *bunga
-KPR*, *persen*); no *buatan saya*; numbers in Indonesian format; no em-dashes; none of the
+KPR*, *persen* versus *poin persentase*); no *buatan saya*; numbers in Indonesian format; no em-dashes; none of the
 mistakes in `corrections.md` is back. Every pointer (*di bawah*, *di atas*, *tadi*,
 *seperti yang sudah saya jelaskan*, *tabel itu*, *contoh tadi*, *kurs tadi*) points at
 something in the same `##` or `###` section, in that direction, or at a whole section named
@@ -114,7 +135,7 @@ Write it in Indonesian, in this format.
 habit, not only the instances>
 ```
 
-- **wajib**: a rule of the skill is broken, or the sentence fails the column test. The
+- **wajib**: a rule of the skill is broken, or the sentence has a specific idiomatic, clarity or meaning defect revealed by the tests. The
   verdict is BELUM LULUS while any *wajib* finding is open.
 - **saran**: the sentence is acceptable, but a better native option exists.
 - Every *Usulan* is a complete replacement sentence that keeps the numbers and the claim,
@@ -132,3 +153,12 @@ the first three posts found exactly that). The evaluator checks
 those paragraphs and the ones around them, and issues a new verdict. Repeat until LULUS.
 If the writer disagrees with a *wajib* finding after two rounds, list the disagreement for
 Adjie in the delivery message instead of looping further.
+
+### Preference choices in the report
+
+Add a separate table where needed: passage/line, existing wording, alternative wording,
+trade-off, already-approved reference ID (if any), and status: ask / retain acceptable
+wording / explicit approval required to change a rule. Include a **pilihan Adjie** category
+beside wajib and saran. No fabricated choice, inferred preference from silence, or automatic
+promotion of your suggestion. All replacements preserve evidence classes and material
+conditions under the shared editorial safeguards. The orchestrator saves explicit choices.
