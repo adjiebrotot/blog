@@ -98,11 +98,18 @@ concept / points  →  Draft plan (v1)  →  Adjie: revision + answers  →  con
   point, not every figure the research found. A side example gets its one fact (the city
   has an LRT), not its opening date, length, stations and ridership. The writers and the
   final review apply `adjie-writing-style`'s "Every sentence earns its place".
-- **Sonnet does the work, Opus only orchestrates.** Spawn every writer, evaluator,
-  reference-checker and research agent with `model: "sonnet"` (the Agent tool's `model`
-  parameter). The main context, which plans, talks to Adjie, merges the results and
-  makes the final calls, may run on Opus; it does not write the posts itself. Use Opus
-  for a sub-agent only when Adjie asks for it.
+- **Mid-tier does the work, top-tier only orchestrates or verifies.** Spawn every writer,
+  evaluator, reference-checker, substantive-editor and research agent on the mid-level
+  model (Claude: `model: "sonnet"` on the Agent tool; another provider: its equivalent
+  mid-level model, such as GPT-5 mini/GPT-4.1 or Gemini Pro/Flash-class, never its
+  flagship). The main context, which plans, talks to Adjie, merges the results and makes
+  the final calls, may run on the top-tier model (Opus or equivalent); it does not write
+  the posts itself. Escalate one sub-agent to top-tier only for substantive knowledge work
+  the mid-tier cannot settle: a disputed or high-stakes factual, legal, tax or numeric
+  claim in the evidence ledger, or a substantive-editor finding the mid-tier flags as
+  uncertain. Run that check as a single narrow question, not a rewrite, and say in the
+  report that it was escalated and why. Otherwise use top-tier for a sub-agent only when
+  Adjie asks. Every `model:` setting in this repo's skills and agents follows this rule.
 - Read the concept critically before planning. If the argument has a weak premise, a
   missing counterargument or a claim the data may not support, say so at the top of the
   plan. Adjie wants the weakness first, not applause.
@@ -137,7 +144,7 @@ say what each section asks and answers, and the writers word them in their own l
 For a post in Indonesian (alone or with English), the Indonesian title, description and
 opening narrative and any tone-choice samples are not written by the context that
 writes the English. Spawn the
-Indonesian writer agent (Step 3) with the concept and a short note of what each piece must
+Indonesian writer agent (Step 3, mid-tier model) with the concept and a short note of what each piece must
 do, have it write them natively, and run the evaluator on them before they go into the
 plan. If you cannot spawn agents, write the Indonesian pieces first, before any English
 prose, and run the evaluator yourself.
@@ -437,7 +444,7 @@ paragraphs. Repeat until the checker says PASS.
 
 ### 3g. Substantive review, all languages
 
-Spawn a fresh substantive-editor agent using `.claude/agents/substantive-editor.md`, one per
+Spawn a fresh substantive-editor agent (mid-tier model, escalation rule above) using `.claude/agents/substantive-editor.md`, one per
 post, with the full post, approved primary intention and evidence ledger. Give an Indonesian
 editor the Indonesian material and ledger without the English twin or English draft prose.
 If agents are unavailable, do a separate full editorial pass and disclose that independence

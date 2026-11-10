@@ -130,3 +130,10 @@ are authoritative in `adjie-writing-style/references/editorial-safeguards.md`. A
 must not turn an assumption/model output into a fact or fabricate autobiographical material.
 Headings may be questions, statements or short labels. Do not impose rhetorical-device,
 question-heading or section-count quotas; retain publication and same-section pointer checks.
+
+## Model tiers
+
+Sub-agents (writers, evaluators, checkers, substantive editor, research) run on the
+mid-level model (Sonnet, or the equivalent at another provider). The top-level model only
+orchestrates, talks to Adjie and makes final calls; it is escalated to for a sub-agent only
+to settle a disputed substantive claim (`ai-assisted-blog-post`, "Mid-tier does the work").

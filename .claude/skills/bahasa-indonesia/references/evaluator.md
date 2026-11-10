@@ -12,8 +12,9 @@ is a finding, even if it is grammatical.
   agent that knows the English reads a calque as normal. Give it only the Indonesian file
   and this skill.
 - **Yourself, for a small edit:** the changed paragraphs and one paragraph either side.
-- **On Sonnet.** Spawn the evaluator agent with `model: "sonnet"`; the main context
-  (Opus) only orchestrates and applies the findings.
+- **On the mid-tier model.** Spawn the evaluator agent with `model: "sonnet"` (or the
+  mid-level equivalent at another provider); the main context (top-tier) only orchestrates
+  and applies the findings.
 - **Report fat as well as calques.** A sentence that piles on detail the argument does not
   use (a side example's opening date, length, stations, ridership or funder) is a
   *wajib* finding: propose deleting it (`adjie-writing-style`, "Every sentence earns its
