@@ -149,16 +149,19 @@ KaTeX and Mermaid load only on a post that uses them.
 ### Writing for search and AI answers
 
 - Make the `description` a hook: state the question or the surprise and leave the answer for
-  the post ("..., bahkan bisa lebih banyak. Gimana hitungannya?"). Answer the question in the
-  first paragraph (the **In short** box), which is what gets quoted.
-- Use question-style `##` headings ("How long until buying pays off?") and short paragraphs
-  under them.
+  the post ("..., bahkan bisa lebih banyak. Gimana hitungannya?"). Use the **In short** box for an accurate summary of the approved primary intention,
+  targeting 40 to 90 words while preserving material conditions. Metadata targets never
+  justify a misleading summary; narrow the claim or document a justified exception.
+- Use clear `##` headings: questions, statements and short labels are all acceptable.
+  Keep paragraphs readable; no question-heading or answer-first quota.
 - Make every section stand on its own, because search snippets and AI answers quote one
   section at a time. Point only at a figure, table or chart in the same section ("the
   table below" when the table is right there); never "see the screenshot below" for one
   three sections down, or "as I showed" for something in another section. State the fact
   instead. `.claude/skills/adjie-writing-style/scripts/check-references.py <file>` checks it.
-- Give real numbers, sources and dates. Set `last_modified_at` when you update a post.
+- Give evidence and provenance, distinguishing sourced facts, model outputs, assumptions,
+  personal observations and interpretations. Preserve decision-changing conditions.
+  Personal claims must be supplied or confirmed by Adjie. Set `last_modified_at` when you update a post.
 - Link to the relevant tool and to related posts.
 
 ## What the site gives every page
@@ -235,3 +238,14 @@ fast as without them.
 | `assets/css/blog.css` | Design tokens (copied from the tool's `dark.css` / `light.css`) and styles |
 | `assets/js/blog.js` | Theme button, embed theme sync, maths, diagrams, code copy, alerts, comments |
 | `en/category/`, `id/kategori/` | One small file per category page |
+
+## Editorial workflow authority
+
+For a new post, use `ai-assisted-blog-post/SKILL.md`: ask the primary reader intention and
+scope during planning; offer targeted doubtful tone/word choices; save explicit selections.
+The shared editorial safeguards and approved-voice protocol live in
+`.claude/skills/adjie-writing-style/references/`. Indonesian contextual word choices live in
+`.claude/skills/bahasa-indonesia/references/word-preferences.md` alongside the corrections.
+Use rhetorical devices selectively, not as mandatory features. Every new post or rewrite
+gets a fresh substantive-editor review of the full argument and evidence ledger. Mechanical
+passes alone do not establish factual validity, authenticity or editorial quality.

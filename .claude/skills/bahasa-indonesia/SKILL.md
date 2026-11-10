@@ -20,6 +20,27 @@ Nothing in Indonesian is finished until it passes the evaluator: the script
 [`references/evaluator.md`](references/evaluator.md), done by someone who has not seen the
 English (see "Evaluate before handing over").
 
+## Author preference and evidence safeguards
+
+Read `../adjie-writing-style/references/editorial-safeguards.md` and the explicit
+language-specific preferences in `references/word-preferences.md` before planning or
+writing. These safeguards govern evidence classes, personal provenance and material
+conditions; a language rewrite must not weaken or change them.
+
+Keep the established native-language rules and evaluation lenses. Do not broadly replace
+them with an unrestricted style. Instead, where acceptable diction, register or emphasis
+is genuinely in doubt, offer Adjie short options during planning, or a focused question
+when a new doubt appears during review. Let him select a wording or supply his own.
+Existing explicit preferences and newer contextual corrections govern such choices.
+Do not repeatedly ask about a settled preference in the same context.
+
+A livelier synonym is not automatically better. An evaluator preference is a suggestion,
+not an author approval. Preserve an acceptable author-approved wording unless it creates
+an actual meaning, accuracy or clarity problem. Silence retains acceptable wording where
+possible but never becomes an approval. No factual correction is presented as a preference.
+Approved exceptions to a style rule must be recorded with context, and maintained
+consistently in this skill, corrections and checker guidance if applicable.
+
 ## The root problem: an English writer, translated
 
 Every mistake Adjie has flagged has one cause: the text was thought in English and then
@@ -156,6 +177,11 @@ that build to the point, with emphasis carried by the structure (*-lah*, *hanya 
 
 ## Idiomatic diction
 
+The pairs below are contextual examples, not unconditional find-and-replace rules.
+Consult explicit word preferences before substituting. When more than one expression is
+natural and none is already approved for this context, present the meaningful choice to
+Adjie rather than assuming that the livelier expression must be his voice.
+
 Choose the word an Indonesian columnist would pick, not the dictionary equivalent of the
 English one. Lively native diction is what separates an essay from machine translation.
 
@@ -263,7 +289,7 @@ Each line is a pattern Adjie corrected (examples in `references/corrections.md`)
 | "this is the part I have to be honest about" | "bagian yang harus saya jujurkan" | "di sinilah saya harus jujur" (don't invent *-kan* verbs to fit the English) |
 | "a professional in Perth saves Rp32m" (a model result) | "menabung sekitar Rp32 juta" | "bisa menabung sekitar Rp32 juta" (a hypothetical or a model result takes *bisa*/*akan*, not a bare verb) |
 | "the examples above are only three points" | "cuma tiga titik" | "cuma tiga jenis" (data points are *contoh*, *jenis* or *kasus*, never *titik*) |
-| "out-earns its loan by about a point" | "satu poin di atas" | "satu persen di atas" (*poin* reads like a score) |
+| An absolute gap between two percentage rates | Ambiguous *satu persen di atas* | *satu poin persentase di atas*, or state both rates directly; keep relative percentage changes distinct |
 | "what the house earns" | "hasil rumah" | "imbal hasil rumah" (see the finance terms) |
 | "a confession first" | "Sekarang pengakuan dulu." | "Sekarang, mari jujur-jujuran dulu." |
 | "immigration country versus birth country" | "negara kelahiran" (means *country of birth*) | "tumbuh dari imigrasi versus tumbuh dari kelahiran" |
@@ -429,7 +455,7 @@ Use *gak* for the casual in-sentence form, *enggak* for the casual standalone fo
 | down payment | DP | uang muka, except the tool's own label "Uang Muka (DP)" |
 | fixed / floating rate | *fixed*, *floating* | tetap, mengambang |
 | rental yield | *rental yield*, alias sewa setahun dibagi harga | hasil sewa |
-| percentage point (casual prose) | persen | poin |
+| percentage point | poin persentase, or state the two rates directly | persen when an absolute rate gap is meant |
 | take-home pay | gaji bersih, glossed once as *take-home pay* | gaji bersih dibawa pulang, a bare "take-home" |
 | home equity | ekuitas rumah (nilai rumah dikurangi sisa utang KPR) at first mention | |
 | property developer | pengembang | developer |
@@ -474,9 +500,13 @@ that has read the English twin reads a calque as fine. So:
    a rewrite, the evaluator is a fresh agent that has not seen the English (spawn one with
    the prompt in that file). For a small edit, run it yourself on the changed paragraphs
    and the ones around them.
-3. **Loop until it passes:** apply the findings, run the script again, and send the
+3. **Loop until it passes:** apply genuine errors and established applicable corrections;
+   offer doubtful acceptable wording as an author choice rather than a forced synonym.
+   Persist explicit choices and update contextual rule exceptions where needed, then apply the findings, run the script again, and send the
    changed paragraphs back to the evaluator until the verdict is LULUS. Don't hand the
    text to Adjie, commit or push before then.
-4. When Adjie corrects something the evaluator passed, add the pair to
+4. When Adjie explicitly chooses wording, persist it in `references/word-preferences.md`
+   and the shared voice reference with context and approval provenance. Never log silence
+   or evaluator choices as author decisions. When he corrects something the evaluator passed, add the pair to
    `references/corrections.md`, the rule here, and the pattern to `scripts/cek.py` if a
    regex can catch it.

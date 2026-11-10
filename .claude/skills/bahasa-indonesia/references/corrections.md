@@ -19,7 +19,7 @@ Translated too closely from the English twin, `rent-vs-buy-calculator-explained`
 | Kalau semua gangguannya dibuang, pertanyaan uangnya tinggal beberapa hal: | Kalau faktor-faktor lain dibuang, pertanyaannya bisa dijawab dengan beberapa jawaban: | Bad direct translation of "strip away the noise, the money question comes down to". |
 | KPR bikin kamu menikmati hasil rumah atas 100% harga | KPR bikin kamu bisa menikmati imbal hasil kenaikan harga rumah atas 100% harga dasar | Name the return precisely, and say *bisa*. |
 | jadi anggap saja seperti kompas, bukan kalkulator | jadi anggap saja kompas, bukan kalkulator | *anggap* already makes the comparison. |
-| sekitar satu poin di atas bunga pinjamannya | sekitar satu persen di atas bunga pinjamannya | *poin* doesn't read as a percentage point. |
+| sekitar satu poin di atas bunga pinjamannya | sekitar satu persen di atas bunga pinjamannya | Historical preference; superseded for technical precision in this update: use *poin persentase* for an absolute rate gap, or state both rates. Do not equate it with relative percent. |
 | saya gak akan mengira | saya gak akan kira | Casual sentence, bare verb. |
 | angka yang jauh lebih tenang | angka yang jauh lebih moderat | A "calmer" number is *moderat*. |
 | rumah tangganya memilikinya | sebagian besar rumah tangga punya rumah | Say what is meant; no *-nya* chain. |
@@ -142,3 +142,15 @@ place"; the evaluator reports such a sentence as *wajib*.
 | Kedua proyek BRT itu dibiayai lewat program MASTRAN dengan pinjaman Bank Dunia dan AFD. | (deleted) | Who funds the BRT is not what the section argues. |
 | Jalur ... sepanjang 15,7 km, yang punya 13 stasiun (tujuh stasiun layang dan enam stasiun bawah tanah), ... dan didanai pinjaman JICA. | Jalur ... sepanjang 15,7 km ... atau kira-kira Rp1 triliun per kilometer. | Keep the number that proves the point (cost per km), drop the ones that describe the object. |
 | Stasiun Kereta Hongqiao, yang punya 16 peron dan 30 jalur, dibuka pada 1 Juli 2010 | Stasiun Kereta Hongqiao dibuka pada 2010 | Platform counts and exact dates are trivia here. |
+
+## November 2026: approved workflow changes
+
+Adjie requested targeted tone and word-choice options during planning, with his explicit
+selections saved over time. This is approval of a process, not approval of any new example
+wording. Retain the existing native-language evaluation; present genuinely doubtful
+acceptable alternatives for author judgement rather than forcing livelier synonyms.
+
+The percentage-point correction is technical: *poin persentase* is the absolute difference
+between percentage rates; *persen* expresses a proportion or relative percentage change.
+The historical wording pair above remains as provenance, not an active substitution rule.
+Use `word-preferences.md` for future explicit contextual selections.
