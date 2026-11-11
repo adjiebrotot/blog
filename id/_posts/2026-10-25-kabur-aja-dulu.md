@@ -2,7 +2,7 @@
 title: "#KaburAjaDulu atau 'di sini murah': di mana tabungan akhir bulan lebih tebal?"
 description: "Nasi goreng memang jauh lebih murah di Indonesia, tetapi tabungan di akhir bulan justru bisa jauh lebih tebal di Australia dan Singapura. Berikut hitungannya, lengkap dengan keterbatasannya."
 date: 2026-10-25 09:00:00 +0800
-last_modified_at: 2026-10-29
+last_modified_at: 2026-11-11
 tags: [finance, personal]
 image: /assets/img/og/kabur-aja-dulu.jpg
 image_alt: "Seorang pria duduk di warung sambil memegang struk dan tersenyum, di depannya ada sepiring nasi goreng dan segelas es teh"
@@ -18,9 +18,9 @@ bmc_message: "Di mana pun kamu menabung, traktir saya kopi susu supaya saya bisa
 
 ## Apa itu #KaburAjaDulu, dan kenapa ada dua kubu?
 
-Tagar ini sebenarnya sudah muncul sejak 2023, lalu meledak di awal 2025 sebagai luapan kekecewaan, terutama dari anak muda, terhadap kondisi di dalam negeri.[^kad] Tak lama kemudian muncul kubu tandingan yang berpendapat bahwa hidup di Indonesia justru lebih enak karena harga-harganya murah. Kekecewaan itu sendiri bukan tanpa dasar. Salah satu contohnya adalah ketimpangan yang kembali melebar: rasio Gini naik dari 0,363 (September 2025) menjadi 0,368 (Maret 2026).[^gini] Cukup sampai di situ soal kondisi dalam negeri, karena tulisan ini membahas uang, bukan politik.
+Tagar ini sebenarnya sudah muncul sejak 2023, lalu meledak di awal 2025 sebagai luapan kekecewaan, terutama dari anak muda, terhadap kondisi di dalam negeri.[^kad] Tak lama kemudian muncul kubu tandingan yang berpendapat bahwa hidup di Indonesia justru lebih enak karena harga-harganya murah. Tulisan ini membahas hitungan keuangannya, bukan perdebatan politiknya.
 
-Sekarang, mari jujur-jujuran dulu. Saya punya banyak teman yang bekerja di luar negeri, sebagian besar di Singapura, Inggris, Amerika Serikat, Jepang, dan Australia, negara tempat saya tinggal sekarang. Tentu saja sampel ini tidak sepenuhnya mewakili populasi secara luas (ada bias): mereka seumuran dengan saya, sedang berada di usia paling produktif, dan teman yang tidak betah sudah lama pulang sehingga tidak ikut terhitung. Meski begitu, ketika saya tanya apakah mereka mau kembali ke Indonesia, hampir semuanya menjawab sama: enggak mau. Karena sampelnya bias, saya tetap tidak mau bersandar pada testimoni seperti itu dan lebih memilih bicara dengan angka.
+Hampir semua teman saya yang bekerja di luar negeri tidak ingin kembali ke Indonesia. Sampel ini jelas bias: mereka seumuran dengan saya, berada di usia produktif, dan yang tidak betah sudah pulang sehingga tidak ikut terhitung. Saya tidak mau bersandar pada testimoni itu dan lebih memilih membandingkan angkanya.
 
 ## Benarkah hidup di Indonesia lebih enak karena murah?
 
@@ -32,7 +32,7 @@ Soal rasa, saya pun mengakui nasi goreng Rp20 ribuan di Indonesia memang lebih n
 <img src="/assets/img/kad-ill-warung-struk.webp" alt="Seorang pria duduk di warung sambil memegang struk dan tersenyum, di depannya ada sepiring nasi goreng dan segelas es teh" width="1456" height="1087" loading="lazy">
 </figure>
 
-Pertanyaannya, berapa persen gajimu yang benar-benar habis untuk nasi goreng? Makan di luar hanya menyumbang sekitar 15 persen dari total belanja bulanan. Sisanya habis untuk sewa, bahan makanan, listrik dan air, ongkos transportasi, tagihan ponsel, dan barang-barang lain yang kamu beli. Bagian untuk nasi goreng hanya secuil, dan tidak ada orang yang menghabiskan seluruh gajinya untuk nasi goreng.
+Pertanyaannya, berapa persen gajimu yang benar-benar habis untuk nasi goreng? Makan di luar hanya menyumbang sekitar 15 persen dari total belanja bulanan. Sisanya habis untuk sewa, bahan makanan, listrik dan air, ongkos transportasi, tagihan ponsel, dan barang-barang lain yang kamu beli.
 
 Ada satu hal lagi yang perlu diingat supaya perbandingannya tidak berat sebelah. Per Agustus 2025, rata-rata upah buruh di Indonesia hanya Rp3,33 juta sebulan,[^bpsupah] sehingga gaji Rp10 juta tadi sudah tiga kali lipat rata-rata. Artinya, tulisan ini lebih relevan bagi kamu yang memang punya pilihan untuk pindah, bukan untuk semua orang.
 
@@ -46,7 +46,7 @@ Jawabannya ada pada dua jenis barang dan jasa yang biasa dibedakan para ekonom: 
 | Contoh | Nasi goreng di restoran, sewa, potong rambut, jasa tukang | Baju, ponsel, laptop, mobil, bensin |
 | Harganya mengikuti | Upah dan sewa setempat | Harga pasar dunia (kurang lebih) |
 
-Nasi goreng di restoran termasuk barang *non-tradable*. Coba pikirkan bagian mana dari sepiring nasi goreng restoran yang tidak bisa diimpor: kokinya, pelayannya, dan bangunan restorannya, yang semuanya harus ada di tempat. Di negara maju, upah koki dan sewa ruko memang tinggi, dan biaya itu diteruskan ke pembeli, termasuk kita. Itulah sebabnya nasi goreng restoran di Perth mahal: bukan karena restorannya serakah, melainkan karena upahnya tinggi.
+Nasi goreng restoran termasuk barang *non-tradable*: koki, pelayan, dan bangunannya harus ada di tempat. Upah pekerja dan sewa ruko yang tinggi di negara maju diteruskan ke harga makanan yang kita bayar.
 
 Lain ceritanya dengan barang *tradable*. Baju, kendaraan, elektronik, dan bensin harganya relatif sama di seluruh dunia (bensin pun mengikuti harga minyak dunia, kecuali yang harganya diatur pemerintah seperti di Indonesia). iPhone tidak mendadak jadi murah hanya karena dijual di Jakarta.
 
@@ -54,9 +54,7 @@ Bahan makanan berada di antara keduanya. Beras dan daging memang bisa diperdagan
 
 ## Berapa yang tersisa di akhir bulan? Skenario A: pekerja bergaji rendah
 
-Agar adil, saya menguji dua kelompok pekerja. Untuk kedua skenario, saya memakai [*tool* Cost of Living Comparator](https://tool.adjiebrotots.com/costofliving-comparator/) dalam mode **Detailed** dan daftar pengeluaran yang sama untuk ketiga kota, yaitu milik seorang lajang yang menyewa tempat tinggal dengan tipe yang sama, kadang masak sendiri dan kadang jajan di luar, serta bepergian dengan motor atau transportasi umum. Perbandingannya pun benar-benar *apple to apple*. Jakarta saya jadikan titik awal, lalu *tool* ini memperkirakan setiap baris pengeluaran (sewa, makanan, listrik dan air, bensin, kesehatan, dan seterusnya) untuk Perth dan Singapura berdasarkan indeks harga masing-masing kota. Dengan begitu, kamu bisa melihat selisihnya baris demi baris.
-
-Skenario pertama memakai gaji pekerja bergaji rendah di ketiga kota.
+Saya memakai [*tool* Cost of Living Comparator](https://tool.adjiebrotots.com/costofliving-comparator/) dalam mode **Detailed** untuk membandingkan dua kelompok pekerja. Kedua skenario memakai anggaran seorang lajang: menyewa tipe tempat tinggal yang sama, kadang masak dan kadang makan di luar, serta memakai motor atau transportasi umum. Pengeluaran Jakarta menjadi titik awal, lalu setiap pos diperkirakan untuk Perth dan Singapura berdasarkan indeks harga kota.
 
 - **Jakarta:** UMP DKI 2026 sebesar Rp5.729.876 per bulan, yang saya anggap sebagai gaji bersih (*take-home pay*).[^ump]
 - **Perth:** upah minimum nasional Australia A$26,44 per jam. Untuk kerja penuh waktu 38 jam seminggu, upah mingguannya A$1.004,90 (berlaku sejak 1 Juli 2026).[^fwc] Setelah dipotong pajak penghasilan untuk penduduk pajak Australia (*resident tax*) dan *Medicare levy* (iuran 2% untuk layanan kesehatan publik), gaji bersihnya sekitar A$3.769 per bulan.[^ato]
@@ -116,8 +114,6 @@ Kamu bisa menyusun skenariomu sendiri di [Cost of Living Comparator](https://too
 
 ## Apa yang bisa kamu beli dengan tabungan itu?
 
-Ada satu hal yang sering terlupakan dalam perdebatan ini: kalau harga barang *tradable* sama di mana-mana, gaji yang lebih besar otomatis berarti daya beli yang lebih besar pula.
-
 Ambil contoh iPhone 18 Pro 256GB yang baru dirilis bulan ini. Harga resminya sekitar Rp27,5 juta di Indonesia, A$2.099 di Australia, dan S$1.899 di Singapura.[^iphone] Kalau dikonversi dengan kurs A$1 = Rp12.710 dan S$1 = Rp14.152, harga di Australia dan Singapura setara dengan Rp26,7 juta dan Rp26,9 juta, hampir sama dan malah sedikit lebih murah. Sekarang bandingkan harga itu dengan gaji bersih pekerja berupah minimum di ketiga kota:
 
 ```mermaid
@@ -141,7 +137,7 @@ Gaji bukan satu-satunya alasan untuk pindah. Berikut beberapa hal yang saya rasa
 - **Infrastruktur yang lebih baik**, termasuk taman dan transportasi umum.
 - **Gejolak sosial yang lebih jarang, karena kesenjangannya relatif lebih kecil.** Rasio Gini Australia untuk pendapatan setelah pajak dan tunjangan (*disposable income*) sebesar 0,307 pada 2022-23, sementara rasio Gini pengeluaran Indonesia sebesar 0,368 pada Maret 2026.[^gini] Karena ukurannya berbeda, anggap saja perbandingan ini gambaran kasar, bukan angka yang persis. Untuk Singapura, saya tidak dalam posisi untuk menarik kesimpulan.
 - **Layanan publik yang benar-benar melayani.** Dari pengamatan pribadi saya, bukan dari hitungan, ini terjadi karena setiap petugas publik relatif melayani lebih sedikit penduduk.
-- **_Capital freedom_ (kebebasan menaruh modal).** Secara hukum, penduduk Indonesia bebas memiliki dan menggunakan devisa.[^uu] Dalam praktiknya, berinvestasi di instrumen luar negeri dari Indonesia terasa sulit, padahal investasi semacam itu berguna sebagai pegangan kalau-kalau negara tempat kita tinggal sedang tidak baik-baik saja. Di negara yang tergolong pasar maju (*developed market*), kamu biasanya bebas memarkir uang di negara lain. Hambatan di Indonesia lebih banyak berupa akses yang terbatas dan urusan praktis yang merepotkan, bukan larangan. Bagian tentang hambatan ini berdasarkan pengalaman saya sendiri, bukan tafsir atas bunyi pasal.
+- **_Capital freedom_ (kebebasan menaruh modal).** Secara hukum, penduduk Indonesia bebas memiliki dan menggunakan devisa.[^uu] Dalam praktiknya, berinvestasi di instrumen luar negeri dari Indonesia terasa sulit, padahal investasi semacam itu berguna sebagai pegangan kalau-kalau negara tempat kita tinggal sedang tidak baik-baik saja. Hambatan di Indonesia lebih banyak berupa akses yang terbatas dan urusan praktis yang merepotkan, bukan larangan. Bagian tentang hambatan ini berdasarkan pengalaman saya sendiri, bukan tafsir atas bunyi pasal.
 
 <figure>
 <img src="/assets/img/kad-ill-laptop-invest.webp" alt="Seorang perempuan duduk di meja, satu tangan di keyboard laptop yang layarnya menampilkan grafik naik, tangan lainnya memegang ponsel, dengan bola dunia kecil di meja" width="1456" height="1087" loading="lazy">
@@ -149,7 +145,7 @@ Gaji bukan satu-satunya alasan untuk pindah. Berikut beberapa hal yang saya rasa
 
 ## Apakah semua orang cocok untuk kabur?
 
-Tentu tidak. Keberatan bahwa tidak semua orang cocok untuk kabur memang yang paling kuat, dan sebagian isinya benar:
+Tidak semua orang cocok untuk pindah. Ada beberapa hal yang tidak boleh luput dari hitungan:
 
 - **Tidak semua orang bisa pergi.** Visa kerja terampil mensyaratkan tawaran kerja, sponsor dari perusahaan, dan gaji yang memenuhi batas minimum. Karena syarat itu, skenario upah minimum lebih tepat dibaca sebagai ilustrasi tentang bagaimana harga terbentuk, bukan sebagai jalur pindah yang realistis.
 - **Ada biaya yang tidak masuk hitungan**, seperti harus hidup jauh dari keluarga, ongkos pindah dan visa, serta masa-masa awal yang sepi.

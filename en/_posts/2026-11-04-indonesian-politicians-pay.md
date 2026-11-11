@@ -3,6 +3,7 @@ title: "Indonesian politicians' pay is so f*cked up"
 seo_title: "Indonesian politicians' pay vs Australia's: a migrant's view"
 description: "In almost two years in Perth, I've never seen a politician's motorcade. In Jakarta it was a daily sight. What does each country pay the people at the top?"
 date: 2026-11-04 09:00:00 +0800
+last_modified_at: 2026-11-11
 tags: [politics]
 image: /assets/img/og/indonesian-politicians-pay.jpg
 image_alt: "A heavy-set Indonesian politician in a dark suit and black peci sits on a gold throne eating a fried chicken leg while ordinary Indonesians look on in shock, and an Australian official in a plain suit stands to one side waving a small Australian flag"
@@ -20,31 +21,23 @@ bmc_message: "I get no politician's allowance, so buy me a coffee to keep me wri
 
 ## What does power sound like in Jakarta?
 
-In Jakarta, power has a soundtrack: a siren. You pull over, a convoy of black SUVs with strobe lights screams past, and somewhere inside is a minister, or just a member of parliament running late. You learn not to ask. I lived with that sound for more than 25 years. Then I moved to Perth, and in almost two years I have not seen a single motorcade. Not for a minister, not even for the Premier of Western Australia, the most powerful person in the state.
+In Jakarta, sirens and convoys of black SUVs were a daily sight. I lived with them for more than 25 years. In almost two years in Perth, I have not seen a single motorcade, not even for the Premier of Western Australia.
 
-That silence made me curious, so I did what an engineer does with a feeling: I turned it into numbers. How much do the people who run each country take home, compared with the people at the bottom of the pay scale?
+That contrast made me curious: how much do the people who run each country take home, compared with ordinary workers?
 
-The answer, in one line: in Indonesia an official is treated like royalty, and in Australia an MP is treated like a manager. The pay is only part of it. The rest is the perks around the pay, the sirens, and whether the public can see where each dollar goes.
+The pay is only part of the comparison. There are also the perks, the escorts and whether the public can see where the money goes.
 
 ## Why is an Indonesian immigrant writing about Australian politicians?
 
-Because Australia is the clearest mirror I have for Indonesia, not because Australians need me to explain their own country to them. A few disclaimers first, so nobody reads this as something it isn't.
-
-- **This is not about salaries or the cost of living in Perth.** That is a different post.
-- **This is not about how a developed country does everything better.** Maybe another post, one day.
-- **This is not a love letter to the Australian government.** Plenty of Australians will disagree with how I describe their politicians, and they know them far better than I do. Labor, the Coalition, the Greens, One Nation: none of them are angels.
-
-I grew up in Jakarta and lived in Indonesia for more than 25 years. I have lived in Perth for almost two. So please take this as an outsider's perspective: someone who knows the Indonesian side from the inside, and is still learning the Australian one.
+Australia is the clearest comparison I have for Indonesia. This is an outsider's perspective, not an endorsement of the Australian government: I know the Indonesian side from the inside and am still learning the Australian one.
 
 ## What is a "fair go", and why does it matter for what leaders earn?
 
 A "fair go" is the Australian idea that everyone deserves an equal chance, whatever their background, and it matters because a culture built on it is suspicious of leaders who live above everyone else. Its partner is mateship: loyalty and solidarity between equals, and helping each other through hard times. Both are written into the Australian Values Statement that visa applicants sign.[^values]
 
-Some history explains where that comes from. Australia began in 1788 as a British penal colony. The United States was founded partly by religious dissidents, and Canada kept close ties to Britain; Australia's first settlers were mostly convicts and the soldiers who guarded them. The convicts' resentment of the British class system is said to have left a culture that distrusts anyone who acts superior. Australians even have a name for cutting such people down to size: tall poppy syndrome.
+Australia is not the most equal country in the world. Its income Gini coefficient after tax was 0.307 in 2022-23,[^gini] and the Nordic countries are clearly more equal.[^oecd] Indonesia's Gini was 0.368 in March 2026, measured on spending rather than income, which usually makes inequality look smaller than it is.[^gini]
 
-Now the honest part. Australia is not the most equal country in the world. Its income Gini coefficient after tax was 0.307 in 2022-23,[^gini] and the Nordic countries are clearly more equal.[^oecd] Indonesia's Gini was 0.368 in March 2026, and that is measured on spending rather than income, which usually makes inequality look smaller than it is.[^gini]
-
-The other honest part is money. Australia's GDP per person was about US$65,000 in 2025, Indonesia's about US$5,100: roughly 13 times less.[^imf] The average Australian punter is rich by world standards, which is why they walk around Bali like its de facto kings.
+Australia's GDP per person was about US$65,000 in 2025, Indonesia's about US$5,100: roughly 13 times less.[^imf]
 
 ## How much does the Prime Minister earn compared with a typical worker?
 
@@ -56,7 +49,7 @@ In Australia, every federal MP gets a base salary of A$239,270 a year, and the P
 
 In Indonesia, the president's pay is a base salary (*gaji pokok*) of Rp30,240,000 plus a position allowance of Rp32,500,000: Rp62,740,000 a month, unchanged since 2001.[^setkab] Rp62,740,000 / Rp3,330,000 = 18.8 times.
 
-Fair's fair: a salary frozen for 25 years sounds almost modest. But the headline is not the full story, and the table below is where the two jobs really part ways.
+A salary frozen for 25 years sounds modest, but it leaves out the benefits during and after office:
 
 | Item | Australia: Prime Minister | Indonesia: President |
 | --- | --- | --- |
@@ -68,15 +61,13 @@ Fair's fair: a salary frozen for 25 years sounds almost modest. But the headline
 | Car and driver after office | No | A state car with a driver |
 | Other after office | An office, 3 staff and capped domestic travel, for public duties | Water, electricity and phone bills; healthcare for the ex-president and family |
 
-Australia closed its old defined-benefit parliamentary pension to new members on 9 October 2004; MPs elected after that, including every later Prime Minister, get ordinary accumulation super like any other worker.[^pcss] I'll concede the catch: former Prime Ministers who entered parliament before 2004 still draw the old scheme's pension. They get it because they were MPs before the cut-off, not because they were Prime Minister. There is no special "PM pension". What a former PM does get is an office, consistently three staff and a capped number of domestic trips, for public duties.[^formerpm]
+Australia closed its old defined-benefit parliamentary pension to new members on 9 October 2004; MPs elected after that get ordinary accumulation super like any other worker.[^pcss] Former Prime Ministers who entered parliament before the cut-off can still receive the old scheme's pension, but there is no special pension for being Prime Minister. Former Prime Ministers also get an office, three staff and a capped number of domestic trips, for public duties.[^formerpm]
 
-An Indonesian ex-president, under Law 7 of 1978, keeps a pension of 100% of the last base salary, plus a house with furnishings, a state car with a driver, the household's water, electricity and phone bills, and healthcare for the whole family.[^uu7] The Australian package is a desk to keep doing public work. The Indonesian one is a household, paid for.
+An Indonesian ex-president, under Law 7 of 1978, keeps a pension of 100% of the last base salary, plus a house with furnishings, a state car with a driver, the household's water, electricity and phone bills, and healthcare for the whole family.[^uu7]
 
 ## How much does an MP take home in Jakarta versus Canberra?
 
 A member of the DPR, Indonesia's 580-member House of Representatives, gets pay and allowances worth 22.3 times the average Indonesian wage (19.7 times after tax), and about 85 times once recess funds are counted. An Australian backbench MP's pay and allowances come to 4.2 times the median Australian wage, and about 8.6 times with everything included.
-
-When you hear "DPR" in Indonesia, you picture immense power and a lot of money. In Australia, a backbench MP looks more like a manager or director at a mid-sized company: an executive, not royalty.
 
 <figure>
 <img src="/assets/img/gpi-ill-raja-pejabat.webp" alt="A heavy-set Indonesian politician in a dark suit and black peci sits on a gold throne eating a fried chicken leg while ordinary Indonesians look on in shock, and an Australian official in a plain suit stands to one side waving a small Australian flag" width="1456" height="1087" loading="lazy">
@@ -116,23 +107,21 @@ Against the average wage of Rp3.33 million, the take-home is 19.7 times; gross p
 
 In the table above, the like-for-like comparison is the gross row: 4.2 times in Australia, 22.3 times in Indonesia.
 
-Now the DPR's side, because it deserves a hearing. Recess funds pay for constituency activities, not for the member's lifestyle, and the DPR will say so. Fair. But their use is reported in aggregate and is hard for the public to check, while Australia's comparable office budget is published per person, every quarter, by the Independent Parliamentary Expenses Authority (<span markdown="0">IPEA</span>). Converted at about Rp12,500 to the Australian dollar (November 2026, rounded),[^fx] the DPR take-home is about A$5,250 a month, which sounds modest in Perth. That is exactly why the fair measure is local wages, not exchange rates.
+Recess funds pay for constituency activities, not for the member's lifestyle. Their use is reported in aggregate and is hard for the public to check, while Australia's comparable office budget is published per person, every quarter, by the Independent Parliamentary Expenses Authority (<span markdown="0">IPEA</span>). Converted at about Rp12,500 to the Australian dollar (November 2026, rounded),[^fx] the DPR take-home is about A$5,250 a month. That sounds modest in Perth, which is why I compare pay against local wages rather than exchange rates.
 
 What about size? Indonesia is about as wide as Australia: both span roughly 4,000 to 5,000 km, so travel distance doesn't explain a gap this big.
 
 ## Beyond the pay, why do Indonesian officials act as if they own the road?
 
-Because in Australia, almost nobody in politics gets one. In almost two years in Perth, I have not seen a single motorcade, not even for the WA Premier, who runs the state government.
+In almost two years in Perth, I have not seen a political motorcade, not even for the WA Premier.
 
 The Australian Federal Police (<span markdown="0">AFP</span>) protects "high office holders": the Governor-General, the Prime Minister, ministers, the Presiding Officers of parliament, and the Leader and Deputy Leader of the Opposition, as well as visiting dignitaries such as heads of state, the King included when he visits.[^afp] In practice, only the Prime Minister has full-time close personal protection; ministers get it when a risk assessment calls for it. A backbench MP has no escort and no permanent security. MPs can use Comcar for parliamentary business, but that is a car with a driver, not a convoy that clears the road.
 
 In Jakarta, sirens and strobe lights for the president, ministers and even DPR members were a daily sight. In September 2025, ordinary road users had had enough: the "Stop tot tot wuk wuk" movement (named after the sound of the sirens) went viral, and the traffic police (<span markdown="0">Korlantas Polri</span>) froze the use of sirens and strobes for escorts, though the escorts themselves continued. In late November 2025, they froze escort services altogether for evaluation.[^korlantas]
 
-It took a viral meme to get a pause button. In Perth, nobody ever pressed play.
-
 ## What happens when officials blow taxpayers' money on travel?
 
-In Australia, a trip worth a few thousand dollars can become a national scandal and end in a refund. In Indonesia, a study tour worth billions of rupiah goes ahead over the protests.
+Australia's expense reporting lets the public scrutinise individual trips. Indonesia's study tours show how much harder that scrutiny can be.
 
 Take Anika Wells, the Communications and Sport Minister. From late 2025 she faced scrutiny over a two-day trip to Adelaide in June 2025, costing A$3,681, that coincided with a Labor friend's birthday party.[^wells-trip] The opposition nicknamed her "Air-Miles Anika". She referred herself to IPEA, whose 2026 audit found four claims outside the rules; she repaid A$10,116 (A$8,093 plus a 25% penalty) and apologised.[^wells-repay] Taxpayer-funded family travel got the same treatment: more than A$4 million since the 2022 election,[^family] enough for Prime Minister Albanese to restrict it in December 2025 and move those families from business class to economy.[^albanese]
 
@@ -140,7 +129,7 @@ Now the Indonesian version. In October 2010, eight members of the DPR's ethics c
 
 Nor are today's rules any tighter. Under the Finance Minister's regulation PMK 32/2025, a DPR member travelling abroad gets a daily allowance of US$347 to US$792 (about Rp5.7 million to Rp13 million) per person, per day, before flights and hotels. The top rate is for the UK, where one day's allowance is almost four times the average Indonesian monthly wage.[^per-diem] It took the mass protests of late August 2025 for the DPR to put a moratorium on overseas working visits from 1 September 2025, and even that exempts state invitations.[^moratorium]
 
-And what the public does see comes as an audit total. In its audit of 2023 spending, reported in June 2024, about five months after that year closed, Indonesia's state auditor (<span markdown="0">BPK</span>) found irregular official-travel spending worth Rp39.26 billion across 46 ministries and agencies, fictitious trips included.[^bpk] In Australia, IPEA publishes every politician's claims, per person, every quarter. That's why a A$3,681 flight to Adelaide became a national story, while Indonesians learn an aggregate total months later.
+In its audit of 2023 spending, reported in June 2024, about five months after that year closed, Indonesia's state auditor (<span markdown="0">BPK</span>) found irregular official-travel spending worth Rp39.26 billion across 46 ministries and agencies, fictitious trips included.[^bpk] In Australia, IPEA publishes individual politicians' claims every quarter rather than just an aggregate total.
 
 ## Is Indonesia an outlier, or is this normal?
 
@@ -173,8 +162,6 @@ xychart-beta horizontal
 
 The two highest multiples, Indonesia's 18.8 and the Philippines' 20.8, are if anything too low. Indonesia's is an average, and a median would most likely be lower. The Philippine wage comes from a survey of formal businesses with at least ten workers, which leaves out the informal sector, where pay is lower.
 
-The point is simple. Most countries in the table, rich ones like Norway and Australia and Asian ones like Thailand, Vietnam and South Korea, pay their leader less than 9 times what their people earn. Indonesia sits in the top group with the Philippines. And the 18.8 doesn't even include an ex-president's lifetime perks, while a DPR member, recess funds counted, is at about 85 times the average wage.
-
 Ordinary MPs show the same pattern. For each country I added up the salary and the fixed allowances paid to a backbench MP personally, and divided by the same typical wage as in the leaders' table. Office budgets, staff and constituency funds, the DPR's recess money included, are left out. On that measure a DPR member earns 22.3 times the average Indonesian wage, the highest of the ten countries and well clear of the Philippines in second place at 14.0. MPs in Norway, the UK and the US get between 2 and 3.5 times what their people earn.
 
 | Country | MP's pay and allowances | Typical wage | Multiple |
@@ -202,17 +189,17 @@ China and Vietnam are missing from the MP table on purpose. Most of their legisl
 
 ## What would I rather argue about?
 
-Policy. In Australia, I spend far less of my political energy on what officials do with taxpayers' money, and far more on the policies they make: what to do with the GST, how immigration should be handled, whether the capital gains tax discount is feeding the housing price crisis. Those are real arguments with two real sides, and I have opinions on all of them (just ask anyone who has sat next to me at a barbecue 😂).
+In Australia, I spend less of my political energy on what officials do with taxpayers' money and more on their policies: what to do with the GST, how immigration should be handled, and whether the capital gains tax discount is feeding the housing price crisis.
 
 That should be the bare minimum of political debate: arguing about what our leaders decide, not about what they help themselves to.
 
-So is Indonesia's gap just what a big country looks like? No. Indonesia is about as wide as Australia, and Australia's MPs still live like managers. What Indonesia has is f\*cked-up incentives and opacity: generous pay and perks, sirens on demand, and spending the public can only see in aggregate, months late. None of that is a law of nature. All of it is a choice, and choices can be changed.
+Indonesia's generous pay and perks, escorts and opaque spending are choices, not inevitable consequences of being a big country. They can be changed.
 
 **In Jakarta, you see the motorcade but never the bill; in Perth, you see the bill but never the motorcade.**
 
-I'll admit it: what I feel in Perth, as an immigrant, is a quiet envy. Not of the salaries. Of the silence on the road, and of the boring, itemised reports that make the silence possible.
+What I envy in Perth is the silence on the road and the boring, itemised expense reports.
 
-If you are Indonesian, here is one small thing to start with: ask for the receipts. Per person, published, every quarter, the way IPEA does it for every Australian MP. Then judge your representatives by what they publish, not by how loud their sirens are.
+Ask for the receipts: per person, published every quarter, as IPEA does for Australian MPs. Judge your representatives by what they publish, not by how loud their sirens are.
 
 *[DPR]: Dewan Perwakilan Rakyat, Indonesia's House of Representatives
 *[UMP]: Upah Minimum Provinsi, Indonesia's provincial minimum wage

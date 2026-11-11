@@ -2,7 +2,7 @@
 title: "Lapor pajak suami istri: lebih untung gabung atau pisah SPT?"
 description: "Gabung atau pisah, pajak kebanyakan pasangan sama saja. Gabung lebih untung kalau keduanya bergaji besar, sedangkan pisah (MT) lebih untung kalau gaji salah satunya di bawah PTKP."
 date: 2026-10-25 21:00:00 +0800
-last_modified_at: 2026-10-29
+last_modified_at: 2026-11-11
 tags: [finance]
 image: /assets/img/og/pajak-suami-istri-gabung-atau-pisah.jpg
 image_alt: "Pasangan suami istri duduk di meja makan, istri menunjuk layar laptop, suami memegang selembar kertas"
@@ -10,7 +10,7 @@ keywords: [lapor pajak suami istri gabung atau pisah, lebih untung gabung atau p
 bmc_message: "Sudah hemat pajak? Sisihkan sedikit untuk mentraktir saya kopi susu supaya saya bisa terus menulis!"
 ---
 
-**Singkatnya:** bagi kebanyakan pasangan, pajak gabung dan pisah itu **sama persis**, karena aturannya memang dirancang netral. Bedanya baru terasa di dua kondisi. Kalau suami dan istri sama-sama bergaji besar, **gabung** lebih hemat, bisa sampai puluhan juta setahun. Kalau gaji salah satunya di bawah PTKP-nya sendiri (Rp54 juta setahun), **pisah** yang lebih hemat. Untuk menghitung pajakmu, pakai [*tool* Pisah vs Gabung](https://tool.adjiebrotots.com/pisahvsgabung/id/).
+**Singkatnya:** gabung dan pisah bisa menghasilkan pajak yang sama, tetapi lapisan tarif dan PTKP bisa membuat selisih. Gabung lebih hemat ketika keduanya bergaji besar dan penghasilan istri memenuhi syarat final. Pisah (PH/MT) bisa lebih hemat ketika penghasilan salah satunya di bawah PTKP sendiri (Rp54 juta setahun), sementara pasangannya bergaji cukup besar. Bandingkan penghematannya dengan kerepotan mengurus dua SPT dan restitusi melalui [*tool* Pisah vs Gabung](https://tool.adjiebrotots.com/pisahvsgabung/id/).
 {: .tldr}
 
 * TOC
@@ -18,7 +18,7 @@ bmc_message: "Sudah hemat pajak? Sisihkan sedikit untuk mentraktir saya kopi sus
 
 ## Gabung atau pisah, sebenarnya apa bedanya?
 
-Tiap musim lapor SPT, pertanyaan ini muncul lagi: istri mending punya NPWP sendiri atau ikut suami? Jawabannya ada di satu pasal, yaitu Pasal 8 UU PPh.[^uupph] Pasal ini memandang keluarga sebagai satu kesatuan ekonomi, sehingga titik tolaknya adalah **penghasilan istri dianggap penghasilan suami**. Dari prinsip itu lahir empat status.
+Tiap musim lapor SPT, pertanyaan ini muncul lagi: istri mending punya NPWP sendiri atau ikut suami? Jawabannya ada di satu pasal, yaitu Pasal 8 UU PPh.[^uupph] Pasal ini memandang keluarga sebagai satu kesatuan ekonomi, sehingga titik tolaknya adalah **penghasilan istri dianggap penghasilan suami**.
 
 | Status | Siapa yang lapor | Cara pajaknya dihitung |
 |---|---|---|
@@ -27,17 +27,11 @@ Tiap musim lapor SPT, pertanyaan ini muncul lagi: istri mending punya NPWP sendi
 | **<span markdown="0">MT</span>** (memilih terpisah) | Suami dan istri, masing-masing SPT | Sama persis dengan PH, bedanya tanpa perjanjian pisah harta |
 | **<span markdown="0">HB</span>** (hidup berpisah) | Masing-masing | Benar-benar terpisah, karena ada putusan hakim. Tidak dibahas di sini |
 
-Ada dua hal di tabel itu yang paling sering disalahpahami.
-
 **Pertama, gabung tidak berarti semua penghasilan dicampur.** Kalau gaji istri berasal dari **satu pemberi kerja** dan pekerjaannya tidak berhubungan dengan usaha suami, pajak yang dipotong kantornya dianggap **final**.[^final] Di SPT suami, gaji itu hanya dicatat sebagai penghasilan final dan pajaknya tidak dihitung ulang. Artinya, gaji istri punya lapisan tarifnya sendiri yang dimulai lagi dari 5%.
 
-**Kedua, pisah tidak berarti pajaknya dihitung sendiri-sendiri.** Bagian inilah yang sering bikin orang kaget. Untuk PH dan MT, Pasal 8 ayat (3) menyatakan bahwa penghasilan neto suami dan istri tetap **digabung dulu** dan dikenai tarif sebagai satu kesatuan, baru kemudian pajaknya dibagi sesuai perbandingan penghasilan neto masing-masing.[^contohdjp] Dengan kata lain, yang "pisah" hanya laporannya, bukan hitungannya.
-
-Kalau kamu baru sadar bahwa maknanya justru kebalikan dari yang kamu kira, tenang saja, kamu gak sendirian. 😅
+**Kedua, pisah tidak berarti pajaknya dihitung sendiri-sendiri.** Untuk PH dan MT, Pasal 8 ayat (3) menyatakan bahwa penghasilan neto suami dan istri tetap **digabung dulu** dan dikenai tarif sebagai satu kesatuan, baru kemudian pajaknya dibagi sesuai perbandingan penghasilan neto masing-masing.[^contohdjp] Dengan kata lain, yang "pisah" hanya laporannya, bukan hitungannya.
 
 ### Apa itu PTKP, PKP, dan lapisan tarif?
-
-Sebelum masuk ke hitungan, ada tiga istilah yang perlu kita pahami terlebih dahulu.
 
 - **<span markdown="0">PTKP</span>**, alias bagian penghasilan yang sama sekali tidak kena pajak. Besarnya diatur PMK 101/2016 dan belum berubah sampai sekarang:[^ptkp] Rp54 juta untuk wajib pajak sendiri, ditambah Rp4,5 juta kalau kawin, ditambah Rp54 juta untuk istri yang penghasilannya digabung, dan Rp4,5 juta per tanggungan (maksimal tiga).
 - **Kode PTKP** menyingkat semua itu. <span markdown="0">TK/0</span> berarti tidak kawin tanpa tanggungan (Rp54 juta). <span markdown="0">K/1</span> berarti kawin dengan satu tanggungan (Rp63 juta). <span markdown="0">K/I/1</span> berarti kawin, penghasilan istri digabung, satu tanggungan (Rp117 juta).
@@ -96,8 +90,6 @@ Contohnya, ada pasangan dengan satu anak: suami bergaji Rp96 juta setahun (Rp8 j
 
 Seberapa umum kondisi ini? Menurut BPS, rata-rata upah buruh pada Agustus 2025 adalah Rp3,59 juta per bulan untuk laki-laki dan Rp2,86 juta untuk perempuan.[^bps] Pasangan dengan upah sebesar itu bahkan tidak kena pajak sama sekali, karena gaji masing-masing di bawah PTKP. Bagaimana dengan pasangan yang sama-sama bekerja dan punya satu anak di Jakarta, provinsi dengan upah rata-rata tertinggi (Rp5,9 juta per bulan)? Pajak mereka Rp1,23 juta setahun, baik gabung maupun pisah.
 
-Bagi kebanyakan keluarga Indonesia, gabung atau pisah tidak mengubah besarnya pajak, dan **yang berubah hanya tingkat kerepotannya.**
-
 ## Kapan gabung lebih untung?
 
 Gabung lebih untung ketika suami dan istri **sama-sama bergaji besar** dan gaji istri berasal dari satu pemberi kerja.
@@ -111,7 +103,7 @@ Ambil contoh pasangan dengan satu anak: suami bergaji Rp400 juta setahun dan ist
 | Pajak istri | Rp30,9 juta | Rp50,96 juta (3/7 bagian) |
 | **Total setahun** | **Rp84,15 juta** | **Rp118,9 juta** |
 
-Selisihnya **Rp34,75 juta setahun**. Kalau pasangan ini memilih pisah karena mengira "biar masing-masing dihitung sendiri", mereka justru menyerahkan Rp34,75 juta lebih banyak ke negara. Angka itu juga yang akan muncul sebagai kurang bayar di SPT mereka, karena kantor masing-masing hanya memotong Rp84,15 juta.
+Selisihnya **Rp34,75 juta setahun**. Angka itu juga yang akan muncul sebagai kurang bayar di SPT mereka, karena kantor masing-masing hanya memotong Rp84,15 juta.
 
 [Buka contoh ini di *tool* →](https://tool.adjiebrotots.com/pisahvsgabung/id/#open=chartCanvas&s=aG1FLDkaXHOhAFMFlDSFqjUwxFBvCFUOlEaqBPHTVRnDVcGmEakzlxqiqEcqh7W6EQtJWSaCufdDw1jdU0FYI8daHtFAhaygQkp76htAmKQA)
 
@@ -148,7 +140,7 @@ Polanya sama kalau dibalik: istri bergaji besar dan suami berpenghasilan kecil. 
 
 Kalimat ini yang paling sering saya dengar, dan ada juga versi romantisnya: "Suami istri itu satu, masa pajaknya dipisah?"
 
-Saya paham alasannya, tetapi kalau gaji salah satu dari kalian di bawah PTKP-nya sendiri sementara yang satu lagi bergaji cukup besar, memilih gabung "biar gak ribet" (atau karena cinta) adalah **salah strategi**. Kalian jadi menyetor beberapa juta rupiah lebih banyak ke negara setiap tahun hanya untuk menghindari sedikit kerepotan di Coretax, padahal uang sebanyak itu jauh lebih enak dipakai jalan-jalan berdua.
+Kalau penghasilan salah satu dari kalian di bawah PTKP sendiri sementara yang satu lagi bergaji cukup besar, memilih gabung hanya untuk menghindari kerepotan bisa membuat kalian membayar beberapa juta rupiah lebih banyak setiap tahun.
 
 <figure>
 <img src="/assets/img/psg-ill-jalan-jalan.webp" alt="Seorang perempuan menutup ritsleting koper di kasur; di atas koper ada topi pantai dan kacamata hitam, dan di sampingnya ada amplop" width="1456" height="1087" loading="lazy">
@@ -172,9 +164,9 @@ Hitungan *tool* ini berasumsi bahwa semua penghasilan adalah gaji dan gaji istri
 
 ## Jadi, lebih untung gabung atau pisah?
 
-Bagi kebanyakan pasangan, hasilnya **sama saja**, karena aturannya memang dirancang begitu. Kalau gaji kalian sama-sama besar, **gabung** lebih hemat, jadi jangan memilih pisah hanya karena mengira pajaknya akan lebih kecil. Kalau gaji salah satu dari kalian di bawah PTKP, **pisah (MT)** yang lebih hemat, jadi jangan memilih gabung hanya karena malas repot atau karena alasan romantis.
+Kalau penghasilan istri memenuhi syarat final, gabung bisa lebih hemat ketika gaji kalian sama-sama besar, sedangkan pisah (PH/MT) bisa lebih hemat ketika salah satu penghasilan di bawah PTKP dan pasangannya bergaji cukup besar. Kalau hasilnya sama, pilih yang lebih sederhana; kalau ada selisih, timbang penghematannya terhadap urusan dua SPT dan restitusi.
 
-Langkah kecilnya hanya butuh lima menit: sebelum musim SPT berikutnya, buka *tool*-nya, masukkan gaji kalian berdua, dan lihat angkanya. Kalau hasilnya sama, nikmati saja hidup yang gak ribet, tetapi kalau selisihnya sampai jutaan, kalian jadi tahu harus memilih yang mana, dan uang itulah yang nanti bisa kalian bawa jalan-jalan berdua.
+Sebelum musim SPT berikutnya, masukkan gaji kalian berdua ke *tool* dan lihat selisihnya.
 
 *Artikel ini berisi penjelasan umum, bukan nasihat pajak untuk kasusmu. Untuk keputusan yang menyangkut perjanjian pisah harta atau penghasilan di luar gaji, bicarakan dengan konsultan pajak atau KPP tempatmu terdaftar.*
 

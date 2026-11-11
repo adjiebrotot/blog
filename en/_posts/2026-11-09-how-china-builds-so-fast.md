@@ -2,6 +2,7 @@
 title: "Build it and they will come: how China builds so fast"
 description: "China opened 2,862 km of high-speed rail in 2025 alone, often before anyone lived along it. How does it build so fast, and why can't Indonesia copy it?"
 date: 2026-11-09 09:00:00 +0800
+last_modified_at: 2026-11-11
 tags: [politics]
 image: /assets/img/og/how-china-builds-so-fast.jpg
 image_alt: "Split illustration: on the left, a panicked engineer in an orange hard hat grips his helmet in front of a jammed street of cars, motorbikes and a crowded bus; on the right, a calm engineer with a rolled blueprint points at a new station rising on open land beside a wide, empty road"
@@ -10,7 +11,7 @@ keywords: [how China builds so fast, China infrastructure, build it and they wil
 bmc_message: "Supply-push in action: the button is already built. Now you come and buy me a coffee!"
 ---
 
-**In short:** China builds so fast because it builds supply-push: the state lays rail, stations and metros first, on land it owns, pays for them with the land value they create, and keeps the plan going for decades. That gave it 50,000 km of high-speed rail by 2025 and urban rail in 58 cities. It works where a place has a reason to exist, is connected from day one and outlives its leaders. Indonesia copied the building, not the connecting or the continuing.
+**In short:** China builds ahead of demand. State land ownership, land-value financing and long-term plans help it do that at scale: 50,000 km of high-speed rail by 2025 and urban rail in 58 cities. The risk pays off where people and businesses have a reason to come, transport connects them and the plan survives changes of leadership. Several Indonesian projects have copied the construction without securing those conditions.
 {: .tldr}
 
 * TOC
@@ -32,7 +33,7 @@ So far I have been to 14 Chinese jurisdictions: the four municipalities of Beiji
 <figcaption>The 14 places I have been to so far, shaded. Map: boundaries from DataV (Alibaba Cloud).</figcaption>
 </figure>
 
-The impression repeats wherever I go. A high-speed rail network that reaches cities I had never heard of. Train stations the size of airports (the first few times, I caught myself looking for the check-in counter 😅). Metro maps as tangled as Singapore's, in city after city. And skyscraper skylines not only in Shanghai and Beijing, but in second- and third-tier cities whose names I had to practise before I could say them to a taxi driver.
+On my trips, I have seen high-speed trains reaching unfamiliar cities, stations the size of airports, extensive metro networks and skyscraper skylines well beyond Shanghai and Beijing.
 
 The numbers back the impression up. At the end of 2025, China had 165,000 km of railway, 50,000 km of it high-speed rail (<span markdown="0">HSR</span>).[^nra] Fifty-eight mainland cities had urban rail, 13,068 km of it in total.[^camet] For scale, Singapore, the city most of Southeast Asia treats as the gold standard for public transport, has 271.3 km of MRT and LRT.[^lta] Shanghai's metro alone runs 906 km.[^sh906] Chengdu, a city many people outside China couldn't place on a map, has 870 km of urban rail.[^camet] That is more than three Singapores in a single city.
 
@@ -41,21 +42,17 @@ The numbers back the impression up. At the end of 2025, China had 165,000 km of 
 <figcaption>Me and a Fuxing (复兴号) CR400BF in winter. The fur hat was for the cold, not for the photo. Photo: Adjie.</figcaption>
 </figure>
 
-My stake: I spent my first 25-plus years in Indonesia, and I have lived in Australia for almost two. Both countries build. Both argue about it endlessly. Neither builds like this.
-
-So this post asks two things. How does China build so fast? And why can't Indonesia, which has tried hard to copy it, simply do the same?
+I spent my first 25-plus years in Indonesia and have lived in Australia for almost two. Neither builds infrastructure at the scale I have seen in China.
 
 ## Demand-pull or supply-push: what are the two ways to build a city?
 
-Most countries build **demand-pull**: they build in response to proof. They wait for real, measured signals (a jammed road, a full train, a lost opportunity) and then build to fix that bottleneck. China, in its big projects, builds **supply-push**: planners build ahead of demand, from a long-term forecast, a master plan or a vision, and expect the people and the businesses to follow. Build it, and they will come.
+Most countries build **demand-pull**: they build in response to proof. They wait for real, measured signals (a jammed road, a full train, a lost opportunity) and then build to fix that bottleneck. China, in its big projects, builds **supply-push**: planners build ahead of demand, from a long-term forecast, a master plan or a vision, and expect the people and the businesses to follow.
 
-Demand-pull has real strengths. Little capital sits idle, because every rupiah goes where the need is already proven. The commercial risk is lower too, because the users already exist: you know the train will be full, since the road beside it is full today.
+Demand-pull puts capital where users already exist, reducing the risk of building capacity that sits idle.
 
 Its weakness is the price of waiting. By the time demand is undeniable, the city has grown around the problem, so you build inside the congestion: you tunnel under it, you buy land in a built-up city, and you disrupt everyone while you work. Jakarta is the example I know best. Its first MRT line, Phase 1 from Lebak Bulus to Bundaran HI, opened on 24 March 2019: 15.7 km for about Rp16 trn.[^mrt] That is about Rp1 trn per kilometre (my own calculation). Jakarta built it when the traffic had become unbearable, which is exactly the point at which building is hardest.
 
-Supply-push has the opposite profile. Its strength is scale: coordinated, multi-decade projects that shape where a region grows, which industries settle and how much capacity it will have. Building in bulk, on a long plan, also lowers the cost per unit and prevents the chronic under-capacity that demand-pull cities live with. Its weakness is the bet. If the plan is wrong, you have built idle capacity: stations and towers that cost money to run and maintain every year, plus interest if you borrowed to build them.
-
-The table below puts the two side by side.
+Supply-push coordinates projects over decades to shape where a region grows, which industries settle and how much capacity it has. Building at scale can lower unit costs, but a wrong forecast leaves idle capacity with maintenance costs and debt repayments.
 
 | | Demand-pull | Supply-push |
 | --- | --- | --- |
@@ -65,15 +62,13 @@ The table below puts the two side by side.
 | **Risks** | Builds late and expensively, inside congestion; the city outgrows its network | Idle capacity, running losses and debt if nobody comes |
 | **Examples** | Jakarta MRT, Sydney Metro, most of the world | Shenzhen, Shanghai Pudong, Perth's Yanchep line |
 
-Neither is "the right way". Demand-pull is careful and late. Supply-push is early and risky. The question is what makes the risk pay off.
+Both approaches carry risks. Waiting can make construction harder and more expensive; building early can leave infrastructure unused.
 
 ## How does "build it and they will come" work in China?
 
 China's version of supply-push runs on land. In Chinese cities the land belongs to the state, so a local government can do something an Indonesian or Australian city cannot: build a railway, a road or a metro line to empty land it already owns, and keep the value the new line creates.
 
 The loop goes like this. A local government borrows, usually through a local government financing vehicle (<span markdown="0">LGFV</span>), a company it owns that can raise money off its books. It builds the infrastructure. The land near the new line becomes valuable. The government sells the right to use that land (land-use rights) to developers, and the revenue repays the debt and pays for the next project. At its peak in 2021, land-use-right sales brought China's governments RMB 8,705.1 bn in a single year.[^land]
-
-The flowchart below draws that loop, including the branch where it breaks.
 
 ```mermaid
 flowchart TD
@@ -85,13 +80,11 @@ flowchart TD
   C -. "nobody comes: no jobs, no reason" .-> F["Land does not sell, the debt stays<br/>(Yujiapu)"]
 ```
 
-Two more things keep the loop turning. The first is the plan: China works in Five-Year Plans, and its cities draw master plans that run for decades, so a line drawn on a map in one decade is usually still being built in the next. The second is the incentive: local officials have long been judged on the growth their area produces, and nothing produces growth on paper faster than a construction site.
-
-Does it work? Sometimes spectacularly. Sometimes not at all.
+Long-term plans and local officials' incentives support this approach. China works in Five-Year Plans, while city master plans run for decades. Officials have long been judged on local growth, and construction contributes to that measured growth.
 
 ### Where did "they" actually come?
 
-**Shenzhen** is the most famous case. In 1979 it had 314,100 residents,[^sz1979] and a year later it became a special economic zone (<span markdown="0">SEZ</span>).[^sez] By the end of 2025, Shenzhen had 18,248,500 residents and a GDP of RMB 3,873.18 bn.[^sz2025] That is 58 times the population of 1979. A fair concession: Shenzhen wasn't built by roads alone. It got market reforms that the rest of China didn't have yet, and it sits right next to Hong Kong, which supplied capital, know-how and a door to the world. The infrastructure made the growth possible; the reforms and the neighbour gave it a reason.
+**Shenzhen** is the most famous case. In 1979 it had 314,100 residents,[^sz1979] and a year later it became a special economic zone (<span markdown="0">SEZ</span>).[^sez] By the end of 2025, Shenzhen had 18,248,500 residents and a GDP of RMB 3,873.18 bn.[^sz2025] That is 58 times the population of 1979. Shenzhen wasn't built by roads alone. It got market reforms that the rest of China didn't have yet, and it sits right next to Hong Kong, which supplied capital, know-how and a door to the world. The infrastructure made the growth possible; the reforms and the neighbour gave it a reason.
 
 **Shanghai's Pudong** is the case I have seen with my own eyes. The opening up of Pudong was announced on 18 April 1990, when the east bank of the Huangpu was mostly farmland and warehouses.[^pudong1990] In 2025 Pudong's GDP was RMB 1,876.91 bn: about a third of Shanghai's, which was RMB 5,670.87 bn (33.1%, my own calculation).[^pudong]
 
@@ -100,31 +93,31 @@ Does it work? Sometimes spectacularly. Sometimes not at all.
 <figcaption>Pudong from the Bund. In 1990, most of this side of the river was farmland and warehouses. Photo: Adjie.</figcaption>
 </figure>
 
-**Shanghai Hongqiao** is the hub done right. On the city's western edge, Shanghai put an airport, a high-speed rail station and the metro in one place. The rail station opened in 2010.[^hongqiao] The airport sits about 13 km from the city centre in a straight line, and Metro Line 2 links it to the centre.[^hongqiao][^line2] A business district then grew around the hub: the offices came to where the trains and planes already were.
+**Shanghai Hongqiao** combines its transport connections. On the city's western edge, Shanghai put an airport, a high-speed rail station and the metro in one place. The rail station opened in 2010.[^hongqiao] The airport sits about 13 km from the city centre in a straight line, and Metro Line 2 links it to the centre.[^hongqiao][^line2] A business district then grew around the hub: the offices came to where the trains and planes already were.
 
 **Beijing's Chaoyang CBD** was planned and launched in 1993, in that year's Beijing master plan.[^bjcbd] In 2025 Chaoyang counted more than 140 buildings that each paid over RMB 100m in tax, and 125 regional headquarters of multinationals.[^bjcbd]
 
-What the four have in common: each had an economic reason to exist (a border with Hong Kong, a port and a financial centre, a national transport hub, a capital's business district), each was connected from day one, and each plan kept going across several sets of leaders.
+These projects combined an economic reason to grow with transport connections and sustained planning: Hong Kong's proximity in Shenzhen, the port and financial centre in Pudong, Hongqiao's transport hub and Beijing's business district.
 
 ### Where didn't they come, and who pays?
 
 **Yujiapu**, in Tianjin, is the cautionary tale. It was built by a local government financing vehicle (LGFV) and billed as the world's largest financial district, "China's Manhattan", with at least RMB 200 bn (US$32 bn) invested.[^yjp2019] In 2014 the South China Morning Post (<span markdown="0">SCMP</span>) was already calling its towers "ghost buildings".[^yjp2014] Businesses trickled in by 2016,[^yjp2016] but around 2019 about 80% of its office space was still empty and several towers had stalled.[^yjp2019]
 
-Yujiapu had the towers, the roads and even the financing. What it didn't have was a reason for a bank to leave Beijing or Shanghai and move there. A ghost town is a master plan that forgot to give anyone a reason.
+Yujiapu had towers, roads and financing, but little reason for banks to leave Beijing or Shanghai and move there.
 
 The bill for the whole land-finance loop is now arriving. Land-use-right sales fell from RMB 8,705.1 bn in 2021 to RMB 4,151.8 bn in 2025, the fourth fall in a row: roughly half gone (−52.3%, my own calculation).[^land] Meanwhile the International Monetary Fund (<span markdown="0">IMF</span>) estimates LGFV debt at RMB 71.4 trn in 2025, 50.9% of China's GDP. Counting that debt, China's "augmented" government debt reaches 126.6% of GDP, and the IMF projects 153.7% by 2030.[^imf]
 
-This is the concession that matters. Supply-push is borrowing against the future, and borrowing is only as good as what it builds. I wrote about that difference in [Is debt bad?](/en/is-debt-bad/): debt that builds a productive asset can pay for itself, debt that builds an empty tower cannot. China's loop worked brilliantly while land prices kept rising, and it is now paying for every project where they didn't.
+Supply-push borrows against expected growth. As I discussed in [Is debt bad?](/en/is-debt-bad/), whether borrowing pays off depends on what it earns relative to its cost. Empty towers cannot generate the revenue their financing assumed.
 
 ## Is Australia turning towards the Chinese model?
 
-Partly, yes, and it is a sign that supply-push isn't only for one-party states. Australia's tradition is firmly demand-pull, though. Sydney Metro North West opened on 26 May 2019, into a city that had been congested for years.[^sydmetro] Sydney's suburban trains are double-deckers, which tells you how long the city has been squeezing more people into the network it has.
+Australia also has examples of building ahead of demand, though it often responds to existing congestion. Sydney Metro North West opened on 26 May 2019, into a city that had been congested for years.[^sydmetro]
 
 Melbourne's airport line shows the cost of waiting. In 2018 the Melbourne Airport Rail link was estimated at A$8 to 13 bn. The 2024 Victorian budget delayed it by at least four years, to 2033 at the earliest.[^mar]
 
 Housing is the most visible demand-pull failure. The national Housing Accord aims for 1.2 million new homes in the five years from mid-2024 to June 2029. In April 2026 the National Housing Supply and Affordability Council (<span markdown="0">NHSAC</span>) estimated that only 980,000 would be built in that period, about 220,000 short (my own subtraction).[^nhsac]
 
-Now the change. Perth's METRONET extended the northern line to Yanchep, with stations at Alkimos, Eglinton and Yanchep. It opened on 14 July 2024.[^yanchep] And crucially, those stations were built before the suburbs around them. The satellite images below compare each station in 2024 and 2026.
+Perth offers a different example. Perth's METRONET extended the northern line to Yanchep, with stations at Alkimos, Eglinton and Yanchep. It opened on 14 July 2024.[^yanchep] Those stations preceded much of the development around them. The satellite images below compare each station in 2024 and 2026.
 
 <figure>
 <img src="/assets/img/cbf-sat-alkimos.webp" alt="Satellite image pair of Alkimos station, 2024 on the left and 2026 on the right, the station inside a yellow circle: in 2024 it stands in cleared sand and bush with housing estates to the north and south; by 2026 the station, its car park and roads are finished, and new estates are filling in nearby, while bush still lies beside it" width="1288" height="640" loading="lazy">
@@ -133,21 +126,19 @@ Now the change. Perth's METRONET extended the northern line to Yanchep, with sta
 <figcaption>Alkimos, Eglinton and Yanchep stations (yellow circles), each about 2.6 km across, in 2024 and 2026. The stations came first; the streets are catching up. Satellite imagery: Esri World Imagery, Esri releases of August 2024 and October 2026; Esri, Maxar, Earthstar Geographics.</figcaption>
 </figure>
 
-They came. In two years, new street grids and house lots have grown around Eglinton and Yanchep, and new estates are rising near Alkimos.
+Between 2024 and 2026, new street grids and house lots appeared around Eglinton and Yanchep, with new estates near Alkimos.
 
-Sydney's new airport is the bigger bet, and it comes with a warning. Western Sydney International Airport opened to passengers on 25 October 2026.[^wsi] Around it, the plan is a whole new city, Bradfield. But its metro line opens only in 2027, so for now passengers ride a free interim bus to the train network.[^wsi] An airport that opens before its rail link is the classic way a supply-push project starts life looking empty. Australia's saving grace is that the line is already being built and is due next year, not merely promised.
+Western Sydney International Airport opened to passengers on 25 October 2026.[^wsi] The surrounding plan includes a new city, Bradfield, but its metro line opens only in 2027. Until then, passengers use a free interim bus to the train network.[^wsi] The rail connection is under construction, rather than merely promised.
 
 ## Why hasn't it worked as well in Indonesia (yet)?
 
-Because Indonesia copied the "build" and skipped the rest. For most of its history it built in an extreme form of demand-pull, and when it switched to supply-push under Jokowi, it built the big things without the connections, without a way to capture the land value, and without a guarantee that the next government would keep going.
+Under Jokowi, Indonesia shifted towards building ahead of demand. Several projects, however, lacked the connecting infrastructure, land-value financing or continuity that the Chinese model relies on.
 
 ### Why does Indonesia wait for the jam, and then still not build?
 
 Indonesia's demand-pull is extreme: even where the demand is undeniable, the proper infrastructure often still doesn't arrive. Proper rapid transit exists in only two Indonesian cities. Jakarta has its MRT (Phase 1 opened on 24 March 2019, 15.7 km),[^mrt] its LRT and its KRL commuter trains. Palembang has an LRT.
 
 Then look at Indonesia's next three big cities. Surabaya, Bandung and Medan have no metro and no LRT, and until recently not even a proper bus rapid transit (<span markdown="0">BRT</span>) system. Construction of the Bandung Basin BRT finally started in July 2026: about Rp1.3 trn for 18 routes. Medan's Mebidang BRT is due to start service in 2027, and Surabaya is still at the detailed-design stage.[^brt]
-
-Three of Indonesia's biggest cities, millions of people each, and the first proper mass transit for any of them is a bus, starting this year. That is not demand-pull. That is demand, ignored.
 
 ### What did Xi tell Jokowi?
 
@@ -166,21 +157,21 @@ I'd call the three keys "planned and strategic development", and the third is th
 
 ### Did "they" come to the Trans-Java Toll Road?
 
-Mostly yes, slowly and unevenly, and it is the best Indonesian example of supply-push I know. The Trans-Java Toll Road runs about 1,167 km from Merak to Banyuwangi. Merak to Surabaya, about 930 km, was connected in December 2018.[^tj]
+The Trans-Java Toll Road is the strongest Indonesian example of supply-push I know, although its effects are mixed. The Trans-Java Toll Road runs about 1,167 km from Merak to Banyuwangi. Merak to Surabaya, about 930 km, was connected in December 2018.[^tj]
 
-The evidence of "they came" is real but mixed. A panel study from IPB, the Bogor agricultural university, finds a positive effect on growth in the Central Java districts the road passes.[^ipb] A study from Universitas Indonesia (<span markdown="0">UI</span>) finds no stable effect yet on gross regional domestic product (<span markdown="0">GRDP</span>) per capita, unemployment or poverty in the medium term.[^ui] And there are losers: in towns along the old north-coast road, Pantura, a Pekalongan study reports that batik sellers lost the passing trade that used to stop on their street.[^pekalongan]
+The studies do not give a uniform verdict. A panel study from IPB, the Bogor agricultural university, finds a positive effect on growth in the Central Java districts the road passes.[^ipb] A study from Universitas Indonesia (<span markdown="0">UI</span>) finds no stable effect yet on gross regional domestic product (<span markdown="0">GRDP</span>) per capita, unemployment or poverty in the medium term.[^ui] And there are losers: in towns along the old north-coast road, Pantura, a Pekalongan study reports that batik sellers lost the passing trade that used to stop on their street.[^pekalongan]
 
-So yes, they came, mostly to the interchanges and the new industrial estates. The road had what most supply-push projects need: an economic reason (Java's cities already trade with each other) and a connection at both ends.
+Java's cities already trade with each other, giving the road an economic purpose and connections at both ends. That does not mean every town benefits.
 
 ### Why are Kertajati, Whoosh and IKN struggling?
 
-Because each took the "build" from China and left something else behind. Five things, in my view.
+I see five problems across these projects:
 
-**1. No continuity between administrations.** Each ministry and agency guards its own turf (*ego sektoral*, a.k.a. "my budget, my project, my ribbon"), and a five-year term rarely lines up with a fifty-year plan. China can plan long and actually enforce the plan, a benefit it gets from its one-party system. Indonesia can plan long, but a plan that the next government doesn't own tends to stall.
+**1. No continuity between administrations.** Ministries and agencies guard their own budgets and projects, and a five-year term rarely lines up with a fifty-year plan. China can plan long and actually enforce the plan, a benefit it gets from its one-party system. Indonesia can plan long, but a plan that the next government doesn't own tends to stall.
 
-**2. The main infrastructure was built without its connections.** Kertajati, West Java's international airport (<span markdown="0">BIJB</span>, Bandara Internasional Jawa Barat), was inaugurated on 24 May 2018 with a phase-1 capacity of about 5.6 million passengers a year.[^kertajati] Since the Cisumdawu toll road opened in 2023, it is about 60 km and about an hour by road from Bandung.[^cisumdawu] Distance is not the real problem. The connection is: there is no rail link at all. When Bandung's in-city Husein Sastranegara airport moved its jet flights to Kertajati from 29 October 2023, passengers didn't follow. In 2024 Kertajati handled 413,240 passengers,[^kjt-pax] about 7% of its capacity (my own calculation). And from 14 August 2026, the government let jets fly from Husein again: a quiet admission.[^husein]
+**2. The main infrastructure was built without its connections.** Kertajati, West Java's international airport (<span markdown="0">BIJB</span>, Bandara Internasional Jawa Barat), was inaugurated on 24 May 2018 with a phase-1 capacity of about 5.6 million passengers a year.[^kertajati] Since the Cisumdawu toll road opened in 2023, it is about 60 km and about an hour by road from Bandung.[^cisumdawu] There is still no rail link. When Bandung's in-city Husein Sastranegara airport moved its jet flights to Kertajati from 29 October 2023, passengers didn't follow. In 2024 Kertajati handled 413,240 passengers,[^kjt-pax] about 7% of its capacity (my own calculation). And from 14 August 2026, the government let jets fly from Husein again.[^husein]
 
-Shanghai shows that distance alone was never the problem. The table below sets Kertajati beside Shanghai's two airports.
+Kertajati's road-only access contrasts with the rail connections at Shanghai's two airports:
 
 | Airport | Distance from the city | Rail link | Fastest way in |
 | --- | --- | --- | --- |
@@ -188,7 +179,7 @@ Shanghai shows that distance alone was never the problem. The table below sets K
 | Shanghai Pudong (opened 1999) | About 30 km from the centre[^pvg] | Metro Line 2, and the 30 km Maglev since 2004[^maglev] | Maglev: about 7 minutes 20 seconds to Longyang Road, then the metro |
 | Kertajati (opened 2018) | About 60 km from Bandung[^cisumdawu] | None | About 1 hour by road on the Cisumdawu toll road |
 
-Pudong airport is more than twice as far from the centre as Hongqiao, and it still took over most of Shanghai's international flights, because the rail was there.[^pvg]
+Pudong airport is more than twice as far from the centre as Hongqiao, yet it took over most of Shanghai's international flights.[^pvg]
 
 Whoosh has the same problem at its ends. The Jakarta-Bandung high-speed railway was inaugurated on 2 October 2023, with stations at Halim, Karawang, Padalarang and Tegalluar.[^whoosh] Tegalluar, the station built for Bandung, is more than 10 km from central Bandung. Halim is in East Jakarta, not the centre. So most Bandung riders get off at Padalarang and take a 15-to-22-minute feeder train to Bandung station.[^tegalluar] In 2025 Whoosh carried 6.2 million passengers: 3.1 million at Halim, 2.2 million at Padalarang and only 750,000 at Tegalluar.[^whoosh-riders] The station built for Bandung is the least used.
 
@@ -196,27 +187,21 @@ Whoosh has the same problem at its ends. The Jakarta-Bandung high-speed railway 
 
 **4. Slow, expensive land acquisition, and projects that start before they are settled.** Land acquisition (*pembebasan lahan*) in Indonesia is a negotiation with every owner along the route, and projects often break ground before the feasibility study, the financing and the connections are agreed. Each of those, settled late, comes back as a delay, an overrun or a missing link.
 
-**5. Building where there isn't yet a reason to come.** IKN, the new capital in East Kalimantan, is the purest supply-push project Indonesia has. Under Perpres 79/2025, IKN is to become the "political capital" in 2028, with Rp48.8 trn budgeted for 2025 to 2028.[^ikn] For 2026, the IKN Authority (<span markdown="0">OIKN</span>) got Rp6.3 trn in the draft budget, and the DPR rejected a Rp14.92 trn top-up.[^ikn] The open question is the one that left Tianjin's Yujiapu, billed as China's Manhattan, about 80% empty around 2019,[^yjp2019] beyond the civil servants who are told to move, who comes, and when?
+**5. Building where there isn't yet a reason to come.** IKN, the new capital in East Kalimantan, is the purest supply-push project Indonesia has. Under Perpres 79/2025, IKN is to become the "political capital" in 2028, with Rp48.8 trn budgeted for 2025 to 2028.[^ikn] For 2026, the IKN Authority (<span markdown="0">OIKN</span>) got Rp6.3 trn in the draft budget, and the DPR rejected a Rp14.92 trn top-up.[^ikn] Beyond the civil servants told to move, who will come, and when? Yujiapu's roughly 80% vacancy around 2019 shows why that question matters.[^yjp2019]
 
 ## Do you need a one-party state to build like this?
 
-No, but it would be dishonest to pretend the system doesn't help. Let me concede that first. A one-party state can keep one plan for thirty years, can acquire land without years of court cases, and can enforce what the plan says. Shenzhen and Pudong needed all three. Indonesia's ministries guarding their own turf, and Australia's airport line slipping to 2033, are what happens without them.
+A one-party state can maintain long plans, acquire land and enforce coordinated development. Those are advantages, but democracies can build institutions that support continuity too.
 
 The costs are just as real. The same system built Yujiapu, with at least RMB 200 bn invested and about 80% of its offices empty around 2019.[^yjp2019] It left local financing vehicles with debt the IMF estimates at RMB 71.4 trn, 50.9% of GDP, in 2025.[^imf] It moves people out of their homes with weak ways to say no, and nobody in the system has much reason to tell the planners they are wrong until the towers are already standing empty.
 
-Democracies can keep long plans too; they just have to write them into law and institutions instead of a party. Perth's METRONET has run as a state programme across more than one term of government, and its Yanchep extension opened in 2024. Australia has an independent body, Infrastructure Australia, to vet the big projects. And Indonesia already has the legal tool: Law No. 59 of 2024 on the long-term development plan (<span markdown="0">RPJPN</span>, *Rencana Pembangunan Jangka Panjang Nasional*) for 2025 to 2045.[^rpjpn] A twenty-year plan in law is exactly the "fifty years ahead" that Jokowi was told about. The hard part is making each new government build on it, not around it.
-
-So the lesson worth copying isn't the political system. It is the discipline: plan long, connect everything on day one, pay for it with the value it creates, and keep going after the ribbon is cut.
+Democracies can keep long plans too; they just have to write them into law and institutions instead of a party. Perth's METRONET has run as a state programme across more than one term of government, and its Yanchep extension opened in 2024. Australia has an independent body, Infrastructure Australia, to vet the big projects. And Indonesia already has the legal tool: Law No. 59 of 2024 on the long-term development plan (<span markdown="0">RPJPN</span>, *Rencana Pembangunan Jangka Panjang Nasional*) for 2025 to 2045.[^rpjpn] The hard part is making each new government build on it, not around it.
 
 ## So, how does China build so fast?
 
-It builds first, on land it owns, pays with the value the building creates, and doesn't stop when the leaders change. That is the whole trick, and it explains both Pudong and Yujiapu.
+China's scale rests on building ahead of demand, state-owned land, land-value financing and plans that continue across administrations. Yujiapu and the local-government debt show the risks when expected demand or revenue fails to arrive.
 
-My own principle, after more trips to China than my passport strictly needed: building ahead of demand is a bet, and building without a connection is a bet you have already lost. Build ahead, by all means. But connect it, give people a reason to come, and keep going.
-
-So here is the small action. Next time you see a ribbon-cutting, on the news, on your feed or in your own city, ask two questions. **What connects to it on day one?** And **who pays for, and keeps building, the next phase after this government is gone?** If nobody can answer either one, you are not looking at the next Pudong. You might be looking at the next Yujiapu.
-
-And an honest question back to you: which project in your city would you build first, before anyone asks for it?
+Before celebrating a ribbon-cutting, ask: **what connects to the project when it opens, and who funds and completes the next phase after this government is gone?**
 
 *[CR400BF]: China Railway 400, a Fuxing high-speed train model designed for 400 km/h; BF is the version built by CRRC Changchun
 *[AAP]: Australian Associated Press, a news agency

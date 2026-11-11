@@ -3,6 +3,7 @@ title: "Build it and they will come: bagaimana China bisa membangun secepat itu"
 seo_title: "Kenapa pembangunan infrastruktur China bisa secepat itu?"
 description: "Di China, stasiun kereta bisa seluas bandara, dan kota yang jarang kita dengar namanya pun penuh gedung pencakar langit. Bagaimana China membangun secepat itu?"
 date: 2026-11-09 09:00:00 +0800
+last_modified_at: 2026-11-11
 tags: [politics]
 image: /assets/img/og/pembangunan-infrastruktur-china.jpg
 image_alt: "Ilustrasi dua insinyur dalam satu gambar terbelah: di kiri, insinyur berhelm oranye memegangi kepalanya dengan panik di tengah jalan yang macet oleh mobil, motor, dan bus penuh sesak; di kanan, insinyur berhelm putih menunjuk ke depan sambil mengepit gulungan cetak biru, berlatar stasiun baru yang sedang dibangun, dua derek, dan jalan lebar yang masih kosong"
@@ -11,7 +12,7 @@ keywords: [pembangunan infrastruktur China, kereta cepat China, supply-push dan 
 bmc_message: "Traktir saya segelas kopi: tulisan berikutnya saya bangun dulu, pembacanya pasti datang belakangan."
 ---
 
-**Singkatnya:** pembangunan infrastruktur China bisa secepat itu karena memakai cara *supply-push*: negara membangun rel, stasiun, jalan, dan metro lebih dulu, membiayainya dari kenaikan harga tanah di sekitarnya, lalu menjaga rencananya selama puluhan tahun, sehingga warga dan pelaku usaha datang belakangan. Hasilnya, jalur kereta cepat China mencapai 50.000 km pada akhir 2025. Cara ini berhasil di Shenzhen dan Pudong, tetapi gagal di Yujiapu, dan secara keseluruhan mewariskan utang perusahaan pembiayaan milik pemerintah daerah sekitar 50,9% PDB China. Sejauh ini, Indonesia baru meniru cara China membangun, sementara cara China menyambungkan proyek dan melanjutkannya lintas pemerintahan belum ikut ditiru.
+**Singkatnya:** China memakai cara *supply-push*: membangun infrastruktur lebih dulu, membiayainya dari kenaikan nilai tanah, dan menjaga rencananya selama puluhan tahun. Jaringan kereta cepatnya mencapai 50.000 km pada akhir 2025. Cara ini berhasil di Shenzhen dan Pudong, tetapi gagal di Yujiapu, sementara utang perusahaan pembiayaan pemerintah daerah diperkirakan mencapai 50,9% PDB China pada 2025. Indonesia baru meniru cara membangunnya, belum cara menyambungkan proyek dan melanjutkannya lintas pemerintahan.
 {: .tldr}
 
 * TOC
@@ -19,7 +20,7 @@ bmc_message: "Traktir saya segelas kopi: tulisan berikutnya saya bangun dulu, pe
 
 ## Apa yang membuat saya takjub setiap kali berkunjung ke China?
 
-Saya menghabiskan lebih dari 25 tahun pertama hidup saya di Indonesia, hampir dua tahun terakhir ini saya tinggal di Australia, dan sejak 2023 saya selalu menyempatkan diri berkunjung ke China setidaknya sekali setahun. Sampai tulisan ini dibuat, saya sudah menjejakkan kaki di 14 wilayah: empat kota setingkat provinsi yang langsung berada di bawah pemerintah pusat (*municipality*), yaitu Beijing, Tianjin, Shanghai, dan Chongqing; Jiangsu, Heilongjiang, Hunan, Shaanxi, Sichuan, Guangdong, Fujian, dan Taiwan; serta dua daerah administratif khusus (<span markdown="0">SAR</span>, *special administrative region*), yaitu Hong Kong dan Makau.
+Sejak 2023, saya menyempatkan diri berkunjung ke China setidaknya sekali setahun. Sampai tulisan ini dibuat, saya sudah mengunjungi 14 wilayah yang ditandai dalam peta ini.
 
 <figure>
 {% include cbf-china-map.html lang="id" title="Peta China yang menandai 14 wilayah yang pernah saya kunjungi: Beijing, Tianjin, Shanghai, Chongqing, Jiangsu, Heilongjiang, Hunan, Shaanxi, Sichuan, Guangdong, Fujian, Taiwan, Hong Kong, dan Makau" %}
@@ -35,7 +36,7 @@ Sebagai orang yang tumbuh di Indonesia, saya terbiasa dengan urutan yang sebalik
 <figcaption>Dua cara membangun kota: menambal setelah macet (<em>demand-pull</em>) atau membangun sebelum penghuninya datang (<em>supply-push</em>).</figcaption>
 </figure>
 
-Angka resminya pun tidak kalah mencengangkan dibandingkan pemandangan yang saya saksikan langsung. Menurut Administrasi Perkeretaapian Nasional China, panjang jaringan kereta di China mencapai 165.000 km pada akhir 2025, dan 50.000 km di antaranya adalah jalur kereta cepat, kira-kira 350 kali panjang jalur Whoosh, yang hanya 142,3 km.[^nra][^whoosh] Sepanjang 2025 saja, China membuka 3.109 km jalur baru, dan 2.862 km di antaranya jalur kereta cepat.[^nra]
+Angka resminya pun tidak kalah mencengangkan dibandingkan pemandangan yang saya saksikan langsung. Menurut Administrasi Perkeretaapian Nasional China, panjang jaringan kereta di China mencapai 165.000 km pada akhir 2025, dan 50.000 km di antaranya adalah jalur kereta cepat, kira-kira 350 kali panjang jalur Whoosh, yang hanya 142,3 km.[^nra][^whoosh]
 
 <figure>
 <img src="/assets/img/cbf-hsr-selfie.webp" alt="Adjie bertopi bulu abu-abu dan bersyal kotak-kotak berswafoto di peron stasiun, di samping moncong panjang kereta cepat Fuxing berwarna putih keemasan, dengan satu kereta Fuxing lain di jalur sebelah" width="1600" height="901" loading="lazy">
@@ -50,13 +51,11 @@ Pertanyaannya, bagaimana China bisa membangun secepat dan sebanyak itu, dan kena
 
 Dalam pembangunan *demand-pull*, infrastruktur baru dibangun setelah kebutuhannya terbukti, sedangkan dalam pembangunan *supply-push*, infrastruktur dibangun lebih dulu berdasarkan rencana jangka panjang, dan kebutuhannya baru datang belakangan.
 
-**_Demand-pull_** adalah cara yang dipakai sebagian besar negara, termasuk Indonesia. Infrastruktur dibangun secara reaktif dan bertahap, sebagai jawaban atas tanda-tanda kebutuhan yang nyata dan bisa dibuktikan: jalan yang macet setiap hari, kereta yang penuh sesak, atau pelabuhan yang antreannya mengular. Keunggulan cara ini ada pada efisiensi, karena hampir tidak ada modal yang menganggur dan setiap rupiah dibelanjakan untuk kebutuhan yang nilainya sudah terbukti. Risiko komersialnya pun lebih rendah, sebab penggunanya sudah ada sebelum proyeknya dimulai. Kelemahannya, biayanya cenderung lebih tinggi, karena pembangunan baru dimulai ketika kotanya sudah padat: lahan harus dibebaskan di tengah permukiman, jalur harus dibuat di bawah tanah, dan lalu lintas terganggu selama bertahun-tahun.
+**_Demand-pull_** menunggu kebutuhan yang sudah terlihat, seperti jalan macet, kereta penuh, atau pelabuhan yang antreannya panjang. Modal jarang menganggur dan risiko komersialnya lebih rendah karena pengguna sudah ada, tetapi pembangunan di kota yang telanjur padat memerlukan pembebasan lahan, pengerjaan bawah tanah, dan gangguan lalu lintas.
 
 MRT Jakarta fase 1 adalah contoh klasiknya. Jalur Lebak Bulus sampai Bundaran HI sepanjang 15,7 km baru diresmikan pada 24 Maret 2019, ketika macet di koridor Sudirman dan Thamrin sudah lama menjadi santapan sehari-hari warga Jakarta. Proyek ini menelan biaya sekitar Rp16 triliun, atau kira-kira Rp1 triliun per kilometer.[^mrtj]
 
-**_Supply-push_** berjalan dengan logika sebaliknya. Perencana, pemerintah, atau pengembang besar membangun secara proaktif berdasarkan proyeksi jangka panjang, rencana induk, atau visi tentang wujud sebuah wilayah puluhan tahun lagi, bukan berdasarkan permintaan hari ini. Keunggulan utamanya ada pada skala, karena proyek-proyek besar yang terkoordinasi bisa menentukan arah pertumbuhan sebuah wilayah, industrinya, dan daya tahannya untuk puluhan tahun ke depan. Selain itu, karena proyek dirancang dan dikerjakan dalam jumlah besar dengan rencana yang mencakup puluhan tahun, biaya per unitnya turun dan kapasitasnya tidak terus-menerus tertinggal dari kebutuhan. Sisi gelapnya muncul kalau perencanaannya buruk: kapasitas itu akan menganggur, sementara biaya operasi dan perawatannya terus berjalan, belum lagi bunganya kalau pembangunannya dibiayai utang.
-
-Perbandingan keduanya bisa diringkas dalam tabel berikut.
+**_Supply-push_** dimulai dari proyeksi dan rencana jangka panjang. Proyek besar yang terkoordinasi bisa menurunkan biaya per unit dan menyediakan kapasitas sebelum dibutuhkan, tetapi kalau perencanaannya meleset, kapasitas itu menganggur sementara biaya perawatan dan bunga utang terus berjalan.
 
 | | *Demand-pull* | *Supply-push* |
 | --- | --- | --- |
@@ -65,8 +64,6 @@ Perbandingan keduanya bisa diringkas dalam tabel berikut.
 | Kelebihan | Modal jarang menganggur, risiko komersial rendah | Skala besar, biaya per unit lebih rendah, kapasitas cukup untuk puluhan tahun |
 | Kelemahan | Biaya tinggi dan pengerjaan lambat karena dibangun di tengah kota yang sudah padat | Kapasitas menganggur, biaya perawatan dan bunga utang tetap berjalan |
 | Contoh | MRT Jakarta, Sydney Metro | Shenzhen, Pudong, METRONET di Perth |
-
-Tidak ada cara yang selalu benar: *demand-pull* jarang membuang uang tetapi selalu terlambat, sedangkan *supply-push* tidak pernah terlambat tetapi bisa membuang uang dalam jumlah yang sangat besar.
 
 ## Bagaimana cara kerja "*build it and they will come*" di China?
 
@@ -100,13 +97,11 @@ Pola serupa terlihat di Pudong, Shanghai. Pada 18 April 1990, Perdana Menteri Li
 
 Masih di Shanghai, ada contoh yang menurut saya paling menarik bagi kita di Indonesia karena menyatukan bandara, kereta cepat, dan metro, yaitu Hongqiao di tepi barat kota. Stasiun Kereta Hongqiao dibuka pada 2010 dan menyatu dengan Bandara Hongqiao serta jaringan metro dalam satu kompleks.[^hongqiao] Penumpang yang turun dari pesawat cukup berjalan kaki ke peron kereta cepat atau metro, dan kawasan bisnis Hongqiao kemudian tumbuh di sekitar simpul itu.
 
-Beijing pun punya kisah serupa di kawasan pusat bisnis (*central business district*, <span markdown="0">CBD</span>) di Distrik Chaoyang. Kawasan ini sudah direncanakan dalam rencana induk Beijing 1993, dan pada 2025, Chaoyang memiliki lebih dari 140 gedung yang setoran pajak para penghuninya masing-masing melebihi RMB 100 juta, dan menjadi lokasi 125 kantor pusat regional perusahaan multinasional.[^beijingcbd]
-
 ### Kapan warga dan pelaku usaha tidak datang?
 
 Lain ceritanya dengan Yujiapu di Tianjin, yang dulu dijuluki "Manhattan-nya China". Kawasan yang dibangun oleh LGFV ini dipromosikan sebagai kawasan keuangan terbesar di dunia, dan investasi yang ditanamkan di sana setidaknya RMB 200 miliar (US$32 miliar).[^yujiapu] Pada 2014, SCMP sudah menyebut menara-menaranya sebagai "gedung hantu", dan sekitar 2019, menurut The New York Times, kira-kira 80% ruang kantornya masih kosong, sementara pembangunan beberapa menara terhenti di tengah jalan.[^yujiapu] Beberapa instansi pemerintah memang mulai pindah ke sana pada 2019, tetapi sampai tahun itu, perusahaan swasta yang diharapkan berbondong-bondong datang belum juga muncul.
 
-Pelajarannya, perencanaan strategis yang menyeluruh memegang peran kunci, karena orang hanya mau datang ke sebuah tempat kalau mereka punya alasan untuk ke sana. Gedung bisa dibangun dalam hitungan tahun, tetapi alasan orang untuk berkantor di sana tidak bisa dicor bersama betonnya.
+Warga dan pelaku usaha hanya mau datang kalau ada alasan ekonomi untuk berada di sana; membangun gedung saja tidak cukup.
 
 Cara membiayai pembangunan dengan utang, lalu melunasinya dari penjualan hak guna tanah, juga meninggalkan tagihan yang besar. Pendapatan pemerintah China dari penjualan hak guna tanah turun dari RMB 8,71 triliun pada 2021 menjadi RMB 4,15 triliun pada 2025, atau anjlok lebih dari separuh setelah empat tahun berturut-turut menurun.[^landrev] Padahal, menurut perkiraan IMF, utang LGFV sudah mencapai RMB 71,4 triliun atau 50,9% PDB China pada 2025, dan kalau semua utang di luar catatan resmi seperti itu dijumlahkan dengan utang resmi, utang pemerintah China dalam arti luas mencapai 126,6% PDB dan diproyeksikan naik menjadi 153,7% PDB pada 2030.[^imf] Utang yang dipakai untuk membangun aset produktif memang bisa dilunasi dari hasil aset itu sendiri, seperti yang pernah saya bahas dalam tulisan [utang baik atau buruk](/id/utang-baik-atau-buruk/), tetapi utang untuk menara kosong hanya meninggalkan cicilan.
 
@@ -137,7 +132,7 @@ Pembangunan ala China belum berhasil di Indonesia karena kita baru meniru cara C
 
 Indonesia bukan sekadar menganut *demand-pull*, melainkan *demand-pull* yang ekstrem: bahkan ketika kebutuhannya jelas-jelas sudah ada, infrastruktur yang dibutuhkan tetap belum dibangun. Sampai hari ini, angkutan massal cepat yang memadai hanya ada di Jakarta, yang punya MRT, LRT, dan KRL, serta di Palembang, yang punya LRT.
 
-Surabaya, Bandung, dan Medan, tiga kota besar yang masing-masing berpenduduk jutaan orang, sama sekali belum punya metro atau LRT, bahkan belum punya BRT yang layak. Surabaya masih mengandalkan bus yang berbagi jalur dengan kendaraan lain, dan rencana BRT-nya baru sampai tahap desain teknis terperinci (<span markdown="0">DED</span>, *detailed engineering design*). Pembangunan BRT Cekungan Bandung baru dimulai pada Juli 2026, dengan anggaran sekitar Rp1,3 triliun untuk 18 rute, sedangkan BRT Mebidang di Medan ditargetkan beroperasi pada 2027.[^brt]
+Surabaya, Bandung, dan Medan, tiga kota besar yang masing-masing berpenduduk jutaan orang, sama sekali belum punya metro atau LRT, bahkan belum punya BRT yang layak. Surabaya masih mengandalkan bus yang berbagi jalur dengan kendaraan lain, dan rencana BRT-nya baru sampai tahap desain teknis terperinci (<span markdown="0">DED</span>, *detailed engineering design*). Pembangunan BRT Cekungan Bandung baru dimulai pada Juli 2026, sedangkan BRT Mebidang di Medan ditargetkan beroperasi pada 2027.[^brt]
 
 ### Apa tiga resep Presiden Xi yang diceritakan Jokowi?
 
@@ -162,7 +157,7 @@ Hasil kajian tentang dampaknya ternyata beragam: penelitian dari IPB dengan data
 
 ### Kenapa Kertajati, Whoosh, dan IKN belum berjalan mulus?
 
-Bandara Kertajati, Kereta Cepat Whoosh, dan IKN adalah proyek yang semangatnya *supply-push*, tetapi hasilnya jauh dari harapan. Setidaknya ada lima penyebabnya.
+Bandara Kertajati, Kereta Cepat Whoosh, dan IKN adalah proyek yang semangatnya *supply-push*, tetapi hasilnya jauh dari harapan.
 
 **Pertama, rencana yang putus di tengah jalan.** China bisa merencanakan sesuatu untuk puluhan tahun dan memastikan rencana itu benar-benar dijalankan, dan menurut saya keuntungan itu datang dari sistem satu partainya. Di Indonesia, rencana besar sering berubah arah setiap kali pemerintahan berganti, dan di dalam satu pemerintahan pun kementerian dan lembaga kerap sibuk menjaga wilayahnya masing-masing (ego sektoral), sehingga bandara, jalan akses, dan rel penghubungnya dibangun oleh pihak yang berbeda dengan jadwal yang berbeda pula.
 
@@ -182,26 +177,23 @@ Masalah yang sama terjadi pada Whoosh, yang diresmikan pada 2 Oktober 2023. Saat
 
 **Keempat, pembebasan lahan yang lambat dan mahal, serta proyek yang dimulai sebelum semuanya siap.** Karena tanah di Indonesia dimiliki banyak orang, lahan untuk setiap kilometer rel atau jalan harus dibebaskan dari pemiliknya satu per satu, dan proyek sering dimulai sebelum studi kelayakan, jalan akses, dan sambungannya benar-benar beres. Whoosh adalah contohnya: menurut audit BPKP, pembengkakan biayanya mencapai US$1,176 miliar, dan untuk menutupnya, KAI harus meminjam lagi US$542,7 juta (Rp8,41 triliun) dari CDB.[^whooshdebt]
 
-**Kelima, membangun di tempat yang belum punya alasan ekonomi untuk didatangi.** IKN adalah contoh yang paling jelas. Lewat Perpres Nomor 79 Tahun 2025, pemerintah menargetkan IKN menjadi "ibu kota politik" pada 2028, dan anggaran yang disiapkan untuk 2025 sampai 2028 mencapai Rp48,8 triliun.[^ikn] Anggaran OIKN untuk 2026 hanya Rp6,3 triliun, dan DPR menolak tambahan Rp14,92 triliun yang diajukan OIKN.[^ikn] Gedung-gedungnya bisa terus dibangun, tetapi pertanyaan terpentingnya belum terjawab: siapa yang akan pindah, kapan, dan pekerjaan apa yang menunggu mereka di sana?
+**Kelima, membangun di tempat yang belum punya alasan ekonomi untuk didatangi.** IKN adalah contoh yang paling jelas. Lewat Perpres Nomor 79 Tahun 2025, pemerintah menargetkan IKN menjadi "ibu kota politik" pada 2028, dan anggaran yang disiapkan untuk 2025 sampai 2028 mencapai Rp48,8 triliun.[^ikn] Gedung-gedungnya bisa terus dibangun, tetapi pertanyaan terpentingnya belum terjawab: siapa yang akan pindah, kapan, dan pekerjaan apa yang menunggu mereka di sana?
 
 ## Apakah harus menjadi negara satu partai untuk membangun seperti China?
 
 Menurut saya tidak harus, meski perlu saya akui bahwa sistem satu partai memberi China dua keuntungan yang nyata: rencana yang berlanjut puluhan tahun tanpa terputus oleh pemilu, dan kemampuan untuk memaksakan rencana itu sampai ke tingkat daerah. Bagi proyek yang baru terasa manfaatnya setelah 20 atau 30 tahun, kedua hal itu sangat berharga.
 
-Meski begitu, keuntungan itu juga ada harganya. Kasus Yujiapu di Tianjin memperlihatkan bahwa keputusan dari atas bisa salah besar tanpa ada yang berani menghentikannya: investasi di kawasan keuangan itu setidaknya RMB 200 miliar, tetapi sekitar 2019 kira-kira 80% ruang kantornya masih kosong.[^yujiapu] Utang LGFV yang mencapai 50,9% PDB China pada 2025 menunjukkan bahwa cara membangun dengan utang, lalu melunasinya dari penjualan hak guna tanah, bisa macet, dan penggusuran warga demi proyek besar jarang bisa digugat ketika pengawasan dari parlemen, pengadilan, dan pers lemah.[^imf] Kecepatan yang mengagumkan itu dibayar mahal: sistemnya nyaris tidak punya rem.
+Meski begitu, keuntungan itu juga ada harganya. Kasus Yujiapu di Tianjin memperlihatkan bahwa keputusan dari atas bisa salah besar tanpa ada yang berani menghentikannya: investasi di kawasan keuangan itu setidaknya RMB 200 miliar, tetapi sekitar 2019 kira-kira 80% ruang kantornya masih kosong.[^yujiapu] Utang LGFV yang mencapai 50,9% PDB China pada 2025 menunjukkan bahwa cara membangun dengan utang, lalu melunasinya dari penjualan hak guna tanah, bisa macet, dan penggusuran warga demi proyek besar jarang bisa digugat ketika pengawasan dari parlemen, pengadilan, dan pers lemah.[^imf]
 
 Di sisi lain, negara demokrasi juga bisa punya rencana jangka panjang. METRONET di Perth tetap berjalan dari satu *premier* Australia Barat ke penerusnya, dan Australia punya Infrastructure Australia, lembaga independen yang menilai proyek-proyek besar sebelum uang negara dibelanjakan. Indonesia sendiri sudah punya UU Nomor 59 Tahun 2024 tentang RPJPN 2025-2045, yang seharusnya mengikat setiap presiden selama dua puluh tahun.[^rpjpn] Yang perlu ditiru dari China, menurut saya, bukan sistem politiknya, melainkan kesinambungan rencananya, disiplin untuk menyambungkan setiap proyek sejak hari pertama, dan kecerdikan membiayai proyek dari nilai yang diciptakannya sendiri. Demokrasi bisa mendapatkan ketiganya lewat undang-undang dan lembaga yang kuat, sementara negara otoriter pun tetap bisa melahirkan kawasan kosong seperti Yujiapu.
 
 ## Jadi, bagaimana China bisa membangun secepat itu?
 
-China membangun secepat itu karena berani membangun lebih dulu, menyambungkan semuanya sejak awal, membiayainya dari kenaikan harga tanah, dan menjaga rencananya selama puluhan tahun, meski cara yang sama juga menyisakan menara kosong di Yujiapu dan utang pemerintah daerah yang menggunung.
+Menurut saya, Indonesia tidak perlu memilih antara membangun setelah macet dan membangun dengan membabi buta. Membangun lebih dulu boleh saja, asalkan setiap proyek tersambung sejak awal, punya alasan untuk didatangi, dan terus dilanjutkan setelah pejabat yang meresmikannya tidak lagi menjabat.
 
-Menurut saya, Indonesia tidak perlu memilih antara membangun setelah macet dan membangun dengan membabi buta. Membangun lebih dulu boleh saja, asalkan setiap proyek tersambung sejak awal, punya alasan untuk didatangi, dan terus dilanjutkan setelah pejabat yang meresmikannya tidak lagi menjabat. Jalan tol dan stasiun hanya membuka pintu, sedangkan yang membuat orang mau masuk adalah sambungan, pekerjaan, dan rencana yang tidak berhenti di tengah jalan.
-
-Lain kali, saat kamu membaca berita peresmian proyek besar, lengkap dengan gunting pita dan tepuk tangannya, cobalah ajukan dua pertanyaan sederhana. Pertama, apa saja yang sudah tersambung ke proyek ini pada hari pertama proyek itu dibuka? Kedua, siapa yang akan membayar dan melanjutkan tahap berikutnya setelah pemerintahan ini berganti? Kalau kedua pertanyaan itu tidak punya jawaban, bisa jadi yang sedang diresmikan bukan awal sebuah kota baru, melainkan calon kawasan kosong berikutnya. Menurutmu, proyek mana di Indonesia yang paling layak diuji dengan dua pertanyaan itu?
+Saat sebuah proyek diresmikan, tanyakan apa yang sudah tersambung sejak hari pertama dan siapa yang akan membiayai serta melanjutkan tahap berikutnya setelah pemerintahan berganti. Kedua pertanyaan itu membantu kita menilai apakah proyeknya punya rencana untuk digunakan, bukan sekadar selesai dibangun.
 
 *[CR400BF]: China Railway 400, model kereta cepat Fuxing yang dirancang untuk kecepatan 400 km/jam; BF adalah versi buatan CRRC Changchun
-*[SAR]: Special Administrative Region, daerah administratif khusus di China
 *[BRT]: Bus Rapid Transit, bus cepat dengan jalur khusus
 *[PDRB]: Produk Domestik Regional Bruto, PDB untuk tingkat provinsi atau kabupaten dan kota
 *[LGFV]: Local Government Financing Vehicle, perusahaan pembiayaan milik pemerintah daerah di China

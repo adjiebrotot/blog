@@ -3,6 +3,7 @@ title: "Cara pemerintah berbohong dengan data, dan cara kita membongkarnya"
 seo_title: "Pemerintah memanipulasi data? Cara membaca angka BPS"
 description: "Angka-angka dalam pidato 'ekonomi meroket' bisa saja benar semua, tetapi kenapa dompetmu tidak ikut menebal? Mari kita bongkar tujuh angka andalan pemerintah."
 date: 2026-11-08 09:00:00 +0800
+last_modified_at: 2026-11-11
 tags: [politics]
 image: /assets/img/og/pemerintah-berbohong-dengan-data.jpg
 image_alt: "Seorang pria bertubuh tambun berkemeja biru muda dan berpeci hitam berdiri di podium sambil mengacungkan telunjuk dan berseru 'Ekonomi Kita Meroket!', sementara kerumunan di belakangnya bersorak"
@@ -21,14 +22,14 @@ bmc_message: "Traktir saya kopi, dan saya janji tidak akan melaporkannya sebagai
 
 ## Kenapa "ekonomi kita meroket" terdengar benar, tetapi tidak terasa di dompet?
 
-Kamu pasti pernah melihat adegan ini, entah di televisi, di potongan video yang lewat di media sosial, atau langsung di lapangan saat musim kampanye: seorang pejabat berkemeja biru muda berdiri di podium, mengepalkan tangan, lalu berseru lantang, "Ekonomi kita meroket!" Tepuk tangan pun pecah, sementara layar di belakangnya menampilkan grafik pertumbuhan yang menanjak, angka pengangguran yang menurun, dan angka kemiskinan yang katanya terus menyusut. Menariknya, bisa jadi tidak ada satu data pun dalam adegan itu yang dikarang. Semua angka itu mungkin benar, dan justru di situlah letak masalahnya: pemerintah jarang perlu memalsukan data karena cukup memilih angka mana yang ditampilkan, bagaimana angka itu didefinisikan, dan apa yang sengaja tidak disebut.
+Angka pertumbuhan, pengangguran, dan kemiskinan dalam pidato “ekonomi kita meroket” bisa saja benar semua. Masalahnya, pemerintah cukup memilih angka mana yang ditampilkan, bagaimana angka itu didefinisikan, dan apa yang tidak disebut untuk membuat keadaan terlihat lebih baik.
 
 <figure>
 <img src="/assets/img/gsl-ill-podium-id.webp" alt="Seorang pria bertubuh tambun berkemeja biru muda dan berpeci hitam berdiri di podium sambil mengacungkan telunjuk dan berseru 'Ekonomi Kita Meroket!', sementara kerumunan di belakangnya bersorak" width="1456" height="1087">
 <figcaption>Pidatonya berapi-api dan tepuk tangannya meriah, tetapi pertanyaannya tetap sama: angka mana yang dipilih untuk dipamerkan?</figcaption>
 </figure>
 
-Dalam tulisan ini, mari kita bedah tujuh angka yang paling sering dibanggakan dalam pidato semacam itu, yaitu pengangguran, produk domestik bruto (<span markdown="0">PDB</span>) per kapita, pertumbuhan PDB, inflasi, angka kemiskinan, rasio Gini, serta defisit dan utang pemerintah. Untuk setiap angka, kita akan melihat apa yang sebenarnya diukur, bagaimana angka itu bisa dipoles supaya terlihat cantik, dan bagaimana membaca kenyataan di baliknya, termasuk lewat perbandingan posisi Indonesia dengan negara-negara ASEAN dan OECD. Tujuannya bukan untuk mencurigai semua statistik, melainkan supaya lain kali, ketika ada yang berteriak "meroket" dari atas podium, kamu tahu pertanyaan apa yang perlu diajukan.
+Kita akan membahas tujuh angka: pengangguran, PDB per kapita, pertumbuhan PDB, inflasi, kemiskinan, rasio Gini, serta defisit dan utang pemerintah. Untuk masing-masing angka, kita perlu tahu apa yang diukur dan angka pembanding apa yang belum ditampilkan.
 
 ## Benarkah pengangguran di Indonesia hanya 4,85%?
 
@@ -54,13 +55,11 @@ Jam kerja juga perlu dilihat. Rata-rata orang yang bekerja di Indonesia hanya be
 
 Ada pula soal ketidaksesuaian antara pendidikan dan pekerjaan. Menurut Sakernas 2024, sekitar 35% pekerja muda bekerja di bidang yang tidak sesuai dengan pendidikannya, dan 22,36% bekerja di posisi yang menuntut pendidikan lebih rendah daripada yang mereka miliki.[^mismatch] Ukuran ini memang cenderung menguntungkan negara yang lulusannya masih sedikit, karena makin sedikit lulusan, makin mudah mereka mendapat pekerjaan yang sesuai, tetapi angkanya tetap menunjukkan bahwa banyak anak muda kita bekerja di bawah kemampuannya.
 
-**Kesimpulannya:** di negara yang sebagian besar pekerjaannya informal, angka pengangguran yang rendah justru menandakan bahwa orang tidak sanggup menganggur, bukan bahwa pekerjaannya layak.
-
 ## Apakah Indonesia sekaya yang ditunjukkan PDB per kapitanya?
 
 **Apa yang diukur?** PDB adalah nilai semua barang dan jasa yang dihasilkan di dalam batas suatu negara, yang dihitung sebagai konsumsi rumah tangga ditambah investasi, belanja pemerintah, dan ekspor bersih (ekspor dikurangi impor). Kalau angka itu dibagi jumlah penduduk, hasilnya adalah PDB per kapita, yang untuk Indonesia mencapai US$17.660 per orang pada 2025. Angka ini diukur dengan paritas daya beli (<span markdown="0">PPP</span>, *purchasing power parity*), yaitu kurs yang sudah disesuaikan dengan perbedaan harga antarnegara.[^wbgdppc] Yang sering terlupa, PDB mengukur produksi, bukan pendapatan rumah tangga.
 
-**Bagaimana angka ini dipoles?** Setidaknya ada tiga cara.
+**Bagaimana angka ini dipoles?**
 
 1. **Rata-rata yang tertarik ke atas.** PDB per kapita adalah rata-rata, sehingga segelintir orang yang sangat kaya bisa mengangkatnya jauh di atas penghasilan orang kebanyakan. Amerika Serikat adalah contoh yang paling sering dikutip, karena rata-rata pendapatan di sana jauh di atas mediannya.
 2. **Produksi, bukan pendapatan.** Laba perusahaan milik asing tetap masuk ke PDB, meski uangnya dikirim ke luar negeri. Irlandia dan Luksemburg adalah contoh ekstremnya: pendapatan nasional bruto (<span markdown="0">PNB</span>) kedua negara itu masing-masing hanya 69% dan 68% dari PDB, akibat laba perusahaan multinasional yang berkantor di Irlandia dan banyaknya pekerja lintas batas di Luksemburg.[^wbgni] Di Singapura, PNB setara 83% dari PDB, sedangkan di Swiss hampir 99%.
@@ -78,13 +77,11 @@ Pengganti terbaik yang tersedia adalah median pengeluaran (atau pendapatan) per 
 
 Survei pengeluaran memang selalu menghasilkan angka yang lebih rendah daripada survei pendapatan, dan orang kaya jarang terjaring di dalamnya. Meski begitu, sebagian besar negara ASEAN juga mensurvei pengeluaran, dan Indonesia tetap berada di urutan paling bawah. Jarak sejauh inilah, antara rata-rata dan orang kebanyakan, yang menjadi inti masalahnya.
 
-**Kesimpulannya:** rata-rata yang tinggi tetapi median yang rendah berarti pertumbuhan ekonomi belum sampai ke orang-orang yang berada di tengah.
-
 ## Apakah pertumbuhan 5% berarti hidup kita membaik?
 
 **Apa yang diukur?** Pertumbuhan ekonomi adalah perubahan PDB riil, yaitu PDB yang sudah dibersihkan dari kenaikan harga. Pertumbuhan sekitar 5% setahun sudah lama menjadi angka andalan pemerintah, termasuk 5,1% pada 2025.[^wbgrowth] Pada triwulan II 2025, BPS mencatat pertumbuhan 5,12% dibandingkan triwulan yang sama tahun sebelumnya, naik dari 4,87% pada triwulan I 2025.[^q2]
 
-**Bagaimana angka ini dipoles?** Setidaknya ada empat cara.
+**Bagaimana angka ini dipoles?**
 
 1. **Penduduk yang terus bertambah.** Ekonomi bisa membesar hanya karena jumlah penduduknya bertambah, tanpa ada satu orang pun yang hidupnya membaik. Australia mengalaminya sendiri: PDB-nya terus tumbuh, tetapi PDB per kapitanya turun tujuh triwulan berturut-turut sampai triwulan III 2024.[^abs] Sepanjang 2024, PDB Australia tumbuh 1,4%, sementara PDB per kapitanya turun 0,6%.[^wbgrowth] Penduduk Indonesia tumbuh sekitar 0,78% setahun, sehingga pertumbuhan 5,1% pada 2025 hanya setara sekitar 4,3% per orang.[^wbgrowth]
 2. **Belanja yang menambah PDB, tetapi hasilnya sedikit.** Dalam hitungan PDB, jalan yang sepi pengguna atau program yang manfaatnya cepat hilang bernilai sama dengan pabrik yang produktif, setidaknya pada tahun ketika uangnya dibelanjakan. Program Makan Bergizi Gratis (<span markdown="0">MBG</span>), misalnya, langsung menambah PDB pada tahun anggarannya, berapa pun manfaatnya dalam jangka panjang. Efisiensi investasi bisa diukur dengan *incremental capital-output ratio* (<span markdown="0">ICOR</span>), yaitu investasi sebagai persentase PDB dibagi pertumbuhan ekonomi: makin rendah angkanya, makin banyak pertumbuhan yang dihasilkan setiap rupiah investasi. ICOR Indonesia 6,2, sementara Filipina 3,8, Malaysia dan Vietnam 4,3, serta Kamboja 4,4, sehingga untuk pertumbuhan yang sama, Indonesia butuh investasi sekitar 1,4 kali lipat investasi negara-negara itu.[^icor] ICOR Australia memang lebih tinggi, yaitu 9,0, tetapi angka setinggi itu wajar bagi negara kaya yang tumbuh pelan dari basis yang sudah tinggi. Belanja konsumsi pemerintah Indonesia sendiri tergolong kecil, hanya 7,5% dari PDB pada 2025, sementara rata-rata OECD 17,3% pada 2024, sehingga masalahnya bukan besarnya belanja, melainkan efisiensi dan pilihan proyeknya.[^govcons]
@@ -101,13 +98,11 @@ Cahaya malam hari bahkan sudah dipakai untuk menguji negara-negara yang dicuriga
 
 Kasus triwulan II 2025 layak kamu nilai sendiri. BPS melaporkan pertumbuhan 5,12%, di atas perkiraan sebagian besar ekonom, padahal triwulan itu tidak lagi terdorong belanja Lebaran seperti triwulan I. Pada 8 Agustus 2025, ekonom Center of Economic and Law Studies (<span markdown="0">CELIOS</span>) menyurati Divisi Statistik Perserikatan Bangsa-Bangsa (<span markdown="0">PBB</span>) untuk meminta data itu ditinjau.[^celios] Kementerian Koordinator Bidang Perekonomian dan BPS menjawab bahwa metodologinya terbuka untuk publik dan sudah sesuai standar.[^kemenko] Saya tidak dalam posisi untuk memutuskan siapa yang benar, tetapi kamu bisa mengujinya sendiri: cocokkan angka 5,12% itu dengan penjualan mobil, semen, dan listrik pada triwulan yang sama.
 
-**Kesimpulannya:** pertumbuhan per orang dan per rumah tangga yang sejalan dengan tanda-tanda yang bisa kita lihat sendiri, seperti listrik, semen, dan cahaya malam, jauh lebih bermakna daripada satu persentase di judul berita.
-
 ## Kalau inflasi sudah rendah, kenapa harga terus naik?
 
 **Apa yang diukur?** Inflasi diukur dengan Indeks Harga Konsumen (<span markdown="0">IHK</span>), yaitu harga sekeranjang barang dan jasa yang dicatat BPS setiap bulan. Bobot setiap kelompok barang dalam keranjang itu berasal dari Survei Biaya Hidup (<span markdown="0">SBH</span>) 2022, yang dipakai sejak Januari 2024.[^sbh] Yang sering disalahpahami, "inflasi turun" berarti harga naik lebih lambat, bukan harga turun.
 
-**Bagaimana angka ini dipoles?** Ada lima celah yang perlu kamu tahu.
+**Bagaimana angka ini dipoles?**
 
 1. **Bobot keranjang.** Dalam SBH 2022, makanan (termasuk makanan jadi dan makan di restoran) mendapat porsi 38,04% dari konsumsi, naik dari 33,68% dalam SBH 2018.[^sbh] Padahal, menurut Susenas Maret 2024, rata-rata rumah tangga Indonesia menghabiskan 50,10% anggaran bulanannya untuk makanan, dari rata-rata pengeluaran Rp1.500.556 per orang per bulan, dan bagi rumah tangga miskin porsinya tentu lebih besar lagi.[^makanan] SBH hanya mencakup rumah tangga perkotaan di 150 kabupaten dan kota, dan bobotnya dihitung dari total pengeluaran, sehingga rumah tangga kaya, yang belanjanya lebih besar dalam rupiah, punya pengaruh lebih besar terhadap isi keranjang. Akibatnya, ketika harga beras dan minyak goreng naik, inflasi yang dirasakan keluarga miskin lebih tinggi daripada angka resmi.
 2. **Bobot yang tertinggal.** Bobot keranjang hanya diperbarui sekitar empat sampai lima tahun sekali (tahun dasar 2018, lalu 2022). Ketika daging sapi makin mahal dan sebuah keluarga terpaksa beralih ke telur, pembaruan bobot berikutnya akan mengikuti apa yang kini dibeli orang, sehingga keranjang yang lebih murah itu dianggap sebagai kebiasaan baru, dan keluarga itu seolah hidup dengan standar yang "sama". Keluarga yang turun kelas dari daging ke telur itu tidak pernah tercatat dalam indeks.
@@ -133,8 +128,6 @@ xychart-beta
 
 Meski inflasi Indonesia dalam beberapa tahun terakhir tergolong rendah, rata-rata upah buruh pada 2025 (Rp3,33 juta sebulan) hanya bisa membeli barang dan jasa 1,7% lebih sedikit daripada upah pada 2019 (Rp2,91 juta).[^upahriil] Supaya adil, perlu dicatat bahwa upah riil di Australia juga turun, bahkan lebih dalam, setelah lonjakan inflasi pada 2022. Artinya, di negara mana pun, inflasi yang rendah belum tentu berarti upah mampu mengejar harga. Cara lain yang membantu adalah membandingkan harga dengan penghasilan, misalnya harga rumah dengan penghasilan setahun, atau uang sekolah dengan median upah.
 
-**Kesimpulannya:** pertanyaan yang tepat bukan "seberapa cepat harga naik", melainkan "apakah upah naik lebih cepat".
-
 ## Berapa banyak orang miskin di Indonesia, dan garis mana yang dipakai?
 
 **Apa yang diukur?** BPS menetapkan garis kemiskinan dari kebutuhan minimum makanan dan bukan makanan, dan pada Maret 2025 garis itu sebesar Rp609.160 per orang per bulan, atau sekitar Rp20.305 per hari, uang yang di Jakarta mungkin hanya cukup untuk sebungkus nasi padang. Kalau memakai garis itu, penduduk miskin tercatat 8,47% atau 23,85 juta orang, dan BPS menyebutnya sebagai angka terendah dalam dua dekade.[^bpspov] Pada September 2025, angkanya turun lagi menjadi 8,25% atau 23,36 juta orang.[^bpspov2]
@@ -151,8 +144,6 @@ Dengan PDB per kapita yang setara Vietnam, Indonesia semestinya berada di dekat 
 
 Australia dan negara-negara OECD juga memakai ukuran kemiskinan relatif, yaitu porsi penduduk yang penghasilannya di bawah 50% (atau 60%) dari median. Di sinilah muncul kejutan: kalau memakai ukuran itu, kemiskinan di Indonesia hanya 6,7% (2025), lebih rendah daripada Australia (11,3% pada 2020) dan Amerika Serikat (18,9%).[^relpov] Penyebabnya, median pengeluaran di Indonesia sendiri sudah sangat rendah dan survei yang dipakai mengukur pengeluaran, sehingga garis relatif pun ikut memoles angka Indonesia. Garis relatif hanya menunjukkan bahwa kebanyakan orang hidup tidak jauh dari median, bukan bahwa median itu sudah cukup, dan itulah sebabnya garis relatif perlu dibaca bersama garis absolut.
 
-**Kesimpulannya:** jujur atau tidaknya angka kemiskinan sangat bergantung pada garis yang dipakai untuk menghitungnya.
-
 ## Apakah ketimpangan di Indonesia memang serendah rasio Gini-nya?
 
 **Apa yang diukur?** Rasio Gini bergerak dari 0, ketika semua orang setara, sampai 1 (atau 100), ketika satu orang menguasai segalanya. Menurut BPS, rasio Gini Indonesia 0,375 pada Maret 2025 dan 0,363 pada September 2025, dihitung dari data pengeluaran Susenas.[^bpsgini]
@@ -167,8 +158,6 @@ Australia dan negara-negara OECD juga memakai ukuran kemiskinan relatif, yaitu p
 
 Data pajak juga bisa membantu, karena dari situ kelihatan siapa saja yang membayar pajak penghasilan dan seberapa besar, meski orang berpenghasilan tinggi punya banyak cara untuk mengurangi pajaknya, baik lewat penghindaran pajak yang legal maupun penggelapan pajak yang ilegal.
 
-**Kesimpulannya:** Gini dari pengeluaran hanya menunjukkan seberapa mirip isi piring kita, bukan seberapa mirip isi rekening kita.
-
 ## Amankah utang pemerintah sebesar 41% PDB?
 
 **Apa yang diukur?** UU No. 17 Tahun 2003 tentang Keuangan Negara membatasi defisit anggaran paling tinggi 3% PDB dan utang pemerintah paling tinggi 60% PDB.[^uu17] Menurut Dana Moneter Internasional (<span markdown="0">IMF</span>), utang bruto pemerintah Indonesia (pusat dan daerah) mencapai 40,9% PDB pada 2025, dengan defisit 2,9% PDB.[^imfdebt]
@@ -177,7 +166,7 @@ Harus saya akui, kalau dilihat dari angka resmi yang biasa dikutip ini saja, pem
 
 {% include hbar.html id="gsl-debt" %}
 
-**Bagaimana angka ini dipoles?** Ada empat cara yang lazim.
+**Bagaimana angka ini dipoles?**
 
 1. **Utang yang dititipkan ke BUMN.** Banyak jalan tol dan proyek infrastruktur dibangun oleh BUMN Karya, yaitu badan usaha milik negara (<span markdown="0">BUMN</span>) di bidang konstruksi, dengan uang pinjaman mereka sendiri. Utang itu tidak tercatat sebagai utang pemerintah, padahal negara adalah pemilik perusahaan-perusahaan itu dan ujung-ujungnya turun tangan menyelamatkan mereka ketika kesulitan.
 2. **Tagihan yang dibayar belakangan.** Pemerintah wajib membayar kompensasi kepada Pertamina dan PLN karena kedua BUMN itu menjual BBM dan listrik di bawah harga keekonomian. Untuk tagihan triwulan I 2024 saja, kompensasi yang belum dibayar mencapai Rp53,8 triliun.[^kompensasi] Selama tagihan itu belum dibayar, defisit tahun berjalan terlihat lebih kecil, sementara bebannya berpindah ke pembukuan Pertamina dan PLN.
@@ -203,11 +192,7 @@ Angka dari APBN sendiri bahkan lebih tinggi. Pada 2025, pemerintah pusat membaya
 
 Ketiga, lihat komposisi utangnya, karena di sinilah perbedaan Indonesia dan Jepang paling terasa. Utang Jepang yang 204,8% PDB itu sebagian besar berdenominasi yen dan dipegang pihak di dalam negeri: pada Desember 2025, Bank of Japan sendiri memegang 43,1% obligasi pemerintah Jepang, sedangkan investor asing hanya 6,8%.[^jepang] Karena itu, pemerintah Jepang tidak mungkin kehabisan yen untuk membayarnya. Lain halnya dengan Indonesia. Pada akhir 2025, sekitar 29% utang pemerintah pusat berdenominasi mata uang asing, yaitu Surat Berharga Negara (<span markdown="0">SBN</span>) valas sebesar Rp1.636,9 triliun ditambah pinjaman luar negeri sekitar Rp1.192 triliun, dari total utang Rp9.637,9 triliun. Porsi itu sudah mendekati batas 30% yang ditetapkan pemerintah sendiri dalam strategi pengelolaan utangnya.[^valas] Setiap kali rupiah melemah 10%, nilai rupiah dari hampir sepertiga utang itu ikut naik sekitar 10%, dan kenaikan itu bisa terjadi dalam semalam. Kabar baiknya, porsi investor asing di SBN rupiah yang bisa diperdagangkan tinggal 13,37% menjelang akhir 2025, terendah sejak 2007.[^sbnasing]
 
-**Kesimpulannya:** besar kecilnya utang tidak sepenting berapa ongkosnya dan kepada siapa utang itu harus dibayar.
-
 ## Apa saja trik di balik angka andalan pemerintah, dan bagaimana membongkarnya?
-
-Ketujuh angka andalan pemerintah, cara memolesnya, dan angka pembandingnya bisa diringkas dalam tabel berikut, lengkap dengan posisi Indonesia.
 
 | Angka andalan | Cara memolesnya | Yang sebaiknya dilihat | Posisi Indonesia |
 | --- | --- | --- | --- |
@@ -223,11 +208,9 @@ Ketujuh angka andalan pemerintah, cara memolesnya, dan angka pembandingnya bisa 
 
 ## Jadi, apakah ekonomi kita benar-benar meroket?
 
-Mari kembali ke pejabat berkemeja biru muda yang berseru di atas podium. Sebagian angka yang dia pamerkan memang terlihat bagus, tetapi angka-angka yang menggambarkan kehidupan sehari-hari orang kebanyakan tidak ikut meroket: kebanyakan pekerja masih tergolong pekerja informal, orang yang berada di tengah hanya kebagian sekitar seperenam PDB per kapita, dua dari tiga penduduk masih hidup di bawah garis kemiskinan untuk negara sekelas Indonesia, dan hampir seperlima pendapatan negara habis untuk membayar bunga utang.
-
 Statistik tetap alat terbaik yang kita punya untuk memahami negeri ini, dan BPS pun mengikuti metode internasional, sehingga masalahnya biasanya bukan pada angkanya, melainkan pada angka mana yang dipilih untuk dipamerkan. Itulah sebabnya, setiap kali mendengar satu angka dari podium, biasakanlah mencari angka kedua berbekal tiga pertanyaan sederhana. Pertama, siapa yang diwakili angka ini: rata-rata atau median, total atau per orang? Kedua, bagaimana cara mengukurnya: definisi apa, garis apa, dan survei apa yang dipakai? Ketiga, dibandingkan dengan apa: negara lain, garis lain, atau tahun lalu?
 
-Mulailah dari angka berikutnya yang kamu dengar, entah di pidato, di berita, atau di unggahan media sosial, lalu cari pasangannya: pekerja informal untuk angka pengangguran, median untuk PDB per kapita, garis Bank Dunia untuk angka kemiskinan, dan bunga utang untuk rasio utang. Angka memang tidak pernah berbohong, tetapi orang yang memilih angka mana yang ditampilkan bisa saja berbohong, dan pada akhirnya hanya pembaca yang mau mencari angka kedualah yang tidak ikut terkecoh.
+Ketika mendengar angka pengangguran, cari juga data pekerja informal; untuk PDB per kapita, cari median pendapatan atau pengeluaran; untuk kemiskinan, periksa garis yang dipakai; dan untuk rasio utang, lihat beban bunganya. Dengan mencari angka pembanding, kamu tidak hanya menerima gambaran yang dipilih pembicara.
 
 *[PNB]: Pendapatan Nasional Bruto, PDB ditambah pendapatan bersih dari luar negeri
 *[OECD]: Organisation for Economic Co-operation and Development, organisasi kerja sama ekonomi yang sebagian besar anggotanya negara maju

@@ -2,7 +2,7 @@
 title: "Rent or buy a house? Why Perth says buy and Jakarta says rent"
 description: "Buying and renting can both win, depending on four numbers: what the house earns, the mortgage rate, what your cash earns elsewhere and how you count wealth."
 date: 2026-10-17 09:00:00 +0800
-last_modified_at: 2026-10-29
+last_modified_at: 2026-11-11
 tags: [finance]
 image: /assets/img/og/rent-vs-buy-calculator-explained.jpg
 image_alt: "Two friends side by side: one paints his living room wall with a roller, the other holds a passport-sized booklet beside his rolling suitcase"
@@ -11,7 +11,7 @@ keywords: [rent vs buy, rent or buy house, Perth, Jakarta, KPR, mortgage, proper
 bmc_message: "Rent or buy, a coffee still costs less. Buy me one so I can keep running the numbers!"
 ---
 
-**In short:** buying wins when the house earns more than the money tied up in it would earn elsewhere. Renting wins when it doesn't. In my [Rent vs Own calculator](https://tool.adjiebrotots.com/rentvsownhouse/), a 2-bedroom house in Perth ends 30 years about A$850k ahead of renting, while the same kind of house in Jakarta ends 20 years behind. Same maths, different inputs.
+**In short:** compare owning's returns and costs with renting and investing the difference. Under my [Rent vs Own calculator](https://tool.adjiebrotots.com/rentvsownhouse/)'s Quick Start assumptions, a 2-bedroom Perth house finishes 30 years about A$850k ahead in today's money, with 4.5% annual price growth and a 4.6% investment return. The Jakarta example favours renting over 20 years. These are scenarios, not forecasts: changing Perth's investment return to 8% makes renting win there too.
 {: .tldr}
 
 * TOC
@@ -19,19 +19,17 @@ bmc_message: "Rent or buy, a coffee still costs less. Buy me one so I can keep r
 
 ## Who is right, the buyer or the renter?
 
-Meet two friends. Robert wants a home to paint, drill and never be asked to leave, a place where the kids can grow up. Geoff changes countries every few years, hates juggling property tax, repairs and utility accounts in three countries, and wants one monthly payment, all in.
+Buying offers stability and control over your home. Renting makes it easier to move and leaves repairs and property administration to someone else. Those preferences matter, even when the financial comparison favours the other option.
 
 <figure>
 <img src="/assets/img/rvo-ill-buyer-renter.webp" alt="Two friends side by side: one paints his living room wall with a roller, the other holds a passport-sized booklet beside his rolling suitcase" width="1456" height="1087" loading="lazy">
 </figure>
 
-Both are right. Nobody can put a price on Robert's stability or on Geoff's freedom, and I won't try. Those are values, not line items.
-
-But there is a second, colder question that doesn't care about values: **if you count only the money, who ends up with more?** My honest answer, after building a tool to find out, is that both can win. That is why I wrote the Rent vs Own calculator. For me, because I was tired of arguing about it from gut feeling. For my friends, who got a number to argue with. And for you, if you would like to see the bigger picture before signing 30 years of anything.
+**If you count only the money, which leaves you better off?** I built the Rent vs Own calculator to compare the two, rather than argue from gut feeling. Either can win, depending on the inputs.
 
 ## What actually decides it?
 
-Strip away the noise and the money question comes down to a handful of forces:
+The financial comparison comes down to four things:
 
 - **What the house earns.** Price growth, plus the rent you no longer pay (the rental yield, a.k.a. rent divided by price).
 - **What the house costs.** Mortgage interest, rates, insurance, maintenance, and the one-off hits at both ends: stamp duty and legal fees when you buy, agent fees when you sell.
@@ -44,7 +42,7 @@ $$
 g + y - c \;>\; r
 $$
 
-If the house earns more than the loan costs, leverage is your friend. If not, every borrowed dollar is a drag. This ignores the one-off costs and the opportunity cost of your deposit, so it is a compass, not a calculator. The calculator does the full job. But look at what this compass says for the two cities in the tool's Quick Starts (2-bedroom house, October 2026 figures):
+If the house earns more than the loan costs, leverage helps; if not, it works against you. This simplified test excludes one-off costs and the opportunity cost of your deposit. The calculator includes them. For the tool's 2-bedroom house Quick Starts (October 2026 figures):
 
 | | Perth | Jakarta |
 | --- | --- | --- |
@@ -54,31 +52,29 @@ If the house earns more than the loan costs, leverage is your friend. If not, ev
 | **House earns ($$g + y - c$$)** | **7.5%** | **6.1%** |
 | **Mortgage rate ($$r$$)** | **6.4%** | **8.5% for 5 years, then 11% to 13%** |
 
-Perth's house out-earns its loan by about a point. Jakarta's house earns about 6% on money that costs 11% or more after the first five years. One is leverage, the other is a leak.
+In the Perth scenario, the house out-earns its loan by about a percentage point. Jakarta's house earns about 6% on money that costs 11% or more after the first five years.
 
 ## Why would one city say buy and another say rent?
 
-I noticed this when I moved from Jakarta to Perth. In Perth, buying is more beneficial than renting. In Jakarta, renting is. Same person, same maths, same tool. The inputs belong to the place.
+The Quick Start examples favour buying in Perth and renting in Jakarta because the inputs differ.
 
-And let's be fair about Perth first. Australia is in a housing crisis. The country whose anthem promises "boundless plains to share" struggles to house its own people. REIWA's medians for Perth rose about 17% for houses and 22% for units in the year to September 2026.[^reiwa] That is a very hot market, and I would not extrapolate it. The tool's Quick Start assumes a far calmer 4.5% a year for the next 30 years.
+Australia is in a housing crisis. REIWA's medians for Perth rose about 17% for houses and 22% for units in the year to September 2026.[^reiwa] I would not extrapolate those increases: the tool assumes 4.5% annual price growth over the next 30 years.
 
-Two structural differences push the Perth and Jakarta results apart. (Neither one alone explains it. Put a Jakarta-style 8.5% loan on the Perth house and owning still wins by about A$495k. It is the combination that decides.)
+Demand and financing costs help explain the different inputs, but neither decides the result alone. A Jakarta-style 8.5% loan on the Perth house still leaves owning about A$495k ahead in the model.
 
 ### Who is buying? An immigration nation versus a birth nation
 
 Australia grows by adding people from abroad. In the 12 months to December 2025 the population rose by 412,500, and net overseas migration supplied 301,000 of them, against 111,500 from natural increase. Western Australia grew fastest of all the states, at 2.2%.[^abs] Every one of those new residents needs a roof, and homes take years to build. Demand arrives faster than supply, and prices carry the difference.
 
-Indonesia grows mainly by births, and births are slowing. BPS's 2025 population survey puts the total fertility rate at 2.13 children per woman, close to the replacement level.[^bps] Fewer new households each year means less pressure on prices. Add a large stock of unsold apartments (the tool's Jakarta notes cite about 29,000 new units unsold in the first quarter of 2026) and you get the slow growth in the tool: Colliers' average Jakarta apartment price rose about 2.2% a year from 2014 to 2026.[^idprice]
-
-Price growth is what a buyer is paid for taking the risk. Jakarta pays less.
+Indonesia grows mainly by births, and births are slowing. BPS's 2025 population survey puts the total fertility rate at 2.13 children per woman, close to the replacement level.[^bps] Add a large stock of unsold apartments (the tool's Jakarta notes cite about 29,000 new units unsold in the first quarter of 2026) and you get the slow growth in the tool: Colliers' average Jakarta apartment price rose about 2.2% a year from 2014 to 2026.[^idprice]
 
 ### What does the money cost? A developed economy versus an emerging one
 
 In September 2026 the Reserve Bank of Australia lifted its cash rate to 4.60%, and new owner-occupier loans cost about 6.2% to 6.4%.[^rba] That is painful for Australians, and it is still the cheaper money. Bank Indonesia's policy rate is 5.75%, and BCA's regular KPR is 8.5% for a 5-year fix, then a floating 11%, reviewed every six months.[^bca] A structurally higher inflation and risk premium shows up in every mortgage.
 
-Now the fine print on those flashy low KPR rates. Promotional fixes from 3.81% do exist, but they run for the first few years and then convert to the floating rate. The tool's own notes say the 3.81% offer is for new homes from partner developers, not resale. Even the regular KPR is staged: an 8.5% start does not stay 8.5%, it floats to 11% after five years.
+Low promotional KPR rates do not last for the whole loan. Fixes from 3.81% run for the first few years and then convert to the floating rate. The tool's notes say that offer is for new homes from partner developers, not resale. Even the regular 8.5% KPR floats to 11% after five years.
 
-In my view, buying a house in Indonesia with a KPR often looks less like building wealth and more like paying a bank. I would rather say that with a number, so I tested it in the tool. A developer's own instalment scheme, or paying cash, can be the better route. I can only show the cash side of that in the tool today. A developer instalment is not modelled, so treat that part as my opinion, not a result.
+The standard KPR fares poorly in my Jakarta tests. Paying cash can be the better route. I also think developer instalments can be worth considering, but the tool does not model them; that is my opinion, not a calculated result.
 
 ## What does the tool say about Perth and Jakarta?
 
@@ -95,27 +91,27 @@ Same type of home (a 2-bedroom house), Quick Start untouched, everything in toda
 <iframe src="https://tool.adjiebrotots.com/embed/#t=c&amp;l=en&amp;s=z7Vtvb9tG0v8qwt6D5xpkw87s_xVwLxzHadI6SeMkbXOGcaAlWmYtkTqSju0EBvryeX336r5eP8mDWVISJTm0q6BFmpMNmCvu_GZ3ZnZ2hz9TH9g71kfOztJsyPpscBoX1c8l42ySD5OS9Q8_sDHrM8bZGeuzMhkxzvL57edJ1Uv-eZ5WV-ya17f203-ep8PeIC5P5_d2BoPzyfk4rpJhb5CXFbs-4iyuWB-oMYmnrP-BAesDZxhmI1hfXHN2UsSTZhLV1TRhfTZOs4RxNo6Pk3FJqP-ZkhbOhnEVl0nVzJi6WZ-9uMj6vWwxR86O82KYFLv5OC9Yn_1F73jcc3Q_HpyNivw8G670CTFH_ZgOq1PWF5HmbJqnWXUQD9Pz-Szwurn9JH-XFLM-09x82FYBnFVJVqZ5xvoQSc4G58fp4GlWJcU0H8dVmmfP8iHZO8mzvMqDzSfpeMz6J_G4TDgr3uXfJVesz7Kk2gvGvbjIyDHJKMmGr6bJgKY1WLPzYm5D47PZ7MV1CFbjuIMkq7o991BpCf5mz9V9fxrPkbEfd93c0I-6Ti65bmXN9b46jrPhvTUHVkWcldO4qMded-Jy_5LT4CZvwYqvP91Rafkwpj2hKs6TZYPV72Fws0Yl_NHmsgfIuqzV17RJ5VPSEZZskZTTPCvTd8lMfBKnWRWn2U45TQbVAQ03d2OcpZMw_sKxNKt4UN_7EDZa1mdpNkwuWdNbJoOqkafcGJ-P0nrsepFSa5iW03F8tZCq8nxcpWErHcTjMXmYINc3Ovtx-GGcVWk1Tua3UQmQOyF2w6v5XbWrH1qzvgc82t2Tj2E1y5GzaTwcptmI9RE4S7L4eJwM5-Ynl1VSZPE4-PeM_masz16dxkUy3KXj53U6jeZC19fXnL3P8wkJTuPgsbnGxvu1Ay9ZS_LiNEnGN8iW04Q-QASOHJtmg9M1qetlleN0klbB-ZchXGkWltskvmR9QY00O4izURJWyjVnZbDk7eO0IvH4vMrD9TIcZOyKHVGMB-PzYfL3pMibIQNwEI-TxUDxZVqGOTRBWgp6bU2VXFasz94mccH4Ysuax-skz8IkTuJJOqY976-PnvWe5Vn-V96jPCin8YASoUzfJ6yPYR-ehe4Dq3LKdYpuVZFXKe1ZldbL6obRJvHla-rdJ4exPoqNJkDuzKsmY2o_Lz7r4O-ioJGb5UQ-eFUV-VnS3gpm92ZrlbUsk3zVjxSkV2eUO8ufv29Bwnb34uSkTKp6XmlGmim_JvHPs2Y8Tke0nAcJpTEFpcjLcqe5m9WBKk_zi31S9zAenA0LcnNjzHFzYzbtYnQcfyW05r3FH4isvscWsvNJUsU0KtLhUnR23SMVTv4Vk6mQWiTssIgvXmQh-3aKJJ5vg0V88boOeLPg0sHZfpKNCOY4yxt3zLegukgbxFUyyour9VGXAJwVyTva6xbmJ6M026nqvJjdo32LEqFeeZwNxotAjQpaP4vT4IYcGVIh2j88qlutAF7MrR-0vQ08_EZ4j5KfvBlScJqXab0GZ_lwzdlVK0-vbs_T561D8mDKe1U-jK9-_eU_JeVCcnXvM8jhbcL-NyYs6Q6GfhHperWcruPkpKrLiHkdddg-pI9aCXFZV0_VrPYz17MsP5mEm8f05z6QioMp44zVw1ODRaTqQej79f_-dXP3feyAYjdUdEBFN1TOoWeMyxWsbGPX---rLrC6Bay7wPoWsJmDJ4wbLpbApg1e779vu8D2FrDrArtbwH4OPmbcr4B9G7zefx-hC41wGxw74XgbXHTCxW1w2QmXXXCq3ol6mEKdrc2zzDGdQikdrrOk9PRIc8z62fl4zFk8b53MGkVDJ9Xi9jqwSvUHF1TPnqIaFmudJspPTsKmQzvZIRxxVl6E03SJhFpnV8KdcjaNeiur2xctBqR-7GzmnI7HYvbhNK4Gc8Qwr-aawvNv_eF6xqndQNEszRpvm_Wc2PgjZ_14nMdVmo0eFHGV9Ap6bup9NUmzX3_59yS-vLdqxKoNMZ11LRtc-LmTDfPH_TbR0Bgyc0a4dzd7jmar6HWRhJJvEI6asK4CV3r4gaWBmgxXbK7i-mi-_l7n06Zjc3Jz3GJbv0B2k-z6RGIT4QZms9Ntf35qk-z6HVjNlte-RFoTfxeLP1teE3FLbG6JzS2xuSU2tzzJltj8JGJzv31MbpnNbcZ-Nhm7ZTa3zOaW2dwym18ks4miTW2i_Ci3uUx3_GnIzY5pb9nN_wZ2M155b7T31SQvqlE8Snr3e3k2ytNstM7IfAm8Z15Wn8p7qht4z3WHEm_V6cwvgA3Ny-pT2VDU6-TgnVbnF0mUmj_YGZ8vh2q3HOqWQ91yqFsOdcvIbDnUT-JQV78jtSVSt2n7GaXtlkjdEqlbInVLpH6ZRKpbIlL9R4nUuxJSfxqK9S6E0JZ4_TMSr0ekOR-z_uEhcOSCS6645oZb7rjnCByRo-AoOSqOmqPhaDk6jp4LOOKHzbl5--8RP0SrIPxwISyiEwq4cKAsagAupULhqVc6h0ZYC1wpYZS1BrjyximtJXCtBXjvDHADTlsNHrgxRinvELgV2qOTBrh1Fr1QANxp0CCMB-7RIICnllPCCJoBgtbCGQdkrPAapKCmACss2NB0zjthqCmtBuNDUxkDIBWQZRIlOGjmLmWwTBnhDDgHXEtjnHOCZuydEWSFcUIJARK4tV4LMBq4swac9BK4twKNtuR_MNah12F2RoJ3oSm0A63rKWlhlaynpKxA5ampFWqBoWmktmiCJVZ4p5F8gk5Ibx1S06NDFfQKQKFQkS8EgnHCOfjkyDmvwAlNfrDCeSWAa2eUlYr8IC0asOQb57WtPaKk1-GeA9BGC0cx9BYFWuBeoEXnQgyNV1a5OobWO1nH0FlUtZfAoDOqiaHVFuoYWhDWf7JhGpSw5CyujXFG0OhGgqZ1Adx4raUHC9wa9MobA9wJ762jhei8d6JeiBaNM9qQEUo7EFAbIRTW4ROA1oGpjVDoVW2E8d5gWKlKe4W1aVoLL2RtGntb9GhPeVv0sL6I-iLri6ovur6Y-mLri6svvoHP1DR6sFGEjSZsVGGjCxtl2GjDRh02-gSwI354yHq9lS9V9HsHU7QqApiQxM0CQtgIRZeAg0jZDgEpVYSyS8C5CE2HgFIiMrpLwJvI6Qk9nyvnI4WT3q-__Lt3MNWgImEn9z4O1VpECAGqpY2En0ONiZzpghpwkXY11BlyQgM1EiLdOaoxJlL1hI20ZP0M6nWkVRfUCh15UUOdp3EaqDUYed0JdTZCH6BWSRJuoE74yLsuqNMQ6dpNDqA1qvM-cqIL6tHMPOy0j-w8ON5iZHwn1KlImAD1AiMrZlCMQB93ADECcxxgzrTsxAhFNwxlgNX4GUhAN0hgAyL0HORuAfkGROgZSNpukHQzkF-AlOkGKduACD0D6eC_ZmNY_eJSyEqUEbhZ0t0o4VwkVZeEMoJyqENCS0NroEPCgL9Fh3EiUqJLwlof6U4JZ80t1norIrRdEhiBPe7sR9PdL27pl7q7X93Sr1V3v7ml38rufie6-31nv4gAu_uR-sOapX-h9MLBVjdx0RSLplw01aKpF02zaNpF0y2avjVEe7jWeNgaEFsjYmtIbI2JrUGxNSq2hsXWuHR-r5T-2gmDWkaKqlQtJFiOVjn0wnAhJTplLRcejVbCcUnluNDIFXhQSkiujAOppORaWGGs1VQiWuupyqdCW6PgFuhOKKislM4r7oST6IzgznmrlfUrs0LUaK1SXEiQWjnLpaKi2dGA4J10gmtrtKWyz3ihpBbIHTijEAT3QgvtrKLKTEh61CDrAMBYKsasE7auwL0Vkop61EhlH4aim54UqGW189oraJc8rZeWaB1Be7P8jPt05GQ4-2C2ayPtYvc6IIhUKLUxQkagujE2Um4JI1WkTSdGyEiKJYwKh3wnxtP-2cZoG5nucaSOYNkHxkei2x4FkYcljIO1Sm4VYyK3jPEi0rITo0VkV-JD1Wb35LSLjFsJqqEKvAtkFPlpCSQsLY4ukIW1kaSnEqoTZNZs0hjZ7uk5sbZQjYys7gY5qjiXQFZT4FarktUVcUNZsipyQ12yFu_1wmQ1UjdUJqtxuaE0WRW5oTZZ9fkNxcmqs26oTlZEbipPVhN9rT5ZE1gtUNYEViuUNYHVEmVNYLVGWRNYLVLWBFarlDWB1TJlTWC1TlkTWC1UVreytUplTWBWqtgZVYXaGB1OMCGNVR4dcInEeRAFJekQtOiBK609HdjAtbIKBdBhKZUOVAS3aFELrYFbr9EKINrGOIUmUDTSWCAejPvAeEBN1lgdJsERwWtjAs-BWhthwoGKXkvbsB_CKREIKRRaSdOQc1ZYtDXH44Q3qqY8gEsD3mqD3ApptTeWIzgnDepAlCjriWAi8ivQZ1ygl2iMAy600WQ8cOGlCyq5lKiMJYJRGi-EQQSuwKJVdMYrpSVKQZyQk0ZJIh21CMRd4ITAOSQ57b31SKMZ6Zw3HoEHUs9pF_xnPFFT3GorvfKBVv2UIGll0Xti1JTzFqUHbqXTVHoRBSWldEoD9yARQAiioCwxizUFZYx1qgmN16qm1IxFCXU80Dppas8bNLphSL0jTjYUQ8IYDUGDJOfJuqmtDhzrpy5AQBQ0uhGAIGn2xmsnpFKhLkQqG4E7Kb21VhHRZlAGks5rWrMiWAnaqnr5ALGLNhgBPvCOwWAJQmkLTcFnall0kqjcmpQDQbRtaPoQtaUC707_Awp7bfvw-G1Q1IZO4Y2wQho6DzfC0oG3OM1-I5ZoKbEZVmlNzMlGWK1sIOGIGVMQ4YKP02qtBLmzVkN1acN8CQicUlMTKhd5u6FWizbChorzmrisGZ8m3RqLd3etXs-qXWvaBJ8TIZybaXXGUTwDlSZlKKCaahXkWvl9Z62eVmdD0HlDXO2coLORkZtqrYnBQMLRo6r-OHd39xyc0XpIB_CC1MON9eGMugPd0mc31zefX4ugE2JjfQJuohbN5vpm_Ca2-E0Jm-vTM30tblHKzfXNuEoyfK5v8_Ui3E0sq1njPm_9p3v7Yf03QGR4LP7tOCsi6TbAIbjIqU2AShMNsAHQiUjiBkCBnkiEDYDaRHqjEb2kJ8wNoiix9T-u3xR-Hwm5AVCBXXucuxtQ6c3CoZyMzCYrR4v1J8-7AQ1EbpMlp72PrN8AaKTbbAEY6yKxUR6jpbN1A6C2kSQbj444O6u_NEXvje7G2buY3tDMmheGeu9K2hV73xf5NCmqq96rQZLFRZr39i6n47wIr8fS28y7-WQaF2mZh--wsT5LqEFvzLBxOjqdfc2H9dlpVU3L_tdf0zdUonj4c5ocF3mVV2U0yCdf02TflflFdpqfl8nXf8mnSfa31tz-t_xbnLvzV9N4Z_f9ox_2y8dv3r8YxfCTHZ_tPp5-czqReHb6ZGLSN--_f_l8_-f9H_bLnVfPzk_yp8Oz_PXPB4N33yTnf89TffLy_OWPe0-Pv306rJ6Y06eT9PEZ_OjiPbdz-u2unuwkr3bxu0dPnuxJcbabvXi-94_8u2-vXjx7_EaPjPymHLz-bixP8-z9w72r7787T_b23jx5UBycPt89_ell-XQX93_4JjveKUeVfvB2Z3o6GlX64e6Dy53yqsA3e2_f_vhq59nO87cvp292vn_p5GW18_Tq4ODRy6uDR4-eYvFWnbwU6bu9b_YnP7w81Rf_eHT2Q7GTP_gpV6dm5-3z3ePLfbmzR19jY332urjqXeXnRS-_yHplE6ayF1fh1eyKXnvaIW_3HgZ3917n-ZhCfcr6CuD6_wE" title="Comparison" width="100%" height="580" style="border:0;background:transparent" loading="lazy"></iframe>
 <p style="margin:6px 0 0;font-size:13px;text-align:right">Interactive chart: <a href="https://tool.adjiebrotots.com/rentvsownhouse/#open=chartCanvas&amp;s=ao8uSpaACzDVLsFUzOga0X7lkCFpGhm31khHm6iUzPQNLjLVLsASMufoIdkoTjRcvGeuZoi5fQuQWEIbJIdtH6hImiFk0W8aE8AhJC5mAeSC1KDHHE32kCnONE_oKJyOMFU5g63GscTKl3honzBEyPKueEEUH-rRhNChXQsIC1LVGnbAsgt5-YAphggt5BC-xAsyr1UEYYWSAMANYQpUAPQ83xtAIyRRDQyRDDI1rY4fQ2ivEGLmVQh5w_DkVrAo-Xo4h6AYNCbxL3AE">Rent vs Own Property Scenario Explorer</a> by Adjie Brotot Tools</p>
 
-A fair objection: Perth runs 30 years and Jakarta 20, because that is each market's standard loan term in the Quick Start. It is not an apples-to-apples horizon, so don't compare the two final numbers. Compare the direction. The Sensitivity Analysis tool can put both on a shared 20-year horizon.
+Perth runs for 30 years and Jakarta for 20, following the Quick Starts' loan terms. Do not compare their final amounts as if they shared a horizon. The Sensitivity Analysis tool can put both on the same 20-year horizon.
 
 ## How do you count your wealth?
 
-Here is the part no spreadsheet settles for you. The word "wealthier" depends on what you call wealth. I see three camps.
+The answer also depends on how you count wealth:
 
 <figure>
 <img src="/assets/img/rvo-ill-count-wealth.webp" alt="A woman in a hijab weighs a small toy house in one hand against a stack of gold coins in the other, a piggy bank on the table in front of her" width="1456" height="1087" loading="lazy">
 </figure>
 
-1. **The holistic mind.** Your house equity is wealth, full stop. This is how most Australians think, and the numbers back them up. UBS's Global Wealth Report 2026 (2025 data) ranks Australia **third in the world for median wealth per adult**, at US$210,783, behind only Luxembourg and Belgium.[^ubs] And much of it is bricks: Australian households hold A$12.3 trillion in residential land and dwellings.[^abc] If you count equity, buying in Perth looks great.
-2. **The liquid mind.** Wealth is what you can spend. A house is paper until you sell it, and the equity cannot buy dinner. You want to afford things, not be "paper rich". The calculator's chart has a **Liquid cash** tab for this lens.
-3. **The cost-cutter.** You don't care about wealth rankings. You just want less money leaking out, to landlords on one side or banks on the other. The **Accumulated cost** tab is for you.
+1. **The holistic mind.** Count house equity as part of your wealth. UBS's Global Wealth Report 2026 (2025 data) ranks Australia **third in the world for median wealth per adult**, at US$210,783, behind only Luxembourg and Belgium.[^ubs] And much of it is bricks: Australian households hold A$12.3 trillion in residential land and dwellings.[^abc] On net equity, the Perth Quick Start favours buying.
+2. **The liquid mind.** You care about money you can spend without selling the house. The calculator's **Liquid cash** tab shows this comparison.
+3. **The cost-cutter.** You want to minimise housing expenses rather than maximise wealth. Use the **Accumulated cost** tab.
 
-Be honest with yourself about which camp you are in before you pick a tab. The same scenario can look like a win in the first lens and a loss in the second.
+Choose the measure that fits your question. The same scenario can win on net equity and lose on liquid cash.
 
-So, objection time: "UBS says Australians are rich. Doesn't that prove buying wins?" No. It proves that Australian house prices rose and Australian households owned them. That is a result, not a promise, and it was earned partly by immigration and cheap-money years that may not repeat. Median wealth also fell in most countries in that same report.[^abc]
+Australia's high median wealth does not prove that buying will beat renting for your next purchase. The report describes existing wealth, not future returns. Median wealth also fell in most countries in that report.[^abc]
 
 ## How do I use the calculator? Three levels
 
-I built this tool as an economist with a banking background, so there are three ways in, from "just show me" to "let me break it".
+There are three levels, from changing the two main inputs to comparing several scenarios.
 
 ### Basic: pick a city, check two numbers
 
@@ -135,11 +131,9 @@ I built this tool as an economist with a banking background, so there are three 
 
 ### Expert: tune the model
 
-Open the settings that move the answer most.
-
 - **Mortgage term and rate schedule.** Switch the mortgage to Detailed to enter a fixed period followed by a floating one, which is how most KPR actually behaves.
 - **Costs of owning and renting.** Setup costs and ongoing costs, so stamp duty and BPHTB don't surprise you.
-- **Risk-Free Rate.** The most important one. If you dare to change it, you are no longer thinking like a savings-account holder. Treat it as the return on wherever your spare cash would go: for instance, an S&P 500 index fund with an expected long-term return of 8%.
+- **Risk-Free Rate.** Despite the label, this is where you enter the return you expect on spare cash. For example, 8% can be an assumed long-term return for an S&P 500 index fund, rather than a savings-account rate.
 
 <figure>
 <img src="/assets/img/rvo-expert-mortgage-en.webp" alt="Mortgage group in Detailed mode for Jakarta: 20-year term, 8.5% fixed for years 1 to 5, then a floating 11% to 13%" width="716" height="1496" loading="lazy" style="max-width:320px">
@@ -151,7 +145,7 @@ Open the settings that move the answer most.
 <figcaption>Risk-Free Rate, time horizon, house price growth and selling cost, all on the Assumptions tab.</figcaption>
 </figure>
 
-I just told you the Risk-Free Rate is the dial that matters most, so let me prove it, because it cuts against my own Perth story. At the Quick Start's 4.6%, Perth owning wins by $850k. Set the Risk-Free Rate to 8%, and **renting wins Perth by about $167k**. If you also cut house growth to 3%, renting wins by about $690k. Perth's result is real but fragile: it rests on a house that outgrows what your cash could earn.
+Changing the investment assumption can reverse Perth's result. At the Quick Start's 4.6%, owning wins by $850k. At 8%, **renting wins by about $167k**. If house growth also falls to 3%, renting wins by about $690k. The answer depends on both assumed returns.
 
 Jakarta is the opposite. Buying stays behind at an 8% Risk-Free Rate (renting wins by Rp 1.6bn), and it also loses at 3%. It only starts winning when I change the house or the loan instead:
 
@@ -167,7 +161,7 @@ Jakarta is the opposite. Buying stays behind at an 8% Risk-Free Rate (renting wi
 
 ### Conglomerate: the Sensitivity tool 😎
 
-At some point you outgrow one scenario. You want to put things side by side. That is the **Sensitivity Analysis tool**, and yes, it is free too. It lines up several Rent vs Own scenarios, one per column, and compares them on one chart. Use it to compare:
+The **Sensitivity Analysis tool** compares several Rent vs Own scenarios on one chart. Use it to compare:
 
 - **Houses or suburbs.** A flat in the city against a house further out.
 - **Cities or countries.** It converts currencies for you.
@@ -183,9 +177,9 @@ Here is Perth against Jakarta on one chart. Solid lines are owning, dashed lines
 <iframe src="https://tool.adjiebrotots.com/embed/#t=c&amp;l=en&amp;s=z7V3bchs5kv0VBmZiZjoaRiNxByPmgZJ8kWS7bVlqt6xwbJTIElkWWUWxSjc79L7P-zP7vp-yX7KRVaRYst0k3N0za8vojjDBqoMEkEACyIME9YFckC5QcprlA9Il_VEyq96VhJJJMUhL0j36QMakS16PkqpTjdJODeiUo-ISQaekS8p0SCgpbqHP06qTnp1n1TWhpLz74IY2mKfZ2Xk26PSTcjQHPc3OWPN9gen1--eT83FSpYNOvyirObB-zJonN28pSSrS5Ys8P1_m81r1R2n_9E69ipOTW9lFfpsXFs_20rz68sxvKZkkU9L9QDgFCqTLKeGUU15rFVNAuoLWbznpSkqgeauaFJCuxlT91jQpIF1LiWhwrkkB6XpM1TjgTRJIF-CGkpNZMpl3VnU9TUmXjLM8JZSMk-N0XGLt_jqt1UQGSZWUaTXvWXxNuuRFOqtGnf_5747Y2OuMivMy7XYaVR4Xs0E62yzGxYx0yV90z8NDh8-T_ulwVpzng4_eCXGb63U2qEakK5imZFpkebWXDLLzslZR_f1JcZHOFg8NJVWal1mRky5nkpL--XHW386rdDYtxkmVFfmzYoBtmxR5URV1-06y8Zh0T5JxmTZNWzQVbureWtG-eXf_WQ1snmzhAO4eaare_vvbLO60eSc5TWZVEtKrG0pL7j_f6ObdV9KrMqCFn-_X393Er6Bf1Q3OMsUUs9W2PEvLaZGX2UVKutXsPMUpKMurJMt75TTtV3tYwq2oJM8mdZG3TzKsSNJvnn2oZ3rSJVk-SK_I_G2Z9qs5_oaS6fh8mDVlj9NhiivFBzLIyuk4uV6iqqIYV1k9F_aT8Rg1jVluPqv0R_V_hJIqq8bp7WNQgste3ROD69unalNvWPNpr25tPpSP-Mf9BpRMk8Egy4fNTJnmyfE4Hdw2P72q0lmejGv9nuK_OemSV6Nklg42cXnbz6bsFnRzc0PJ-6KYIHCa1Bq7lTjXfqPAK9JCXo7SdPwZbDlN8Qtn3KFis7w_-gR1c1fkOJtkVa38q7q7srwedpPkinQFJrJ8L8mHKenqurJl3ZLDR1mF8OS8KurPq3qFINfkLfZxf3w-SN-ks2JeZJ2xn4zTZUHJVVbWdZh30p1Ob1pTpVcV6ZLDNJkRSvqf9NdJkdeVOEkm2fiadMnft551nhV58XfawaFfTpM-jv0ye5_O17LbrvtAqmJar5PHRVWhVhVWssqaYfWZ0ibJ1T6-fYoKI10Qv6sCqM6imltMo-fld13rezbDkufDCXXwqpoVp-l8_PH2s8VYJa2WSfqxHrGTXp2i7dz9_qKVpZ72fj45KdOqqVeWo2S0r0nybpFMxtkQh3M_RTPGTpkVZdmbP82bjsLt21MUt5H0TwczVPO8McfzB4tqz4bHyT-E1rSz_Iczq38gS-xtJcUNJcNZNrjTO5tuS9Ur6kdNxh3K0mAHs-Ty57y2vt4sTRYgfLzfdPh8wGX906dpPsRsjuK2rFbH7RTU7H76SZUOi9n1p6XeyUDJLL3AuW7Z_HSY5b2qsYvFM5y30BCakUdJf7zsqOEMxw92RzMFfcZGBs3a8bZJtTrw8rb1_ba2690j5Qx-QONHbdYmOC3KrBmDC3u4oeS6ZafX6-10uRPv_KN3sPXDV2Cz0UC_RwNF2XVD74V5Xt81z3F6UjXbhtt901F7UX7bMoirZrdULfZ6-mZh1SeT-uEx_vMjRxG9g60OoYQ0FcAEYSjsQf32f__zv34L8COszA7rsouV2cW67LKV_ZRQ-VF-eTf_p4gf1WoBaq0AvVqAXivAtARMCDVU3BFg7gr4FPGjXS3ArhXgVgtwawX4loBjQv1HAvxdAZ8ifgS-WgLw9SJgjQhYL0KsESHWi5BrRMjVInCXj0TUwVaHN3Y-93qOcf3KcBm-pSGQcjk-Jt38fDymJLlNnSwS9ZTEF3hzQwksvtgbSsTiC3oLcvHF16UuXLGjNveFRBXOXjgl4qRWXtar8h1WqP-Jt1U_KRd1aqbEJn3Z8oUbD3XegGw8Fosvo6Tq3-YYFNWtpNo1br7cfMSz_XkVnbvlf2JN3y6Uuz9L6-1Un3TJsP8Aq_VglC14wqMPJJuTj1nNBd52yn4xnTOLX8DHRSc_OvnRyY9OfvQhopMfnfxooN-6gUYnf62TX-85jzidewv1cXJ0_KPjHx3_b9bxb9zJtT5_24Gvnc4v8xVjbEM8-Y-kQCQFIikQSYHoc0RSIJIC0UC_CQONpEA8-Y8EQCQA7i8B8PtO_m375P-z5_v379z8D56Xfz_3V-7pXY7IbURuI3IbkduIrlPkNiK3EQ30WzfQyG1EbiNyG5HbiNzGilsN7pu8u_DvZTaiYxwd4-gYR8c47rujY_wHHOPWr2xFzzhaaPSMv2bPOF4FiN5y9JbvlbccrwLEqwDxKkBkBSIrEFmB6HNEViCyApEViBYaWYF4Xh4ZgMgAfA8MQLwLEO8C_PG7APf_DztAvA0Q6Y1Ib0R6IzpPkd6I9Ea00PtgoZHeiPRGpDcivRHpjbv0Bqg2vwE6XgiI9EYMYrmPlE6M04lEViSyIpEViazoJkciKxJZ0UK_SQuNRFYksiKRFYmsSGStIrLu_LlO0PHvdX61sUbx73VGPz_6-dHPj15E9PP___38Xr9_PjkfJ1U66PSLsorOfjTT6Ox_zc5-_KmOSABEAuBeEQDxpzr-JTEA5ruMAQAbgwAiORDJgUgORK8jkgORHIhmel_MNJIDMRIgEgGRCLi_RMDvjARwd660xN_s-N4vtQh-7y94CIgsR2Q5IssRWY7oPkWWI7Ic0Uzvi5lGliOyHJHliCxHZDnushxCtFkOIb_JWw2R4_gXcRwxpOUeETsxaifyWZHPinxW5LOioxz5rMhnRTP9hs008lmRz4p8VuSzIp-1is-qY3huf8BDyPYPeHw-ouer57q-v1_wqHmDYky6R0ecAhVUUkU1NdRSRz0FTgEoCAqSgqKgKRgKloKj4Kngb-kRKMsNp-CFUJ6BokJ6IxWzggrnpTBMCioVKOkZaCq94V4xaanSUoFnimqQWjkmJNXWGAHMCWqUsM4xJakFIbhiXFLrNJeCWUmdAaUsA0e9AiM845YCF9oazwwFAMUtZ1hxbqwSDOvPFeeeguIGuGaSggZluMd3RnLlNbNv6ZHgXhvONBVKWqWYtlRYp7RnwlAJ0njOnKVSeSUkM4ZKp430zDqqhJDgGddUaa-kY05T5Y23knlJtVTOGyY01VaCVcwaagCs1fjMaG4M-t7UOI8Nx-YKD6CoNU47xxx13IF2zFOnrDWGAVDnrFQWFeyFA4PN8pY7w5nHnvHOCKDCSGssA0ulFCDqjIpLpyXTiirrAQSqXGvHrWZSUSMdagYMtUKCtsw46gC8UEx46rkGbLumwLnwTjBFAbi2iqMyBUija-VLYbyrU0oZDpI5CtoC18A0BcuFAmA4lhRXsu4k77Sy-EyA9EKhoQjJhTOKmTudY40FzYykUlnuJHNAlUD9MKeo8o4bzzSOJ8-BM66oMdIBr5ukBdbPGuqUtgJQ6V5JAfXgBa601HVlQAspLQVhlOIcx5V0YB2vxw5XVihshpFSeYkqsMZJjR0FnnvDNVNUcG21BAZUCJDWurpB1kvn6gaRw1kHaaLDWQeaD9F8yOZDNR-6-TDNh20-XPPh59kXYuZyYC4I5pJgLgrmsmAuDObSYC4O5vIEJ2_p0RHpdH6Dh-92cIUBZU8RuBbnRRBOKB6Gcz4IJxWE4bwJwiktg3AaVBjOhunPqLByLYTp2TodhHMmTH9ehZULjMtJGBAgEChCgZIHAlWoRB0KNNjqFQaFO475yIaVFtACqpVDrAW0LgwoVw_aFlCttL4W0K00qyVQiZXjpwXUgUUrv9KylkAtV5pCC2hX2uASaFYbYQuoV1pXC-gDB4UVgeqxJhDoeODocSoU6AJ7xotAid6iHufm9ZsnjIuV6Lbha5DCqECklCIQqXioTGVD66m1C0QaGSrTChmIdBDads91IBIYv52q10KX68RaqAiHShkMVToYqm0w1IZrwKlgqPeBUMEgVKpoFtaV5vfZ9W0tdLk5WgeVKhiqBARD_RrLai8Oa0yrNZmvm1das7ReY4bt6deEQr0KlgqMrxndbSx8AVaYcKx04Vi9xm7aWLPGyNtYu8Z021i_Zp5pDXHGg_Ug1s5fbWyts9om8RC8U7tzTRKWSbFMymVSLZN6mTTLpF0m3TLpW0W0i2uVB60CoVUitIqEVpnQKhRapUKrWGiVi14rfmnIT1p_1sXPj0XW_A9SAuNeeoqsAuNS1zSKU14q5iQVSmthkGyS3IOoOS5ptbM1E6SU9kIw5agGr4RFikF75aRkzlFjpdeeSUetrmkRhUSO4g6QSfFSK62ZNxS4BMk1UgsgwSlAQkFIK5xB4kEq6yxH1kQZ6aRFnHZaqZqgsCC80pjDKWMkIKPiAByTyKg4rJQIcet5iFcTQRH0dYLCOAsd7jO40J2rWLcKL30GHroXlzZUpgouXUOwd-FD225sqG9j9Zrd2tK7UKEyvfwC7yJ8cw_hUBG-DZfhLoNasz9oexehm3tgNtwTcuF1_VLvol6YpRacUwsGz5S4F3hI4igoJ5Au9xScM8AZHmRILqVl3lFhpQaOi6kEB9Yy7ag0SnrA5VfhiZHGIw1lwFiD50QahGsOWLTRDmx9JiC44Y4ZS421wjtmgVqpvZYMBLXeGMXxyMrhcQ5nSlMvlPQWD1C8BwOaWVu3QXiumDB4zOOcYsaAp84rycAqj6dQDvWIxx-SC-bwnMFh0YJLKgTnnAnpqdDKAQNvUJ6WTHFHpbCAZ091-xwwIQ0e3uC2QAJVSnLJjFJUOWk8k5JqoRUwA4Zq44RkwntqQIBtjpmsMEyBpZZLLZkTkloNXDBtV20MlhvLVfNvyx0LpNRsIFEGPJCtglASClYfILR20jKUj7Wh7CmE8rEmUKIKJRyVCQRqCOQ6tQlkeI0I5TpXH4m0Bo8MLNqGUsEulFz2IrBnfH3uFUiN8JWTZ2tcBDMNwYxAMB-whuxrIdcsxy1kcOkiuHQRXLoILl0G610GK14Fk2HrNkItZDhpFdyidRu29uFHOA8WTIMFa8nON_UYlYGBAp7j-b92moICUApDBsCDl7KOT1FCKlN79l5IDAoAjFTx3OOmQHrunWbKUiW9lpaBpMpZLTjmxXgOh9Ej2oH2AvcYRlhtNb40Vlgn6iAOsKA8k0Ct4QYAA18cl9xbpgAJAAwPsNS5mifAOA7poQ4J8QaM0wyQgtBWOQZeYDSCsoJpg64914JJb3HfgFsgKakEKw3z4Km0DhzTCjAYxRmMWdHS4y5GAjVghGJeAzWe4y5FOGoNaMWEttShMpgDQZ2XIJi3jnqNuzEQAmM-rK0DPbi2UuFeCIADt8wjY-EQAsb6Op4HwHnlkAgBwTHoxUMI_SDDDvdXH4q1YhTC_MHwGIVAXKA8GShP-rB2qMAYCuVW7kOWHuDq3dwS58LaYVYf67X8ydCYh7AYChsYy-B4WLlOBcZQBMZarNlULHFm7Z5iqcNQnzj0EC-YN1i3Ai-HdWjRMvSYM5wFCSUXTGgdTfABa2gdXfBBbGjRwYQO8DVreQsZPNDWHf-1kKG9AxBKJ0Hw8AWB9Xz7lpLTFOOm2bD_oJ_kFwne4cjnMcKdixJzdF7hpdoqu8iq687fOs_Ox1X24FU_zZNZVnRezIppOquuO708GV-XWdlEYJPeeNwp56Cy23meVp307Dyr8LoGBiGnGCuN4cJknA1H1fzCDOmSUVVNy-5PP-G1VpYM3mXp8ayoiqpk_WLy0yzNq4uyuMzrFv1ULqv201-KaZr_c9mSv5X_TB7r91typ_c83U7F7tVQb7w67cnDHbh4fnEw3nl6dfyO7w-zF-lOPj28spfV6cNEXR4Wzw4OU3eYnA769v2x3NmeKC97o4f_0c-epm92-2e953b4Jstfu9fOHQiVyc3BL08uNh6m21tbk609vn317qJ48hJ2r8562aO93V92ktH-ycPXl8l2__Kyf5ANp4PDXnr8y9V4ZwyPLp_k003_cPZ84_p9b3vn8S9b_Onlzt7gmRydbT46PR_uiOHQv9yr3r3ym5Nk55l6kxePx-XLSbLx4uV04_lzPnt5Vb7Ok8dPz_hGdr17vPVi7-H706E83tsWL0cXhxt6Onxzxl_8IjazhzaZvhu9ep73Dh_vmOvTXyc7j15vpLOXdnNz8-dT2Xtczg7OevvF4fGhyB6-2T4bbb_ZHo3KBMr9V_2D9083n50NTvfODvTOr5tm-7Xe3Xz1cqfcK_q7kExGPyeHfKPoVTvT8bPT3eTNwe7Jr8U2P3iys_syefN4KPnu9mRndGaebpQPXk3eTZPHs_PNncFmf_9AvBg-HMH2r5tP891edpzvnp492Xv56Kq_cTCBafn48tn1E9svxcPpKz07xYD0S9Il-7PrznVxPusUl_ly1HWSqr67VmFAew9HUmejHkqd_aIY40Adka50_Ob_AA" title="All scenarios: Net equity" width="100%" height="580" style="border:0;background:transparent" loading="lazy"></iframe>
 <p style="margin:6px 0 0;font-size:13px;text-align:right">Interactive chart: <a href="https://tool.adjiebrotots.com/rentvsownhouse/sensitivity/#open=.gc-canvas&amp;s=aG5zD3JANeIe2Kxg5BSkA3YJ1vNvUlJLxbj0TgiPeJnpYx7wtkEa4wYoMUYe8Yakdc7zb3JIm493AhE_ciLeZKcqAN7gZinW8W88U24i3CdVHvBEeIDDmDR0IxjvoHQ1KxqAiFRKVJahTfEWwaIcwwcUigpdYAebVxlJl1FwHnpC9ErNByzAIJGVD0LwJRdM3hqCFkugJ2gg9QRtjS9CmaJM4ZnoGlsQmaBPQpBNN0rQxsWnaGLq0BiyKbDPREzkg3bRI2QhvYB5pgZq0PV2CiE7apjhSNnAYGJ6ykXmJFWBerQ7CCCOk3AGsrUqAToYbY2iEZIqhIZIhhsa1sTScUzLCMqdkRqU5JXC6IW5KCSQJsRocK1amhOaY0BoAtJplMkKaZUKfXoI0UHJKQaZGg30KImJhq6LBs-SmjpaGruCJdCcTU2PgEh1IXCLnKAibnKkqHRQFxcBUm1psGwMyH7cs2EpS5rkA">Rent vs Own Sensitivity &amp; Multi-Scenario Property Analysis</a> by Adjie Brotot Tools</p>
 
-Read it correctly: compare solid against dashed *within one colour*, not blue against orange. The tool shares one starting budget across the columns and converts Jakarta into Australian dollars at a rate that drifts with the interest-rate gap, so the absolute heights of the two colours don't compare. The gap inside each colour does. In Perth, the blue solid line crosses above the dashed one around year 5 and ends about A$660k ahead at year 20. In Jakarta, the orange dashed line stays on top.
+Compare solid against dashed *within one colour*, not blue against orange. The tool shares one starting budget across the columns and converts Jakarta into Australian dollars at a rate that drifts with the interest-rate gap, so the absolute heights of the two colours don't compare. Compare the gap within each colour instead. In Perth, the blue solid line crosses above the dashed one around year 5 and ends about A$660k ahead at year 20. In Jakarta, the orange dashed line stays on top.
 
-Now the financing question. Four ways to buy the same Jakarta house, against one renting line. Blue is the staged KPR (8.5% for 5 years, then floating). Orange is 8.5% flat for 20 years. Green is a 3.81% promo for 5 years, then floating. Pink is cash.
+Compare four ways to buy the same Jakarta house, against one renting line. Blue is the staged KPR (8.5% for 5 years, then floating). Orange is 8.5% flat for 20 years. Green is a 3.81% promo for 5 years, then floating. Pink is cash.
 
 <figure>
 <img src="/assets/img/rvo-sens-financing-inputs-en.webp" alt="Four Jakarta financing scenarios: staged KPR, flat 8.5%, 3.81% promo then floating, and a 100% cash purchase" width="1500" height="428" loading="lazy">
@@ -206,7 +200,7 @@ Now the financing question. Four ways to buy the same Jakarta house, against one
 
 ## What are the honest limits?
 
-- **It is a model.** The Quick Start figures are sourced medians for a typical home as of September to October 2026, and the full list of figures and sources is on the [assumptions page](https://tool.adjiebrotots.com/rentvsownhouse/quickstart-assumptions/). Your house and your rent are not the median.
+- **It is a model.** The Quick Starts combine local market figures and assumptions for a typical home as of September to October 2026. The [assumptions page](https://tool.adjiebrotots.com/rentvsownhouse/quickstart-assumptions/) lists them and their sources. Replace them with figures for your own home and rent.
 - **Two cities, not two countries.** Perth is not Australia and Jakarta is not Indonesia. Melbourne or Bali will tell a different story, and the tool has them.
 - **A developer instalment scheme is not modelled.** My opinion that it can beat a KPR rests on the cash result and on the logic of skipping the bank's interest. I haven't shown it.
 - **The future won't match the inputs.** Price growth is a forecast. The Perth result needs the house to outgrow your investments, and that is not guaranteed: at an 8% Risk-Free Rate, renting wins in Perth too.
@@ -214,9 +208,9 @@ Now the financing question. Four ways to buy the same Jakarta house, against one
 
 ## So, rent or buy?
 
-Back to Robert and Geoff. If both live in Perth on today's numbers, Robert's house is also the better deal, as long as it keeps outgrowing the money Geoff invests. If both live in Jakarta and Robert takes a standard KPR, Geoff's rental, plus a disciplined investment habit, comes out ahead. In my view neither choice is foolish in general. Each is only right for a given price, a given rate and a given city.
+The Quick Start favours owning in Perth and renting in Jakarta with a standard KPR, provided the renter invests the difference. Neither is a rule for the whole city: the answer depends on the home's price, costs and growth, the loan, and what your cash earns elsewhere.
 
-Don't ask "is renting or buying smarter?" Ask "what does this house earn, and what does this money cost?" And since you now have a calculator for that, my small request: before you sign anything, put your own house price and your own rent into it. It takes five minutes. [Open the Rent vs Own calculator](https://tool.adjiebrotots.com/rentvsownhouse/), then tell me in the comments whether your city says buy or rent. 
+Before signing, enter your own house price, rent and loan terms in the [Rent vs Own calculator](https://tool.adjiebrotots.com/rentvsownhouse/). Test the return and growth assumptions too, rather than treating the Quick Start as a forecast.
 
 *This post is general information, not financial advice.*
 

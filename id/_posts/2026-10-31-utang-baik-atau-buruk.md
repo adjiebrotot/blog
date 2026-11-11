@@ -2,6 +2,7 @@
 title: "Orang miskin punya utang, kelas menengah menabung, orang kaya punya utang?"
 description: "Orang miskin terjerat pinjol, kelas menengah rajin menabung dan menjauhi utang, sementara orang kaya justru sengaja berutang. Kalau utang memang buruk, kenapa orang yang uangnya paling banyak malah memilih berutang?"
 date: 2026-10-31 09:00:00 +0800
+last_modified_at: 2026-11-11
 tags: [finance]
 image: /assets/img/og/utang-baik-atau-buruk.jpg
 image_alt: "Tiga orang berdampingan: kiri, pemuda di kursi plastik menatap sedih ponsel bertuliskan UTANG Rp10jt; tengah, perempuan berhijab merah muda tersenyum memeluk celengan ayam; kanan, bapak berkacamata dan berbatik duduk di kursi besar merah keemasan sambil menyodorkan kartu kredit emas"
@@ -10,7 +11,7 @@ keywords: [utang baik atau buruk, utang produktif dan konsumtif, cicilan 0%, pin
 bmc_message: "Anggap saja utang yang baik: traktir saya kopi susu, nanti saya bayar dengan artikel berikutnya!"
 ---
 
-**Singkatnya:** baik atau buruknya sebuah utang tidak ditentukan oleh labelnya, produktif atau konsumtif, melainkan oleh hitungan. Utang itu baik kalau biayanya lebih rendah daripada imbal hasil yang bisa didapat uangmu secara aman selama uang itu masih kamu pegang, dan aturan ini berlaku bahkan untuk cicilan HP. Untuk HP seharga Rp20 juta, cicilan 36 bulan dengan bunga 0,25% per bulan dari sisa pokok memang membebanimu bunga Rp938 ribu, tetapi tetap unggul sekitar Rp650 ribu dibandingkan dengan bayar tunai, bahkan mengalahkan cicilan 0% yang unggul Rp546 ribu, karena uang yang belum kamu bayarkan tetap berbunga 5% di deposito. Sebaliknya, cicilan "0%" yang dibebani biaya 3% justru kalah dari bayar tunai.
+**Singkatnya:** label produktif atau konsumtif belum cukup untuk menilai utang. Kalau barangnya memang akan kamu beli dan uang tunainya sudah tersedia, mencicil bisa lebih untung selama bunga efektif beserta seluruh biayanya lebih rendah daripada imbal hasil aman uang tersebut. Cicilan berbunga pun bisa memenuhi syarat ini, sementara cicilan “0%” belum tentu murah kalau ada biaya tambahan.
 {: .tldr}
 
 * TOC
@@ -18,7 +19,7 @@ bmc_message: "Anggap saja utang yang baik: traktir saya kopi susu, nanti saya ba
 
 ## Kalau utang itu buruk, kenapa orang kaya sengaja berutang?
 
-Coba bayangkan tiga orang. Orang pertama menatap layar ponselnya dengan wajah lesu karena tagihan pinjaman *online* (pinjol) sebesar Rp10 juta baru saja masuk, padahal gajinya bulan ini sudah habis untuk beras, token listrik dan ongkos ke kantor. Orang kedua tersenyum lebar sambil memeluk celengan ayamnya, karena sejak dulu dia berprinsip lebih baik menabung daripada berutang. Orang ketiga, seorang bapak berbatik, duduk santai di kursi besarnya sambil menyodorkan kartu kredit, dan senyumnya tidak kalah lebar dari senyum orang kedua.
+Ilustrasi ini mempertemukan tiga sikap terhadap utang: terjerat pinjol Rp10 juta, memilih menabung, dan sengaja memakai kartu kredit meski punya uang.
 
 <figure>
 <img src="/assets/img/debt-ill-three-people-id.webp" alt="Tiga orang berdampingan: kiri, pemuda di kursi plastik menatap sedih ponsel bertuliskan UTANG Rp10jt; tengah, perempuan berhijab merah muda tersenyum memeluk celengan ayam; kanan, bapak berkacamata dan berbatik duduk di kursi besar merah keemasan sambil menyodorkan kartu kredit emas" width="1456" height="1087" loading="lazy">
@@ -28,31 +29,38 @@ Sejak kecil kita diajari bahwa utang itu buruk, dan nasib orang pertama seolah m
 
 Nasib orang pertama memang tidak bisa dianggap enteng, karena pinjol adalah salah satu utang termahal yang legal di negeri ini. OJK membatasi bunga pinjol untuk keperluan konsumtif dengan skema yang turun bertahap mengikuti tenor, dan untuk tenor pendek batasnya masih sampai 0,3% per hari, alias sekitar 9% sebulan.[^ojk] Kalau kamu meminjam Rp1 juta selama 30 hari, bunganya saja sudah Rp90 ribu, setara kira-kira 108% setahun. Ketika gaji bulan depan pun tidak cukup untuk melunasinya, orang terpaksa gali lubang tutup lubang dengan pinjaman baru, dan lingkaran inilah yang membuat cerita "utang itu buruk" terasa begitu nyata.
 
-Meski begitu, orang ketiga juga berutang, dan dia sama sekali tidak terlihat cemas. Perbedaan antara orang pertama dan orang ketiga ternyata bukan soal berutang atau tidak, melainkan soal cara memandang utang itu sendiri.
-
 ## Ada berapa cara memandang utang?
 
-Menurut pengamatan saya, cara orang memandang utang bisa dibagi menjadi tiga level. Makin tinggi levelnya, makin sedikit orang yang setuju, dan level tertinggi memang sengaja saya buat provokatif.
+Saya membagi cara memandang utang menjadi tiga level.
 
 ### Level 1: utang produktif baik, utang konsumtif buruk
 
-Inilah pandangan yang paling umum, dan hampir semua orang menerimanya tanpa perdebatan. Pinjaman modal usaha dianggap baik karena uangnya diputar untuk menghasilkan uang, begitu pula KPR karena rumahnya bisa naik harga. Sebaliknya, cicilan HP, kartu kredit dan *paylater* dianggap buruk karena uangnya habis untuk dikonsumsi.
+Pinjaman modal usaha dianggap baik karena uangnya diputar untuk menghasilkan uang, begitu pula KPR karena rumahnya bisa naik harga. Sebaliknya, cicilan HP, kartu kredit dan *paylater* dianggap buruk karena uangnya habis untuk dikonsumsi.
 
 Masalahnya, label "produktif" pun tidak menjamin apa-apa. KPR sekalipun belum tentu baik, karena untung atau ruginya membeli rumah bergantung pada angka-angkanya. Dalam tulisan saya sebelumnya, [Sewa atau beli rumah?](/id/sewa-atau-beli-rumah/), hasil hitungannya menunjukkan bahwa membeli rumah lebih untung di Perth, sedangkan di Jakarta yang lebih untung justru menyewa.
 
 ### Level 2: cicilan 0% juga termasuk utang yang baik
 
-Orang di level ini tetap menganggap utang produktif itu baik, tetapi mereka menambahkan satu jenis utang konsumtif ke daftar yang aman: cicilan tanpa bunga. Cicilan 0% sebenarnya hanya menunda pengeluaran, dan dalam konsep *time value of money* (nilai waktu uang), uang yang dibayarkan nanti lebih ringan daripada uang yang dibayarkan hari ini. Syaratnya hanya satu: barang itu toh akan kamu beli juga.
+Orang di level ini tetap menganggap utang produktif itu baik, tetapi mereka menambahkan satu jenis utang konsumtif ke daftar yang aman: cicilan tanpa bunga. Cicilan 0% sebenarnya hanya menunda pengeluaran, dan dalam konsep *time value of money* (nilai waktu uang), uang yang dibayarkan nanti lebih ringan daripada uang yang dibayarkan hari ini.
 
-Mungkin kamu akan menyanggah: "Cicilan 0% itu kan cuma bikin orang jadi boros?" Bisa jadi, tetapi mobil, barang elektronik dan liburan juga bagian dari kesejahteraan, bukan dosa yang harus ditebus dengan hidup prihatin. Kuncinya ada pada urutan berpikir: orang di level ini sebenarnya sudah punya uang tunai untuk membeli barang itu, dan mereka hanya memilih memecah pembayarannya. Uang yang belum dibayarkan tetap tersimpan di tabungan atau deposito dan terus menghasilkan bunga selama masa cicilan.
+Cicilan 0% memang bisa bikin orang boros kalau dipakai sebagai alasan untuk membeli barang yang sebenarnya tidak direncanakan. Orang di level ini sudah punya uang tunai untuk membeli barangnya, tetapi memilih mencicil agar uang yang belum dibayarkan tetap menghasilkan bunga di tabungan atau deposito.
 
 ### Level 3: semua utang itu baik
 
-Di level inilah saya berdiri, dan saya sadar pendapat ini terdengar nekat. Saya tidak peduli apakah sebuah cicilan gratis atau berbunga, dan saya juga tidak peduli apakah utang itu produktif atau konsumtif. Yang saya pedulikan hanya untung-ruginya dalam rupiah setelah *time value of money* ikut dihitung, karena cicilan berbunga pun bisa lebih untung daripada bayar tunai kalau bunganya lebih rendah daripada imbal hasil uangmu sendiri.
+Saya menilai utang dari untung-ruginya dalam rupiah setelah *time value of money* ikut dihitung, bukan dari label produktif atau konsumtif. Cicilan berbunga pun bisa lebih untung daripada bayar tunai kalau bunga efektif beserta biayanya lebih rendah daripada imbal hasil aman uang yang belum dibayarkan.
 
 ## Bagaimana cicilan konsumtif bisa lebih untung daripada bayar tunai?
 
 Ambil contoh HP baru seharga Rp20 juta yang memang akan kamu beli, entah karena HP lama sudah rusak atau karena kamu memerlukannya untuk bekerja. Jelas ini pembelian konsumtif, tetapi pertanyaannya tetap sama: lebih baik bayar tunai atau mencicil? Jawabannya bergantung pada tiga hal, yaitu imbal hasil uang tunaimu kalau tidak dibelanjakan sekarang, bunga dan biaya cicilan, serta skema cicilan itu sendiri (berapa lama tenornya dan kapan biaya dibayar).
+
+*Tool* [Finance vs Cash](https://tool.adjiebrotots.com/financingvscash/) menghitung keuntungan bersih dari mencicil dalam nilai uang pada akhir masa cicilan masing-masing skema. Dengan asumsi uang tunai disimpan di deposito berbunga 5% setahun, hasilnya seperti ini:
+
+| Skema cicilan HP Rp20 juta | Cicilan per bulan | Bunga efektif setahun (termasuk biaya) | Total bunga dan biaya | Dibandingkan bayar tunai |
+| --- | --- | --- | --- | --- |
+| 12 kali, bunga 0% | Rp1,67 juta | 0% | Rp0 | Untung Rp546 ribu |
+| 36 kali, bunga 0,25% per bulan dari sisa pokok | Rp582 ribu | 3,04% | Rp938 ribu | **Untung Rp650 ribu** |
+| 12 kali, bunga 0% ditambah biaya 3% (Rp600 ribu di muka) | Rp1,67 juta | 5,81% | Rp600 ribu | Rugi Rp84 ribu |
+| 24 kali, bunga *flat* 1,5% per bulan | Rp1,13 juta | 36,4% | Rp7,2 juta | Rugi Rp6,46 juta |
 
 Ketiga hal itu bisa dirangkum dalam satu rumus yang menghitung keuntungan bersih dari mencicil, dalam nilai uang hari ini:
 
@@ -65,20 +73,11 @@ $$
 - $$r$$ adalah imbal hasil uang tunaimu per bulan.
 - $$n$$ adalah jumlah cicilan.
 
-Kalau hasilnya positif, mencicil lebih untung, sedangkan kalau negatif, bayar tunai yang lebih untung. *Tool* [Finance vs Cash](https://tool.adjiebrotots.com/financingvscash/) menghitung hal yang sama, hanya saja semua angkanya dibawa ke akhir masa cicilan, sehingga hasilnya berupa nilai uang pada akhir masa cicilan masing-masing skema. Dengan asumsi uang tunai disimpan di deposito berbunga 5% setahun, hasilnya seperti ini:
+Kalau hasilnya positif, mencicil lebih untung, sedangkan kalau negatif, bayar tunai yang lebih untung.
 
-| Skema cicilan HP Rp20 juta | Cicilan per bulan | Bunga efektif setahun (termasuk biaya) | Total bunga dan biaya | Dibandingkan bayar tunai |
-| --- | --- | --- | --- | --- |
-| 12 kali, bunga 0% | Rp1,67 juta | 0% | Rp0 | Untung Rp546 ribu |
-| 36 kali, bunga 0,25% per bulan dari sisa pokok | Rp582 ribu | 3,04% | Rp938 ribu | **Untung Rp650 ribu** |
-| 12 kali, bunga 0% ditambah biaya 3% (Rp600 ribu di muka) | Rp1,67 juta | 5,81% | Rp600 ribu | Rugi Rp84 ribu |
-| 24 kali, bunga *flat* 1,5% per bulan | Rp1,13 juta | 36,4% | Rp7,2 juta | Rugi Rp6,46 juta |
+Cicilan berbunga rendah bisa lebih untung daripada bayar tunai karena uang yang belum dibayarkan masih menghasilkan bunga. Sebaliknya, biaya di muka bisa membuat cicilan “0%” lebih mahal, sementara cicilan bulanan yang kecil belum tentu berarti utangnya murah.
 
-Orang di level 2 akan berhenti di baris pertama, padahal baris kedua justru lebih menarik. Skema 36 bulan itu jelas berbunga, dan total bunganya mencapai Rp938 ribu, tetapi kamu tetap untung Rp650 ribu dibandingkan bayar tunai, bahkan lebih untung daripada cicilan 0% yang hanya unggul Rp546 ribu. Rahasianya ada pada selisih bunga: cicilan itu hanya membebanimu sekitar 3% setahun, sementara uang yang belum kamu bayarkan tetap berbunga 5% di deposito, dan selisih itu kamu nikmati selama tiga tahun, bukan cuma setahun. Inilah cara berpikir level 3: yang perlu ditakuti bukan bunganya, melainkan bunga yang lebih tinggi daripada imbal hasil uangmu sendiri.
-
-Ada tiga pelajaran yang bisa dipetik dari tabel di atas. Pertama, cicilan berbunga rendah bisa mengalahkan bayar tunai selama bunga efektifnya di bawah bunga deposito, bahkan bisa mengalahkan cicilan 0% kalau tenornya lebih panjang. Kedua, cicilan berlabel "0%" bisa kalah begitu ada biaya di muka, karena biaya Rp600 ribu itu membuat bunga efektifnya naik menjadi 5,81%. Ketiga, besar kecilnya cicilan bulanan tidak mencerminkan mahal-murahnya utang, karena skema dengan cicilan Rp1,13 juta justru paling merugikan: bunga *flat* 1,5% per bulan setara dengan 36,4% setahun.
-
-Tentu saja tidak praktis kalau setiap kali belanja kamu harus menghitung dengan rumus seperti ini. Saya cukup memakai satu patokan sederhana: **bunga efektif cicilan, termasuk semua biayanya, harus lebih rendah daripada imbal hasil yang bisa didapat uang tunaimu secara aman**, misalnya di tabungan atau deposito. Coba cocokkan patokan ini dengan tabel tadi: skema berbunga 0% dan 3,04% sama-sama di bawah 5% sehingga keduanya menang, sedangkan skema dengan bunga efektif 5,81% dan 36,4% berada di atas 5% sehingga keduanya kalah. Perhatikan bahwa patokan ini sama sekali tidak mempersoalkan apakah cicilannya berbunga atau tidak.
+Saya cukup memakai satu patokan: **bunga efektif cicilan, termasuk seluruh biayanya, harus lebih rendah daripada imbal hasil yang bisa didapat uang tunaimu secara aman**, misalnya di tabungan atau deposito.
 
 Saham atau reksa dana mungkin saja memberi imbal hasil lebih tinggi, tetapi anggap saja itu bonus, bukan kepastian, jadi tidak perlu ikut dihitung. Untuk tawaran yang lebih rumit, misalnya ada potongan harga kalau bayar tunai, biaya yang dibayar di awal, atau tenor yang berbeda-beda, biarkan *tool* yang menghitungnya.
 
@@ -110,22 +109,20 @@ Di akhir masa cicilan masing-masing tawaran, hasil hitungan *tool* seperti ini:
 
 Tawaran dengan angka bunga paling besar ternyata menjadi satu-satunya tawaran yang mengalahkan bayar tunai, sementara tiga tawaran lain menyembunyikan harga aslinya di tempat yang berbeda-beda:
 
-- **Cicilan 0% menyembunyikan harga aslinya di biaya layanan.** Biaya Rp525 ribu itu membuat cicilan "gratis" ini setara dengan pinjaman berbunga 6,83% setahun, dan garisnya di grafik sudah minus Rp525 ribu sejak hari pertama.
-- **Cicilan Rp499 ribu menyembunyikan harga aslinya di tenor.** Kalau dijumlahkan, 36 kali Rp499 ribu sama dengan Rp17,96 juta, hampir Rp3 juta lebih mahal daripada harga laptopnya. Untuk tawaran seperti ini, bunganya hanya bisa dihitung mundur dari besar cicilan dengan jenis [**Known repayment**](https://tool.adjiebrotots.com/financingvscash/loan-types/#type-5) di *tool*, dan hasilnya 12,80% setahun.
-- **Bunga 0,59% per bulan menyembunyikan harga aslinya dua kali.** Angka per bulan membuat bunganya terlihat kecil, padahal dalam setahun angka itu sudah 7,08%, dan karena bunganya [*flat*](https://tool.adjiebrotots.com/financingvscash/loan-types/#type-2), kamu tetap membayar bunga atas pokok yang sudah kamu kembalikan: Rp15 juta × 0,59% × 24 = Rp2,12 juta. Bunga efektifnya 13,86% setahun, paling mahal di antara keempat tawaran.
-- **Pinjaman 4% setahun memajang harganya terang-terangan.** Bunganya Rp943 ribu, lebih besar daripada biaya layanan cicilan 0%, tetapi dengan pinjaman ini kamu tetap untung Rp230 ribu dibandingkan dengan bayar tunai, karena bunga efektifnya 4,07% setahun masih di bawah bunga deposito 5%.
-
-Patokan bahwa bunga cicilan harus lebih rendah daripada imbal hasil uang tunai yang disimpan secara aman ternyata tetap berlaku. Syaratnya, yang kamu bandingkan adalah bunga efektif, bukan angka yang dipajang di tawaran, karena angka itu hanyalah angka yang ingin diperlihatkan toko, sedangkan bunga efektif adalah harga yang benar-benar kamu bayar.
+- **Biaya layanan.** Biaya Rp525 ribu itu membuat cicilan "gratis" ini setara dengan pinjaman berbunga 6,83% setahun, dan garisnya di grafik sudah minus Rp525 ribu sejak hari pertama.
+- **Tenor.** Kalau dijumlahkan, 36 kali Rp499 ribu sama dengan Rp17,96 juta, hampir Rp3 juta lebih mahal daripada harga laptopnya. Untuk tawaran seperti ini, bunganya hanya bisa dihitung mundur dari besar cicilan dengan jenis [**Known repayment**](https://tool.adjiebrotots.com/financingvscash/loan-types/#type-5) di *tool*, dan hasilnya 12,80% setahun.
+- **Bunga *flat*.** Angka per bulan membuat bunganya terlihat kecil, padahal dalam setahun angka itu sudah 7,08%, dan karena bunganya [*flat*](https://tool.adjiebrotots.com/financingvscash/loan-types/#type-2), kamu tetap membayar bunga atas pokok yang sudah kamu kembalikan: Rp15 juta × 0,59% × 24 = Rp2,12 juta. Bunga efektifnya 13,86% setahun, paling mahal di antara keempat tawaran.
+- **Bunga anuitas.** Bunganya Rp943 ribu, lebih besar daripada biaya layanan cicilan 0%, tetapi dengan pinjaman ini kamu tetap untung Rp230 ribu dibandingkan dengan bayar tunai, karena bunga efektifnya 4,07% setahun masih di bawah bunga deposito 5%.
 
 ## Kartu kredit, jenis utang favorit saya
 
-Kalau harus memilih satu jenis utang favorit, saya akan memilih kartu kredit. Bagian ini sengaja saya buat singkat; anggap saja pengantar untuk tulisan lain yang lebih panjang.
+Kalau harus memilih satu jenis utang favorit, saya akan memilih kartu kredit.
 
 Bagi banyak orang, kartu kredit terdengar menakutkan, dan ketakutan itu memang beralasan. Bank Indonesia membatasi bunga kartu kredit paling tinggi 1,75% per bulan sejak 1 Juli 2021,[^bi] atau sekitar 21% setahun, jauh di atas bunga deposito mana pun.
 
 Bunga itu sebenarnya tidak akan pernah kamu bayar asalkan seluruh tagihan dilunasi sebelum tanggal jatuh tempo setiap bulan. Umumnya, kartu kredit di Indonesia memberi masa bebas bunga sekitar 45 sampai 50 hari sejak transaksi. Artinya, setiap kali belanja, kamu mendapat pinjaman gratis selama beberapa minggu, sementara uang tunaimu tetap berbunga di tabungan. Biaya utang seperti ini jelas lebih rendah daripada imbal hasil uang tunai yang disimpan dengan aman, karena bunganya 0%.
 
-Kartu kredit juga memberi "imbal hasil" tambahan dalam bentuk poin. Poin itu bisa ditukar dengan banyak hal, tetapi bagi kebanyakan orang yang saya kenal, penukaran yang paling bernilai adalah *miles* maskapai untuk kursi kelas premium. Soal cara mengumpulkan dan menukarnya, saya simpan untuk tulisan berikutnya.
+Kartu kredit juga memberi "imbal hasil" tambahan dalam bentuk poin. Poin itu bisa ditukar dengan banyak hal, tetapi bagi kebanyakan orang yang saya kenal, penukaran yang paling bernilai adalah *miles* maskapai untuk kursi kelas premium.
 
 <figure>
 <img src="/assets/img/debt-first-class-sq.webp" alt="Adjie tersenyum di kursinya di kabin First Class Singapore Airlines, dengan semur daging, croissant dan segelas anggur merah di meja" width="1600" height="901" loading="lazy">
@@ -136,9 +133,7 @@ Supaya adil, ada satu peringatan yang perlu diingat: semua keuntungan ini hanya 
 
 ## Jadi, utang itu baik atau buruk?
 
-Mari kembali ke tiga orang yang kita bayangkan: si peminjam pinjol, si penabung dengan celengan ayam, dan bapak berbatik dengan kartu kreditnya. Perbedaan di antara mereka ternyata bukan soal siapa yang berutang dan siapa yang tidak, melainkan soal biaya utangnya dibandingkan dengan imbal hasil uang mereka sendiri. Orang pertama berutang dengan bunga yang jauh di atas imbal hasil investasi aman mana pun, sementara orang ketiga berutang dengan bunga 0%, atau setidaknya di bawah imbal hasil tabungannya, sehingga uang tunainya bisa tetap bekerja. Orang kedua aman, tetapi uang di celengan ayamnya tidak menghasilkan apa-apa.
-
-Kalimat "semua utang itu baik" memang sengaja saya lebih-lebihkan. Saya tetap mengakui bahwa utang yang biayanya lebih tinggi daripada imbal hasil uang tunaimu, seperti pinjol, *paylater* yang mahal atau tagihan kartu kredit yang tidak dilunasi, adalah utang yang buruk. Label produktif atau konsumtif hanya menentukan perasaan kita terhadap sebuah utang, tetapi bunganyalah yang pada akhirnya menentukan apakah utang itu membuatmu lebih kaya atau lebih miskin.
+Kalimat "semua utang itu baik" memang sengaja saya lebih-lebihkan. Saya tetap mengakui bahwa utang yang biayanya lebih tinggi daripada imbal hasil uang tunaimu, seperti pinjol, *paylater* yang mahal atau tagihan kartu kredit yang tidak dilunasi, adalah utang yang buruk. Label produktif atau konsumtif belum cukup untuk menentukan apakah utang itu menguntungkan; bunga dan seluruh biayanya tetap perlu dibandingkan dengan imbal hasil aman uang yang belum kamu bayarkan.
 
 Sebelum meneken cicilan berikutnya, bandingkan dulu bunga efektifnya dengan imbal hasil yang bisa didapat uang tunaimu secara aman, atau masukkan tawarannya ke [*tool* Finance vs Cash](https://tool.adjiebrotots.com/financingvscash/).
 
