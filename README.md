@@ -82,6 +82,11 @@ Without `translation:`, the post has no EN/ID button, because there is nothing t
 own lines, with a blank line before and after. The chart stays interactive, sizes itself and
 follows the blog's light or dark theme.
 
+An agent makes the same code without the tool repo with the `brotools-embed` skill
+(`.claude/skills/brotools-embed/`): it opens the tool on the live site on the post's
+scenario, writes the embed code, the figures the chart draws and screenshots of it, into
+`_build/brotools/` (not committed).
+
 **A whole tool page:**
 
 ```liquid

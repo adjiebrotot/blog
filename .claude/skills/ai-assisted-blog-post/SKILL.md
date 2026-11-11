@@ -194,7 +194,7 @@ examples, and why each fits its readers. "Same in both" is fine.>
 | # | Type | What it shows | Where | Source / status |
 |---|------|---------------|-------|-----------------|
 | D1 | Evidence | <claim/figure, class, date, material conditions> (EN / ID / both) | <section> | <checked source or model inputs; assumptions identified; personal confirmation status> |
-| T1 | Tool embed | <tool, chart, inputs> | <section> | <tool URL> |
+| T1 | Tool embed | <tool, chart, view, inputs> | <section> | <#load link; preview from brotools-embed> |
 | S1 | Screenshot | <what the image shows> | <section> | <how it will be made> |
 | I1 | Illustration | <who does what, with which object> | <section> | generated with `wikihow-illustration` |
 | M1 | Mermaid | <diagram type: flowchart, xychart-beta, pie...> showing <...> | <section> | <data behind it> |
@@ -265,10 +265,13 @@ the blog can draw them. Per type:
 - **Evidence:** the figure or claim, its evidence class, date, provenance and material
   conditions. Scenario assumptions remain assumptions; personal details require confirmation. Prefer the primary source (statistics
   office, central bank, the company's own report) over a news summary.
-- **Tool embed:** which Adjie Brotools tool (https://tool.adjiebrotots.com/), which chart
-  and which inputs. A single chart is pasted from the tool's **Share → Embed as HTML**,
-  and that code encodes the inputs, so ask Adjie for it in section 6 unless he has already
-  sent it. A whole tool page uses `{% include tool-embed.html ... %}` (see `README.md`).
+- **Tool embed:** which Adjie Brotools tool (https://tool.adjiebrotots.com/), which chart,
+  which view and which inputs, as the tool's `#load` link. Make it with the `brotools-embed`
+  skill: it writes the exact **Share → Embed as HTML** code from the live site, the figures
+  the chart draws and screenshots, so the plan can show a preview and the writers' brief
+  carries the tool's own numbers. Ask Adjie for the code only where the skill cannot make it
+  (a chart that needs a step the script cannot take), or use his if he sends one. A whole
+  tool page uses `{% include tool-embed.html ... %}` (see `README.md`).
 - **Screenshot:** what it shows, its alt text, and whether Adjie supplies it or you
   capture it (the container has Playwright and Chromium). It goes in `assets/img/`.
   Prefer an embed when the reader would want to change the numbers.
@@ -385,7 +388,8 @@ notes in the language you think in, never as draft prose.
   approved in the plan. Where the plan left them shared, a writer may still choose a
   closer example for its readers, if it sources every new number and says so.
 - **Fixed pieces:** front matter that must match (date, tags, `translation:` key, image),
-  slugs, embed codes, screenshots, illustrations, links to related posts, and each
+  slugs, embed codes (one per language, from `brotools-embed`, with its `data.md` and
+  `tool.txt` so both writers quote the tool's own figures), screenshots, illustrations, links to related posts, and each
   language's approved opening narrative.
 
 Prepare separate writer views (`brief-en.md`, `brief-id.md`) from the shared ledger.

@@ -7,7 +7,9 @@ GitHub Actions. How to write a post: `README.md`. How to write it in Adjie's voi
 post, plan first and write after approval: the `ai-assisted-blog-post` skill
 (`.claude/skills/ai-assisted-blog-post/`). For an illustration (a person doing the step,
 wikiHow style): the `wikihow-illustration` skill (`.claude/skills/wikihow-illustration/`),
-made with an image model on OpenRouter, prompts kept in `_illustrations/`. The design tokens come from
+made with an image model on OpenRouter, prompts kept in `_illustrations/`. For a chart or tool from
+Adjie Brotools in a post, with its figures and a preview before writing: the `brotools-embed`
+skill (`.claude/skills/brotools-embed/`), which works from the live tool site. The design tokens come from
 `../tool/dark.css` and `light.css` (tool repo, `_ref/design-reference.md`).
 
 ## Published URLs are permanent
