@@ -2,7 +2,7 @@
 title: "Sewa atau beli rumah? Di Perth lebih untung beli, di Jakarta lebih untung sewa"
 description: "Membeli dan menyewa sama-sama bisa menang, tergantung imbal hasil rumah, biaya dan bunga KPR-nya, imbal hasil uangmu kalau diputar di tempat lain, serta caramu memandang kekayaan."
 date: 2026-10-17 09:00:00 +0800
-last_modified_at: 2026-10-29
+last_modified_at: 2026-11-11
 tags: [finance]
 image: /assets/img/og/sewa-atau-beli-rumah.jpg
 image_alt: "Dua sahabat berdampingan: yang satu mengecat dinding ruang tamunya dengan rol cat, yang lain memegang buku kecil di samping koper dorongnya"
@@ -11,7 +11,7 @@ keywords: [sewa atau beli rumah, KPR, kalkulator sewa vs beli, Perth, Jakarta, b
 bmc_message: "Sewa atau beli, kopi tetap jauh lebih murah. Traktir saya secangkir supaya saya bisa terus menghitung skenario lainnya!"
 ---
 
-**Singkatnya:** membeli rumah lebih untung kalau rumah itu menghasilkan lebih banyak daripada uang yang sama bila diputar di tempat lain. Kalau tidak, menyewa yang lebih untung. Di [*tool* Sewa vs Beli Rumah](https://tool.adjiebrotots.com/rentvsownhouse/id/), membeli rumah 2 kamar tidur di Perth unggul sekitar A$850 ribu dibandingkan menyewa setelah 30 tahun, sedangkan di Jakarta membeli rumah sejenis justru kalah dari menyewa setelah 20 tahun. Cara hitungnya sama, yang berbeda hanya *input*-nya.
+**Singkatnya:** hasilnya bergantung pada harga rumah, biaya dan bunga KPR, serta imbal hasil uang yang diinvestasikan penyewa. Dalam skenario **Quick Start** untuk rumah 2 kamar tidur, membeli di Perth unggul sekitar A$850 ribu setelah 30 tahun, sedangkan di Jakarta menyewa lebih untung setelah 20 tahun. Ini hasil model, bukan jaminan: jika imbal hasil investasi dinaikkan, menyewa di Perth pun bisa menang. Karena jangka waktunya berbeda, bandingkan arah hasilnya, bukan kedua angka akhirnya.
 {: .tldr}
 
 * TOC
@@ -19,15 +19,15 @@ bmc_message: "Sewa atau beli, kopi tetap jauh lebih murah. Traktir saya secangki
 
 ## Siapa yang benar, si pembeli atau si penyewa?
 
-Bayangkan dua orang sahabat. Robert ingin punya rumah sendiri, tempat anak-anaknya tumbuh besar, yang bebas dia cat dan bor sesukanya tanpa pernah disuruh pindah oleh pemiliknya. Vieri pindah negara setiap beberapa tahun dan malas mengurus pajak properti, perbaikan, serta tagihan listrik di tiga negara sekaligus. Baginya, cukup satu tagihan setiap bulan yang sudah mencakup semuanya.
+Membeli rumah memberi kebebasan untuk mengecat dan merenovasi, serta kepastian tempat tinggal. Menyewa lebih cocok bagi orang yang sering pindah dan tidak ingin mengurus pajak properti atau perbaikan rumah.
 
 <figure>
 <img src="/assets/img/rvo-ill-buyer-renter.webp" alt="Dua sahabat berdampingan: yang satu mengecat dinding ruang tamunya dengan rol cat, yang lain memegang buku kecil di samping koper dorongnya" width="1456" height="1087" loading="lazy">
 </figure>
 
-Keduanya sama-sama benar. Stabilitas yang dicari Robert dan kebebasan yang dicari Vieri tidak ternilai harganya, dan saya tidak dalam posisi untuk menilainya, karena itu urusan *values*, bukan urusan angka di *spreadsheet*.
+Stabilitas dan kebebasan tidak ternilai harganya, dan saya tidak dalam posisi untuk menilainya, karena itu urusan *values*, bukan angka di *spreadsheet*.
 
-Meski begitu, ada pertanyaan kedua yang lebih dingin dan tidak peduli pada *values*: **kalau hanya menghitung uang, siapa yang pada akhirnya punya lebih banyak?** Pertanyaan itulah yang mendorong saya membuat *tool* Sewa vs Beli Rumah, dan setelah menghitungnya sendiri, saya harus jujur: keduanya bisa menang. Awalnya *tool* itu saya buat untuk diri sendiri karena saya capek berdebat pakai perasaan, lalu untuk teman-teman supaya ada angka yang bisa diadu, dan juga untuk kamu yang ingin melihat gambaran besarnya sebelum meneken cicilan 20 sampai 30 tahun.
+Kalau hanya menghitung uang, pilihan mana yang membuatmu punya lebih banyak pada akhirnya? Itulah yang saya hitung dalam *tool* Sewa vs Beli Rumah, dan hasilnya menunjukkan bahwa membeli maupun menyewa bisa menang.
 
 ## Apa sih yang sebenarnya menentukan?
 
@@ -54,13 +54,13 @@ Kalau imbal hasil rumah lebih besar daripada bunga pinjamannya, *leverage* akan 
 | **Imbal hasil rumah ($$g + y - c$$)** | **7,5%** | **6,1%** |
 | **Bunga KPR ($$r$$)** | **6,4%** | **8,5% selama 5 tahun, lalu 11% sampai 13%** |
 
-Imbal hasil rumah di Perth sekitar satu persen di atas bunga pinjamannya, sedangkan di Jakarta imbal hasilnya hanya sekitar 6%, padahal bunga pinjamannya 11% atau lebih setelah lima tahun pertama. Di Perth, utang ikut bekerja untuk pemiliknya, sementara di Jakarta utang justru menggerogoti kekayaan pemiliknya.
+Imbal hasil rumah di Perth sekitar satu poin persentase di atas bunga pinjamannya, sedangkan di Jakarta imbal hasilnya hanya sekitar 6%, padahal bunga pinjamannya 11% atau lebih setelah lima tahun pertama.
 
 ## Kenapa di satu kota lebih untung beli, di kota lain lebih untung sewa?
 
-Saya menyadari hal ini ketika pindah dari Jakarta ke Perth. Di Perth, membeli rumah lebih menguntungkan daripada menyewa, sementara di Jakarta yang terjadi justru sebaliknya. Orangnya sama, cara hitungnya sama, *tool*-nya pun sama. Bedanya ada di *input*-nya, dan *input* itu bergantung pada kota tempat kamu tinggal.
+Perbedaan hasil Perth dan Jakarta berasal dari *input*, bukan cara menghitungnya. Dua kota bisa menghasilkan keputusan yang berbeda karena harga, sewa, dan bunga pinjamannya berbeda.
 
-Agar adil, mari kita bahas Perth terlebih dahulu. Australia sedang dilanda krisis perumahan. Ironisnya, negeri yang lagu kebangsaannya menjanjikan "*boundless plains to share*" (dataran luas tak bertepi untuk dibagi) justru kesulitan menyediakan rumah bagi warganya sendiri. Menurut <span markdown="0">REIWA</span> (Real Estate Institute of Western Australia, asosiasi properti di Australia Barat), median harga rumah di Perth naik sekitar 17% untuk rumah tapak dan 22% untuk unit dalam 12 bulan hingga September 2026.[^reiwa] Itu *market* yang sangat *hot*, dan saya gak akan kira kenaikan segitu bakal terus berlanjut. Itulah sebabnya **Quick Start** di *tool* memakai angka yang jauh lebih moderat, yaitu 4,5% per tahun selama 30 tahun.
+Agar adil, mari kita bahas Perth terlebih dahulu. Australia sedang dilanda krisis perumahan. Menurut <span markdown="0">REIWA</span> (Real Estate Institute of Western Australia, asosiasi properti di Australia Barat), median harga rumah di Perth naik sekitar 17% untuk rumah tapak dan 22% untuk unit dalam 12 bulan hingga September 2026.[^reiwa] Itu *market* yang sangat *hot*, dan saya gak akan kira kenaikan segitu bakal terus berlanjut. Itulah sebabnya **Quick Start** di *tool* memakai angka yang jauh lebih moderat, yaitu 4,5% per tahun selama 30 tahun.
 
 Ada dua perbedaan struktural yang membuat hasil Perth dan Jakarta berjauhan, dan satu faktor saja tidak cukup untuk menjelaskannya. Buktinya, kalau rumah di Perth dibeli dengan KPR berbunga 8,5% ala Jakarta, membeli tetap unggul sekitar A$495 ribu. Yang menentukan adalah kombinasi keduanya.
 
@@ -69,8 +69,6 @@ Ada dua perbedaan struktural yang membuat hasil Perth dan Jakarta berjauhan, dan
 Penduduk Australia bertambah terutama karena kedatangan orang dari luar negeri. Dalam 12 bulan hingga Desember 2025, penduduknya bertambah 412.500 orang: 301.000 berasal dari migrasi bersih dari luar negeri dan hanya 111.500 dari pertambahan alami. Australia Barat tumbuh paling cepat, yaitu 2,2%.[^abs] Setiap pendatang baru butuh atap, sementara membangun rumah butuh waktu bertahun-tahun. Ketika permintaan tumbuh lebih cepat daripada pasokan, harga rumahlah yang terkerek naik.
 
 Sebaliknya, penduduk Indonesia bertambah terutama dari kelahiran, dan angka kelahiran pelan-pelan menurun. Survei Penduduk Antar Sensus (<span markdown="0">SUPAS</span>) 2025 dari BPS mencatat angka kelahiran total 2,13 anak per perempuan, sudah mendekati *replacement level* (sekitar 2,1 anak per perempuan, tingkat yang membuat jumlah penduduk tetap stabil).[^bps] Makin sedikit rumah tangga baru yang terbentuk, makin ringan pula tekanan terhadap harga rumah. Ditambah lagi, masih banyak apartemen yang belum terjual (catatan Jakarta di *tool* menyebut sekitar 29.000 unit baru belum laku pada kuartal I 2026). Tidak heran asumsi kenaikan harga rumah Jakarta di *tool* terbilang lambat: menurut konsultan properti Colliers, harga rata-rata apartemen di Jakarta hanya naik sekitar 2,2% per tahun dari 2014 sampai 2026.[^idprice]
-
-Kenaikan harga adalah "imbalan" bagi pembeli yang berani menanggung risiko, dan di Jakarta imbalan itu lebih kecil.
 
 ### Berapa bunga KPR-nya? Negara maju versus negara berkembang
 
@@ -115,7 +113,7 @@ Mungkin kamu akan menyanggah: "UBS bilang orang Australia kaya. Bukannya itu buk
 
 ## Gimana cara memakai *tool*-nya? Tiga level
 
-Saya membuat *tool* ini sebagai ekonom berlatar perbankan, tetapi tidak semua orang ingin membongkar modelnya sampai ke dalam, sehingga ada tiga pintu masuk, dari "tunjukin aja" sampai "biar saya bongkar".
+Kamu bisa memakai *tool* ini untuk melihat hasil dengan cepat atau mengubah asumsi dan membandingkan beberapa skenario.
 
 ### Basic: pilih kota, cek dua angka
 
@@ -151,7 +149,7 @@ Kalau kamu ingin menggali lebih dalam, buka pengaturan yang paling besar pengaru
 <figcaption>Suku Bunga Bebas Risiko, jangka waktu, kenaikan harga, dan biaya penjualan, semuanya ada di tab Asumsi.</figcaption>
 </figure>
 
-Tadi saya menyebut Suku Bunga Bebas Risiko sebagai pengaturan terpenting, dan sekarang saya akan membuktikannya, meskipun hasilnya justru melemahkan argumen saya sendiri soal Perth. Dengan angka bawaan **Quick Start** sebesar 4,6%, membeli di Perth unggul A$850 ribu. Begitu angkanya dinaikkan ke 8%, **menyewa justru unggul sekitar A$167 ribu**. Kalau kenaikan harga rumah juga dipangkas menjadi 3%, keunggulan menyewa melebar menjadi sekitar A$690 ribu. Hasil Perth memang nyata, tetapi rapuh, karena bergantung pada harga rumah yang naik lebih cepat daripada imbal hasil uangmu di tempat lain.
+Dengan angka bawaan **Quick Start** sebesar 4,6%, membeli di Perth unggul A$850 ribu. Begitu angkanya dinaikkan ke 8%, **menyewa justru unggul sekitar A$167 ribu**. Kalau kenaikan harga rumah juga dipangkas menjadi 3%, keunggulan menyewa melebar menjadi sekitar A$690 ribu. Keunggulan membeli di Perth bergantung pada harga rumah yang naik lebih cepat daripada imbal hasil uangmu di tempat lain.
 
 Di Jakarta, ceritanya lain: Suku Bunga Bebas Risiko hampir tidak mengubah hasilnya. Membeli tetap tertinggal ketika Suku Bunga Bebas Risiko dinaikkan ke 8% (menyewa unggul Rp 1,6 miliar), dan tetap kalah ketika angka itu diturunkan ke 3%. Membeli baru bisa menang kalau yang saya ubah adalah rumahnya atau pinjamannya:
 
@@ -167,7 +165,7 @@ Di Jakarta, ceritanya lain: Suku Bunga Bebas Risiko hampir tidak mengubah hasiln
 
 ### Conglomerate: Sensitivity Analysis tool 😎
 
-Suatu saat, satu skenario saja tidak akan cukup dan kamu ingin membandingkan banyak hal sekaligus. Untuk itu, naiklah dari *tool* dasar ke **Sensitivity Analysis tool**, yang tentu saja juga gratis. *Tool* ini menjajarkan beberapa skenario Sewa vs Beli, satu skenario per kolom, lalu membandingkannya dalam satu grafik. Kamu bisa memakainya untuk membandingkan:
+**Sensitivity Analysis tool** membandingkan beberapa skenario Sewa vs Beli dalam satu grafik, dengan satu skenario per kolom. Kamu bisa membandingkan:
 
 - **Rumah atau kawasan.** Apartemen di kota versus rumah tapak di pinggiran.
 - **Kota atau negara.** Mata uangnya dikonversi otomatis.
@@ -214,9 +212,9 @@ Sekarang kita beralih ke soal pembiayaan. Grafik berikut membandingkan empat car
 
 ## Jadi, sewa atau beli?
 
-Mari kembali ke Robert dan Vieri. Kalau keduanya tinggal di Perth dengan angka hari ini, secara finansial pun rumah Robert adalah *deal* yang lebih baik, selama harganya terus tumbuh lebih cepat daripada uang yang diinvestasikan Vieri. Sebaliknya, kalau keduanya tinggal di Jakarta dan Robert mengambil KPR standar, Vieri yang menyewa sambil disiplin berinvestasi justru keluar sebagai pemenang. Menurut saya, tidak ada pilihan yang bodoh, yang ada hanyalah pilihan yang tepat untuk harga, bunga, dan kota tertentu.
+Dengan asumsi model ini, membeli di Perth lebih menguntungkan selama harga rumah tumbuh lebih cepat daripada uang yang diinvestasikan penyewa. Di Jakarta, menyewa sambil disiplin berinvestasi lebih menguntungkan daripada membeli dengan KPR standar. Pilihannya bergantung pada harga, bunga, dan kondisi tempat tinggalmu.
 
-Itulah sebabnya, alih-alih bertanya "sewa atau beli, mana yang lebih pintar?", lebih baik kamu bertanya "berapa imbal hasil rumah ini, dan berapa bunga pinjamannya?" Karena *tool*-nya sekarang sudah ada di tanganmu, saya punya satu permintaan kecil: sebelum meneken apa pun, luangkan lima menit untuk memasukkan harga rumah dan sewamu sendiri. [Buka *tool* Sewa vs Beli Rumah](https://tool.adjiebrotots.com/rentvsownhouse/id/), lalu ceritakan di kolom komentar apakah di kotamu lebih untung membeli atau menyewa.
+Sebelum meneken cicilan, masukkan harga rumah dan biaya sewamu sendiri ke [*tool* Sewa vs Beli Rumah](https://tool.adjiebrotots.com/rentvsownhouse/id/), lalu ubah asumsi bunga dan kenaikan harga untuk melihat apakah hasilnya tetap bertahan.
 
 *Tulisan ini berisi informasi umum, bukan nasihat keuangan.*
 

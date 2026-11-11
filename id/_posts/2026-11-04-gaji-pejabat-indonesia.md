@@ -3,6 +3,7 @@ title: "Kebobrokan gaji pejabat Indonesia"
 seo_title: "Gaji pejabat Indonesia: kenapa mereka begitu dimanjakan?"
 description: "Di Jakarta, iring-iringan pejabat bersirene dulu lewat hampir tiap hari, tetapi di Perth belum sekali pun saya lihat. Kenapa pejabat kita diperlakukan bak raja?"
 date: 2026-11-04 09:00:00 +0800
+last_modified_at: 2026-11-11
 tags: [politics]
 image: /assets/img/og/gaji-pejabat-indonesia.jpg
 image_alt: "Seorang politisi bertubuh tambun berjas gelap dan berpeci hitam duduk di singgasana emas sambil makan paha ayam goreng, warga biasa di satu sisi menatapnya dengan kaget, dan di sisi lain seorang pejabat Australia berjas sederhana berdiri santai sambil melambaikan bendera kecil Australia"
@@ -12,7 +13,7 @@ keywords: [gaji pejabat Indonesia, gaji anggota DPR, gaji presiden Indonesia, da
 bmc_message: "Saya tidak dapat tunjangan seperti pejabat, jadi traktir saya kopi susu supaya saya bisa terus menulis!"
 ---
 
-**Singkatnya:** kalau diukur dengan upah rakyatnya sendiri, gaji pejabat Indonesia jauh lebih tinggi daripada gaji politisi Australia. Gaji presiden setara 18,8 kali rata-rata upah buruh Indonesia, sedangkan gaji Perdana Menteri Australia hanya 8,4 kali median upah pekerja Australia. Jurangnya makin lebar di parlemen: gaji dan tunjangan anggota DPR setara 22,3 kali rata-rata upah buruh (19,7 kali setelah pajak), sementara gaji dan tunjangan anggota parlemen Australia hanya 4,2 kali median upah, dan kalau dana reses serta anggaran kantor ikut dihitung, perbandingannya menjadi sekitar 85 kali berbanding 8,6 kali. Itu pun belum termasuk fasilitas seumur hidup setelah lengser, iring-iringan bersirene, dan studi banding yang menelan miliaran rupiah, belum lagi laporan pengeluaran yang nyaris mustahil diperiksa publik.
+**Singkatnya:** gaji presiden setara 18,8 kali rata-rata upah buruh Indonesia, sedangkan gaji Perdana Menteri Australia 8,4 kali median upah pekerjanya. Gaji dan tunjangan anggota DPR setara 22,3 kali rata-rata upah buruh (19,7 kali setelah pajak), dibandingkan 4,2 kali median upah untuk anggota parlemen Australia. Jika dana reses dan anggaran kantor ikut dihitung, kelipatannya menjadi sekitar 85 kali dan 8,6 kali, tetapi dana kegiatan ini bukan penghasilan pribadi. Selain besarnya anggaran, masalahnya adalah pertanggungjawaban pengeluaran yang sulit diperiksa publik.
 {: .tldr}
 
 * TOC
@@ -24,23 +25,17 @@ Lain ceritanya dengan Perth. Sudah hampir dua tahun saya tinggal di sini, dan be
 
 ## Kenapa perantau Indonesia menulis soal politisi Australia?
 
-Saya menulis ini karena dari kejauhan, perbedaan cara kedua negara memperlakukan pejabatnya justru terlihat makin jelas. Sebelum masuk ke angka, ada beberapa hal yang perlu saya luruskan terlebih dahulu supaya tulisan ini tidak dibaca dengan harapan yang keliru.
+Saya menulis ini karena dari kejauhan, perbedaan cara kedua negara memperlakukan pejabatnya justru terlihat makin jelas. Soal gaji dan biaya hidup di Perth sudah saya bahas dalam [#KaburAjaDulu](/id/kabur-aja-dulu/); tulisan ini membahas gaji, fasilitas, dan pertanggungjawaban pejabat, bukan keunggulan Australia dalam segala hal.
 
-- **Ini bukan soal gaji atau biaya hidup di Perth.** Topik itu sudah saya bahas di tulisan [#KaburAjaDulu](/id/kabur-aja-dulu/), lengkap dengan hitungan tabungan di akhir bulan.
-- **Ini juga bukan soal negara maju yang lebih unggul dalam segala hal.** Soal itu mungkin layak dibahas dalam tulisan tersendiri.
-- **Saya tidak sedang memuja pemerintah Australia.** Banyak orang Australia pasti tidak setuju dengan sebagian isi tulisan ini, lagi pula tidak ada satu partai pun yang suci, baik Labor, Coalition, Greens, maupun One Nation.
-
-Karena lebih dari 25 tahun saya tumbuh di Jakarta dan baru hampir dua tahun di Perth, kritik dalam tulisan ini lebih banyak saya arahkan ke Indonesia, negara yang paling saya kenal dan yang paling saya harapkan bisa lebih baik.
+Kritik dalam tulisan ini lebih banyak saya arahkan ke Indonesia, negara yang paling saya kenal dan yang paling saya harapkan bisa lebih baik.
 
 ## Apa itu *fair go*, dan apa hubungannya dengan gaji pemimpin?
 
 *Fair go* adalah keyakinan bahwa setiap orang berhak mendapat kesempatan yang sama, apa pun latar belakangnya, dan nilai inilah yang membuat orang Australia risih melihat siapa pun, termasuk pemimpinnya, berlagak seolah-olah lebih tinggi daripada orang lain. Nilai yang menjadi pasangannya adalah *mateship*, yaitu kesetiaan, solidaritas, dan kesetaraan di antara kawan, termasuk saling membantu di masa sulit. Kedua nilai itu tercantum dalam Australian Values Statement, pernyataan nilai-nilai Australia yang wajib ditandatangani para pemohon visa.[^values] Anggap saja ini Pancasila-nya Australia.
 
-Akar nilai ini bisa dilacak dari sejarah Australia. Australia modern bermula pada 1788 sebagai koloni pembuangan narapidana Inggris. Berbeda dengan Amerika Serikat yang sebagian didirikan oleh kaum pelarian yang menghindari penindasan agama, atau Kanada yang tetap erat dengan Inggris, penduduk awal Australia adalah narapidana beserta para penjaganya, dan kebencian para narapidana terhadap sistem kelas Inggris ikut membentuk budaya yang curiga pada siapa pun yang merasa dirinya lebih tinggi. Orang Australia bahkan punya istilah untuk kebiasaan menjatuhkan orang yang terlalu menonjol: *tall poppy syndrome*.
-
 Meski begitu, Australia bukan negara paling setara di dunia. Rasio Gini Australia, yang dihitung dari pendapatan setelah dipotong pajak dan ditambah bantuan sosial, sebesar 0,307 pada 2022-23, sementara negara-negara Nordik seperti Islandia, Norwegia, Denmark, dan Swedia jelas lebih setara.[^gini] Rasio Gini Indonesia sebesar 0,368 pada Maret 2026, lebih tinggi daripada rasio Gini Australia, padahal angka itu dihitung dari pengeluaran, bukan pendapatan, yang biasanya membuat ketimpangan terlihat lebih kecil daripada aslinya.[^gini]
 
-Yang jauh lebih timpang justru tingkat kemakmuran kedua negara. Produk domestik bruto (<span markdown="0">PDB</span>) per kapita Australia sekitar US$65.000 pada 2025, sedangkan Indonesia sekitar US$5.100, sehingga PDB per kapita Australia kira-kira 13 kali lipat Indonesia.[^imf] Artinya, warga Australia biasa sudah tergolong kaya menurut ukuran dunia, dan tidak heran kalau di Bali justru merekalah yang diperlakukan bak raja.
+Yang jauh lebih timpang justru tingkat kemakmuran kedua negara. Produk domestik bruto (<span markdown="0">PDB</span>) per kapita Australia sekitar US$65.000 pada 2025, sedangkan Indonesia sekitar US$5.100, sehingga PDB per kapita Australia kira-kira 13 kali lipat Indonesia.[^imf]
 
 ## Berapa gaji presiden dan perdana menteri dibandingkan upah pekerja biasa?
 
@@ -72,7 +67,7 @@ Australia tidak punya pensiun khusus untuk perdana menteri. Skema pensiun lama b
 
 ## Berapa penghasilan anggota DPR dibandingkan anggota parlemen Australia?
 
-Gaji dan tunjangan kotor anggota DPR setara 22,3 kali rata-rata upah buruh (19,7 kali setelah pajak), sedangkan gaji dan tunjangan anggota parlemen Australia hanya setara 4,2 kali median upah pekerja. Kalau dana reses dan anggaran kantor ikut dihitung, perbandingannya menjadi sekitar 85 kali berbanding 8,6 kali. Begitu mendengar kata "DPR", yang terbayang di kepala kita adalah kekuasaan dan uang yang luar biasa besar. Di Australia, anggota parlemen lebih mirip manajer atau direktur di sebuah perusahaan: mereka bekerja sebagai eksekutif, bukan duduk di singgasana sebagai raja.
+Gaji dan tunjangan kotor anggota DPR setara 22,3 kali rata-rata upah buruh (19,7 kali setelah pajak), sedangkan gaji dan tunjangan anggota parlemen Australia hanya setara 4,2 kali median upah pekerja. Kalau dana reses dan anggaran kantor ikut dihitung, perbandingannya menjadi sekitar 85 kali berbanding 8,6 kali.
 
 <figure>
 <img src="/assets/img/gpi-ill-raja-pejabat.webp" alt="Seorang politisi bertubuh tambun berjas gelap dan berpeci hitam duduk di singgasana emas sambil makan paha ayam goreng, warga biasa di satu sisi menatapnya dengan kaget, dan di sisi lain seorang pejabat Australia berjas sederhana berdiri santai sambil melambaikan bendera kecil Australia" width="1456" height="1087" loading="lazy">
@@ -103,7 +98,7 @@ Ada pula yang berargumen bahwa Indonesia negara yang luas, sehingga wajar kalau 
 
 ## Selain soal gaji, kenapa pejabat kita merasa berhak menguasai jalan umum?
 
-Selama hampir dua tahun di Perth, saya belum pernah melihat iring-iringan pejabat, bahkan untuk *Premier* Australia Barat (kepala pemerintahan negara bagian yang jabatannya kira-kira setara gubernur), karena di Australia pengawalan hanya diberikan kepada segelintir pemegang jabatan, dan itu pun untuk keamanan, bukan untuk membelah jalanan.
+Di Australia, pengawalan hanya diberikan kepada segelintir pemegang jabatan, dan itu pun untuk keamanan, bukan untuk membelah jalanan.
 
 Polisi federal Australia (Australian Federal Police, <span markdown="0">AFP</span>) memberikan perlindungan kepada para pemegang jabatan tinggi (*high office holders*): Gubernur Jenderal, Perdana Menteri, para menteri, pimpinan kedua kamar parlemen (*Presiding Officers*), serta Pemimpin dan Wakil Pemimpin Oposisi. Tamu negara seperti kepala negara asing juga dilindungi, begitu pula Raja Charles III ketika berkunjung ke Australia.[^afp] Dalam praktiknya, hanya Perdana Menteri yang dikawal secara penuh waktu, sedangkan para menteri baru diberi pengawal pribadi jika penilaian risiko mengharuskannya. Anggota parlemen biasa tidak punya pengawal dan tidak dijaga terus-menerus. Untuk urusan parlemen, mereka boleh memakai Comcar, layanan mobil pemerintah dengan sopir, tetapi layanan itu sekadar angkutan, bukan iring-iringan pembuka jalan.
 
@@ -150,8 +145,6 @@ xychart-beta horizontal
 
 Untuk Indonesia dan Filipina, kelipatan di tabel ini bisa jadi masih terlalu rendah. Upah rata-rata Indonesia kemungkinan besar lebih tinggi daripada mediannya, karena segelintir orang bergaji sangat besar menarik rata-rata ke atas, sedangkan angka upah Filipina berasal dari survei perusahaan formal dengan sedikitnya 10 pekerja, sehingga pekerja sektor informal yang upahnya lebih rendah tidak ikut terhitung.
 
-Catatan itu justru mempertegas pesan tabel di atas: sebagian besar negara yang saya bandingkan, baik negara kaya seperti Norwegia dan Australia maupun negara Asia seperti Thailand, Vietnam, dan Korea Selatan, menggaji pemimpinnya kurang dari 9 kali upah rakyatnya, sementara Indonesia duduk di kelompok paling atas bersama Filipina. Angka 18,8 kali itu pun belum memasukkan fasilitas seumur hidup yang diterima presiden setelah lengser, sementara penghasilan anggota DPR, kalau dana reses ikut dihitung, setara sekitar 85 kali rata-rata upah buruh.
-
 Pola yang sama muncul ketika yang dibandingkan adalah anggota parlemen biasa. Untuk setiap negara, saya menjumlahkan gaji dan tunjangan tetap yang dibayarkan langsung kepada anggota parlemen, lalu membaginya dengan upah pekerja yang sama seperti pada perbandingan gaji pemimpin. Anggaran kantor, gaji staf, dan dana kegiatan di daerah pemilihan, termasuk dana reses, tidak saya hitung. Hasilnya, gaji dan tunjangan anggota DPR setara 22,3 kali rata-rata upah buruh, tertinggi di antara sepuluh negara dalam tabel berikut dan jauh melampaui Filipina yang berada di urutan kedua dengan 14,0 kali, sementara anggota parlemen di Norwegia, Inggris, dan Amerika Serikat hanya menerima 2 sampai 3,5 kali upah rakyatnya.
 
 | Negara | Gaji dan tunjangan anggota parlemen | Upah pekerja | Kelipatan |
@@ -181,7 +174,7 @@ Tiongkok dan Vietnam sengaja tidak saya masukkan ke tabel anggota parlemen, kare
 
 Yang seharusnya kita perdebatkan adalah kebijakan, bukan ulah pejabat dalam membelanjakan uang rakyat. Selama tinggal di Australia, saya justru jarang menghabiskan energi untuk mengomentari perilaku pejabat. Saya lebih sering memikirkan kebijakan yang mereka buat: mau diapakan <span markdown="0">GST</span> (pajak pertambahan nilai di Australia), bagaimana imigrasi sebaiknya diatur, dan apakah diskon pajak keuntungan modal (*<span markdown="0">CGT</span> discount*) ikut memperparah krisis harga rumah. Menurut saya, perdebatan seperti itulah standar minimum diskusi politik, bukan pertengkaran soal ke mana presiden, menteri, atau anggota DPR menghabiskan uang pajak kita.
 
-Masalah Indonesia bukan takdir. Luas wilayah juga bukan alasan, karena bentang Indonesia dan Australia dari barat ke timur kurang lebih sama, sementara anggota parlemen di Australia tetap hidup seperti manajer, bukan raja. Yang membedakan adalah insentif yang bobrok dan pengeluaran yang gelap: gaji yang tinggi dibanding upah rakyat, fasilitas yang menempel seumur hidup, dan uang rakyat yang hanya bisa diintip lewat temuan audit berbulan-bulan kemudian. Di Indonesia, rakyat diminta percaya begitu saja kepada pejabatnya, sedangkan di Australia, pejabatlah yang harus mempertanggungjawabkan setiap dolar yang mereka pakai kepada rakyat.
+Masalah Indonesia bukan takdir. Yang membedakan adalah insentif yang bobrok dan pengeluaran yang gelap: gaji yang tinggi dibanding upah rakyat, fasilitas yang menempel seumur hidup, dan uang rakyat yang hanya bisa diintip lewat temuan audit berbulan-bulan kemudian. Di Indonesia, rakyat diminta percaya begitu saja kepada pejabatnya, sedangkan di Australia, pejabatlah yang harus mempertanggungjawabkan setiap dolar yang mereka pakai kepada rakyat.
 
 Kita tentu tidak bisa mengubah semua itu dalam semalam, tetapi kita bisa mulai dari tuntutan yang sederhana, yaitu meminta DPR dan setiap kementerian menerbitkan laporan pengeluaran per orang, dirinci per pos, seperti laporan triwulanan IPEA, lembaga pengawas pengeluaran anggota parlemen Australia. Setelah itu, nilailah wakil rakyatmu dari apa yang berani mereka umumkan, bukan dari seberapa keras sirene mereka berbunyi. Tahun lalu, warga harus ramai-ramai bersuara supaya "tot tot wuk wuk" berhenti, dan saya berharap suara yang sama suatu hari nanti juga cukup untuk membuat setiap rupiah yang dipakai pejabat kita bisa dilihat oleh rakyat yang membayarnya.
 

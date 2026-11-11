@@ -3,6 +3,7 @@ title: "How governments lie with headline figures, and how to outsmart them"
 seo_title: "How governments lie with statistics (and how to spot it)"
 description: "Every number in an 'our economy is skyrocketing' speech can be true, so why doesn't your wallet feel it? Seven headline figures, and how they are dressed up."
 date: 2026-11-08 09:00:00 +0800
+last_modified_at: 2026-11-11
 tags: [politics]
 image: /assets/img/og/how-governments-lie-with-statistics.jpg
 image_alt: "A heavy-set man in a light blue shirt and black peci shouts \"Our economy is skyrocketing!\" from a podium, one finger pointing up, while a crowd cheers behind him"
@@ -21,24 +22,24 @@ bmc_message: "This coffee's price rose 0% this month (official figure). Buy me o
 
 ## Why does "our economy is skyrocketing" sound true and feel false?
 
-Picture the scene. An official in a light blue shirt grips the podium and shouts, "Our economy is skyrocketing!" The crowd cheers. Behind him, a screen shows growth going up, unemployment going down and poverty at a record low. Here is the uncomfortable part: every number on that screen may be true. A government rarely needs to invent a statistic. It only needs to pick which one to show, decide how to define it, and leave out the rest.
+Every number in an "our economy is skyrocketing" speech may be true. A government rarely needs to invent a statistic: it can choose which one to show, how to define it and what to leave out.
 
 <figure>
 <img src="/assets/img/gsl-ill-podium-en.webp" alt="A heavy-set man in a light blue shirt and black peci stands at a podium with his finger pointing up, shouting the words in his speech bubble, &quot;Our economy is skyrocketing!&quot;, while a crowd cheers behind him" width="1456" height="1087" loading="lazy">
 <figcaption>Every number on his screen may be true. That is what makes the speech work.</figcaption>
 </figure>
 
-So let's take the seven numbers that turn up in every speech like that one: unemployment, GDP per capita, GDP growth, inflation, poverty, the Gini ratio, and the deficit and debt. For each one: what it measures, how it gets dressed up, and what to look at instead, with Indonesia set against its ASEAN neighbours and the OECD. Not so that you distrust every statistic, but so that the next time someone shouts "skyrocketing" from a podium, you know which questions to ask.
+Let's examine seven headline figures: unemployment, GDP per capita, GDP growth, inflation, poverty, the Gini ratio, and the deficit and debt. For each, I compare what it measures with what it leaves out, using Indonesia, its ASEAN neighbours and the OECD.
 
 ## Is unemployment really only 4.85%?
 
-**What it is.** In August 2025, BPS, Indonesia's statistics agency, put the open unemployment rate (<span markdown="0">TPT</span>, *tingkat pengangguran terbuka*) at 4.85%: 7.46 million people.[^sakernas] The number comes from Sakernas, the national labour force survey. To count as working, you need to have worked at least one hour for pay or profit in the past week. To count as unemployed, you need to have done no work at all, and to be looking for work or ready to start.
+In August 2025, BPS, Indonesia's statistics agency, put the open unemployment rate (<span markdown="0">TPT</span>, *tingkat pengangguran terbuka*) at 4.85%: 7.46 million people.[^sakernas] The number comes from Sakernas, the national labour force survey. To count as working, you need to have worked at least one hour for pay or profit in the past week. To count as unemployed, you need to have done no work at all, and to be looking for work or ready to start.
 
-**How it gets dressed up.** One hour makes you employed. A street vendor who made one sale last week is employed. So is a ride-hailing driver who took one trip, and a teenager who helped in the family shop. A single rate says nothing about how many hours people work, or in what kind of job.
+One hour of work makes you employed, whether you are a street vendor, a ride-hailing driver or helping in a family shop. The rate says nothing about how many hours people work or the quality of their jobs.
 
-Fair's fair: Indonesia didn't invent this. The one-hour rule is the International Labour Organization's (<span markdown="0">ILO</span>) global standard, and Australia uses it too. Australia's own headline also hides part-timers who want more hours. On the ILO's modelled estimates, time-related underemployment (working fewer hours than you want) is 5.3% in Indonesia and 6.6% in Australia.[^ilo-tru] The trick is not the definition. The trick is showing only this one number.
+Indonesia didn't invent this definition. The one-hour rule is the International Labour Organization's (<span markdown="0">ILO</span>) global standard, and Australia uses it too. On the ILO's modelled estimates, time-related underemployment (working fewer hours than you want) is 5.3% in Indonesia and 6.6% in Australia.[^ilo-tru] The problem is showing only the unemployment rate.
 
-**How to see the real picture.** Start with BPS's own release, in the same table as the headline. In August 2025, 24.77% of employed Indonesians worked part-time, and 7.91%, or 11.6 million people, were underemployed: working under 35 hours a week and still wanting or looking for more work. Only 67.32% worked full-time.[^sakernas] The average employee earned Rp3.33 million a month.[^sakernas] (Set that against what the people at the podium take home in [Indonesian politicians' pay](/en/indonesian-politicians-pay/).)
+Start with BPS's own release, in the same table as the headline. In August 2025, 24.77% of employed Indonesians worked part-time, and 7.91%, or 11.6 million people, were underemployed: working under 35 hours a week and still wanting or looking for more work. Only 67.32% worked full-time.[^sakernas] The average employee earned Rp3.33 million a month.[^sakernas] (Set that against what the people at the podium take home in [Indonesian politicians' pay](/en/indonesian-politicians-pay/).)
 
 Then compare countries. On the ILO's modelled estimate, Indonesia's unemployment rate in 2025 was 3.2%, below Australia's 4.1% and the OECD average of 5.7%.[^wb-unemp] The headline looks great:
 
@@ -56,25 +57,23 @@ Hours tell the same story from another angle. The average Indonesian worker put 
 
 Australia (31.3 hours) and the OECD average (33.6) sit even lower, but short hours in a rich country are often a choice, and well paid. In Indonesia they often are neither.[^ilo-hours] One caveat: hours show how fully people are used, not how good the work is. And there is one more layer: the graduate who drives a ride-hailing motorbike. In 2024, about 35% of young Indonesian workers were in jobs that didn't match their education, and 22.36% were overeducated for the job they had.[^mismatch] That measure needs care, because it flatters a country with fewer graduates.
 
-**Verdict:** a low unemployment rate in a country where most jobs are informal doesn't say the jobs are good. It says people can't afford to be unemployed.
+**A low unemployment rate does not tell you whether the jobs are good.**
 
 ## Is Indonesia as rich as its GDP per capita says?
 
-**What it is.** Gross domestic product (<span markdown="0">GDP</span>) is everything produced inside a country's borders in a year:
+Gross domestic product (<span markdown="0">GDP</span>) is everything produced inside a country's borders in a year:
 
 $$
 \text{GDP} = C + I + G + (X - M)
 $$
 
-That is household consumption ($$C$$), investment ($$I$$), government spending ($$G$$) and exports minus imports ($$X - M$$). Divide it by the population and you get GDP per capita: US$17,660 per Indonesian in 2025, in purchasing power parity (<span markdown="0">PPP</span>) terms, a.k.a. adjusted for what money buys at home.[^wb-gdppc] Notice what it measures: production, not what lands in a household's pocket.
-
-**How it gets dressed up.** Three ways.
+That is household consumption ($$C$$), investment ($$I$$), government spending ($$G$$) and exports minus imports ($$X - M$$). Divide it by the population and you get GDP per capita: US$17,660 per Indonesian in 2025, in purchasing power parity (<span markdown="0">PPP</span>) terms, a.k.a. adjusted for what money buys at home.[^wb-gdppc] It measures production, not household income.
 
 1. **It is an average.** A few very rich people pull it up. The United States is the classic case, where the average sits far above the median.
 2. **It is production, not income.** Profits paid to foreign owners stay in GDP. In Ireland and Luxembourg, gross national income (<span markdown="0">GNI</span>, what residents actually earn) is only 69% and 68% of GDP, because of multinationals' profits and workers who cross the border every day. Singapore is at 83%, Switzerland at 99%.[^wb-gni]
 3. **It includes things that never reach the dinner table:** investment and net exports.
 
-**How to see the real picture.** The minimum is GNI. Indonesia's GNI is 97% of its GDP (2025), so about 3% of what is produced flows out to foreign owners and lenders.[^wb-gni] That is not much, so Indonesia's problem is not this one:
+Start with GNI. Indonesia's GNI is 97% of its GDP (2025), so about 3% of what is produced flows out to foreign owners and lenders.[^wb-gni] That is a relatively small gap:
 
 {% include hbar.html id="gsl-gni-gdp" %}
 
@@ -86,17 +85,15 @@ The best proxy is the World Bank's Poverty and Inequality Platform (<span markdo
 
 In money, the median Indonesian spent US$6.77 a day in 2025 (2021 PPP).[^pip-median]
 
-An honest caveat. Spending surveys show lower numbers than income surveys, because people save part of what they earn, and they miss the rich, who refuse or never make it into the sample. That pushes Indonesia's share down. But the ASEAN neighbours also survey spending, and Indonesia is still the lowest. That gap is the point: the headline average sits far away from the typical person.
+Spending surveys show lower numbers than income surveys because people save part of what they earn. They also miss rich households that refuse to participate or never enter the sample. Both push Indonesia's share down, but its ASEAN neighbours also survey spending, and Indonesia still has the lowest share.
 
-**Verdict:** a high average with a low median means the growth isn't reaching the middle.
+**GDP per capita does not tell you what the typical household can spend.**
 
 ## Does 5% growth mean we are better off?
 
-**What it is.** GDP growth is the change in real GDP, a.k.a. GDP after inflation. Indonesia has grown at about 5% a year for a decade. In the second quarter (Q2) of 2025, BPS reported 5.12% year on year (yoy), after 4.87% in Q1.[^q2]
+GDP growth is the change in real GDP, a.k.a. GDP after inflation. Indonesia has grown at about 5% a year for a decade. In the second quarter (Q2) of 2025, BPS reported 5.12% year on year (yoy), after 4.87% in Q1.[^q2]
 
-**How it gets dressed up.** Four ways.
-
-**One: more people.** A growing population makes a bigger economy without anyone being better off. My own adopted country is the example: Australia's GDP grew, but its GDP per capita fell for seven quarters in a row, through 2023 and 2024.[^abs] In 2024, its GDP grew 1.4% while GDP per capita fell 0.6%.[^wb-growth] Indonesia's population grows about 0.78% a year, so its 5.1% GDP growth in 2025 is about 4.3% per person.[^wb-growth] Still good. Just not 5.1%.
+**One: more people.** A growing population makes a bigger economy without anyone being better off. For example, Australia's GDP grew, but its GDP per capita fell for seven quarters in a row, through 2023 and 2024.[^abs] In 2024, its GDP grew 1.4% while GDP per capita fell 0.6%.[^wb-growth] Indonesia's population grows about 0.78% a year, so its 5.1% GDP growth in 2025 is about 4.3% per person.[^wb-growth] That is still substantial growth, but less than 5.1%.
 
 **Two: spending that counts the same whatever it returns.** In GDP, a road nobody uses counts the same as a productive factory, at least in the year it is built. The Incremental Capital-Output Ratio (<span markdown="0">ICOR</span>) measures how efficiently investment turns into growth:
 
@@ -108,23 +105,21 @@ Lower is better. Indonesia's ICOR over 2015 to 2024 (without the COVID years 202
 
 {% include hbar.html id="gsl-icor" %}
 
-Concession: Indonesia's government is not a big spender. Government consumption was 7.5% of GDP in 2025, against an OECD average of 17.3% (2024).[^govcons] The issue is efficiency and the choice of projects, not size. A programme like free nutritious meals (Makan Bergizi Gratis, <span markdown="0">MBG</span>) lifts GDP the moment the money is spent, whatever it returns in the long run.
+Indonesia's government is not a big spender. Government consumption was 7.5% of GDP in 2025, against an OECD average of 17.3% (2024).[^govcons] The issue is efficiency and the choice of projects, not size. A programme like free nutritious meals (Makan Bergizi Gratis, <span markdown="0">MBG</span>) lifts GDP the moment the money is spent, whatever it returns in the long run.
 
 **Three: forgetting what wears out and runs out.** GDP counts coal and nickel dug out of the ground as income, but not the loss of the resource. Worn-out machines are not subtracted either. The World Bank's adjusted net national income corrects for both.
 
 **Four: the currency.** A weaker rupiah can lift exports in GDP while making imported food, fuel and medicine dearer for households.
 
-**How to see the real picture.** Look at real GDP per capita growth and real household consumption growth. Then check the proxies that are hard to fake: electricity sales, freight, tax receipts, imports, cement and car sales. (Careful with electricity: smelters and data centres use a lot of it. Even so, a fall is an alarm.) And look at the lights. Luis Martinez compared satellite images of night lights with reported GDP, and found that autocracies overstate their yearly GDP growth by about 35%:[^martinez] a true 2% shows up as about 2.7%. Indonesia is a democracy, so this is not an accusation. The point is the method. Night lights don't answer to ministers.
+Look at real GDP per capita growth and real household consumption growth. Compare them with electricity sales, freight, tax receipts, imports, cement and car sales. Electricity needs care because smelters and data centres use a lot of it. Luis Martinez compared satellite images of night lights with reported GDP and found that autocracies overstate their yearly GDP growth by about 35%:[^martinez] a true 2% shows up as about 2.7%. Indonesia is a democracy, so this is not an accusation against Indonesia; it is another way to check reported growth.
 
-Now a case for you to judge. In Q2 2025, BPS reported 5.12%, above most forecasts, in a quarter without the Lebaran (Eid) spending boost that lifted Q1. Economists at CELIOS, a Jakarta think tank, wrote to the United Nations Statistics Division on 8 August 2025 and asked for a review. The Coordinating Ministry for Economic Affairs and BPS answered that the methodology is public and sound.[^q2] I won't tell you who is right. The proxies above are public too: electricity, cement, car sales, tax receipts. Check them against the 5.12%.
+In Q2 2025, BPS reported 5.12%, above most forecasts, in a quarter without the Lebaran (Eid) spending boost that lifted Q1. Economists at CELIOS, a Jakarta think tank, wrote to the United Nations Statistics Division on 8 August 2025 and asked for a review. The Coordinating Ministry for Economic Affairs and BPS answered that the methodology is public and sound.[^q2] I won't tell you who is right. Compare electricity, cement and car sales and tax receipts with the reported 5.12%.
 
-**Verdict:** growth per person, per household, and matched by things you can see, beats a headline percentage.
+**Growth per person and household, checked against other indicators, tells you more than a headline percentage.**
 
 ## Is inflation low, or are prices still going up?
 
-**What it is.** The Consumer Price Index (<span markdown="0">CPI</span>) prices a basket of goods and services every month. BPS sets the weights from its Cost of Living Survey (<span markdown="0">SBH</span>, *Survei Biaya Hidup*) of 2022, used since January 2024.[^sbh] "Inflation is down" means prices rise more slowly. It does not mean they fall.
-
-**How it gets dressed up.** Five ways.
+The Consumer Price Index (<span markdown="0">CPI</span>) prices a basket of goods and services every month. BPS sets the weights from its Cost of Living Survey (<span markdown="0">SBH</span>, *Survei Biaya Hidup*) of 2022, used since January 2024.[^sbh] "Inflation is down" means prices rise more slowly. It does not mean they fall.
 
 1. **The weights.** In SBH 2022, food (restaurant food included) is 38.04% of the basket, up from 33.68% in SBH 2018.[^sbh] Yet the average Indonesian household spends 50.10% of its monthly budget on food (Susenas, March 2024),[^food-share] and a poor household spends even more. The gap has a reason: SBH surveys urban households in 150 cities and regencies, and weights them by total spending, so richer households, who spend more rupiah, count for more.[^sbh]
 2. **The weights lag behind life, and then forget.** They are updated roughly every four to five years (a 2018 base, then 2022).[^sbh] When beef gets dear, a family switches to eggs. At the next update, BPS sets the weights to what people now buy, so the cheaper basket becomes the new normal: the family that was pushed from beef to eggs counts as living "the same". The index never records the step down.
@@ -138,11 +133,11 @@ Regional governments run Pasar Murah (cheap markets) and market operations, and 
 
 Did anyone time it? The Home Affairs Minister, Tito Karnavian, said so himself in late September 2024: some regional heads study which markets BPS samples, then quickly hold a cheap market there "so the price goes down". In his words, "he knows where the random is, which sample it is." He asked BPS to keep several alternative sample markets. BPS's acting head, Amalia Adininggar Widyasanti, rejected the idea that its data were manipulated.[^tito] The Finance Minister, Sri Mulyani, said there were "very few" such cases, that they had been corrected, and that fiscal incentives must not distort inflation figures.[^smi]
 
-So this is not a charge against BPS, and probably not a big dent in the national number. But the incentive is still there. A cheap market helps the families who reach it that day. It also lowers the measured price in a region that is rewarded for a low measured price. That is Goodhart's law in a regulation: when a measure becomes a target, it stops being a good measure.
+The officials' statements do not establish manipulation by BPS or a large effect on national inflation. Cheap markets help the families who can use them, but they can also lower sampled prices in regions rewarded for low inflation. The incentive deserves scrutiny.
 
-**How to see the real picture.** Look at the cumulative change, not the monthly rate: prices in Indonesia rose about 31% from 2015 to 2024.[^cpi-cum] (Deflation is not the goal, by the way. Falling prices usually signal a stagnant economy.) Then ask whether wages keep up. Real wages, a.k.a. wages after inflation, are the number that tells you whether a family can buy more this year than last.
+Look at the cumulative change, not the monthly rate: prices in Indonesia rose about 31% from 2015 to 2024.[^cpi-cum] (Deflation is not the goal, by the way. Falling prices usually signal a stagnant economy.) Then ask whether wages keep up. Real wages, a.k.a. wages after inflation, are the number that tells you whether a family can buy more this year than last.
 
-Divide BPS's average employee wage by the consumer price index and set 2019 at 100. In 2025, the average Indonesian employee's wage bought 1.7% less than in 2019, after six years in which the inflation headline was mostly called low.[^realwage] Fair's fair: Australia's real wages fell too, after the 2022 inflation spike, and further, to 95.9. Low inflation and wages that keep up are two different things, in any country. In the chart below, the blue line is Australia and the red line is Indonesia.
+Divide BPS's average employee wage by the consumer price index and set 2019 at 100. In 2025, the average Indonesian employee's wage bought 1.7% less than in 2019, after six years in which the inflation headline was mostly called low.[^realwage] Australia's real wages fell too, after the 2022 inflation spike, and further, to 95.9. Low inflation and wages that keep up are two different things, in any country. In the chart below, the blue line is Australia and the red line is Indonesia.
 
 ```mermaid
 %%{init: {"themeVariables": {"xyChart": {"plotColorPalette": "#5A91E8, #E63939"}}}}%%
@@ -156,53 +151,49 @@ xychart-beta
 
 And look at the ratios that matter at home: a house price against a year's income, a year's school fees against the median wage.
 
-**Verdict:** the question is not "how fast are prices rising?" but "are wages rising faster?"
+**Low inflation is not enough if wages fail to keep up.**
 
 ## How many Indonesians are poor? It depends on the line
 
-**What it is.** BPS draws its poverty line from the cost of a minimum of food plus a minimum of everything else: Rp609,160 per person per month in March 2025, or about Rp20,305 a day. By that line, 8.47% of Indonesians (23.85 million people) were poor, the lowest in two decades. By September 2025 it was 8.25% (23.36 million).[^bps-poverty] Rp20,305 a day is the line between poor and not poor, for food, transport, rent and everything else.
+BPS draws its poverty line from the cost of a minimum of food plus a minimum of everything else: Rp609,160 per person per month in March 2025, or about Rp20,305 a day. By that line, 8.47% of Indonesians (23.85 million people) were poor, the lowest in two decades. By September 2025 it was 8.25% (23.36 million).[^bps-poverty] Rp20,305 a day is the line between poor and not poor, for food, transport, rent and everything else.
 
-**How it gets dressed up.** Choose a low line. In its June 2025 update (2021 PPP), the World Bank uses US$3.00 a day for low-income countries, US$4.20 for lower-middle-income countries and US$8.30 for upper-middle-income countries. Indonesia has been an upper-middle-income country since the World Bank's July 2023 classification.[^wb-class] Here is Indonesia under each line (2025 survey): 3.7%, 15.5% and 64.1%.[^wb-lines]
+The rate depends on where you draw the line. In its June 2025 update (2021 PPP), the World Bank uses US$3.00 a day for low-income countries, US$4.20 for lower-middle-income countries and US$8.30 for upper-middle-income countries. Indonesia has been an upper-middle-income country since the World Bank's July 2023 classification.[^wb-class] Here is Indonesia under each line (2025 survey): 3.7%, 15.5% and 64.1%.[^wb-lines]
 
 {% include hbar.html id="gsl-poverty-lines" %}
 
-Same country, same year, same people. Anywhere from 3.7% to 64.1% poor, depending on the line.
+The poverty rate ranges from 3.7% to 64.1% for the same country, year and survey, depending on the line.
 
-**How to see the real picture.** Use several lines and judge which one fits. Then compare countries at the line for Indonesia's own income group, US$8.30 a day. Indonesia is at 64.1%, with a GDP per capita of US$17,660. Vietnam, with about the same GDP per capita (US$18,088), is at 21.5%. Thailand (US$26,250) is at 11.7%, Malaysia at 2.9%. The Philippines, with US$12,577, is at 73.9%. Australia is at 1.5%.[^wb-830][^wb-gdppc]
+Use several lines and judge which one fits. Then compare countries at the line for Indonesia's own income group, US$8.30 a day. Indonesia is at 64.1%, with a GDP per capita of US$17,660. Vietnam, with about the same GDP per capita (US$18,088), is at 21.5%. Thailand (US$26,250) is at 11.7%, Malaysia at 2.9%. The Philippines, with US$12,577, is at 73.9%. Australia is at 1.5%.[^wb-830][^wb-gdppc]
 
 {% include hbar.html id="gsl-poverty-830" %}
 
-With a GDP per capita like Vietnam's, Indonesia "should" sit near Vietnam and Thailand. It sits near the Philippines and Laos instead. That means the income is very unequally spread, and a huge share of Indonesians are an aspiring middle class: just above the BPS line, and far below a decent life. The median Indonesian spends US$6.77 a day,[^pip-median] under the US$8.30 line, which is why more than half the country falls below it. (The survey years and methods differ between countries, but a gap this big is not a rounding issue.)
+The median Indonesian spends US$6.77 a day,[^pip-median] below the US$8.30 line, which is why more than half the country falls below it. Survey years and methods differ between countries, so the comparison needs that qualification.
 
-Now the honest twist. Australia and the OECD measure poverty in relative terms: below 50% (or 60%) of the median. On that measure Indonesia scores only 6.7% (2025), lower than Australia's 11.3% (2020) and the United States' 18.9%.[^relpov] Why? Because Indonesia's median itself is so low, and the survey measures spending. A relative line flatters Indonesia too: it says people are close to the median, not that the median is enough. Use it together with the absolute lines, never alone.
-
-**Verdict:** a poverty rate is only as honest as its line.
+Relative poverty tells a different story. Australia and the OECD measure poverty in relative terms: below 50% (or 60%) of the median. On that measure Indonesia scores only 6.7% (2025), lower than Australia's 11.3% (2020) and the United States' 18.9%.[^relpov] Why? Because Indonesia's median itself is so low, and the survey measures spending. A relative line flatters Indonesia too: it says people are close to the median, not that the median is enough. Use it together with the absolute lines, never alone.
 
 ## Is Indonesia as equal as its Gini ratio says?
 
-**What it is.** The Gini ratio measures inequality from 0 (everyone has the same) to 1, or 100 (one person has everything). BPS put Indonesia's at 0.375 in March 2025 and 0.363 in September 2025, from Susenas spending data.[^bps-gini]
+The Gini ratio measures inequality from 0 (everyone has the same) to 1, or 100 (one person has everything). BPS put Indonesia's at 0.375 in March 2025 and 0.363 in September 2025, from Susenas spending data.[^bps-gini]
 
-**How it gets dressed up.** Measure spending, not income or wealth. The rich save and invest a big part of what they earn, and they are hard to survey: they refuse, or they are missing from the sample. So a spending Gini looks equal. On the World Bank's figures from household surveys, Indonesia's Gini is 34.4 (2025), lower than the United States' 41.8 and close to Australia's 33.8 and Germany's 33.7.[^pip-gini] Most OECD Ginis are based on income, most ASEAN ones on spending, so the chart compares plates with payslips:
+A spending measure leaves out income and wealth. The rich save and invest a big part of what they earn, and they are hard to survey: they refuse, or they are missing from the sample. So a spending Gini looks equal. On the World Bank's figures from household surveys, Indonesia's Gini is 34.4 (2025), lower than the United States' 41.8 and close to Australia's 33.8 and Germany's 33.7.[^pip-gini] Most OECD Ginis are based on income, most ASEAN ones on spending, so these are not like-for-like measures:
 
 {% include hbar.html id="gsl-gini" %}
 
-**How to see the real picture.** Look at income or wealth, and at percentile shares: how much the top 10% take. In Indonesia's own spending survey, the top 10% account for 28.7% of all spending (2025).[^top10] In the World Inequality Database (<span markdown="0">WID</span>), which adds tax and national-accounts data, the top 10% receive 46.9% of pre-tax national income (2018, the latest year). That is about the same as the United States (46.8%, 2024), and above Australia (35.2%) and the OECD average (37.8%).[^top10]
+Look at income or wealth, and at percentile shares: how much the top 10% take. In Indonesia's own spending survey, the top 10% account for 28.7% of all spending (2025).[^top10] In the World Inequality Database (<span markdown="0">WID</span>), which adds tax and national-accounts data, the top 10% receive 46.9% of pre-tax national income (2018, the latest year). That is about the same as the United States (46.8%, 2024), and above Australia (35.2%) and the OECD average (37.8%).[^top10]
 
 {% include hbar.html id="gsl-top10" %}
 
-Tax data helps too: who pays income tax, and how much, tells you about the top incomes that surveys miss. With a caveat: high earners avoid tax, legally and otherwise, so even tax data is a floor.
+Tax data can help identify top incomes that surveys miss, but avoidance and evasion limit that source too.
 
-**Verdict:** a spending Gini tells you how equal the plates are, not the bank accounts.
+**A spending Gini does not measure inequality in income or wealth.**
 
 ## Is 41% of GDP in government debt safe?
 
-**What it is.** Indonesia's law caps the deficit at 3% of GDP and government debt at 60% of GDP (Law 17/2003 on State Finances).[^law17] The International Monetary Fund (<span markdown="0">IMF</span>) puts general government gross debt at 40.9% of GDP in 2025, and the deficit at 2.9%.[^imf-debt]
+Indonesia's law caps the deficit at 3% of GDP and government debt at 60% of GDP (Law 17/2003 on State Finances).[^law17] The International Monetary Fund (<span markdown="0">IMF</span>) puts general government gross debt at 40.9% of GDP in 2025, and the deficit at 2.9%.[^imf-debt]
 
-Concession first: by the headline, Indonesia is genuinely prudent. Australia's debt is 51.9% of GDP, the OECD average 70.6%, Japan's 204.8%.[^imf-debt] (Whether debt is good or bad in the first place is a question I took on in [Is debt bad?](/en/is-debt-bad/).)
+Indonesia's reported debt ratio is lower than those of many other countries. Australia's debt is 51.9% of GDP, the OECD average 70.6%, Japan's 204.8%.[^imf-debt] (Whether debt is good or bad in the first place is a question I took on in [Is debt bad?](/en/is-debt-bad/).)
 
 {% include hbar.html id="gsl-debt" %}
-
-**How it gets dressed up.** Four ways.
 
 **One: off the balance sheet, through state-owned enterprises (<span markdown="0">SOEs</span>).** Toll roads and infrastructure are built by the state construction companies (BUMN Karya: WSKT, WIKA, ADHI and PTPP) with their own borrowing. That debt isn't "government debt", but the state owns the companies and rescues them when they struggle. The liabilities of the four listed state construction companies more than tripled in three years, from Rp60.4 trillion in 2015 to Rp197.5 trillion in 2018, during the toll-road push, stayed above Rp200 trillion until 2023, and were still Rp188.7 trillion in 2024. Waskita Karya (WSKT) alone went from Rp20.6 trillion to Rp95.5 trillion over those three years. Waskita and Wijaya Karya (WIKA) both went through debt restructuring with their banks in 2023 and 2024.[^karya] None of it is counted as government debt. Here are their combined liabilities, year by year:
 
@@ -221,21 +212,17 @@ xychart-beta
 
 **Four: financial engineering.** The classic case is Greece, where currency swaps arranged in 2001 lowered the debt it reported against EU rules. Gerald Corrigan of Goldman Sachs, the bank that arranged them, later admitted they produced "a small, but not insignificant reduction in Greece's deficit and debt".[^greece] (No claim about Indonesia here; it is the textbook example of the trick.)
 
-**How to see the real picture.** Three numbers.
-
 **One: public-sector debt, SOEs included.** The debt the state stands behind, not only the debt in its own name.
 
-**Two: interest as a share of revenue.** Indonesia's general government pays 16.3% of its revenue in net interest (IMF, 2025). That is the highest in ASEAN, and the third highest of 48 countries after Costa Rica (29.8%) and Mexico (24.4%). Australia pays 2.6%, Japan 0.5%.[^imf-interest] On the central budget (<span markdown="0">APBN</span>) alone, interest paid in 2025 was Rp514.4 trillion against state revenue of Rp2,765.1 trillion: Rp514.4 / Rp2,765.1 = 18.6%.[^apbn] Almost a fifth of every rupiah collected goes to lenders before a single school is built. The cause is low revenue: general government revenue is only 13.3% of GDP, the lowest in the IMF sample,[^imf-interest] so a modest debt is heavy to carry.
+**Two: interest as a share of revenue.** Indonesia's general government pays 16.3% of its revenue in net interest (IMF, 2025). That is the highest in ASEAN, and the third highest of 48 countries after Costa Rica (29.8%) and Mexico (24.4%). Australia pays 2.6%, Japan 0.5%.[^imf-interest] On the central budget (<span markdown="0">APBN</span>) alone, interest paid in 2025 was Rp514.4 trillion against state revenue of Rp2,765.1 trillion: Rp514.4 / Rp2,765.1 = 18.6%.[^apbn] Interest takes almost a fifth of central government revenue. The cause is low revenue: general government revenue is only 13.3% of GDP, the lowest in the IMF sample,[^imf-interest] so a modest debt is heavy to carry.
 
 {% include hbar.html id="gsl-interest" %}
 
 **Three: who you owe, and in what currency.** Japan's debt of 205% of GDP is mostly in yen and mostly held at home: in December 2025 the Bank of Japan held 43.1% of its government bonds and foreigners only 6.8%.[^boj] A country can't run out of its own currency. Indonesia is different. At the end of 2025, its central government owed Rp1,636.9 trillion in foreign-currency bonds and about Rp1,192 trillion in foreign loans, out of Rp9,637.9 trillion in total: (Rp1,636.9 + Rp1,192) / Rp9,637.9 = 29% in foreign currency.[^fx-debt] The government's own debt strategy caps that share at 30%.[^kmk] So every 10% fall in the rupiah raises the rupiah value of nearly a third of the debt by 10%, overnight. The good news is at home: non-residents held only 13.37% of tradable rupiah government bonds at the end of 2025, the lowest since 2007.[^foreign-held]
 
-**Verdict:** the size of the debt matters less than what it costs and who you owe it to.
+**Judge debt by its cost and creditors as well as its size.**
 
 ## The cheat sheet: how is each headline dressed up, and what do you read instead?
-
-Seven headline figures, seven tricks, and the second number for each.
 
 | Headline figure | How it gets dressed up | What to look at instead | Where Indonesia sits |
 | --- | --- | --- | --- |
@@ -249,17 +236,17 @@ Seven headline figures, seven tricks, and the second number for each.
 
 ## So, is our economy skyrocketing?
 
-Back to the podium. Some numbers did go up: output, growth, the share of people above BPS's poverty line. But the numbers that tell you how people live, the median, the jobs with a contract, the share above a decent poverty line, didn't rise with them. The speech wasn't false. It was chosen.
+The headline figures do not answer the household questions on their own: what the typical person can spend, whether jobs offer security and whether incomes clear a meaningful poverty line.
 
 It is not the numbers that lie; it is the choice of numbers.
 
-That doesn't make statistics useless. They are the best tool we have, and BPS follows international methods. It means reading them well, and the habit fits in three questions you can ask of any number from a podium:
+Statistics are still the best tool we have, and BPS follows international methods. Ask three questions when a headline number is quoted:
 
 1. **Per whom?** An average or a median? A total, or per person?
 2. **Measured how?** Which definition, which line, which survey?
 3. **Compared with what?** Other countries, other lines, last year?
 
-So here is the small action. Next time a headline number is quoted, at you, on the news, in a speech, by me, look for its second number: the informal share next to the unemployment rate, the median next to the average, the interest bill next to the debt ratio. If nobody shows you the second number, ask for it. Usually it is already published, a few pages down in the same release.
+Look for the informal share next to the unemployment rate, the median next to the average, and the interest bill next to the debt ratio. If the headline leaves these out, ask for them.
 
 *[ABS]: Australian Bureau of Statistics
 *[ADHI]: Adhi Karya, a state-owned construction company (stock code)
