@@ -14,7 +14,8 @@
       <nav class="family-nav" aria-label="{{ t.sites }}">
         <a href="{{ site.links.home }}">{{ t.nav_home }}</a>
         <a class="is-site" href="{{ '/' | relative_url }}"{% if page.layout == "landing" %} aria-current="page"{% endif %}>{{ t.nav_blog }}</a>
-        <a href="{{ site.links.tools }}">{{ t.nav_tools }}</a>
+        {%- comment -%} An Indonesian page links to the tools' Indonesian home, which lists every tool. {%- endcomment %}
+        <a href="{{ site.links.tools }}{% if lang == 'id' %}id/{% endif %}"{% if lang == 'id' %} hreflang="id"{% endif %}>{{ t.nav_tools }}</a>
       </nav>
       {%- comment -%} Only when this exact page also exists in the other language. {%- endcomment -%}
       {%- if other_is_twin %}
