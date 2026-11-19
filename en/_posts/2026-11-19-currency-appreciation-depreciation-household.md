@@ -31,7 +31,7 @@ With a share or a house, up is good and down is bad. A currency doesn't work lik
 
 The Bank for International Settlements counts the foreign exchange market every three years. In April 2025 (preliminary figures), over-the-counter turnover averaged US$9.6 trillion a day.[^bis]
 
-The stock exchanges' side of the comparison is the value of shares traded on exchanges' electronic order books: US$148.48 trillion in 2024, according to the World Federation of Exchanges.[^wfe] Spread over about 252 trading days, that is roughly US$590 billion a day (my arithmetic, approximate). That is about 6% of the currency market, or around 16 times smaller.
+For comparison, the value of shares traded on the world's exchanges through their electronic order books was US$148.48 trillion in 2024, according to the World Federation of Exchanges.[^wfe] Spread over about 252 trading days, that is roughly US$590 billion a day (my arithmetic, approximate). That is about 6% of the currency market, or around 16 times smaller.
 
 One more line keeps the comparison honest. About 42% of the currency turnover (US$4.0 trillion a day) is FX swaps, which firms and banks mostly use for funding and hedging, and only 31% (US$3.0 trillion) is spot trading. So it is not 9.6 trillion dollars of people buying currency. Even so, the market that sets the price on your travel money, your imports and your savings abroad is far larger than the one that sets the price of shares.
 
@@ -57,7 +57,7 @@ Same fall, different damage. Three things explain most of the gap.
 
 **3. Whether the country is a net importer or exporter, and which currency the trade is priced in.** A country that buys most of what it consumes feels a fall in prices faster than one that makes it at home. And much world trade is priced in US dollars, so a currency's move against the dollar matters more for prices and trade than its move against a trading partner's currency.[^gopinath] That is an interpretation of the research, not a measured number, but it changes how much an exporter really gains from a fall.
 
-A scope note: this post looks at what a move causes, and those effects arrive with a lag. It does not try to predict where a currency goes next. That needs leading indicators, which is a different post.
+A scope note: this post looks at what a move causes, and those effects arrive with a lag. It does not try to predict where a currency goes next. That needs leading indicators, which is a separate topic.
 
 ## What happens in the short term when the currency strengthens?
 
@@ -201,9 +201,9 @@ Two effects take years to show.
 
 **What happens.** If a strong currency stays, firms that make things at home may start making them, or buying firms, abroad.
 
-**Example.** Among the Swiss exporters in the study, the share of acquisitions made abroad rose from 45% to 63% after the franc jumped.[^epfl] After the 1985 Plaza Accord, when the yen surged, more-exposed Japanese industries expanded their foreign direct investment in Asia, and labour shifted from manufacturing to services in the exposed regions. Job losses were modest, which the author links to Japan's rigid labour practices. That paper is a discussion paper, not yet peer-reviewed.[^plaza]
+**Example.** In a study of about 200 listed Swiss exporters after the franc jumped in January 2015, the share of their acquisitions made abroad rose from 45% to 63%.[^epfl] After the 1985 Plaza Accord, when the yen surged, more-exposed Japanese industries expanded their foreign direct investment in Asia, and labour shifted from manufacturing to services in the exposed regions. Job losses were modest, which the author links to Japan's rigid labour practices. That paper is a discussion paper, not yet peer-reviewed.[^plaza]
 
-**Caveat.** The Swiss author says it is hard to tell whether a given deal came from the franc or from long-term strategy. How many jobs go depends on labour-market rules.
+**Caveat.** The author of the Swiss study says it is hard to tell whether a given deal came from the franc or from long-term strategy. How many jobs go depends on labour-market rules.
 
 | Effect | Good or bad for households |
 | --- | --- |
