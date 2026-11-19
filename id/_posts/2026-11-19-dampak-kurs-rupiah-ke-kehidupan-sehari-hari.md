@@ -12,35 +12,31 @@ keywords: [dampak kurs ke kehidupan sehari-hari, kurs mata uang naik turun, rupi
 bmc_message: "Kurs boleh naik turun, tetapi semangat saya menulis tetap stabil kalau ada kopi susu dari kamu!"
 ---
 
-**Singkatnya:** kurs naik atau turun tidak otomatis baik atau buruk, karena kurs adalah pasangan dua mata uang dan umumnya ada yang untung dan ada yang rugi. Menurut saya, tiga hal yang paling menentukan besarnya dampak adalah utang dalam valas, kredibilitas bank sentral beserta alasan kurs bergerak, dan apakah penghasilan, belanja dan tabunganmu berada di sisi impor atau ekspor. Contohnya datang dari tujuh negara lain dan Indonesia sendiri.
+**Singkatnya:** kurs naik atau turun tidak otomatis baik atau buruk, karena kurs adalah pasangan dua mata uang dan umumnya ada yang untung dan ada yang rugi. Menurut saya, tiga hal yang paling menentukan besarnya dampak adalah utang dalam valas, kredibilitas bank sentral beserta alasan kurs bergerak, dan apakah penghasilan, belanja dan tabunganmu berada di sisi impor atau ekspor. Contohnya saya ambil dari tujuh negara lain dan dari Indonesia sendiri.
 {: .tldr}
 
 * TOC
 {:toc}
 
-## Apakah rupiah melemah selalu kabar buruk?
+## Sebesar apa pasar valas, dan apakah rupiah melemah selalu kabar buruk?
 
-Kurs bergerak setiap hari, dan perputaran uang di pasarnya jauh lebih besar daripada yang biasanya kita bayangkan. Pasar valuta asing (valas) adalah pasar terbesar di dunia, yang perputarannya sekitar US$9,5 triliun per hari menurut survei tiga tahunan BIS pada April 2025. Sebagai pembanding, seluruh bursa saham dunia digabung hanya berputar sekitar US$590 miliar per hari, kurang dari sepersepuluhnya.
+Hampir setiap hari ada berita tentang kurs: rupiah melemah, dolar menguat. Di balik satu angka itu ada pasar valuta asing (valas), tempat orang menukar satu mata uang dengan mata uang lain, dan pasar ini jauh lebih besar daripada yang biasa kita bayangkan.
 
 <figure>
 <img src="/assets/img/fx-ill-money-changer.webp" alt="Perempuan berambut hitam sebahu dan berblus hijau tosca berdiri di loket penukaran uang sambil memegang beberapa lembar uang kertas, menatap layar dengan panah hijau besar ke atas dan panah merah besar ke bawah" width="1200" height="670" loading="lazy">
 </figure>
 
-Pada aset lain, naik berarti untung dan turun berarti rugi. Kurs tidak bekerja seperti itu, karena kurs bukan aset, melainkan perbandingan nilai dua mata uang. Kalau USD/IDR naik, dolar menguat dan rupiah melemah, sehingga satu pergerakan yang sama terhitung "naik" bagi satu pihak dan "turun" bagi pihak lain. Karena itulah dampaknya tidak hitam-putih. Untuk melihat akibatnya, saya memakai pergerakan yang sudah terjadi di Australia, Swiss, Norwegia, Inggris, Jepang, Turki dan Filipina, serta di Indonesia sendiri pada 1998, 2018 dan 2026.
+Transaksi valas berlangsung langsung antarpihak, di luar bursa, sehingga BIS menghitungnya lewat survei tiga tahunan. Menurut survei itu, perputaran valas pada April 2025 rata-rata sekitar US$9,5 triliun per hari, naik 27% dari 2022.[^bis] Sebagai pembanding, nilai saham yang diperdagangkan lewat buku pesanan elektronik bursa dunia sepanjang 2024 adalah US$148,48 triliun,[^wfe] atau sekitar US$590 miliar per hari kalau dibagi sekitar 252 hari bursa. Bayangkan seluruh bursa saham di dunia digabung, dari New York sampai Jakarta: perputarannya hanya sekitar 6% dari pasar valas, kira-kira seperenam belasnya.
 
-## Seberapa besar pasar valas dibandingkan bursa saham?
+Dari pasar inilah muncul kurs yang menentukan berapa rupiah yang harus kamu keluarkan untuk liburan ke luar negeri dan untuk membeli barang impor, serta berapa rupiah nilai tabungan dan utangmu yang berbentuk mata uang asing. Setiap transaksinya menukar satu mata uang dengan mata uang lain, sehingga kurs selalu melibatkan dua mata uang sekaligus. Di tulisan ini, USD/IDR yang naik berarti dolar menguat dan rupiah melemah, sedangkan USD/IDR yang turun berarti rupiah menguat. Untuk negara lain, yang menguat atau melemah adalah mata uang negara itu sendiri.
 
-Menurut survei tiga tahunan BIS, perputaran valas pada April 2025 sekitar US$9,5 triliun per hari, naik 27% dari 2022.[^bis] Sebagai pembanding, nilai saham yang diperdagangkan lewat buku pesanan elektronik bursa dunia sepanjang 2024 adalah US$148,48 triliun,[^wfe] atau sekitar US$590 miliar per hari kalau dibagi sekitar 252 hari bursa. Bayangkan: seluruh bursa saham di dunia digabung, dari New York sampai Jakarta, perputarannya hanya sekitar 6% dari pasar valas, kira-kira seperenam belasnya.
+Pada saham, harga yang naik berarti untung bagi pemegangnya, sedangkan kurs tidak bekerja seperti itu karena kurs bukan aset, melainkan perbandingan nilai dua mata uang. Ambil angka bulat sebagai ilustrasi, bukan data dan bukan ramalan: ketika USD/IDR naik dari 16.000 ke 17.000, US$100 yang tadinya setara Rp1,6 juta menjadi Rp1,7 juta. Orang yang menerima US$100, misalnya pekerja lepas yang dibayar klien luar negeri, mendapat Rp100.000 lebih banyak, sedangkan orang yang harus membayar US$100, misalnya untuk tiket pesawat atau cicilan utang dalam dolar, harus menyediakan Rp100.000 lebih banyak. Dua posisi itu bahkan bisa ada dalam satu keluarga yang sama.
 
-## Kurs itu pasangan dua mata uang, bukan aset
-
-Kurs selalu menyebut dua mata uang sekaligus. Di tulisan ini, USD/IDR yang naik berarti rupiah melemah, dan USD/IDR yang turun berarti rupiah menguat. Untuk negara lain, yang menguat atau melemah adalah mata uang negara itu sendiri.
-
-Orang yang menerima dolar mendapat lebih banyak rupiah ketika USD/IDR naik, sedangkan orang yang membayar utang atau barang dalam dolar harus menyediakan lebih banyak rupiah. Sebelum menyebut pergerakan kurs sebagai kabar baik atau buruk, kita perlu tahu dulu di sisi mana kamu berada.
+Satu pergerakan kurs yang sama menguntungkan satu pihak dan merugikan pihak lain, sehingga rupiah yang melemah belum tentu selalu kabar buruk dan dampaknya tidak hitam-putih. Untuk melihat dampak nyatanya, saya mempelajari kasus pergerakan kurs yang sudah terjadi di Australia, Swiss, Norwegia, Inggris, Jepang, Turki dan Filipina, serta di Indonesia sendiri pada 1998, 2018 dan 2026.
 
 ## Kenapa pergerakan yang sama berdampak beda di tiap negara?
 
-Satu pergerakan kurs bisa nyaris tidak terasa di satu negara dan menghantam negara lain. Menurut saya, ada tiga faktor yang paling menentukan, dan itu bacaan saya atas berbagai contoh, bukan temuan satu penelitian.
+Satu pergerakan kurs bisa nyaris tidak terasa di satu negara dan menghantam negara lain. Menurut saya, ada tiga faktor yang paling menentukan, dan ini tafsiran saya atas berbagai contoh, bukan temuan satu penelitian.
 
 **1. Utang dalam valas.** Utang dalam valas membuat pelemahan mata uang langsung menambah beban pembayaran. Dari pertengahan Juli 1997 sampai awal Januari 1998, rupiah melemah secara kumulatif 70%, dan menurut IMF bagian yang cukup besar dari pinjaman luar negeri Indonesia adalah utang jangka pendek swasta tanpa lindung nilai.[^imf] Beban itu paling terasa kalau utang valasnya tidak memakai lindung nilai. Cara menimbang utangmu sendiri saya bahas di [tulisan tentang utang baik atau buruk](/id/utang-baik-atau-buruk/).
 
