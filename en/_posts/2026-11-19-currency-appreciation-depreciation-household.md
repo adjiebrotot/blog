@@ -11,7 +11,7 @@ keywords: [currency appreciation and depreciation, what a weak dollar means for 
 bmc_message: "Whatever the exchange rate, a coffee for me is always at par!"
 ---
 
-**In short:** a stronger or weaker currency is neither good nor bad for a household by itself. A currency is a price between two currencies, so every move helps someone and hurts someone. In my reading, three things decide how big the hit is: whether you owe debt in a foreign currency, whether the central bank is credible and why the currency moved, and whether your income, spending and savings sit on the import side or the export side.
+**In short:** a stronger or weaker currency is neither good nor bad for a household by itself. A currency is a price between two currencies, so most moves help someone and hurt someone. In my reading, three things matter most to how a move lands: whether you owe debt in a foreign currency, whether the central bank is credible and why the currency moved, and whether the country is a net importer or exporter and your own income, spending and savings sit on the import side or the export side.
 {: .tldr}
 
 * TOC
@@ -19,7 +19,7 @@ bmc_message: "Whatever the exchange rate, a coffee for me is always at par!"
 
 ## Is a stronger currency good news?
 
-Every evening the news tells you the Aussie dollar went up or down, like a footy score. Behind that one number sits the biggest market on Earth: about US$9.6 trillion changes hands in foreign exchange every day. Add up every stock exchange in the world and you get half of that? No. A quarter? No. A tenth? Still no. About US$590 billion a day, roughly 6%.
+Every evening the news tells you the Aussie dollar went up or down, like a footy score. Behind that one number sits a market far bigger than any stock market: about US$9.5 trillion changes hands in foreign exchange every day. Add up all the shares traded through the order books of the world's stock exchanges and you get half of that? No. A quarter? No. A tenth? Still no. About US$590 billion a day (my rough arithmetic), roughly 6%.
 
 <figure>
 <img src="/assets/img/fx-ill-money-changer.webp" alt="A woman in a teal blouse holds a few banknotes at a currency-exchange counter and looks up at a screen showing a big green up arrow and a big red down arrow" width="1200" height="670" loading="lazy">
@@ -27,13 +27,13 @@ Every evening the news tells you the Aussie dollar went up or down, like a footy
 
 With a share or a house, up is good and down is bad. A currency doesn't work like that, because it is a price between two currencies, and behind each one sits a whole economy. When AUD/USD rises, the Aussie dollar has strengthened and, in the same tick, the US dollar has weakened against it. The same move is good news for someone and bad news for someone else, sometimes in the same household.
 
-## How big is the biggest market, really?
+## How big is the currency market, really?
 
-The Bank for International Settlements counts the foreign exchange market every three years. In April 2025 (preliminary figures), over-the-counter turnover averaged US$9.6 trillion a day.[^bis]
+The Bank for International Settlements counts the foreign exchange market every three years. In April 2025, over-the-counter turnover averaged about US$9.5 trillion a day, up 27% from 2022.[^bis]
 
 For comparison, shares traded on the world's exchanges through their electronic order books were worth US$148.48 trillion in 2024, according to the World Federation of Exchanges.[^wfe] Spread over about 252 trading days, that is roughly US$590 billion a day (my arithmetic, approximate; order-book trading only, 2024 against April 2025). It is about 6% of the currency market, or around 16 times smaller.
 
-One more line keeps the comparison honest. About 42% of the currency turnover (US$4.0 trillion a day) is FX swaps, which firms and banks mostly use for funding and hedging, and only 31% (US$3.0 trillion) is spot trading. So it is not 9.6 trillion dollars of people buying currency. Even so, the market that sets the price of your travel money, your imports and your savings abroad dwarfs the one that sets the price of shares.
+One more line keeps the comparison honest. In the survey's preliminary breakdown, about 42% of the turnover is FX swaps, in which banks and firms exchange currencies for a set period and swap them back, and only 31% is spot trading. So it is not 9.5 trillion dollars of people buying currency. Even so, the market that sets the price of your travel money, your imports and your savings abroad dwarfs the one that sets the price of shares.
 
 ## Why is a currency a pair, not an asset?
 
@@ -51,9 +51,9 @@ In my reading, three things matter most.
 
 **1. Debt in a foreign currency.** If a household or firm earns in local currency but owes in US dollars, a weaker local currency makes the debt bigger overnight. Indonesia in 1997 and 1998 is the textbook case: the rupiah lost 70% between mid-July 1997 and early January 1998, and a significant portion of the country's overseas borrowing was unhedged private short-term debt.[^imf]
 
-**2. Why it moved, and whether the central bank is credible.** A currency can rise because the world wants what a country sells, or fall because investors lost faith. Those are different stories. World Bank research finds that a fall passes through to prices less where the exchange rate floats, the inflation target is credible and the central bank is independent.[^wb] The United Kingdom is an estimate of that kind: researchers put what a fall of about 10% in the pound after the 2016 Brexit vote added to inflation in the next year at about 1.7 percentage points.[^cep] Turkey is the opposite end: the lira lost 44% against the US dollar in 2021 and annual inflation peaked at 85.51% in October 2022, after the central bank cut rates while inflation was rising.[^lira] That 85.51% is the total inflation rate, not a measured effect of the fall.
+**2. Why it moved, and whether the central bank is credible.** A currency can rise because the world wants what a country sells, or fall because investors lost faith. Those are different stories. World Bank research finds that a fall passes through to prices less where the exchange rate floats, the inflation target is credible and the central bank is independent.[^wb] The United Kingdom has a measured estimate: the Brexit vote, which came with a pound fall of about 10%, added about 1.7 percentage points to inflation in the following year.[^cep] Turkey is a case of weak policy credibility: it cut rates while inflation was rising, the lira lost 44% against the US dollar in 2021 and inflation peaked at 85.51% in October 2022.[^lira] That 85.51% is total inflation, not a measured effect of the fall.
 
-**3. Whether the country is a net importer or exporter, and which currency the trade is priced in.** A country that buys most of what it consumes feels a currency fall in its prices faster than one that makes it at home. And much world trade is priced in US dollars, so a currency's move against the dollar matters more for prices and trade than its move against a trading partner's currency.[^gopinath] My inference: a depreciation's boost to exports is smaller when trade is priced in dollars.
+**3. Whether the country is a net importer or exporter, and which currency the trade is priced in.** A country that buys most of what it consumes feels a currency fall more strongly in its prices than one that makes it at home. And much world trade is priced in US dollars, so a currency's move against the dollar matters more for prices and trade than its move against a trading partner's currency.[^gopinath] My inference: a depreciation's boost to exports is smaller when trade is priced in dollars.
 
 A scope note: this post looks at what a move causes, and those effects arrive with a lag. It does not try to predict where a currency goes next.
 
@@ -77,7 +77,7 @@ When the Aussie dollar rises, imports get cheaper and exports get dearer. Four e
 
 **Caveat.** Firms with costs in foreign currency, or with hedges, are partly protected.
 
-### Industries that compete with imports get squeezed, but less than you might expect (−)
+### Industries that compete with imports get squeezed, but less than feared (−)
 
 **What happens.** A strong currency makes local manufacturers and farmers dearer against imports, at home and abroad.
 
@@ -97,7 +97,7 @@ When the Aussie dollar rises, imports get cheaper and exports get dearer. Four e
 | --- | --- |
 | Cheaper imports, lower inflation | Good |
 | Lower export profit, pressure on exporters' jobs | Bad for exporters' workers and owners |
-| Squeeze on trade-exposed industries | Bad for those workers, less than you might expect |
+| Squeeze on trade-exposed industries | Bad for those workers (2013 output about 5% below a no-boom path) |
 | Foreign savings worth less at home | Bad on paper, harmless if spent abroad |
 
 ## What happens in the short term when the currency weakens?
@@ -116,7 +116,7 @@ The mirror image: imports get dearer, exports get cheaper, and debts in foreign 
 
 **What happens.** Your country gets cheaper for foreigners, so more of them come and spend. Your own trips abroad cost more.
 
-**Example.** Reserve Bank of Australia research looked at the Australian dollar's fall of about 20% in real terms from its 2013 peak. A 10% real depreciation lifts export volumes by about 3% after two years and cuts import volumes by just under 4%, and services exports, which include tourism and education, respond more strongly than goods.[^cole] Japan shows it at household level. In 2024 it received a record 36.87 million visitors, who spent a record of about ¥8.1 trillion, partly because of the weak yen. In March 2024, Japanese outbound travel was still 37% below 2019.[^japan]
+**Example.** Reserve Bank of Australia research looked at the Australian dollar's fall of about 20% in real terms from its 2013 peak. A 10% real depreciation lifts export volumes by about 3% after two years and cuts import volumes by just under 4%, and services exports, which include tourism and education, respond more strongly than goods.[^cole] Japan is one case where both sides appear. In 2024 it received a record 36.87 million visitors, who spent a record of about ¥8.1 trillion, partly because of the weak yen. In March 2024, Japanese outbound travel was still 37% below 2019.[^japan]
 
 <figure>
 <img src="/assets/img/fx-ill-weak-currency-split.webp" alt="Split panel. Left: a man in a navy polo with a backpack winces at the price tag of a small gift box in a shop abroad, one hand on his wallet. Right: a smiling shopkeeper in a mustard apron hands a wrapped parcel to a happy blond tourist in a sun hat who holds out banknotes" width="1456" height="1087" loading="lazy">
@@ -137,9 +137,9 @@ The mirror image: imports get dearer, exports get cheaper, and debts in foreign 
 
 **What happens.** If you owe in a currency you don't earn, the debt grows in your own money while your income doesn't.
 
-**Example.** Between mid-July 1997 and early January 1998 the rupiah lost 70%, and a significant portion of Indonesia's overseas borrowing was "private short-term debt that has been unhedged".[^imf] The banking system collapsed, and economists Fane and McLeod estimated, at the time, a net cost of restructuring to taxpayers of about 40% of a year's GDP.[^fane]
+**Example.** Between mid-July 1997 and early January 1998 the rupiah lost 70%, and a significant portion of Indonesia's overseas borrowing was "private short-term debt that has been unhedged".[^imf] The banking system collapsed, and economists Fane and McLeod estimated, at the time, a net cost of restructuring to taxpayers of about 40% of a year's GDP, for the whole banking crisis, not the currency fall alone.[^fane]
 
-**Caveat.** It bites only where the debt is unhedged and in foreign currency. Households with local-currency debt, such as most mortgages, are hit through higher rates and job losses instead. [My debt post](/en/is-debt-bad/) covers what a loan really costs.
+**Caveat.** It bites only where the debt is unhedged and in foreign currency. Households with local-currency debt, such as a typical Australian home loan, are hit through higher rates and job losses instead. [My debt post](/en/is-debt-bad/) covers what a loan really costs.
 
 | Effect | Good or bad for households |
 | --- | --- |
@@ -161,13 +161,13 @@ Two effects can build over years.
 
 **Caveat.** The estimate covers the whole boom, not the strong Australian dollar alone.
 
-### Offshoring (−)
+### Offshoring (− or mixed)
 
 **What happens.** If a strong currency stays, firms that make things at home may start making them, or buying firms, abroad.
 
 **Example.** In a study of about 200 listed Swiss exporters, published a year after the franc jumped in January 2015, the share of their acquisitions made abroad rose from 45% to 63% after the jump, so this is early evidence, not a long-run count.[^epfl] After the 1985 Plaza Accord, when the yen surged, more-exposed Japanese industries expanded their foreign direct investment in Asia, and labour shifted from manufacturing to services in the exposed regions. Job losses were modest, which the author links to Japan's rigid labour practices. That paper is a discussion paper, not yet peer-reviewed.[^plaza]
 
-**Caveat.** The author of the Swiss study says it is hard to tell whether a given deal came from the franc or from long-term strategy. How many jobs go depends on labour-market rules.
+**Caveat.** The author of the Swiss study says it is hard to tell whether a given deal came from the franc or from long-term strategy. How many jobs go may depend on labour-market rules.
 
 | Effect | Good or bad for households |
 | --- | --- |
@@ -180,11 +180,11 @@ A one-off fall is a shock. A fall that does not stop is a different problem. Fou
 
 ### Inflation can spiral (−)
 
-**What happens.** In my interpretation, a weaker currency makes imports dearer, dearer imports push up prices, higher prices erode trust, and the currency weakens again.
+**What happens.** In my reading, the loop runs like this: a weaker currency makes imports dearer, dearer imports push up prices, higher prices erode trust, and the currency weakens again.
 
 **Example.** The Turkish lira lost 44% against the US dollar in 2021, 29% in 2022, 37% in 2023 and 16% in 2024. Annual inflation peaked at 85.51% in October 2022, and Turkey cut rates while inflation was rising.[^lira]
 
-**Caveat.** A spiral needs weak policy credibility. The 85.51% is the total inflation rate, not the share caused by the lira.
+**Caveat.** It also seems to need weak policy credibility. The 85.51% is the total inflation rate, not the share caused by the lira.
 
 ### People stop trusting the local currency (−)
 
@@ -194,9 +194,9 @@ A one-off fall is a shock. A fall that does not stop is a different problem. Fou
 
 **Caveat.** The scheme shrank to about 2% of deposits after Turkey returned to orthodox policy; that alone does not show trust has returned.
 
-### The poor are hit hardest (−)
+### Inflation tends to hit the poor harder (−)
 
-**What happens.** A household that spends a larger share of its income on essentials cannot cut back much, and has no foreign assets to offset a rise in prices.
+**What happens.** In my reading, a household that spends a larger share of its income on essentials cannot cut back much, and has no foreign assets to offset a rise in prices.
 
 **Example.** In polls of 31,869 households in 38 countries, poorer people were more likely to name inflation as a top concern. In pooled cross-country data, high inflation tends to lower the poorest fifth's share of income and the real minimum wage, and to raise poverty.[^easterly]
 
@@ -214,14 +214,14 @@ A one-off fall is a shock. A fall that does not stop is a different problem. Fou
 | --- | --- |
 | Inflation spiral | Bad |
 | Loss of trust in the local currency | Bad |
-| Poorer households hit hardest | Bad, especially for the poor |
+| Inflation tends to hit the poor harder | Bad, especially for the poor |
 | Remittances worth more | Good, for receiving households |
 
 ## So, is a strong or weak currency good or bad?
 
 Neither by itself: in my view, it depends on which side of the pair your income, debts and spending sit. When the news says the currency fell or rose, ask three questions:
 
-1. **Do I owe in a foreign currency?** If so, a fall is a rise in what you owe.
+1. **Do I owe in a foreign currency, and is it unhedged?** If so, a fall is a rise in what you owe.
 2. **Why did it move, and is the central bank credible?** A fall after a commodity boom ends is not a fall from lost trust.
 3. **Do my income, spending and savings sit on the import side or the export side?** Do you earn in foreign money, spend on imports, save abroad?
 
@@ -229,7 +229,7 @@ If a loan is part of the picture, my post on [whether debt is bad](/en/is-debt-b
 
 ## Sources
 
-[^bis]: Bank for International Settlements, [Triennial Central Bank Survey of foreign exchange turnover in April 2025](https://www.bis.org/statistics/rpfx25_fx.htm), preliminary results published 30 September 2025: US$9.6 trillion a day, of which spot US$3.0 trillion (31%), FX swaps US$4.0 trillion (42%) and outright forwards 19%.
+[^bis]: Bank for International Settlements, [Triennial Central Bank Survey of foreign exchange turnover in April 2025](https://www.bis.org/statistics/rpfx25_fx.htm), final total: about US$9.5 trillion a day, up 27% from 2022, in BIS Quarterly Review, December 2025, [Global FX markets when hedging takes centre stage](https://www.bis.org/publ/qtrpdf/r_qt2512_foreword.htm). Breakdown from the preliminary results published 30 September 2025: spot 31%, FX swaps 42%, outright forwards 19%.
 [^wfe]: World Federation of Exchanges, [Trends in value of share trading through Electronic Order Books](https://focus.world-exchanges.org/articles/trends-value-share-trading-through-electronic-order-books-eob), July 2025: US$148.48 trillion in 2024. The daily figure of about US$590 billion divides this by about 252 trading days (my arithmetic).
 [^imf]: Government of Indonesia, [Memorandum of Economic and Financial Policies](https://www.imf.org/external/np/loi/011598.htm), submitted to the IMF, 15 January 1998: the rupiah's cumulative depreciation reached 70% from mid-July 1997 to early January 1998; a significant portion of overseas borrowing was "private short-term debt that has been unhedged".
 [^fane]: George Fane and Ross McLeod, "Banking Collapse and Restructuring in Indonesia, 1997-2001", ANU Working Papers in Trade and Development 2001/10 (also *Cato Journal* 22(2), 2002): net cost of restructuring to taxpayers of about 40% of annual GDP, the authors' estimate at the time.
