@@ -393,6 +393,13 @@ follows this skill:
 - Run `python3 .claude/skills/adjie-writing-style/scripts/check-abbr.py <file>` next to
   `cek.py`.
 
+## No over-disclaiming
+
+An opinion or an inference needs one marker (*Menurut saya*, *saya menyimpulkan*), not a
+second sentence apologising for it ("ini tafsiran saya, bukan hasil penelitian"). Adjie:
+assuming is normal in a blog and needs no apology. Keep a caveat only where it changes a
+number or a reader's decision (`adjie-writing-style`, "No over-disclaiming").
+
 ## No bragging
 
 "My tool" or "the calculator I built" does not become "*buatan saya*" or "*milik saya*".
