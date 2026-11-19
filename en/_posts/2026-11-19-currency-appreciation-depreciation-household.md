@@ -32,9 +32,7 @@ With a share or a house, up is good and down is bad. A currency doesn't work lik
 
 The Bank for International Settlements counts the foreign exchange market every three years. In April 2025, over-the-counter turnover averaged about US$9.5 trillion a day, up 27% from 2022.[^bis]
 
-For comparison, shares traded on the world's exchanges through their electronic order books were worth US$148.48 trillion in 2024, according to the World Federation of Exchanges.[^wfe] Spread over about 252 trading days, that is roughly US$590 billion a day It is about 6% of the currency market, or around 16 times smaller.
-
-One more line keeps the comparison honest. In the survey's preliminary breakdown, about 42% of the turnover is FX swaps, in which banks and firms exchange currencies for a set period and swap them back, and only 31% is spot trading. So it is not 9.5 trillion dollars of people buying currency. Even so, the market that sets the price of your travel money, your imports and your savings abroad dwarfs the one that sets the price of shares.
+For comparison, shares traded on the world's exchanges through their electronic order books were worth US$148.48 trillion in 2024, according to the World Federation of Exchanges.[^wfe] Spread over about 252 trading days, that is roughly US$590 billion a day. Picture it: every stock exchange on Earth combined, from New York to Jakarta, trades only about 6% of what the currency market does, roughly one sixteenth.
 
 ## Why is a currency a pair, not an asset?
 
@@ -230,7 +228,7 @@ If a loan is part of the picture, my post on [whether debt is bad](/en/is-debt-b
 
 ## Sources
 
-[^bis]: Bank for International Settlements, [Triennial Central Bank Survey of foreign exchange turnover in April 2025](https://www.bis.org/statistics/rpfx25_fx.htm), final total: about US$9.5 trillion a day, up 27% from 2022, in BIS Quarterly Review, December 2025, [Global FX markets when hedging takes centre stage](https://www.bis.org/publ/qtrpdf/r_qt2512_foreword.htm). Breakdown from the preliminary results published 30 September 2025: spot 31%, FX swaps 42%, outright forwards 19%.
+[^bis]: Bank for International Settlements, [Triennial Central Bank Survey of foreign exchange turnover in April 2025](https://www.bis.org/statistics/rpfx25_fx.htm), final total: about US$9.5 trillion a day, up 27% from 2022, in BIS Quarterly Review, December 2025, [Global FX markets when hedging takes centre stage](https://www.bis.org/publ/qtrpdf/r_qt2512_foreword.htm).
 [^wfe]: World Federation of Exchanges, [Trends in value of share trading through Electronic Order Books](https://focus.world-exchanges.org/articles/trends-value-share-trading-through-electronic-order-books-eob), July 2025: US$148.48 trillion in 2024. The daily figure of about US$590 billion divides this by about 252 trading days (my arithmetic).
 [^imf]: Government of Indonesia, [Memorandum of Economic and Financial Policies](https://www.imf.org/external/np/loi/011598.htm), submitted to the IMF, 15 January 1998: the rupiah's cumulative depreciation reached 70% from mid-July 1997 to early January 1998; a significant portion of overseas borrowing was "private short-term debt that has been unhedged".
 [^fane]: George Fane and Ross McLeod, "Banking Collapse and Restructuring in Indonesia, 1997-2001", ANU Working Papers in Trade and Development 2001/10 (also *Cato Journal* 22(2), 2002): net cost of restructuring to taxpayers of about 40% of annual GDP, the authors' estimate at the time.
