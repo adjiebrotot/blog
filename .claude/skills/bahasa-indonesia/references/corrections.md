@@ -154,3 +154,24 @@ The percentage-point correction is technical: *poin persentase* is the absolute 
 between percentage rates; *persen* expresses a proportion or relative percentage change.
 The historical wording pair above remains as provenance, not an active substitution rule.
 Use `word-preferences.md` for future explicit contextual selections.
+
+## Kurs dan kehidupan sehari-hari (November 2026)
+
+Adjie: "Tidak perlu meminta maaf atau melakukan disclaimer hanya karena melakukan asumsi.
+Ini sangat wajar dalam rubrik blog." An inference stays marked by *Menurut saya* or *Saya
+menyimpulkan*; a second sentence that says it is only an interpretation is over-disclaiming
+(`adjie-writing-style`, "No over-disclaiming").
+
+| Before | After | Why |
+| --- | --- | --- |
+| ada tiga faktor yang paling menentukan, dan ini tafsiran saya atas berbagai contoh, bukan temuan satu penelitian. | ada tiga faktor yang paling menentukan. | Apology for an opinion; *Menurut saya* already carries it. |
+| Dari situ saya menyimpulkan bahwa ... Itu penafsiran saya, bukan hasil penelitiannya. | Dari situ saya menyimpulkan bahwa ... | *Saya menyimpulkan* already says it. |
+| Menurut saya, ... Itu penafsiran saya, bukan pernyataan BI. | Menurut saya, ... | Same. |
+| Perbedaan antara kurs yang bergerak karena fundamental dan ... adalah pembacaan saya, bukan kesimpulan dari kedua sumber itu. | (deleted) | The sourced contrast stands on its own. |
+
+Also from the same post: "Sebesar apa pasar valas, dan apakah rupiah melemah selalu kabar
+buruk?" became "Seberapa besar pasar valas, dan benarkah rupiah melemah selalu kabar
+buruk?", and the section was rewritten as flowing sentences with real transitions
+(*sehingga*, *karena*, *Artinya*). Adjie's wording for the OTC term:
+"langsung antarpihak (*over-the-counter*, di luar bursa)": keep the foreign term in
+italics, gloss it in brackets.
