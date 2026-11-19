@@ -36,7 +36,7 @@ Rincian awal BIS (September 2025) menunjukkan bahwa sekitar 42% perputaran berup
 
 Kurs selalu menyebut dua mata uang sekaligus. Di tulisan ini, USD/IDR yang naik berarti rupiah melemah, dan USD/IDR yang turun berarti rupiah menguat. Untuk negara lain, yang menguat atau melemah adalah mata uang negara itu sendiri.
 
-Orang yang menerima dolar mendapat lebih banyak rupiah ketika USD/IDR naik, sedangkan orang yang harus membayar utang atau barang dalam dolar harus menyediakan lebih banyak rupiah. Sebelum menyebut pergerakan kurs sebagai kabar baik atau buruk, kita perlu tahu dulu di sisi mana kamu berada.
+Orang yang menerima dolar mendapat lebih banyak rupiah ketika USD/IDR naik, sedangkan orang yang membayar utang atau barang dalam dolar harus menyediakan lebih banyak rupiah. Sebelum menyebut pergerakan kurs sebagai kabar baik atau buruk, kita perlu tahu dulu di sisi mana kamu berada.
 
 ## Kenapa pergerakan yang sama berdampak beda di tiap negara?
 
@@ -44,19 +44,19 @@ Satu pergerakan kurs bisa nyaris tak terasa di satu negara dan menghantam negara
 
 ### Faktor pertama: utang dalam valas
 
-Utang dalam valas membuat pelemahan mata uang langsung menambah beban pembayaran. Dari pertengahan Juli 1997 sampai awal Januari 1998, rupiah melemah secara kumulatif 70%, dan menurut IMF bagian yang cukup besar dari pinjaman luar negeri Indonesia adalah utang jangka pendek swasta tanpa lindung nilai.[^imf] Beban itu paling terasa kalau utang valasnya tidak memakai lindung nilai. Orang yang berutang dalam rupiah tetap terkena lewat bunga yang naik dan pemutusan hubungan kerja. Cara menimbang utangmu sendiri saya bahas di [tulisan tentang utang baik atau buruk](/id/utang-baik-atau-buruk/).
+Utang dalam valas membuat pelemahan mata uang langsung menambah beban pembayaran. Dari pertengahan Juli 1997 sampai awal Januari 1998, rupiah melemah secara kumulatif 70%, dan menurut IMF bagian yang cukup besar dari pinjaman luar negeri Indonesia adalah utang jangka pendek swasta tanpa lindung nilai.[^imf] Beban itu paling terasa kalau utang valasnya tidak memakai lindung nilai. Cara menimbang utangmu sendiri saya bahas di [tulisan tentang utang baik atau buruk](/id/utang-baik-atau-buruk/).
 
 ### Faktor kedua: kredibilitas bank sentral dan alasan kurs bergerak
 
 Penelitian Bank Dunia menemukan bahwa *pass-through* (seberapa jauh pelemahan kurs merembet ke harga) lebih rendah di negara dengan kurs mengambang, target inflasi yang kredibel dan bank sentral yang independen.[^pt]
 
-Alasan kurs bergerak juga penting. Pergerakan kurs riil Australia selama dekade ledakan harga ekspor tambang (*mining boom*) sebagian besar bisa dijelaskan oleh fundamental ekonomi, dan secara luas menstabilkan perekonomiannya.[^rba] Di Turki, sebaliknya, kurs jatuh ketika bank sentral memangkas bunga saat inflasi sedang naik, dan inflasi tahunan (seluruhnya, bukan hanya bagian akibat lira) mencapai puncak 85,51% pada Oktober 2022.[^turkey] Perbedaan antara kurs yang bergerak karena fundamental dan kurs yang jatuh karena kebijakan yang tidak lagi dipercaya pasar adalah pembacaan saya, bukan kesimpulan dari kedua sumber itu.
+Alasan kurs bergerak juga penting. Pergerakan kurs riil Australia selama dekade ledakan harga ekspor tambang (*mining boom*) sebagian besar bisa dijelaskan oleh fundamental ekonomi, dan umumnya ikut menstabilkan perekonomiannya.[^rba] Di Turki, sebaliknya, kurs jatuh ketika bank sentral memangkas bunga saat inflasi sedang naik, dan inflasi tahunan (seluruhnya, bukan hanya bagian akibat lira) mencapai puncak 85,51% pada Oktober 2022.[^turkey] Perbedaan antara kurs yang bergerak karena fundamental dan kurs yang jatuh karena kebijakan yang tidak lagi dipercaya pasar adalah pembacaan saya, bukan kesimpulan dari kedua sumber itu.
 
 ### Faktor ketiga: porsi impor dan ekspor, serta mata uang transaksinya
 
-Banyak perdagangan dunia dihargai dalam dolar AS, sehingga pergerakan sebuah mata uang terhadap dolar lebih menentukan harga dan arus dagang daripada pergerakannya terhadap mata uang mitra dagang.[^gopinath] Dari situ saya menyimpulkan bahwa dorongan ekspor akibat pelemahan lebih kecil kalau perdagangannya dihargai dalam dolar. Itu penafsiran saya, bukan hasil penelitiannya. Seiring waktu, inflasi dalam negeri dan bahan baku impor yang lebih mahal juga bisa menggerus keunggulan harga itu.
+Banyak perdagangan dunia dihargai dalam dolar AS, sehingga pergerakan sebuah mata uang terhadap dolar lebih menentukan harga dan arus dagang daripada pergerakannya terhadap mata uang mitra dagang.[^gopinath] Dari situ saya menyimpulkan bahwa dorongan ekspor akibat pelemahan lebih kecil kalau perdagangannya dihargai dalam dolar. Itu penafsiran saya, bukan hasil penelitiannya. Seiring waktu, inflasi dalam negeri dan bahan baku impor yang lebih mahal juga bisa menggerus keunggulan harga yang diperoleh eksportir dari pelemahan itu.
 
-Indonesia tidak bisa disimpulkan sebagai importir bersih dari data ini, tetapi sebagian kebutuhan pangan dan energi tertentu sangat bergantung pada impor. Menurut data BPS 2025, Indonesia mengimpor 11,6 juta ton gandum (100% kebutuhan) dan 2,6 juta ton kedelai (79,2% kebutuhan), sedangkan 79,6% elpiji berasal dari impor.[^katadata] Seberapa jauh pelemahan rupiah sampai ke harga eceran belum saya ukur. Harga sebagian barang, seperti elpiji, mungkin diatur pemerintah sehingga bebannya bisa berpindah ke anggaran negara.
+Data impor yang saya pakai tidak cukup untuk menyimpulkan bahwa Indonesia importir bersih, tetapi sebagian kebutuhan pangan dan energi tertentu memang sangat bergantung pada impor. Menurut data BPS 2025, Indonesia mengimpor 11,6 juta ton gandum (100% kebutuhan) dan 2,6 juta ton kedelai (79,2% kebutuhan), sedangkan 79,6% elpiji berasal dari impor.[^katadata] Seberapa jauh pelemahan rupiah sampai ke harga eceran belum saya ukur. Harga sebagian barang, seperti elpiji, mungkin diatur pemerintah sehingga bebannya bisa berpindah ke anggaran negara.
 
 ### Yang tidak dibahas tulisan ini
 
@@ -72,7 +72,7 @@ Dampak jangka pendek di sini adalah yang muncul dalam hitungan bulan sampai dua 
 
 **Contoh.** Dalam sepuluh tahun sampai 2012, harga dunia untuk ekspor tambang Australia naik lebih dari tiga kali lipat, dan lonjakan itu (*mining boom*) mendorong dolar Australia menguat tajam.[^tulip] Riset Reserve Bank of Australia (<span markdown="0">RBA</span>) memperkirakan bahwa penguatan riil sementara sebesar 10% menurunkan inflasi tahunan sekitar 0,3 poin persentase dalam satu sampai dua tahun berikutnya, tetapi juga menurunkan produk domestik bruto riil sekitar 0,3%.[^rba]
 
-**Catatan.** Pengaruh kurs pada harga konsumen di negara maju tergolong kecil, dan lebih besar di negara yang porsi impornya dalam belanja lebih tinggi.[^mccarthy] Untuk Indonesia, barang yang hampir seluruhnya diimpor seperti gandum mungkin paling terasa penurunan harganya, tetapi riset Australia tidak mengukurnya.
+**Catatan.** Pengaruh kurs pada harga konsumen di negara maju tergolong kecil, dan lebih besar di negara yang porsi impornya dalam belanja lebih tinggi.[^mccarthy] Untuk Indonesia, barang yang hampir seluruhnya diimpor seperti gandum mungkin paling terasa penurunan harganya, tetapi riset tentang Australia itu tidak mengukurnya.
 
 ### Laba eksportir menyusut (buruk untuk eksportir)
 
@@ -115,7 +115,7 @@ Pelemahan kurs membawa empat dampak jangka pendek. Untuk rupiah, pelemahan berar
 
 **Contoh.** Setelah pound Inggris jatuh sekitar 10% pada Juni 2016, Centre for Economic Performance memperkirakan bahwa hasil referendum Brexit menambah inflasi sekitar 1,7 poin persentase pada tahun berikutnya, sehingga rumah tangga rata-rata menanggung biaya sekitar £404 per tahun (£7,74 per minggu).[^brexit] Versi yang terbit di jurnal bertelaah sejawat pada 2022 menghitung kenaikan harga 2,9%, atau sekitar £870 per tahun per rumah tangga.
 
-**Catatan.** Angka Inggris adalah perkiraan dampak referendum yang bekerja lewat pelemahan pound, dan dua versi risetnya saja sudah berbeda jauh. Untuk Indonesia, gandum (100% impor), kedelai (79,2%) dan elpiji (79,6%) menunjukkan bahwa sebagian belanja pokok bergantung pada impor.[^katadata]
+**Catatan.** Angka Inggris adalah perkiraan dampak referendum yang bekerja lewat pelemahan pound, dan dua versi risetnya saja sudah berbeda jauh. Untuk Indonesia, angka impor gandum (100%), kedelai (79,2%) dan elpiji (79,6%) menunjukkan bahwa sebagian belanja pokok bergantung pada impor.[^katadata]
 
 ### Wisatawan asing bertambah, liburan ke luar negeri makin mahal (baik dan buruk)
 
@@ -127,7 +127,7 @@ Pelemahan kurs membawa empat dampak jangka pendek. Untuk rupiah, pelemahan berar
 
 **Contoh.** Pada 2024, Jepang menerima 36,87 juta wisatawan asing, yang membelanjakan sekitar ¥8,1 triliun (data awal Badan Pariwisata Jepang). Kedua angka itu rekor, sebagian karena yen yang lemah.[^japan] Pada Maret 2024, perjalanan orang Jepang ke luar negeri masih 37% di bawah tingkat 2019.
 
-**Catatan.** Pulihnya pariwisata setelah pandemi ikut mendorong rekor kunjungan, dan perjalanan ke luar negeri juga masih pulih dari pandemi, sehingga angka 37% tidak bisa dikaitkan dengan yen saja. Keuntungannya jatuh ke pekerja dan pelaku usaha pariwisata, sedangkan biayanya ditanggung orang yang bepergian ke luar negeri, dan kamu bisa berada di salah satu sisi atau keduanya.
+**Catatan.** Pemulihan pariwisata setelah pandemi ikut mendorong rekor kunjungan dan masih memengaruhi perjalanan ke luar negeri, sehingga angka 37% tidak bisa dikaitkan dengan yen saja. Keuntungannya dinikmati pekerja dan pelaku usaha pariwisata, sedangkan biayanya ditanggung orang yang bepergian ke luar negeri, dan kamu bisa berada di salah satu sisi atau keduanya.
 
 ### Bunga naik (baik untuk penabung, buruk untuk peminjam)
 
@@ -141,7 +141,7 @@ Pelemahan kurs membawa empat dampak jangka pendek. Untuk rupiah, pelemahan berar
 
 **Apa yang terjadi.** Orang yang berpenghasilan rupiah tetapi berutang dolar harus menyediakan lebih banyak rupiah untuk setiap cicilan.
 
-**Contoh.** Rupiah melemah secara kumulatif 70% dari pertengahan Juli 1997 sampai awal Januari 1998.[^imf] Fane dan McLeod memperkirakan biaya restrukturisasi seluruh krisis perbankan Indonesia bagi pembayar pajak sekitar 40% dari produk domestik bruto setahun, angka yang tidak bisa dibebankan pada pelemahan rupiah saja.[^fane]
+**Contoh.** Rupiah melemah secara kumulatif 70% dari pertengahan Juli 1997 sampai awal Januari 1998.[^imf] Fane dan McLeod memperkirakan bahwa seluruh krisis perbankan Indonesia membebani pembayar pajak lewat biaya restrukturisasi sekitar 40% dari produk domestik bruto setahun, angka yang tidak bisa dibebankan pada pelemahan rupiah saja.[^fane]
 
 **Catatan.** Beban ini paling terasa kalau utang valasnya tidak memakai lindung nilai. Orang yang berutang dalam rupiah terkena lewat bunga yang naik dan pemutusan hubungan kerja.
 
@@ -160,7 +160,7 @@ Kalau penguatan bertahan bertahun-tahun, yang berubah bukan lagi sekadar harga, 
 
 **Apa yang terjadi.** Barang impor yang lebih murah menambah daya beli, sehingga penghasilan terasa lebih besar.
 
-**Contoh.** Pada 2013, lonjakan harga tambang (*mining boom*) Australia diperkirakan telah menaikkan pendapatan rumah tangga yang siap dibelanjakan per orang, setelah inflasi, sekitar 13%, dan upah riil sekitar 6%.[^tulip]
+**Contoh.** Pada 2013, lonjakan harga tambang (*mining boom*) Australia diperkirakan telah menaikkan pendapatan rumah tangga per orang yang siap dibelanjakan, setelah disesuaikan dengan inflasi, sekitar 13%, dan upah riil sekitar 6%.[^tulip]
 
 **Catatan.** Angka itu perkiraan model yang dibandingkan dengan keadaan tanpa *boom*, dan mengukur dampak seluruh *boom*, bukan dolar yang kuat saja. Dolar yang kuat hanyalah salah satu jalur sampainya kekayaan dari *boom* itu ke rumah tangga, lewat barang impor yang lebih murah. Menurut saya, dalam kasus Australia kurs kuat menyalurkan kemakmuran yang sudah ada, bukan menciptakannya.
 
@@ -168,9 +168,9 @@ Kalau penguatan bertahan bertahun-tahun, yang berubah bukan lagi sekadar harga, 
 
 **Apa yang terjadi.** Kalau mata uang kuat bertahan lama, produksi di dalam negeri menjadi relatif mahal. Perusahaan bisa memindahkan sebagian kegiatan atau membeli usaha di luar negeri (*offshoring*).
 
-**Contoh.** Setelah yen melonjak akibat Plaza Accord (kesepakatan lima negara ekonomi besar pada 1985 untuk melemahkan dolar AS), industri Jepang yang paling terkena kenaikan yen memperluas investasi langsung di Asia, dan tenaga kerja di daerah yang paling terdampak bergeser dari manufaktur ke jasa. Kehilangan pekerjaannya tergolong kecil, dan dikaitkan dengan praktik ketenagakerjaan Jepang yang kaku.[^plaza] Di Swiss, setelah bank sentralnya mencabut batas bawah kurs franc terhadap euro pada Januari 2015, porsi akuisisi eksportir di luar negeri naik dari 45% menjadi 63%.[^epfl]
+**Contoh.** Setelah yen melonjak akibat Plaza Accord (kesepakatan lima negara ekonomi besar pada 1985 untuk melemahkan dolar AS), industri Jepang yang paling terkena kenaikan yen memperluas investasi langsung di Asia, dan tenaga kerja di daerah yang paling terdampak bergeser dari manufaktur ke jasa. Hilangnya lapangan kerja tergolong kecil, dan dikaitkan dengan praktik ketenagakerjaan Jepang yang kaku.[^plaza] Di Swiss, setelah bank sentralnya mencabut batas bawah kurs franc terhadap euro pada Januari 2015, porsi akuisisi eksportir di luar negeri naik dari 45% menjadi 63%.[^epfl]
 
-**Catatan.** Studi tentang Plaza Accord itu belum ditelaah sejawat. Bukti Swiss pun masih awal, dan para peneliti sendiri sulit memastikan apakah sebuah akuisisi lahir dari franc atau dari strategi jangka panjang. Dampak ke pekerjaan bergantung pada aturan pasar tenaga kerja, yang bisa ikut menentukan hasilnya di Indonesia.
+**Catatan.** Studi tentang Plaza Accord itu belum ditelaah sejawat. Bukti Swiss pun masih awal, dan para peneliti sendiri sulit memastikan apakah sebuah akuisisi lahir dari franc atau dari strategi jangka panjang. Dampak ke pekerjaan bisa bergantung pada aturan pasar tenaga kerja, sehingga hasilnya di Indonesia bisa berbeda.
 
 | Dampak | Baik atau buruk |
 | --- | --- |
@@ -191,7 +191,7 @@ Pelemahan yang berlangsung bertahun-tahun membawa empat dampak, sebagian besar l
 
 ### Kepercayaan pada mata uang sendiri hilang (buruk)
 
-**Apa yang terjadi.** Ketika orang tidak lagi percaya pada mata uang sendiri, negara bisa membuat skema khusus agar penabung mau tetap menyimpan di mata uang itu.
+**Apa yang terjadi.** Ketika orang tidak lagi percaya pada mata uang sendiri, negara bisa membuat skema khusus agar penabung mau tetap menyimpan tabungannya dalam mata uang itu.
 
 **Contoh.** Turki membuat skema *Kur Korumalı Mevduat* (<span markdown="0">KKM</span>), yaitu simpanan lira yang dilindungi dari pelemahan kurs. Di puncaknya, simpanan KKM mencapai sekitar US$140 miliar. Pada Agustus 2023, simpanan itu 26,2% dari seluruh simpanan. Biaya bagi negara diperkirakan hampir US$60 miliar sampai akhir 2024 (hitungan Reuters sendiri, bukan audit resmi). Setelah Turki kembali ke kebijakan ortodoks, KKM menyusut menjadi sekitar 2% dari simpanan pada Agustus 2025.[^kkm]
 
@@ -201,7 +201,7 @@ Pelemahan yang berlangsung bertahun-tahun membawa empat dampak, sebagian besar l
 
 **Apa yang terjadi.** Inflasi tinggi menggerus penghasilan orang yang hampir seluruh uangnya dipakai untuk kebutuhan pokok. Studi yang saya pakai membahas inflasi secara umum, bukan pelemahan kurs, dan hubungan yang ditemukannya berupa korelasi.
 
-**Contoh.** Dalam jajak pendapat terhadap 31.869 rumah tangga di 38 negara, orang miskin lebih sering menyebut inflasi sebagai kekhawatiran utama. Data gabungan lintas negara juga menunjukkan bahwa inflasi tinggi cenderung menurunkan porsi pendapatan 20% penduduk termiskin, menurunkan upah minimum riil dan menaikkan kemiskinan (Easterly dan Fischer, 2001).[^eaf]
+**Contoh.** Dalam jajak pendapat terhadap 31.869 rumah tangga di 38 negara, orang miskin lebih sering menyebut inflasi sebagai kekhawatiran utama. Data gabungan lintas negara juga menunjukkan bahwa inflasi tinggi cenderung menurunkan porsi pendapatan yang diterima 20% penduduk termiskin, menurunkan upah minimum riil dan menaikkan angka kemiskinan (Easterly dan Fischer, 2001).[^eaf]
 
 **Catatan.** Ke-38 negara itu hanya sampel jajak pendapat. Kalau pelemahan rupiah berujung pada inflasi tinggi, kelompok berpenghasilan rendah paling berisiko.
 
