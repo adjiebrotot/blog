@@ -1,7 +1,15 @@
-// Generate an illustration with an image model on OpenRouter and save it as a PNG.
+// Generate an illustration with an image model and save it as a PNG. Two providers:
 //
+//   OpenRouter:
 //   OPENROUTER_API_KEY=sk-or-... node generate.mjs <prompt.txt> <out.png>
 //     [--model google/gemini-nano-banana-2.1] [--aspect 4:3] [--ref <image>]...
+//
+//   Google Gemini API, directly:
+//   GEMINI_API_KEY=... node generate.mjs <prompt.txt> <out.png> --provider google
+//     [--model gemini-3.1-flash-image] [--aspect 4:3] [--ref <image>]...
+//
+// --provider auto (the default) uses OpenRouter when OPENROUTER_API_KEY is set, else Google
+// when GEMINI_API_KEY is set. A "google/" prefix on a Google model id is dropped.
 //
 // <prompt.txt> holds the full prompt (scene + the style block from references/image-prompt.md).
 // --ref attaches an earlier picture from this blog as a style reference (repeatable), so a
@@ -15,37 +23,62 @@ const opt = (name, fallback) => {
 };
 const refs = [];
 for (let i = args.indexOf('--ref'); i !== -1; i = args.indexOf('--ref')) refs.push(args.splice(i, 2)[1]);
-const model = opt('model', 'google/gemini-nano-banana-2.1');
+let provider = opt('provider', 'auto');
+if (provider === 'auto') {
+  provider = !process.env.OPENROUTER_API_KEY && process.env.GEMINI_API_KEY ? 'google' : 'openrouter';
+}
+const google = provider === 'google';
+let model = opt('model', google ? 'gemini-3.1-flash-image' : 'google/gemini-nano-banana-2.1');
+if (google) model = model.replace(/^google\//, '');
 const aspect = opt('aspect', '4:3');
 const [promptFile, output] = args;
-const key = process.env.OPENROUTER_API_KEY;
-if (!promptFile || !output) {
-  console.error('usage: node generate.mjs <prompt.txt> <out.png> [--model <id>] [--aspect 4:3] [--ref <image>]...');
+const keyName = google ? 'GEMINI_API_KEY' : 'OPENROUTER_API_KEY';
+const key = process.env[keyName];
+if (!promptFile || !output || !['google', 'openrouter'].includes(provider)) {
+  console.error('usage: node generate.mjs <prompt.txt> <out.png> [--provider auto|openrouter|google] [--model <id>] [--aspect 4:3] [--ref <image>]...');
   process.exit(1);
 }
 if (!key) {
-  console.error('set OPENROUTER_API_KEY (ask Adjie for a key; never write it into a file in the repo)');
+  console.error(`set ${keyName} (ask Adjie for a key; never write it into a file in the repo)`);
   process.exit(1);
 }
 
 const mimes = { png: 'image/png', jpg: 'image/jpeg', jpeg: 'image/jpeg', webp: 'image/webp' };
-const content = [{ type: 'text', text: await readFile(promptFile, 'utf8') }];
+const text = await readFile(promptFile, 'utf8');
+const images = [];
 for (const ref of refs) {
-  const mime = mimes[ref.split('.').pop().toLowerCase()];
-  const data = (await readFile(ref)).toString('base64');
-  content.push({ type: 'image_url', image_url: { url: `data:${mime};base64,${data}` } });
+  images.push({ mime: mimes[ref.split('.').pop().toLowerCase()], data: (await readFile(ref)).toString('base64') });
 }
 
-const request = () => fetch('https://openrouter.ai/api/v1/chat/completions', {
+const viaOpenRouter = () => fetch('https://openrouter.ai/api/v1/chat/completions', {
   method: 'POST',
   headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
   body: JSON.stringify({
     model,
-    messages: [{ role: 'user', content }],
+    messages: [{
+      role: 'user',
+      content: [
+        { type: 'text', text },
+        ...images.map(({ mime, data }) => ({ type: 'image_url', image_url: { url: `data:${mime};base64,${data}` } })),
+      ],
+    }],
     modalities: ['image', 'text'],
     image_config: { aspect_ratio: aspect },
   }),
 });
+const viaGoogle = () => fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
+  method: 'POST',
+  headers: { 'x-goog-api-key': key, 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    contents: [{
+      role: 'user',
+      parts: [{ text }, ...images.map(({ mime, data }) => ({ inline_data: { mime_type: mime, data } }))],
+    }],
+    generationConfig: { responseModalities: ['IMAGE', 'TEXT'], imageConfig: { aspectRatio: aspect } },
+  }),
+});
+const request = google ? viaGoogle : viaOpenRouter;
+
 // A 429 (too many requests at once) or a 502/503 (the model's provider is busy) clears after
 // a few seconds: wait and try again.
 const busy = (status) => [429, 502, 503].includes(status);
@@ -61,12 +94,23 @@ if (!res.ok) {
   console.error(`${res.status}: ${JSON.stringify(body.error ?? body)}`);
   process.exit(1);
 }
-const message = body.choices?.[0]?.message;
-const url = message?.images?.[0]?.image_url?.url;
-if (!url) {
-  console.error(`no image in the reply: ${message?.content ?? JSON.stringify(body).slice(0, 500)}`);
+
+let b64;
+let said;
+if (google) {
+  const parts = body.candidates?.[0]?.content?.parts ?? [];
+  const img = parts.map((p) => p.inlineData ?? p.inline_data).find((d) => d?.data);
+  b64 = img?.data;
+  said = parts.map((p) => p.text).filter(Boolean).join(' ') || body.candidates?.[0]?.finishReason;
+} else {
+  const message = body.choices?.[0]?.message;
+  b64 = message?.images?.[0]?.image_url?.url?.split(',')[1];
+  said = message?.content;
+}
+if (!b64) {
+  console.error(`no image in the reply: ${said ?? JSON.stringify(body).slice(0, 500)}`);
   process.exit(1);
 }
-await writeFile(output, Buffer.from(url.split(',')[1], 'base64'));
+await writeFile(output, Buffer.from(b64, 'base64'));
 const cost = body.usage?.cost;
-console.log(`${output}: ${model}${cost != null ? `, $${cost.toFixed(4)}` : ''}`);
+console.log(`${output}: ${provider} ${model}${cost != null ? `, $${cost.toFixed(4)}` : ''}`);

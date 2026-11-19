@@ -31,6 +31,16 @@ variable for the command. Never write a key into a file, a commit, a prompt file
 OpenRouter refuses image output when the key has less than $1.00 of credit left (error
 402). Tell Adjie the balance needs topping up; don't retry.
 
+**Or a Google key.** Adjie uses an OpenRouter key and a Google Gemini API key
+interchangeably. With a Google key, set `GEMINI_API_KEY` instead and add
+`--provider google` (the script also picks Google by itself when only `GEMINI_API_KEY` is
+set). It calls the Gemini API directly, default model `gemini-3.1-flash-image`; the other
+Google ids are `gemini-3-pro-image` (cleaner, dearer), `gemini-3.1-flash-lite-image` and
+`gemini-2.5-flash-image`. List the current ones with
+`curl -s -H "x-goog-api-key: $GEMINI_API_KEY" "https://generativelanguage.googleapis.com/v1beta/models?pageSize=200" | grep -o '"models/[^"]*image[^"]*"'`.
+Google returns no cost in the reply, so the script prints none; billing shows in Google
+Cloud. The same rules apply: environment variable only, never in a file or commit.
+
 ## Which model
 
 | Model | Cost per picture | Use for |

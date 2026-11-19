@@ -22,8 +22,9 @@ Do not allow a preference to alter technical meaning, evidence or decision-chang
 
 | ID | Date | Topic/passage | Options | Exact author selection or own wording | Reason if given | Context/scope | Approval provenance |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| W1 | 2026-11-19 | Currency post (kurs naik turun), opening: what the effects mean for ordinary people | "apa artinya bagi rumah tangga" (writer draft) | "apa artinya di kehidupan sehari-hari" | Adjie: "apa artinya bagi rumah tangga" is not natural | Closing phrase of an opening/intro that says what an economic effect means for readers' daily life; contextual, not a global ban on "rumah tangga" (still fine as a technical term, e.g. konsumsi rumah tangga) | Explicit author revision in chat, 19 Nov 2026 |
 
-No new passage-level selections have been made yet. The request dated 10 November 2026
+The request dated 10 November 2026
 approves this selection workflow, not specific new vocabulary. Do not backfill imagined
 choices. Save future explicit decisions here and in the shared voice reference. Silence,
 defaults and evaluator rewrites are never approval evidence. Generalise only with repeated
