@@ -165,7 +165,7 @@ Two effects can build over years.
 
 **What happens.** If a strong currency stays, firms that make things at home may start making them, or buying firms, abroad.
 
-**Example.** In the study of about 200 listed Swiss exporters, which covers roughly the year after the franc jumped in January 2015, the share of their acquisitions made abroad rose from 45% to 63%.[^epfl] After the 1985 Plaza Accord, when the yen surged, more-exposed Japanese industries expanded their foreign direct investment in Asia, and labour shifted from manufacturing to services in the exposed regions. Job losses were modest, which the author links to Japan's rigid labour practices. That paper is a discussion paper, not yet peer-reviewed.[^plaza]
+**Example.** In a study of about 200 listed Swiss exporters, published a year after the franc jumped in January 2015, the share of their acquisitions made abroad rose from 45% to 63% after the jump, so this is early evidence, not a long-run count.[^epfl] After the 1985 Plaza Accord, when the yen surged, more-exposed Japanese industries expanded their foreign direct investment in Asia, and labour shifted from manufacturing to services in the exposed regions. Job losses were modest, which the author links to Japan's rigid labour practices. That paper is a discussion paper, not yet peer-reviewed.[^plaza]
 
 **Caveat.** The author of the Swiss study says it is hard to tell whether a given deal came from the franc or from long-term strategy. How many jobs go depends on labour-market rules.
 
