@@ -477,6 +477,17 @@ Bebas Risiko**, **Uang tunai**), even when the prose around them is casual.
 
 ## Blog rules that apply in Indonesian too
 
+- **Post order is the same as in English:** `Singkatnya:` block (`{: .tldr}`), then
+  `* TOC` / `{:toc}`, then the first `##` section. The opening paragraphs and the cover
+  image go inside that first section, under a heading; never place intro paragraphs above
+  `Singkatnya` (Adjie corrected exactly this, November 2026).
+- **Headings follow the English twin's shape:** a time-frame section is a question ("Apa yang
+  terjadi dalam jangka pendek kalau mata uang menguat?"), each effect heading says cause and
+  result and ends in (+) or (−) ("Impor lebih murah, jadi inflasi lebih rendah (+)"), and
+  positive effects come before negative ones, in the text and in the table.
+- **A short list of factors is a bold-numbered paragraph list** ("**1. Utang dalam valas.**
+  ..."), not `###` subsections, and a scope note is one paragraph, not a heading.
+
 - No em-dashes (colon, comma, parentheses or a full stop instead).
 - Every UI string in both languages lives in `_data/i18n.yml`.
 - A title or a heading that changes keeps the slug (see `CLAUDE.md`); redraw the post's

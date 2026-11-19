@@ -20,7 +20,7 @@ bmc_message: "Whatever the exchange rate, a coffee for me is always at par!"
 
 ## Is a stronger currency good news?
 
-Every evening the news tells you the Aussie dollar went up or down, like a footy score. Behind that one number sits a market far bigger than any stock market: about US$9.5 trillion changes hands in foreign exchange every day. Add up all the shares traded through the order books of the world's stock exchanges and you get half of that? No. A quarter? No. A tenth? Still no. About US$590 billion a day (my rough arithmetic), roughly 6%.
+Every evening the news tells you the Aussie dollar went up or down, like a footy score. Behind that one number sits a market far bigger than any stock market: about US$9.5 trillion changes hands in foreign exchange every day. Add up all the shares traded through the order books of the world's stock exchanges and you get half of that? No. A quarter? No. A tenth? Still no. About US$590 billion a day, roughly 6%.
 
 <figure>
 <img src="/assets/img/fx-ill-money-changer.webp" alt="A woman in a teal blouse holds a few banknotes at a currency-exchange counter and looks up at a screen showing a big green up arrow and a big red down arrow" width="1200" height="670" loading="lazy">
@@ -32,7 +32,7 @@ With a share or a house, up is good and down is bad. A currency doesn't work lik
 
 The Bank for International Settlements counts the foreign exchange market every three years. In April 2025, over-the-counter turnover averaged about US$9.5 trillion a day, up 27% from 2022.[^bis]
 
-For comparison, shares traded on the world's exchanges through their electronic order books were worth US$148.48 trillion in 2024, according to the World Federation of Exchanges.[^wfe] Spread over about 252 trading days, that is roughly US$590 billion a day (my arithmetic, approximate; order-book trading only, 2024 against April 2025). It is about 6% of the currency market, or around 16 times smaller.
+For comparison, shares traded on the world's exchanges through their electronic order books were worth US$148.48 trillion in 2024, according to the World Federation of Exchanges.[^wfe] Spread over about 252 trading days, that is roughly US$590 billion a day It is about 6% of the currency market, or around 16 times smaller.
 
 One more line keeps the comparison honest. In the survey's preliminary breakdown, about 42% of the turnover is FX swaps, in which banks and firms exchange currencies for a set period and swap them back, and only 31% is spot trading. So it is not 9.5 trillion dollars of people buying currency. Even so, the market that sets the price of your travel money, your imports and your savings abroad dwarfs the one that sets the price of shares.
 
@@ -105,6 +105,19 @@ When the Aussie dollar rises, imports get cheaper and exports get dearer. Four e
 
 The mirror image: imports get dearer, exports get cheaper, and debts in foreign currency get heavier. Four effects.
 
+### More visitors arrive, and holidays abroad cost more (+ and −)
+
+**What happens.** Your country gets cheaper for foreigners, so more of them come and spend. Your own trips abroad cost more.
+
+**Example.** Reserve Bank of Australia research looked at the Australian dollar's fall of about 20% in real terms from its 2013 peak. A 10% real depreciation lifts export volumes by about 3% after two years and cuts import volumes by just under 4%, and services exports, which include tourism and education, respond more strongly than goods.[^cole] Japan is one case where both sides appear. In 2024 it received a record 36.87 million visitors, who spent a record of about ¥8.1 trillion, partly because of the weak yen. In March 2024, Japanese outbound travel was still 37% below 2019.[^japan]
+
+**Caveat.** Pent-up demand after COVID also drove Japan's tourism boom, and Japanese outbound travel was still recovering from COVID, so the 37% is not all the yen. The gain goes to tourism workers and businesses, and the cost to households that travel.
+
+<figure>
+<img src="/assets/img/fx-ill-weak-currency-split.webp" alt="Split panel. Left: a man in a navy polo with a backpack winces at the price tag of a small gift box in a shop abroad, one hand on his wallet. Right: a smiling shopkeeper in a mustard apron hands a wrapped parcel to a happy blond tourist in a sun hat who holds out banknotes" width="1456" height="1087" loading="lazy">
+<figcaption>One weak currency, two effects: visitors pay less in the weak-currency country, and its own travellers pay more abroad.</figcaption>
+</figure>
+
 ### The cost of living rises (−)
 
 **What happens.** Imported goods, and local goods made with imported parts, cost more in local currency.
@@ -112,19 +125,6 @@ The mirror image: imports get dearer, exports get cheaper, and debts in foreign 
 **Example.** The pound fell about 10% after the June 2016 Brexit vote. Researchers estimated that the vote added about 1.7 percentage points to inflation in the following year, costing the average household about £404 a year. A later, peer-reviewed version of the study put the rise in prices at 2.9%, or about £870 a year per household.[^cep]
 
 **Caveat.** How much of a fall reaches prices depends on the share of imports in household spending, the exchange-rate regime, and the credibility of the inflation target and the central bank.[^wb]
-
-### More visitors arrive, and holidays abroad cost more (+ and −)
-
-**What happens.** Your country gets cheaper for foreigners, so more of them come and spend. Your own trips abroad cost more.
-
-**Example.** Reserve Bank of Australia research looked at the Australian dollar's fall of about 20% in real terms from its 2013 peak. A 10% real depreciation lifts export volumes by about 3% after two years and cuts import volumes by just under 4%, and services exports, which include tourism and education, respond more strongly than goods.[^cole] Japan is one case where both sides appear. In 2024 it received a record 36.87 million visitors, who spent a record of about ¥8.1 trillion, partly because of the weak yen. In March 2024, Japanese outbound travel was still 37% below 2019.[^japan]
-
-<figure>
-<img src="/assets/img/fx-ill-weak-currency-split.webp" alt="Split panel. Left: a man in a navy polo with a backpack winces at the price tag of a small gift box in a shop abroad, one hand on his wallet. Right: a smiling shopkeeper in a mustard apron hands a wrapped parcel to a happy blond tourist in a sun hat who holds out banknotes" width="1456" height="1087" loading="lazy">
-<figcaption>One weak currency, two effects: visitors pay less in the weak-currency country, and its own travellers pay more abroad.</figcaption>
-</figure>
-
-**Caveat.** Pent-up demand after COVID also drove Japan's tourism boom, and Japanese outbound travel was still recovering from COVID, so the 37% is not all the yen. The gain goes to tourism workers and businesses, and the cost to households that travel.
 
 ### Interest rates may rise (−)
 
@@ -144,9 +144,9 @@ The mirror image: imports get dearer, exports get cheaper, and debts in foreign 
 
 | Effect | Good or bad for households |
 | --- | --- |
-| Higher cost of living | Bad |
 | More inbound tourism | Good for tourism workers and businesses |
 | Dearer holidays abroad | Bad for households that travel |
+| Higher cost of living | Bad |
 | Higher interest rates | Bad for borrowers |
 | Foreign-currency debt gets heavier | Bad for borrowers in foreign currency |
 
@@ -179,6 +179,14 @@ Two effects can build over years.
 
 A one-off fall is a shock. A fall that does not stop is a different problem. Four effects.
 
+### Remittances are worth more in local currency (+)
+
+**What happens.** Money sent home from abroad converts into more local currency.
+
+**Example.** US$500 was worth about ₱21,100 at the 2012 average rate (about ₱42.23 per US dollar). At the Philippine central bank's reference rate of ₱63.813 on 16 November 2026, it is worth about ₱31,900.[^php] That compares 2012 with November 2026: fourteen years of drift, not one move.
+
+**Caveat.** These are nominal figures, so the gain shrinks if local prices rose too, and it helps only households that receive remittances.
+
 ### Inflation can spiral (−)
 
 **What happens.** In my reading, the loop runs like this: a weaker currency makes imports dearer, dearer imports push up prices, higher prices erode trust, and the currency weakens again.
@@ -203,24 +211,16 @@ A one-off fall is a shock. A fall that does not stop is a different problem. Fou
 
 **Caveat.** The study is about inflation in general, not about depreciation. The links are correlations, and the 38 countries are the poll sample only.
 
-### Remittances are worth more in local currency (+)
-
-**What happens.** Money sent home from abroad converts into more local currency.
-
-**Example.** US$500 was worth about ₱21,100 at the 2012 average rate (about ₱42.23 per US dollar). At the Philippine central bank's reference rate of ₱63.813 on 16 November 2026, it is worth about ₱31,900.[^php] That compares 2012 with November 2026: fourteen years of drift, not one move.
-
-**Caveat.** These are nominal figures, so the gain shrinks if local prices rose too, and it helps only households that receive remittances.
-
 | Effect | Good or bad for households |
 | --- | --- |
+| Remittances worth more | Good, for receiving households |
 | Inflation spiral | Bad |
 | Loss of trust in the local currency | Bad |
 | Inflation tends to hit the poor harder | Bad, especially for the poor |
-| Remittances worth more | Good, for receiving households |
 
 ## So, is a strong or weak currency good or bad?
 
-Neither by itself: in my view, it depends on which side of the pair your income, debts and spending sit. When the news says the currency fell or rose, ask three questions:
+Neither by itself: in my view, it depends on which side of the pair your income, debts and spending sit. Short-term ups and downs are a normal part of an economy. Even so, I generally agree that a currency that keeps depreciating year after year is not a good sign. When the news says the currency fell or rose, ask three questions:
 
 1. **Do I owe in a foreign currency, and is it unhedged?** If so, a fall is a rise in what you owe.
 2. **Why did it move, and is the central bank credible?** A fall after a commodity boom ends is not a fall from lost trust.

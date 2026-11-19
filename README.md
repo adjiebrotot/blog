@@ -135,6 +135,10 @@ KaTeX and Mermaid load only on a post that uses them.
 ### Handy extras
 
 - **Table of contents:** put `* TOC` on one line and `{:toc}` on the next.
+- **Order of a post:** front matter, then the **In short** box (`{: .tldr}`), then
+  `* TOC` / `{:toc}`, then the first `##` section. The introduction (the hook, the opening
+  numbers) and the cover image live inside that first section, never above the In short
+  box. `check-seo.py` reports an ERROR otherwise.
 - **Summary box:** add `{: .tldr}` on the line after a paragraph. `{: .note}` and
   `{: .warning}` work the same way.
 - **Abbreviations (required):** every abbreviation, acronym, code or short form in a post

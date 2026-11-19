@@ -157,6 +157,15 @@ def check(path):
         if n > 90:
             W(f"the In short block is {n} words: target 40 to 90; preserve material conditions or justify an exception")
 
+    # Structure: the In short block is the very first thing in the body, then the TOC, then
+    # the first ## section. An introduction or a cover image before it is a mistake.
+    m = re.search(r"\{:\s*\.tldr\s*\}", body)
+    if m:
+        before = body[:m.start()].strip().split("\n\n")
+        if len(before) > 1:
+            E("text or an image sits before the In short block: the order is In short, TOC, "
+              "then the first ## section, which holds the introduction and the cover image")
+
     # Summary targets are warnings, never permission to remove material conditions.
     if re.search(r"\{:\s*\.tldr\s*\}", body) and n < 40:
         W(f"the In short block is {n} words: target 40 to 90 when it improves the summary")
