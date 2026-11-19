@@ -5,6 +5,7 @@ description: "A rising Aussie dollar sounds like good news, and a falling rupiah
 date: 2026-11-19 09:00:00 +0800
 tags: [finance]
 image: /assets/img/og/currency-appreciation-depreciation-household.jpg
+og_position: "0% 50%"
 image_alt: "A woman in a teal blouse holds a few banknotes at a currency-exchange counter and looks up at a screen showing a big green up arrow and a big red down arrow"
 translation: currency-household-impact
 keywords: [currency appreciation and depreciation, what a weak dollar means for households, Aussie dollar falls, exchange rate effects on cost of living, strong currency good or bad, weak currency effects, exchange rate and inflation]

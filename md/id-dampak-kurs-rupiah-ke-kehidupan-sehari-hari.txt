@@ -1,0 +1,7 @@
+---
+layout: null
+permalink: /id/dampak-kurs-rupiah-ke-kehidupan-sehari-hari/index.md
+md_of: /id/dampak-kurs-rupiah-ke-kehidupan-sehari-hari/
+sitemap: false
+---
+{% include post-markdown.txt url=page.md_of %}
