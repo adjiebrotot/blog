@@ -30,9 +30,7 @@ Pada aset lain, naik berarti untung dan turun berarti rugi. Kurs tidak bekerja s
 
 ## Seberapa besar pasar valas dibandingkan bursa saham?
 
-Menurut survei tiga tahunan BIS, perputaran valas pada April 2025 sekitar US$9,5 triliun per hari, naik 27% dari 2022.[^bis] Sebagai pembanding, nilai saham yang diperdagangkan lewat buku pesanan elektronik bursa dunia sepanjang 2024 adalah US$148,48 triliun,[^wfe] atau sekitar US$590 miliar per hari kalau dibagi sekitar 252 hari bursa. Jumlah itu hanya sekitar 6% dari perputaran valas, kira-kira seperenam belasnya.
-
-Rincian awal BIS (September 2025) menunjukkan bahwa sekitar 42% perputaran berupa *swap* valas, yaitu bank dan perusahaan menukar mata uang untuk jangka tertentu lalu menukarnya kembali, dan 31% berupa transaksi *spot* (tukar langsung). Perbandingan ini hanya gambaran skala: perputaran valas ikut menghitung *swap* yang menukar mata uang lalu mengembalikannya, sehingga angkanya bukan jumlah orang yang membeli mata uang.
+Menurut survei tiga tahunan BIS, perputaran valas pada April 2025 sekitar US$9,5 triliun per hari, naik 27% dari 2022.[^bis] Sebagai pembanding, nilai saham yang diperdagangkan lewat buku pesanan elektronik bursa dunia sepanjang 2024 adalah US$148,48 triliun,[^wfe] atau sekitar US$590 miliar per hari kalau dibagi sekitar 252 hari bursa. Bayangkan: seluruh bursa saham di dunia digabung, dari New York sampai Jakarta, perputarannya hanya sekitar 6% dari pasar valas, kira-kira seperenam belasnya.
 
 ## Kurs itu pasangan dua mata uang, bukan aset
 
@@ -231,7 +229,7 @@ Lain kali kamu membaca berita yang menyebut "kurs naik" atau "rupiah melemah", a
 
 ## Referensi
 
-[^bis]: Bank for International Settlements, [Triennial Central Bank Survey 2025: OTC foreign exchange turnover](https://www.bis.org/statistics/rpfx25_fx.htm), rincian awal April 2025 terbit 30 September 2025 (*swap* valas 42%, *spot* 31%). Angka final sekitar US$9,5 triliun per hari, naik 27% dari 2022: BIS Quarterly Review, Desember 2025, [Global FX markets when hedging takes centre stage](https://www.bis.org/publ/qtrpdf/r_qt2512_foreword.htm).
+[^bis]: Bank for International Settlements, [Triennial Central Bank Survey 2025: OTC foreign exchange turnover](https://www.bis.org/statistics/rpfx25_fx.htm), survei April 2025. Angka final sekitar US$9,5 triliun per hari, naik 27% dari 2022: BIS Quarterly Review, Desember 2025, [Global FX markets when hedging takes centre stage](https://www.bis.org/publ/qtrpdf/r_qt2512_foreword.htm).
 [^wfe]: World Federation of Exchanges, [Trends in value of share trading through Electronic Order Books (EOB)](https://focus.world-exchanges.org/articles/trends-value-share-trading-through-electronic-order-books-eob), Juli 2025: US$148,48 triliun pada 2024. Pembagian dengan sekitar 252 hari bursa adalah hitungan kasar penulis.
 [^imf]: Pemerintah Indonesia dan IMF, [Memorandum of Economic and Financial Policies](https://www.imf.org/external/np/loi/011598.htm), 15 Januari 1998.
 [^fane]: Fane dan McLeod (2001), "Banking Collapse and Restructuring in Indonesia, 1997-2001", Working Paper Australian National University 2001/10; juga terbit di Cato Journal 22(2), 2002. Angka 40% adalah perkiraan mereka pada masa itu untuk biaya krisis perbankan secara keseluruhan.
