@@ -314,6 +314,7 @@ voice or editorial quality:
   keep it and add a concise, accurate `seo_title:`. This is a presentation target, not a
   reason to strip meaning or promise more than the post supports.
 - **Description at 110 to 160 characters,** still the hook from `README.md`.
+- **Order.** In short block first, then the TOC, then the first `##` section holding the introduction and cover image; nothing above the block (`check-seo.py` ERROR).
 - **Useful summary.** Keep the In short block (`{: .tldr}`), targeting 40 to 90 words.
   Match it to the approved intention and preserve material conditions beside its claim.
   If the target cannot hold an accurate answer, narrow the claim or explain a justified
