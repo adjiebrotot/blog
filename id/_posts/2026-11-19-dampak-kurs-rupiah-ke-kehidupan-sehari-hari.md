@@ -78,7 +78,7 @@ Dampak jangka pendek di sini adalah yang muncul dalam hitungan bulan sampai dua 
 
 **Apa yang terjadi.** Ketika mata uang menguat, hasil penjualan ke luar negeri yang ditukar ke mata uang sendiri menyusut, sementara biaya di dalam negeri tetap.
 
-**Contoh.** Pada Januari 2015, bank sentral Swiss (<span markdown="0">SNB</span>) mengakhiri batas bawah kurs CHF 1,20 per euro. Dalam enam bulan berikutnya, pendapatan eksportir Swiss turun rata-rata 16,3%, laba bersihnya 20,4%, dan investasinya dipangkas 30%.[^epfl]
+**Contoh.** Pada Januari 2015, bank sentral Swiss (<span markdown="0">SNB</span>) mengakhiri batas bawah kurs CHF 1,20 per euro. Dalam enam bulan berikutnya, pendapatan eksportir Swiss turun rata-rata 16,3%, dan laba bersihnya turun 20,4%. Sejak batas bawah itu dicabut, para eksportir itu juga memangkas investasi 30%.[^epfl]
 
 **Catatan.** Angka itu berasal dari studi sekitar 200 perusahaan tercatat di bursa, bukan usaha kecil dan menengah yang menyerap tenaga kerja terbanyak, dan studinya tidak mengukur dampak ke pekerja. Perusahaan yang biayanya dalam valas atau memakai lindung nilai lebih terlindungi. Eksportir kita yang pendapatannya dalam dolar dan biayanya dalam rupiah mungkin mengalami tekanan kalau rupiah menguat tajam.
 
@@ -215,7 +215,7 @@ Pelemahan yang berlangsung bertahun-tahun membawa empat dampak, sebagian besar l
 
 | Dampak | Baik atau buruk |
 | --- | --- |
-| Inflasi berputar makin liar | Buruk untuk semua, terutama kalau kredibilitas kebijakan lemah |
+| Inflasi berputar makin liar | Buruk, terutama kalau kredibilitas kebijakan lemah |
 | Kepercayaan pada mata uang sendiri hilang | Buruk untuk penabung dan negara |
 | Inflasi tinggi cenderung lebih merugikan orang miskin | Buruk, terutama untuk yang berpenghasilan rendah |
 | Kiriman uang dari luar negeri bernilai lebih | Baik untuk keluarga penerima, dalam angka nominal |

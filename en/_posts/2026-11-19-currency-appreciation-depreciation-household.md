@@ -52,7 +52,7 @@ In my reading, three things matter most.
 
 **1. Debt in a foreign currency.** If a household or firm earns in local currency but owes in US dollars, a weaker local currency makes the debt bigger overnight. Indonesia in 1997 and 1998 is the textbook case: the rupiah lost 70% between mid-July 1997 and early January 1998, and a significant portion of the country's overseas borrowing was unhedged private short-term debt.[^imf]
 
-**2. Why it moved, and whether the central bank is credible.** A currency can rise because the world wants what a country sells, or fall because investors lost faith. Those are different stories. World Bank research finds that a fall passes through to prices less where the exchange rate floats, the inflation target is credible and the central bank is independent.[^wb] The United Kingdom has a measured estimate: the Brexit vote, which came with a pound fall of about 10%, added about 1.7 percentage points to inflation in the following year.[^cep] Turkey is a case of weak policy credibility: it cut rates while inflation was rising, the lira lost 44% against the US dollar in 2021 and inflation peaked at 85.51% in October 2022.[^lira] That 85.51% is total inflation, not a measured effect of the fall.
+**2. Why it moved, and whether the central bank is credible.** A currency can rise because the world wants what a country sells, or fall because investors lost faith. Those are different stories. World Bank research finds that a fall passes through to prices less where the exchange rate floats, the inflation target is credible and the central bank is independent.[^wb] The United Kingdom has a measured estimate: the Brexit vote, which came with a pound fall of about 10%, added about 1.7 percentage points to inflation in the following year.[^cep] Turkey looks like a case of weak policy credibility: it cut rates while inflation was rising, the lira lost 44% against the US dollar in 2021 and inflation peaked at 85.51% in October 2022.[^lira] That 85.51% is total inflation, not a measured effect of the fall.
 
 **3. Whether the country is a net importer or exporter, and which currency the trade is priced in.** A country that buys most of what it consumes feels a currency fall more strongly in its prices than one that makes it at home. And much world trade is priced in US dollars, so a currency's move against the dollar matters more for prices and trade than its move against a trading partner's currency.[^gopinath] My inference: a depreciation's boost to exports is smaller when trade is priced in dollars.
 
@@ -74,15 +74,15 @@ When the Aussie dollar rises, imports get cheaper and exports get dearer. Four e
 
 **What happens.** An exporter sells in foreign currency, so each foreign dollar converts into fewer Australian dollars, while wages and rent are still paid in Australian dollars. Profit shrinks first, and hiring and investment can follow.
 
-**Example.** In January 2015 the Swiss National Bank ended its CHF 1.20 per euro floor, and the franc jumped. Within six months, a study of about 200 listed Swiss exporters found revenues down 16.3% on average, net profits down 20.4% and investment cut by 30%.[^epfl] The study measured profits and investment, not jobs, and covers listed firms, not the smaller firms that employ most workers.
+**Example.** In January 2015 the Swiss National Bank ended its CHF 1.20 per euro floor, and the franc jumped. Within six months, a study of about 200 listed Swiss exporters found revenues down 16.3% on average, net profits down 20.4%. Since the floor ended, those exporters had also cut investment by 30%.[^epfl] The study measured profits and investment, not jobs, and covers listed firms, not the smaller firms that employ most workers.
 
 **Caveat.** Firms with costs in foreign currency, or with hedges, are partly protected.
 
-### Industries that compete with imports get squeezed, but less than feared (−)
+### Industries that compete with imports get squeezed, though mining demand softened the blow (−)
 
 **What happens.** A strong currency makes local manufacturers and farmers dearer against imports, at home and abroad.
 
-**Example.** Australia's mining-boom appreciation weighed on manufacturing and agriculture. Yet in 2013, manufacturing output was only about 5% below what it would have been without the boom, because manufacturers also supplied inputs to mining, which partly offset the strong dollar.[^tulip]
+**Example.** Australia's mining-boom appreciation weighed on manufacturing and agriculture. Yet in 2013, manufacturing output was about 5% below what it would have been without the boom. Manufacturers also supplied inputs to mining, which partly offset the strong dollar.[^tulip]
 
 **Caveat.** Manufacturing's long-run decline had wider causes than the exchange rate, and this is the effect over the boom decade.
 
@@ -241,7 +241,7 @@ If a loan is part of the picture, my post on [whether debt is bad](/en/is-debt-b
 [^tulip]: Peter Tulip, [The Effect of the Mining Boom on the Australian Economy](https://www.rba.gov.au/publications/bulletin/2014/dec/3.html), RBA Bulletin, December 2014.
 [^manalo]: Joseph Manalo, Dilhan Perera and Daniel Rees, [Exchange Rate Movements and the Australian Economy](https://www.rba.gov.au/publications/rdp/2014/2014-11.html), RBA Research Discussion Paper 2014-11.
 [^mccarthy]: Jonathan McCarthy, [Pass-through of Exchange Rates and Import Prices to Domestic Inflation in Some Industrialized Economies](https://www.bis.org/publ/work79.htm), BIS Working Paper 79, 1999.
-[^epfl]: EPFL News, 12 February 2016, [Offshoring looms after the removal of the CHF/EUR exchange-rate floor](https://actu.epfl.ch/news/offshoring-looms-after-the-removal-of-the-chf-exch): about 200 listed firms; revenues down 16.3%, net profits down 20.4% and investment cut by 30% within six months; share of acquisitions made abroad up from 45% to 63%.
+[^epfl]: EPFL News, 12 February 2016, [Offshoring looms after the removal of the CHF/EUR exchange-rate floor](https://actu.epfl.ch/news/offshoring-looms-after-the-removal-of-the-chf-exch): about 200 listed firms; revenues down 16.3%, net profits down 20.4% within six months; investment cut by 30% since the floor ended; share of acquisitions made abroad up from 45% to 63%.
 [^nbim]: Norges Bank Investment Management, [Negative return in the third quarter](https://www.nbim.no/en/news-and-insights/the-press/press-releases/2026/negative-return-in-the-third-quarter/), 22 October 2026: the krone's strengthening reduced the fund's value by NOK 472 billion in the third quarter; fund value about NOK 22,014 billion at the end of the quarter.
 [^cole]: Rebecca Cole and Sean Nightingale, [Sensitivity of Australian Trade to the Exchange Rate](https://www.rba.gov.au/publications/bulletin/2016/sep/2.html), RBA Bulletin, September 2016.
 [^japan]: Asahi Shimbun, 15 January 2025 (2024 visitors from the Japan National Tourism Organization, spending from the Japan Tourism Agency's preliminary figures); Business Insider, 28 April 2024, "Weak Yen Boosts Japan Tourism to Record High" (outbound travel in March 2024 37% below 2019).
