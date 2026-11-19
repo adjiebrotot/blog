@@ -18,25 +18,19 @@ bmc_message: "Whatever the exchange rate, a coffee for me is always at par!"
 * TOC
 {:toc}
 
-## Is a stronger currency good news?
+## How big is the currency market, and why is a stronger currency not simply good news?
 
-Every evening the news tells you the Aussie dollar went up or down, like a footy score. Behind that one number sits a market far bigger than any stock market: about US$9.5 trillion changes hands in foreign exchange every day. Add up all the shares traded through the order books of the world's stock exchanges and you get half of that? No. A quarter? No. A tenth? Still no. About US$590 billion a day, roughly 6%.
+Every evening the news tells you the Aussie dollar went up or down, like a footy score. Behind that one number sits the foreign exchange (<span markdown="0">FX</span>) market, which is simply the swapping of one currency for another. Every trade in it is a pair: you can't buy Australian dollars without paying in something else, so a rate always names two currencies, as in AUD/USD.
 
 <figure>
 <img src="/assets/img/fx-ill-money-changer.webp" alt="A woman in a teal blouse holds a few banknotes at a currency-exchange counter and looks up at a screen showing a big green up arrow and a big red down arrow" width="1200" height="670" loading="lazy">
 </figure>
 
-With a share or a house, up is good and down is bad. A currency doesn't work like that, because it is a price between two currencies, and behind each one sits a whole economy. When AUD/USD rises, the Aussie dollar has strengthened and, in the same tick, the US dollar has weakened against it. The same move is good news for someone and bad news for someone else, sometimes in the same household.
+The Bank for International Settlements (<span markdown="0">BIS</span>) counts this over-the-counter market every three years. In April 2025, trading averaged about US$9.5 trillion a day, up 27% from 2022.[^bis]
 
-## How big is the currency market, really?
+Now add up all the shares traded through the electronic order books of the world's stock exchanges in 2024.[^wfe] Spread over about 252 trading days, that comes to about US$590 billion a day. Half of the currency market? No. A quarter? No. A tenth? Still no: about 6%, roughly one sixteenth. Picture every stock exchange on Earth, from New York to Jakarta, trading side by side. Together they are a sliver beside the currency market.
 
-The Bank for International Settlements counts the foreign exchange market every three years. In April 2025, over-the-counter turnover averaged about US$9.5 trillion a day, up 27% from 2022.[^bis]
-
-For comparison, shares traded on the world's exchanges through their electronic order books were worth US$148.48 trillion in 2024, according to the World Federation of Exchanges.[^wfe] Spread over about 252 trading days, that is roughly US$590 billion a day. Picture it: every stock exchange on Earth combined, from New York to Jakarta, trades only about 6% of what the currency market does, roughly one sixteenth.
-
-## Why is a currency a pair, not an asset?
-
-A share has one price. A currency has two sides. AUD/USD at 0.65 means A$1 buys US$0.65. With round numbers for illustration (not a forecast), if it rises to 0.70, A$1,000 buys US$700 instead of US$650. The same rise has three faces:
+This is the market that sets the price of your holiday money, of imported goods, and of savings and debts held abroad. And because a rate is a price between two currencies, a stronger or weaker currency is not black and white. AUD/USD at 0.65 means A$1 buys US$0.65. With round numbers for illustration (not a forecast), if it rises to 0.70, A$1,000 buys US$700 instead of US$650. The Aussie dollar has strengthened and, in the same tick, the US dollar has weakened against it. The same rise has three faces:
 
 - An Australian family planning a trip to the US, or buying anything priced in US dollars, gets more for its money.
 - An Australian exporter paid in US dollars receives fewer Australian dollars for the same sale.
