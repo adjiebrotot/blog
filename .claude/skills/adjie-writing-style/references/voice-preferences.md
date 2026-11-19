@@ -29,8 +29,8 @@ list when appropriate; do not impose an Indonesian choice on English.
 
 | ID | Language | Date | Topic and passage context | Alternatives considered | Exact author choice or own wording | Author reason, if supplied | Scope | Provenance |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| P1 | ID | 2026-11-19 | Currency post (kurs naik turun), opening: what the effects mean for ordinary people | "apa artinya bagi rumah tangga" (writer draft) | "apa artinya di kehidupan sehari-hari" | Adjie: the draft phrase is not natural | Indonesian only, this context; see bahasa-indonesia word-preferences W1 | Explicit author revision in chat, 19 Nov 2026 |
 
-No new passage-level choices have yet been recorded in this update.
 
 Apply approved choices in similar contexts, not as global substitutions. One selection
 is contextual evidence, not a universal rule. Generalise only after repeated consistent
