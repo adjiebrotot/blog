@@ -39,6 +39,36 @@ investment return, an eligibility rule or a comparison horizon, keep that condit
 it. A footnote or generic disclaimer is not a substitute. A summary may omit supporting
 figures, but not a decision-changing condition. If space is tight, narrow the claim.
 
+## Write with confidence: a qualification is not a disclaimer
+
+Adjie (November 2026, after a second round on the same post): over-disclaiming and
+over-apologising are the main problem of AI-written drafts here. A blog post is an opinion
+column. Opinions, assumptions, inferences and a hand-picked example or data source are all
+normal and need no apology. The writer states them confidently; the reader knows whose blog
+it is.
+
+A **material condition** is a fact that changes a number or a decision, written once,
+inside the claim it qualifies (the Swiss figures come from "sekitar 200 eksportir yang
+tercatat di bursa"; the remittance gain is "masih nominal"). A **disclaimer** is a sentence
+about the writer's own evidence or scope, and it is cut:
+
+- what the writer did not measure, count or check ("belum saya ukur", "and I didn't
+  compute that");
+- that a source is not peer reviewed, an early study, a working paper, a sample, a
+  correlation, or "not an official audit";
+- that two estimates differ, that a figure "cannot be attributed to X alone", that the
+  data is "not enough to conclude" something the post never claims;
+- that an opinion is only an opinion ("this is my reading, not the study's finding");
+- a scope note that lists everything the post does not do ("does not forecast, does not
+  advise trading, only looks at ..."): say in one clause what the post is about.
+
+Test for each caveat sentence: if it were deleted, would a careful reader draw a wrong
+number or make a worse decision? If not, delete it. If yes, fold the condition into the
+claim as a few words instead of a separate apologetic sentence. Never fix a weak claim by
+apologising for it: narrow the claim or drop it. Confidence is not exaggeration: the claim
+still says only what the evidence supports. The substantive editor flags
+over-disclaiming with the same weight as a missing condition.
+
 ## Minimum sufficient evidence
 
 Keep the evidence the argument needs: baseline, comparator, units, date, definition and

@@ -32,7 +32,7 @@ Prompt for the evaluator agent (fill in the path):
 
 ## Preference-aware judgement
 
-Keep the ten lenses and native-language checks. Read `references/word-preferences.md`
+Keep the eleven lenses and native-language checks. Read `references/word-preferences.md`
 and the shared voice preference reference. Apply explicit approvals in their recorded
 contexts. Do not invent author selections or generalise one choice globally.
 
@@ -65,7 +65,7 @@ patterns; a clean run proves nothing about flow or diction.
 
 Read the whole text once for the argument, then again **paragraph by paragraph, sentence by
 sentence**, including the title, description, TL;DR, headings, list items, table cells,
-captions, alt text and footnotes. For each sentence ask the two tests, then the ten lenses.
+captions, alt text and footnotes. For each sentence ask the two tests, then the eleven lenses.
 
 **The two tests**
 
@@ -75,7 +75,7 @@ captions, alt text and footnotes. For each sentence ask the two tests, then the 
    result is a natural English sentence, the Indonesian was probably built from English:
    look hard at its structure, its idiom and its subject.
 
-**The ten lenses** (report each finding under one of them)
+**The eleven lenses** (report each finding under one of them)
 
 1. **Diksi.** Is there a livelier, more idiomatic word a native writer would choose?
    (*lebih tebal* for savings, *megap-megap* for the one barely coping, *turun kelas*,
@@ -105,6 +105,10 @@ captions, alt text and footnotes. For each sentence ask the two tests, then the 
 10. **Elipsis dan gaya catatan.** A sentence missing its subject, verb or connector that
     reads like a note ("Biar fair, bahas Perth dulu.", "tiga istilah dulu"). Labels in
     lists, captions and table cells are fine.
+11. **Disclaimer dan permintaan maaf.** A sentence that apologises for the post's own data,
+    scope or opinion (*belum saya ukur*, *belum ditelaah sejawat*, *hanya sampel*, *ini
+    tafsiran saya*) is *wajib* to delete, unless it changes a number or a decision; then it
+    becomes a few words inside the claim. See `SKILL.md`, "No over-disclaiming".
 
 **Also check** the house rules: *saya-kamu* only; *gak* never standing alone; casual and
 factual words each in their layer; finance terms from the table (*imbal hasil*, *bunga

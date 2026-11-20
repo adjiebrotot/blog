@@ -23,6 +23,11 @@ Do not allow a preference to alter technical meaning, evidence or decision-chang
 | ID | Date | Topic/passage | Options | Exact author selection or own wording | Reason if given | Context/scope | Approval provenance |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | W1 | 2026-11-19 | Currency post (kurs naik turun), opening: what the effects mean for ordinary people | "apa artinya bagi rumah tangga" (writer draft) | "apa artinya di kehidupan sehari-hari" | Adjie: "apa artinya bagi rumah tangga" is not natural | Closing phrase of an opening/intro that says what an economic effect means for readers' daily life; contextual, not a global ban on "rumah tangga" (still fine as a technical term, e.g. konsumsi rumah tangga) | Explicit author revision in chat, 19 Nov 2026 |
+| W2 | 2026-11-20 | Currency post: hedged / unhedged FX debt | "lindung nilai" (writer draft) | *hedging*, with "(lindung nilai)" in brackets at first mention | Keep hedging as hedging | Finance term in Indonesian posts, all contexts | Explicit author revision in chat, 20 Nov 2026 |
+| W3 | 2026-11-20 | Currency post: a peer-reviewed version of a study | "jurnal bertelaah sejawat" | *peer review* | "jurnal bertelaah sejawat is not a thing" | All Indonesian posts | Explicit author revision in chat, 20 Nov 2026 |
+| W4 | 2026-11-20 | Currency post: capital outflows | "pelarian modal" | *capital flight* with an explanation in brackets | Keep the term people use | All Indonesian posts | Explicit author revision in chat, 20 Nov 2026 |
+| W5 | 2026-11-20 | Currency post: Bank Indonesia | `*[BI]` tooltip | "Bank Indonesia (BI)" at first use, then BI, no tooltip | "people know it is Bank Indonesia" | All Indonesian posts; BI added to EVERYDAY in check-abbr.py | Explicit author revision in chat, 20 Nov 2026 |
+| W6 | 2026-11-20 | Currency post: a country's hard-to-copy export advantage | (new passage, author's own wording) | *moat* (keunggulan yang sulit ditiru pesaing) | Author's own wording | Contextual | Author-supplied text in chat, 20 Nov 2026 |
 
 The request dated 10 November 2026
 approves this selection workflow, not specific new vocabulary. Do not backfill imagined
