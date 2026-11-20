@@ -42,13 +42,13 @@ Satu pergerakan kurs bisa nyaris tidak terasa di satu negara dan menghantam nega
 
 **2. Kredibilitas bank sentral dan alasan kurs bergerak.** Penelitian Bank Dunia menemukan bahwa *pass-through* (seberapa jauh pelemahan kurs merembet ke harga) lebih rendah di negara dengan kurs mengambang, target inflasi yang kredibel dan bank sentral yang independen.[^pt]
 
-Alasan kurs bergerak juga penting, dan dua kasus berikut menunjukkan bedanya. Pergerakan kurs riil (kurs yang sudah disesuaikan dengan inflasi) Australia selama dekade lonjakan harga ekspor tambang (*mining boom*) sebagian besar bisa dijelaskan oleh fundamental ekonomi, dan umumnya ikut menstabilkan perekonomian Australia.[^rba] Di Turki, sebaliknya, nilai lira jatuh ketika bank sentral memangkas bunga saat inflasi sedang naik, dan inflasi tahunan secara keseluruhan, bukan hanya bagian yang berasal dari pelemahan lira, mencapai puncak 85,51% pada Oktober 2022.[^turkey]
+Alasan kurs bergerak juga penting. Pergerakan kurs riil (kurs yang sudah disesuaikan dengan inflasi) Australia selama dekade lonjakan harga ekspor tambang (*mining boom*) sebagian besar bisa dijelaskan oleh fundamental ekonomi, dan umumnya ikut menstabilkan perekonomian Australia.[^rba] Di Turki, sebaliknya, nilai lira jatuh ketika bank sentral memangkas bunga saat inflasi sedang naik, dan inflasi tahunan secara keseluruhan, bukan hanya bagian yang berasal dari pelemahan lira, mencapai puncak 85,51% pada Oktober 2022.[^turkey]
 
-**3. Porsi impor dan ekspor, serta mata uang transaksinya.** Banyak perdagangan dunia dihargai dalam dolar AS, sehingga pergerakan sebuah mata uang terhadap dolar lebih menentukan harga dan arus dagang daripada pergerakannya terhadap mata uang mitra dagang.[^gopinath] Dari situ saya menyimpulkan bahwa dorongan ekspor akibat pelemahan lebih kecil kalau perdagangannya dihargai dalam dolar. Seiring waktu, inflasi dalam negeri dan bahan baku impor yang lebih mahal juga bisa menggerus keunggulan harga yang diperoleh eksportir dari pelemahan itu.
+**3. Porsi impor dan ekspor, serta mata uang transaksinya.** Banyak perdagangan dunia dihargai dalam dolar AS, sehingga pergerakan sebuah mata uang terhadap dolar lebih menentukan harga dan arus dagang daripada pergerakannya terhadap mata uang mitra dagang.[^gopinath] Dari situ dapat disimpulkan bahwa dorongan ekspor akibat pelemahan lebih kecil kalau perdagangannya dihargai dalam dolar. Karena itu, saat ini banyak negara mulai melakukan dedolarisasi dan beralih ke perdagangan bilateral menggunakan konsep *local Currency Settlement* untuk mengurangi faktor ini.
 
 Indonesia sendiri sangat bergantung pada impor untuk sebagian kebutuhan pangan dan energi. Menurut data BPS 2025, Indonesia mengimpor 11,6 juta ton gandum (100% kebutuhan) dan 2,6 juta ton kedelai (79,2% kebutuhan), sedangkan 79,6% elpiji berasal dari impor.[^katadata]
 
-Tulisan ini membahas dampak kurs yang baru terasa setelah beberapa waktu, bukan meramal ke mana kurs akan bergerak.
+Catatan sebelum mulai: tulisan ini membahas dampak kurs yang baru terasa setelah beberapa waktu, bukan meramal ke mana kurs akan bergerak.
 
 ## Apa yang terjadi dalam jangka pendek kalau mata uang menguat?
 
