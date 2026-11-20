@@ -28,7 +28,7 @@ Every evening the news tells you the Aussie dollar went up or down, like a footy
 
 The Bank for International Settlements (<span markdown="0">BIS</span>) counts this over-the-counter market every three years. In April 2025, trading averaged about US$9.5 trillion a day, up 27% from 2022.[^bis]
 
-Now add up all the shares traded through the electronic order books of the world's stock exchanges in 2024.[^wfe] Spread over about 252 trading days, that comes to about US$590 billion a day. Half of the currency market? No. A quarter? No. A tenth? Still no: about 6%, roughly one sixteenth. Picture every stock exchange on Earth, from New York to Jakarta, trading side by side. Together they are a sliver beside the currency market.
+Now add up all the shares traded through the electronic order books of the world's stock exchanges in 2024.[^wfe] Spread over about 252 trading days, that comes to about US$590 billion a day. Half of the currency market? No. A quarter? No. A tenth? Still no: about 6%, roughly one sixteenth. Picture every stock exchange on Earth, from New York to Sydney, trading side by side. Together they are a sliver beside the currency market.
 
 This is the market that sets the price of your holiday money, of imported goods, and of savings and debts held abroad. And because a rate is a price between two currencies, a stronger or weaker currency is not black and white. AUD/USD at 0.65 means A$1 buys US$0.65. With round numbers for illustration (not a forecast), if it rises to 0.70, A$1,000 buys US$700 instead of US$650. The Aussie dollar has strengthened and, in the same tick, the US dollar has weakened against it. The same rise has three faces:
 
@@ -56,35 +56,35 @@ When the Aussie dollar rises, imports get cheaper and exports get dearer. Four e
 
 ### Imports get cheaper, so inflation eases (+)
 
-**What happens.** Anything bought from abroad costs fewer Australian dollars, so prices at home rise more slowly.
+Anything bought from abroad costs fewer Australian dollars, so prices at home rise more slowly.
 
-**Example.** In the ten years to 2012, world prices of Australia's mining exports more than tripled, and the boom drove a large appreciation of the Australian dollar.[^tulip] Reserve Bank of Australia (<span markdown="0">RBA</span>) research estimates that a temporary 10% real appreciation lowers year-ended inflation by about 0.3 percentage points over the following one to two years (and real GDP by 0.3%). Across the boom decade, real exchange-rate movements had "a broadly stabilising effect" on the economy.[^manalo]
+In the ten years to 2012, world prices of Australia's mining exports more than tripled, and the boom drove a large appreciation of the Australian dollar.[^tulip] Reserve Bank of Australia (<span markdown="0">RBA</span>) research estimates that a temporary 10% real appreciation lowers year-ended inflation by about 0.3 percentage points over the following one to two years (and real GDP by 0.3%). Across the boom decade, real exchange-rate movements had "a broadly stabilising effect" on the economy.[^manalo]
 
-**Caveat.** The effect is modest in advanced economies and stronger where imports are a bigger share of household spending.[^mccarthy]
+The effect is modest in advanced economies and stronger where imports are a bigger share of household spending.[^mccarthy]
 
 ### Exporters lose profit, and jobs may come under pressure (−)
 
-**What happens.** An exporter sells in foreign currency, so each foreign dollar converts into fewer Australian dollars, while wages and rent are still paid in Australian dollars. Profit shrinks first, and hiring and investment can follow.
+An exporter sells in foreign currency, so each foreign dollar converts into fewer Australian dollars, while wages and rent are still paid in Australian dollars. Profit shrinks first, and hiring and investment can follow.
 
-**Example.** In January 2015 the Swiss National Bank ended its CHF 1.20 per euro floor, and the franc jumped. Within six months, a study of about 200 listed Swiss exporters found revenues down 16.3% on average, net profits down 20.4%. Since the floor ended, those exporters had also cut investment by 30%.[^epfl] The study measured profits and investment, not jobs, and covers listed firms, not the smaller firms that employ most workers.
+In January 2015 the Swiss National Bank ended its CHF 1.20 per euro floor, and the franc jumped. Within six months, a study of about 200 listed Swiss exporters found revenues down 16.3% on average, net profits down 20.4%. Since the floor ended, those exporters had also cut investment by 30%.[^epfl] The study measured profits and investment, not jobs, and covers listed firms, not the smaller firms that employ most workers.
 
-**Caveat.** Firms with costs in foreign currency, or with hedges, are partly protected.
+Firms with costs in foreign currency, or with hedges, are partly protected.
 
 ### Industries that compete with imports get squeezed, though mining demand softened the blow (−)
 
-**What happens.** A strong currency makes local manufacturers and farmers dearer against imports, at home and abroad.
+A strong currency makes local manufacturers and farmers dearer against imports, at home and abroad.
 
-**Example.** Australia's mining-boom appreciation weighed on manufacturing and agriculture. Yet in 2013, manufacturing output was about 5% below what it would have been without the boom. Manufacturers also supplied inputs to mining, which partly offset the strong dollar.[^tulip]
+Australia's mining-boom appreciation weighed on manufacturing and agriculture. Yet in 2013, manufacturing output was about 5% below what it would have been without the boom. Manufacturers also supplied inputs to mining, which partly offset the strong dollar.[^tulip]
 
-**Caveat.** Manufacturing's long-run decline had wider causes than the exchange rate, and this is the effect over the boom decade.
+This is the effect over the boom decade. Manufacturing's long-run decline had wider causes than the exchange rate.
 
 ### Foreign assets are worth less in the home currency (−, on paper)
 
-**What happens.** An asset held abroad is priced in a foreign currency. When your own currency strengthens, the same asset converts into fewer units of it. Nothing changed abroad; the home-currency number shrank.
+An asset held abroad is priced in a foreign currency. When your own currency strengthens, the same asset converts into fewer units of your home currency. Nothing changed abroad; the home-currency number shrank.
 
-**Example.** On 22 October 2026, Norway's sovereign wealth fund reported that the krone's strengthening reduced its value by NOK 472 billion in the third quarter. The fund was worth about NOK 22,014 billion at the end of that quarter, so the hit was roughly 2%.[^nbim]
+On 22 October 2026, Norway's sovereign wealth fund reported that the krone's strengthening reduced its value by NOK 472 billion in the third quarter. The fund was worth about NOK 22,014 billion at the end of that quarter, so the hit was roughly 2%.[^nbim]
 
-**Caveat.** It is a valuation effect in the home currency, and the assets still buy the same abroad. It matters to households with foreign savings or pensions, and where the fund helps pay for public spending, as Norway's budget draws on its fund. A saver who plans to spend in the foreign currency loses nothing.
+The assets still buy the same abroad; the loss is in their home-currency valuation. It matters to households with foreign savings or pensions, and where the fund helps pay for public spending, as Norway's budget draws on its fund. A saver who plans to spend in the foreign currency loses nothing.
 
 | Effect | Good or bad for households |
 | --- | --- |
@@ -99,11 +99,11 @@ The mirror image: imports get dearer, exports get cheaper, and debts in foreign 
 
 ### More visitors arrive, and holidays abroad cost more (+ and −)
 
-**What happens.** Your country gets cheaper for foreigners, so more of them come and spend. Your own trips abroad cost more.
+Your country gets cheaper for foreigners, so more of them come and spend. Your own trips abroad cost more.
 
-**Example.** Reserve Bank of Australia research looked at the Australian dollar's fall of about 20% in real terms from its 2013 peak. A 10% real depreciation lifts export volumes by about 3% after two years and cuts import volumes by just under 4%, and services exports, which include tourism and education, respond more strongly than goods.[^cole] Japan is one case where both sides appear. In 2024 it received a record 36.87 million visitors, who spent a record of about ¥8.1 trillion, partly because of the weak yen. In March 2024, Japanese outbound travel was still 37% below 2019.[^japan]
+Reserve Bank of Australia research looked at the Australian dollar's fall of about 20% in real terms from its 2013 peak. A 10% real depreciation lifts export volumes by about 3% after two years and cuts import volumes by just under 4%, and services exports, which include tourism and education, respond more strongly than goods.[^cole] Japan shows both the cheaper destination and the dearer trip abroad. In 2024 it received a record 36.87 million visitors, who spent a record of about ¥8.1 trillion, partly because of the weak yen. In March 2024, Japanese outbound travel was still 37% below 2019.[^japan]
 
-**Caveat.** Pent-up demand after COVID also drove Japan's tourism boom, and Japanese outbound travel was still recovering from COVID, so the 37% is not all the yen. The gain goes to tourism workers and businesses, and the cost to households that travel.
+Pent-up demand after COVID also drove Japan's tourism boom, and Japanese outbound travel was still recovering from COVID, so the 37% is not all the yen. The gain goes to tourism workers and businesses, and the cost to households that travel.
 
 <figure>
 <img src="/assets/img/fx-ill-weak-currency-split.webp" alt="Split panel. Left: a man in a navy polo with a backpack winces at the price tag of a small gift box in a shop abroad, one hand on his wallet. Right: a smiling shopkeeper in a mustard apron hands a wrapped parcel to a happy blond tourist in a sun hat who holds out banknotes" width="1456" height="1087" loading="lazy">
@@ -112,27 +112,27 @@ The mirror image: imports get dearer, exports get cheaper, and debts in foreign 
 
 ### The cost of living rises (−)
 
-**What happens.** Imported goods, and local goods made with imported parts, cost more in local currency.
+Imported goods, and local goods made with imported parts, cost more in local currency.
 
-**Example.** The pound fell about 10% after the June 2016 Brexit vote. Researchers estimated that the vote added about 1.7 percentage points to inflation in the following year, costing the average household about £404 a year. A later, peer-reviewed version of the study put the rise in prices at 2.9%, or about £870 a year per household.[^cep]
+The pound fell about 10% after the June 2016 Brexit vote. Researchers estimated that the vote added about 1.7 percentage points to inflation in the following year, costing the average household about £404 a year. A later, peer-reviewed version of the study put the rise in prices at 2.9%, or about £870 a year per household.[^cep]
 
-**Caveat.** How much of a fall reaches prices depends on the share of imports in household spending, the exchange-rate regime, and the credibility of the inflation target and the central bank.[^wb]
+How much of a fall reaches prices depends on the share of imports in household spending, the exchange-rate regime, and the credibility of the inflation target and the central bank.[^wb]
 
 ### Interest rates may rise (−)
 
-**What happens.** A central bank that fears a falling currency can raise its policy rate, so that holding the currency pays more. Loans then cost more too.
+A central bank that fears a falling currency can raise its policy rate, so that holding the currency pays more. Loans then cost more too.
 
-**Example.** Bank Indonesia raised rates by a total of 150 basis points (1.5 percentage points) between May and September 2018 to defend the rupiah.[^bi2018] On 18 November 2026 it raised its policy rate by 25 basis points to 6.00%, two days after the rupiah hit a record low of about Rp18,264 per US dollar.[^bi2026] Inflation in October 2026 was 3.23% over a year earlier, inside the 2.5% plus or minus 1 percentage point target. The bank called the hike pre-emptive, to keep inflation inside the target in 2026 and 2027 and to strengthen stability. My reading: a rise while inflation is inside the target, days after a record-low rupiah, is largely about the currency.
+Bank Indonesia raised rates by a total of 150 basis points (1.5 percentage points) between May and September 2018 to defend the rupiah.[^bi2018] On 18 November 2026 it raised its policy rate by 25 basis points to 6.00%, two days after the rupiah hit a record low of about Rp18,264 per US dollar.[^bi2026] Inflation in October 2026 was 3.23% over a year earlier, inside the 2.5% plus or minus 1 percentage point target. The bank called the hike pre-emptive, to keep inflation inside the target in 2026 and 2027 and to strengthen stability. My reading: a rise while inflation is inside the target, days after a record-low rupiah, is largely about the currency.
 
-**Caveat.** This is mainly an emerging-economy pattern, where foreign-currency debt and capital flight are real risks. Advanced economies with a floating rate usually let the currency adjust.
+This is mainly an emerging-economy pattern, where foreign-currency debt and capital flight are real risks. Advanced economies with a floating rate usually let the currency adjust.
 
 ### Debt in foreign currency gets harder to repay (−)
 
-**What happens.** If you owe in a currency you don't earn, the debt grows in your own money while your income doesn't.
+If you owe in a currency you don't earn, the debt grows in your own money while your income doesn't.
 
-**Example.** Between mid-July 1997 and early January 1998 the rupiah lost 70%, and a significant portion of Indonesia's overseas borrowing was "private short-term debt that has been unhedged".[^imf] The banking system collapsed, and economists Fane and McLeod estimated, at the time, a net cost of restructuring to taxpayers of about 40% of a year's GDP, for the whole banking crisis, not the currency fall alone.[^fane]
+Between mid-July 1997 and early January 1998 the rupiah lost 70%, and a significant portion of Indonesia's overseas borrowing was "private short-term debt that has been unhedged".[^imf] The banking system collapsed, and economists Fane and McLeod estimated, at the time, a net cost of restructuring to taxpayers of about 40% of a year's GDP, for the whole banking crisis, not the currency fall alone.[^fane]
 
-**Caveat.** It bites only where the debt is unhedged and in foreign currency. Households with local-currency debt, such as a typical Australian home loan, are hit through higher rates and job losses instead. [My debt post](/en/is-debt-bad/) covers what a loan really costs.
+The direct hit comes only where the debt is unhedged and in foreign currency. Households with local-currency debt, such as a typical Australian home loan, are hit through higher rates and job losses instead. [My debt post](/en/is-debt-bad/) covers what a loan really costs.
 
 | Effect | Good or bad for households |
 | --- | --- |
@@ -148,19 +148,19 @@ Two effects can build over years.
 
 ### Living standards can rise (+)
 
-**What happens.** A strong currency is one channel through which a country's wealth reaches households: imports cost less, so the same pay buys more.
+A strong currency is one channel through which a country's wealth reaches households: imports cost less, so the same pay buys more.
 
-**Example.** By 2013, the Australian mining boom had raised real per capita household disposable income by about 13% and real wages by about 6% (a model estimate for the whole boom, against a no-boom counterfactual).[^tulip]
+By 2013, the Australian mining boom had raised real per capita household disposable income by about 13% and real wages by about 6% (a model estimate for the whole boom, against a no-boom counterfactual).[^tulip]
 
-**Caveat.** The estimate covers the whole boom, not the strong Australian dollar alone.
+That estimate covers the whole boom, not the strong Australian dollar alone.
 
 ### Offshoring (− or mixed)
 
-**What happens.** If a strong currency stays, firms that make things at home may start making them, or buying firms, abroad.
+If the currency stays strong, firms that make things at home may start making them, or buying firms, abroad.
 
-**Example.** In a study of about 200 listed Swiss exporters, published a year after the franc jumped in January 2015, the share of their acquisitions made abroad rose from 45% to 63% after the jump, so this is early evidence, not a long-run count.[^epfl] After the 1985 Plaza Accord, when the yen surged, more-exposed Japanese industries expanded their foreign direct investment in Asia, and labour shifted from manufacturing to services in the exposed regions. Job losses were modest, which the author links to Japan's rigid labour practices. That paper is a discussion paper, not yet peer-reviewed.[^plaza]
+In a study of about 200 listed Swiss exporters, published a year after the franc jumped in January 2015, the share of their acquisitions made abroad rose from 45% to 63% after the jump, so this is early evidence, not a long-run count.[^epfl] After the 1985 Plaza Accord, when the yen surged, more-exposed Japanese industries expanded their foreign direct investment in Asia, and labour shifted from manufacturing to services in the exposed regions. Job losses were modest, which the author links to Japan's rigid labour practices. That paper is a discussion paper, not yet peer-reviewed.[^plaza]
 
-**Caveat.** The author of the Swiss study says it is hard to tell whether a given deal came from the franc or from long-term strategy. How many jobs go may depend on labour-market rules.
+The author of the Swiss study says it is hard to tell whether a given deal came from the franc or from long-term strategy. How many jobs go may depend on labour-market rules.
 
 | Effect | Good or bad for households |
 | --- | --- |
@@ -173,35 +173,35 @@ A one-off fall is a shock. A fall that does not stop is a different problem. Fou
 
 ### Remittances are worth more in local currency (+)
 
-**What happens.** Money sent home from abroad converts into more local currency.
+Money sent home from abroad converts into more local currency.
 
-**Example.** US$500 was worth about ₱21,100 at the 2012 average rate (about ₱42.23 per US dollar). At the Philippine central bank's reference rate of ₱63.813 on 16 November 2026, it is worth about ₱31,900.[^php] That compares 2012 with November 2026: fourteen years of drift, not one move.
+US$500 was worth about ₱21,100 at the 2012 average rate (about ₱42.23 per US dollar). At the Philippine central bank's reference rate of ₱63.813 on 16 November 2026, it is worth about ₱31,900.[^php] That compares 2012 with November 2026: fourteen years of drift, not one move.
 
-**Caveat.** These are nominal figures, so the gain shrinks if local prices rose too, and it helps only households that receive remittances.
+These are nominal figures, so the gain shrinks if local prices rose too, and it helps only households that receive remittances.
 
 ### Inflation can spiral (−)
 
-**What happens.** In my reading, the loop runs like this: a weaker currency makes imports dearer, dearer imports push up prices, higher prices erode trust, and the currency weakens again.
+In my reading, the loop runs like this: a weaker currency makes imports dearer, dearer imports push up prices, higher prices erode trust, and the currency weakens again.
 
-**Example.** The Turkish lira lost 44% against the US dollar in 2021, 29% in 2022, 37% in 2023 and 16% in 2024. Annual inflation peaked at 85.51% in October 2022, and Turkey cut rates while inflation was rising.[^lira]
+The Turkish lira lost 44% against the US dollar in 2021, 29% in 2022, 37% in 2023 and 16% in 2024. Annual inflation peaked at 85.51% in October 2022, and Turkey cut rates while inflation was rising.[^lira]
 
-**Caveat.** It also seems to need weak policy credibility. The 85.51% is the total inflation rate, not the share caused by the lira.
+The loop also seems to need weak policy credibility. The 85.51% is the total inflation rate, not the share caused by the lira.
 
 ### People stop trusting the local currency (−)
 
-**What happens.** When savers expect the currency to keep falling, they move into foreign currency or assets that hold value, and the state may pay to stop them.
+When savers expect the currency to keep falling, they move into foreign currency or assets that hold value, and the state may pay to stop them.
 
-**Example.** Turkey's FX-protected lira deposit scheme (*Kur Korumalı Mevduat*, <span markdown="0">KKM</span>) held up to about US$140 billion at its peak and 26.2% of all deposits in August 2023. Reuters estimated its cost to the state at nearly US$60 billion through end-2024, its own calculation and not an official audit.[^lira] A scheme that big is, in my reading, a sign that savers no longer trusted the lira on its own.
+Turkey's FX-protected lira deposit scheme (*Kur Korumalı Mevduat*, <span markdown="0">KKM</span>) held up to about US$140 billion at its peak and 26.2% of all deposits in August 2023. Reuters estimated its cost to the state at nearly US$60 billion through end-2024, its own calculation and not an official audit.[^lira] A scheme that big is, in my reading, a sign that savers no longer trusted the lira on its own.
 
-**Caveat.** The scheme shrank to about 2% of deposits after Turkey returned to orthodox policy; that alone does not show trust has returned.
+The scheme shrank to about 2% of deposits after Turkey returned to orthodox policy; that alone does not show trust has returned.
 
 ### Inflation tends to hit the poor harder (−)
 
-**What happens.** In my reading, a household that spends a larger share of its income on essentials cannot cut back much, and has no foreign assets to offset a rise in prices.
+In my reading, a household that spends a larger share of its income on essentials cannot cut back much, and has no foreign assets to offset a rise in prices.
 
-**Example.** In polls of 31,869 households in 38 countries, poorer people were more likely to name inflation as a top concern. In pooled cross-country data, high inflation tends to lower the poorest fifth's share of income and the real minimum wage, and to raise poverty.[^easterly]
+In polls of 31,869 households in 38 countries, poorer people were more likely to name inflation as a top concern. In pooled cross-country data, high inflation tends to lower the poorest fifth's share of income and the real minimum wage, and to raise poverty.[^easterly]
 
-**Caveat.** The study is about inflation in general, not about depreciation. The links are correlations, and the 38 countries are the poll sample only.
+The study is about inflation in general, not about depreciation. The links are correlations, and the 38 countries are the poll sample only.
 
 | Effect | Good or bad for households |
 | --- | --- |
