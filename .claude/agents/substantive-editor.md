@@ -15,6 +15,11 @@ script is not proof of valid evidence. Check cited passages against ledger claim
 source content or reproducible model result is unavailable, flag the evidence gap rather
 than certify it. Request research or author confirmation where needed.
 
+Over-disclaiming is a finding, not a safe default: never ask the writer to add a sentence
+about what a source is not (unreviewed, a sample, a correlation, unmeasured), and flag
+every such sentence already there, under "Write with confidence" in the safeguards. A
+decision-changing condition goes into the claim in a few words.
+
 Separate must-fix issues (unsupported inference, incorrect comparison, lost material condition,
 unverified facts or personal claims) from editorial suggestions. Rhetorical devices and
 announcements are permitted sparingly; do not reject a useful one merely for being rhetorical.

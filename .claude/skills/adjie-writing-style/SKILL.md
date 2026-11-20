@@ -171,7 +171,12 @@ Evidence, personal provenance and material conditions take precedence over a sty
 - **No over-disclaiming.** A cliché, a saying, a figure of speech, a clearly identified rough guess or Adjie's
   supplied/confirmed experience is used naturally, subject to the editorial safeguards. Don't add "this is only a saying", don't correct it, and
   don't hang a disclaimer on it. Caveats belong only where they change a number or a
-  decision.
+  decision. The same goes for evidence and opinions: write with confidence, and never
+  apologise for an assumption, an opinion, a hand-picked source or data that is not 100%
+  complete (no "I haven't measured", "not peer reviewed", "only a sample", "the two
+  estimates differ", "this is my interpretation"). Adjie calls over-disclaiming the main
+  problem of AI drafts; the test and examples are in `references/editorial-safeguards.md`,
+  "Write with confidence".
 - **No em-dashes.** Use a colon, comma, parentheses or a full stop.
 - **Maths.** A simple sum used for emphasis stays as text in the sentence, for example
   "(12,000 - 10,000) / 10,000 = 20%!". Real maths and formulae use KaTeX (`$$ ... $$`).

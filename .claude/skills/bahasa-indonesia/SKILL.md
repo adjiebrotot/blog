@@ -349,6 +349,11 @@ make it understandable:
   adil* or *supaya adil* (not *biar fair* in narrative; keep *biar fair* for quoted
   speech).
 
+Finance and research terms Adjie keeps in English (November 2026): *hedging*, glossed once
+as *hedging* (lindung nilai) and bare after that; *peer review* (never *telaah sejawat* or
+*bertelaah sejawat*, which nobody says); *capital flight* (pelarian modal ke luar negeri);
+*moat* (keunggulan yang sulit ditiru pesaing). Write *diminimalkan*, not *diminimalisir*.
+
 Don't translate a term just because a dictionary word exists: *values* (not *nilai
 hidup*), *tool* (for the Adjie Brotools tools, never *alat*), *opportunity cost* (not
 *biaya peluang*), *input* (not *masukan*), *market* and *hot* in a casual sentence ("Itu
@@ -379,7 +384,7 @@ follows this skill:
   No line for:
   - physical and currency units: m, cm, km, MW, kWh, RMB, CNY, NOK, CN (dalam CN¥);
   - everyday words for Indonesian readers: HP, UU, PNS, DPR, S2, BUMN, PT, RI, KPR, DP,
-    BPS, PDB, BPJS, NIK, NPWP, PHK, BBM, UMKM, APBN, PLN, LSM, Polri, MRT, LRT, KRL, IKN,
+    BPS, PDB, BPJS, NIK, NPWP, BI (write "Bank Indonesia (BI)" at first use, no tooltip), PHK, BBM, UMKM, APBN, PLN, LSM, Polri, MRT, LRT, KRL, IKN,
     KAI, and the very obvious (*vs*, *dll*, *US*, *AS*). The rule of thumb: when a term
     appears more than 3 times, ask whether even the least specialised reader knows it;
     if so, delete its line instead of putting a tooltip on every use;
@@ -399,6 +404,26 @@ An opinion or an inference needs one marker (*Menurut saya*, *saya menyimpulkan*
 second sentence apologising for it ("ini tafsiran saya, bukan hasil penelitian"). Adjie:
 assuming is normal in a blog and needs no apology. Keep a caveat only where it changes a
 number or a reader's decision (`adjie-writing-style`, "No over-disclaiming").
+
+Adjie repeated it in a second round on the currency post: over-disclaiming and
+over-apologising are the main problem. Write like a confident columnist. Phrases that
+signal a disclaimer to delete: *belum saya ukur*, *tidak saya hitung*, *belum ditelaah
+sejawat*, *bukan audit resmi*, *hanya sampel*, *berupa korelasi*, *tidak bisa dikaitkan
+dengan X saja*, *dua versi risetnya saja sudah berbeda jauh*, *data yang saya pakai tidak
+cukup untuk menyimpulkan*, *satu catatan tentang ruang lingkup*, *belum membuktikan bahwa*.
+`cek.py` flags them as "over-disclaiming?". A scope note is one clause about what the post
+does ("Tulisan ini membahas dampak kurs yang baru terasa setelah beberapa waktu, bukan
+meramal ke mana kurs akan bergerak"), not a list of what it doesn't. Test and examples:
+`adjie-writing-style/references/editorial-safeguards.md`, "Write with confidence".
+
+### Relate it to Indonesia
+
+An Indonesian post explains a foreign case to Indonesian readers. Drop a detail that only
+matters to the foreign country (the Australian mining sector's demand for manufacturing),
+and bring the point home with an Indonesian case the reader knows: coal and palm oil
+exporters for a strong rupiah, TKDN for why cheaper imports barely lower prices, KPR
+borrowers for a rate rise. The Indonesian link is stated with confidence, not with
+"riset itu tidak mengukurnya".
 
 ## No bragging
 
@@ -514,7 +539,7 @@ that has read the English twin reads a calque as fine. So:
    Fix every ERROR. Every REVIEW line is a sentence to read again and fix unless the
    choice is deliberate and defensible.
 2. **Run the evaluator** in [`references/evaluator.md`](references/evaluator.md): a
-   sentence-by-sentence read through ten lenses, with a written verdict. For a new post or
+   sentence-by-sentence read through eleven lenses, with a written verdict. For a new post or
    a rewrite, the evaluator is a fresh agent that has not seen the English (spawn one with
    the prompt in that file). For a small edit, run it yourself on the changed paragraphs
    and the ones around them.

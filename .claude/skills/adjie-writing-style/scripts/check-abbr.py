@@ -56,7 +56,7 @@ EVERYDAY = {
         "DPR", "MPR", "UU", "PNS", "ASN", "HP", "S1", "S2", "S3", "SD", "SMP", "SMA", "SMK",
         "KTP", "SIM", "NIK", "BUMN", "PT", "CV", "Tbk", "RI", "TNI", "Polri", "KRL", "MRT",
         "LRT", "BBM", "PHK", "UMKM", "DKI", "BPJS", "PLN", "LSM", "DP", "KPR", "PBB", "WNI",
-        "WNA", "PDB", "HI", "Pemda", "pemda", "Plt", "Plt.", "Presiden", "BPS", "APBN",
+        "WNA", "PDB", "HI", "BI", "Pemda", "pemda", "Plt", "Plt.", "Presiden", "BPS", "APBN",
         "Jabodetabek", "IKN", "KAI", "NPWP",
     },
     "en": EVERYDAY_ANY | {"PM", "MP", "MPs", "NGO", "NGOs", "GDP"},

@@ -44,6 +44,25 @@ CALQUES = [
     (r"\bmedian bersumber\b", "'nilai median dari sumber yang jelas'"),
     (r"\bribetnya juga nyata\b", "calque of 'the hassle is real'"),
     (r"\btidak mengklaim apa-apa\b", "calque of 'I make no claim'"),
+    (r"\b(ber)?telaah sejawat\b|\bditelaah sejawat\b", "not a thing Indonesians say: '*peer review*'"),
+    (r"\bdiminimalisir\b", "non-baku: 'diminimalkan', 'ditekan'"),
+]
+
+# Over-disclaiming (Adjie, Nov 2026): a sentence that apologises for the post's own
+# evidence, scope or opinion. Delete it, or keep the one fact that changes a decision.
+DISCLAIM = [
+    r"\bbelum saya (ukur|hitung|teliti|periksa)\b",
+    r"\btidak saya (ukur|hitung|teliti|periksa)\b",
+    r"\b(tafsiran|penafsiran|pembacaan) saya, bukan\b",
+    r"\bbukan (audit resmi|data dan bukan ramalan|hasil penelitian)\b",
+    r"\bbelum (ditelaah|melalui peer review|di-?\*?review)\b",
+    r"\btidak bisa dikaitkan dengan .{1,40} saja\b",
+    r"\bhanya sampel\b|\btidak sepenuhnya mewakili\b",
+    r"\bsatu catatan tentang ruang lingkup\b",
+    r"\bdata yang saya pakai tidak cukup\b",
+    r"\bsaja sudah berbeda jauh\b",
+    r"\bhubungan yang ditemukannya berupa korelasi\b",
+    r"\bbelum membuktikan bahwa\b",
 ]
 
 # Percentage points are valid terminology, not a calque. Never substitute persen
@@ -79,7 +98,7 @@ FOREIGN = [
     "liquid asset thinking", "cost-saving thinking", "replacement level", "resident",
     "work permit", "work pass", "developed market", "capital freedom", "developer",
     "public service", "relief", "superannuation", "permanent resident", "disposable income",
-    "cost of living",
+    "cost of living", "hedging", "peer review", "capital flight", "moat",
 ]
 # Proper names and tool labels that contain those words but are not italicised.
 PROPER = [
@@ -216,6 +235,11 @@ def check(path):
         for pat, hint in FALSE_FRIENDS:
             if re.search(pat, raw):
                 add("REVIEW", path, ln, "false friend / calque", plain, hint)
+        for pat in DISCLAIM:
+            if re.search(pat, plain, re.I):
+                add("REVIEW", path, ln, "over-disclaiming?", plain,
+                    "apologises for the post's own data, scope or opinion: delete it unless it changes a number or a decision")
+                break
         if PERSONIFICATION.search(plain):
             add("ERROR", path, ln, "personified place", plain,
                 "a city or market cannot speak: 'di Perth lebih untung membeli'")

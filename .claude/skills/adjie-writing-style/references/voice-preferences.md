@@ -30,6 +30,8 @@ list when appropriate; do not impose an Indonesian choice on English.
 | ID | Language | Date | Topic and passage context | Alternatives considered | Exact author choice or own wording | Author reason, if supplied | Scope | Provenance |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | P1 | ID | 2026-11-19 | Currency post (kurs naik turun), opening: what the effects mean for ordinary people | "apa artinya bagi rumah tangga" (writer draft) | "apa artinya di kehidupan sehari-hari" | Adjie: the draft phrase is not natural | Indonesian only, this context; see bahasa-indonesia word-preferences W1 | Explicit author revision in chat, 19 Nov 2026 |
+| P2 | ID | 2026-11-20 | Currency post: finance terms (hedging, peer review, capital flight, BI, moat) | Indonesian equivalents (lindung nilai, telaah sejawat, pelarian modal, BI tooltip) | Keep the English term, glossed once in brackets; BI spelled out at first use | Adjie: keep the term people use; "telaah sejawat is not a thing" | Indonesian only; see word-preferences W2 to W6 | Explicit author revision in chat, 20 Nov 2026 |
+| P3 | ALL | 2026-11-20 | Currency post, whole text: caveats about own data, scope and opinions | Writer and editor drafts with disclaimers | Write with confidence; no apology for opinions, assumptions or a hand-picked source | "Overdisclaiming and overapologizing are still the main problem" | All posts, all languages; editorial-safeguards "Write with confidence" | Explicit author instruction in chat, 20 Nov 2026 |
 
 
 Apply approved choices in similar contexts, not as global substitutions. One selection

@@ -175,3 +175,29 @@ buruk?", and the section was rewritten as flowing sentences with real transition
 (*sehingga*, *karena*, *Artinya*). Adjie's wording for the OTC term:
 "langsung antarpihak (*over-the-counter*, di luar bursa)": keep the foreign term in
 italics, gloss it in brackets.
+
+## Kurs dan kehidupan sehari-hari, putaran kedua (20 November 2026)
+
+Adjie: "Overdisclaiming and overapologizing are still the main problem. You don't need to
+disclaim for something that is an opinion, assumption, or even slightly cherrypicked data
+source. Everything is normal in a blog post. You need to be confident in your writing."
+The rule now lives in `adjie-writing-style/references/editorial-safeguards.md`, "Write with
+confidence", and `cek.py` flags the phrases below as "over-disclaiming?".
+
+| Before | After | Why |
+| --- | --- | --- |
+| tanpa lindung nilai | tanpa *hedging* (lindung nilai), then *hedging* | Keep the term people use, gloss once. |
+| Data impor yang saya pakai tidak cukup untuk menyimpulkan bahwa Indonesia merupakan pengimpor bersih, tetapi ... | Indonesia sendiri sangat bergantung pada impor untuk sebagian kebutuhan pangan dan energi. | Apology for a claim the post never makes. |
+| Seberapa jauh pelemahan rupiah sampai ke harga eceran belum saya ukur, ... | (deleted) | What the writer didn't measure is not the reader's business. |
+| Satu catatan tentang ruang lingkup: ... hanya melihat akibat ..., tidak meramal arah kurs dan tidak menyarankan siapa pun memperdagangkan mata uang. | Tulisan ini membahas dampak kurs yang baru terasa setelah beberapa waktu, bukan meramal ke mana kurs akan bergerak. | A scope note is one clause about what the post does. |
+| Untuk Indonesia, penurunan harga barang yang hampir seluruhnya diimpor, seperti gandum, mungkin paling terasa, tetapi riset tentang Australia itu tidak mengukurnya. | Bagi Indonesia, dampak positif penguatan kurs mungkin paling terasa pada barang yang diimpor seperti gandum, tetapi kebijakan proteksionis seperti TKDN membuat dampaknya pada barang-barang lain cenderung minimal. | Confusing and wrong; relate it to an Indonesian policy. |
+| eksportir yang pendapatannya dalam dolar dan biayanya dalam rupiah mungkin ikut tertekan | ..., seperti perusahaan tambang batu bara dan perkebunan kelapa sawit, ikut tertekan | Name the Indonesian exporters. |
+| Industri ... tertekan, meski permintaan sektor tambang meredam pukulannya | Industri yang bersaing dengan impor tertekan | Too Australia-specific for Indonesian readers. |
+| Penurunan manufaktur dalam jangka panjang punya sebab yang lebih luas daripada kurs, sehingga ... kurs hanyalah satu dari beberapa penyebab yang perlu diperiksa. | Lonjakan kurs dalam waktu singkat pun bisa berakibat panjang ... perusahaan bisa mengurangi produksi, menutup sebagian pabriknya, atau lebih buruk lagi, bangkrut. ... membuka lagi pabrik yang sudah tutup tidak bisa dilakukan dalam semalam. | Confusing and not relatable; say what happens to a firm. |
+| Versi yang terbit di jurnal bertelaah sejawat ... Angka untuk Inggris itu ..., dan dua versi risetnya saja sudah berbeda jauh. | Versi yang sudah melalui *peer review* ... (disclaimer deleted) | *telaah sejawat* is not a thing; no need to point at the gap. |
+| `*[BI]: Bank Indonesia` | Bank Indonesia (BI) at first use, no tooltip | Everyone knows BI. |
+| pelarian modal | *capital flight* (pelarian modal ke luar negeri) | Keep the term people use. |
+| memberatkan peminjam ... [tulisan tentang utang] | memberatkan peminjam, termasuk orang yang mengambil KPR ... [tulisan tentang sewa atau beli rumah dengan KPR] | Relatable borrower; link the KPR post. |
+| Karena itu, menurut saya, dalam kasus Australia kurs yang kuat hanya menjadi saluran bagi kemakmuran yang sudah ada, bukan sumbernya. | Sama seperti dalam jangka pendek, manfaat ini hanya bisa terasa bila negara tidak proteksionis terhadap barang impor, ... | Tie it to the Indonesian point (TKDN). |
+| Studi tentang Plaza Accord itu belum ditelaah sejawat, dan bukti dari Swiss pun masih berada di tahap awal ... | Namun, dampak ini bisa diminimalkan apabila negara memang memiliki *moat* ... bijih besi, litium dan nikel yang produksinya tidak bisa dipindahkan ke luar negeri. | Delete the disclaimer; make the counterpoint. |
+| (angka bulat, bukan data dan bukan ramalan); dan itu tidak saya hitung; (hitungan Reuters sendiri, bukan audit resmi); Menyusutnya KKM belum membuktikan ...; Studi yang saya pakai ... berupa korelasi. Ke-38 negara itu pun hanya sampel ... | dengan angka bulat; (deleted); menurut hitungan Reuters; (deleted); Karena itu, kalau pelemahan rupiah berujung pada inflasi tinggi, ... | Same rule, applied through the rest of the post. |
