@@ -13,7 +13,7 @@ keywords: [rupiah menguat, rupiah melemah, dampak kurs, biaya hidup, utang valut
 bmc_message: "Kurs boleh naik turun, tetapi semangat saya menulis tetap stabil kalau ada kopi susu dari kamu!"
 ---
 
-**Singkatnya:** Rupiah yang kuat atau lemah tidak otomatis baik atau buruk bagimu. Rupiah menguat membuat belanja ke luar negeri lebih murah, tetapi menekan eksportir dan produsen yang bersaing dengan impor. Rupiah melemah membantu eksportir dan pariwisata, tetapi menaikkan biaya impor dan beban utang valas tanpa *hedging*, serta bisa mendorong bunga naik. Periksa mata uang penghasilan, belanja, tabungan, dan utangmu, serta alasan kurs bergerak. Dalam jangka panjang, kebijakan yang dipercaya dan produktivitas lebih penting daripada arah panah di papan kurs.
+**Singkatnya:** Rupiah yang kuat atau lemah tidak otomatis baik atau buruk bagimu. Penguatan rupiah membuat belanja ke luar negeri lebih murah, tetapi menekan eksportir dan produsen yang bersaing dengan impor. Pelemahan rupiah membantu eksportir dan pariwisata, tetapi menaikkan biaya impor dan beban utang valas tanpa *hedging*, serta bisa mendorong bunga naik. Periksa mata uang penghasilan, belanja, tabungan, dan utangmu, serta alasan kurs bergerak. Dalam jangka panjang, kebijakan yang dipercaya dan produktivitas lebih penting daripada arah panah di papan kurs.
 {: .tldr}
 
 * TOC
@@ -33,21 +33,21 @@ Pertanyaan yang lebih dekat dengan hidup kita bukan ke mana kurs akan bergerak, 
 
 ## Kenapa pergerakan kurs yang sama bisa berbeda dampaknya di tiap negara?
 
-Waktu tinggal di Indonesia, saya merasa pelemahan rupiah seperti kabar buruk yang terus berulang. Kesannya sederhana: dolar naik, keadaan kita memburuk. Padahal eksportir yang dibayar dalam dolar mengalami hal yang berbeda dari keluarga yang sedang menabung untuk biaya kuliah anak di luar negeri.
+Waktu tinggal di Indonesia, saya merasa pelemahan rupiah seperti kabar buruk yang terus berulang. Kesannya sederhana: dolar naik, keadaan kita memburuk, padahal eksportir yang dibayar dalam dolar mengalami hal yang berbeda dari keluarga yang sedang menabung untuk biaya kuliah anak di luar negeri.
 
-China sering menjadi contoh tandingannya, karena eksportirnya diuntungkan oleh mata uang yang relatif murah.[^china-analisis] Bank sentral China sendiri menyatakan ingin menjaga renminbi tetap stabil pada tingkat yang wajar dan seimbang.[^china]
+China sering dijadikan contoh sebaliknya, karena eksportirnya diuntungkan oleh mata uang yang relatif murah,[^china-analisis] sementara bank sentralnya menyatakan ingin menjaga renminbi tetap stabil pada tingkat yang wajar dan seimbang.[^china]
 
 Menurut saya, ada tiga faktor yang paling menentukan.
 
-**1. Utang dan aset dalam mata uang asing.** Kalau utangmu dalam dolar tetapi penghasilanmu dalam rupiah, rupiah yang melemah membuat pokok dan bunga lebih berat. Bebannya jauh lebih ringan kalau kamu juga menerima dolar atau memakai *hedging* (lindung nilai) untuk mengunci kurs pembayaran, sehingga yang menentukan risikonya adalah selisih mata uang yang tidak dilindungi, bukan besar utangnya.[^krisis] Aset luar negeri bekerja ke arah sebaliknya: rupiah yang melemah menaikkan nilai rupiah dari saham atau obligasi di luar negeri, dan dana investasi Norwegia adalah contoh terbesarnya.[^norwegia]
+**1. Utang dan aset dalam mata uang asing.** Kalau utangmu dalam dolar tetapi penghasilanmu dalam rupiah, rupiah yang melemah membuat pokok dan bunga lebih berat. Bebannya jauh lebih ringan kalau kamu juga menerima dolar atau memakai *hedging* (lindung nilai) untuk mengunci kurs pembayaran, sehingga yang menentukan risikonya adalah *currency mismatch* (utang dan penghasilan dalam mata uang berbeda) tanpa *hedging*, bukan besar utangnya.[^krisis] Aset luar negeri justru kebalikannya: rupiah yang melemah menaikkan nilai rupiah dari saham atau obligasi di luar negeri, dan dana investasi Norwegia adalah contoh terbesarnya.[^norwegia]
 
 **2. Alasan kurs bergerak dan kredibilitas bank sentral.** Kurs bergerak karena harga komoditas, perdagangan, perubahan bunga, atau arus modal. Pergerakan semacam itu adalah penyesuaian ekonomi, sedangkan kurs yang jatuh karena orang tidak lagi percaya pada kebijakan ekonomi punya sifat yang sama sekali berbeda.
 
-Reserve Bank of Australia punya dua tujuan, yaitu kestabilan harga dan kesempatan kerja penuh, dengan sasaran inflasi 2 sampai 3 persen, tanpa menyebut kurs sama sekali.[^mandat] Mandat Bank Indonesia (BI) lain. Tujuan BI adalah menjaga stabilitas nilai rupiah, yang mencakup kestabilan nilai terhadap barang dan jasa, tampak pada inflasi, serta kestabilan terhadap mata uang negara lain, tampak pada kurs rupiah.[^bi-tujuan] Karena kestabilan terhadap mata uang lain disebut eksplisit dalam mandatnya, BI diharapkan turun ke pasar valas dan memakai suku bunga ketika rupiah jatuh dengan cepat.
+Reserve Bank of Australia punya dua tujuan, yaitu kestabilan harga dan kesempatan kerja penuh, dengan sasaran inflasi 2 sampai 3 persen, tanpa menyebut kurs sama sekali.[^mandat] Mandat Bank Indonesia (BI) berbeda. Tujuan BI adalah menjaga stabilitas nilai rupiah, yang mencakup kestabilan nilai terhadap barang dan jasa, tampak pada inflasi, serta kestabilan terhadap mata uang negara lain, tampak pada kurs rupiah.[^bi-tujuan] Karena kestabilan terhadap mata uang lain disebut eksplisit dalam mandatnya, BI diharapkan turun ke pasar valas dan memakai suku bunga ketika rupiah jatuh dengan cepat.
 
-Kita patut waspada ketika bank sentral terus didorong membiayai belanja pemerintah sementara inflasi dan kepercayaan memburuk. Pembelian obligasi oleh bank sentral, atau *quantitative easing* (pelonggaran moneter lewat pembelian aset), sendiri adalah alat yang lazim: Bank of England memakainya dengan menciptakan cadangan bank untuk membeli obligasi demi sasaran inflasi 2%.[^qe] Yang dinilai adalah tujuan dan disiplinnya, bukan sebutan "mencetak uang".
+Kita patut waspada ketika bank sentral terus didorong membiayai belanja pemerintah sementara inflasi dan kepercayaan memburuk. Pembelian obligasi oleh bank sentral, atau *quantitative easing* (pelonggaran moneter lewat pembelian aset), pada dasarnya adalah alat yang lazim: Bank of England memakainya dengan menciptakan cadangan bank untuk membeli obligasi demi sasaran inflasi 2%.[^qe] Yang menentukan adalah tujuan dan disiplin bank sentral, bukan sebutan "mencetak uang".
 
-**3. Posisi perdagangan dan mata uang tagihan.** Importir diuntungkan oleh mata uang yang kuat, karena barang luar negeri butuh lebih sedikit uang lokal, sedangkan eksportir diuntungkan oleh mata uang yang lemah. Kalau ekspor ditagih dalam dolar, pembeli asing tidak melihat diskon, melainkan eksportir yang menerima lebih banyak rupiah dari tagihan dolar yang sama.[^kurs] Ada juga kecenderungan yang menyeimbangkan: impor membutuhkan valas, sedangkan penerimaan ekspor yang ditukar menambah permintaan mata uang lokal. Arus modal, tabungan eksportir di luar negeri, dan kebijakan pemerintah bisa mengalahkan kecenderungan itu, seperti pada China yang surplus perdagangannya besar tetapi renminbinya tetap relatif murah.[^china-analisis]
+**3. Posisi perdagangan dan mata uang transaksi.** Importir diuntungkan oleh mata uang yang kuat, karena untuk membeli barang luar negeri mereka cukup mengeluarkan lebih sedikit rupiah, sedangkan eksportir diuntungkan oleh mata uang yang lemah. Kalau ekspor ditagih dalam dolar, pembeli asing tidak melihat diskon, melainkan eksportir yang menerima lebih banyak rupiah dari tagihan dolar yang sama.[^kurs] Di China, arus modal, tabungan eksportir di luar negeri, dan kebijakan pemerintah membuat renminbi tetap relatif murah, meski surplus perdagangannya besar.[^china-analisis]
 
 ## Apa yang terjadi dalam jangka pendek kalau mata uang menguat?
 
@@ -57,7 +57,7 @@ Dalam jangka pendek, penguatan menambah daya beli kita di luar negeri, tetapi me
 
 Barang impor, mesin produksi, biaya kuliah, dan liburan ke luar negeri menjadi lebih terjangkau. Gajimu tidak perlu naik agar kamu bisa membeli lebih banyak barang yang harganya dalam mata uang asing.
 
-Australia merasakannya saat *mining boom* (lonjakan harga tambang yang diekspornya). Menurut perkiraan model Reserve Bank of Australia, seluruh *mining boom*, dengan dolar yang menguat sebagai salah satu salurannya, membuat pendapatan rumah tangga per orang setelah pajak dan disesuaikan dengan inflasi pada 2013 sekitar 13% lebih tinggi daripada tanpa *mining boom*.[^tambang]
+Australia merasakannya saat *mining boom* (lonjakan harga komoditas tambang yang diekspornya). Menurut perkiraan model Reserve Bank of Australia, seluruh *mining boom*, dengan dolar yang menguat sebagai salah satu salurannya, membuat pendapatan rumah tangga per orang setelah pajak dan disesuaikan dengan inflasi pada 2013 sekitar 13% lebih tinggi daripada tanpa *mining boom*.[^tambang]
 
 Bagi Indonesia, manfaat penguatan rupiah mungkin paling terasa pada barang impor seperti gandum. Lain ceritanya dengan iPhone: karena aturan Tingkat Komponen Dalam Negeri (<span markdown="0">TKDN</span>), rupiah yang menguat pun mungkin tidak membuat harga iPhone di toko-toko kita ikut turun.[^tkdn]
 
@@ -65,17 +65,17 @@ Bagi Indonesia, manfaat penguatan rupiah mungkin paling terasa pada barang impor
 
 Bagi pembeli, barang impor yang lebih murah menyenangkan. Bagi produsen lokal yang menjual barang sejenis, pesaing asingnya bisa menurunkan harga tanpa harus menjadi lebih efisien. Menurut perkiraan model Reserve Bank of Australia, seluruh *mining boom* membuat produksi manufaktur Australia pada 2013 sekitar 5% lebih rendah daripada tanpa lonjakan harga tambang tersebut.[^tambang]
 
-Pabrik yang sempat tutup tidak akan buka lagi hanya karena kurs kembali melemah: perusahaan perlu modal, pekerja terampil, dan jaringan pemasok untuk membangun kapasitasnya dari awal. Pertahanan yang lebih baik adalah kualitas, teknologi, atau layanan yang sulit ditiru, bukan harga yang selalu paling murah. Proteksionisme yang terukur bisa memberi waktu untuk beradaptasi, dengan harga berupa biaya yang ditanggung pembeli dan usaha yang memakai bahan bakunya.
+Pabrik yang sempat tutup tidak akan buka lagi hanya karena kurs kembali melemah: perusahaan perlu modal, pekerja terampil, dan jaringan pemasok untuk membangun kapasitasnya dari awal. Cara bertahan yang lebih baik adalah lewat kualitas, teknologi, atau layanan yang sulit ditiru, bukan harga yang selalu paling murah. Proteksionisme yang terukur bisa memberi waktu untuk beradaptasi, tetapi biayanya ditanggung pembeli dan usaha yang memakai bahan bakunya.
 
 ### Penerimaan ekspor menyusut, jadi eksportir kehilangan margin (−)
 
 Contoh penguatan yang datang mendadak terjadi di Swiss. Pada Januari 2015, bank sentral Swiss mencabut batas bawah kurs 1,20 franc per euro. Dalam sampel sekitar 200 perusahaan Swiss yang tercatat di bursa, pendapatan eksportir turun rata-rata 16,3% dan laba bersihnya turun 20,4% dalam enam bulan berikutnya. Sejak batas bawah itu dicabut, mereka juga memangkas investasi 30%.[^epfl]
 
-Penyebabnya, biaya produksi dibayar dalam franc, sedangkan penjualan menghasilkan euro, sehingga euro yang sama membayar lebih sedikit biaya di Swiss. Kalau perusahaan menaikkan harga dalam euro untuk menjaga laba, pelanggan bisa beralih ke pesaing. Di Indonesia, eksportir batu bara dan kelapa sawit yang pendapatannya dalam dolar tetapi sebagian besar biayanya dalam rupiah ikut tertekan kalau rupiah menguat tajam.
+Penyebabnya adalah biaya produksi dibayar dalam franc, sedangkan penjualan menghasilkan euro, sehingga setiap euro hanya cukup menutup biaya yang lebih kecil di Swiss. Kalau perusahaan menaikkan harga dalam euro untuk menjaga laba, pelanggan bisa beralih ke pesaing. Di Indonesia, eksportir batu bara dan kelapa sawit yang pendapatannya dalam dolar tetapi sebagian besar biayanya dalam rupiah ikut tertekan kalau rupiah menguat tajam.
 
 Pekerja merasakannya lewat investasi yang dipangkas ketika margin menyusut, karena investasi baru jugalah yang membuka lowongan baru.
 
-### Aset luar negeri bernilai lebih kecil di dalam negeri, jadi kekayaan turun di atas kertas (−, di atas kertas)
+### Aset luar negeri bernilai lebih kecil dalam mata uang sendiri (−, di atas kertas)
 
 Pada kuartal III 2026, penguatan krone memangkas nilai dana investasi Norwegia sebesar NOK 472 miliar, sekitar 2% dari nilai dana yang mencapai NOK 22.014 miliar.[^norwegia] Angka itu baru terasa ketika uangnya dipakai di dalam negeri: anggaran Norwegia mengambil dari dana ini dengan patokan imbal hasil riil 3%, dan perubahan besar nilai dana diratakan selama beberapa tahun.[^anggaran]
 
@@ -96,7 +96,7 @@ Dalam jangka pendek, pelemahan membuat pariwisata dan ekspor lebih kompetitif, t
 
 Mata uang yang melemah membuat hotel, makanan, dan jasa lokal lebih murah bagi wisatawan yang membawa valas. Jepang menerima 36,9 juta pengunjung internasional pada 2024, naik dari 31,9 juta pada 2019, dan yen yang lemah ikut membantu. Sisi sebaliknya dirasakan warga Jepang sendiri: perjalanan mereka ke luar negeri pada 2024 mencapai 13,0 juta, baru sekitar 70% dari tingkat 2019, sebagian karena yen yang lemah.[^jepang]
 
-Barang ekspor China menunjukkan sisi yang sama. Robin Brooks dari Brookings memperkirakan pada Maret 2025 bahwa kurs efektif riil renminbi, yaitu kurs terhadap mata uang mitra dagang yang sudah disesuaikan dengan inflasi, terlalu rendah lebih dari 20% kalau surplus transaksi berjalan yang seimbang dianggap 0,5%, dan masih lebih dari 10% kalau dianggap 2%. Ia menunjuk surplus perdagangan non-komoditas China yang besar dan terus tumbuh.[^china-analisis] Menurut saya, renminbi yang relatif murah inilah yang membuat barang China tetap kompetitif di luar negeri.
+Barang ekspor China memperlihatkan hal yang sama. Robin Brooks dari Brookings memperkirakan pada Maret 2025 bahwa kurs efektif riil renminbi, yaitu kurs terhadap mata uang mitra dagang yang sudah disesuaikan dengan inflasi, terlalu rendah lebih dari 20% kalau surplus transaksi berjalan yang dianggap seimbang adalah 0,5%, dan masih lebih dari 10% kalau 2%. Ia menunjuk surplus perdagangan non-komoditas China yang besar dan terus tumbuh.[^china-analisis] Menurut saya, renminbi yang relatif murah inilah yang membuat barang China tetap kompetitif di luar negeri.
 
 <img src="/assets/img/fx-ill-weak-currency-split.webp" alt="Pelancong kesulitan membeli barang di luar negeri, sementara pemilik toko lokal melayani wisatawan asing" width="1456" height="1087" loading="lazy">
 
@@ -110,23 +110,23 @@ Mi instan dan tempe diproduksi di Indonesia, tetapi sebagian besar bahan bakunya
 | Kedelai | 2,6 juta ton, setara 79,2% kebutuhan nasional | Bahan baku tahu dan tempe |
 | Elpiji | 79,6% kebutuhan dipenuhi lewat impor | Bahan bakar memasak |
 
-Perusahaan yang punya stok lama atau memakai *hedging* bisa menunda kenaikan harga sampai stoknya habis. Kalau pemerintah menahan harga lewat subsidi, biayanya berpindah ke APBN.
+Kenaikan biaya itu akhirnya sampai ke harga di warung, atau berpindah ke APBN kalau pemerintah menahan harga lewat subsidi.
 
 ### Rupiah melemah, jadi bunga bisa naik dan cicilan makin berat (−)
 
 Kalau pelemahan mata uang mengancam inflasi atau stabilitas keuangan, bank sentral bisa menaikkan bunga. Langkah ini disebut *contractionary monetary policy*, yaitu memperketat pembiayaan untuk meredam permintaan dan harga, sekaligus menopang kurs.[^kurs]
 
-Indonesia sudah mengalaminya: antara Mei dan September 2018, Bank Indonesia menaikkan suku bunga acuan 150 basis poin (1,5 poin persentase) untuk membela rupiah.[^bi2018] Pada 18 November 2026, BI menaikkan BI-Rate 25 basis poin menjadi 6,00%, dua hari setelah rupiah mencatat rekor terendah sekitar Rp18.264 per dolar AS pada 16 November. BI menyebutnya langkah berjaga-jaga (*pre-emptive*) agar inflasi tetap dalam sasaran 2,5% ± 1%, ketika inflasi Oktober 2026 sudah 3,23% dibandingkan setahun sebelumnya.[^bi2026]
+Indonesia sudah mengalaminya: antara Mei dan September 2018, Bank Indonesia menaikkan suku bunga acuan 150 basis poin (1,5 poin persentase) untuk menopang rupiah.[^bi2018] Pada 18 November 2026, BI menaikkan BI-Rate 25 basis poin menjadi 6,00%, dua hari setelah rupiah mencatat rekor terendah sekitar Rp18.264 per dolar AS pada 16 November. BI menyebutnya langkah berjaga-jaga (*pre-emptive*) agar inflasi tetap dalam sasaran 2,5% ± 1%, ketika inflasi Oktober 2026 sudah 3,23% dibandingkan setahun sebelumnya.[^bi2026]
 
-Bunga yang naik membuat peminjam membayar lebih, termasuk pemegang KPR dengan bunga *floating* dan orang yang masa bunga *fixed*-nya berakhir. Hitungan cicilan ini saya bahas dalam [tulisan tentang sewa atau beli rumah dengan KPR](/id/sewa-atau-beli-rumah/). Perusahaan pun menunda ekspansi dan mengurangi perekrutan, itulah sebabnya orang yang tidak pernah menukar dolar tetap merasakan kurs lewat cicilan dan pekerjaannya.
+Bunga yang naik membuat peminjam membayar lebih, termasuk pemegang KPR dengan bunga *floating* dan orang yang masa bunga *fixed*-nya berakhir. Hitungan cicilan ini saya bahas dalam [tulisan tentang sewa atau beli rumah dengan KPR](/id/sewa-atau-beli-rumah/). Perusahaan pun menunda ekspansi dan mengurangi perekrutan, sehingga orang yang tidak pernah menukar dolar tetap merasakan kurs lewat cicilan dan pekerjaannya.
 
 ### Rupiah melemah, jadi utang valas makin berat dilunasi (−)
 
-Contohnya, utang US$100.000 bernilai Rp1,6 miliar pada kurs Rp16.000 per dolar, dan Rp1,8 miliar pada Rp18.000. Bebannya naik 12,5% dalam rupiah, padahal jumlah dolar yang dipinjam sama.
+Contohnya, utang US$100.000 bernilai Rp1,6 miliar pada kurs Rp16.000 per dolar, dan Rp1,8 miliar pada Rp18.000. Beban utang itu naik 12,5% dalam rupiah, padahal jumlah dolar yang dipinjam sama.
 
-Indonesia pernah mengalami versi yang jauh lebih berat. Menurut memorandum pemerintah pada 15 Januari 1998, rupiah melemah 70% dari pertengahan Juli 1997 sampai awal Januari 1998. Porsi yang cukup besar dari pinjaman luar negeri berupa utang jangka pendek swasta tanpa *hedging*, sehingga biaya pembayarannya dalam rupiah melonjak, sementara bunga domestik ikut naik.[^krisis]
+Pada krisis 1997 sampai 1998, Indonesia mengalami kasus yang jauh lebih parah. Menurut memorandum pemerintah pada 15 Januari 1998, rupiah melemah 70% dari pertengahan Juli 1997 sampai awal Januari 1998. Porsi yang cukup besar dari pinjaman luar negeri berupa utang jangka pendek swasta tanpa *hedging*, sehingga biaya pembayarannya dalam rupiah melonjak, sementara bunga domestik ikut naik.[^krisis]
 
-Berutang dalam mata uang sendiri menghindarkan ketidaksesuaian itu. International Monetary Fund (<span markdown="0">IMF</span>) menunjukkan bahwa negara berkembang dengan pasar obligasi mata uang lokal yang lebih dalam (*market depth*) dan kerangka kebijakan yang lebih kuat lebih mampu menyerap guncangan.[^ketahanan] Untuk menimbang pinjamanmu sendiri, mata uang penghasilan sama pentingnya dengan [pertanyaan apakah utangnya produktif atau justru memberatkan](/id/utang-baik-atau-buruk/).
+Berutang dalam mata uang sendiri menghindari *currency mismatch* (utang dan penghasilan dalam mata uang berbeda). International Monetary Fund (<span markdown="0">IMF</span>) menunjukkan bahwa negara berkembang dengan pasar obligasi dalam mata uang sendiri yang *market depth*-nya lebih baik dan kerangka kebijakan yang lebih kuat lebih mampu menyerap guncangan.[^ketahanan] Untuk menimbang pinjamanmu sendiri, mata uang penghasilan sama pentingnya dengan [pertanyaan apakah utangnya produktif atau justru memberatkan](/id/utang-baik-atau-buruk/).
 
 | Dampak | Baik atau buruk |
 |---|---|
@@ -141,9 +141,9 @@ Dalam jangka panjang, mata uang yang kuat berarti kepercayaan, tetapi produksi b
 
 ### Mata uang yang dipercaya menjaga daya beli, jadi negara bisa berutang dalam mata uangnya sendiri (+)
 
-Mata uang yang mempertahankan daya beli dan dipercaya untuk transaksi jangka panjang adalah keuntungan tersendiri. Kita sering mengaitkannya dengan produktivitas yang tinggi, institusi yang andal, dan kebijakan yang kredibel, dan pemakaian internasional, termasuk sebagai *reserve currency* (mata uang yang banyak disimpan bank sentral negara lain), adalah salah satu wujudnya.
+Mata uang yang mempertahankan daya beli dan dipercaya untuk transaksi jangka panjang adalah keuntungan tersendiri. Mata uang seperti itu biasanya ditopang produktivitas yang tinggi, lembaga yang andal, dan kebijakan yang kredibel. Pemakaian internasional, termasuk sebagai *reserve currency* (mata uang yang banyak disimpan bank sentral negara lain), adalah salah satu buktinya.
 
-Keuntungan praktisnya lebih dari soal gengsi kurs. Pemerintah dan perusahaan bisa berutang dalam mata uang yang sama dengan pendapatan mereka, sehingga ketidaksesuaian mata uang berkurang. Menurut IMF, pasar obligasi lokal yang lebih berkembang dan kebijakan yang lebih dipercaya membantu negara berkembang mengurangi risiko itu.[^ketahanan]
+Keuntungan praktisnya lebih dari sekadar gengsi. Pemerintah dan perusahaan bisa berutang dalam mata uang yang sama dengan pendapatan mereka, sehingga *currency mismatch* berkurang. Menurut IMF, pasar obligasi lokal yang lebih berkembang dan kebijakan yang lebih dipercaya membantu negara berkembang mengurangi risiko itu.[^ketahanan]
 
 ### Produksi dalam negeri jadi mahal, jadi perusahaan memindahkan kegiatan ke luar negeri (+ dan −)
 
@@ -160,17 +160,17 @@ Dampak perpindahan ini bisa ditekan kalau negara punya keunggulan yang sulit dit
 
 ## Apa yang terjadi kalau mata uang terus melemah dalam jangka panjang?
 
-Dalam jangka panjang, mata uang yang murah bisa membuka pintu bagi produksi, tetapi kepercayaan yang runtuh menutupnya.
+Dalam jangka panjang, mata uang yang murah bisa menarik produksi dari negara yang biayanya lebih mahal, tetapi kepercayaan yang runtuh menutup peluang itu.
 
-### Biaya lebih murah membuka pintu bagi produksi dari luar negeri (+)
+### Biaya lebih murah, jadi produksi dari negara lain bisa pindah ke sini (+)
 
-Bagi perusahaan yang memperoleh pendapatan valas tetapi membayar upah lokal, mata uang yang melemah membuat biaya operasi tampak lebih murah, sehingga produksi dari negara yang lebih mahal bisa pindah ke sana. Syaratnya, listrik yang andal, logistik yang lancar, kontrak yang bisa ditegakkan, dan kebijakan yang bisa diperkirakan.
+Bagi perusahaan yang memperoleh pendapatan valas tetapi membayar upah lokal, mata uang yang melemah membuat biaya operasi tampak lebih murah, sehingga produksi dari negara yang lebih mahal bisa pindah ke sana. Syaratnya adalah listrik yang andal, logistik yang lancar, kepastian hukum atas kontrak, dan kebijakan yang konsisten.
 
 Mata uang yang murah pun bisa makin banyak dipakai. Renminbi tetap relatif murah, tetapi pangsanya dalam transaksi valas global naik dari 7,0% pada April 2022 menjadi 8,8% pada April 2025, sehingga menjadi mata uang kelima yang paling banyak diperdagangkan.[^bis]
 
 ### Kepercayaan runtuh, jadi inflasi, pelarian ke valas, dan impor mahal saling memperburuk (−)
 
-Kurs yang jatuh sangat cepat dan berulang bisa menjadi bagian dari lingkaran yang merusak: inflasi membuat orang enggan menyimpan uang lokal, perpindahan ke valas menambah tekanan pada kurs, dan impor yang makin mahal mendorong harga naik lagi. Pembiayaan belanja pemerintah lewat penciptaan uang memperbesar lingkaran itu.[^venezuela]
+Kurs yang jatuh sangat cepat dan berulang bisa menjadi bagian dari lingkaran setan: inflasi membuat orang enggan menyimpan uang lokal, perpindahan ke valas menambah tekanan pada kurs, dan impor yang makin mahal mendorong harga naik lagi. Kalau belanja pemerintah dibiayai dengan mencetak uang, lingkaran itu makin besar.[^venezuela]
 
 Batas yang lazim dipakai untuk hiperinflasi adalah kenaikan harga 50% atau lebih **per bulan**, bukan per tahun.[^venezuela] Empat kasus berikut menunjukkan rentangnya, dari yang masih terkendali sampai yang ekstrem.
 
@@ -181,24 +181,24 @@ Batas yang lazim dipakai untuk hiperinflasi adalah kenaikan harga 50% atau lebih
 | Venezuela, 2018 | Harga naik lebih dari 1,6 juta persen[^venezuela] | Uang lokal praktis kehilangan fungsinya sebagai tempat menyimpan nilai |
 | Zimbabwe, akhir 2008 | Mata uang lokal hampir ditinggalkan; sejak Oktober sampai November 2008 harga beralih ke mata uang asing[^zimbabwe] | Penduduk berhenti memakai mata uangnya sendiri |
 
-Pada titik itu, upah yang kelihatan murah tidak lagi menarik investor, karena pembayaran, harga, dan nilai pendapatan terlalu sulit diperkirakan. Bagi penduduk, pertanyaannya berubah dari liburan yang lebih mahal menjadi apakah gaji dan tabungan masih cukup untuk kebutuhan sehari-hari.
+Pada titik itu, upah yang kelihatan murah tidak lagi menarik investor, karena pembayaran, harga, dan nilai pendapatan terlalu sulit diperkirakan. Bagi warga, pertanyaannya bukan lagi seberapa mahal liburan, melainkan apakah gaji dan tabungan masih cukup untuk kebutuhan sehari-hari.
 
 | Dampak | Baik atau buruk |
 |---|---|
-| Biaya lebih murah membuka pintu bagi produksi | Baik untuk pekerja dan usaha, selama listrik, logistik, dan kontrak bisa diandalkan |
+| Produksi pindah karena biaya lebih murah | Baik untuk pekerja dan usaha, selama listrik, logistik, dan kontrak bisa diandalkan |
 | Kepercayaan runtuh | Buruk untuk semua penduduk, terutama penabung dan penerima gaji tetap |
 
 ## Jadi, mata uang kuat atau lemah itu baik atau buruk?
 
 Saya tidak akan menilai keuangan seseorang dari apakah rupiah hari ini menguat atau melemah. Tiga pertanyaan ini lebih berguna:
 
-1. **Apakah saya punya utang valas tanpa *hedging*?** Cocokkan mata uang pembayaran dengan penghasilan atau aset yang akan dipakai untuk membayarnya.
-2. **Penghasilan, belanja, dan tabungan saya ada di sisi impor atau sisi ekspor?** Kamu bisa bekerja di perusahaan ekspor, membeli bahan pangan berbahan baku impor, dan menabung untuk kuliah di luar negeri sekaligus.
+1. **Apakah kamu punya utang valas tanpa *hedging*?** Cocokkan mata uang pembayaran dengan penghasilan atau aset yang akan dipakai untuk membayarnya.
+2. **Apakah penghasilan, belanja, dan tabunganmu ada di sisi impor atau sisi ekspor?** Kamu bisa bekerja di perusahaan ekspor, membeli bahan pangan berbahan baku impor, dan menabung untuk kuliah di luar negeri sekaligus.
 3. **Kenapa kurs bergerak, dan apakah bank sentralnya masih bisa dipercaya?** Penyesuaian karena perdagangan dan arus modal berbeda dari hilangnya kepercayaan pada uang lokal.
 
 Dalam jangka pendek, penguatan dan pelemahan sama-sama membawa untung dan biaya, dan keduanya jatuh ke tangan orang yang berbeda. Dalam jangka panjang, daya beli yang terjaga dan kebijakan yang dipercaya paling berharga, sedangkan menurut saya, pelemahan yang terkendali membantu ekonomi menyesuaikan diri selama inflasi dan ketidakpastian tidak merusak kemampuan orang merencanakan hidupnya.
 
-Mata uang yang kuat bisa membuat belanjamu lebih ringan sekaligus pekerjaanmu lebih rentan, sementara mata uang yang lemah bisa mendatangkan pelanggan baru sekaligus menaikkan biaya dapur. Karena itu, ukuran yang berguna bukan sebutan kuat atau lemah, melainkan apa yang bisa kamu hasilkan, simpan, dan beli dengan penghasilanmu.
+Mata uang yang kuat bisa membuat belanjamu lebih ringan sekaligus pekerjaanmu lebih rentan, sementara mata uang yang lemah bisa mendatangkan pelanggan baru sekaligus menaikkan biaya dapur. Karena itu, ukuran yang berguna bukan sebutan kuat atau lemah, melainkan apa yang bisa kamu simpan dan beli dari penghasilanmu.
 
 ## Sumber
 
