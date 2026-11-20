@@ -124,7 +124,7 @@ Bunga yang naik membuat peminjam membayar lebih, termasuk pemegang KPR dengan bu
 
 Contohnya, utang US$100.000 bernilai Rp1,6 miliar pada kurs Rp16.000 per dolar, dan Rp1,8 miliar pada Rp18.000. Beban utang itu naik 12,5% dalam rupiah, padahal jumlah dolar yang dipinjam sama.
 
-Pada krisis 1997 sampai 1998, Indonesia mengalami kasus yang jauh lebih parah. Menurut memorandum pemerintah pada 15 Januari 1998, rupiah melemah 70% dari pertengahan Juli 1997 sampai awal Januari 1998. Porsi yang cukup besar dari pinjaman luar negeri berupa utang jangka pendek swasta tanpa *hedging*, sehingga biaya pembayarannya dalam rupiah melonjak, sementara bunga domestik ikut naik.[^krisis]
+Pada krisis 1997 sampai 1998, Indonesia pernah mengalami yang jauh lebih parah. Menurut memorandum pemerintah pada 15 Januari 1998, rupiah melemah 70% dari pertengahan Juli 1997 sampai awal Januari 1998. Porsi yang cukup besar dari pinjaman luar negeri berupa utang jangka pendek swasta tanpa *hedging*, sehingga biaya pembayarannya dalam rupiah melonjak, sementara bunga domestik ikut naik.[^krisis]
 
 Berutang dalam mata uang sendiri menghindari *currency mismatch* (utang dan penghasilan dalam mata uang berbeda). International Monetary Fund (<span markdown="0">IMF</span>) menunjukkan bahwa negara berkembang dengan pasar obligasi dalam mata uang sendiri yang *market depth*-nya lebih baik dan kerangka kebijakan yang lebih kuat lebih mampu menyerap guncangan.[^ketahanan] Untuk menimbang pinjamanmu sendiri, mata uang penghasilan sama pentingnya dengan [pertanyaan apakah utangnya produktif atau justru memberatkan](/id/utang-baik-atau-buruk/).
 
@@ -166,7 +166,7 @@ Dalam jangka panjang, mata uang yang murah bisa menarik produksi dari negara yan
 
 Bagi perusahaan yang memperoleh pendapatan valas tetapi membayar upah lokal, mata uang yang melemah membuat biaya operasi tampak lebih murah, sehingga produksi dari negara yang lebih mahal bisa pindah ke sana. Syaratnya adalah listrik yang andal, logistik yang lancar, kepastian hukum atas kontrak, dan kebijakan yang konsisten.
 
-Mata uang yang murah pun bisa makin banyak dipakai. Renminbi tetap relatif murah, tetapi pangsanya dalam transaksi valas global naik dari 7,0% pada April 2022 menjadi 8,8% pada April 2025, sehingga menjadi mata uang kelima yang paling banyak diperdagangkan.[^bis]
+Mata uang yang murah pun bisa makin banyak dipakai. Renminbi tetap relatif murah, tetapi pangsanya dalam transaksi valas global naik dari 7,0% pada April 2022 menjadi 8,8% pada April 2025, dan kini menjadi mata uang kelima yang paling banyak diperdagangkan.[^bis]
 
 ### Kepercayaan runtuh, jadi inflasi, pelarian ke valas, dan impor mahal saling memperburuk (−)
 
@@ -179,7 +179,7 @@ Batas yang lazim dipakai untuk hiperinflasi adalah kenaikan harga 50% atau lebih
 | Türkiye, 2017 | Inflasi tahunan 11%[^venezuela] | Harga naik mengurangi daya beli, jauh di bawah ambang hiperinflasi |
 | Argentina, 1989 dan 1990 | Rata-rata inflasi tahunan 2.600%[^argentina] | Orang tidak lagi bisa menyimpan daya beli dalam uang lokal |
 | Venezuela, 2018 | Harga naik lebih dari 1,6 juta persen[^venezuela] | Uang lokal praktis kehilangan fungsinya sebagai tempat menyimpan nilai |
-| Zimbabwe, akhir 2008 | Mata uang lokal hampir ditinggalkan; sejak Oktober sampai November 2008 harga beralih ke mata uang asing[^zimbabwe] | Penduduk berhenti memakai mata uangnya sendiri |
+| Zimbabwe, akhir 2008 | Mata uang lokal hampir ditinggalkan; sejak Oktober sampai November 2008 harga beralih ke mata uang asing[^zimbabwe] | Penduduk nyaris berhenti memakai mata uangnya sendiri |
 
 Pada titik itu, upah yang kelihatan murah tidak lagi menarik investor, karena pembayaran, harga, dan nilai pendapatan terlalu sulit diperkirakan. Bagi warga, pertanyaannya bukan lagi seberapa mahal liburan, melainkan apakah gaji dan tabungan masih cukup untuk kebutuhan sehari-hari.
 
@@ -202,7 +202,7 @@ Mata uang yang kuat bisa membuat belanjamu lebih ringan sekaligus pekerjaanmu le
 
 ## Sumber
 
-[^bis]: Bank for International Settlements, [pasar valas global dan peran *hedging*](https://www.bis.org/publications/qr-202512/global-fx-markets-when-hedging-takes-centre-stage), 8 Desember 2025. Transaksi harian April 2025 sebesar US$9,5 triliun; pembahasan renminbi terdapat dalam Kotak C.
+[^bis]: Bank for International Settlements, [pasar valas global dan peran *hedging*](https://www.bis.org/publications/qr-202512/global-fx-markets-when-hedging-takes-centre-stage), 8 Desember 2025. Transaksi harian April 2025 sebesar US$9,5 triliun; renminbi dibahas di Kotak C.
 [^wfe]: World Federation of Exchanges, [tren nilai perdagangan saham](https://focus.world-exchanges.org/articles/trends-value-share-trading-through-electronic-order-books-eob), Juli 2025: US$148,48 triliun pada 2024, untuk perdagangan melalui sistem pencocokan pesanan elektronik. Pembagian dengan 252 hari bursa menghasilkan sekitar US$590 miliar per hari.
 [^kurs]: Reserve Bank of Australia, [kurs dan ekonomi Australia](https://www.rba.gov.au/education/resources/explainers/exchange-rates-and-the-australian-economy.html), penjelasan mekanisme perdagangan, inflasi, serta aset dan utang valas.
 [^china]: Laporan di situs pemerintah China, [kebijakan kestabilan renminbi](http://english.scio.gov.cn/pressroom/2026-07/16/content_118601524.html), 16 Juli 2026, mengutip pernyataan pejabat bank sentral.
