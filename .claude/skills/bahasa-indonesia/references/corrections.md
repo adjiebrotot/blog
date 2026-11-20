@@ -201,3 +201,28 @@ confidence", and `cek.py` flags the phrases below as "over-disclaiming?".
 | Karena itu, menurut saya, dalam kasus Australia kurs yang kuat hanya menjadi saluran bagi kemakmuran yang sudah ada, bukan sumbernya. | Sama seperti dalam jangka pendek, manfaat ini hanya bisa terasa bila negara tidak proteksionis terhadap barang impor, ... | Tie it to the Indonesian point (TKDN). |
 | Studi tentang Plaza Accord itu belum ditelaah sejawat, dan bukti dari Swiss pun masih berada di tahap awal ... | Namun, dampak ini bisa diminimalkan apabila negara memang memiliki *moat* ... bijih besi, litium dan nikel yang produksinya tidak bisa dipindahkan ke luar negeri. | Delete the disclaimer; make the counterpoint. |
 | (angka bulat, bukan data dan bukan ramalan); dan itu tidak saya hitung; (hitungan Reuters sendiri, bukan audit resmi); Menyusutnya KKM belum membuktikan ...; Studi yang saya pakai ... berupa korelasi. Ke-38 negara itu pun hanya sampel ... | dengan angka bulat; (deleted); menurut hitungan Reuters; (deleted); Karena itu, kalau pelemahan rupiah berujung pada inflasi tinggi, ... | Same rule, applied through the rest of the post. |
+
+## Kurs dan kehidupan sehari-hari, putaran ketiga (20 November 2026)
+
+Adjie, on a new draft of the same post: the body keeps rejecting its own claims. A sentence
+that is true but off-topic, added only to weaken the claim before it, is over-disclaiming
+too. Stay on the section's topic; where a limit really matters, show it with a confident
+Indonesian example built on an assumption. International organisations keep their names.
+
+| Before | After | Why |
+| --- | --- | --- |
+| Pembatasan penjualan iPhone 16 pada 2024 karena kepatuhan kandungan lokal ... Ini bukan berarti seluruh manfaat penguatan rupiah hilang, melainkan harga dan izin masuk adalah dua persoalan berbeda. | A confident example: karena aturan TKDN, penguatan rupiah mungkin tidak membuat harga iPhone impor di toko ikut turun. | The body rejected its own claim; use an assumption without a disclaimer. |
+| (China, pelemahan) ... tetapi kita tetap perlu memperhitungkan bahan baku impor dan mata uang tagihan. Kurs tidak membuat semua eksportir otomatis menang. | Focus on Chinese products becoming more competitive with a cheap yuan. | True, but not this section's topic. |
+| Bunga *fixed* yang masih berlaku tidak otomatis berubah pada hari bank sentral mengumumkan kenaikan. | (deleted) | The section is about rates rising, not fixed-rate KPR mechanics. |
+| Kepercayaan memberi ruang, bukan jaminan kurs selalu naik | A heading that states the benefit | A heading must not disclaim itself. |
+| Kurs bukan satu-satunya pertimbangan: produktivitas, mutu, kedekatan pasar, dan keandalan institusi juga ikut menentukan keputusan. | (deleted) | Words only to reduce the credibility of the claim. |
+| Penggunaan yang meningkat tidak membuktikan kursnya pasti menguat, apalagi membuktikan mata uang murah sendirian menciptakan industri yang maju. | (deleted) | Same. |
+| Dalam contoh hipotetis, ... | Contohnya, ... | An example needs no label. |
+| lindung nilai | *hedging* (lindung nilai), then *hedging* | Repeated from round two. |
+| ledakan pertambangan | *mining boom* | Keep the term people use. |
+| Perlindungan yang terukur | Proteksionisme yang terukur | Name the policy. |
+| Kebijakan moneter kontraktif | *contractionary monetary policy* | Keep the term people use. |
+| Dana Moneter Internasional | International Monetary Fund (IMF) | An organisation's name is never translated. |
+| kedalaman pasar | *market depth* | Keep the term people use. |
+| mata uang cadangan | *reserve currency* | Keep the term people use. |
+| (Reserve Bank of Australia mandate only) | + Bank Indonesia's mandate as a comparison | Relate it to Indonesia. |

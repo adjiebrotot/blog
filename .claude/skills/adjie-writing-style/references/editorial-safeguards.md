@@ -61,6 +61,13 @@ about the writer's own evidence or scope, and it is cut:
 - that an opinion is only an opinion ("this is my reading, not the study's finding");
 - a scope note that lists everything the post does not do ("does not forecast, does not
   advise trading, only looks at ..."): say in one clause what the post is about.
+- the body rejecting its own claim: a claim followed by "But X does not explain every ...",
+  "X is not the only factor ...", "this is not a guarantee ...", "does not automatically
+  ...", or a heading that disclaims itself ("..., not a guarantee the currency keeps
+  rising"). A true fact that is off the section's topic, added only to weaken the claim
+  before it, is a disclaimer (a fixed-rate aside in a section on rising rates). Where a limit
+  really matters, show it with a confident example built on an assumption ("because of TKDN,
+  a stronger rupiah perhaps won't make an imported iPhone cheaper here either").
 
 Test for each caveat sentence: if it were deleted, would a careful reader draw a wrong
 number or make a worse decision? If not, delete it. If yes, fold the condition into the
