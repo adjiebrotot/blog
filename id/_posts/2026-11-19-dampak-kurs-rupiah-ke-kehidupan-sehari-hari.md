@@ -6,7 +6,7 @@ last_modified_at: 2026-11-20
 tags: [finance]
 image: /assets/img/og/dampak-kurs-rupiah-ke-kehidupan-sehari-hari.jpg
 og_position: "0% 50%"
-image_alt: "Perempuan memegang uang di loket penukaran valuta asing dengan layar yang menunjukkan panah naik dan turun"
+image_alt: "Perempuan memegang uang di money changer dengan layar yang menunjukkan panah naik dan turun"
 share_image: /assets/img/fx-ill-money-changer.webp
 translation: currency-household-impact
 keywords: [rupiah menguat, rupiah melemah, dampak kurs, biaya hidup, utang valuta asing, daya saing ekspor]
@@ -25,7 +25,7 @@ US$9,5 triliun per hari: sebesar itulah transaksi di pasar valuta asing (valas) 
 
 Di pasar sebesar itu, mata uang yang menguat membuat liburan dan barang impor lebih murah, tetapi menyulitkan perusahaan tempatmu bekerja kalau perusahaan itu menjual ke luar negeri. Mata uang yang melemah berlaku sebaliknya: lebih mudah mencari pembeli di luar negeri, sementara liburan ke sana jadi lebih mahal.[^kurs]
 
-<img src="/assets/img/fx-ill-money-changer.webp" alt="Perempuan memegang uang di loket penukaran valuta asing dengan layar yang menunjukkan panah naik dan turun" width="1200" height="670" loading="lazy">
+<img src="/assets/img/fx-ill-money-changer.webp" alt="Perempuan memegang uang di money changer dengan layar yang menunjukkan panah naik dan turun" width="1200" height="670" loading="lazy">
 
 Satu hal perlu diperjelas lebih dulu: rupiah menguat berarti kamu butuh lebih sedikit rupiah untuk membeli satu mata uang asing. Contohnya, kalau US$1 berubah dari Rp16.000 menjadi Rp14.000, rupiah menguat meski angka di papan kurs justru turun. Kalau US$1 naik dari Rp16.000 menjadi Rp18.000, rupiah melemah.
 
@@ -33,9 +33,9 @@ Pertanyaan yang lebih dekat dengan hidup kita bukan ke mana kurs akan bergerak, 
 
 ## Kenapa pergerakan kurs yang sama bisa berbeda dampaknya di tiap negara?
 
-Waktu tinggal di Indonesia, saya merasa pelemahan rupiah seperti kabar buruk yang terus berulang. Kesannya sederhana: dolar naik, keadaan kita memburuk, padahal eksportir yang dibayar dalam dolar mengalami hal yang berbeda dari keluarga yang sedang menabung untuk biaya kuliah anak di luar negeri.
+Di Indonesia, pelemahan rupiah sering terasa seperti kabar buruk yang terus berulang. Kesannya sederhana: dolar naik, keadaan kita memburuk, padahal eksportir yang dibayar dalam dolar mengalami hal yang berbeda dari keluarga yang sedang menabung untuk biaya kuliah anak di luar negeri.
 
-China sering dijadikan contoh sebaliknya, karena eksportirnya diuntungkan oleh mata uang yang relatif murah,[^china-analisis] sementara bank sentralnya menyatakan ingin menjaga renminbi tetap stabil pada tingkat yang wajar dan seimbang.[^china]
+China sering dijadikan contoh sebaliknya, karena eksportirnya diuntungkan oleh mata uang yang relatif murah,[^china-analisis] sementara bank sentralnya menyatakan ingin menjaga yuan tetap stabil pada tingkat yang wajar dan seimbang.[^china]
 
 Menurut saya, ada tiga faktor yang paling menentukan.
 
@@ -43,11 +43,11 @@ Menurut saya, ada tiga faktor yang paling menentukan.
 
 **2. Alasan kurs bergerak dan kredibilitas bank sentral.** Kurs bergerak karena harga komoditas, perdagangan, perubahan bunga, atau arus modal. Pergerakan semacam itu adalah penyesuaian ekonomi, sedangkan kurs yang jatuh karena orang tidak lagi percaya pada kebijakan ekonomi punya sifat yang sama sekali berbeda.
 
-Reserve Bank of Australia punya dua tujuan, yaitu kestabilan harga dan kesempatan kerja penuh, dengan sasaran inflasi 2 sampai 3 persen, tanpa menyebut kurs sama sekali.[^mandat] Mandat Bank Indonesia (BI) berbeda. Tujuan BI adalah menjaga stabilitas nilai rupiah, yang mencakup kestabilan nilai terhadap barang dan jasa, tampak pada inflasi, serta kestabilan terhadap mata uang negara lain, tampak pada kurs rupiah.[^bi-tujuan] Karena kestabilan terhadap mata uang lain disebut eksplisit dalam mandatnya, BI diharapkan turun ke pasar valas dan memakai suku bunga ketika rupiah jatuh dengan cepat.
+Reserve Bank of Australia punya dua tujuan, yaitu kestabilan harga dan *full employment*, dengan sasaran inflasi 2 sampai 3 persen, tanpa menyebut kurs sama sekali.[^mandat] Mandat Bank Indonesia (BI) berbeda. Tujuan BI adalah menjaga stabilitas nilai rupiah, yang mencakup kestabilan nilai terhadap barang dan jasa, tampak pada inflasi, serta kestabilan terhadap mata uang negara lain, tampak pada kurs rupiah.[^bi-tujuan] Karena kestabilan terhadap mata uang lain disebut eksplisit dalam mandatnya, BI diharapkan turun ke pasar valas dan memakai suku bunga ketika rupiah jatuh dengan cepat.
 
 Kita patut waspada ketika bank sentral terus didorong membiayai belanja pemerintah sementara inflasi dan kepercayaan memburuk. Pembelian obligasi oleh bank sentral, atau *quantitative easing* (pelonggaran moneter lewat pembelian aset), pada dasarnya adalah alat yang lazim: Bank of England memakainya dengan menciptakan cadangan bank untuk membeli obligasi demi sasaran inflasi 2%.[^qe] Yang menentukan adalah tujuan dan disiplin bank sentral, bukan sebutan "mencetak uang".
 
-**3. Posisi perdagangan dan mata uang transaksi.** Importir diuntungkan oleh mata uang yang kuat, karena untuk membeli barang luar negeri mereka cukup mengeluarkan lebih sedikit rupiah, sedangkan eksportir diuntungkan oleh mata uang yang lemah. Kalau ekspor ditagih dalam dolar, pembeli asing tidak melihat diskon, melainkan eksportir yang menerima lebih banyak rupiah dari tagihan dolar yang sama.[^kurs] Di China, arus modal, tabungan eksportir di luar negeri, dan kebijakan pemerintah membuat renminbi tetap relatif murah, meski surplus perdagangannya besar.[^china-analisis]
+**3. Posisi perdagangan dan mata uang transaksi.** Importir diuntungkan oleh mata uang yang kuat, karena untuk membeli barang luar negeri mereka cukup mengeluarkan lebih sedikit rupiah, sedangkan eksportir diuntungkan oleh mata uang yang lemah. Kalau ekspor ditagih dalam dolar, pembeli asing tidak melihat diskon, melainkan eksportir yang menerima lebih banyak rupiah dari tagihan dolar yang sama.[^kurs] Di China, arus modal, tabungan eksportir di luar negeri, dan kebijakan pemerintah membuat yuan tetap relatif murah, meski surplus perdagangannya besar.[^china-analisis]
 
 ## Apa yang terjadi dalam jangka pendek kalau mata uang menguat?
 
@@ -96,7 +96,7 @@ Dalam jangka pendek, pelemahan membuat pariwisata dan ekspor lebih kompetitif, t
 
 Mata uang yang melemah membuat hotel, makanan, dan jasa lokal lebih murah bagi wisatawan yang membawa valas. Jepang menerima 36,9 juta pengunjung internasional pada 2024, naik dari 31,9 juta pada 2019, dan yen yang lemah ikut membantu. Sisi sebaliknya dirasakan warga Jepang sendiri: perjalanan mereka ke luar negeri pada 2024 mencapai 13,0 juta, baru sekitar 70% dari tingkat 2019, sebagian karena yen yang lemah.[^jepang]
 
-Barang ekspor China memperlihatkan hal yang sama. Robin Brooks dari Brookings memperkirakan pada Maret 2025 bahwa kurs efektif riil renminbi, yaitu kurs terhadap mata uang mitra dagang yang sudah disesuaikan dengan inflasi, terlalu rendah lebih dari 20% kalau surplus transaksi berjalan yang dianggap seimbang adalah 0,5%, dan masih lebih dari 10% kalau 2%. Ia menunjuk surplus perdagangan non-komoditas China yang besar dan terus tumbuh.[^china-analisis] Menurut saya, renminbi yang relatif murah inilah yang membuat barang China tetap kompetitif di luar negeri.
+Barang ekspor China memperlihatkan hal yang sama. Robin Brooks dari Brookings memperkirakan pada Maret 2025 bahwa kurs efektif riil yuan, yaitu kurs terhadap mata uang mitra dagang yang sudah disesuaikan dengan inflasi, terlalu rendah lebih dari 20% kalau surplus transaksi berjalan yang dianggap seimbang adalah 0,5%, dan masih lebih dari 10% kalau 2%. Ia menunjuk surplus perdagangan non-komoditas China yang besar dan terus tumbuh.[^china-analisis] Menurut saya, yuan yang relatif murah inilah yang membuat barang China tetap kompetitif di luar negeri.
 
 <img src="/assets/img/fx-ill-weak-currency-split.webp" alt="Pelancong kesulitan membeli barang di luar negeri, sementara pemilik toko lokal melayani wisatawan asing" width="1456" height="1087" loading="lazy">
 
@@ -166,18 +166,18 @@ Dalam jangka panjang, mata uang yang murah bisa menarik produksi dari negara yan
 
 Bagi perusahaan yang memperoleh pendapatan valas tetapi membayar upah lokal, mata uang yang melemah membuat biaya operasi tampak lebih murah, sehingga produksi dari negara yang lebih mahal bisa pindah ke sana. Syaratnya adalah listrik yang andal, logistik yang lancar, kepastian hukum atas kontrak, dan kebijakan yang konsisten.
 
-Mata uang yang murah pun bisa makin banyak dipakai. Renminbi tetap relatif murah, tetapi pangsanya dalam transaksi valas global naik dari 7,0% pada April 2022 menjadi 8,8% pada April 2025, dan kini menjadi mata uang kelima yang paling banyak diperdagangkan.[^bis]
+Mata uang yang murah pun bisa makin banyak dipakai. Yuan tetap relatif murah, tetapi pangsanya dalam transaksi valas global naik dari 7,0% pada April 2022 menjadi 8,8% pada April 2025, dan kini menjadi mata uang kelima yang paling banyak diperdagangkan.[^bis]
 
 ### Kepercayaan runtuh, jadi inflasi, pelarian ke valas, dan impor mahal saling memperburuk (−)
 
-Kurs yang jatuh sangat cepat dan berulang bisa menjadi bagian dari lingkaran setan: inflasi membuat orang enggan menyimpan uang lokal, perpindahan ke valas menambah tekanan pada kurs, dan impor yang makin mahal mendorong harga naik lagi. Kalau belanja pemerintah dibiayai dengan mencetak uang, lingkaran itu makin besar.[^venezuela]
+Kurs yang jatuh sangat cepat dan berulang bisa menjadi bagian dari lingkaran setan: inflasi membuat orang enggan menyimpan mata uang lokal, perpindahan ke valas menambah tekanan pada kurs, dan impor yang makin mahal mendorong harga naik lagi. Kalau belanja pemerintah dibiayai dengan mencetak uang, lingkaran itu makin besar.[^venezuela]
 
 Batas yang lazim dipakai untuk hiperinflasi adalah kenaikan harga 50% atau lebih **per bulan**, bukan per tahun.[^venezuela] Empat kasus berikut menunjukkan rentangnya, dari yang masih terkendali sampai yang ekstrem.
 
 | Kasus | Yang terjadi | Pelajaran bagi penduduk |
 |---|---|---|
-| Türkiye, 2017 | Inflasi tahunan 11%[^venezuela] | Harga naik mengurangi daya beli, jauh di bawah ambang hiperinflasi |
-| Argentina, 1989 dan 1990 | Rata-rata inflasi tahunan 2.600%[^argentina] | Orang tidak lagi bisa menyimpan daya beli dalam uang lokal |
+| Turki, 2017 | Inflasi tahunan 11%[^venezuela] | Harga naik mengurangi daya beli, jauh di bawah ambang hiperinflasi |
+| Argentina, 1989 dan 1990 | Rata-rata inflasi tahunan 2.600%[^argentina] | Orang tidak lagi bisa menyimpan daya beli dalam mata uang lokal |
 | Venezuela, 2018 | Harga naik lebih dari 1,6 juta persen[^venezuela] | Uang lokal praktis kehilangan fungsinya sebagai tempat menyimpan nilai |
 | Zimbabwe, akhir 2008 | Mata uang lokal hampir ditinggalkan; sejak Oktober sampai November 2008 harga beralih ke mata uang asing[^zimbabwe] | Penduduk nyaris berhenti memakai mata uangnya sendiri |
 
@@ -194,7 +194,7 @@ Saya tidak akan menilai keuangan seseorang dari apakah rupiah hari ini menguat a
 
 1. **Apakah kamu punya utang valas tanpa *hedging*?** Cocokkan mata uang pembayaran dengan penghasilan atau aset yang akan dipakai untuk membayarnya.
 2. **Apakah penghasilan, belanja, dan tabunganmu ada di sisi impor atau sisi ekspor?** Kamu bisa bekerja di perusahaan ekspor, membeli bahan pangan berbahan baku impor, dan menabung untuk kuliah di luar negeri sekaligus.
-3. **Kenapa kurs bergerak, dan apakah bank sentralnya masih bisa dipercaya?** Penyesuaian karena perdagangan dan arus modal berbeda dari hilangnya kepercayaan pada uang lokal.
+3. **Kenapa kurs bergerak, dan apakah bank sentralnya masih bisa dipercaya?** Penyesuaian karena perdagangan dan arus modal berbeda dari hilangnya kepercayaan pada mata uang lokal.
 
 Dalam jangka pendek, penguatan dan pelemahan sama-sama membawa untung dan biaya, dan keduanya jatuh ke tangan orang yang berbeda. Dalam jangka panjang, daya beli yang terjaga dan kebijakan yang dipercaya paling berharga, sedangkan menurut saya, pelemahan yang terkendali membantu ekonomi menyesuaikan diri selama inflasi dan ketidakpastian tidak merusak kemampuan orang merencanakan hidupnya.
 
@@ -202,11 +202,11 @@ Mata uang yang kuat bisa membuat belanjamu lebih ringan sekaligus pekerjaanmu le
 
 ## Sumber
 
-[^bis]: Bank for International Settlements, [pasar valas global dan peran *hedging*](https://www.bis.org/publications/qr-202512/global-fx-markets-when-hedging-takes-centre-stage), 8 Desember 2025. Transaksi harian April 2025 sebesar US$9,5 triliun; renminbi dibahas di Kotak C.
+[^bis]: Bank for International Settlements, [pasar valas global dan peran *hedging*](https://www.bis.org/publications/qr-202512/global-fx-markets-when-hedging-takes-centre-stage), 8 Desember 2025. Transaksi harian April 2025 sebesar US$9,5 triliun; yuan dibahas di Kotak C.
 [^wfe]: World Federation of Exchanges, [tren nilai perdagangan saham](https://focus.world-exchanges.org/articles/trends-value-share-trading-through-electronic-order-books-eob), Juli 2025: US$148,48 triliun pada 2024, untuk perdagangan melalui sistem pencocokan pesanan elektronik. Pembagian dengan 252 hari bursa menghasilkan sekitar US$590 miliar per hari.
 [^kurs]: Reserve Bank of Australia, [kurs dan ekonomi Australia](https://www.rba.gov.au/education/resources/explainers/exchange-rates-and-the-australian-economy.html), penjelasan mekanisme perdagangan, inflasi, serta aset dan utang valas.
-[^china]: Laporan di situs pemerintah China, [kebijakan kestabilan renminbi](http://english.scio.gov.cn/pressroom/2026-07/16/content_118601524.html), 16 Juli 2026, mengutip pernyataan pejabat bank sentral.
-[^mandat]: Reserve Bank of Australia, [dua tujuan kebijakan moneter](https://www.rba.gov.au/education/resources/explainers/dual-mandate-of-monetary-policy.html): kestabilan harga dan kesempatan kerja penuh, dengan sasaran inflasi 2 sampai 3 persen.
+[^china]: Laporan di situs pemerintah China, [kebijakan kestabilan yuan](http://english.scio.gov.cn/pressroom/2026-07/16/content_118601524.html), 16 Juli 2026, mengutip pernyataan pejabat bank sentral.
+[^mandat]: Reserve Bank of Australia, [dua tujuan kebijakan moneter](https://www.rba.gov.au/education/resources/explainers/dual-mandate-of-monetary-policy.html): kestabilan harga dan *full employment*, dengan sasaran inflasi 2 sampai 3 persen.
 [^bi-tujuan]: Bank Indonesia, [Inflasi](https://www.bi.go.id/id/fungsi-utama/moneter/inflasi/default.aspx), tentang tujuan Bank Indonesia dan dua aspek stabilitas nilai rupiah; [Target Inflasi](https://www.bi.go.id/id/statistik/indikator/target-inflasi.aspx), sasaran 2,5% ± 1% untuk 2026.
 [^qe]: Bank of England, [penjelasan pembelian aset untuk pelonggaran moneter](https://www.bankofengland.co.uk/monetary-policy/quantitative-easing), diperbarui 5 Desember 2025. Sasaran inflasinya 2%.
 [^tambang]: Peter Tulip, Reserve Bank of Australia Bulletin, [dampak *mining boom*](https://www.rba.gov.au/publications/bulletin/2014/dec/pdf/bu-1214-3.pdf), Desember 2014. Angka 13% untuk pendapatan dan sekitar 5% untuk produksi manufaktur adalah hasil model dibandingkan skenario tanpa *mining boom*.
@@ -221,8 +221,8 @@ Mata uang yang kuat bisa membuat belanjamu lebih ringan sekaligus pekerjaanmu le
 [^krisis]: Pemerintah Indonesia, [memorandum kebijakan ekonomi dan keuangan](https://www.imf.org/external/np/loi/011598.htm), 15 Januari 1998, diterbitkan di situs International Monetary Fund. Paragraf 2 sampai 4 membahas utang tanpa *hedging*, pelemahan rupiah 70%, dan kenaikan beban pembayaran.
 [^ketahanan]: International Monetary Fund, [ketahanan negara berkembang dan kebijakan ekonomi](https://www.imf.org/en/-/media/files/publications/weo/2025/october/english/ch2.pdf), World Economic Outlook, Oktober 2025, Bab 2. Pembahasan pengantar dan catatan kaki 4 menjelaskan kebijakan, *hedging*, dan perkembangan pembiayaan mata uang lokal.
 [^plaza]: Hiroshi Kumanomido, [penguatan kurs dan perubahan struktur produksi setelah Plaza Accord](https://rationality-and-competition.de/wp-content/uploads/discussion_paper/567.pdf), Discussion Paper No. 567, 23 Maret 2026. Data perusahaan Jepang 1980 sampai 1999.
-[^china-analisis]: Robin Brooks, Brookings, [analisis nilai renminbi](https://www.brookings.edu/articles/quantifying-chinas-substantial-rmb-undervaluation/), 28 Maret 2025.
-[^venezuela]: Gonzalo Huertas, Peterson Institute for International Economics, [hiperinflasi Venezuela](https://www.piie.com/sites/default/files/documents/pb19-13.pdf), September 2019. Membahas inflasi Türkiye 11% pada 2017, kenaikan harga Venezuela lebih dari 1,6 juta persen pada 2018, dan ambang hiperinflasi 50% per bulan.
+[^china-analisis]: Robin Brooks, Brookings, [analisis nilai yuan](https://www.brookings.edu/articles/quantifying-chinas-substantial-rmb-undervaluation/), 28 Maret 2025.
+[^venezuela]: Gonzalo Huertas, Peterson Institute for International Economics, [hiperinflasi Venezuela](https://www.piie.com/sites/default/files/documents/pb19-13.pdf), September 2019. Membahas inflasi Turki 11% pada 2017, kenaikan harga Venezuela lebih dari 1,6 juta persen pada 2018, dan ambang hiperinflasi 50% per bulan.
 [^argentina]: Pedro Pou, Finance & Development, majalah International Monetary Fund, [sejarah reformasi Argentina](https://www.imf.org/external/pubs/ft/fandd/2000/03/pou.htm), Maret 2000. Rata-rata inflasi tahunan 2.600% pada 1989 dan 1990.
 [^zimbabwe]: International Monetary Fund, [laporan Zimbabwe](https://www.elibrary.imf.org/view/journals/002/2009/139/article-A001-en.xml), 11 Mei 2009. Paragraf 3 membahas ditinggalkannya mata uang lokal pada akhir 2008; paragraf 6 membahas pembiayaan kegiatan bank sentral dan pertumbuhan uang.
 

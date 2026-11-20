@@ -36,6 +36,13 @@ Do not allow a preference to alter technical meaning, evidence or decision-chang
 | W12 | 2026-11-20 | Currency post: local-currency bond markets | "kedalaman pasar" | *market depth* | Keep the term people use | All Indonesian posts | Explicit author revision in chat, 20 Nov 2026 |
 | W13 | 2026-11-20 | Currency post: international currency status | "mata uang cadangan" | *reserve currency* | Keep the term people use | All Indonesian posts | Explicit author revision in chat, 20 Nov 2026 |
 | W14 | 2026-11-20 | Currency post: hedged FX debt (repeat of W2) | "lindung nilai" | *hedging* (lindung nilai) at first mention, then *hedging* | Repeated instruction | All Indonesian posts; cek.py now flags bare "lindung nilai" | Explicit author revision in chat, 20 Nov 2026 |
+| W15 | 2026-11-20 | Currency post: opening personal line | "Waktu tinggal di Indonesia, saya merasa ..." | "Di Indonesia, pelemahan rupiah sering terasa seperti ..." | No need to say he lived in Indonesia; state it directly | Indonesian post for Indonesian readers; contextual | Explicit author revision in chat, 20 Nov 2026 |
+| W16 | 2026-11-20 | Currency post: China's currency | "renminbi" | "yuan" | Author choice from offered options | Indonesian prose and footnote descriptions | Explicit author selection in chat, 20 Nov 2026 |
+| W17 | 2026-11-20 | Currency post: RBA mandate | "kesempatan kerja penuh" | *full employment* | Author choice from offered options | Indonesian posts | Explicit author selection in chat, 20 Nov 2026 |
+| W18 | 2026-11-20 | Currency post: exchange-rate regime | "kurs mengambang" | *floating* (kurs *floating*) | Author choice from offered options | Indonesian posts; same word as the floating KPR rate | Explicit author selection in chat, 20 Nov 2026 |
+| W19 | 2026-11-20 | Currency post: a country's own money in general | "uang lokal" / "mata uang sendiri" | "mata uang lokal", used consistently | Author choice from offered options | Indonesian posts, general term (rupiah when it is Indonesia) | Explicit author selection in chat, 20 Nov 2026 |
+| W20 | 2026-11-20 | Currency post: Türkiye | "Türkiye" | "Turki" in Indonesian (English keeps "Türkiye") | Author choice from offered options | Indonesian posts | Explicit author selection in chat, 20 Nov 2026 |
+| W21 | 2026-11-20 | Currency post: alt text of the exchange-counter picture | "loket penukaran valuta asing" | "money changer" | Author choice from offered options | Indonesian posts (italic in prose, plain in alt text) | Explicit author selection in chat, 20 Nov 2026 |
 
 The request dated 10 November 2026
 approves this selection workflow, not specific new vocabulary. Do not backfill imagined
