@@ -55,7 +55,7 @@ Australia's mining boom shows the scale. Reserve Bank of Australia modelling pub
 
 ### A cheaper import shelf squeezes local producers that compete with it (−)
 
-A local manufacturer faces stronger competition from imports even when its own costs and productivity have not changed. The same Reserve Bank modelling put Australian manufacturing output in 2013 about 5% below the no-boom path.[^mining]
+A local manufacturer faces stronger competition from imports even when its own costs and productivity have not changed. Reserve Bank of Australia modelling of the mining boom, published in December 2014, put Australian manufacturing output in 2013 about 5% below a no-boom path.[^mining]
 
 A factory that closes does not reopen when the currency falls back, because its workforce, equipment and suppliers are gone. A more durable defence than the cheapest labour is something customers have a reason to stay for: quality, specialised technology or a service that is hard to copy. Measured protection can buy time to adjust, weighed against higher costs for the consumers and businesses that use the protected goods.
 
@@ -133,7 +133,7 @@ For households the benefits are practical: access to overseas goods, and an econ
 
 When home production becomes expensive for foreign customers, firms move activities abroad, and a strong currency makes buying an overseas site cheaper in home-currency terms.
 
-Japan after the 1985 Plaza Accord shows it. A March 2026 discussion paper by Hiroshi Kumanomido, using Japanese company data from 1980 to 1999, found that industries more exposed to the export shock expanded direct investment in Asia. Domestic employment adjusted less than sales, and overseas investment helped keep some jobs at home.[^plaza] Swiss exporters moved the same way: the share of their acquisitions made abroad rose from 45% to 63% after January 2015.[^swiss] For a worker, the change is in what production at home looks like and which jobs it needs.
+Japan after the 1985 Plaza Accord shows it. A March 2026 discussion paper by Hiroshi Kumanomido, using Japanese company data from 1980 to 1999, found that industries more exposed to the export shock expanded direct investment in Asia. Domestic employment adjusted less than sales, and overseas investment helped keep some jobs at home.[^plaza] Swiss exporters moved the same way: after the Swiss National Bank abandoned its franc floor in January 2015, the share of their acquisitions made abroad rose from 45% to 63%.[^swiss] For a worker, the change is in what production at home looks like and which jobs it needs.
 
 | Effect | Good or bad for households |
 | --- | --- |
