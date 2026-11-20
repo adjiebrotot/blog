@@ -13,7 +13,7 @@ keywords: [strong currency, weak currency, currency appreciation, currency depre
 bmc_message: "Whatever the exchange rate, a coffee for me is always at par!"
 ---
 
-**In short:** A stronger or weaker currency is not automatically good or bad for a household. A stronger one buys more abroad but squeezes exporters and import-competing producers. A weaker one helps exporters and tourism while raising import costs, interest rates and unhedged foreign-currency debt. Check the currency of your income, spending, savings and debt, and why the rate moved. Over the long run, trusted policy and productivity matter more than the direction of the arrow.
+**In short:** A stronger or weaker currency is not automatically good or bad for a household. A stronger one buys more abroad but squeezes exporters and import-competing producers. A weaker one helps exporters and tourism, while it can push up import costs, interest rates and unhedged foreign-currency debt. Check the currency of your income, spending, savings and debt, and why the rate moved. Over the long run, trusted policy and productivity matter more than the direction of the arrow.
 {: .tldr}
 
 * TOC
@@ -33,15 +33,15 @@ Appreciation means your currency buys more of another currency; depreciation mea
 
 When I lived in Indonesia, a falling rupiah felt like bad news on repeat. A falling Australian dollar gets a worried reception too. But an exporter paid in foreign currency has a different problem from a family saving for an overseas education.
 
-China is the opposite case: its exporters can gain from a relatively cheap yuan, even as its central bank says it aims to keep the renminbi basically stable at a reasonable and balanced level.[^china-policy]
+China sits on the other side: its exporters gain from a relatively cheap yuan,[^china-analysis] even as its central bank says it aims to keep the renminbi basically stable at a reasonable and balanced level.[^china-policy]
 
 Three factors decide whose problem gets worse.
 
-**1. Foreign-currency debt and foreign assets.** Borrow in US dollars and earn in local currency, and depreciation makes the same dollar repayment heavier. Earning dollars as well, or hedging (locking in an exchange rate with a financial contract), removes the problem, so what matters is the unhedged mismatch, not foreign borrowing itself.[^indonesia] Foreign assets run the other way: a weaker home currency raises the home-currency value of overseas shares and bonds, which is why a country with a large overseas portfolio, such as Norway, sits on both sides of the trade.[^norway]
+**1. Foreign-currency debt and foreign assets.** Borrow in US dollars and earn in local currency, and depreciation makes the same dollar repayment heavier. Earning dollars as well, or hedging (locking in an exchange rate with a financial contract), shrinks the problem, so what matters is the unhedged mismatch, not foreign borrowing itself.[^indonesia] Foreign assets run the other way: a weaker home currency raises the home-currency value of overseas shares and bonds, which is why a country with a large overseas portfolio, such as Norway, sits on both sides of the trade.[^norway]
 
-**2. Why it moved, and whether policy is credible.** Exchange rates respond to trade, commodity prices, investment flows and interest rates, and most moves are ordinary adjustments. The Reserve Bank of Australia's job is price stability and full employment, with consumer price inflation between 2 and 3 per cent, and a flexible exchange rate helps the economy absorb shocks along the way.[^mandate] The worrying case is a central bank pushed to keep financing government spending while inflation and confidence get worse. Quantitative easing itself is a normal tool: the Bank of England says it creates reserves to buy bonds and lower longer-term borrowing costs, in service of its 2% inflation target.[^qe] Judge the purpose and discipline of the policy, not the label "money printing".
+**2. Why it moved, and whether policy is credible.** Exchange rates respond to trade, commodity prices, investment flows and interest rates, and a move driven by those is an ordinary adjustment. The Reserve Bank of Australia's mandate is price stability and full employment, with consumer price inflation between 2 and 3 per cent; the exchange rate is not one of its targets.[^mandate] The worrying case is a central bank pushed to keep financing government spending while inflation and confidence get worse. Quantitative easing itself is a normal tool: the Bank of England says it creates reserves to buy bonds and lower longer-term borrowing costs, in service of its 2% inflation target.[^qe] Judge the purpose and discipline of the policy, not the label "money printing".
 
-**3. Trade exposure, and the currency on the invoice.** Importers gain purchasing power from appreciation, and exporters tend to prefer depreciation. If an export is priced in the producer's own currency, depreciation cuts its price to a foreign buyer. If its US-dollar price stays put, the buyer sees no discount and the producer instead receives more local currency when the dollars are converted.[^exchange] Trade also balances itself: buying imports needs foreign currency, while converted export receipts create demand for the local currency. Capital flows, retained overseas earnings and policy can override that pull.[^china-analysis]
+**3. Trade exposure, and the currency on the invoice.** Importers gain purchasing power from appreciation, and exporters tend to prefer depreciation. If an export is priced in the producer's own currency, depreciation cuts its price to a foreign buyer. If its US-dollar price stays put, the buyer sees no discount and the producer instead receives more local currency when the dollars are converted.[^exchange] Trade pulls toward balance, since imports need foreign currency and converted export receipts create demand for the local one, but capital flows, retained overseas earnings and policy can hold that pull back: China runs a large and growing surplus while the renminbi stays relatively cheap.[^china-analysis]
 
 ## What happens in the short term when the currency strengthens?
 
@@ -51,11 +51,11 @@ A stronger Aussie dollar makes imports cheaper and export earnings smaller. Four
 
 Imported goods and overseas holidays get cheaper without your employer lifting your pay, and businesses buy foreign equipment for fewer Australian dollars.
 
-Australia's mining boom shows the scale. Reserve Bank of Australia modelling published in December 2014 estimated that real household disposable income per person was 13% higher in 2013 than in a no-boom economy. That figure is for the whole boom, with the stronger dollar's cheaper imports as one channel.[^mining]
+Australia's mining boom shows the scale. Reserve Bank of Australia modelling published in December 2014 estimated that the whole boom, with the stronger dollar's cheaper imports as one channel, lifted real household disposable income per person in 2013 to 13% above a no-boom economy.[^mining]
 
 ### A cheaper import shelf squeezes local producers that compete with it (−)
 
-A local manufacturer faces stronger competition from imports even when its own costs and productivity have not changed. Reserve Bank of Australia modelling of the mining boom, published in December 2014, put Australian manufacturing output in 2013 about 5% below a no-boom path.[^mining]
+A local manufacturer faces stronger competition from imports even when its own costs and productivity have not changed. Reserve Bank of Australia modelling of the whole mining boom, published in December 2014, put Australian manufacturing output in 2013 about 5% below a no-boom path.[^mining]
 
 A factory that closes does not reopen when the currency falls back, because its workforce, equipment and suppliers are gone. A more durable defence than the cheapest labour is something customers have a reason to stay for: quality, specialised technology or a service that is hard to copy. Measured protection can buy time to adjust, weighed against higher costs for the consumers and businesses that use the protected goods.
 
@@ -108,7 +108,7 @@ Bank Indonesia raised rates by a total of 150 basis points (1.5 percentage point
 
 Take a debt of US$100,000. At A$1 = US$0.80 its principal is A$125,000. If the Australian dollar falls to US$0.64, the same debt is A$156,250. A 20% fall in the currency raises the Australian-dollar principal by 25%, with no change in the interest rate.
 
-Indonesia shows it at national scale. The government's memorandum of 15 January 1998 recorded a 70% rupiah depreciation from mid-July 1997 to early January 1998, and heavy repayment pressure on banks and businesses that had borrowed abroad largely without hedging. Domestic interest rates rose as well.[^indonesia]
+Indonesia shows it at national scale. The government's memorandum of 15 January 1998 recorded a cumulative 70% depreciation of the rupiah from mid-July 1997 to early January 1998, and heavy repayment pressure on banks and businesses that had borrowed abroad largely without hedging. Domestic interest rates rose as well.[^indonesia]
 
 Borrowing in the currency you earn avoids the mismatch. The International Monetary Fund documents deeper local-currency bond markets and stronger policy frameworks in emerging economies.[^resilience] For household borrowing, the currency of your income sits beside [the question of whether the debt is productive](/en/is-debt-bad/).
 
@@ -148,7 +148,7 @@ A one-off fall is a shock. A fall that goes on for years is a different story, w
 
 A business earning abroad and paying local wages finds depreciation attractive, and lower foreign-currency production costs can draw activity away from more expensive places. The door opens only with reliable electricity, logistics, enforceable contracts and predictable policy.
 
-China's currency use has grown: the renminbi's share of global foreign-exchange turnover rose from 7.0% in April 2022 to 8.8% in April 2025, making it the fifth most traded currency.[^bis] The International Monetary Fund finds that better policy frameworks and balance sheets have helped emerging economies absorb external shocks.[^resilience]
+A cheap currency need not be an unloved one. China keeps the renminbi relatively cheap, yet its share of global foreign-exchange turnover rose from 7.0% in April 2022 to 8.8% in April 2025, making it the fifth most traded currency.[^bis]
 
 ### A collapse in trust turns depreciation into an inflation spiral (−)
 
@@ -156,12 +156,12 @@ Persistent, accelerating depreciation feeds on inflation and falling demand for 
 
 | Historical episode | What the source records | Household lesson |
 |---|---|---|
-| Türkiye, 2017 | Annual inflation of 11%, discussed as overheating in the Peterson Institute analysis | Painful price rises, well below 50% a month |
-| Argentina, 1989 and 1990 | Average annual inflation of 2,600% | Savings in local money lost purchasing power fast |
-| Venezuela, 2018 | Prices rising by more than 1.6 million percent | Holding local money devastated purchasing power |
-| Zimbabwe, late 2008 | Near-abandonment of local currency; prices shifted to foreign currencies from October to November 2008 | A monetary crisis can end with people rejecting their own money |
+| Türkiye, 2017 | Annual inflation of 11%, discussed as overheating in the Peterson Institute analysis[^hyperinflation] | Painful price rises, well below 50% a month |
+| Argentina, 1989 and 1990 | Average annual inflation of 2,600%[^argentina] | Savings in local money lost purchasing power fast |
+| Venezuela, 2018 | Prices rising by more than 1.6 million percent[^hyperinflation] | Holding local money devastated purchasing power |
+| Zimbabwe, late 2008 | Near-abandonment of local currency; prices shifted to foreign currencies from October to November 2008[^zimbabwe] | A monetary crisis can end with people rejecting their own money |
 
-The sources are the Peterson Institute's September 2019 analysis, the International Monetary Fund's March 2000 account of Argentina and its May 2009 Zimbabwe report.[^hyperinflation][^argentina][^zimbabwe] For residents of such a country, the question moves far beyond the cost of a holiday: do wages and savings still cover the basics?
+For residents of such a country, the question moves far beyond the cost of a holiday: do wages and savings still cover the basics?
 
 | Effect | Good or bad for households |
 | --- | --- |
@@ -176,7 +176,7 @@ Neither by itself. I would start with three questions rather than the colour of 
 2. **Do my income, spending and savings sit on the import side or the export side?** You can work for an exporter, buy imported goods and hold overseas investments at the same time.
 3. **Why did it move, and is the central bank credible?** An adjustment to trade and investment flows is different from a loss of confidence in the money itself.
 
-Over the long run, sustained purchasing power and trusted policy are the real advantages, and they do not need an exchange rate that rises forever.
+Over the long run, sustained purchasing power and trusted policy are the real advantages.
 
 A stronger dollar is not much of a household victory if cheaper shopping comes with the loss of your income. A weaker one is no defeat if it helps preserve that income without making your bills unmanageable. The useful measure is what you can earn, keep and buy, not whether the currency sounds strong.
 
