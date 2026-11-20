@@ -352,7 +352,10 @@ make it understandable:
 Finance and research terms Adjie keeps in English (November 2026): *hedging*, glossed once
 as *hedging* (lindung nilai) and bare after that; *peer review* (never *telaah sejawat* or
 *bertelaah sejawat*, which nobody says); *capital flight* (pelarian modal ke luar negeri);
-*moat* (keunggulan yang sulit ditiru pesaing). Write *diminimalkan*, not *diminimalisir*.
+*moat* (keunggulan yang sulit ditiru pesaing); *mining boom*; *contractionary monetary
+policy*; *market depth*; *reserve currency*. Names of international organisations are never
+translated: International Monetary Fund (IMF), not *Dana Moneter Internasional*. A worked
+example opens with "Contohnya, ...", not "Dalam contoh hipotetis". Write *diminimalkan*, not *diminimalisir*.
 
 Don't translate a term just because a dictionary word exists: *values* (not *nilai
 hidup*), *tool* (for the Adjie Brotools tools, never *alat*), *opportunity cost* (not

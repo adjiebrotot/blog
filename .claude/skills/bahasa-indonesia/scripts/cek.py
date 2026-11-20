@@ -46,6 +46,15 @@ CALQUES = [
     (r"\btidak mengklaim apa-apa\b", "calque of 'I make no claim'"),
     (r"\b(ber)?telaah sejawat\b|\bditelaah sejawat\b", "not a thing Indonesians say: '*peer review*'"),
     (r"\bdiminimalisir\b", "non-baku: 'diminimalkan', 'ditekan'"),
+    # Adjie, 20 Nov 2026 (currency post): keep the term people use; names are never translated.
+    (r"\bDana Moneter Internasional\b", "an organisation's name is not translated: 'International Monetary Fund (IMF)'"),
+    (r"(?<!\()\blindung nilai\b", "'*hedging*' (gloss '(lindung nilai)' once in brackets, then bare)"),
+    (r"\bledakan (pertambangan|tambang)\b", "'*mining boom*'"),
+    (r"\bperlindungan yang terukur\b", "'proteksionisme yang terukur'"),
+    (r"\bkebijakan moneter kontraktif\b", "'*contractionary monetary policy*'"),
+    (r"\bkedalaman pasar\b", "'*market depth*'"),
+    (r"\bmata uang cadangan\b", "'*reserve currency*'"),
+    (r"\bcontoh hipotetis\b", "'Contohnya, ...' is enough"),
 ]
 
 # Over-disclaiming (Adjie, Nov 2026): a sentence that apologises for the post's own
@@ -63,6 +72,13 @@ DISCLAIM = [
     r"\bsaja sudah berbeda jauh\b",
     r"\bhubungan yang ditemukannya berupa korelasi\b",
     r"\bbelum membuktikan bahwa\b",
+    # Body rejecting its own claim (Adjie, 20 Nov 2026)
+    r"\btidak membuktikan\b",
+    r"\bbukan jaminan\b|\btidak menjamin\b",
+    r"\bbukan satu-satunya (pertimbangan|penyebab|faktor)\b",
+    r"\bini bukan berarti\b",
+    r"\bmasih berupa makalah kerja\b|\bbelum melalui penelaahan\b",
+    r"\btidak mewakili semua\b",
 ]
 
 # Percentage points are valid terminology, not a calque. Never substitute persen

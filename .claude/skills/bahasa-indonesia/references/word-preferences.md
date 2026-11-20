@@ -28,6 +28,14 @@ Do not allow a preference to alter technical meaning, evidence or decision-chang
 | W4 | 2026-11-20 | Currency post: capital outflows | "pelarian modal" | *capital flight* with an explanation in brackets | Keep the term people use | All Indonesian posts | Explicit author revision in chat, 20 Nov 2026 |
 | W5 | 2026-11-20 | Currency post: Bank Indonesia | `*[BI]` tooltip | "Bank Indonesia (BI)" at first use, then BI, no tooltip | "people know it is Bank Indonesia" | All Indonesian posts; BI added to EVERYDAY in check-abbr.py | Explicit author revision in chat, 20 Nov 2026 |
 | W6 | 2026-11-20 | Currency post: a country's hard-to-copy export advantage | (new passage, author's own wording) | *moat* (keunggulan yang sulit ditiru pesaing) | Author's own wording | Contextual | Author-supplied text in chat, 20 Nov 2026 |
+| W7 | 2026-11-20 | Currency post, round three: introducing a worked example | "Dalam contoh hipotetis, ..." | "Contohnya, ..." | An example needs no label | All Indonesian posts | Explicit author revision in chat, 20 Nov 2026 |
+| W8 | 2026-11-20 | Currency post: Australia's commodity boom | "ledakan pertambangan" | *mining boom* | Keep the term people use | All Indonesian posts | Explicit author revision in chat, 20 Nov 2026 |
+| W9 | 2026-11-20 | Currency post: temporary protection for local industry | "Perlindungan yang terukur" | "Proteksionisme yang terukur" | Name the policy | Contextual (trade policy) | Explicit author revision in chat, 20 Nov 2026 |
+| W10 | 2026-11-20 | Currency post: central bank raising rates | "Kebijakan moneter kontraktif" | *contractionary monetary policy* | Keep the term people use | All Indonesian posts | Explicit author revision in chat, 20 Nov 2026 |
+| W11 | 2026-11-20 | Currency post: the IMF | "Dana Moneter Internasional" | International Monetary Fund (IMF) | "It's the name of an international organisation, do not translate" | All Indonesian posts, all international organisations' names, footnotes included | Explicit author revision in chat, 20 Nov 2026 |
+| W12 | 2026-11-20 | Currency post: local-currency bond markets | "kedalaman pasar" | *market depth* | Keep the term people use | All Indonesian posts | Explicit author revision in chat, 20 Nov 2026 |
+| W13 | 2026-11-20 | Currency post: international currency status | "mata uang cadangan" | *reserve currency* | Keep the term people use | All Indonesian posts | Explicit author revision in chat, 20 Nov 2026 |
+| W14 | 2026-11-20 | Currency post: hedged FX debt (repeat of W2) | "lindung nilai" | *hedging* (lindung nilai) at first mention, then *hedging* | Repeated instruction | All Indonesian posts; cek.py now flags bare "lindung nilai" | Explicit author revision in chat, 20 Nov 2026 |
 
 The request dated 10 November 2026
 approves this selection workflow, not specific new vocabulary. Do not backfill imagined
