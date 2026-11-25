@@ -31,14 +31,19 @@ roofs, cylinders and people standing next to each other. Rules for authors:
     Use it only for small props whose parts really interpenetrate.
   * Details stick to the face they are drawn on, so they layer with it.
 
+TUBES AND PEOPLE. Scene.tube() draws rounded, tapered segments (limbs, hoses)
+that sort as one unit by their axes. People (people.py) are tubes, faceted
+lofts and paint clipped to each facet, in one soft outline group: ink on the
+outer silhouette, a thin shade line where a part passes in front of another,
+nothing where parts meet at the same depth.
+
 OBJECTS. Build each thing once in its own space (a function model(m, ...),
 front facing +x, details on every side, anchors for people and cables) and
 place it: s.place(model, x, y, z, rot=0|90|180|270, mirror, scale). The
 object is a group for building and arranging only; its parts still sort one
 by one. models.py holds the library; sheet.py draws objects alone.
 """
-import math, heapq, os, io, copy
-from contextlib import nullcontext
+import math, heapq, os, io
 from contextlib import contextmanager
 
 C30 = math.cos(math.radians(30))
@@ -64,6 +69,7 @@ PALETTES = {
         "hair1": "#3A2A22", "hair2": "#7A4A2A", "hair3": "#2B3550", "hair4": "#E39B4A",
         "hair5": "#B9B9C4", "shoe": "#3C4A63", "pants": "#2E3D5C",
         "light_on": "#FFD28C", "wire": "#14203A", "blush": "#F29C9C", "screen": "#9CC2F5",
+        "eyewhite": "#FFFFFF", "iris": "#5B3A24", "lip": "#C9776C", "mouth": "#6B2A2E",
     },
     "dark": {
         "_bg": "#0F1728", "_ink": "#060A14", "_ink_op": 0.9, "_face": "#0B1220",
@@ -81,6 +87,7 @@ PALETTES = {
         "hair1": "#2A1E18", "hair2": "#6A3F24", "hair3": "#1E2740", "hair4": "#C9843C",
         "hair5": "#8E93A3", "shoe": "#0B1220", "pants": "#22304D",
         "light_on": "#FFD28C", "wire": "#8DA2C4", "blush": "#C46A6A", "screen": "#7FA6E0",
+        "eyewhite": "#DCE3EE", "iris": "#4A2E1C", "lip": "#A65E56", "mouth": "#4A1C20",
     },
 }
 
@@ -206,6 +213,97 @@ def _seg_facet(p, q, hw):
     return f
 
 
+def _unit3(v):
+    n = math.sqrt(v[0] * v[0] + v[1] * v[1] + v[2] * v[2])
+    return (v[0] / n, v[1] / n, v[2] / n) if n > 1e-12 else (0.0, 0.0, 1.0)
+
+
+def _perp_basis(d):
+    a = (1.0, 0.0, 0.0) if abs(d[0]) < 0.9 else (0.0, 1.0, 0.0)
+    e1 = _unit3((d[1] * a[2] - d[2] * a[1], d[2] * a[0] - d[0] * a[2], d[0] * a[1] - d[1] * a[0]))
+    e2 = (d[1] * e1[2] - d[2] * e1[1], d[2] * e1[0] - d[0] * e1[2], d[0] * e1[1] - d[1] * e1[0])
+    return e1, e2
+
+
+def _tube_end(P, r, Q, e, n=16):
+    """Screen points (unit 1) of one end of a tube segment: the sphere's
+    outline, or the rim of a flat end facing away from Q."""
+    if e == "r" or (abs(P[0] - Q[0]) + abs(P[1] - Q[1]) + abs(P[2] - Q[2])) < 1e-9:
+        cx, cy = _S(*P)
+        R = r * 1.2247449
+        return [(cx + R * math.cos(2 * math.pi * i / n), cy + R * math.sin(2 * math.pi * i / n)) for i in range(n)]
+    d = _unit3((P[0] - Q[0], P[1] - Q[1], P[2] - Q[2]))
+    e1, e2 = _perp_basis(d)
+    out = []
+    for i in range(n):
+        t = 2 * math.pi * i / n
+        c, s = math.cos(t) * r, math.sin(t) * r
+        out.append(_S(P[0] + c * e1[0] + s * e2[0], P[1] + c * e1[1] + s * e2[1], P[2] + c * e1[2] + s * e2[2]))
+    return out
+
+
+def _tube_facet(sg):
+    A, ra, B, rb, mat, ea, eb = sg[:7]
+    f = _Facet(); f.kind = "t"
+    f.poly = _hull(_tube_end(A, ra, B, ea) + _tube_end(B, rb, A, eb))
+    f.bb = _bbox2(f.poly)
+    (ax, ay), (bx, by) = _S(*A), _S(*B)
+    dx, dy = bx - ax, by - ay
+    bias = 0.8 * max(ra, rb)
+    f.k = (ax, ay, dx, dy, dx * dx + dy * dy, sum(A) + bias, sum(B) + bias)
+    return f
+
+
+def _halfplane(poly, o, m, off):
+    """The part of a convex polygon where (p - o) . m >= off."""
+    out = []
+    n = len(poly)
+    for i in range(n):
+        p, q = poly[i], poly[(i + 1) % n]
+        dp = (p[0] - o[0]) * m[0] + (p[1] - o[1]) * m[1] - off
+        dq = (q[0] - o[0]) * m[0] + (q[1] - o[1]) * m[1] - off
+        if dp >= 0:
+            out.append(p)
+        if (dp >= 0) != (dq >= 0):
+            t = dp / (dp - dq)
+            out.append((p[0] + (q[0] - p[0]) * t, p[1] + (q[1] - p[1]) * t))
+    return out
+
+
+def _runs_svg(runs, scr, hard, soft):
+    """Contour runs (edge, t0, t1, cls) along a closed polygon, joined into
+    as few polylines as possible."""
+    n = len(scr)
+    paths, cur = [], None
+    for i, t0, t1, cls in runs:
+        (ax, ay), (bx, by) = scr[i], scr[(i + 1) % n]
+        p0 = (ax + (bx - ax) * t0, ay + (by - ay) * t0)
+        p1 = (ax + (bx - ax) * t1, ay + (by - ay) * t1)
+        full = t0 < 1e-9 and t1 > 1 - 1e-9
+        if cur and cur[0] == cls and cur[2] == (i - 1, 1.0) and t0 < 1e-9:
+            cur[1].append(p1)
+            cur[3] = cur[3] or full
+        else:
+            cur = [cls, [p0, p1], None, full]
+            paths.append(cur)
+        cur[2] = (i, 1.0) if t1 > 1 - 1e-9 else (i, t1)
+    if len(paths) > 1:
+        f, l = paths[0], paths[-1]
+        if f[0] == l[0] and l[2] == (n - 1, 1.0) and abs(f[1][0][0] - l[1][-1][0]) < 1e-6 and abs(f[1][0][1] - l[1][-1][1]) < 1e-6:
+            l[1].extend(f[1][1:]); paths.pop(0)
+    out = []
+    for cls, pts, _, full in paths:
+        if not full and sum(math.hypot(b[0] - a[0], b[1] - a[1]) for a, b in zip(pts, pts[1:])) < 3.0:
+            continue                                  # a stub at a corner, not a contour
+        out.append('<polyline points="%s" fill="none"%s/>' % (_pl(pts), hard if cls == 2 else soft))
+    return "".join(out)
+
+
+def _shade_n(n, st, sl, sr):
+    t = abs(n[0]) + abs(n[1]) + abs(n[2]) or 1
+    return (sr * abs(n[0]) + sl * abs(n[1]) + st * abs(n[2])) / t
+
+
 def _clip(subject, clipper):
     """Sutherland-Hodgman: subject polygon clipped by a convex CCW clipper."""
     out = subject
@@ -317,11 +415,11 @@ def _hex_overlap(a, b):
 
 
 class _Item:
-    __slots__ = ("kind", "data", "marks", "atom", "tag", "box", "bb", "local", "T", "ol")
+    __slots__ = ("kind", "data", "marks", "atom", "tag", "box", "bb", "local", "T", "ol", "tf")
 
     def __init__(self, kind, data, tag):
         self.kind, self.data, self.marks, self.atom, self.tag, self.box = kind, data, [], None, tag, None
-        self.bb, self.local, self.T, self.ol = None, None, None, None
+        self.bb, self.local, self.T, self.ol, self.tf = None, None, None, None, None
 
 
 class _Atom:
@@ -602,6 +700,8 @@ class Scene:
         self._bb = None
         self._tag = None
         self._ol, self._olseq = None, 0
+        self._softol = set()
+        self._olw = {}
         self.stats = {}
         self.instances, self._names = [], {}
 
@@ -660,7 +760,7 @@ class Scene:
         return "%s#%d" % (name, self._olseq)
 
     @contextmanager
-    def outline(self, key=None):
+    def outline(self, key=None, soft=False, width=None):
         """Parts made inside share ONE border: the ink line runs only round
         the outside of the whole (its silhouette, and where it meets other
         things), not along the seams where its own boxes meet. Use it for
@@ -668,6 +768,10 @@ class Scene:
         hijab, a head of hair, an arm, a tree's crown, a cushion. Pass the
         same key (new_outline()) to join parts made in different places."""
         key = key or self.new_outline()
+        if soft:
+            self._softol.add(key)
+        if width is not None:
+            self._olw[key] = width
         old, self._ol = self._ol, key
         try:
             yield key
@@ -754,6 +858,34 @@ class Scene:
         for i in range(n):
             self.line([pts[i], pts[i + 1]], mat, width)
 
+    def tube(self, segs, mat=None):
+        """A rounded limb: a chain of tapered segments, each one the hull of two
+        spheres (or a sphere and a flat disc). segs: [(A, ra, B, rb, mat, endA,
+        endB), ...] with A, B world points and ra, rb radii in units. Ends:
+        'r' round, 'f' flat (a seam inside a limb, no line), 'h' flat with a
+        hem line, 'o' an opening (a sleeve or trouser end: hem line, and the
+        dark inside when it faces the viewer). A zero-length segment is a
+        sphere. The chain is ONE sortable unit, filled with three-tone shading
+        and inked only round its outer silhouette (softly where it passes in
+        front of another part of the same outline group)."""
+        fs, tf = [], []
+        xs, ys, zs = [], [], []
+        for sg in segs:
+            A, ra, B, rb = sg[0], sg[1], sg[2], sg[3]
+            for P, r in ((A, ra), (B, rb)):
+                xs += [P[0] - r, P[0] + r]; ys += [P[1] - r, P[1] + r]; zs += [P[2] - r, P[2] + r]
+            f = _tube_facet(sg)
+            fs.append(f); tf.append(f)
+        it = self._emit("tube", [tuple(s) for s in segs], (min(xs), max(xs), min(ys), max(ys), min(zs), max(zs)), fs)
+        it.tf = tf
+        return it
+
+    def shadow_poly(self, pts):
+        """A soft floor shadow of any outline (world points on one plane)."""
+        xs, ys, zs = zip(*pts)
+        return self._emit("shadowp", tuple(pts), (min(xs), max(xs), min(ys), max(ys), min(zs), max(zs)),
+                          [_plane_facet(pts)], boxlike=True)
+
     def _round_facets(self, x, y, z, prof, k=8):
         """Facets of the visible half of a round solid. prof: [(r, z), ...]."""
         fs = []
@@ -833,11 +965,13 @@ class Scene:
         U, V = _LEGACY_AXES[side]
         self._put_mark((x, y, z), U, V, side, shapes, on)
 
-    def _put_mark(self, A, U, V, side, shapes, on):
+    def _put_mark(self, A, U, V, side, shapes, on, clip=False):
+        """side: 'r', 'l', 't', or the face's world normal (shaded like the face).
+        clip: keep the marks inside the face they sit on (polys only)."""
         it = on or self._find_face(A, side, U, V) or self._last
         if it is None:
             it = self._emit("none", None, (A[0], A[0], A[1], A[1], A[2], A[2]), [])
-        it.marks.append((tuple(A), tuple(U), tuple(V), side, shapes))
+        it.marks.append((tuple(A), tuple(U), tuple(V), side, shapes, clip))
 
     def mark(self, on, face, shapes):
         """Details on one face of a box (or the top of a tile), in the face's
@@ -903,21 +1037,24 @@ class Scene:
     # ── character ────────────────────────────────────────────────────────
     def person(self, x, y, z=0, *, facing="r", h=1.0, skin="skin1", hair="hair1",
                hair_style="short", top="blue", outfit="tee", inner="shirt", sleeve=None,
-               tie=None, bottom="pants", skirt=None, shoe="shoe", eyes="dot", mouth="smile",
-               brows=True, blush=False, glasses=None, beard=None, carry=None, carry_color="gold",
-               hat=None, walk=0.0, sit=None, pose="down", holding=None, hold_color=None):
-        """Blocky character. See references/characters.md for every option.
-        (x, y, z) is the back corner of the body's footprint; z is the floor,
-        or the seat top when sit=<seat height>. The body is about 0.75 x 0.7
-        units on the floor and 2.5 units tall at h=1. Every part is its own
-        sortable unit and no two parts pass through each other."""
+               tie=None, bottom="pants", skirt=None, shorts=False, shoe="shoe", eyes="dot", mouth="smile",
+               brows=True, blush=False, glasses=None, beard=None, eye_color="iris", carry=None,
+               carry_color="gold", hat=None, walk=0.0, sit=None, pose="down", arms=None, lean=None,
+               nod=None, air=None, holding=None, hold_color=None):
+        """A person. See references/characters.md for every option.
+        (x, y, z) is the back corner of the standing footprint; z is the floor,
+        or the seat top when sit=<seat height>. About 0.85 x 0.7 units on the
+        floor and 2.5 units tall at h=1. pose: an arm pose (down, hold, phone,
+        point, wave, cheer, hips, think) or a whole-body pose (run, jump,
+        squat, kneel, floor, lie, sleep); arms= overrides the arms of any pose."""
         inst = _open(self, "person", None)
         inst.kind, inst.facing = "person", facing
-        _person(self, x, y, z, dict(facing=facing, h=h, skin=skin, hair=hair, hair_style=hair_style, top=top,
-                                    outfit=outfit, inner=inner, sleeve=sleeve, tie=tie, bottom=bottom, skirt=skirt,
-                                    shoe=shoe, eyes=eyes, mouth=mouth, brows=brows, blush=blush, glasses=glasses,
-                                    beard=beard, carry=carry, carry_color=carry_color, hat=hat, walk=walk, sit=sit,
-                                    pose=pose, holding=holding, hold_color=hold_color))
+        _draw_person(self, x, y, z, dict(facing=facing, h=h, skin=skin, hair=hair, hair_style=hair_style, top=top,
+                                         outfit=outfit, inner=inner, sleeve=sleeve, tie=tie, bottom=bottom, skirt=skirt,
+                                         shorts=shorts, shoe=shoe, eyes=eyes, mouth=mouth, brows=brows, blush=blush,
+                                         glasses=glasses, beard=beard, eye_color=eye_color, carry=carry,
+                                         carry_color=carry_color, hat=hat, walk=walk, sit=sit, pose=pose, arms=arms,
+                                         lean=lean, nod=nod, air=air, holding=holding, hold_color=hold_color))
         _close(self, inst)
         return inst
 
@@ -1041,17 +1178,93 @@ class Scene:
         fully bordered. Inside one: filled, then bordered only along the
         stretches of its edges that are the group's silhouette."""
         if it.ol is None or not stroke:
+            if it.ol in self._softol:
+                q = " ".join("%.1f,%.1f" % self.p(*t) for t in wpts)
+                return '<polygon points="%s" fill="%s" stroke="%s" stroke-width="0.6"/>' % (q, fill, fill)
             return self._face_svg([self.p(*q) for q in wpts], fill, op, stroke)
-        scr = self._pts([self.p(*q) for q in wpts])
+        soft_grp = it.ol in self._softol
+        scr = [self.p(*q) for q in wpts] if soft_grp else self._pts([self.p(*q) for q in wpts])
         opa = "" if op == 1 else ' fill-opacity="%.2f"' % op
         seam = (' stroke="%s" stroke-width="0.7"' % fill) if op == 1 else ""      # close anti-aliasing gaps
         out = ['<polygon points="%s" fill="%s"%s%s/>' % (_pl(scr), fill, seam, opa)]
         n = len(scr)
+        if it.ol in self._softol:
+            runs = self._contours(it, _plane_facet(wpts), [_S(*q) for q in wpts], skip={(id(it), k)})
+            self._late.append(_runs_svg(runs, scr, self._hard_style(it.ol), self._soft_style(fill, it.ol)))
+            return "".join(out)
         for i, t0, t1 in self._silhouette(it, k, wpts):
             (ax, ay), (bx, by) = scr[i], scr[(i + 1) % n]
             out.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" class="k"/>'
                        % (ax + (bx - ax) * t0, ay + (by - ay) * t0, ax + (bx - ax) * t1, ay + (by - ay) * t1))
         return "".join(out)
+
+    def _soft_style(self, fill, ol=None):
+        return ' stroke="%s" stroke-width="%.2f"' % (shade(fill, 0.66), self.stroke * 0.62 * self._olw.get(ol, 1.0))
+
+    def _hard_style(self, ol):
+        w = self._olw.get(ol)
+        return ' class="k"' if w is None else ' class="k" stroke-width="%.2f"' % (self.stroke * w)
+
+    def _contours(self, it, me, poly, skip=(), own=()):
+        """For a soft outline group (a person): stretches (edge, t0, t1, cls) of
+        a shape's edges that need a line. cls 2: the outer silhouette (ink);
+        cls 1: the shape passes in front of another part of the same group
+        (a thin line in a darker shade of its own colour). Where the group
+        continues at the same depth (hair into forehead, shirt into sleeve)
+        there is no line at all. `own`: convex pieces of the same shape (a
+        tube's other segments): no line inside them."""
+        n = len(poly)
+        if me is None:
+            return [(i, 0.0, 1.0, 2) for i in range(n)]
+        others = [f for key, f in self._group_faces(it.ol) if key not in skip]
+        eps = 1.4 / self.u
+        tol = 0.1
+        out = []
+        for i in range(n):
+            (ax, ay), (bx, by) = poly[i], poly[(i + 1) % n]
+            L = math.hypot(bx - ax, by - ay)
+            if L < 1e-9:
+                continue
+            nx, ny = (by - ay) / L, -(bx - ax) / L
+            mx, my = (ax + bx) / 2 + nx * eps, (ay + by) / 2 + ny * eps
+            if _inside(me.poly, mx, my):
+                nx, ny = -nx, -ny
+            N = max(2, int(L * self.u / 3))
+            cl = []
+            for j in range(N):
+                t = (j + 0.5) / N
+                qx, qy = ax + (bx - ax) * t + nx * eps, ay + (by - ay) * t + ny * eps
+                cls = 2
+                if any(_inside(p, qx, qy) for p in own):
+                    cls = 0
+                else:
+                    ex, ey = qx - nx * eps, qy - ny * eps          # on the edge itself
+                    d0 = me.depth(ex, ey)
+                    for f in others:
+                        b = f.bb
+                        if b[0] <= qx <= b[2] and b[1] <= qy <= b[3] and _inside(f.poly, qx, qy):
+                            if abs(f.depth(ex, ey) - d0) < tol:
+                                cls = 0
+                                break
+                            cls = 1
+                cl.append(cls)
+            # a lone sample that flips class is noise at a corner, not a change of contour
+            if N >= 3:
+                for j in range(N):
+                    prv = cl[j - 1] if j > 0 else cl[j + 1]
+                    nxt = cl[j + 1] if j < N - 1 else cl[j - 1]
+                    if cl[j] != prv and prv == nxt:
+                        cl[j] = prv
+            run, rc = None, 0
+            for j in range(N + 1):
+                cls = cl[j] if j < N else -1
+                if run is not None and cls != rc:
+                    if rc > 0:
+                        out.append((i, run, j / N, rc))
+                    run = None
+                if run is None and cls > 0:
+                    run, rc = j / N, cls
+        return out
 
     def _group_faces(self, ol):
         if self._olfaces is None:
@@ -1066,6 +1279,10 @@ class Scene:
                     wfs = [[(x, y, z), (x + w, y, z), (x + w, y + dd, z), (x, y + dd, z)]]
                 elif it2.kind == "poly":
                     wfs = [it2.data[0]]
+                elif it2.kind == "tube":
+                    for k2, f in enumerate(it2.tf):
+                        self._olfaces.setdefault(it2.ol, []).append(((id(it2), 1000 + k2), f))
+                    continue
                 else:
                     continue
                 for k2, wp in enumerate(wfs):
@@ -1121,11 +1338,14 @@ class Scene:
         st, sl, sr = pal["_shade"]
         self._bb = [1e9, 1e9, -1e9, -1e9]
         self._olfaces = None
+        self._clipn = 0
         o = []
         P = self.p
+        self._late = []                 # a person's contour lines go on top of the paint on its face
         for g in self._order():
             for it in g.items:
                 kind, d = it.kind, it.data
+                self._late = []
                 if kind == "box":
                     x, y, z, w, dd, h, mat, top, faces, op = d
                     c = self._c(mat); ct = self._c(top) or c
@@ -1147,13 +1367,32 @@ class Scene:
                              % (q, col, aop * op, width or self.stroke, ' stroke-dasharray="%s"' % dash if dash else ""))
                 elif kind == "poly":
                     pts, mat, strk, op = d
-                    o.append(self._face(it, 0, pts, shade(self._c(mat), _normal_shade(pts, st, sl, sr)), op, strk))
+                    kk = _normal_shade(pts, st, sl, sr)
+                    if it.ol in self._softol:
+                        kk = 1 + (kk - 1) * 0.7
+                    o.append(self._face(it, 0, pts, shade(self._c(mat), kk), op, strk))
                 elif kind == "cyl":
                     o.append(self._cyl(*d))
                 elif kind == "cloud":
                     o.append(self._cloud(*d))
+                elif kind == "tube":
+                    o.append(self._tube_svg(it, d))
+                elif kind == "shadowp":
+                    q = " ".join("%.1f,%.1f" % P(*t) for t in d)
+                    o.append('<polygon points="%s" fill="%s" fill-opacity="%.2f"/>' % (q, pal["_shadow"], pal["_shadow_op"]))
                 for m in it.marks:
-                    o.append(self._marks(*m, shade_k={"r": sr, "l": sl, "t": st}[m[3]]))
+                    side = m[3]
+                    sk = _shade_n(side, st, sl, sr) if isinstance(side, tuple) else {"r": sr, "l": sl, "t": st}[side]
+                    if isinstance(side, tuple) and it.ol in self._softol:
+                        sk = 1 + (sk - 1) * 0.7
+                    svg = self._marks(*m[:5], shade_k=sk)
+                    if len(m) > 5 and m[5] and kind == "poly":
+                        self._clipn += 1
+                        cid = "c%d" % self._clipn
+                        q = _pl([self.p(*t) for t in d[0]] if it.ol in self._softol else self._pts([self.p(*t) for t in d[0]]))
+                        svg = '<clipPath id="%s"><polygon points="%s"/></clipPath><g clip-path="url(#%s)">%s</g>' % (cid, q, cid, svg)
+                    o.append(svg)
+                o.extend(self._late)
         if grid_overlay:
             o.append(self._grid_svg())
         bb, self._bb = self._bb, None
@@ -1197,6 +1436,10 @@ class Scene:
             elif k == "poly":
                 _, pts, m, *op = s
                 out.append('<polygon points="%s" fill="%s"%s/>' % (_pl([P(a, b) for a, b in pts]), col(m), ' fill-opacity="%.2f"' % op[0] if op else ""))
+            elif k == "spoly":
+                _, pts, m = s[:3]
+                c_ = col(m)
+                out.append('<polygon points="%s" fill="%s" stroke="%s" stroke-width="0.7"/>' % (_pl([P(a, b) for a, b in pts]), c_, c_))
             elif k == "line":
                 _, pts, m, w = s
                 out.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="%.2f"/>' % (_pl([P(a, b) for a, b in pts]), col(m), w))
@@ -1281,6 +1524,116 @@ class Scene:
         out += ['<circle cx="%.1f" cy="%.1f" r="%.1f" fill="%s" fill-opacity="%.2f"/>' % (a, b, rr, shade(c, st), op) for a, b, rr in circ]
         out.append('<circle cx="%.1f" cy="%.1f" r="%.1f" fill="%s" fill-opacity="%.2f"/>' % (cx + R * 0.15, cy + R * 0.25, R * 0.45, shade(c, 0.94), op * 0.6))
         return "".join(out)
+
+    def _tube_svg(self, it, segs):
+        st, sl, sr = self._pal["_shade"]
+        u = self.u
+        bb = self._bb
+        parts = []
+        for k, sg in enumerate(segs):
+            A, ra, B, rb, mat, ea, eb = sg[:7]
+            hull = it.tf[k].poly
+            for x, y in hull:
+                X, Y = x * u, y * u
+                if X < bb[0]: bb[0] = X
+                if Y < bb[1]: bb[1] = Y
+                if X > bb[2]: bb[2] = X
+                if Y > bb[3]: bb[3] = Y
+            parts.append(((sum(A) + sum(B)) / 2, k, sg, hull))
+        parts.sort(key=lambda q: (q[0], q[1]))
+        out = []
+        for _, k, sg, hull in parts:
+            A, ra, B, rb, mat, ea, eb = sg[:7]
+            c = self._c(mat)
+            base, dark, light = shade(c, sl), shade(c, sr), shade(c, st)
+            px = [(x * u, y * u) for x, y in hull]
+            out.append('<polygon points="%s" fill="%s" stroke="%s" stroke-width="0.6"/>' % (_pl(px), base, base))
+            a2, b2 = _S(*A), _S(*B)
+            dx, dy = b2[0] - a2[0], b2[1] - a2[1]
+            L = math.hypot(dx, dy)
+            if L > 1e-6:
+                m = (-dy / L, dx / L)
+                if m[0] + 0.35 * m[1] < 0:
+                    m = (-m[0], -m[1])
+            else:
+                m = (0.944, 0.33)
+            R = min(ra, rb) * 1.2247
+            o2 = (a2[0], a2[1])
+            dk = _halfplane(hull, o2, m, 0.12 * R)
+            if len(dk) >= 3:
+                out.append('<polygon points="%s" fill="%s"/>' % (_pl([(x * u, y * u) for x, y in dk]), dark))
+            lt = _halfplane(hull, o2, (-m[0], -m[1]), 0.5 * R)
+            if len(lt) >= 3:
+                out.append('<polygon points="%s" fill="%s"/>' % (_pl([(x * u, y * u) for x, y in lt]), light))
+            for P, Q, r, e in ((B, A, rb, eb), (A, B, ra, ea)):
+                if e not in ("h", "o") or r <= 0:
+                    continue
+                d = _unit3((P[0] - Q[0], P[1] - Q[1], P[2] - Q[2]))
+                e1, e2 = _perp_basis(d)
+                faces = d[0] + d[1] + d[2] > 0
+                ring = []
+                for i in range(25):
+                    t = 2 * math.pi * i / 24
+                    v = (math.cos(t) * e1[0] + math.sin(t) * e2[0], math.cos(t) * e1[1] + math.sin(t) * e2[1],
+                         math.cos(t) * e1[2] + math.sin(t) * e2[2])
+                    ring.append(((P[0] + r * v[0], P[1] + r * v[1], P[2] + r * v[2]), v[0] + v[1] + v[2]))
+                if faces and e == "o":
+                    out.append('<polygon points="%s" fill="%s"/>' % (_pl([self.p(*q) for q, _ in ring[:-1]]), shade(c, 0.5)))
+                    out.append('<polyline points="%s" fill="none"%s/>' % (_pl([self.p(*q) for q, _ in ring]), self._soft_style(base, it.ol)))
+                elif not faces:
+                    run = []
+                    for q, vis in ring:
+                        if vis > 0:
+                            run.append(self.p(*q))
+                        elif len(run) > 1:
+                            out.append('<polyline points="%s" fill="none"%s/>' % (_pl(run), self._soft_style(base, it.ol))); run = []
+                        else:
+                            run = []
+                    if len(run) > 1:
+                        out.append('<polyline points="%s" fill="none"%s/>' % (_pl(run), self._soft_style(base, it.ol)))
+        # the outline: ink round the silhouette, soft where it passes over its own figure
+        soft_grp = it.ol in self._softol
+        for k, sg in enumerate(segs):
+            hull = it.tf[k].poly
+            own = [it.tf[j].poly for j in range(len(segs)) if j != k]
+            if soft_grp:
+                runs = self._contours(it, it.tf[k], hull, skip={(id(it), 1000 + j) for j in range(len(segs))}, own=own)
+            else:
+                runs = []
+                for i, t0, t1, cls in self._contours_plain(hull, own):
+                    runs.append((i, t0, t1, cls))
+            base = shade(self._c(sg[4]), sl)
+            out.append(_runs_svg(runs, [(x * u, y * u) for x, y in hull], self._hard_style(it.ol) + ' stroke-linecap="butt"',
+                                 self._soft_style(base, it.ol) + ' stroke-linecap="butt"'))
+        return "".join(out)
+
+    def _contours_plain(self, poly, own):
+        """Edges of one tube segment that are not inside its other segments."""
+        out = []
+        n = len(poly)
+        eps = 1.4 / self.u
+        cx = sum(p[0] for p in poly) / n; cy = sum(p[1] for p in poly) / n
+        for i in range(n):
+            (ax, ay), (bx, by) = poly[i], poly[(i + 1) % n]
+            L = math.hypot(bx - ax, by - ay)
+            if L < 1e-9:
+                continue
+            nx, ny = (by - ay) / L, -(bx - ax) / L
+            if (ax - cx) * nx + (ay - cy) * ny < 0:
+                nx, ny = -nx, -ny
+            N = max(2, int(L * self.u / 3))
+            run = None
+            for j in range(N + 1):
+                ok = False
+                if j < N:
+                    t = (j + 0.5) / N
+                    qx, qy = ax + (bx - ax) * t + nx * eps, ay + (by - ay) * t + ny * eps
+                    ok = not any(_inside(p, qx, qy) for p in own)
+                if ok and run is None:
+                    run = j / N
+                elif not ok and run is not None:
+                    out.append((i, run, j / N, 2)); run = None
+        return out
 
     def plan_svg(self, u=30):
         """A top-down plan for arranging the scene: every placed object's
@@ -1439,667 +1792,8 @@ def _esc(t):
     return t.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
-# ══ the character rig ═══════════════════════════════════════════════════
-# A blocky ADULT figure, about 3.7 heads tall: shoulders (torso + arms) are
-# wider than the head, arms reach the upper thigh, legs are a third of the
-# height. Local frame: f = forward (the way the person faces), s = sideways
-# towards the viewer's side of the body, z = up. Measures at h = 1:
-#
-#   shoes 0.12   legs 0.84 (each 0.26 wide, 0.04 apart)   torso 0.78 tall,
-#   0.60 wide, 0.32 deep   neck 0.05   head 0.66 cube   arms 0.15 x 0.18,
-#   0.86 long with the hand   total about 2.5 with hair
-#
-# Every part is its own box that only touches its neighbours, so the sorter
-# places each one against the scene (an arm in front of a counter, legs
-# behind a bench seat), and the face never ends up under its own hair.
-TW, TD, TH = 0.32, 0.60, 0.78           # torso depth (f), width (s), height
-HS = 0.66                               # head size
-SHOE = 0.12
-LEG_Z = 0.96                            # hip height when standing
-NECK = 0.05
-AW, AD = 0.15, 0.18                     # arm width (s), depth (f)
-ARM = 0.86                              # shoulder to fingertips
-SHORT_SLEEVES = ("tee", "polo", "hivis", "dress", "apron", "batik_short")
-DRAPE = 0.16                            # hijab drape over the shoulders
-
-
-FACINGS = {   # facing: (forward axis, side axis) as unit vectors in (x, y)
-    "r": ((1, 0), (0, 1)), "dr": ((1, 0), (0, 1)),      # towards the lower right: face visible
-    "l": ((0, 1), (1, 0)), "dl": ((0, 1), (1, 0)),      # towards the lower left: face visible
-    "ul": ((-1, 0), (0, 1)),                            # walking away to the upper left: back visible
-    "ur": ((0, -1), (1, 0)),                            # walking away to the upper right: back visible
-}
-
-
-class _Rig:
-    def __init__(self, sc, X, Y, Z, facing, k, tag):
-        if facing not in FACINGS:
-            raise ValueError("facing must be one of r, l, ul, ur (got %r)" % (facing,))
-        self.sc, self.X, self.Y, self.Z, self.k, self.tag = sc, X, Y, Z, k, tag
-        self.FX, self.SX = FACINGS[facing]
-        self.away = self.FX[0] < 0 or self.FX[1] < 0     # we see the back
-        self.wk = max(0.55, min(1.15, sc.u * k / 34))     # face line widths follow the drawn size
-
-    def sub(self, kh, anchor):
-        """A rig with the same axes but scale kh, matching this one at anchor
-        (used to give children a larger head)."""
-        af, as_, az = anchor
-        xa, ya, za = self.w(af, as_, az)
-        (fx, fy), (sx, sy) = self.FX, self.SX
-        r = copy.copy(self)
-        r.k = kh
-        r.X, r.Y, r.Z = xa - (af * fx + as_ * sx) * kh, ya - (af * fy + as_ * sy) * kh, za - az * kh
-        r.wk = max(0.55, min(1.15, self.sc.u * kh / 34))
-        return r
-
-    def w(self, f, s, z):
-        k, (fx, fy), (sx, sy) = self.k, self.FX, self.SX
-        return (self.X + (f * fx + s * sx) * k, self.Y + (f * fy + s * sy) * k, self.Z + z * k)
-
-    def B(self, f0, f1, s0, s1, z0, z1, mat, top=None, faces="tlr", part="", ol=None):
-        a, b = self.w(f0, s0, z0), self.w(f1, s1, z1)
-        x0, x1, y0, y1 = min(a[0], b[0]), max(a[0], b[0]), min(a[1], b[1]), max(a[1], b[1])
-        with self.sc.tag("%s %s" % (self.tag, part)), (self.sc.outline(ol) if ol else nullcontext()):
-            return self.sc.box(x0, y0, a[2], x1 - x0, y1 - y0, b[2] - a[2], mat, top=top, faces=faces, snap=False)
-
-    def _sc(self, shapes, flip=False):
-        """Scale shapes to the body size; flip mirrors a (a -> -a)."""
-        k, wk = self.k, self.wk
-        sg = -1 if flip else 1
-        out = []
-        for s in shapes:
-            t = s[0]
-            if t == "rect":
-                a, w = s[1] * k, s[3] * k
-                out.append((t, a if not flip else -(a + w), s[2] * k, w, s[4] * k) + tuple(s[5:]))
-            elif t == "poly":
-                out.append((t, [(sg * a * k, b * k) for a, b in s[1]]) + tuple(s[2:]))
-            elif t == "line":
-                out.append((t, [(sg * a * k, b * k) for a, b in s[1]], s[2], s[3] * wk))
-            elif t == "ell":
-                out.append((t, sg * s[1] * k, s[2] * k, s[3] * k, s[4] * k) + tuple(s[5:]))
-            elif t in ("ring", "arc"):
-                out.append((t, sg * s[1] * k, s[2] * k, s[3] * k, s[4] * k, s[5], s[6] * wk))
-        return out
-
-    def _vert(self, on, axis_plane, anchor, along, shapes):
-        """Marks on a vertical face whose normal is world +x or +y. along: the
-        local axis vector the shapes' a runs along."""
-        x, y, z = anchor
-        if axis_plane == (1, 0):          # plane x = const, a runs +y
-            side, flip = "r", along[1] < 0
-        else:                             # plane y = const, a runs +x
-            side, flip = "l", along[0] < 0
-        self.sc.face_mark(x, y, z, side, self._sc(shapes, flip), on=on)
-
-    def front(self, on, f, s0, z0, shapes):
-        """Marks on a face pointing forward (plane f): a along s, b up.
-        Not drawn when the person faces away (that face is hidden)."""
-        if not self.away:
-            self._vert(on, self.FX, self.w(f, s0, z0), self.SX, shapes)
-
-    def back(self, on, f, s0, z0, shapes):
-        """Marks on a face pointing backward (plane f): a along s, b up.
-        Only drawn when the person faces away."""
-        if self.away:
-            self._vert(on, (-self.FX[0], -self.FX[1]), self.w(f, s0, z0), self.SX, shapes)
-
-    def side(self, on, s, f0, z0, shapes):
-        """Marks on the near side face (plane s): a along f (back to front), b up."""
-        self._vert(on, self.SX, self.w(f0, s, z0), self.FX, shapes)
-
-    def top(self, on, f0, s0, z, shapes):
-        """Marks on a top face: a along f, b along s (converted to polygons)."""
-        def P(a, b):
-            x, y, _ = self.w(f0 + a, s0 + b, z)
-            return (x - ox, y - oy)
-        ox, oy, oz = self.w(f0, s0, z)
-        k = self.k
-        out = []
-        for s in shapes:
-            t = s[0]
-            if t == "rect":
-                a, b, w, h = s[1], s[2], s[3], s[4]
-                out.append(("poly", [P(a, b), P(a + w, b), P(a + w, b + h), P(a, b + h)]) + tuple(s[5:]))
-            elif t in ("poly", "line"):
-                pts = [P(a, b) for a, b in s[1]]
-                out.append((t, pts) + ((s[2], s[3] * self.wk) if t == "line" else tuple(s[2:])))
-            elif t == "ell":
-                c = P(s[1], s[2]); swap = self.FX[0] == 0
-                out.append(("ell", c[0], c[1], (s[4] if swap else s[3]) * k, (s[3] if swap else s[4]) * k) + tuple(s[5:]))
-        self.sc.face_mark(ox, oy, oz, "t", out, on=on)
-
-    def line(self, pts, mat, width):
-        with self.sc.tag(self.tag + " line"):
-            return self.sc.line([self.w(*p) for p in pts], mat, width)
-
-    def pyramid(self, f0, f1, s0, s1, z, apex, mat):
-        """A pyramid on a square base; only the two faces the viewer sees."""
-        a, b = self.w(f0, s0, z), self.w(f1, s1, z)
-        x0, x1, y0, y1 = min(a[0], b[0]), max(a[0], b[0]), min(a[1], b[1]), max(a[1], b[1])
-        ap = self.w(*apex)
-        with self.sc.tag(self.tag + " spike"):
-            self.sc.poly([(x1, y0, z * 0 + a[2]), (x1, y1, a[2]), ap], mat, snap=False)
-            self.sc.poly([(x0, y1, a[2]), (x1, y1, a[2]), ap], mat, snap=False)
-
-    def wedge(self, f0, f1, s0, s1, z, h, mat, ol=None):
-        """A ramp on (f0..f1, s0..s1) rising from the front (f1) to height h at
-        the back (f0): swept-back hair. Draws only the faces the viewer sees."""
-        P = lambda f, s_, zz: self.w(f, s_, zz)
-        with self.sc.tag(self.tag + " wedge"), (self.sc.outline(ol) if ol else nullcontext()):
-            if not self.away:
-                self.sc.poly([P(f1, s0, z), P(f1, s1, z), P(f0, s1, z + h), P(f0, s0, z + h)], mat, snap=False)
-            else:
-                self.sc.poly([P(f0, s0, z), P(f0, s1, z), P(f0, s1, z + h), P(f0, s0, z + h)], mat, snap=False)
-            self.sc.poly([P(f0, s1, z), P(f1, s1, z), P(f0, s1, z + h)], mat, snap=False)
-
-    def cyl(self, f, s, z, r, h, mat, **kw):
-        x, y, zz = self.w(f, s, z)
-        with self.sc.tag(self.tag + " cyl"):
-            return self.sc.cylinder(x, y, zz, r * self.k, h * self.k, mat, **kw)
-
-
-def _person(sc, x, y, z, o):
-    k = o["h"]
-    X, Y, Z = x, y, z                                # not snapped: seats and floors may be off-grid
-    rig = _Rig(sc, X, Y, Z, o["facing"], k, "person@(%.1f,%.1f)" % (x, y))
-    B, F, SD = rig.B, rig.front, rig.side
-    skin, hair, top, outfit = o["skin"], o["hair"], o["top"], o["outfit"]
-    sit, walk = o["sit"], o["walk"]
-    style = o["hair_style"]
-    hij = style == "hijab"
-    scarf = hair if hij else None
-    o["_scarf_ol"] = sc.new_outline("scarf") if hij else None      # one border round the whole scarf
-    o["_hair_ol"] = sc.new_outline("hair")                          # one border round the whole head of hair
-    sleeve = o["sleeve"] or (o["inner"] if outfit == "hivis" else top)
-    skirt = o["skirt"] or (top if outfit == "dress" else None)
-    stride = walk * 0.12
-    if sit:
-        sit = sit / k                                  # seat height in body units
-
-    tz = 0.0 if sit else LEG_Z                       # torso bottom
-    sz = tz + TH                                     # shoulder height
-    hz = sz + NECK                                   # head bottom
-    ht = hz + HS                                     # head top
-    hf0, hs0 = TW / 2 - HS / 2, TD / 2 - HS / 2      # head back / far side
-    hf1, hs1 = hf0 + HS, hs0 + HS
-
-    # soft shadow on the floor
-    fz = -(sit or 0)
-    f0s, f1s = (-0.1, TW + 0.62) if sit else (-0.1 - abs(stride), TW + 0.16 + abs(stride))
-    with sc.tag(rig.tag + " shadow"):
-        a, b = rig.w(f0s, -0.12, fz), rig.w(f1s, TD + 0.12, fz)
-        sc.shadow(min(a[0], b[0]), min(a[1], b[1]), abs(b[0] - a[0]), abs(b[1] - a[1]), a[2])
-
-    # legs and shoes
-    shoe, bottom = o["shoe"], o["bottom"]
-    knee = LEG_Z - (0.36 if skirt else 0.0)
-    for i, s0 in enumerate((0.02, 0.32)):
-        s1 = s0 + 0.26
-        if sit:
-            B(TW, TW + 0.42, s0, s1, 0.0, 0.24, skirt or bottom, part="thigh")
-            B(TW + 0.18, TW + 0.42, s0, s1, -sit + SHOE, 0.0, bottom, part="shin")
-            B(TW + 0.16, TW + 0.54, s0, s1, -sit, -sit + SHOE, shoe, top=("~", shoe, 1.25), part="shoe")
-        else:
-            off = stride if i == 1 else -stride
-            B(0.01 + off, 0.39 + off, s0, s1, 0, SHOE, shoe, top=("~", shoe, 1.25), part="shoe")
-            B(0.03 + off, 0.29 + off, s0, s1, SHOE, knee, bottom, part="leg")
-    if skirt and not sit:
-        sk = B(-0.04, TW + 0.04, 0.0, TD, knee, LEG_Z, skirt, part="skirt")
-        F(sk, TW + 0.04, 0.0, knee, [("line", [(0.2, 0.0), (0.22, 0.36)], ("~", skirt, 0.8), 1.0),
-                                        ("line", [(0.46, 0.0), (0.44, 0.36)], ("~", skirt, 0.8), 1.0)])
-
-    # torso with the outfit; a hijab drapes over the shoulders
-    if hij:
-        torso = B(0, TW, 0, TD, tz, sz - DRAPE, top, part="torso")
-        rig.back(torso, 0, 0, tz, _outfit_back(outfit, top, o["inner"], TH - DRAPE))
-        F(torso, TW, 0, tz, _outfit_front(outfit, top, o["inner"], o["tie"], TH - DRAPE)
-          + [("poly", [(TD / 2 - 0.2, TH - DRAPE), (TD / 2 + 0.2, TH - DRAPE), (TD / 2, TH - DRAPE - 0.16)], scarf)])
-        SD(torso, TD, 0, tz, _outfit_side(outfit, top, o["inner"], TH - DRAPE)
-           + [("poly", [(0, TH - DRAPE), (TW, TH - DRAPE), (TW * 0.5, TH - DRAPE - 0.07)], scarf)])
-        B(0, TW, 0, TD, sz - DRAPE, sz, scarf, part="hijab drape", ol=o["_scarf_ol"])
-        B(hf0, hf1, hs0, hs1, sz, hz, scarf, part="hijab neck", ol=o["_scarf_ol"])
-    else:
-        torso = B(0, TW, 0, TD, tz, sz, top, part="torso")
-        rig.back(torso, 0, 0, tz, _outfit_back(outfit, top, o["inner"], TH))
-        F(torso, TW, 0, tz, _outfit_front(outfit, top, o["inner"], o["tie"], TH))
-        SD(torso, TD, 0, tz, _outfit_side(outfit, top, o["inner"], TH))
-        B(0.08, 0.24, 0.2, 0.4, sz, hz, ("~", skin, 0.88), part="neck")
-
-    # children get a larger head for their size (kh = sqrt(h) instead of h)
-    kh = k ** 0.5 if k < 1 else k
-    hrig = rig if kh == k else rig.sub(kh, (TW / 2, TD / 2, hz))
-
-    # arms (the raised arm of a wave clears the head, ear and hair)
-    reach = {"long": 0.07, "bob": 0.07, "hijab": 0.07, "pigtails": 0.22}.get(style, 0.04)   # hair or ear past the head
-    side_out = TD / 2 + (HS / 2 + reach) * kh / k + 0.02
-    hands = _arms(rig, o, sleeve, outfit, skin, sz, stride, side_out, scarf)
-
-    # head, hair and face
-    head = hrig.B(hf0, hf1, hs0, hs1, hz, ht, skin, top=(None if style == "bald" else hair), part="head")
-    _hair(hrig, o, head, hf0, hs0, hz, ht, sz)
-    hrig.front(head, hf1, hs0, hz, _face(o, skin))
-    hrig.back(head, hf0, hs0, hz, _back_of_head(style, hair))
-
-    _carry(rig, o, hands, sz)
-
-
-def _arms(rig, o, sleeve, outfit, skin, sz, stride, side_out, scarf):
-    """Draw both arms; return where the hands are, for held things."""
-    B = rig.B
-    short = outfit in SHORT_SLEEVES
-    cuff = o["inner"] if outfit in ("suit", "jacket") else sleeve
-    f0 = TW / 2 - AD / 2
-    hands = {}
-    pose = o["pose"]
-    if o["sit"] and pose == "down":
-        pose = "lap"
-
-    def upper(a0, a1, s0, s1, z0, z1, mat, part):
-        """The top of the arm; under a hijab its top is the scarf."""
-        sk = o["_scarf_ol"]
-        if scarf and z1 > sz - DRAPE + 0.01 and z0 < sz - DRAPE:
-            B(a0, a1, s0, s1, z0, sz - DRAPE, mat, part=part, ol=ak)
-            B(a0, a1, s0, s1, sz - DRAPE, z1, scarf, part="hijab drape", ol=sk)
-        elif scarf and z0 >= sz - DRAPE - 0.01:
-            B(a0, a1, s0, s1, z0, z1, scarf, part=part, ol=sk)
-        else:
-            B(a0, a1, s0, s1, z0, z1, mat, part=part, ol=ak)
-
-    for near in (False, True):
-        ak = rig.sc.new_outline("arm")                     # one border round each arm
-        s0 = TD if near else -AW
-        s1 = s0 + AW
-        swing = (stride if near else -stride) * 0.9
-        p = pose if pose in ("down", "hold", "lap") else (pose if near else ("lap" if o["sit"] else "down"))
-        if p == "down":
-            a0, a1 = f0 + swing, f0 + AD + swing
-            if short:
-                upper(a0, a1, s0, s1, sz - 0.3, sz, sleeve, "sleeve")
-                B(a0, a1, s0, s1, sz - ARM + 0.12, sz - 0.3, skin, part="forearm", ol=ak)
-            else:
-                upper(a0, a1, s0, s1, sz - ARM + 0.2, sz, sleeve, "sleeve")
-                B(a0, a1, s0, s1, sz - ARM + 0.12, sz - ARM + 0.2, cuff, part="cuff", ol=ak)
-            B(a0 + 0.01, a1 - 0.01, s0 + 0.01, s1 - 0.01, sz - ARM, sz - ARM + 0.12, skin, part="hand", ol=ak)
-            hands[near] = ("down", a0, a1, s0, s1, sz - ARM)
-        elif p in ("hold", "phone", "lap"):
-            ez = sz - {"hold": 0.38, "phone": 0.3, "lap": 0.4}[p]
-            upper(f0, f0 + AD, s0, s1, ez, sz, sleeve, "upper arm")
-            reach = 0.26 if p != "lap" else 0.3
-            B(f0, TW + reach, s0, s1, ez - 0.14, ez, skin if short else sleeve, part="forearm", ol=ak)
-            B(TW + reach, TW + reach + 0.12, s0 + 0.01, s1 - 0.01, ez - 0.13, ez - 0.01, skin, part="hand", ol=ak)
-            hands[near] = (p, TW + reach, TW + reach + 0.12, s0, s1, ez)
-        elif p == "point":
-            upper(f0, f0 + AD, s0, s1, sz - 0.16, sz, sleeve, "shoulder")
-            B(f0 + AD, TW + 0.4, s0, s1, sz - 0.16, sz - 0.02, sleeve if not short else skin, part="arm", ol=ak)
-            B(TW + 0.4, TW + 0.52, s0 + 0.01, s1 - 0.01, sz - 0.15, sz - 0.03, skin, part="hand", ol=ak)
-            B(TW + 0.52, TW + 0.62, s0 + 0.045, s1 - 0.045, sz - 0.08, sz - 0.04, skin, part="finger", ol=ak)
-            hands[near] = ("point",)
-        elif p == "wave":
-            so = max(side_out, s0)
-            upper(f0, f0 + AD, s0, so + AW, sz - 0.15, sz, sleeve, "shoulder")
-            B(f0, f0 + AD, so, so + AW, sz, sz + 0.62, sleeve if not short else skin, part="raised arm", ol=ak)
-            B(f0 + 0.01, f0 + AD - 0.01, so + 0.01, so + AW - 0.01, sz + 0.62, sz + 0.76, skin, part="hand", ol=ak)
-            hands[near] = ("wave",)
-    return hands
-
-
-def _outfit_front(outfit, top, inner, tie, H):
-    """Marks on the torso front: a across the chest (0..0.60), b up (0..H)."""
-    c, D = TD / 2, TD
-    dk = ("~", top, 0.78)
-    lt = ("~", top, 1.15)
-    belt = ("rect", 0, 0, D, 0.05, ("~", "navy", 1.0))
-    out = []
-    if outfit in ("tee", "dress"):
-        out += [("arc", c, H - 0.01, 0.22, 0.04, dk, 1.2)]
-        if outfit == "dress":
-            out += [("rect", 0, 0.0, D, 0.05, dk)]
-    elif outfit in ("shirt", "polo", "batik", "batik_short"):
-        if outfit.startswith("batik"):
-            for r in range(4):
-                for q in range(4):
-                    a = 0.07 + q * 0.15 + (0.075 if r % 2 else 0)
-                    if a > D - 0.04:
-                        continue
-                    b = 0.1 + r * 0.16
-                    out.append(("poly", [(a, b - 0.045), (a + 0.045, b), (a, b + 0.045), (a - 0.045, b)], "gold"))
-                    out.append(("ell", a, b, 0.014, 0.014, dk))
-        out += [("poly", [(c - 0.14, H), (c, H - 0.09), (c - 0.03, H - 0.14)], lt),
-                ("poly", [(c + 0.14, H), (c, H - 0.09), (c + 0.03, H - 0.14)], lt),
-                ("line", [(c, H - 0.09), (c, 0.04 if outfit != "polo" else H - 0.3)], dk, 1.0)]
-        for i in range(3 if outfit != "polo" else 2):
-            out.append(("ell", c + 0.028, H - 0.19 - i * 0.16, 0.018, 0.018, "paper"))
-        if outfit == "shirt":
-            out += [("rect", D * 0.64, H * 0.56, 0.11, 0.11, dk), belt]
-        if outfit == "polo":
-            out += [belt]
-    elif outfit in ("suit", "jacket"):
-        out += [("poly", [(c - 0.13, H), (c + 0.13, H), (c, H - 0.38)], inner)]
-        if tie and outfit == "suit":
-            out += [("poly", [(c - 0.032, H - 0.01), (c + 0.032, H - 0.01), (c + 0.024, H - 0.07), (c - 0.024, H - 0.07)], ("~", tie, 0.85)),
-                    ("poly", [(c - 0.024, H - 0.07), (c + 0.024, H - 0.07), (c + 0.042, H - 0.32), (c, H - 0.38), (c - 0.042, H - 0.32)], tie)]
-        out += [("line", [(c - 0.13, H), (c - 0.075, H - 0.19), (c, H - 0.38)], dk, 1.1),
-                ("line", [(c + 0.13, H), (c + 0.075, H - 0.19), (c, H - 0.38)], dk, 1.1),
-                ("line", [(c, H - 0.38), (c, 0)], dk, 1.0)]
-        if outfit == "suit":
-            out += [("ell", c - 0.05, H - 0.48, 0.02, 0.02, dk), ("rect", D * 0.66, H * 0.64, 0.11, 0.03, "paper")]
-    elif outfit == "cardigan":
-        out += [("rect", c - 0.085, 0, 0.17, H, inner),
-                ("line", [(c - 0.085, 0), (c - 0.085, H)], dk, 1.0), ("line", [(c + 0.085, 0), (c + 0.085, H)], dk, 1.0)]
-        for i in range(3):
-            out.append(("ell", c + 0.12, H - 0.18 - i * 0.18, 0.018, 0.018, dk))
-    elif outfit == "stripes":
-        for i in range(int((H - 0.1) / 0.14) + 1):
-            out.append(("rect", 0, 0.06 + i * 0.14, D, 0.05, inner))
-        out += [("arc", c, H - 0.01, 0.22, 0.04, dk, 1.2)]
-    elif outfit == "hivis":
-        out += [("poly", [(c - 0.1, H), (c + 0.1, H), (c, H - 0.2)], inner),
-                ("rect", 0.09, 0, 0.07, H, "!paper"), ("rect", D - 0.16, 0, 0.07, H, "!paper"),
-                ("rect", 0, 0.18, D, 0.07, "!paper"), ("line", [(c, H - 0.2), (c, 0)], dk, 1.0)]
-    elif outfit == "apron":
-        out += [("arc", c, H - 0.01, 0.22, 0.04, dk, 1.2),
-                ("rect", D * 0.16, 0, D * 0.68, H * 0.7, inner),
-                ("line", [(D * 0.16, H * 0.7), (D * 0.26, H)], inner, 1.6),
-                ("line", [(D * 0.84, H * 0.7), (D * 0.74, H)], inner, 1.6),
-                ("rect", D * 0.32, H * 0.22, D * 0.36, 0.1, ("~", inner, 0.85))]
-    elif outfit == "hoodie":
-        out += [("poly", [(c - 0.19, H), (c + 0.19, H), (c + 0.07, H - 0.11), (c - 0.07, H - 0.11)], dk),
-                ("line", [(c - 0.055, H - 0.11), (c - 0.065, H - 0.3)], "paper", 1.0),
-                ("line", [(c + 0.055, H - 0.11), (c + 0.065, H - 0.3)], "paper", 1.0),
-                ("poly", [(c - 0.19, 0.07), (c + 0.19, 0.07), (c + 0.14, 0.25), (c - 0.14, 0.25)], dk),
-                ("rect", 0, 0, D, 0.05, dk)]
-    return out
-
-
-def _back_of_head(style, hair):
-    """Hair on the back of the head (a across, b up), seen when facing away."""
-    H = HS
-    if style in ("hijab", "long", "bob"):
-        return []                                    # the back slab covers it
-    if style == "bald":
-        return [("poly", [(0, 0.16 * H), (H, 0.16 * H), (H, 0.58 * H), (0, 0.6 * H)], hair)]
-    if style in ("cap", "hardhat"):
-        return [("poly", [(0, 0.14 * H), (H, 0.14 * H), (H, H), (0, H)], hair)]
-    return [("poly", [(0, 0.12 * H), (0.25 * H, 0.08 * H), (0.5 * H, 0.13 * H), (0.75 * H, 0.08 * H), (H, 0.12 * H),
-                      (H, H), (0, H)], hair)]
-
-
-def _outfit_back(outfit, top, inner, H):
-    """Marks on the torso back (a across 0..0.60, b up), seen when facing away."""
-    c, D = TD / 2, TD
-    dk = ("~", top, 0.78)
-    out = []
-    if outfit in ("tee", "dress", "stripes", "apron"):
-        out += [("arc", c, H - 0.01, 0.2, 0.02, dk, 1.2)]
-    if outfit == "stripes":
-        for i in range(int((H - 0.1) / 0.14) + 1):
-            out.append(("rect", 0, 0.06 + i * 0.14, D, 0.05, inner))
-    elif outfit == "apron":
-        out += [("line", [(c - 0.12, 0.18), (c + 0.12, 0.26)], inner, 1.6), ("line", [(c - 0.12, 0.26), (c + 0.12, 0.18)], inner, 1.6),
-                ("line", [(0, 0.22), (D, 0.22)], inner, 1.6)]
-    elif outfit == "hivis":
-        out += [("rect", 0.09, 0, 0.07, H, "!paper"), ("rect", D - 0.16, 0, 0.07, H, "!paper"), ("rect", 0, 0.18, D, 0.07, "!paper")]
-    elif outfit in ("shirt", "polo", "batik", "batik_short"):
-        out += [("rect", c - 0.15, H - 0.06, 0.3, 0.06, ("~", top, 1.15))]
-        if not outfit.startswith("batik"):
-            out += [("rect", 0, 0, D, 0.05, ("~", "navy", 1.0))]
-    elif outfit in ("suit", "jacket"):
-        out += [("line", [(c, 0), (c, 0.2)], dk, 1.0), ("rect", c - 0.15, H - 0.06, 0.3, 0.06, ("~", top, 0.9))]
-    elif outfit == "hoodie":
-        out += [("poly", [(c - 0.2, H), (c + 0.2, H), (c + 0.16, H - 0.22), (c, H - 0.28), (c - 0.16, H - 0.22)], dk)]
-    return out
-
-
-def _outfit_side(outfit, top, inner, H):
-    """Marks on the torso near side: a back to front (0..0.32), b up."""
-    W = TW
-    dk = ("~", top, 0.78)
-    out = []
-    if outfit == "stripes":
-        for i in range(int((H - 0.1) / 0.14) + 1):
-            out.append(("rect", 0, 0.06 + i * 0.14, W, 0.05, inner))
-    elif outfit.startswith("batik"):
-        for r in range(4):
-            a, b = 0.1 + (0.12 if r % 2 else 0), 0.1 + r * 0.16
-            out.append(("poly", [(a, b - 0.045), (a + 0.045, b), (a, b + 0.045), (a - 0.045, b)], "gold"))
-    elif outfit == "hivis":
-        out += [("rect", 0, 0.18, W, 0.07, "!paper")]
-    elif outfit in ("suit", "jacket", "cardigan"):
-        out += [("line", [(W * 0.5, 0.05), (W * 0.5, H - 0.06)], dk, 1.0)]
-    elif outfit in ("shirt", "polo"):
-        out += [("rect", 0, 0, W, 0.05, ("~", "navy", 1.0))]
-    elif outfit == "hoodie":
-        out += [("rect", 0, 0, W, 0.05, dk), ("poly", [(0, H), (W * 0.45, H), (W * 0.2, H - 0.12), (0, H - 0.14)], dk)]
-    return out
-
-
-def _hair(rig, o, head, hf0, hs0, hz, ht, sz):
-    B, F, SD = rig.B, rig.front, rig.side
-    style, hair = o["hair_style"], o["hair"]
-    hd = ("~", hair, 0.8)
-    hf1, hs1 = hf0 + HS, hs0 + HS
-    H = HS
-
-    def ear():
-        e = B(hf0 + 0.26, hf0 + 0.38, hs1, hs1 + 0.035, hz + 0.2, hz + 0.37, o["skin"], part="ear")
-        SD(e, hs1 + 0.035, hf0 + 0.26, hz + 0.2, [("rect", 0.035, 0.045, 0.05, 0.08, ("~", o["skin"], 0.85))])
-
-    # hair painted on the head's near side (a: back 0 -> front H, b up)
-    side_short = [(0, H), (H, H), (H, 0.86 * H), (0.6 * H, 0.84 * H), (0.6 * H, 0.5 * H), (0.56 * H, 0.5 * H),
-                  (0.56 * H, 0.6 * H), (0.38 * H, 0.6 * H), (0.38 * H, 0.18 * H), (0, 0.14 * H)]
-    fringes = {   # hair painted on the face (a across, b up)
-        "short": [(0, H), (H, H), (H, 0.8 * H), (0.78 * H, 0.86 * H), (0.55 * H, 0.79 * H), (0.3 * H, 0.86 * H), (0, 0.78 * H)],
-        "sidepart": [(0, H), (H, H), (H, 0.68 * H), (0.74 * H, 0.79 * H), (0.36 * H, 0.86 * H), (0, 0.88 * H)],
-        "spiky": [(0, H), (H, H), (H, 0.78 * H), (0.84 * H, 0.86 * H), (0.67 * H, 0.76 * H), (0.5 * H, 0.86 * H),
-                  (0.33 * H, 0.76 * H), (0.16 * H, 0.86 * H), (0, 0.78 * H)],
-        "quiff": [(0, H), (H, H), (H, 0.84 * H), (0.5 * H, 0.9 * H), (0, 0.84 * H)],
-        "curly": [(0, H), (H, H), (H, 0.74 * H), (0.84 * H, 0.82 * H), (0.67 * H, 0.75 * H), (0.5 * H, 0.83 * H),
-                  (0.33 * H, 0.75 * H), (0.16 * H, 0.82 * H), (0, 0.74 * H)],
-        "bun": [(0, H), (H, H), (H, 0.84 * H), (0.5 * H, 0.9 * H), (0, 0.84 * H)],
-        "ponytail": [(0, H), (H, H), (H, 0.82 * H), (0.62 * H, 0.86 * H), (0.36 * H, 0.9 * H), (0, 0.84 * H)],
-        "pigtails": [(0, H), (H, H), (H, 0.76 * H), (0.75 * H, 0.82 * H), (0.5 * H, 0.75 * H), (0.25 * H, 0.82 * H), (0, 0.76 * H)],
-        "long": [(0, H), (H, H), (H, 0.02 * H), (0.9 * H, 0.02 * H), (0.88 * H, 0.72 * H), (0.62 * H, 0.82 * H),
-                 (0.4 * H, 0.78 * H), (0.12 * H, 0.72 * H), (0.1 * H, 0.02 * H), (0, 0.02 * H)],
-        "bob": [(0, H), (H, H), (H, 0.18 * H), (0.9 * H, 0.18 * H), (0.88 * H, 0.72 * H), (0.12 * H, 0.72 * H),
-                (0.1 * H, 0.18 * H), (0, 0.18 * H)],
-        "cap": [(0, H), (H, H), (H, 0.88 * H), (0, 0.88 * H)],
-        "hardhat": [(0, H), (H, H), (H, 0.9 * H), (0, 0.9 * H)],
-    }
-    if style == "bald":
-        SD(head, hs1, hf0, hz, [("poly", [(0, 0.6 * H), (0.36 * H, 0.58 * H), (0.38 * H, 0.2 * H), (0, 0.16 * H)], hair)])
-        ear()
-        return
-    if style == "hijab":
-        # the scarf: crown, both sides and the back of the head, framing the face
-        B(hf0 - 0.05, hf1 + 0.02, hs0 - 0.05, hs1 + 0.05, ht, ht + 0.07, hair, part="hijab crown", ol=o["_scarf_ol"])
-        B(hf0 - 0.05, hf0, hs0, hs1, sz - 0.3, ht, hair, part="hijab back", ol=o["_scarf_ol"])
-        for s0 in (hs0 - 0.05, hs1):
-            sl = B(hf0 - 0.05, hf1 + 0.02, s0, s0 + 0.05, sz, ht, hair, part="hijab side", ol=o["_scarf_ol"])
-            if s0 == hs1:
-                SD(sl, hs1 + 0.05, hf0 - 0.05, sz,
-                   [("line", [(0.2, 0.05), (0.34, ht - sz - 0.1)], hd, 1.0), ("line", [(0.44, 0.05), (0.54, ht - sz - 0.24)], hd, 1.0)])
-        return
-    if style in ("cap", "hardhat"):
-        _hat(rig, o, hf0, hs0, ht)
-        F(head, hf1, hs0, hz, [("poly", fringes[style], hair)])
-        SD(head, hs1, hf0, hz, [("poly", side_short, hair)])
-        ear()
-        return
-
-    # a thin layer of hair on top: flush with the face, a little over the back and sides
-    thick = 0.12 if style == "curly" else 0.07
-    ov = 0.05 if style == "curly" else 0.025
-    back = 0.08 if style in ("long", "bob") else ov
-    sides = 0.06 if style in ("long", "bob") else ov
-    cap = B(hf0 - back, hf1, hs0 - sides, hs1 + sides, ht, ht + thick, hair, part="hair", ol=o["_hair_ol"])
-    F(head, hf1, hs0, hz, [("poly", fringes.get(style, fringes["short"]), hair)])
-    if style == "curly":
-        dots = lambda n, z0: [("ell", 0.08 + i * 0.15, z0, 0.045, 0.035, hd) for i in range(n)]
-        SD(cap, hs1 + sides, hf0 - back, ht, dots(5, 0.06))
-        F(cap, hf1, hs0 - sides, ht, dots(5, 0.06))
-        t2 = B(hf0 + 0.06, hf1 - 0.06, hs0 + 0.06, hs1 - 0.06, ht + thick, ht + thick + 0.1, hair, part="curls", ol=o["_hair_ol"])
-        SD(t2, hs1 - 0.06, hf0 + 0.06, ht + thick, dots(4, 0.05))
-        F(t2, hf1 - 0.06, hs0 + 0.06, ht + thick, dots(4, 0.05))
-
-    if style in ("long", "bob"):
-        z0 = hz - 0.3 if style == "long" else hz + 0.1
-        B(hf0 - 0.08, hf0, hs0, hs1, z0, ht, hair, part="hair back", ol=o["_hair_ol"])
-        cz = hz - 0.01 if style == "long" else hz + 0.12
-        for s0 in (hs0 - 0.06, hs1):
-            c = B(hf0 - 0.08, hf0 + 0.42, s0, s0 + 0.06, cz, ht, hair, part="hair side", ol=o["_hair_ol"])
-            if s0 == hs1:
-                SD(c, hs1 + 0.06, hf0 - 0.08, cz, [("line", [(0.18, 0.04), (0.18, ht - cz - 0.1)], hd, 1.0),
-                                                   ("line", [(0.34, 0.04), (0.34, ht - cz - 0.16)], hd, 1.0)])
-        SD(head, hs1, hf0, hz, [("poly", [(0.42, H), (H, H), (H, 0.84 * H), (0.42, 0.8 * H)], hair)])
-        return
-
-    SD(head, hs1, hf0, hz, [("poly", side_short, hair)])
-    ear()
-    zt = ht + thick
-    if style == "bun":
-        b = B(hf0 + 0.1, hf0 + 0.36, hs0 + 0.2, hs0 + 0.46, zt, zt + 0.22, hair, part="bun", ol=o["_hair_ol"])
-        SD(b, hs0 + 0.46, hf0 + 0.1, zt, [("rect", 0, 0.03, 0.26, 0.045, hd)])
-    elif style == "ponytail":
-        B(hf0 - 0.06, hf0, hs0 + 0.25, hs0 + 0.41, hz + 0.42, hz + 0.54, "coral", part="hair tie")
-        B(hf0 - 0.17, hf0 - 0.06, hs0 + 0.25, hs0 + 0.41, hz - 0.02, hz + 0.56, hair, part="ponytail", ol=o["_hair_ol"])
-    elif style == "pigtails":
-        for s0 in (hs0 - ov - 0.18, hs1 + 0.035):
-            p = B(hf0 + 0.16, hf0 + 0.38, s0, s0 + 0.18, hz + 0.3, hz + 0.52, hair, part="pigtail", ol=o["_hair_ol"])
-            if s0 > 0:
-                SD(p, s0 + 0.18, hf0 + 0.16, hz + 0.3, [("rect", 0, 0.17, 0.22, 0.045, "coral")])
-    elif style == "spiky":
-        # swept-back spikes: ramps rising towards the back of the head
-        for (b0, w, hh) in ((-0.02, 0.24, 0.2), (0.21, 0.24, 0.28), (0.44, 0.24, 0.22)):
-            rig.wedge(hf0 - 0.02, hf1 - 0.08, hs0 + b0, hs0 + b0 + w, zt, hh, hair, ol=o["_hair_ol"])
-    elif style == "quiff":
-        q = B(hf0 + 0.34, hf1 + 0.04, hs0 + 0.08, hs1 - 0.08, zt, zt + 0.12, hair, part="quiff", ol=o["_hair_ol"])
-        F(q, hf1 + 0.04, hs0 + 0.08, zt, [("line", [(0.06, 0.06), (HS - 0.22, 0.06)], hd, 1.0)])
-
-
-def _hat(rig, o, hf0, hs0, ht):
-    B, F, SD = rig.B, rig.front, rig.side
-    hf1, hs1 = hf0 + HS, hs0 + HS
-    style = o["hair_style"]
-    col = o["hat"] or ("brand" if style == "cap" else "gold")
-    if style == "cap":
-        crown = B(hf0 - 0.03, hf1, hs0 - 0.03, hs1 + 0.03, ht, ht + 0.2, col, part="cap")
-        F(crown, hf1, hs0 - 0.03, ht, [("ell", HS / 2 + 0.03, 0.11, 0.055, 0.055, "paper")])
-        SD(crown, hs1 + 0.03, hf0 - 0.03, ht, [("line", [(0.36, 0.02), (0.31, 0.2)], ("~", col, 0.8), 1.0)])
-        B(hf1, hf1 + 0.22, hs0 + 0.06, hs1 - 0.06, ht, ht + 0.045, ("~", col, 0.85), part="cap brim")
-    else:
-        B(hf0 - 0.07, hf1 + 0.09, hs0 - 0.07, hs1 + 0.07, ht, ht + 0.045, col, part="hat brim")
-        d = B(hf0 + 0.03, hf1 - 0.02, hs0 + 0.03, hs1 - 0.03, ht + 0.045, ht + 0.25, col, part="hat dome")
-        F(d, hf1 - 0.02, hs0 + 0.03, ht + 0.045, [("rect", HS / 2 - 0.1, 0, 0.14, 0.205, ("~", col, 1.15))])
-
-
-def _face(o, skin):
-    """Marks on the front of the head: a across, b up, both 0..HS."""
-    H, out, Fc = HS, [], "_face"
-    ex, ey = (0.33 * H, 0.67 * H), 0.47 * H
-    eyes, mouth = o["eyes"], o["mouth"]
-    if o["beard"]:
-        bc = o["beard"] if o["beard"] is not True else o["hair"]
-        out.append(("poly", [(0, 0.42 * H), (0.12 * H, 0.38 * H), (0.2 * H, 0.14 * H), (0.8 * H, 0.14 * H),
-                             (0.88 * H, 0.38 * H), (H, 0.42 * H), (H, 0), (0, 0)], bc))
-        out.append(("poly", [(0.32 * H, 0.26 * H), (0.68 * H, 0.26 * H), (0.62 * H, 0.32 * H), (0.38 * H, 0.32 * H)], bc))
-    for a in ex:
-        if eyes == "happy":
-            out.append(("arc", a, ey - 0.01, 0.1, -0.035, Fc, 1.6))
-        elif eyes == "closed" or (eyes == "wink" and a == ex[0]):
-            out.append(("arc", a, ey + 0.01, 0.1, 0.02, Fc, 1.5))
-        else:
-            out.append(("ell", a, ey, 0.042, 0.062, Fc))
-            out.append(("ell", a + 0.014, ey + 0.026, 0.014, 0.017, "#FFFFFF"))
-        if o["brows"]:
-            out.append(("line", [(a - 0.055, ey + 0.11), (a + 0.055, ey + 0.125)], Fc, 1.4))
-    out.append(("rect", 0.47 * H, 0.33 * H, 0.06 * H, 0.06 * H, ("~", skin, 0.86)))       # nose shadow
-    mx, my = 0.5 * H, 0.22 * H
-    mc = "paper" if o["beard"] else Fc
-    if mouth == "smile":
-        out.append(("arc", mx, my, 0.15, 0.038, mc, 1.5))
-    elif mouth == "grin":
-        q = [(mx - 0.085, my), (mx + 0.085, my), (mx + 0.055, my - 0.065), (mx - 0.055, my - 0.065)]
-        out.append(("poly", q, "#FFFFFF"))
-        out.append(("line", q + [q[0]], Fc, 1.2))
-    elif mouth == "open":
-        out.append(("ell", mx, my - 0.015, 0.04, 0.05, Fc))
-    elif mouth == "o":
-        out.append(("ring", mx, my - 0.01, 0.03, 0.035, Fc, 1.3))
-    else:
-        out.append(("line", [(mx - 0.06, my), (mx + 0.06, my)], mc, 1.4))
-    if o["blush"]:
-        out += [("ell", 0.15 * H, 0.32 * H, 0.05, 0.03, "blush", 0.85), ("ell", 0.85 * H, 0.32 * H, 0.05, 0.03, "blush", 0.85)]
-    if o["glasses"]:
-        g, gw = o["glasses"], 0.085
-        for a in ex:
-            out.append(("line", [(a - gw, ey - 0.065), (a + gw, ey - 0.065), (a + gw, ey + 0.065), (a - gw, ey + 0.065),
-                                 (a - gw, ey - 0.065)], g, 1.4))
-        out.append(("line", [(ex[0] + gw, ey + 0.025), (ex[1] - gw, ey + 0.025)], g, 1.4))
-    return out
-
-
-def _carry(rig, o, hands, sz):
-    B, F = rig.B, rig.front
-    carry, col = o["carry"], o["carry_color"]
-    held, hc = o["holding"], o["hold_color"]
-    near = hands.get(True)
-    if carry and near and near[0] == "down":
-        _, a0, a1, s0, s1, hb = near
-        fm = (a0 + a1) / 2
-        if carry in ("bag", "basket", "briefcase"):
-            dep = 0.12 if carry != "basket" else 0.16
-            hgt = {"bag": 0.34, "basket": 0.24, "briefcase": 0.3}[carry]
-            w = {"bag": 0.3, "basket": 0.38, "briefcase": 0.42}[carry]
-            top = hb - 0.06
-            b = B(fm - w / 2, fm + w / 2, TD + 0.01, TD + 0.01 + dep, top - hgt, top, col, part=carry)
-            sm = TD + 0.01 + dep / 2
-            rig.line([(fm - w / 2 + 0.07, sm, top), (fm, sm, hb + 0.06), (fm + w / 2 - 0.07, sm, top)], ("~", col, 0.7), 1.6)
-            if carry == "basket":
-                rig.side(b, TD + 0.01 + dep, fm - w / 2, top - hgt, [("line", [(0.04, hgt * 0.5), (w - 0.04, hgt * 0.5)], ("~", col, 0.75), 1.0)])
-            if carry == "briefcase":
-                rig.side(b, TD + 0.01 + dep, fm - w / 2, top - hgt, [("rect", w / 2 - 0.04, hgt - 0.09, 0.08, 0.045, "gold")])
-        elif carry == "suitcase":
-            b = B(-0.62, -0.2, TD + 0.08, TD + 0.32, 0.06, 0.7, col, part="suitcase")
-            rig.side(b, TD + 0.32, -0.62, 0.06, [("line", [(0.12, 0.05), (0.12, 0.58)], ("~", col, 0.75), 1.0),
-                                                 ("line", [(0.3, 0.05), (0.3, 0.58)], ("~", col, 0.75), 1.0)])
-            for wf in (-0.58, -0.32):
-                B(wf, wf + 0.08, TD + 0.14, TD + 0.26, 0.0, 0.06, "navy", part="wheel")
-            rig.line([(-0.24, TD + 0.2, 0.7), (fm, TD + 0.2, hb + 0.06)], "steel", 2)
-    if held:
-        c = hc or {"box": "wood", "tablet": "navy", "book": "coral", "clipboard": "wood", "cup": "paper",
-                   "phone": "navy", "plate": "paper", "laptop": "steel"}.get(held, "gold")
-        h = hands.get(True) or hands.get(False)
-        if h and h[0] in ("hold", "lap"):
-            _, a0, a1, s0, s1, ez = h
-            if h[0] == "lap":
-                ez = 0.24
-            if held == "box":
-                b = B(TW + 0.02, TW + 0.36, 0.02, TD - 0.02, ez - 0.14, ez + 0.16, c, part="box")
-                F(b, TW + 0.36, 0.02, ez - 0.14, [("line", [(0, 0.22), (TD - 0.04, 0.22)], ("~", c, 0.75), 1.0)])
-                rig.top(b, TW + 0.02, 0.02, ez + 0.16, [("line", [(0.17, 0), (0.17, TD - 0.04)], ("~", c, 0.75), 1.0)])
-            elif held in ("tablet", "book", "clipboard", "plate", "laptop"):
-                th = {"tablet": 0.035, "book": 0.08, "clipboard": 0.03, "plate": 0.03, "laptop": 0.035}[held]
-                b = B(TW + 0.02, TW + 0.34, 0.03, TD - 0.03, ez, ez + th, c, part=held)
-                if held == "laptop":
-                    rig.top(b, TW + 0.02, 0.03, ez + th, [("rect", 0.12, 0.06, 0.16, TD - 0.18, ("~", c, 0.85))])
-                    lid = B(TW + 0.02, TW + 0.05, 0.03, TD - 0.03, ez + th, ez + th + 0.24, c, part="laptop lid")
-                    F(lid, TW + 0.05, 0.03, ez + th, [("ell", TD / 2 - 0.03, 0.12, 0.025, 0.025, "!paper")])
-                elif held == "tablet":
-                    rig.top(b, TW + 0.02, 0.03, ez + th, [("rect", 0.035, 0.035, 0.25, TD - 0.13, "!screen")])
-                elif held == "clipboard":
-                    rig.top(b, TW + 0.02, 0.03, ez + th, [("rect", 0.035, 0.04, 0.25, TD - 0.14, "paper"),
-                                                          ("rect", 0.25, 0.2, 0.05, 0.14, "steel")])
-                elif held == "book":
-                    F(b, TW + 0.34, 0.03, ez, [("rect", 0.02, 0.02, TD - 0.1, 0.04, "paper")])
-            elif held == "cup":
-                x, y, zz = rig.w((a0 + a1) / 2, (s0 + s1) / 2, ez)
-                rig.cyl((a0 + a1) / 2, (s0 + s1) / 2, ez, 0.065, 0.15, c,
-                        bands=((zz + 0.05 * rig.k, zz + 0.1 * rig.k, "amber"),), n=16)
-        elif h and h[0] == "phone":
-            _, a0, a1, s0, s1, ez = h
-            ph = B(a0 + 0.02, a0 + 0.06, s0 - 0.08, s0 + 0.06, ez, ez + 0.22, c, part="phone")
-            F(ph, a0 + 0.06, s0 - 0.08, ez, [("ell", 0.03, 0.17, 0.014, 0.014, "steel")])
+# ══ the character rig: people.py ════════════════════════════════════════
+from people import FACINGS, TW, TD, draw as _draw_person  # noqa: E402
 
 
 # ── output helpers ───────────────────────────────────────────────────────

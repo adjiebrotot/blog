@@ -1,6 +1,6 @@
 ---
 name: isometric-illustration
-description: Draw an isometric illustration for a post on this blog in code, not with an image model. Blocky people and the places and machines around them (a market, a station, an office, a food stall, a street, a power plant, a substation, a house, a city block) on a 30-degree grid, with ink outlines in the blog's palette and exact 3D layering, built object first (each object crafted on all sides from a library, then placed and turned in the scene) and published as a matched pair of SVGs for the dark and light themes (plus an optional looping GIF and a WebP card). Use when Adjie asks for an isometric picture, scene, diagram or animation, or when a post needs a picture of a place or a system with several people or objects, exact counts or layout, or a version for each theme. For one person doing one action in a soft hand-drawn style, use wikihow-illustration instead.
+description: Draw an isometric illustration for a post on this blog in code, not with an image model. People (with detailed faces, clothes that sit on the body, and poses from walking to jumping, squatting, sitting and lying down) and the places and machines around them (a market, a station, an office, a food stall, a street, a power plant, a substation, a house, a city block) on a 30-degree grid, with ink outlines in the blog's palette and exact 3D layering, built object first (each object crafted on all sides from a library, then placed and turned in the scene) and published as a matched pair of SVGs for the dark and light themes (plus an optional looping GIF and a WebP card). Use when Adjie asks for an isometric picture, scene, diagram or animation, or when a post needs a picture of a place or a system with several people or objects, exact counts or layout, or a version for each theme. For one person doing one action in a soft hand-drawn style, use wikihow-illustration instead.
 ---
 
 # Isometric illustration
@@ -40,9 +40,12 @@ brief -> the objects (library, or new ones checked on sheet.py) -> arrange on th
   measures for fine detail.
 - **Objects carry craft**: goods on shelves, doors, windows and sills, wheels, lights, seams,
   vents. Every face that can be turned into view gets 2 to 4 marks. A bare box is unfinished.
-- **Characters** are blocky adults about 3.7 heads tall with painted faces and hair, necks,
-  shoulders wider than the head, arms and hands (`references/characters.md`). Vary skin, hair
-  and outfit; use local dress where it fits (batik, hijab).
+- **Characters** are adults about 3.5 heads tall with rounded, tapered limbs, a faceted head
+  with a painted face (eye whites, irises, lids, brows, a modelled nose, lips, ears), hair
+  with volume, and clothes that sit on the body (sleeves with hems, a shirt over or tucked into
+  the trousers, a hijab draped over the shoulders). Joints bend, so people can walk, run,
+  jump, squat, kneel, sit on a seat or the floor, and lie down (`references/characters.md`).
+  Vary skin, hair and outfit; use local dress where it fits (batik, hijab).
 - **Sketch finish:** an ink outline with a slight fixed wobble, three-tone shading (top
   lightest, right darkest), no gradients, glows or textures.
 - **Borders follow the form, not the construction.** A thing modelled from several boxes but
@@ -50,7 +53,9 @@ brief -> the objects (library, or new ones checked on sheet.py) -> arrange on th
   `with s.outline():` (`m.outline()` in an object): the ink runs only round its outer
   silhouette and where it meets other things, and its own seams and creases are left to the
   shading. Hard, separate parts (bench slats, a car's cabin, shoes) keep their own borders.
-  The character rig already groups each scarf, head of hair and arm.
+  A person is one soft outline group (`outline(key, soft=True)`): ink on the outer
+  silhouette only, a thin line in a darker shade of its own colour where one part passes in
+  front of another, and no line where hair, garments and skin meet.
 - **Palette** = the blog's design tokens, by role name (`references/palette.md`).
 - **No text in the art.** Signs use bars and dots. One pair serves both languages.
 
@@ -97,7 +102,8 @@ matches (`references/blog-embed.md`).
    - `power_grid.py`: an object made in the scene file (`plant_building`), library power
      objects, wires from anchor to anchor
    - `train_station.py`: an animated loop; scene-made train and canopy, library benches
-   - `characters.py`: every hair style, outfit, facing, pose and held thing
+   - `characters.py`: every hair style, outfit, facing, arm pose, whole-body pose (run, jump,
+     squat, kneel, floor, lie, sleep) and held thing
 4. **Render to the scratchpad:**
    ```sh
    python3 .claude/skills/isometric-illustration/scripts/render.py _illustrations/<name>.py --out <scratchpad>/iso
@@ -107,7 +113,9 @@ matches (`references/blog-embed.md`).
    spacing and turning) and `<name>-gridcheck.png`.
 5. **Look before publishing.** The plan first: objects where you meant them, people clear of
    each other, nobody standing in a doorway or on a kerb. Then the pair, zoomed into the busy
-   spots: faces, hands and held things, people at objects, wires at pylons. 0 parts passing
+   spots: faces, hands and held things, people at objects, wires at pylons. `check()` lists
+   boxes that pass through each other, not people: look yourself that no limb goes through a
+   table, a counter or another person. 0 parts passing
    through each other; every object turned so its detailed side shows; nothing important
    hidden behind something tall; dark as clear as light. Fix and render again.
 6. **Publish.** `--publish` copies the pair to `assets/img/` and prints the `<figure>` to
@@ -172,12 +180,15 @@ The author's part:
 ## API (`scripts/iso.py`)
 
 Scene and objects draw with the same calls: `box` (returns a handle), `tile`, `shadow`,
-`poly` (with `inside=` to draw only while facing the viewer), `line`, `wire`, `cylinder` (with
-`bands`), `tower`, `cloud`, `mark(handle, face, shapes)` (`face_mark` is the older form by
-world coordinates), `outline` (one border round several parts; `new_outline()` gives a key
-to join parts made in different places), `group`, `tag`. Scenes add `place`, `person`, `person_at`,
+`shadow_poly`, `poly` (with `inside=` to draw only while facing the viewer), `line`, `wire`,
+`tube` (rounded, tapered segments: limbs, pipes, hoses, a ball), `cylinder` (with `bands`),
+`tower`, `cloud`, `mark(handle, face, shapes)` (`face_mark` is the older form by world
+coordinates), `outline` (one border round several parts; `new_outline()` gives a key to join
+parts made in different places; `soft=True` for the three line weights a person uses),
+`group`, `tag`. Scenes add `place`, `person`, `person_at`,
 `person_center`, `tree`, `bench`, `check`, `plan_svg`; objects add `anchor` and nested
-`place`. `scripts/models.py` holds the library and the helpers `wheel` and `around`.
+`place`. `scripts/models.py` holds the library and the helpers `wheel` and `around`;
+`scripts/people.py` holds the character rig.
 
 ## Requirements
 
