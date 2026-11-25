@@ -197,6 +197,7 @@ examples, and why each fits its readers. "Same in both" is fine.>
 | T1 | Tool embed | <tool, chart, view, inputs> | <section> | <#load link; preview from brotools-embed> |
 | S1 | Screenshot | <what the image shows> | <section> | <how it will be made> |
 | I1 | Illustration | <who does what, with which object> | <section> | generated with `wikihow-illustration` |
+| I2 | Isometric scene | <the place or system, who is in it, the props that make it read> | <section> | drawn with `isometric-illustration` |
 | M1 | Mermaid | <diagram type: flowchart, xychart-beta, pie...> showing <...> | <section> | <data behind it> |
 | K1 | KaTeX | <the equation, in words> | <section> | <every symbol it defines> |
 | X1 | Extra | table / alert / footnotes / TOC | <section> | |
@@ -279,6 +280,11 @@ the blog can draw them. Per type:
   `wikihow-illustration` skill. Give the brief (action, who, framing) and its alt text.
   Use it where the reader has to imagine a person doing something, not where a chart or a
   screenshot shows the real thing.
+- **Isometric scene:** a place or a system (a market, a station, a substation, a street)
+  with several people or machines, drawn in code with the `isometric-illustration` skill as
+  a dark and a light SVG. Give the brief (what it shows and why, who is in it, the props,
+  still or animated) and its alt text. Use it where the reader needs to see how parts fit
+  together or how many there are; no words in the art.
 - **Mermaid:** the diagram type and the data or steps it draws. Charts use
   `xychart-beta` or `pie` and need real numbers from a checked evidence row, with model inputs and assumptions where applicable.
 - **KaTeX:** the equation in words or LaTeX, and the symbols it defines. A simple sum for

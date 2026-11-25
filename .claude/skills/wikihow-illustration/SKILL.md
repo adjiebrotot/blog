@@ -1,6 +1,6 @@
 ---
 name: wikihow-illustration
-description: Make a wikiHow-style illustration for a post on this blog with an image model on OpenRouter. A friendly, clean, softly shaded drawing of one person doing one action, on a pale background, saved as WebP in assets/img/. Use when Adjie asks for an illustration, a drawing, an image, a "wikiHow-style" picture, a picture for a step or a section, or a cover image that is not a screenshot or a chart.
+description: Make a wikiHow-style illustration for a post on this blog with an image model on OpenRouter. A friendly, clean, softly shaded drawing of one person doing one action, on a pale background, saved as WebP in assets/img/. Use when Adjie asks for an illustration, a drawing, an image, a "wikiHow-style" picture, a picture for a step or a section, or a cover image that is not a screenshot or a chart. For an isometric picture, or a place or system with several people or machines, use isometric-illustration instead.
 ---
 
 # wikiHow-style illustration
@@ -11,6 +11,10 @@ Friendly and plain. It explains an action, so the hands and the object they hold
 centre of the picture. The four pictures in `examples/` are the target look: a mid-shot, an
 Indonesian street scene, a split panel and a back view. They were generated from Adjie's
 wikiHow samples and are passed to the model as style references every time.
+
+For a place or a system rather than one person's action (a market, a station, a substation,
+a street with several people), or art that must follow the reader's dark or light theme,
+use the `isometric-illustration` skill: it draws in code, with no key and no cost.
 
 The style is the inspiration, not the brand. **Never** ask for or keep the wikiHow logo or
 watermark, never commit a real wikiHow picture to this public repo, and never say in a
