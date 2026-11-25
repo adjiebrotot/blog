@@ -5,6 +5,7 @@ y 0..4.4 (top z 0.6). Two walking lanes on the platform: y 0.85 heading +x
 benches from y 3.3. Seamless loop: every motion is periodic in t in [0, 1)."""
 import sys, os, math; sys.dont_write_bytecode = True; sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from iso import write_gif, write_pair
+from models import bench, bin as litter_bin, atm, tree
 
 L = 16
 X0, X1 = -1.0, L + 1.0          # the visible track window between the portals
@@ -108,19 +109,19 @@ def canopy(s):
 
 
 def props(s):
-    s.bench(2.0, 3.3, PZ, length=1.8)
-    s.bench(12.0, 3.3, PZ, length=1.8)
-    s.cylinder(9.3, 3.75, PZ, 0.28, 0.75, "teal", bands=((PZ + 0.6, PZ + 0.75, "navy"),), n=20)   # bin
-    m = s.box(14.8, 3.4, PZ, 0.8, 0.7, 1.9, "brand", top="navy")      # ticket machine
-    s.face_mark(15.6, 3.4, PZ, "r", [("rect", 0.12, 1.1, 0.45, 0.45, "!sky"), ("rect", 0.15, 0.65, 0.4, 0.08, "navy"),
-                                     ("rect", 0.2, 0.35, 0.3, 0.12, "gold")], on=m)
-    s.tree(16.4, 3.4, PZ, s=0.8)
+    """Library objects on the platform; returns the benches for seating people."""
+    benches = [s.place(bench, 3.8, 3.3, PZ, rot=90, length=1.8),   # rot=90: seats face +y
+               s.place(bench, 13.8, 3.3, PZ, rot=90, length=1.8)]
+    s.place(litter_bin, 9.0, 3.5, PZ)
+    s.place(atm, 14.8, 3.4, PZ, color="brand")                     # ticket machine, screen to +x
+    s.place(tree, 15.95, 2.95, PZ, size=0.8)
+    return benches
 
 
-def people(s, t):
-    # a woman reading on the bench, a man waiting by the ticket machine
-    s.person(2.3, 3.42, PZ + 0.6, facing="l", sit=0.6, hair_style="bun", hair="hair2", top="teal", outfit="cardigan",
-             inner="paper", skin="skin2", eyes="happy", blush=True, holding="book")
+def people(s, t, benches):
+    # a woman reading on a bench, a man waiting by the ticket machine
+    s.person_at(benches[0].anchor("seat", 1), hair_style="bun", hair="hair2", top="teal", outfit="cardigan",
+                inner="paper", skin="skin2", eyes="happy", blush=True, holding="book")
     s.person(13.95, 3.5, PZ, facing="r", hair_style="sidepart", hair="hair1", top="navy", outfit="suit", inner="shirt",
              tie="gold", skin="skin3", pose="phone")
     walkers = [   # (lane y, facing, phase, look)
@@ -136,7 +137,8 @@ def people(s, t):
 
 
 def build(s, t=0.45):
-    track(s); portals(s); train(s, t); platform(s); canopy(s); props(s); people(s, t)
+    track(s); portals(s); train(s, t); platform(s); canopy(s)
+    people(s, t, props(s))
 
 
 if __name__ == "__main__":

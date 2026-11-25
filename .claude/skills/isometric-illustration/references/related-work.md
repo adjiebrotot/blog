@@ -31,3 +31,11 @@ What else exists for isometric pictures, and why this skill draws in code.
   characters, and the blog's tooling is Python and Node without a voxel step.
 - **isomer** (jdan), **@elchininet/isometric**: JavaScript isometric drawing libraries for
   the browser. This skill renders offline to static SVG, so the page ships no script.
+
+## Objects first
+
+The object-first structure (build each object in its own space, check it alone, place
+instances with a transform, attach people and cables to anchors) is the scene-graph idea
+from 3D tools, kept to what an isometric drawing needs: turns in 90-degree steps and
+mirroring keep every box axis-aligned, so the exact sorting still holds, while a placed
+object stays a group only for building and arranging, never a single paint layer.

@@ -29,8 +29,13 @@ roofs, cylinders and people standing next to each other. Rules for authors:
     modelling error: Scene.check() (run by write_pair) lists them.
   * s.group() still bundles parts into ONE unit painted in written order.
     Use it only for small props whose parts really interpenetrate.
-  * face_mark() details stick to the face they are drawn on (found from the
-    anchor point), so they layer with that face.
+  * Details stick to the face they are drawn on, so they layer with it.
+
+OBJECTS. Build each thing once in its own space (a function model(m, ...),
+front facing +x, details on every side, anchors for people and cables) and
+place it: s.place(model, x, y, z, rot=0|90|180|270, mirror, scale). The
+object is a group for building and arranging only; its parts still sort one
+by one. models.py holds the library; sheet.py draws objects alone.
 """
 import math, heapq, os, io, copy
 from contextlib import contextmanager
@@ -311,10 +316,11 @@ def _hex_overlap(a, b):
 
 
 class _Item:
-    __slots__ = ("kind", "data", "marks", "atom", "tag", "box")
+    __slots__ = ("kind", "data", "marks", "atom", "tag", "box", "bb", "local", "T")
 
     def __init__(self, kind, data, tag):
         self.kind, self.data, self.marks, self.atom, self.tag, self.box = kind, data, [], None, tag, None
+        self.bb, self.local, self.T = None, None, None
 
 
 class _Atom:
@@ -326,6 +332,260 @@ class _Atom:
         self.sbb = None
 
 
+# ── objects: transforms, the drawing view a model gets, instances ────────
+_LEGACY_AXES = {"r": ((0, 1, 0), (0, 0, 1)), "l": ((1, 0, 0), (0, 0, 1)), "t": ((1, 0, 0), (0, 1, 0))}
+FACE_NORMALS = {"front": (1, 0, 0), "back": (-1, 0, 0), "left": (0, 1, 0), "right": (0, -1, 0), "top": (0, 0, 1),
+                "+x": (1, 0, 0), "-x": (-1, 0, 0), "+y": (0, 1, 0), "-y": (0, -1, 0), "+z": (0, 0, 1)}
+_VISIBLE = {(1, 0, 0): "r", (0, 1, 0): "l", (0, 0, 1): "t"}
+_DIR_FACING = {(1, 0): "r", (0, 1): "l", (-1, 0): "ul", (0, -1): "ur"}
+_ROT = {0: ((1, 0), (0, 1)), 90: ((0, -1), (1, 0)), 180: ((-1, 0), (0, -1)), 270: ((0, 1), (-1, 0))}
+
+
+def _face_frame(box, n):
+    """Lower-left corner and (a, b) axes of a box face, as you look at it:
+    a runs left to right (the +x face runs along -y, +y along +x, -x along
+    +y, -y along -x), b runs up. The top runs a along +x, b along +y."""
+    x, y, z, w, d, h = box
+    if n == (1, 0, 0):
+        return (x + w, y + d, z), (0, -1, 0), (0, 0, 1)
+    if n == (0, 1, 0):
+        return (x, y + d, z), (1, 0, 0), (0, 0, 1)
+    if n == (-1, 0, 0):
+        return (x, y, z), (0, 1, 0), (0, 0, 1)
+    if n == (0, -1, 0):
+        return (x + w, y, z), (-1, 0, 0), (0, 0, 1)
+    return (x, y, z + h), (1, 0, 0), (0, 1, 0)
+
+
+class _T:
+    """Placement transform: mirror across x, turn by 90-degree steps, scale,
+    then move. Boxes stay axis-aligned, so the sorter stays exact."""
+    __slots__ = ("m", "k", "t")
+
+    def __init__(self, m=((1, 0), (0, 1)), k=1.0, t=(0.0, 0.0, 0.0)):
+        self.m, self.k, self.t = m, k, t
+
+    @staticmethod
+    def make(x, y, z, rot=0, mirror=False, k=1.0):
+        if rot % 90:
+            raise ValueError("rot must be a multiple of 90 (got %r)" % (rot,))
+        (a, b), (c, d) = _ROT[rot % 360]
+        if mirror:
+            b, d = -b, -d
+        return _T(((a, b), (c, d)), k, (x, y, z))
+
+    def pt(self, x, y, z):
+        (a, b), (c, d) = self.m
+        tx, ty, tz = self.t
+        k = self.k
+        return (tx + k * (a * x + b * y), ty + k * (c * x + d * y), tz + k * z)
+
+    def vec(self, x, y, z):
+        (a, b), (c, d) = self.m
+        k = self.k
+        return (k * (a * x + b * y), k * (c * x + d * y), k * z)
+
+    def dir(self, n):
+        (a, b), (c, d) = self.m
+        return (a * n[0] + b * n[1], c * n[0] + d * n[1], n[2])
+
+    def then(self, child):
+        (a, b), (c, d) = self.m
+        (e, f), (g, h) = child.m
+        return _T(((a * e + b * g, a * f + b * h), (c * e + d * g, c * f + d * h)), self.k * child.k, self.pt(*child.t))
+
+    def box(self, x, y, z, w, d, h):
+        p, q = self.pt(x, y, z), self.pt(x + w, y + d, z + h)
+        return (min(p[0], q[0]), min(p[1], q[1]), p[2], abs(q[0] - p[0]), abs(q[1] - p[1]), q[2] - p[2])
+
+
+class Anchor:
+    """A spot a placed object offers: a seat, a place to stand, a cable peg.
+    (x, y, z) in the scene, facing 'r', 'l', 'ul' or 'ur', meta from the model
+    (seat=<seat height> for seats)."""
+    __slots__ = ("x", "y", "z", "facing", "meta", "name")
+
+    def __init__(self, x, y, z, facing, meta, name):
+        self.x, self.y, self.z, self.facing, self.meta, self.name = x, y, z, facing, meta, name
+
+    @property
+    def p(self):
+        return (self.x, self.y, self.z)
+
+    def __repr__(self):
+        return "Anchor(%s %.2f,%.2f,%.2f %s)" % (self.name, self.x, self.y, self.z, self.facing)
+
+
+class Instance:
+    """One placed object (or person): its name in the report and the plan,
+    its anchors by name, and its bounding box in the scene."""
+    def __init__(self, name, parent):
+        self.name, self.parent, self.anchors, self.kind, self.facing = name, parent, {}, "object", None
+        self.start, self.bb = 0, None
+
+    def anchor(self, name, i=0):
+        return self.anchors[name][i]
+
+    def __repr__(self):
+        return "Instance(%s)" % self.name
+
+
+def _open(sc, base, parent):
+    n = sc._names.get(base, 0) + 1
+    sc._names[base] = n
+    inst = Instance("%s#%d" % (base, n), parent)
+    inst.start = len(sc._items)
+    return inst
+
+
+def _close(sc, inst):
+    bbs = [it.bb for it in sc._items[inst.start:] if it.bb is not None and it.kind not in ("shadow",)]
+    if bbs:
+        inst.bb = [min(b[0] for b in bbs), max(b[1] for b in bbs), min(b[2] for b in bbs),
+                   max(b[3] for b in bbs), min(b[4] for b in bbs), max(b[5] for b in bbs)]
+    sc.instances.append(inst)
+
+
+def _build(sc, model, T, parent, name, kw):
+    inst = _open(sc, name or getattr(model, "__name__", "object"), parent)
+    with sc.tag(inst.name):
+        model(View(sc, T, inst), **kw)
+    _close(sc, inst)
+    if parent is not None:                           # a part's anchors belong to the whole too
+        for k, v in inst.anchors.items():
+            parent.anchors.setdefault(k, []).extend(v)
+    return inst
+
+
+def _library():
+    import importlib, os, sys
+    here = os.path.dirname(os.path.abspath(__file__))
+    if here not in sys.path:
+        sys.path.insert(0, here)
+    return importlib.import_module("models")
+
+
+class View:
+    """What a model draws on: the same drawing calls as a Scene, in the
+    model's own coordinates. Created by Scene.place(); never made by hand."""
+
+    def __init__(self, sc, T, inst):
+        self.sc, self.T, self.inst = sc, T, inst
+        self.u, self.snap = sc.u, None             # fine detail: models keep exact measures
+
+    def sn(self, v):
+        return self.sc.sn(v)
+
+    @property
+    def k(self):
+        return self.T.k
+
+    def _faces(self, faces):
+        if faces is None or faces == "tlr":
+            return "tlr"
+        if isinstance(faces, str) and "," not in faces and set(faces) <= set("tlr"):
+            toks = [{"t": "+z", "l": "+y", "r": "+x"}[c] for c in faces]
+        else:
+            toks = [t.strip() for t in (faces.split(",") if isinstance(faces, str) else faces)]
+        out = ""
+        for t in toks:
+            side = _VISIBLE.get(self.T.dir(FACE_NORMALS[t]))
+            if side and side not in out:
+                out += side
+        return out
+
+    def box(self, x, y, z, w, d, h, mat, top=None, faces=None, opacity=1, snap=True):
+        """faces: None for all, or names ('front,top', '+x,-y', ...)."""
+        if snap and self.snap:
+            x1, y1, z1 = self.sn(x + w), self.sn(y + d), self.sn(z + h)
+            x, y, z = self.sn(x), self.sn(y), self.sn(z)
+            w, d, h = max(x1 - x, self.snap), max(y1 - y, self.snap), max(z1 - z, 0)
+        it = self.sc.box(*self.T.box(x, y, z, w, d, h), mat, top=top, faces=self._faces(faces), opacity=opacity, snap=False)
+        it.local, it.T = (x, y, z, w, d, h), self.T
+        return it
+
+    def tile(self, x, y, z, w, d, mat, stroke=True, opacity=1, snap=True):
+        if snap and self.snap:
+            x1, y1 = self.sn(x + w), self.sn(y + d)
+            x, y, z = self.sn(x), self.sn(y), self.sn(z)
+            w, d = x1 - x, y1 - y
+        X, Y, Z, W, D, _ = self.T.box(x, y, z, w, d, 0)
+        it = self.sc.tile(X, Y, Z, W, D, mat, stroke=stroke, opacity=opacity, snap=False)
+        it.local, it.T = (x, y, z, w, d, 0), self.T
+        return it
+
+    def shadow(self, x, y, w, d, z=0):
+        X, Y, Z, W, D, _ = self.T.box(x, y, z, w, d, 0)
+        return self.sc.shadow(X, Y, W, D, Z)
+
+    def poly(self, pts, mat, stroke=True, opacity=1, snap=True, inside=None):
+        if snap and self.snap:
+            pts = [tuple(self.sn(c) for c in q) for q in pts]
+        return self.sc.poly([self.T.pt(*q) for q in pts], mat, stroke=stroke, opacity=opacity, snap=False,
+                            inside=self.T.pt(*inside) if inside is not None else None)
+
+    def line(self, pts, mat="_ink", width=None, dash=None, opacity=1):
+        return self.sc.line([self.T.pt(*q) for q in pts], mat, width, dash, opacity)
+
+    def wire(self, a, b, sag=0.6, mat="wire", width=1.2, n=20):
+        return self.sc.wire(self.T.pt(*a), self.T.pt(*b), sag * self.T.k, mat, width, n)
+
+    def cylinder(self, x, y, z, r, h, mat, bands=(), n=28, cap=True):
+        k = self.T.k
+        X, Y, Z = self.T.pt(x, y, z)
+        bands = tuple((self.T.pt(0, 0, b0)[2], self.T.pt(0, 0, b1)[2], m) for b0, b1, m in bands)
+        return self.sc.cylinder(X, Y, Z, r * k, h * k, mat, bands=bands, n=n, cap=cap)
+
+    def tower(self, x, y, z, r0, r1, h, mat, bands=(), n=28):
+        k = self.T.k
+        X, Y, Z = self.T.pt(x, y, z)
+        bands = tuple((self.T.pt(0, 0, b0)[2], self.T.pt(0, 0, b1)[2], m) for b0, b1, m in bands)
+        return self.sc.tower(X, Y, Z, r0 * k, r1 * k, h * k, mat, bands=bands, n=n)
+
+    def cloud(self, x, y, z, r, mat="white", opacity=0.95):
+        return self.sc.cloud(*self.T.pt(x, y, z), r * self.T.k, mat, opacity)
+
+    def mark(self, on, face, shapes):
+        return self.sc.mark(on, face, shapes)
+
+    def face_mark(self, x, y, z, side, shapes, on=None):
+        U, V = _LEGACY_AXES[side]
+        n = {"r": (1, 0, 0), "l": (0, 1, 0), "t": (0, 0, 1)}[side]
+        sw = _VISIBLE.get(self.T.dir(n))
+        if sw is None:
+            return
+        self.sc._put_mark(self.T.pt(x, y, z), self.T.vec(*U), self.T.vec(*V), sw, shapes, on)
+
+    def anchor(self, name, x, y, z=0, facing="+x", **meta):
+        """Offer a spot: name, its point, which way someone there faces
+        ('+x' front, '-x', '+y', '-y'), and meta (seat=<seat height>)."""
+        X, Y, Z = self.T.pt(x, y, z)
+        f = self.T.dir(FACE_NORMALS[facing])
+        if "seat" in meta:
+            meta["seat"] *= self.T.k
+        a = Anchor(X, Y, Z, _DIR_FACING[(f[0], f[1])], meta, name)
+        self.inst.anchors.setdefault(name, []).append(a)
+        return a
+
+    def place(self, model, x=0, y=0, z=0, rot=0, mirror=False, scale=1.0, name=None, **kw):
+        return _build(self.sc, model, self.T.then(_T.make(x, y, z, rot, mirror, scale)), self.inst, name, kw)
+
+    def person(self, x, y, z=0, facing="r", h=1.0, **kw):
+        (fx, fy), (sx, sy) = FACINGS[facing]
+        cx, cy = x + (fx * TW / 2 + sx * TD / 2) * h, y + (fy * TW / 2 + sy * TD / 2) * h
+        X, Y, Z = self.T.pt(cx, cy, z)
+        f = self.T.dir((fx, fy, 0))
+        if kw.get("sit"):
+            kw["sit"] *= self.T.k
+        return self.sc.person_center(X, Y, Z, facing=_DIR_FACING[(f[0], f[1])], h=h * self.T.k, **kw)
+
+    def group(self):
+        return self.sc.group()
+
+    def tag(self, name):
+        return self.sc.tag(self.inst.name + " " + name)
+
+
 class Scene:
     def __init__(self, unit=28, seed=7, sketch=0.5, stroke=1.6, snap=1 / 20, pad=16,
                  background=False):
@@ -335,6 +595,7 @@ class Scene:
         self._bb = None
         self._tag = None
         self.stats = {}
+        self.instances, self._names = [], {}
 
     # ── grid ─────────────────────────────────────────────────────────────
     def sn(self, v):
@@ -365,6 +626,7 @@ class Scene:
         G[0] = min(G[0], bb[0]); G[1] = max(G[1], bb[1]); G[2] = min(G[2], bb[2])
         G[3] = max(G[3], bb[3]); G[4] = min(G[4], bb[4]); G[5] = max(G[5], bb[5])
         it.atom = atom
+        it.bb = bb
         self._items.append(it)
         self._last = it
         return it
@@ -395,7 +657,8 @@ class Scene:
     # ── primitives ───────────────────────────────────────────────────────
     def box(self, x, y, z, w, d, h, mat, top=None, faces="tlr", opacity=1, snap=True):
         """Axis-aligned box. mat/top: palette name or '#hex'. Returns a handle
-        that face_mark(on=...) accepts."""
+        that mark() and face_mark(on=...) accept."""
+        faces = "tlr" if faces is None else faces
         if snap and self.snap:
             x1, y1, z1 = self.sn(x + w), self.sn(y + d), self.sn(z + h)
             x, y, z = self.sn(x), self.sn(y), self.sn(z)
@@ -410,6 +673,7 @@ class Scene:
         it = self._emit("box", (x, y, z, w, d, h, mat, top, faces, opacity),
                         (x, x + w, y, y + d, z, z + h), fs, boxlike=True)
         it.box = (x, y, z, w, d, h, faces)
+        it.local, it.T = (x, y, z, w, d, h), _T()
         return it
 
     def tile(self, x, y, z, w, d, mat, stroke=True, opacity=1, snap=True):
@@ -421,17 +685,22 @@ class Scene:
         f = _plane_facet([(x, y, z), (x + w, y, z), (x + w, y + d, z), (x, y + d, z)])
         it = self._emit("tile", (x, y, z, w, d, mat, stroke, opacity), (x, x + w, y, y + d, z, z), [f], boxlike=True)
         it.box = (x, y, z, w, d, 0, "t")
+        it.local, it.T = (x, y, z, w, d, 0), _T()
         return it
 
     def shadow(self, x, y, w, d, z=0):
         f = _plane_facet([(x, y, z), (x + w, y, z), (x + w, y + d, z), (x, y + d, z)])
         return self._emit("shadow", (x, y, z, w, d), (x, x + w, y, y + d, z, z), [f], boxlike=True)
 
-    def poly(self, pts, mat, stroke=True, opacity=1, snap=True):
+    def poly(self, pts, mat, stroke=True, opacity=1, snap=True, inside=None):
         """Any planar 3D polygon (roof slopes, gables, signs). Shaded
-        automatically from its normal."""
+        automatically from its normal. With inside=<a point inside the solid
+        it bounds>, it is drawn only while it faces the viewer (for prisms
+        such as wheels, which turn with their object)."""
         if snap and self.snap:
             pts = [tuple(self.sn(c) for c in q) for q in pts]
+        if inside is not None and not _faces_viewer(pts, inside):
+            return None
         xs, ys, zs = zip(*pts)
         return self._emit("poly", (pts, mat, stroke, opacity), (min(xs), max(xs), min(ys), max(ys), min(zs), max(zs)),
                           [_plane_facet(pts)])
@@ -492,8 +761,13 @@ class Scene:
         return self._emit("cloud", (x, y, z, r, mat, opacity), (x - r, x + r, y - r, y + r, z - r * 0.5, z + r),
                           [_plane_facet(disk)])
 
-    def _find_face(self, x, y, z, side):
-        e, t = 2e-3, 1e-4
+    def _find_face(self, A, side, U, V):
+        """The latest box (or tile) whose drawn `side` face holds the anchor A,
+        nudged a little into the face along U and V."""
+        t = 1e-4
+        nu = [(1 if c > 0 else -1 if c < 0 else 0) * 2e-3 for c in U]
+        nv = [(1 if c > 0 else -1 if c < 0 else 0) * 2e-3 for c in V]
+        x, y, z = (A[i] + nu[i] + nv[i] for i in range(3))
         for it in reversed(self._items):
             b = it.box
             if b is None:
@@ -502,18 +776,19 @@ class Scene:
             if side not in faces:
                 continue
             if side == "r":
-                if abs(x - (bx + w)) < t and by - t <= y + e <= by + d + t and bz - t <= z + e <= bz + h + t:
+                if abs(A[0] - (bx + w)) < t and by - t <= y <= by + d + t and bz - t <= z <= bz + h + t:
                     return it
             elif side == "l":
-                if abs(y - (by + d)) < t and bx - t <= x + e <= bx + w + t and bz - t <= z + e <= bz + h + t:
+                if abs(A[1] - (by + d)) < t and bx - t <= x <= bx + w + t and bz - t <= z <= bz + h + t:
                     return it
-            elif abs(z - (bz + h)) < t and bx - t <= x + e <= bx + w + t and by - t <= y + e <= by + d + t:
+            elif abs(A[2] - (bz + h)) < t and bx - t <= x <= bx + w + t and by - t <= y <= by + d + t:
                 return it
         return None
 
     def face_mark(self, x, y, z, side, shapes, on=None):
-        """2D detail painted on a face. It layers with the face it sits on:
-        `on` (a handle from box()/tile()), else the box whose `side` face
+        """2D detail painted on a box face, by world coordinates (the older
+        form; inside objects prefer mark()). It layers with the face it sits
+        on: `on` (a handle from box()/tile()), else the box whose `side` face
         contains (x, y, z), else the latest primitive.
         side 'r' = plane x=const (a runs +y), 'l' = plane y=const (a runs +x),
         't' = plane z=const (a runs +x, b runs +y). b runs up for r/l.
@@ -526,51 +801,75 @@ class Scene:
           ('arc',  a, b, w, depth, mat, width)          smile/curve
         mat: palette name, '#hex', '_ink', '_face', or '!name' (emissive:
         not darkened by the face shading, e.g. '!light_on' lit windows)."""
-        it = on or self._find_face(x, y, z, side) or self._last
+        U, V = _LEGACY_AXES[side]
+        self._put_mark((x, y, z), U, V, side, shapes, on)
+
+    def _put_mark(self, A, U, V, side, shapes, on):
+        it = on or self._find_face(A, side, U, V) or self._last
         if it is None:
-            it = self._emit("none", None, (x, x, y, y, z, z), [])
-        it.marks.append((x, y, z, side, shapes))
+            it = self._emit("none", None, (A[0], A[0], A[1], A[1], A[2], A[2]), [])
+        it.marks.append((tuple(A), tuple(U), tuple(V), side, shapes))
+
+    def mark(self, on, face, shapes):
+        """Details on one face of a box (or the top of a tile), in the face's
+        own frame: `a` runs left to right and `b` up, both from the face's
+        lower-left corner as you look at that face. face: 'front' (+x),
+        'back' (-x), 'left' (+y), 'right' (-y), 'top' (+z), or '+x'... '+z'.
+        On 'top', a runs along +x and b along +y. The marks turn with a placed
+        object and are drawn only while their face looks at the viewer.
+        Shapes as in face_mark()."""
+        n = FACE_NORMALS[face]
+        A, U, V = _face_frame(on.local, n)
+        T = on.T
+        nw = T.dir(n)
+        side = _VISIBLE.get(nw)
+        if side is None:
+            return                                  # that face is turned away
+        self._put_mark(T.pt(*A), T.vec(*U), T.vec(*V), side, shapes, on)
+
+    # ── objects: build once in their own space, then place ───────────────
+    def place(self, model, x=0, y=0, z=0, rot=0, mirror=False, scale=1.0, name=None, **kw):
+        """Build `model(m, **kw)` in its own coordinates and put it here.
+        The model draws on `m` exactly as on a scene (box, mark, cylinder,
+        anchor, place, ...) with its origin at its footprint's back corner
+        and its front facing +x. rot turns it about z in 90-degree steps
+        (90: front faces +y, 180: -x, 270: -y); mirror flips it across its
+        own x axis first; scale grows it. Every part still sorts on its own,
+        so the object sits in the scene (a person on its seat, an arm in
+        front of its counter). Returns an Instance with .anchors and .bb."""
+        T = _T.make(self.sn(x), self.sn(y), self.sn(z), rot, mirror, scale)    # the spot snaps to the grid
+        return _build(self, model, T, None, name, kw)
+
+    def person_at(self, anchor, **kw):
+        """Put a person on an anchor from a placed object: centred on the
+        spot, facing the anchor's way, sitting if the anchor has a `seat`
+        height. Any person() option can follow."""
+        if anchor.meta.get("seat") and "sit" not in kw:
+            kw["sit"] = anchor.meta["seat"]
+        kw.setdefault("facing", anchor.facing)
+        return self.person_center(anchor.x, anchor.y, anchor.z, **kw)
+
+    def person_center(self, cx, cy, z=0, facing="r", h=1.0, **kw):
+        """person() by the centre of the torso instead of its corner."""
+        (fx, fy), (sx, sy) = FACINGS[facing]
+        X = cx - (fx * TW / 2 + sx * TD / 2) * h
+        Y = cy - (fy * TW / 2 + sy * TD / 2) * h
+        return self.person(X, Y, z, facing=facing, h=h, **kw)
 
     # ── reusable props ───────────────────────────────────────────────────
     def tree(self, x, y, z=0, kind="round", s=1.0, leaf="leaf"):
-        """Voxel tree (fits the blocky characters). kind: round | pine.
-        Every block is its own unit, so people can stand in front of the
-        trunk and behind the crown."""
-        with self.tag("tree@(%.1f,%.1f)" % (x, y)):
-            self.shadow(x - 0.5 * s, y - 0.5 * s, 1.0 * s, 1.0 * s, z)
-            if kind == "pine":
-                self.box(x - 0.12 * s, y - 0.12 * s, z, 0.24 * s, 0.24 * s, 0.7 * s, "wood", snap=False)
-                for i, w in enumerate((1.1, 0.8, 0.5)):
-                    w *= s
-                    self.box(x - w / 2, y - w / 2, z + (0.7 + i * 0.55) * s, w, w, 0.55 * s, leaf, snap=False)
-            else:
-                self.box(x - 0.12 * s, y - 0.12 * s, z, 0.24 * s, 0.24 * s, 0.8 * s, "wood", snap=False)
-                c = self.box(x - 0.55 * s, y - 0.55 * s, z + 0.8 * s, 1.1 * s, 1.1 * s, 0.9 * s, leaf, snap=False)
-                self.face_mark(x + 0.55 * s, y - 0.55 * s, z + 0.8 * s, "r",
-                               [("rect", 0.2 * s, 0.2 * s, 0.25 * s, 0.25 * s, ("~", leaf, 0.85)),
-                                ("rect", 0.6 * s, 0.5 * s, 0.2 * s, 0.2 * s, ("~", leaf, 0.85))], on=c)
-                self.face_mark(x - 0.55 * s, y + 0.55 * s, z + 0.8 * s, "l",
-                               [("rect", 0.55 * s, 0.3 * s, 0.22 * s, 0.22 * s, ("~", leaf, 0.85))], on=c)
-                self.box(x - 0.35 * s, y - 0.35 * s, z + 1.7 * s, 0.7 * s, 0.7 * s, 0.4 * s, leaf, snap=False)
+        """A voxel tree centred on (x, y): models.tree placed for you."""
+        m = _library()
+        return self.place(m.tree, x - 0.55 * s, y - 0.55 * s, z, kind=kind, size=s, leaf=leaf)
 
     def bench(self, x, y, z=0, length=1.8, facing="l", seat=0.6, mat="wood", leg="steel"):
-        """Bench with its backrest on the far side; seat top at z + seat.
-        facing 'l': runs along x, people sit facing +y. facing 'r': runs along
-        y, people sit facing +x. Seat someone with
-        person(x0, y + 0.12, z + seat, facing="l", sit=seat) (or x + 0.12 for 'r')."""
-        with self.tag("bench@(%.1f,%.1f)" % (x, y)):
-            def B(a, b, c, w, d, h, m, **kw):
-                if facing == "l":
-                    return self.box(x + a, y + b, z + c, w, d, h, m, snap=False, **kw)
-                return self.box(x + b, y + a, z + c, d, w, h, m, snap=False, **kw)
-            for lx in (0.12, length - 0.24):
-                B(lx, 0.18, 0, 0.12, 0.34, seat - 0.08, leg)
-            B(0, 0.1, seat - 0.08, length, 0.5, 0.08, mat)
-            back = B(0, 0.0, seat - 0.08, length, 0.1, 0.62, mat)
-            if facing == "l":
-                self.face_mark(x, y + 0.1, z + seat - 0.08, "l", [("line", [(0, 0.38), (length, 0.38)], ("~", mat, 0.7), 1.0)], on=back)
-            else:
-                self.face_mark(x + 0.1, y, z + seat - 0.08, "r", [("line", [(0, 0.38), (length, 0.38)], ("~", mat, 0.7), 1.0)], on=back)
+        """models.bench placed with its seats facing `facing` ('r' or 'l'),
+        backrest on the far side, from the corner (x, y). Seat people with
+        s.person_at(bench.anchors["seat"][i])."""
+        m = _library()
+        if facing == "r":
+            return self.place(m.bench, x, y, z, rot=0, length=length, seat=seat, mat=mat, leg=leg)
+        return self.place(m.bench, x + length, y, z, rot=90, length=length, seat=seat, mat=mat, leg=leg)
 
     # ── character ────────────────────────────────────────────────────────
     def person(self, x, y, z=0, *, facing="r", h=1.0, skin="skin1", hair="hair1",
@@ -583,11 +882,15 @@ class Scene:
         or the seat top when sit=<seat height>. The body is about 0.75 x 0.7
         units on the floor and 2.5 units tall at h=1. Every part is its own
         sortable unit and no two parts pass through each other."""
+        inst = _open(self, "person", None)
+        inst.kind, inst.facing = "person", facing
         _person(self, x, y, z, dict(facing=facing, h=h, skin=skin, hair=hair, hair_style=hair_style, top=top,
                                     outfit=outfit, inner=inner, sleeve=sleeve, tie=tie, bottom=bottom, skirt=skirt,
                                     shoe=shoe, eyes=eyes, mouth=mouth, brows=brows, blush=blush, glasses=glasses,
                                     beard=beard, carry=carry, carry_color=carry_color, hat=hat, walk=walk, sit=sit,
                                     pose=pose, holding=holding, hold_color=hold_color))
+        _close(self, inst)
+        return inst
 
     # ── ordering ─────────────────────────────────────────────────────────
     def _order(self):
@@ -761,11 +1064,13 @@ class Scene:
         pal = PALETTES[theme]
         return ".k{stroke:%s;stroke-opacity:%.2f;stroke-width:%.2f}" % (pal["_ink"], pal["_ink_op"], self.stroke)
 
-    def _marks(self, x, y, z, side, shapes, shade_k=1.0):
+    def _marks(self, A, U, V, side, shapes, shade_k=1.0):
+        ax, ay, az = A
+        ux, uy, uz = U
+        vx, vy, vz = V
+
         def P(a, b):
-            if side == "r": return self.p(x, y + a, z + b)
-            if side == "l": return self.p(x + a, y, z + b)
-            return self.p(x + a, y + b, z)
+            return self.p(ax + a * ux + b * vx, ay + a * uy + b * vy, az + a * uz + b * vz)
 
         def col(m):
             if m in ("_face", "_ink"):
@@ -872,6 +1177,71 @@ class Scene:
         out.append('<circle cx="%.1f" cy="%.1f" r="%.1f" fill="%s" fill-opacity="%.2f"/>' % (cx + R * 0.15, cy + R * 0.25, R * 0.45, shade(c, 0.94), op * 0.6))
         return "".join(out)
 
+    def plan_svg(self, u=30):
+        """A top-down plan for arranging the scene: every placed object's
+        footprint with its name, people with an arrow for where they face,
+        anchors as dots, the 1-unit grid with coordinates. Turned like the
+        drawing (x to the lower right, y to the lower left), not squashed."""
+        k = 0.7071 * u
+        P = lambda x, y: ((x - y) * k, (x + y) * k)
+        xs, ys = [], []
+        for it in self._items:
+            if it.bb is not None and it.kind != "none":
+                xs += [it.bb[0], it.bb[1]]; ys += [it.bb[2], it.bb[3]]
+        if not xs:
+            return '<svg xmlns="http://www.w3.org/2000/svg"/>'
+        x0, x1, y0, y1 = math.floor(min(xs)), math.ceil(max(xs)), math.floor(min(ys)), math.ceil(max(ys))
+        o = []
+        for it in self._items:                          # the ground, faintly
+            if it.kind == "tile" and it.bb[4] <= 0.05:
+                bx0, bx1, by0, by1 = it.bb[:4]
+                o.append('<polygon points="%s" fill="#E3EAF7" stroke="none"/>' % _pl([P(bx0, by0), P(bx1, by0), P(bx1, by1), P(bx0, by1)]))
+        g = []
+        for x in range(x0, x1 + 1):
+            g.append("M%.1f %.1fL%.1f %.1f" % (*P(x, y0), *P(x, y1)))
+        for y in range(y0, y1 + 1):
+            g.append("M%.1f %.1fL%.1f %.1f" % (*P(x0, y), *P(x1, y)))
+        o.append('<path d="%s" stroke="#C8D4E8" stroke-width="0.8" fill="none"/>' % "".join(g))
+        lab = 'font-family="DejaVu Sans, Arial, sans-serif" font-size="%d" fill="%s" text-anchor="middle"'
+        for x in range(x0, x1 + 1, 2 if x1 - x0 > 16 else 1):
+            q = P(x, y0 - 0.6)
+            o.append('<text x="%.1f" y="%.1f" %s>x%d</text>' % (q[0], q[1], lab % (10, "#4C5B76"), x))
+        for y in range(y0, y1 + 1, 2 if y1 - y0 > 16 else 1):
+            q = P(x0 - 0.6, y)
+            o.append('<text x="%.1f" y="%.1f" %s>y%d</text>' % (q[0], q[1], lab % (10, "#4C5B76"), y))
+        dirs = {"r": (1, 0), "l": (0, 1), "ul": (-1, 0), "ur": (0, -1)}
+        tops = [i for i in self.instances if i.parent is None and i.bb]
+        for inst in sorted(tops, key=lambda i: i.kind == "person"):
+            bx0, bx1, by0, by1, bz0, bz1 = inst.bb
+            poly = _pl([P(bx0, by0), P(bx1, by0), P(bx1, by1), P(bx0, by1)])
+            c = P((bx0 + bx1) / 2, (by0 + by1) / 2)
+            if inst.kind == "person":
+                o.append('<polygon points="%s" fill="#F29C9C" fill-opacity="0.7" stroke="#C6382F" stroke-width="1"/>' % poly)
+                dx, dy = dirs[inst.facing]
+                cx, cy = (bx0 + bx1) / 2, (by0 + by1) / 2
+                a, b = P(cx, cy), P(cx + dx * 0.6, cy + dy * 0.6)
+                o.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="#C6382F" stroke-width="2"/>' % (*a, *b))
+                o.append('<circle cx="%.1f" cy="%.1f" r="2.5" fill="#C6382F"/>' % b)
+                o.append('<text x="%.1f" y="%.1f" %s>%s</text>' % (c[0], c[1] - 8, lab % (9, "#7A1F1F"), inst.name))
+            else:
+                o.append('<polygon points="%s" fill="#BFD5F7" fill-opacity="0.55" stroke="#14203A" stroke-width="1.2"/>' % poly)
+                o.append('<text x="%.1f" y="%.1f" %s>%s</text>' % (c[0], c[1], lab % (11, "#14203A"), inst.name))
+                o.append('<text x="%.1f" y="%.1f" %s>h %.1f</text>' % (c[0], c[1] + 12, lab % (9, "#4C5B76"), bz1))
+                for name, lst in inst.anchors.items():
+                    for an in lst:
+                        q = P(an.x, an.y)
+                        dx, dy = dirs[an.facing]
+                        r = P(an.x + dx * 0.35, an.y + dy * 0.35)
+                        o.append('<circle cx="%.1f" cy="%.1f" r="3" fill="#B45309"/>' % q)
+                        o.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="#B45309" stroke-width="1.5"/>' % (*q, *r))
+                        o.append('<text x="%.1f" y="%.1f" %s>%s</text>' % (q[0], q[1] - 5, lab % (8, "#B45309"), name))
+        pts = [P(x0 - 1.2, y0 - 1.2), P(x1 + 1, y0), P(x1 + 1, y1 + 1), P(x0, y1 + 1)]
+        vx0, vx1 = min(p[0] for p in pts), max(p[0] for p in pts)
+        vy0, vy1 = min(p[1] for p in pts), max(p[1] for p in pts)
+        return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="%d %d %d %d" width="%d" height="%d">'
+                '<rect x="%d" y="%d" width="%d" height="%d" fill="#FFFFFF"/>%s</svg>'
+                % (vx0, vy0, vx1 - vx0, vy1 - vy0, vx1 - vx0, vy1 - vy0, vx0, vy0, vx1 - vx0, vy1 - vy0, "".join(o)))
+
     def _grid_svg(self):
         """The baseline lattice: x-lines, y-lines and verticals through every
         unit point of the z=0 plane. Over the art, so misplaced edges show."""
@@ -888,6 +1258,20 @@ class Scene:
             out.append("M%.1f %.1fL%.1f %.1f" % (sx, bb[1] - 50, sx, bb[3] + 50))
         self._bb = keep
         return '<path d="%s" stroke="#E63939" stroke-opacity="0.35" stroke-width="0.6" fill="none"/>' % "".join(out)
+
+
+def _faces_viewer(pts, inside):
+    """Does the planar polygon's outward side (away from `inside`) look at the
+    viewer, who looks along -(1, 1, 1)?"""
+    (x0, y0, z0), (x1, y1, z1), (x2, y2, z2) = pts[0], pts[1], pts[2]
+    ux, uy, uz = x1 - x0, y1 - y0, z1 - z0
+    vx, vy, vz = x2 - x0, y2 - y0, z2 - z0
+    n = (uy * vz - uz * vy, uz * vx - ux * vz, ux * vy - uy * vx)
+    c = [sum(p[i] for p in pts) / len(pts) for i in range(3)]
+    out = sum(n[i] * (c[i] - inside[i]) for i in range(3))
+    if out < 0:
+        n = (-n[0], -n[1], -n[2])
+    return n[0] + n[1] + n[2] > 1e-9
 
 
 def _desc(it):
@@ -1609,6 +1993,7 @@ def write_pair(build, name, outdir, title="", desc="", preview=True, check=True,
     if preview:
         sc = Scene(**scene_kw); build(sc)
         _png(sc.svg("light", grid_overlay=True), os.path.join(outdir, "%s-gridcheck.png" % name), PALETTES["light"]["_bg"], 2)
+        _png(sc.plan_svg(), os.path.join(outdir, "%s-plan.png" % name), "#FFFFFF", 1.5)
     return paths
 
 

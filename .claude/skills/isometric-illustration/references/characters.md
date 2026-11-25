@@ -54,18 +54,22 @@ front of a counter, legs behind a bench seat, a walker's head behind a seated pe
 | `walk` | -1 to 1 | stride phase. Animate with `sin(2*pi*(n*t + phase))`, n a whole number |
 | `sit` | seat height (0.6 for an adult seat) | then `z` is the seat top. Thighs run forward from the torso and the shins come down 0.5 in front of it |
 
-## Seating
+## Seating and standing at objects
 
-`s.bench(x, y, z, length, facing="l", seat=0.6)` builds a bench with its backrest on the far
-side. Seat a person facing the same way, with the torso 0.12 in front of the backrest:
+Objects offer anchors: a bench or chair a `seat` per place, a counter `staff` and
+`customer`, an ATM a `user`, a food cart a `seller`. `s.person_at(anchor, **look)` puts
+someone there, centred on the spot, facing the anchor's way, sitting at the right height:
 
 ```python
-s.bench(2.0, 3.3, 0.6, length=1.8)                       # on a platform at z 0.6
-s.person(2.3, 3.42, 0.6 + 0.6, facing="l", sit=0.6, holding="book")
+b = s.place(bench, 3.8, 3.3, 0.6, rot=90)                 # on a platform at z 0.6, seats face +y
+s.person_at(b.anchor("seat", 0), holding="book", hair_style="bun", top="teal")
+till = s.place(counter, 12.2, 7.4, rot=90, length=3.2)
+s.person_at(till.anchor("staff"), outfit="apron", hair_style="cap")
 ```
 
-For a chair or a stool, keep the seat's front edge at most 0.48 in front of the person's
-`y` (facing `l`) or `x` (facing `r`), so the shins clear it.
+`s.person_center(cx, cy, z, facing=...)` places by the torso's centre for your own spots. A
+sitting person needs about 0.48 between the seat anchor and the seat's front edge for the
+shins, and the default arms rest on the lap.
 
 ## Crowds
 

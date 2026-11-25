@@ -53,11 +53,9 @@ def build(s):
         s.person(i * 2.0, 6.0, facing=f, **kw)
     for i, kw in enumerate(ROW4):
         s.person(i * 2.0, 9.0, **kw)
-    s.bench(8.6, 8.4, length=3.0)
-    s.person(8.9, 8.52, 0.6, facing="l", sit=0.6, hair_style="bob", hair="hair4", top="sky", outfit="shirt", skin="skin1",
-             holding="laptop")
-    s.person(10.2, 8.52, 0.6, facing="l", sit=0.6, hair_style="short", hair="hair1", top="maroon", outfit="batik", skin="skin3",
-             mouth="grin")
+    b = s.bench(8.6, 8.4, length=2.7)                    # a library bench; people sit on its seat anchors
+    s.person_at(b.anchor("seat", 2), hair_style="bob", hair="hair4", top="sky", outfit="shirt", skin="skin1", holding="laptop")
+    s.person_at(b.anchor("seat", 0), hair_style="short", hair="hair1", top="maroon", outfit="batik", skin="skin3", mouth="grin")
 
 
 if __name__ == "__main__":

@@ -12,8 +12,9 @@ and is named <post prefix>-iso-<subject>.py. It defines:
   FRAMES = 36                 frames for --gif (optional; only for build(s, t))
 
 Always writes to --out: <name>-dark.svg and <name>-light.svg, a preview PNG of each on its
-page background, <name>-gridcheck.png (the lattice over the art) and <name>-pair.png (both
-themes side by side), and prints the layering report. Then:
+page background, <name>-pair.png (both themes side by side), <name>-plan.png (a top-down map
+of every placed object, person and anchor on the grid, for arranging) and
+<name>-gridcheck.png (the lattice over the art), and prints the layering report. Then:
   --publish  copies the two SVGs to assets/img/ and prints the <figure> to paste in the post.
              Refused while parts pass through each other (fix them, or --force).
   --card     writes assets/img/<name with -iso- as -ill->.webp: the light drawing on the page
@@ -74,7 +75,8 @@ def main():
     pair = Image.new("RGB", (ims[0].width * 2, ims[0].height))
     pair.paste(ims[0], (0, 0)); pair.paste(ims[1], (ims[0].width, 0))
     pair.save(out / ("%s-pair.png" % name))
-    print("look at:", out / ("%s-pair.png" % name), "and", out / ("%s-gridcheck.png" % name))
+    print("look at:", out / ("%s-pair.png" % name), "| plan:", out / ("%s-plan.png" % name),
+          "| grid:", out / ("%s-gridcheck.png" % name))
 
     gifs = []
     if a.gif:
