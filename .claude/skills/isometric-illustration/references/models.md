@@ -95,14 +95,17 @@ def kiosk(m, color="brand"):
    shapes)`: face `front`, `back`, `left`, `right` or `top`; `a` runs left to right and `b`
    up as you look at that face (the top: `a` along +x, `b` along +y). Aim for 2 to 4 marks
    on each face of anything the eye lands on.
-4. **Round things.** `m.cylinder` for upright drums, cans, poles; `wheel()` for wheels. A
+4. **Borders follow the form.** Parts that make one soft or continuous thing (a crown of
+   leaves, a cushion, a cloth) go inside `with m.outline():`, so the ink runs only round their
+   outer silhouette. Separate hard parts keep their own borders.
+5. **Round things.** `m.cylinder` for upright drums, cans, poles; `wheel()` for wheels. A
    polygon with `inside=<a point inside the solid>` is drawn only while it faces the viewer,
    for other prisms that turn with their object.
-5. **Anchors** for every spot a person or a cable uses: `m.anchor(name, x, y, z, facing,
+6. **Anchors** for every spot a person or a cable uses: `m.anchor(name, x, y, z, facing,
    seat=<seat height>)`. A seat anchor is the centre of the sitter's torso at seat height;
    leave 0.48 between it and the seat's front edge so the shins clear it.
-6. **Real sizes.** 1 unit is about 0.7 m: a person 2.5, seat 0.6, desk 1.1, counter 1.3,
+7. **Real sizes.** 1 unit is about 0.7 m: a person 2.5, seat 0.6, desk 1.1, counter 1.3,
    door 3.0 x 1.3, one storey 2.8, car 3.8 x 1.7 x 1.6. Openings people pass under (awnings,
    canopies) start above 2.7.
-7. **Look at the sheet** in both themes, from all four sides: every face reads, nothing
+8. **Look at the sheet** in both themes, from all four sides: every face reads, nothing
    floats or sinks, 0 parts passing through each other. Then place it.

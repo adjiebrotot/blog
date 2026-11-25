@@ -38,6 +38,7 @@ object is a group for building and arranging only; its parts still sort one
 by one. models.py holds the library; sheet.py draws objects alone.
 """
 import math, heapq, os, io, copy
+from contextlib import nullcontext
 from contextlib import contextmanager
 
 C30 = math.cos(math.radians(30))
@@ -316,11 +317,11 @@ def _hex_overlap(a, b):
 
 
 class _Item:
-    __slots__ = ("kind", "data", "marks", "atom", "tag", "box", "bb", "local", "T")
+    __slots__ = ("kind", "data", "marks", "atom", "tag", "box", "bb", "local", "T", "ol")
 
     def __init__(self, kind, data, tag):
         self.kind, self.data, self.marks, self.atom, self.tag, self.box = kind, data, [], None, tag, None
-        self.bb, self.local, self.T = None, None, None
+        self.bb, self.local, self.T, self.ol = None, None, None, None
 
 
 class _Atom:
@@ -582,6 +583,12 @@ class View:
     def group(self):
         return self.sc.group()
 
+    def outline(self, key=None):
+        return self.sc.outline(key)
+
+    def new_outline(self, name="part"):
+        return self.sc.new_outline(name)
+
     def tag(self, name):
         return self.sc.tag(self.inst.name + " " + name)
 
@@ -594,6 +601,7 @@ class Scene:
         self.atoms, self._items, self._stack, self._seq, self._last = [], [], [], 0, None
         self._bb = None
         self._tag = None
+        self._ol, self._olseq = None, 0
         self.stats = {}
         self.instances, self._names = [], {}
 
@@ -615,6 +623,7 @@ class Scene:
     # ── sortable units ───────────────────────────────────────────────────
     def _emit(self, kind, data, bb, facets, boxlike=False):
         it = _Item(kind, data, self._tag)
+        it.ol = self._ol
         if self._stack:
             atom = self._stack[-1]; atom.boxlike = False
         else:
@@ -644,6 +653,26 @@ class Scene:
             yield g
         finally:
             self._stack.pop()
+
+    def new_outline(self, name="part"):
+        """A key for an outline group, to reuse across several outline() blocks."""
+        self._olseq += 1
+        return "%s#%d" % (name, self._olseq)
+
+    @contextmanager
+    def outline(self, key=None):
+        """Parts made inside share ONE border: the ink line runs only round
+        the outside of the whole (its silhouette, and where it meets other
+        things), not along the seams where its own boxes meet. Use it for
+        anything soft or continuous that is modelled from several boxes: a
+        hijab, a head of hair, an arm, a tree's crown, a cushion. Pass the
+        same key (new_outline()) to join parts made in different places."""
+        key = key or self.new_outline()
+        old, self._ol = self._ol, key
+        try:
+            yield key
+        finally:
+            self._ol = old
 
     @contextmanager
     def tag(self, name):
@@ -1007,11 +1036,91 @@ class Scene:
         st = ' class="k"' if stroke else ""          # .k = the ink outline, defined once in <style>
         return '<polygon points="%s" fill="%s"%s%s/>' % (q, fill, st, "" if op == 1 else ' fill-opacity="%.2f"' % op)
 
+    def _face(self, it, k, wpts, fill, op=1, stroke=True):
+        """One face from world points. Outside an outline group: filled and
+        fully bordered. Inside one: filled, then bordered only along the
+        stretches of its edges that are the group's silhouette."""
+        if it.ol is None or not stroke:
+            return self._face_svg([self.p(*q) for q in wpts], fill, op, stroke)
+        scr = self._pts([self.p(*q) for q in wpts])
+        opa = "" if op == 1 else ' fill-opacity="%.2f"' % op
+        seam = (' stroke="%s" stroke-width="0.7"' % fill) if op == 1 else ""      # close anti-aliasing gaps
+        out = ['<polygon points="%s" fill="%s"%s%s/>' % (_pl(scr), fill, seam, opa)]
+        n = len(scr)
+        for i, t0, t1 in self._silhouette(it, k, wpts):
+            (ax, ay), (bx, by) = scr[i], scr[(i + 1) % n]
+            out.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" class="k"/>'
+                       % (ax + (bx - ax) * t0, ay + (by - ay) * t0, ax + (bx - ax) * t1, ay + (by - ay) * t1))
+        return "".join(out)
+
+    def _group_faces(self, ol):
+        if self._olfaces is None:
+            self._olfaces = {}
+            for it2 in self._items:
+                if it2.ol is None:
+                    continue
+                if it2.kind == "box":
+                    wfs = [wp[1] for wp in _box_faces(it2.data)]
+                elif it2.kind == "tile":
+                    x, y, z, w, dd = it2.data[:5]
+                    wfs = [[(x, y, z), (x + w, y, z), (x + w, y + dd, z), (x, y + dd, z)]]
+                elif it2.kind == "poly":
+                    wfs = [it2.data[0]]
+                else:
+                    continue
+                for k2, wp in enumerate(wfs):
+                    f = _plane_facet(wp)
+                    if f is not None:
+                        self._olfaces.setdefault(it2.ol, []).append(((id(it2), k2), f))
+        return self._olfaces.get(ol, [])
+
+    def _silhouette(self, it, k, wpts):
+        """Stretches (edge index, t0, t1) of a face's edges where the shape
+        meets the outside: just across the edge there is no face of the same
+        outline group continuing the surface (same depth at the edge)."""
+        me = _plane_facet(wpts)
+        poly = [_S(*q) for q in wpts]
+        n = len(poly)
+        if me is None:
+            return [(i, 0.0, 1.0) for i in range(n)]
+        others = [f for key, f in self._group_faces(it.ol) if key != (id(it), k)]
+        eps = 1.4 / self.u
+        out = []
+        for i in range(n):
+            (ax, ay), (bx, by) = poly[i], poly[(i + 1) % n]
+            L = math.hypot(bx - ax, by - ay)
+            if L < 1e-9:
+                continue
+            nx, ny = (by - ay) / L, -(bx - ax) / L
+            mx, my = (ax + bx) / 2 + nx * eps, (ay + by) / 2 + ny * eps
+            if _inside(me.poly, mx, my):
+                nx, ny = -nx, -ny
+            N = max(3, int(L * self.u / 3))
+            run = None
+            for j in range(N):
+                t = (j + 0.5) / N
+                qx, qy = ax + (bx - ax) * t + nx * eps, ay + (by - ay) * t + ny * eps
+                d0 = me.depth(qx, qy)
+                cont = False
+                for f in others:
+                    b = f.bb
+                    if b[0] <= qx <= b[2] and b[1] <= qy <= b[3] and _inside(f.poly, qx, qy) and abs(f.depth(qx, qy) - d0) < 0.12:
+                        cont = True
+                        break
+                if not cont:
+                    run = (j / N if run is None else run[0], (j + 1) / N)
+                elif run is not None:
+                    out.append((i,) + run); run = None
+            if run is not None:
+                out.append((i,) + run)
+        return out
+
     def _render(self, theme, grid_overlay=False):
         pal = PALETTES[theme]
         self._pal, self._ink, self._iop = pal, pal["_ink"], pal["_ink_op"]
         st, sl, sr = pal["_shade"]
         self._bb = [1e9, 1e9, -1e9, -1e9]
+        self._olfaces = None
         o = []
         P = self.p
         for g in self._order():
@@ -1020,16 +1129,12 @@ class Scene:
                 if kind == "box":
                     x, y, z, w, dd, h, mat, top, faces, op = d
                     c = self._c(mat); ct = self._c(top) or c
-                    if h > 0:
-                        if "l" in faces:
-                            o.append(self._face_svg([P(x, y + dd, z), P(x + w, y + dd, z), P(x + w, y + dd, z + h), P(x, y + dd, z + h)], shade(c, sl), op))
-                        if "r" in faces:
-                            o.append(self._face_svg([P(x + w, y, z), P(x + w, y + dd, z), P(x + w, y + dd, z + h), P(x + w, y, z + h)], shade(c, sr), op))
-                    if "t" in faces:
-                        o.append(self._face_svg([P(x, y, z + h), P(x + w, y, z + h), P(x + w, y + dd, z + h), P(x, y + dd, z + h)], shade(ct, st), op))
+                    for k_, wp in enumerate(_box_faces(d)):
+                        fill = shade(ct, st) if wp[0] == "t" else shade(c, sl if wp[0] == "l" else sr)
+                        o.append(self._face(it, k_, wp[1], fill, op))
                 elif kind == "tile":
                     x, y, z, w, dd, mat, strk, op = d
-                    o.append(self._face_svg([P(x, y, z), P(x + w, y, z), P(x + w, y + dd, z), P(x, y + dd, z)], self._c(mat), op, strk))
+                    o.append(self._face(it, 0, [(x, y, z), (x + w, y, z), (x + w, y + dd, z), (x, y + dd, z)], self._c(mat), op, strk))
                 elif kind == "shadow":
                     x, y, z, w, dd = d
                     q = " ".join("%.1f,%.1f" % P(*t) for t in [(x, y, z), (x + w, y, z), (x + w, y + dd, z), (x, y + dd, z)])
@@ -1042,7 +1147,7 @@ class Scene:
                              % (q, col, aop * op, width or self.stroke, ' stroke-dasharray="%s"' % dash if dash else ""))
                 elif kind == "poly":
                     pts, mat, strk, op = d
-                    o.append(self._face_svg([P(*t) for t in pts], shade(self._c(mat), _normal_shade(pts, st, sl, sr)), op, strk))
+                    o.append(self._face(it, 0, pts, shade(self._c(mat), _normal_shade(pts, st, sl, sr)), op, strk))
                 elif kind == "cyl":
                     o.append(self._cyl(*d))
                 elif kind == "cloud":
@@ -1260,6 +1365,35 @@ class Scene:
         return '<path d="%s" stroke="#E63939" stroke-opacity="0.35" stroke-width="0.6" fill="none"/>' % "".join(out)
 
 
+def _box_faces(d):
+    """The drawn faces of a box item as (side, world points)."""
+    x, y, z, w, dd, h, mat, top, faces, op = d
+    out = []
+    if h > 0 and "l" in faces:
+        out.append(("l", [(x, y + dd, z), (x + w, y + dd, z), (x + w, y + dd, z + h), (x, y + dd, z + h)]))
+    if h > 0 and "r" in faces:
+        out.append(("r", [(x + w, y, z), (x + w, y + dd, z), (x + w, y + dd, z + h), (x + w, y, z + h)]))
+    if "t" in faces:
+        out.append(("t", [(x, y, z + h), (x + w, y, z + h), (x + w, y + dd, z + h), (x, y + dd, z + h)]))
+    return out
+
+
+def _inside(poly, x, y):
+    """Point in a convex polygon of either winding (edges count as inside)."""
+    sign = 0
+    n = len(poly)
+    for i in range(n):
+        (ax, ay), (bx, by) = poly[i], poly[(i + 1) % n]
+        c = (bx - ax) * (y - ay) - (by - ay) * (x - ax)
+        if abs(c) < 1e-12:
+            continue
+        if sign == 0:
+            sign = 1 if c > 0 else -1
+        elif (c > 0) != (sign > 0):
+            return False
+    return True
+
+
 def _faces_viewer(pts, inside):
     """Does the planar polygon's outward side (away from `inside`) look at the
     viewer, who looks along -(1, 1, 1)?"""
@@ -1362,10 +1496,10 @@ class _Rig:
         k, (fx, fy), (sx, sy) = self.k, self.FX, self.SX
         return (self.X + (f * fx + s * sx) * k, self.Y + (f * fy + s * sy) * k, self.Z + z * k)
 
-    def B(self, f0, f1, s0, s1, z0, z1, mat, top=None, faces="tlr", part=""):
+    def B(self, f0, f1, s0, s1, z0, z1, mat, top=None, faces="tlr", part="", ol=None):
         a, b = self.w(f0, s0, z0), self.w(f1, s1, z1)
         x0, x1, y0, y1 = min(a[0], b[0]), max(a[0], b[0]), min(a[1], b[1]), max(a[1], b[1])
-        with self.sc.tag("%s %s" % (self.tag, part)):
+        with self.sc.tag("%s %s" % (self.tag, part)), (self.sc.outline(ol) if ol else nullcontext()):
             return self.sc.box(x0, y0, a[2], x1 - x0, y1 - y0, b[2] - a[2], mat, top=top, faces=faces, snap=False)
 
     def _sc(self, shapes, flip=False):
@@ -1448,11 +1582,11 @@ class _Rig:
             self.sc.poly([(x1, y0, z * 0 + a[2]), (x1, y1, a[2]), ap], mat, snap=False)
             self.sc.poly([(x0, y1, a[2]), (x1, y1, a[2]), ap], mat, snap=False)
 
-    def wedge(self, f0, f1, s0, s1, z, h, mat):
+    def wedge(self, f0, f1, s0, s1, z, h, mat, ol=None):
         """A ramp on (f0..f1, s0..s1) rising from the front (f1) to height h at
         the back (f0): swept-back hair. Draws only the faces the viewer sees."""
         P = lambda f, s_, zz: self.w(f, s_, zz)
-        with self.sc.tag(self.tag + " wedge"):
+        with self.sc.tag(self.tag + " wedge"), (self.sc.outline(ol) if ol else nullcontext()):
             if not self.away:
                 self.sc.poly([P(f1, s0, z), P(f1, s1, z), P(f0, s1, z + h), P(f0, s0, z + h)], mat, snap=False)
             else:
@@ -1475,6 +1609,8 @@ def _person(sc, x, y, z, o):
     style = o["hair_style"]
     hij = style == "hijab"
     scarf = hair if hij else None
+    o["_scarf_ol"] = sc.new_outline("scarf") if hij else None      # one border round the whole scarf
+    o["_hair_ol"] = sc.new_outline("hair")                          # one border round the whole head of hair
     sleeve = o["sleeve"] or (o["inner"] if outfit == "hivis" else top)
     skirt = o["skirt"] or (top if outfit == "dress" else None)
     stride = walk * 0.12
@@ -1521,8 +1657,8 @@ def _person(sc, x, y, z, o):
           + [("poly", [(TD / 2 - 0.2, TH - DRAPE), (TD / 2 + 0.2, TH - DRAPE), (TD / 2, TH - DRAPE - 0.16)], scarf)])
         SD(torso, TD, 0, tz, _outfit_side(outfit, top, o["inner"], TH - DRAPE)
            + [("poly", [(0, TH - DRAPE), (TW, TH - DRAPE), (TW * 0.5, TH - DRAPE - 0.07)], scarf)])
-        B(0, TW, 0, TD, sz - DRAPE, sz, scarf, part="hijab drape")
-        B(hf0, hf1, hs0, hs1, sz, hz, scarf, part="hijab neck")
+        B(0, TW, 0, TD, sz - DRAPE, sz, scarf, part="hijab drape", ol=o["_scarf_ol"])
+        B(hf0, hf1, hs0, hs1, sz, hz, scarf, part="hijab neck", ol=o["_scarf_ol"])
     else:
         torso = B(0, TW, 0, TD, tz, sz, top, part="torso")
         rig.back(torso, 0, 0, tz, _outfit_back(outfit, top, o["inner"], TH))
@@ -1561,13 +1697,17 @@ def _arms(rig, o, sleeve, outfit, skin, sz, stride, side_out, scarf):
 
     def upper(a0, a1, s0, s1, z0, z1, mat, part):
         """The top of the arm; under a hijab its top is the scarf."""
+        sk = o["_scarf_ol"]
         if scarf and z1 > sz - DRAPE + 0.01 and z0 < sz - DRAPE:
-            B(a0, a1, s0, s1, z0, sz - DRAPE, mat, part=part)
-            B(a0, a1, s0, s1, sz - DRAPE, z1, scarf, part="hijab drape")
+            B(a0, a1, s0, s1, z0, sz - DRAPE, mat, part=part, ol=ak)
+            B(a0, a1, s0, s1, sz - DRAPE, z1, scarf, part="hijab drape", ol=sk)
+        elif scarf and z0 >= sz - DRAPE - 0.01:
+            B(a0, a1, s0, s1, z0, z1, scarf, part=part, ol=sk)
         else:
-            B(a0, a1, s0, s1, z0, z1, scarf if (scarf and z0 >= sz - DRAPE - 0.01) else mat, part=part)
+            B(a0, a1, s0, s1, z0, z1, mat, part=part, ol=ak)
 
     for near in (False, True):
+        ak = rig.sc.new_outline("arm")                     # one border round each arm
         s0 = TD if near else -AW
         s1 = s0 + AW
         swing = (stride if near else -stride) * 0.9
@@ -1576,30 +1716,30 @@ def _arms(rig, o, sleeve, outfit, skin, sz, stride, side_out, scarf):
             a0, a1 = f0 + swing, f0 + AD + swing
             if short:
                 upper(a0, a1, s0, s1, sz - 0.3, sz, sleeve, "sleeve")
-                B(a0, a1, s0, s1, sz - ARM + 0.12, sz - 0.3, skin, part="forearm")
+                B(a0, a1, s0, s1, sz - ARM + 0.12, sz - 0.3, skin, part="forearm", ol=ak)
             else:
                 upper(a0, a1, s0, s1, sz - ARM + 0.2, sz, sleeve, "sleeve")
-                B(a0, a1, s0, s1, sz - ARM + 0.12, sz - ARM + 0.2, cuff, part="cuff")
-            B(a0 + 0.01, a1 - 0.01, s0 + 0.01, s1 - 0.01, sz - ARM, sz - ARM + 0.12, skin, part="hand")
+                B(a0, a1, s0, s1, sz - ARM + 0.12, sz - ARM + 0.2, cuff, part="cuff", ol=ak)
+            B(a0 + 0.01, a1 - 0.01, s0 + 0.01, s1 - 0.01, sz - ARM, sz - ARM + 0.12, skin, part="hand", ol=ak)
             hands[near] = ("down", a0, a1, s0, s1, sz - ARM)
         elif p in ("hold", "phone", "lap"):
             ez = sz - {"hold": 0.38, "phone": 0.3, "lap": 0.4}[p]
             upper(f0, f0 + AD, s0, s1, ez, sz, sleeve, "upper arm")
             reach = 0.26 if p != "lap" else 0.3
-            B(f0, TW + reach, s0, s1, ez - 0.14, ez, skin if short else sleeve, part="forearm")
-            B(TW + reach, TW + reach + 0.12, s0 + 0.01, s1 - 0.01, ez - 0.13, ez - 0.01, skin, part="hand")
+            B(f0, TW + reach, s0, s1, ez - 0.14, ez, skin if short else sleeve, part="forearm", ol=ak)
+            B(TW + reach, TW + reach + 0.12, s0 + 0.01, s1 - 0.01, ez - 0.13, ez - 0.01, skin, part="hand", ol=ak)
             hands[near] = (p, TW + reach, TW + reach + 0.12, s0, s1, ez)
         elif p == "point":
             upper(f0, f0 + AD, s0, s1, sz - 0.16, sz, sleeve, "shoulder")
-            B(f0 + AD, TW + 0.4, s0, s1, sz - 0.16, sz - 0.02, sleeve if not short else skin, part="arm")
-            B(TW + 0.4, TW + 0.52, s0 + 0.01, s1 - 0.01, sz - 0.15, sz - 0.03, skin, part="hand")
-            B(TW + 0.52, TW + 0.62, s0 + 0.045, s1 - 0.045, sz - 0.08, sz - 0.04, skin, part="finger")
+            B(f0 + AD, TW + 0.4, s0, s1, sz - 0.16, sz - 0.02, sleeve if not short else skin, part="arm", ol=ak)
+            B(TW + 0.4, TW + 0.52, s0 + 0.01, s1 - 0.01, sz - 0.15, sz - 0.03, skin, part="hand", ol=ak)
+            B(TW + 0.52, TW + 0.62, s0 + 0.045, s1 - 0.045, sz - 0.08, sz - 0.04, skin, part="finger", ol=ak)
             hands[near] = ("point",)
         elif p == "wave":
             so = max(side_out, s0)
             upper(f0, f0 + AD, s0, so + AW, sz - 0.15, sz, sleeve, "shoulder")
-            B(f0, f0 + AD, so, so + AW, sz, sz + 0.62, sleeve if not short else skin, part="raised arm")
-            B(f0 + 0.01, f0 + AD - 0.01, so + 0.01, so + AW - 0.01, sz + 0.62, sz + 0.76, skin, part="hand")
+            B(f0, f0 + AD, so, so + AW, sz, sz + 0.62, sleeve if not short else skin, part="raised arm", ol=ak)
+            B(f0 + 0.01, f0 + AD - 0.01, so + 0.01, so + AW - 0.01, sz + 0.62, sz + 0.76, skin, part="hand", ol=ak)
             hands[near] = ("wave",)
     return hands
 
@@ -1772,10 +1912,10 @@ def _hair(rig, o, head, hf0, hs0, hz, ht, sz):
         return
     if style == "hijab":
         # the scarf: crown, both sides and the back of the head, framing the face
-        B(hf0 - 0.05, hf1 + 0.02, hs0 - 0.05, hs1 + 0.05, ht, ht + 0.07, hair, part="hijab crown")
-        B(hf0 - 0.05, hf0, hs0, hs1, sz - 0.3, ht, hair, part="hijab back")
+        B(hf0 - 0.05, hf1 + 0.02, hs0 - 0.05, hs1 + 0.05, ht, ht + 0.07, hair, part="hijab crown", ol=o["_scarf_ol"])
+        B(hf0 - 0.05, hf0, hs0, hs1, sz - 0.3, ht, hair, part="hijab back", ol=o["_scarf_ol"])
         for s0 in (hs0 - 0.05, hs1):
-            sl = B(hf0 - 0.05, hf1 + 0.02, s0, s0 + 0.05, sz, ht, hair, part="hijab side")
+            sl = B(hf0 - 0.05, hf1 + 0.02, s0, s0 + 0.05, sz, ht, hair, part="hijab side", ol=o["_scarf_ol"])
             if s0 == hs1:
                 SD(sl, hs1 + 0.05, hf0 - 0.05, sz,
                    [("line", [(0.2, 0.05), (0.34, ht - sz - 0.1)], hd, 1.0), ("line", [(0.44, 0.05), (0.54, ht - sz - 0.24)], hd, 1.0)])
@@ -1792,22 +1932,22 @@ def _hair(rig, o, head, hf0, hs0, hz, ht, sz):
     ov = 0.05 if style == "curly" else 0.025
     back = 0.08 if style in ("long", "bob") else ov
     sides = 0.06 if style in ("long", "bob") else ov
-    cap = B(hf0 - back, hf1, hs0 - sides, hs1 + sides, ht, ht + thick, hair, part="hair")
+    cap = B(hf0 - back, hf1, hs0 - sides, hs1 + sides, ht, ht + thick, hair, part="hair", ol=o["_hair_ol"])
     F(head, hf1, hs0, hz, [("poly", fringes.get(style, fringes["short"]), hair)])
     if style == "curly":
         dots = lambda n, z0: [("ell", 0.08 + i * 0.15, z0, 0.045, 0.035, hd) for i in range(n)]
         SD(cap, hs1 + sides, hf0 - back, ht, dots(5, 0.06))
         F(cap, hf1, hs0 - sides, ht, dots(5, 0.06))
-        t2 = B(hf0 + 0.06, hf1 - 0.06, hs0 + 0.06, hs1 - 0.06, ht + thick, ht + thick + 0.1, hair, part="curls")
+        t2 = B(hf0 + 0.06, hf1 - 0.06, hs0 + 0.06, hs1 - 0.06, ht + thick, ht + thick + 0.1, hair, part="curls", ol=o["_hair_ol"])
         SD(t2, hs1 - 0.06, hf0 + 0.06, ht + thick, dots(4, 0.05))
         F(t2, hf1 - 0.06, hs0 + 0.06, ht + thick, dots(4, 0.05))
 
     if style in ("long", "bob"):
         z0 = hz - 0.3 if style == "long" else hz + 0.1
-        B(hf0 - 0.08, hf0, hs0, hs1, z0, ht, hair, part="hair back")
+        B(hf0 - 0.08, hf0, hs0, hs1, z0, ht, hair, part="hair back", ol=o["_hair_ol"])
         cz = hz - 0.01 if style == "long" else hz + 0.12
         for s0 in (hs0 - 0.06, hs1):
-            c = B(hf0 - 0.08, hf0 + 0.42, s0, s0 + 0.06, cz, ht, hair, part="hair side")
+            c = B(hf0 - 0.08, hf0 + 0.42, s0, s0 + 0.06, cz, ht, hair, part="hair side", ol=o["_hair_ol"])
             if s0 == hs1:
                 SD(c, hs1 + 0.06, hf0 - 0.08, cz, [("line", [(0.18, 0.04), (0.18, ht - cz - 0.1)], hd, 1.0),
                                                    ("line", [(0.34, 0.04), (0.34, ht - cz - 0.16)], hd, 1.0)])
@@ -1818,22 +1958,22 @@ def _hair(rig, o, head, hf0, hs0, hz, ht, sz):
     ear()
     zt = ht + thick
     if style == "bun":
-        b = B(hf0 + 0.1, hf0 + 0.36, hs0 + 0.2, hs0 + 0.46, zt, zt + 0.22, hair, part="bun")
+        b = B(hf0 + 0.1, hf0 + 0.36, hs0 + 0.2, hs0 + 0.46, zt, zt + 0.22, hair, part="bun", ol=o["_hair_ol"])
         SD(b, hs0 + 0.46, hf0 + 0.1, zt, [("rect", 0, 0.03, 0.26, 0.045, hd)])
     elif style == "ponytail":
         B(hf0 - 0.06, hf0, hs0 + 0.25, hs0 + 0.41, hz + 0.42, hz + 0.54, "coral", part="hair tie")
-        B(hf0 - 0.17, hf0 - 0.06, hs0 + 0.25, hs0 + 0.41, hz - 0.02, hz + 0.56, hair, part="ponytail")
+        B(hf0 - 0.17, hf0 - 0.06, hs0 + 0.25, hs0 + 0.41, hz - 0.02, hz + 0.56, hair, part="ponytail", ol=o["_hair_ol"])
     elif style == "pigtails":
         for s0 in (hs0 - ov - 0.18, hs1 + 0.035):
-            p = B(hf0 + 0.16, hf0 + 0.38, s0, s0 + 0.18, hz + 0.3, hz + 0.52, hair, part="pigtail")
+            p = B(hf0 + 0.16, hf0 + 0.38, s0, s0 + 0.18, hz + 0.3, hz + 0.52, hair, part="pigtail", ol=o["_hair_ol"])
             if s0 > 0:
                 SD(p, s0 + 0.18, hf0 + 0.16, hz + 0.3, [("rect", 0, 0.17, 0.22, 0.045, "coral")])
     elif style == "spiky":
         # swept-back spikes: ramps rising towards the back of the head
         for (b0, w, hh) in ((-0.02, 0.24, 0.2), (0.21, 0.24, 0.28), (0.44, 0.24, 0.22)):
-            rig.wedge(hf0 - 0.02, hf1 - 0.08, hs0 + b0, hs0 + b0 + w, zt, hh, hair)
+            rig.wedge(hf0 - 0.02, hf1 - 0.08, hs0 + b0, hs0 + b0 + w, zt, hh, hair, ol=o["_hair_ol"])
     elif style == "quiff":
-        q = B(hf0 + 0.34, hf1 + 0.04, hs0 + 0.08, hs1 - 0.08, zt, zt + 0.12, hair, part="quiff")
+        q = B(hf0 + 0.34, hf1 + 0.04, hs0 + 0.08, hs1 - 0.08, zt, zt + 0.12, hair, part="quiff", ol=o["_hair_ol"])
         F(q, hf1 + 0.04, hs0 + 0.08, zt, [("line", [(0.06, 0.06), (HS - 0.22, 0.06)], hd, 1.0)])
 
 

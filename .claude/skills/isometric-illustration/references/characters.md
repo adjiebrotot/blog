@@ -30,6 +30,12 @@ A blocky adult about 3.7 heads tall, built from boxes that only touch each other
 Because every part is its own box, the sorter places each one against the scene: an arm in
 front of a counter, legs behind a bench seat, a walker's head behind a seated person's.
 
+Borders follow the form: the boxes of each arm, of the hair (cap, back, side curtains, bun,
+ponytail, spikes) and of a hijab (crown, sides, back, chin wrap and the drape over the
+shoulders and arms) are inked only round their outer silhouette, so a scarf reads as one
+cloth and an arm as one limb. The head, neck, torso, legs, shoes and hats keep their own
+borders.
+
 ## Options
 
 | option | values | notes |

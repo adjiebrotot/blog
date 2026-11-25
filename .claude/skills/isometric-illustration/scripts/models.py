@@ -9,6 +9,9 @@ Conventions for every model here (and for new ones):
     rot=90 turns the front to +y, 180 to -x (back in view), 270 to -y.
   * Parts only touch, never pass through each other (fuse with m.group()
     only for contents inside see-through boxes).
+  * Borders follow the form, not the construction: parts that make one soft
+    or continuous thing (a crown of leaves, a cushion, a draped cloth) go
+    inside `with m.outline():` so only their outer silhouette is inked.
   * Details go on every face that can be turned into view: m.mark(part,
     face, shapes) with face 'front', 'back', 'left', 'right' or 'top'.
   * Spots for people and cables are anchors: m.anchor(name, x, y, z,
@@ -366,8 +369,9 @@ def plant(m, size=1.0, pot="amber"):
     s = size
     p = m.box(0, 0, 0, 0.6 * s, 0.6 * s, 0.45 * s, pot)
     around(m, p, lambda w, h, f: [("rect", 0, h - 0.08 * s, w, 0.08 * s, ("~", pot, 1.15))])
-    m.box(0.05 * s, 0.05 * s, 0.45 * s, 0.5 * s, 0.5 * s, 0.55 * s, "leaf")
-    m.box(0.15 * s, 0.15 * s, 1.0 * s, 0.3 * s, 0.3 * s, 0.3 * s, "leaf")
+    with m.outline():                                              # the leaves read as one bush
+        m.box(0.05 * s, 0.05 * s, 0.45 * s, 0.5 * s, 0.5 * s, 0.55 * s, "leaf")
+        m.box(0.15 * s, 0.15 * s, 1.0 * s, 0.3 * s, 0.3 * s, 0.3 * s, "leaf")
 
 
 # ── street ───────────────────────────────────────────────────────────────
@@ -387,9 +391,10 @@ def tree(m, kind="round", size=1.0, leaf="leaf"):
             around(m, b, lambda W, h, f: [("rect", 0, 0, W, h * 0.25, ("~", leaf, 0.85))])
     else:
         m.box(c - 0.12 * s, c - 0.12 * s, 0, 0.24 * s, 0.24 * s, 0.8 * s, "wood", snap=False)
-        b = m.box(c - 0.55 * s, c - 0.55 * s, 0.8 * s, 1.1 * s, 1.1 * s, 0.9 * s, leaf, snap=False)
-        around(m, b, dots)
-        m.box(c - 0.35 * s, c - 0.35 * s, 1.7 * s, 0.7 * s, 0.7 * s, 0.4 * s, leaf, snap=False)
+        with m.outline():                                          # one crown, one border
+            b = m.box(c - 0.55 * s, c - 0.55 * s, 0.8 * s, 1.1 * s, 1.1 * s, 0.9 * s, leaf, snap=False)
+            around(m, b, dots)
+            m.box(c - 0.35 * s, c - 0.35 * s, 1.7 * s, 0.7 * s, 0.7 * s, 0.4 * s, leaf, snap=False)
 
 
 def street_lamp(m, height=3.6):

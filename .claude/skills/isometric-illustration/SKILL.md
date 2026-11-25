@@ -43,8 +43,14 @@ brief -> the objects (library, or new ones checked on sheet.py) -> arrange on th
 - **Characters** are blocky adults about 3.7 heads tall with painted faces and hair, necks,
   shoulders wider than the head, arms and hands (`references/characters.md`). Vary skin, hair
   and outfit; use local dress where it fits (batik, hijab).
-- **Sketch finish:** an ink outline on every face with a slight fixed wobble, three-tone
-  shading (top lightest, right darkest), no gradients, glows or textures.
+- **Sketch finish:** an ink outline with a slight fixed wobble, three-tone shading (top
+  lightest, right darkest), no gradients, glows or textures.
+- **Borders follow the form, not the construction.** A thing modelled from several boxes but
+  meant as one piece (a hijab, a head of hair, an arm, a tree's crown, a cushion) goes inside
+  `with s.outline():` (`m.outline()` in an object): the ink runs only round its outer
+  silhouette and where it meets other things, and its own seams and creases are left to the
+  shading. Hard, separate parts (bench slats, a car's cabin, shoes) keep their own borders.
+  The character rig already groups each scarf, head of hair and arm.
 - **Palette** = the blog's design tokens, by role name (`references/palette.md`).
 - **No text in the art.** Signs use bars and dots. One pair serves both languages.
 
@@ -168,7 +174,8 @@ The author's part:
 Scene and objects draw with the same calls: `box` (returns a handle), `tile`, `shadow`,
 `poly` (with `inside=` to draw only while facing the viewer), `line`, `wire`, `cylinder` (with
 `bands`), `tower`, `cloud`, `mark(handle, face, shapes)` (`face_mark` is the older form by
-world coordinates), `group`, `tag`. Scenes add `place`, `person`, `person_at`,
+world coordinates), `outline` (one border round several parts; `new_outline()` gives a key
+to join parts made in different places), `group`, `tag`. Scenes add `place`, `person`, `person_at`,
 `person_center`, `tree`, `bench`, `check`, `plan_svg`; objects add `anchor` and nested
 `place`. `scripts/models.py` holds the library and the helpers `wheel` and `around`.
 
