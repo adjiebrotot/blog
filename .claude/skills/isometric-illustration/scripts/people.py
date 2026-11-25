@@ -421,7 +421,6 @@ def _prims(shapes, wk):
 
 # ── poses ──────────────────────────────────────────────────────────────────
 WHOLE = ("run", "jump", "squat", "kneel", "floor", "lie", "sleep")
-ARMS = ("down", "hold", "phone", "point", "wave", "cheer", "hips", "lap", "knees", "belly", "fists", "think")
 
 
 def _pose(o):
@@ -546,49 +545,58 @@ def _pose(o):
     return P
 
 
+SO = CS + SH_S                 # the near shoulder's s
+DOWN = ((CF + 0.04, SO + 0.035, 1.00), (-1, 0.25, 0), (0.12, -0.05, -1), (1, -0.2, 0), "u", -0.2)
+
+# Arm poses. Every entry is written for the NEAR arm (s towards the viewer);
+# the far arm uses the same entry mirrored across the body. An entry is
+#   (wrist target, elbow pole, hand direction, thumb direction, space[, swing])
+# in body space at h = 1. space 'u': the upper body's own frame (it leans with
+# the torso); 'b': body space (a lap, a knee). swing: how far the wrist moves
+# along f per unit of walk/run phase (arms swing against the legs).
+# A dict {"near": ..., "far": ...} gives the arms different jobs (the far
+# entry is still written as if it were the near arm, then mirrored); a string
+# names another pose for that arm. "knees" is placed from the knees in code.
+ARM_POSES = {
+    "down": DOWN,
+    "hold": ((CF + 0.44, SO - 0.13, 1.30), (-0.4, 0.6, -1), (1, -0.3, 0.12), (0, 0, 1), "u"),
+    "lap": ((CF + 0.46, SO - 0.17, 0.36), (-0.3, 0.5, -1), (1, -0.15, -0.3), (0, -0.3, 1), "b"),
+    "phone": {"near": ((CF + 0.30, CS + 0.09, 1.44), (-0.1, 0.7, -1), (0.35, -0.45, 1), (1, -0.2, 0), "u"), "far": "down"},
+    "point": {"near": ((CF + 0.63, SO - 0.02, 1.62), (0, 0.4, -1), (1, 0, 0.02), (0, -0.4, 1), "u"), "far": "down"},
+    # raised arms go up and slightly BACK: an arm raised towards +f crosses the face in this view
+    "wave": {"near": ((CF - 0.04, SO + 0.24, 2.20), (0.2, 1, -0.4), (0.0, 0.1, 1), (1, 0, 0.1), "u"), "far": "down"},
+    "cheer": ((CF - 0.06, SO + 0.36, 2.18), (0.2, 1, -0.2), (0.0, 0.25, 1), (1, 0, 0), "u"),
+    "hips": ((CF + 0.10, CS + 0.29, 1.10), (-0.4, 1, 0.25), (0.35, -1, -0.45), (0, 0, 1), "u"),
+    "think": {"near": ((CF + 0.40, CS + 0.05, 1.70), (0, 0.7, -1), (0.1, -0.2, 1), (1, 0, 0), "u"),
+              "far": ((CF + 0.36, CS + 0.10, 1.26), (-0.3, -0.4, -1), (0.2, 1, 0), (0, 0, 1), "u")},
+    "belly": ((CF + 0.36, CS + 0.07, 1.22), (-0.2, 1, -0.4), (0.1, -1, 0), (0, 0, 1), "u"),
+    "fists": ((CF + 0.26, SO, 1.30), (-1, 0.2, -0.3), (0.5, -0.3, 0.8), (0, -0.5, 1), "u", -0.24),
+    "curl": {"near": ((CF + 0.46, CS + 0.12, 1.30), (-0.2, 1, -0.5), (1, -0.2, 0.2), (0, 0, 1), "u"),
+             "far": ((CF + 0.42, CS - 0.05, 1.68), (0, -1, -0.3), (0.2, 0.5, 1), (1, 0, 0), "u")},
+    # hands on a desk or keyboard, at the height of models.desk_set's top for someone on its seat
+    "type": ((CF + 0.40, SO - 0.19, 1.37), (-0.3, 0.6, -1), (1, -0.2, -0.1), (0, -0.3, 1), "u"),
+    "knees": None,
+}
+ARMS = tuple(ARM_POSES)
+
+
 def _arm_target(arms, near, P, knees, swing):
-    """Wrist target, elbow pole, hand direction, thumb direction, space ('u'
-    upper body or 'b' body), for the near arm; the far arm mirrors it."""
-    so = CS + SH_S
-    sw = -0.2 * swing if near else 0.2 * swing
-    if arms == "down":
-        return (CF + 0.04 + sw, so + 0.035, 1.00), (-1, 0.25, 0), (0.12, -0.05, -1), (1, -0.2, 0), "u"
-    if arms == "hold":
-        return (CF + 0.44, so - 0.13, 1.30), (-0.4, 0.6, -1), (1, -0.3, 0.12), (0, 0, 1), "u"
-    if arms == "lap":
-        return (CF + 0.46, so - 0.17, 0.36), (-0.3, 0.5, -1), (1, -0.15, -0.3), (0, -0.3, 1), "b"
-    if arms == "phone":
-        if near:
-            return (CF + 0.30, CS + 0.09, 1.44), (-0.1, 0.7, -1), (0.35, -0.45, 1), (1, -0.2, 0), "u"
-        return (CF + 0.05, so + 0.035, 1.00), (-1, 0.25, 0), (0.1, -0.05, -1), (1, -0.2, 0), "u"
-    if arms == "point":
-        if near:
-            return (CF + 0.63, so - 0.02, 1.62), (0, 0.4, -1), (1, 0, 0.02), (0, -0.4, 1), "u"
-        return (CF + 0.05, so + 0.035, 1.00), (-1, 0.25, 0), (0.1, -0.05, -1), (1, -0.2, 0), "u"
-    if arms == "wave":
-        if near:
-            return (CF - 0.04, so + 0.24, 2.20), (0.2, 1, -0.4), (0.0, 0.1, 1), (1, 0, 0.1), "u"
-        return (CF + 0.05, so + 0.035, 1.00), (-1, 0.25, 0), (0.1, -0.05, -1), (1, -0.2, 0), "u"
-    if arms == "cheer":
-        return (CF - 0.06, so + 0.36, 2.18), (0.2, 1, -0.2), (0.0, 0.25, 1), (1, 0, 0), "u"
-    if arms == "hips":
-        return (CF + 0.10, CS + 0.29, 1.10), (-0.4, 1, 0.25), (0.35, -1, -0.45), (0, 0, 1), "u"
-    if arms == "think":
-        if near:
-            return (CF + 0.40, CS + 0.05, 1.70), (0, 0.7, -1), (0.1, -0.2, 1), (1, 0, 0), "u"
-        return (CF + 0.36, CS + 0.10, 1.26), (-0.3, -0.4, -1), (0.2, 1, 0), (0, 0, 1), "u"
-    if arms == "belly":
-        return (CF + 0.36, CS + 0.07, 1.22), (-0.2, 1, -0.4), (0.1, -1, 0), (0, 0, 1), "u"
-    if arms == "fists":
-        return (CF + 0.26 + sw * 1.2, so + 0.0, 1.30), (-1, 0.2, -0.3), (0.5, -0.3, 0.8), (0, -0.5, 1), "u"
-    if arms == "curl":
-        if near:
-            return (CF + 0.46, CS + 0.12, 1.30), (-0.2, 1, -0.5), (1, -0.2, 0.2), (0, 0, 1), "u"
-        return (CF + 0.42, CS - 0.05, 1.68), (0, -1, -0.3), (0.2, 0.5, 1), (1, 0, 0), "u"
-    if arms == "knees":
-        kn = knees[near]
-        return (kn[0] + 0.10, kn[1] + (-0.04 if near else 0.04), kn[2] + 0.04), (-0.3, 1, -0.3), (1, -0.25, -0.3), (0, -0.2, 1), "b"
-    raise ValueError("unknown arm pose %r (one of %s)" % (arms, ", ".join(ARMS)))
+    """(wrist, pole, hand dir, thumb dir, space) for one arm, written in the
+    NEAR arm's frame; the caller mirrors it for the far arm."""
+    if arms not in ARM_POSES:
+        raise ValueError("unknown arm pose %r (one of %s)" % (arms, ", ".join(ARMS)))
+    if arms == "knees":                         # forearms resting on the knees
+        kn = knees[True] if near else mirror(knees[False])
+        return (kn[0] + 0.10, kn[1] - 0.04, kn[2] + 0.04), (-0.3, 1, -0.3), (1, -0.25, -0.3), (0, -0.2, 1), "b"
+    e = ARM_POSES[arms]
+    if isinstance(e, dict):
+        e = e["near" if near else "far"]
+        if isinstance(e, str):
+            e = ARM_POSES[e]
+    W, pole, hd, tv, space = e[:5]
+    if len(e) > 5:
+        W = (W[0] + e[5] * swing * (1 if near else -1), W[1], W[2])
+    return W, pole, hd, tv, space
 
 
 # ── the person ─────────────────────────────────────────────────────────────
@@ -990,7 +998,7 @@ def _head(rig, o):
     rings = [hring(0.0, 0.0, z, f, b, w, rf, rb, m) for z, f, b, w, rf, rb in rows]
     hf = rig.solid(rings, skin, top=skin, part="head")
     # ears (hidden under long hair and scarves)
-    if style not in ("long", "bob", "hijab"):
+    if style not in HAIR_COVERED_EARS:
         for sg in (1,):
             c = (-0.01, sg * 0.305, 0.33)
             r0 = rring(c, (1, 0, 0), (0, 0, 1), 0.065, 0.06, 0.095, 0.10, (0.05, 0.05, 0.04, 0.04), 1)
@@ -1009,58 +1017,47 @@ def _head(rig, o):
 
 
 def _hairline(style):
-    """(zlo, zhi) of the painted hair round the head, by angle."""
-    INF = keys((0, 9.0), (180, 9.0))
-    if style == "bald":
-        return keys((0, 9), (62, 9), (72, 0.50), (100, 0.47), (180, 0.20)), keys((0, 9), (62, 9), (70, 0.56), (110, 0.58), (180, 0.62))
-    if style in ("cap", "hardhat"):
-        return keys((0, 0.56), (55, 0.52), (62, 0.44), (68, 0.36), (75, 0.36), (79, 0.47), (110, 0.47), (130, 0.22), (180, 0.16)), INF
-    if style == "short":
-        return keys((0, 0.565), (25, 0.545), (52, 0.50), (62, 0.44), (68, 0.36), (75, 0.36), (79, 0.47), (110, 0.47), (130, 0.24), (180, 0.16)), INF
-    if style == "sidepart":
-        f = keys((0, 0.55), (52, 0.50), (62, 0.44), (68, 0.36), (75, 0.36), (79, 0.47), (110, 0.47), (130, 0.24), (180, 0.16))
-        return (lambda th: f(th) - (0.06 * max(0.0, 1 - abs(th + 12) / 30) if th < 18 else 0)), INF
-    if style in ("quiff", "spiky"):
-        return keys((0, 0.59), (28, 0.565), (52, 0.51), (62, 0.44), (68, 0.36), (75, 0.36), (79, 0.47), (110, 0.47), (130, 0.24), (180, 0.15)), INF
-    if style == "curly":
-        return (lambda th: keys((0, 0.55), (50, 0.47), (68, 0.30), (84, 0.44), (110, 0.44), (180, 0.10))(th)
-                + 0.02 * math.cos(math.radians(th) * 14)), INF
-    if style in ("bun", "ponytail", "pigtails"):
-        return keys((0, 0.60), (30, 0.575), (55, 0.50), (70, 0.38), (84, 0.47), (110, 0.47), (140, 0.20), (180, 0.14)), INF
-    if style in ("long", "bob"):
-        return keys((0, 0.56), (20, 0.50), (40, 0.47), (58, 0.12), (180, 0.0)), INF
-    if style == "hijab":
-        return keys((0, 0.535), (36, 0.52), (46, 0.40), (56, 0.04), (180, -1)), INF
-    return keys((0, 0.565), (180, 0.16)), INF
+    """(zlo, zhi): the painted hair round the head, by angle, from HAIR_STYLES."""
+    st = HAIR_STYLES.get(style, HAIR_STYLES["short"])
+    lo = keys(*st["line"])
+    hi = keys(*st["top"]) if st.get("top") else keys((0, 9.0), (180, 9.0))
+    fn = lo
+    if st.get("wave"):
+        amp, n = st["wave"]
+        fn = lambda th, f=fn: f(th) + amp * math.cos(math.radians(th) * n)
+    if st.get("part"):
+        ang, depth, width = st["part"]
+        fn = lambda th, f=fn: f(th) - depth * max(0.0, 1 - abs(th - ang) / width)
+    return fn, hi
 
 
 def _hair(rig, o, hf):
     style, hair = o["hair_style"], o["hair"]
+    if style not in HAIR_STYLES:
+        raise ValueError("unknown hair_style %r (one of %s)" % (style, ", ".join(HAIR_STYLES)))
+    st = HAIR_STYLES[style]
     lod = o["_lod"]
     m = 2 if lod >= 1 else 1
     hl = ("~", hair, 1.22)
     hd = ("~", hair, 0.8)
     zlo, zhi = _hairline(style)
     rig.cover(hf, zlo, zhi, hair)
-    if style not in ("bald", "hijab", "cap", "hardhat") and lod >= 1:
+    cp = st.get("cap", {})
+    if cp is not None and lod >= 1:
         # shadow cast by the fringe on the forehead
         rig.cover(hf, lambda th: zlo(th) - 0.03, zlo, ("~", o["skin"], 0.84))
-    if style == "bald":
+    if st.get("own"):
+        st["own"](rig, o, hf)                 # hats and scarves replace the hair cap
         return
-    if style == "hijab":
-        _hijab(rig, o, hf)
+    if cp is None:
         return
-    if style in ("cap", "hardhat"):
-        _hat(rig, o)
-        return
-    t = {"curly": 0.07, "long": 0.045, "bob": 0.05}.get(style, 0.035)
-    tf_ = {"quiff": 0.02, "spiky": 0.02, "bun": 0.0, "ponytail": 0.0, "pigtails": 0.0}.get(style, 0.03)
-    z0 = {"bun": 0.58, "ponytail": 0.58, "pigtails": 0.58, "quiff": 0.58, "spiky": 0.58}.get(style, 0.55)
+    t, tf_, z0 = cp.get("t", 0.035), cp.get("fringe", 0.03), cp.get("z0", 0.55)
 
     def cring(z, grow, extra_f=0.0, shrink=1.0):
         f, b, w, rf, rb = head_dims(z)
         return hring(0.0, 0.0, z, (f + grow + extra_f) * shrink, (b + grow) * shrink, (w + grow) * shrink,
                      rf + grow * 0.5, rb + grow * 0.5, m)
+    # the hair cap: hugs the head from z0 up, overhangs the forehead by `fringe`, domes over the crown
     rings = [cring(z0, t * 0.5, tf_), cring((z0 + 0.64) / 2, t, tf_ * 0.8), cring(0.66, t, tf_ * 0.4)]
     f, b, w, rf, rb = head_dims(0.66)
     for zz, sh in ((HEAD_H + t * 0.55, 0.86), (HEAD_H + t, 0.58)):
@@ -1068,17 +1065,15 @@ def _hair(rig, o, hf):
     cap = rig.solid(rings, hair, top=hair, part="hair")
     if lod >= 1:
         # strands and a sheen on the crown
-        if style == "sidepart":
+        if st.get("strands") == "part":
             rig.paint(cap, "top", [("line", [(0.24, -0.08), (-0.2, -0.10)], hd, 1.1)])
             rig.paint(cap, "top", [("line", [(0.2, -0.04 + 0.06 * i), (-0.15, 0.0 + 0.08 * i)], hd, 0.7) for i in range(3)])
-        elif style in ("short", "quiff", "spiky", "bun", "ponytail", "pigtails"):
+        elif st.get("strands") == "arcs":
             rig.paint(cap, "top", [("arc", 0.06 - 0.1 * i, -0.05 + 0.1 * i, 0.16, 0.02, hd, 0.7) for i in range(2)])
         rig.paint(cap, "top", [("ell", 0.06, 0.06, 0.07, 0.05, hl, 0.55)])
         rig.paint(hf, "back", [("line", [(-0.18 + 0.09 * i, 0.60), (-0.2 + 0.09 * i, 0.30)], hd, 0.7) for i in range(5)])
-    sub_ = {"long": _long, "bob": _long, "bun": _bun, "ponytail": _ponytail, "pigtails": _pigtails,
-            "curly": _curly, "spiky": _spiky, "quiff": _quiff}.get(style)
-    if sub_:
-        sub_(rig, o, t, m)
+    if st.get("extra"):
+        st["extra"](rig, o, t, m)
 
 
 def _long(rig, o, t, m):
@@ -1215,6 +1210,47 @@ def _hat(rig, o):
         df = rig.solid(rings, col, top=col, part="hat dome")
         rig.paint(df, "front", [("rect", -0.045, 0.565, 0.09, 0.3, ("~", col, 1.15))])
         rig.paint(df, "top", [("rect", -0.3, -0.045, 0.6, 0.09, ("~", col, 1.15))])
+
+
+# ── hair styles ────────────────────────────────────────────────────────────
+# One entry per hair_style. Heights are from the chin (eyes 0.355, brows 0.45,
+# the crown 0.72); angles go round the head, 0 = the middle of the forehead,
+# 90 = over the ear, 180 = the nape (symmetric unless `part` says otherwise).
+#   line     the hairline: (angle, height) keys; hair is painted above it
+#   top      an upper limit, for a bald crown (hair is painted below it)
+#   wave     (amplitude, waves per half turn) added to the line: curls, spikes
+#   part     (angle, depth, half width in degrees): a side parting
+#   cap      the hair cap's thickness t, forward `fringe` overhang and start
+#            height z0; None for no cap (bald, hats, the hijab)
+#   strands  marks on the crown: 'arcs', 'part' or None
+#   extra    fn(rig, o, t, m) adding volume after the cap: buns, ponytails, locks
+#   own      fn(rig, o, hf) drawing a hat or scarf instead of a cap
+SIDE = [(62, 0.44), (68, 0.36), (75, 0.36), (79, 0.47), (110, 0.47)]     # sideburn, then over the ear
+HAIR_STYLES = {
+    "short":    dict(line=[(0, 0.565), (25, 0.545), (52, 0.50)] + SIDE + [(130, 0.24), (180, 0.16)], strands="arcs"),
+    "sidepart": dict(line=[(0, 0.55), (52, 0.50)] + SIDE + [(130, 0.24), (180, 0.16)], part=(-12, 0.06, 30), strands="part"),
+    "quiff":    dict(line=[(0, 0.59), (28, 0.565), (52, 0.51)] + SIDE + [(130, 0.24), (180, 0.15)],
+                     cap=dict(fringe=0.02, z0=0.58), strands="arcs", extra=_quiff),
+    "spiky":    dict(line=[(0, 0.59), (28, 0.565), (52, 0.51)] + SIDE + [(130, 0.24), (180, 0.15)],
+                     cap=dict(fringe=0.02, z0=0.58), strands="arcs", extra=_spiky),
+    "curly":    dict(line=[(0, 0.55), (50, 0.47), (68, 0.30), (84, 0.44), (110, 0.44), (180, 0.10)], wave=(0.02, 14),
+                     cap=dict(t=0.07), extra=_curly),
+    "bun":      dict(line=[(0, 0.60), (30, 0.575), (55, 0.50), (70, 0.38), (84, 0.47), (110, 0.47), (140, 0.20), (180, 0.14)],
+                     cap=dict(fringe=0.0, z0=0.58), strands="arcs", extra=_bun),
+    "ponytail": dict(line=[(0, 0.60), (30, 0.575), (55, 0.50), (70, 0.38), (84, 0.47), (110, 0.47), (140, 0.20), (180, 0.14)],
+                     cap=dict(fringe=0.0, z0=0.58), strands="arcs", extra=_ponytail),
+    "pigtails": dict(line=[(0, 0.60), (30, 0.575), (55, 0.50), (70, 0.38), (84, 0.47), (110, 0.47), (140, 0.20), (180, 0.14)],
+                     cap=dict(fringe=0.0, z0=0.58), strands="arcs", extra=_pigtails),
+    "long":     dict(line=[(0, 0.56), (20, 0.50), (40, 0.47), (58, 0.12), (180, 0.0)], cap=dict(t=0.045), extra=_long),
+    "bob":      dict(line=[(0, 0.56), (20, 0.50), (40, 0.47), (58, 0.12), (180, 0.0)], cap=dict(t=0.05), extra=_long),
+    "buzz":     dict(line=[(0, 0.58), (30, 0.56), (55, 0.52)] + SIDE + [(130, 0.24), (180, 0.16)], cap=dict(t=0.012, fringe=0.0)),
+    "bald":     dict(line=[(0, 9), (62, 9), (72, 0.50), (100, 0.47), (180, 0.20)],
+                     top=[(0, 9), (62, 9), (70, 0.56), (110, 0.58), (180, 0.62)], cap=None),
+    "cap":      dict(line=[(0, 0.56), (55, 0.52)] + SIDE + [(130, 0.22), (180, 0.16)], cap=None, own=lambda rig, o, hf: _hat(rig, o)),
+    "hardhat":  dict(line=[(0, 0.56), (55, 0.52)] + SIDE + [(130, 0.22), (180, 0.16)], cap=None, own=lambda rig, o, hf: _hat(rig, o)),
+    "hijab":    dict(line=[(0, 0.535), (36, 0.52), (46, 0.40), (56, 0.04), (180, -1)], cap=None, own=_hijab),
+}
+HAIR_COVERED_EARS = ("long", "bob", "hijab")       # styles that hide the ears
 
 
 def _face(rig, o, hf):

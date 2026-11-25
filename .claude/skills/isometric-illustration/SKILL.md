@@ -87,6 +87,9 @@ matches (`references/blog-embed.md`).
    ```
    Look at both themes and all four sides, fix it until every face reads and the sheet
    reports 0 parts passing through each other. Only then use it.
+   For a person the library lacks (a pose, a hair style, an outfit, a held thing), extend the
+   rig in `scripts/people.py` following `references/people-rig.md`, and check it alone:
+   `sheet.py person --kw pose="'kneel'" --unit 80 --out <scratchpad>/iso`.
 3. **Arrange.** Sketch the layout in cells (x runs lower right, y lower left; back walls at
    x = 0 and y = 0, the front open). Write `build(s)` in
    `_illustrations/<prefix>-iso-<subject>.py` with `TITLE`, `DESC` and `UNIT`: the ground,

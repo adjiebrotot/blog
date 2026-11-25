@@ -11,9 +11,11 @@ screen. `z` is the floor, or the seat top when the person sits. The footprint is
 is about 2.55 units tall at `h=1`. People are not snapped to the grid, so they can stand on
 off-grid floors and seats.
 
-The rig lives in `scripts/people.py`. `scripts/examples/characters.py` draws every option
+The rig lives in `scripts/people.py`; to add a pose, hair style, outfit, expression or held
+thing, follow `references/people-rig.md`. `scripts/examples/characters.py` draws every option
 below. Run it after any change to the rig and look at it zoomed in, in both themes, at the
-size of the sheet (unit 40) and at a scene's size (unit 20 to 26).
+size of the sheet (unit 40) and at a scene's size (unit 20 to 26). One person from all four
+sides: `sheet.py person --kw pose="'squat'" --unit 80 --out <dir>`.
 
 ## How a person is built
 
@@ -66,7 +68,7 @@ of `h`).
 | `h` | 0.6 to 1.3 | body scale. Use 1.1 to 1.2 in wide scenes at unit 20 |
 | `skin` | `skin1` to `skin4` | vary across a crowd |
 | `hair` | `hair1` to `hair5` or any palette name | for `hijab` this is the scarf colour |
-| `hair_style` | `short`, `sidepart`, `quiff`, `spiky`, `curly`, `bun`, `ponytail`, `pigtails`, `long` (with a lock over the near shoulder), `bob`, `bald`, `cap`, `hardhat`, `hijab` | `hijab` frames the face, covers the head and drapes over the shoulders |
+| `hair_style` | `short`, `sidepart`, `quiff`, `spiky`, `curly`, `buzz` (a close crop), `bun`, `ponytail`, `pigtails`, `long` (with a lock over the near shoulder), `bob`, `bald`, `cap`, `hardhat`, `hijab` | `hijab` frames the face, covers the head and drapes over the shoulders |
 | `hat` | palette name | colour of `cap` and `hardhat` |
 | `outfit` | `tee`, `shirt` (collar, placket, buttons, pocket, tucked under a belt), `polo` (tucked), `batik` (long sleeves, gold motif all round), `batik_short`, `suit` (lapels, a shirt collar, buttons, pocket square; add `tie=`; shirt cuffs show), `jacket` (open over `inner`), `cardigan` (open over `inner`, buttons), `stripes` (stripes in `inner`, round the sleeves too), `hoodie` (hood behind the neck, pocket, drawstrings), `hivis` (reflective bands, sleeves in `inner`), `apron` (an apron panel in `inner` over the front), `dress` | `top` is the main colour. Every outfit has a front, sides and a back |
 | `inner`, `sleeve`, `tie` | palette names | shirt under a jacket, a sleeve override, the tie |
@@ -77,7 +79,7 @@ of `h`).
 | `brows`, `blush` | bool | brows default on; blush for children or cheerful faces |
 | `glasses` | colour (`_face` for dark frames) | tinted lenses, the arm runs back to the ear |
 | `beard` | `True` (hair colour) or a palette name | a full beard joined to the sideburns, and a moustache |
-| `pose` | arms: `down`, `hold` (both forearms forward), `phone` (near hand up with a phone), `point`, `wave`, `cheer` (both arms up), `hips` (hands on hips), `think` (hand at the chin). Whole body: `run`, `jump`, `squat`, `kneel`, `floor` (cross-legged on the floor), `lie` (on the back), `sleep` (curled on the side) | sitting people (`sit=`) rest their forearms on their thighs; `squat`, `kneel` and `floor` rest them on the knees |
+| `pose` | arms: `down`, `hold` (both forearms forward), `phone` (near hand up with a phone), `point`, `wave`, `cheer` (both arms up), `hips` (hands on hips), `think` (hand at the chin), `type` (hands on a desk; sit at `desk_set`). Whole body: `run`, `jump`, `squat`, `kneel`, `floor` (cross-legged on the floor), `lie` (on the back), `sleep` (curled on the side) | sitting people (`sit=`) rest their forearms on their thighs; `squat`, `kneel` and `floor` rest them on the knees |
 | `arms` | any arm pose | overrides the arms of any pose: `pose="squat", arms="hold", holding="box"` |
 | `lean`, `nod` | radians | lean the upper body forward (+) or back; tip the head down (+) or up. Poses set their own |
 | `air` | units | height of a `jump` (0.6) or a `run` (0.1) above the floor; the shadow stays on the floor |

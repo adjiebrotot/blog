@@ -5,10 +5,14 @@ craft before it goes into a scene; or the whole library as a catalogue.
   python3 .claude/skills/isometric-illustration/scripts/sheet.py bench --out <dir> [--kw length=2.4] [--unit 48]
   python3 .claude/skills/isometric-illustration/scripts/sheet.py _illustrations/x.py:my_cart --out <dir>
   python3 .claude/skills/isometric-illustration/scripts/sheet.py --catalog --out <dir>
+  python3 .claude/skills/isometric-illustration/scripts/sheet.py person --kw pose="'kneel'" --kw hair_style="'bun'" --out <dir> [--unit 80]
 
 A bare name comes from models.py; path.py:name loads a model from a scene
 file. Writes <name>-sheet.png (rot 0, 90, 180, 270 left to right; dark on
 top, light below) and prints the parts that pass through each other.
+`person` draws one person with the --kw options (as Scene.person takes them)
+facing r, l, ul and ur: the sheet for a new pose, hair style or outfit. Use
+--unit 80 or more to see the face at full detail.
 """
 import argparse, ast, importlib.util, io, sys
 from pathlib import Path
@@ -91,6 +95,22 @@ def main():
         print("%s: %d models, %d pairs passing through each other" % (path, len(tiles), len(bad_all)))
         for x, y in bad_all[:20]:
             print("  passes through:", x, "|", y)
+        return
+
+    if a.model == "person":
+        lying = kw.get("pose") in ("lie", "sleep")
+        step = 3.4 if lying else 2.4
+
+        def build(sc):
+            for i, f in enumerate(("r", "l", "ul", "ur")):
+                sc.person(i * step, -i * step, facing=f, **kw)
+        img, sc = render(build, a.unit)
+        tag = "-".join(str(v) for v in kw.values() if isinstance(v, (str, int, float))) or "default"
+        path = out / ("person-%s-sheet.png" % tag.replace("/", "_"))
+        img.save(path)
+        sc._order()
+        print("%s: %d units, %d cycles broken (up to about 8 per person is normal in a bent pose; far more means parts cross: look)"
+              % (path, sc.stats["units"], sc.stats["cycles"]))
         return
 
     model = load(a.model)

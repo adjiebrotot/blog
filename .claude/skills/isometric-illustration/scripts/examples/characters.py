@@ -49,6 +49,7 @@ ROW5 = [  # whole-body poses
     dict(pose="floor", hair_style="hijab", hair="sky", top="rose", outfit="tee", skin="skin2", holding="book"),
     dict(pose="hold", arms="think", hair_style="sidepart", hair="hair2", top="maroon", outfit="jacket", inner="paper", skin="skin4", mouth="flat"),
     dict(pose="cheer", hair_style="pigtails", hair="hair4", top="purple", outfit="dress", skin="skin1", mouth="open", eyes="happy"),
+    dict(hair_style="buzz", hair="hair1", top="navy", outfit="tee", skin="skin3", pose="hips"),
 ]
 
 
