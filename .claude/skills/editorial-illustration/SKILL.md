@@ -82,6 +82,12 @@ Settle in a few lines (in the plan's features table, if the post goes through
   Adjie decide.
 - **Words in the picture:** usually none. A short quoted phrase works (a speech bubble, a
   phone screen, a ribbon banner in the collage); with words, make one picture per language.
+  For the second language, attach the first picture with `--ref` and ask to "make it again
+  exactly ... changing only the words: the quoted words now read exactly ..." (prompt in
+  `_illustrations/restyle/gsl-ill-podium-id--tempo.txt`). Tested in all three styles: the
+  same picture came back, only the words changed, spelled right. Words on something small
+  (a phone in a hand) can come out garbled: make the object big and the words "big bold
+  letters on two lines", and zoom in to check every letter.
 - **Shape:** `4:3` in a post, `16:9` for a social card.
 
 ## Step 2: Write the prompt

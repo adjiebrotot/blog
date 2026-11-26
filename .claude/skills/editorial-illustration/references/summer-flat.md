@@ -82,7 +82,9 @@ Tested on 26 November 2026 on the Gemini API with Nano Banana 2.1.
   `no currency symbols` to the text rule, or quote the exact figure you want.
 - **A hijab works well** as a big flat white or coloured shape framing the face.
 - **Quoted words come out in bold sans serif, letter-perfect** (a speech bubble, a phone
-  screen). With quoted words, use the `No text except ...` rule.
+  screen), as long as they are big. "UTANG Rp10jt" on a small phone in a hand came back as
+  "UT'ANO"; "holds a large phone up towards the viewer, the screen filled with ... in big bold
+  red letters on two lines" fixed it. With quoted words, use the `No text except ...` rule.
 - **Public figures keep full faces** (eyes, brows) even in this style, which is what makes
   them recognisable; give them sunglasses only if the post wants the joke.
 - **A crowd or a traffic jam becomes a pattern** of small flat shapes behind the figure. It
