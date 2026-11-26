@@ -197,6 +197,7 @@ examples, and why each fits its readers. "Same in both" is fine.>
 | T1 | Tool embed | <tool, chart, view, inputs> | <section> | <#load link; preview from brotools-embed> |
 | S1 | Screenshot | <what the image shows> | <section> | <how it will be made> |
 | I1 | Illustration | <who does what, with which object> | <section> | generated with `wikihow-illustration` |
+| E1 | Editorial illustration | <style (Tempo / Summer flat / Renaissance collage), the point, the idea that carries it> | <section> | generated with `editorial-illustration` |
 | I2 | Isometric scene | <the place or system, who is in it, the props that make it read> | <section> | drawn with `isometric-illustration` |
 | M1 | Mermaid | <diagram type: flowchart, xychart-beta, pie...> showing <...> | <section> | <data behind it> |
 | K1 | KaTeX | <the equation, in words> | <section> | <every symbol it defines> |
@@ -280,6 +281,12 @@ the blog can draw them. Per type:
   `wikihow-illustration` skill. Give the brief (action, who, framing) and its alt text.
   Use it where the reader has to imagine a person doing something, not where a chart or a
   screenshot shows the real thing.
+- **Editorial illustration:** a picture that makes the section's point instead of showing a
+  step, generated with the `editorial-illustration` skill in one style for the whole post:
+  *Tempo* (a visual metaphor painted like a news-magazine cover, good for politics and
+  satire), Summer flat (a stylish figure in a few flat colours, good for light personal and
+  money-habit points) or Renaissance collage (modern things in old-master techniques, good
+  for big themes and eras compared). Give the style, the point, the idea and its alt text.
 - **Isometric scene:** a place or a system (a market, a station, a substation, a street)
   with several people or machines, drawn in code with the `isometric-illustration` skill as
   a dark and a light SVG. Give the brief (what it shows and why, who is in it, the props,

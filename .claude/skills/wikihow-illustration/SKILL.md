@@ -1,6 +1,6 @@
 ---
 name: wikihow-illustration
-description: Make a wikiHow-style illustration for a post on this blog with an image model on OpenRouter. A friendly, clean, softly shaded drawing of one person doing one action, on a pale background, saved as WebP in assets/img/. Use when Adjie asks for an illustration, a drawing, an image, a "wikiHow-style" picture, a picture for a step or a section, or a cover image that is not a screenshot or a chart. For an isometric picture, or a place or system with several people or machines, use isometric-illustration instead.
+description: Make a wikiHow-style illustration for a post on this blog with an image model on OpenRouter. A friendly, clean, softly shaded drawing of one person doing one action, on a pale background, saved as WebP in assets/img/. Use when Adjie asks for an illustration, a drawing, an image, a "wikiHow-style" picture, a picture for a step or a section, or a cover image that is not a screenshot or a chart. For an isometric picture, or a place or system with several people or machines, use isometric-illustration instead; for a satirical or editorial picture in the Tempo, summer-novel flat or Renaissance collage style, editorial-illustration.
 ---
 
 # wikiHow-style illustration
@@ -14,7 +14,10 @@ wikiHow samples and are passed to the model as style references every time.
 
 For a place or a system rather than one person's action (a market, a station, a substation,
 a street with several people), or art that must follow the reader's dark or light theme,
-use the `isometric-illustration` skill: it draws in code, with no key and no cost.
+use the `isometric-illustration` skill: it draws in code, with no key and no cost. For a
+picture that makes a point rather than shows a step (a magazine-cover metaphor, a caricature
+of a public figure, a flat beach-read cover, a Renaissance collage), use the
+`editorial-illustration` skill: same generator, three other styles.
 
 The style is the inspiration, not the brand. **Never** ask for or keep the wikiHow logo or
 watermark, never commit a real wikiHow picture to this public repo, and never say in a

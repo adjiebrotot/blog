@@ -1,6 +1,6 @@
 ---
 name: isometric-illustration
-description: Draw an isometric illustration for a post on this blog in code, not with an image model. People (with detailed faces, clothes that sit on the body, and poses from walking to jumping, squatting, sitting and lying down) and the places and machines around them (a market, a station, an office, a food stall, a street, a power plant, a substation, a house, a city block) on a 30-degree grid, with ink outlines in the blog's palette and exact 3D layering, built object first (each object crafted on all sides from a library, then placed and turned in the scene) and published as a matched pair of SVGs for the dark and light themes (plus an optional looping GIF and a WebP card). Use when Adjie asks for an isometric picture, scene, diagram or animation, or when a post needs a picture of a place or a system with several people or objects, exact counts or layout, or a version for each theme. For one person doing one action in a soft hand-drawn style, use wikihow-illustration instead.
+description: Draw an isometric illustration for a post on this blog in code, not with an image model. People (with detailed faces, clothes that sit on the body, and poses from walking to jumping, squatting, sitting and lying down) and the places and machines around them (a market, a station, an office, a food stall, a street, a power plant, a substation, a house, a city block) on a 30-degree grid, with ink outlines in the blog's palette and exact 3D layering, built object first (each object crafted on all sides from a library, then placed and turned in the scene) and published as a matched pair of SVGs for the dark and light themes (plus an optional looping GIF and a WebP card). Use when Adjie asks for an isometric picture, scene, diagram or animation, or when a post needs a picture of a place or a system with several people or objects, exact counts or layout, or a version for each theme. For one person doing one action in a soft hand-drawn style, use wikihow-illustration instead; for a satirical or editorial picture (Tempo, summer-novel flat, Renaissance collage), editorial-illustration.
 ---
 
 # Isometric illustration
@@ -25,13 +25,13 @@ brief -> the objects (library, or new ones checked on sheet.py) -> arrange on th
 
 ## Which illustration skill
 
-| | wikihow-illustration | isometric-illustration |
-|---|---|---|
-| Shows | one person doing one action, mid-shot | a place or a system: several people, buildings, machines, flows |
-| Made by | an image model (needs a key, costs money) | code in this skill (free, exact, editable) |
-| Output | one WebP on its own pale background | an SVG pair that follows the reader's theme; GIF and WebP card optional |
-| Words in the picture | a word or two allowed | none: labels go in the caption or the prose |
-| Best for | a step, a habit, a feeling | how something works, where things are, how many, a before and after |
+| | wikihow-illustration | editorial-illustration | isometric-illustration |
+|---|---|---|---|
+| Shows | one person doing one action, mid-shot | the section's point: a metaphor, a caricature, a mood | a place or a system: several people, buildings, machines, flows |
+| Made by | an image model (needs a key, costs money) | the same image model | code in this skill (free, exact, editable) |
+| Output | one WebP on its own pale background | one WebP in the Tempo, summer-flat or Renaissance-collage style | an SVG pair that follows the reader's theme; GIF and WebP card optional |
+| Words in the picture | a word or two allowed | a short quoted phrase at most | none: labels go in the caption or the prose |
+| Best for | a step, a habit, a feeling | satire, an argument, a big theme, a social card | how something works, where things are, how many, a before and after |
 
 ## The look (non-negotiable)
 

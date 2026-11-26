@@ -7,7 +7,10 @@ GitHub Actions. How to write a post: `README.md`. How to write it in Adjie's voi
 post, plan first and write after approval: the `ai-assisted-blog-post` skill
 (`.claude/skills/ai-assisted-blog-post/`). For an illustration (a person doing the step,
 wikiHow style): the `wikihow-illustration` skill (`.claude/skills/wikihow-illustration/`),
-made with an image model on OpenRouter, prompts kept in `_illustrations/`. For an isometric
+made with an image model on OpenRouter, prompts kept in `_illustrations/`. For an editorial
+picture that makes a point (a *Tempo*-cover painting, a summer-novel flat cover or a
+Renaissance collage of modern things): the `editorial-illustration` skill
+(`.claude/skills/editorial-illustration/`), same image model and prompt folder. For an isometric
 scene (a place or system with several people, buildings or machines, drawn in code as a dark
 and a light SVG): the `isometric-illustration` skill (`.claude/skills/isometric-illustration/`),
 scene files kept in `_illustrations/` too. For a chart or tool from
