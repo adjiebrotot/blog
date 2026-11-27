@@ -30,5 +30,5 @@ FIG.add(Bars(
     [{'label': str(y), 'value': v, 'role': 'hl' if y in (2015, 2018) else 'a'} for y, v in zip(YEARS, VALS)],
     orient='v', fmt={'dp': 1}, narrow_orient='v',
     unit={'en': 'Rp trillion', 'id': 'Rp triliun'},
-    annotate=[{'at': 3, 'text': {'en': '3.3× the 2015 level', 'id': '3,3 kali 2015'}}],
+    annotate=[{'at': 3, 'text': {'en': '3.3× the 2015 level', 'id': '3,3 kali tingkat 2015'}}],
 ))

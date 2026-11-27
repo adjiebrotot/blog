@@ -28,10 +28,7 @@ How do you build 2,862 km of high-speed rail in a single year? That is what Chin
 
 So far I have been to 14 Chinese jurisdictions: the four municipalities of Beijing, Tianjin, Shanghai and Chongqing; Jiangsu, Heilongjiang, Hunan, Shaanxi, Sichuan, Guangdong, Fujian and Taiwan; and the two special administrative regions (<span markdown="0">SARs</span>), Hong Kong and Macau.
 
-<figure>
-{% include cbf-china-map.html lang="en" title="Map of China with the 14 jurisdictions Adjie has visited shaded: Beijing, Tianjin, Shanghai, Chongqing, Jiangsu, Heilongjiang, Hunan, Shaanxi, Sichuan, Guangdong, Fujian, Taiwan, Hong Kong and Macau" %}
-<figcaption>The 14 places I have been to so far, shaded. Map: boundaries from DataV (Alibaba Cloud).</figcaption>
-</figure>
+{% include pi/cbf-pi-china-visited-en.html %}
 
 On my trips, I have seen high-speed trains reaching unfamiliar cities, stations the size of airports, extensive metro networks and skyscraper skylines well beyond Shanghai and Beijing.
 
@@ -70,15 +67,7 @@ China's version of supply-push runs on land. In Chinese cities the land belongs 
 
 The loop goes like this. A local government borrows, usually through a local government financing vehicle (<span markdown="0">LGFV</span>), a company it owns that can raise money off its books. It builds the infrastructure. The land near the new line becomes valuable. The government sells the right to use that land (land-use rights) to developers, and the revenue repays the debt and pays for the next project. At its peak in 2021, land-use-right sales brought China's governments RMB 8,705.1 bn in a single year.[^land]
 
-```mermaid
-flowchart TD
-  A["State owns the land"] --> B["Government builds rail, roads and metro,<br/>borrowing through local financing vehicles"]
-  B --> C["Land near the new line rises in value"]
-  C --> D["Government sells land-use rights to developers"]
-  D --> E["Revenue repays the debt<br/>and funds the next project"]
-  E --> B
-  C -. "nobody comes: no jobs, no reason" .-> F["Land does not sell, the debt stays<br/>(Yujiapu)"]
-```
+{% include pi/cbf-pi-land-finance-loop-en.html %}
 
 Long-term plans and local officials' incentives support this approach. China works in Five-Year Plans, while city master plans run for decades. Officials have long been judged on local growth, and construction contributes to that measured growth.
 

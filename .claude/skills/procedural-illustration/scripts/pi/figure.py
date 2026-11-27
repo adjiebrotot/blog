@@ -110,7 +110,7 @@ class Figure:
                 f'_illustrations/{n}.py. Edit the spec and run render.py --publish; never edit this file. '
                 '{%- endcomment -%}\n'
                 f'<figure class="pi pi-{self.kind}" id="pi-{n}" role="group" aria-labelledby="pi-{n}-h">'
-                f'<figcaption id="pi-{n}-h">{head}</figcaption>'
+                f'<figcaption id="pi-{n}-h">{head}</figcaption> '
                 f'<div class="pi-art">{art}</div><!--/pi-art-->'
                 + (f'<p class="pi-src">{foot}</p>' if foot else '') + table + '</figure>\n')
 

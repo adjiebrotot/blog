@@ -2431,11 +2431,11 @@
  "gpi-leader-pay": {
   "title": {
    "en": "Indonesia's president is paid 18.8 times the typical wage, second only to the Philippines",
-   "id": "Gaji presiden Indonesia setara 18,8 kali upah pekerja, hanya di bawah Filipina"
+   "id": "Gaji presiden Indonesia setara 18,8 kali upah pekerja, hanya dilampaui Filipina"
   },
   "sub": {
    "en": "Leader's pay divided by the country's typical wage: the median, or the average where no official median is published. Latest figures in the sources",
-   "id": "Gaji pemimpin negara dibagi upah pekerja di negaranya: median, atau rata-rata kalau median resminya tidak tersedia. Angka terbaru dari sumbernya"
+   "id": "Gaji pemimpin negara dibagi upah pekerja di negaranya: median, atau rata-rata kalau median resminya tidak tersedia. Angka yang dipakai adalah yang terbaru dari tiap sumber"
   },
   "source": {
    "en": "Official pay documents and national statistics agencies (details in the footnotes), author's calculation",
@@ -2569,11 +2569,11 @@
  "gpi-mp-pay": {
   "title": {
    "en": "An Indonesian MP earns 22.3 times the typical wage, the highest of ten countries",
-   "id": "Anggota DPR menerima 22,3 kali upah pekerja, tertinggi di antara sepuluh negara"
+   "id": "Gaji anggota DPR setara 22,3 kali upah pekerja, tertinggi di antara sepuluh negara"
   },
   "sub": {
-   "en": "Salary plus fixed allowances paid to a backbench MP, divided by the country's typical wage (median, or average where no official median is published). Office budgets and staff excluded",
-   "id": "Gaji ditambah tunjangan tetap anggota parlemen biasa, dibagi upah pekerja di negaranya (median, atau rata-rata kalau median resminya tidak tersedia). Anggaran kantor dan staf tidak dihitung"
+   "en": "Salary plus fixed allowances paid to a backbench MP, before tax, divided by the country's typical wage (median, or average where no official median is published). Office budgets and staff excluded",
+   "id": "Gaji ditambah tunjangan tetap anggota parlemen biasa sebelum pajak, dibagi upah pekerja di negaranya (median, atau rata-rata kalau median resminya tidak tersedia). Anggaran kantor dan staf tidak dihitung"
   },
   "source": {
    "en": "Official pay documents and national statistics agencies (details in the footnotes), author's calculation",
