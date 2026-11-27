@@ -22,7 +22,7 @@ bmc_message: "Rent or buy, a coffee still costs less. Buy me one so I can keep r
 Buying offers stability and control over your home. Renting makes it easier to move and leaves repairs and property administration to someone else. Those preferences matter, even when the financial comparison favours the other option.
 
 <figure>
-<img src="/assets/img/rvo-ill-buyer-renter.webp" alt="Two friends side by side: one paints his living room wall with a roller, the other holds a passport-sized booklet beside his rolling suitcase" width="1456" height="1087" loading="lazy">
+<img src="/assets/img/rvo-ill-buyer-renter.webp" alt="On a suburban street, one friend paints the front wall of his brick house with a roller while the other walks past with a rolling suitcase, waving a passport-sized booklet" width="1200" height="896" loading="lazy">
 </figure>
 
 **If you count only the money, which leaves you better off?** I built the Rent vs Own calculator to compare the two, rather than argue from gut feeling. Either can win, depending on the inputs.
@@ -98,7 +98,7 @@ Perth runs for 30 years and Jakarta for 20, following the Quick Starts' loan ter
 The answer also depends on how you count wealth:
 
 <figure>
-<img src="/assets/img/rvo-ill-count-wealth.webp" alt="A woman in a hijab weighs a small toy house in one hand against a stack of gold coins in the other, a piggy bank on the table in front of her" width="1456" height="1087" loading="lazy">
+<img src="/assets/img/rvo-ill-count-wealth.webp" alt="A woman in a hijab sits at a dining table and weighs a small toy house in one hand against a stack of coins in the other, a piggy bank on the table in front of her" width="1200" height="896" loading="lazy">
 </figure>
 
 1. **The holistic mind.** Count house equity as part of your wealth. UBS's Global Wealth Report 2026 (2025 data) ranks Australia **third in the world for median wealth per adult**, at US$210,783, behind only Luxembourg and Belgium.[^ubs] And much of it is bricks: Australian households hold A$12.3 trillion in residential land and dwellings.[^abc] On net equity, the Perth Quick Start favours buying.

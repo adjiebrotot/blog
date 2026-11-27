@@ -7,16 +7,9 @@ candidates, not live pictures: the posts still use the originals until Adjie pic
 version.
 
 **Picked (27 November 2026):** politics posts use Tempo, finance posts use the live-action
-hybrid. The Tempo prompts of the politics pictures (`gpi`, `gsl`, `cbf`) are now live and
-have moved up a folder. The finance posts' hybrid prompts are here as `<name>--hybrid.txt`
-(written 27 November 2026, they pass the prompt wall) but are not generated yet: the Gemini
-key's prepaid credit ran out. Generate each with `generate.sh hybrid` (`--aspect 16:9` for
-`fx-ill-money-changer`; `pns-ill-superannuation--hybrid.txt` needs `--ref` with the hybrid
-`pns-ill-pns-vs-swasta`), then move the prompt up a folder, render the WebP, update the
-posts' alt text and size, and redo the focus box. The generated pictures (WebP, 1456 px wide) are kept outside the repo, in the
-review page Adjie picks from (https://claude.ai/artifact/FiKFRNunvxktpoThREwoED, files
-`full/<name>--<style>.webp`), so use those rather than regenerating. A picked one becomes the post's picture (WebP in `assets/img/`), and its prompt
-moves up a folder as that picture's prompt file.
+hybrid. Those posts' prompts (`gpi`, `gsl`, `cbf` in Tempo; `rvo`, `debt`, `kad`, `psg`, `pns`,
+`fx` in hybrid) are now live and have moved up a folder; the remaining files here are
+unused candidates.
 
 Regenerate one with:
 

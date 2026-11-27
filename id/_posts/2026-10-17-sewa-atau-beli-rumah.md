@@ -22,7 +22,7 @@ bmc_message: "Sewa atau beli, kopi tetap jauh lebih murah. Traktir saya secangki
 Membeli rumah memberi kebebasan untuk mengecat dan merenovasi, serta kepastian tempat tinggal. Menyewa lebih cocok bagi orang yang sering pindah dan tidak ingin mengurus pajak properti atau perbaikan rumah.
 
 <figure>
-<img src="/assets/img/rvo-ill-buyer-renter.webp" alt="Dua sahabat berdampingan: yang satu mengecat dinding ruang tamunya dengan rol cat, yang lain memegang buku kecil di samping koper dorongnya" width="1456" height="1087" loading="lazy">
+<img src="/assets/img/rvo-ill-buyer-renter.webp" alt="Di sebuah jalan perumahan, seorang pria mengecat dinding depan rumah batanya dengan rol cat, sementara sahabatnya lewat sambil menarik koper dan melambaikan buku kecil seukuran paspor" width="1200" height="896" loading="lazy">
 </figure>
 
 Stabilitas dan kebebasan tidak ternilai harganya, dan saya tidak dalam posisi untuk menilainya, karena itu urusan *values*, bukan angka di *spreadsheet*.
@@ -100,7 +100,7 @@ Perlu dicatat, simulasi Perth berjalan 30 tahun sedangkan Jakarta 20 tahun, kare
 Soal yang satu ini tidak bisa diputuskan oleh *spreadsheet*, karena arti "lebih kaya" bergantung pada apa yang kamu anggap sebagai kekayaan. Menurut pengamatan saya, ada tiga kubu.
 
 <figure>
-<img src="/assets/img/rvo-ill-count-wealth.webp" alt="Seorang perempuan berhijab menimbang rumah mainan kecil di satu tangan dan setumpuk koin emas di tangan lainnya, dengan celengan di meja di depannya" width="1456" height="1087" loading="lazy">
+<img src="/assets/img/rvo-ill-count-wealth.webp" alt="Seorang perempuan berhijab duduk di meja makan sambil menimbang rumah mainan kecil di satu tangan dan setumpuk koin di tangan lainnya, dengan celengan di meja di depannya" width="1200" height="896" loading="lazy">
 </figure>
 
 1. **_Holistic thinking_.** Ekuitas rumah (nilai rumah dikurangi sisa utang KPR) adalah kekayaan, titik. Begitulah cara kebanyakan orang Australia berpikir, dan datanya pun mendukung. Global Wealth Report 2026 dari UBS (data 2025) menempatkan Australia di **peringkat ketiga dunia untuk kekayaan median per orang dewasa**, yaitu US$210.783, hanya di bawah Luksemburg dan Belgia.[^ubs] Sebagian besar kekayaan itu tertanam di properti: rumah tangga Australia memiliki tanah dan bangunan hunian senilai A$12,3 triliun.[^abc] Kalau ekuitas rumah ikut dihitung, membeli di Perth jelas terlihat menguntungkan.
@@ -230,7 +230,6 @@ Sebelum meneken cicilan, masukkan harga rumah dan biaya sewamu sendiri ke [*tool
 [^abc]: ABC News, [Australia ranks third-highest for median wealth globally, UBS data shows](https://www.abc.net.au/news/2026-07-02/ubs-global-wealth-report-australia-millionaires/106869298), 2 Juli 2026.
 
 *[BCA]: Bank Central Asia
-*[BI]: Bank Indonesia
 *[SUPAS]: Survei Penduduk Antar Sensus
 *[BPHTB]: Bea Perolehan Hak atas Tanah dan Bangunan
 *[PPh]: Pajak Penghasilan

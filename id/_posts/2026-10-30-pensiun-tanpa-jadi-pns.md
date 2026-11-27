@@ -23,7 +23,7 @@ Bagi generasi orang tua saya, daya tarik menjadi PNS adalah uang pensiun yang te
 Kondisinya sekarang sudah jauh berbeda, karena banyak perusahaan multinasional dan perusahaan swasta nasional raksasa berani membayar pekerjanya berkali-kali lipat standar gaji PNS, meski para pekerja itu tidak dijanjikan uang pensiun bulanan seperti yang diterima PNS. Uang pensiun PNS sendiri juga tidak semewah yang dibayangkan banyak orang: besarnya paling banyak 75% dari gaji pokok saja, tanpa tunjangan, dan menurut PP Nomor 8 Tahun 2024, uang pensiun tertinggi (golongan IV/e) hanya sekitar Rp4,96 juta sebulan.[^pp8] Pertanyaannya, bisakah pekerja swasta menggaji dirinya sendiri setiap bulan di masa pensiun, tanpa harus menjadi PNS?
 
 <figure>
-<img src="/assets/img/pns-ill-pns-vs-swasta.webp" alt="Dua pria berdiri berdampingan: kiri berseragam dinas PNS di depan kantor pemerintahan, kanan berkemeja putih ala pegawai kantoran di depan gedung pencakar langit Jakarta" width="1456" height="1087" loading="lazy">
+<img src="/assets/img/pns-ill-pns-vs-swasta.webp" alt="Dua pria berdiri berdampingan di trotoar Jakarta: kiri berseragam dinas PNS di depan kantor pemerintahan, kanan berkemeja putih ala pegawai kantoran dengan tas laptop, berlatar gedung-gedung pencakar langit" width="1200" height="896" loading="lazy">
 <figcaption>Yang satu dijanjikan uang pensiun bulanan, yang satu lagi harus menyiapkannya sendiri.</figcaption>
 </figure>
 
@@ -142,7 +142,7 @@ Grafik di bawah ini memperlihatkan arus kas dan saldo menurut umur untuk skenari
 Salah satu kuncinya adalah *superannuation*, atau biasa disingkat *super*. Lewat kewajiban yang disebut Super Guarantee, setiap pemberi kerja di Australia wajib menyetor minimal 12% dari upah pekerjanya (angka 12% ini berlaku sejak 1 Juli 2025) ke rekening *super* atas nama pekerja itu sendiri, di luar gaji.[^sg] Kewajiban ini berlaku sama untuk pegawai kantoran di perusahaan swasta maupun pegawai negeri. Dana *super* baru bisa dicairkan setelah kamu mencapai *preservation age* (batas umur pencairan, yaitu 60 tahun) dan sudah pensiun, atau di umur 65 apa pun status kerjamu.[^akses]
 
 <figure>
-<img src="/assets/img/pns-ill-superannuation.webp" alt="Pria berseragam PNS dan pegawai kantoran memperhatikan seorang pria Australia yang memegang toples kaca penuh koin, dengan latar gedung-gedung Perth dan bendera Australia" width="1456" height="1087" loading="lazy">
+<img src="/assets/img/pns-ill-superannuation.webp" alt="Pria berseragam PNS dan pegawai kantoran memperhatikan seorang pria Australia yang memegang toples kaca penuh koin, di tepi sungai dengan latar gedung-gedung Perth" width="1200" height="896" loading="lazy">
 <figcaption>Toples koin yang tidak boleh dibuka sampai umur 60.</figcaption>
 </figure>
 

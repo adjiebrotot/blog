@@ -29,7 +29,7 @@ Mari mulai dari argumen terkuat kubu "murah". Anggap saja gajimu Rp10 juta sebul
 Soal rasa, saya pun mengakui nasi goreng Rp20 ribuan di Indonesia memang lebih nendang.
 
 <figure>
-<img src="/assets/img/kad-ill-warung-struk.webp" alt="Seorang pria duduk di warung sambil memegang struk dan tersenyum, di depannya ada sepiring nasi goreng dan segelas es teh" width="1456" height="1087" loading="lazy">
+<img src="/assets/img/kad-ill-warung-struk.webp" alt="Seorang pria duduk di warung sambil tersenyum membaca struk, di depannya ada sepiring nasi goreng bertelur ceplok dan secangkir teh" width="1200" height="896" loading="lazy">
 </figure>
 
 Pertanyaannya, berapa persen gajimu yang benar-benar habis untuk nasi goreng? Makan di luar hanya menyumbang sekitar 15 persen dari total belanja bulanan. Sisanya habis untuk sewa, bahan makanan, listrik dan air, ongkos transportasi, tagihan ponsel, dan barang-barang lain yang kamu beli.
@@ -140,7 +140,7 @@ Gaji bukan satu-satunya alasan untuk pindah. Berikut beberapa hal yang saya rasa
 - **_Capital freedom_ (kebebasan menaruh modal).** Secara hukum, penduduk Indonesia bebas memiliki dan menggunakan devisa.[^uu] Dalam praktiknya, berinvestasi di instrumen luar negeri dari Indonesia terasa sulit, padahal investasi semacam itu berguna sebagai pegangan kalau-kalau negara tempat kita tinggal sedang tidak baik-baik saja. Hambatan di Indonesia lebih banyak berupa akses yang terbatas dan urusan praktis yang merepotkan, bukan larangan. Bagian tentang hambatan ini berdasarkan pengalaman saya sendiri, bukan tafsir atas bunyi pasal.
 
 <figure>
-<img src="/assets/img/kad-ill-laptop-invest.webp" alt="Seorang perempuan duduk di meja, satu tangan di keyboard laptop yang layarnya menampilkan grafik naik, tangan lainnya memegang ponsel, dengan bola dunia kecil di meja" width="1456" height="1087" loading="lazy">
+<img src="/assets/img/kad-ill-laptop-invest.webp" alt="Seorang perempuan duduk di meja kafe dekat jendela berlatar gedung-gedung kota, satu tangan di keyboard laptop yang layarnya menampilkan grafik naik, tangan lainnya memegang ponsel" width="1200" height="896" loading="lazy">
 </figure>
 
 ## Apakah semua orang cocok untuk kabur?

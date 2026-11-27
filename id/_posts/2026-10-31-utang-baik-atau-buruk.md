@@ -22,7 +22,7 @@ bmc_message: "Anggap saja utang yang baik: traktir saya kopi susu, nanti saya ba
 Ilustrasi ini mempertemukan tiga sikap terhadap utang: terjerat pinjol Rp10 juta, memilih menabung, dan sengaja memakai kartu kredit meski punya uang.
 
 <figure>
-<img src="/assets/img/debt-ill-three-people-id.webp" alt="Tiga orang berdampingan: kiri, pemuda di kursi plastik menatap sedih ponsel bertuliskan UTANG Rp10jt; tengah, perempuan berhijab merah muda tersenyum memeluk celengan ayam; kanan, bapak berkacamata dan berbatik duduk di kursi besar merah keemasan sambil menyodorkan kartu kredit emas" width="1456" height="1087" loading="lazy">
+<img src="/assets/img/debt-ill-three-people-id.webp" alt="Tiga orang di sebuah mal: kiri, pemuda duduk di bangku menatap cemas ponsel bertuliskan UTANG Rp10jt; tengah, perempuan berhijab tersenyum memeluk celengan ayam; kanan, bapak berkacamata dan berbatik tersenyum yakin sambil memegang kartu kredit" width="1200" height="896" loading="lazy">
 </figure>
 
 Sejak kecil kita diajari bahwa utang itu buruk, dan nasib orang pertama seolah membuktikannya. Banyak orang di Indonesia terjerat pinjol bukan karena gaya hidup, melainkan karena penghasilan mereka memang tidak cukup untuk menutup kebutuhan sehari-hari. Lain ceritanya dengan orang kedua: penghasilannya cukup, sehingga dia memilih menjauhi utang, atau paling banter mengambil utang yang dianggap "produktif" seperti KPR atau modal usaha. Lalu, kenapa orang ketiga yang uangnya jelas berlebih justru sengaja berutang? Saya sendiri juga punya utang, dan alasannya sederhana: saya ini kelas menengah yang sedang mencoba-coba jadi orang kaya 😂.
@@ -149,4 +149,3 @@ Semua hasil skenario (cicilan HP dan laptop) dihitung dengan [*tool* Finance vs 
 *[OJK]: Otoritas Jasa Keuangan
 *[SEOJK]: Surat Edaran Otoritas Jasa Keuangan
 *[APR]: Annual Percentage Rate
-*[BI]: Bank Indonesia
