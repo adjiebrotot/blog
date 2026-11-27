@@ -284,10 +284,10 @@ the blog can draw them. Per type:
   cover, good for politics and satire), Summer flat (a stylish figure in a few flat colours,
   good for light personal and money-habit points), Renaissance collage (modern things in
   old-master techniques, good for big themes and eras compared) or Propaganda poster (a
-  heroic figure, sunburst rays and a slogan, good for national plans, calls to action and
-  official optimism taken at its word). Give the style, the point, the idea (who does what,
-  with which object) and its alt text. Not where a chart or a screenshot shows the real
-  thing.
+  mid-century public poster as a screen print, a gouache painting, a jet-age graphic or a
+  photomontage, good for national plans, calls to action and official optimism taken at its
+  word). Give the style, the point, the idea (who does what, with which object) and its alt
+  text. Not where a chart or a screenshot shows the real thing.
 - **Isometric scene:** a place or a system (a market, a station, a substation, a street)
   with several people or machines, drawn in code with the `isometric-illustration` skill as
   a dark and a light SVG. Give the brief (what it shows and why, who is in it, the props,

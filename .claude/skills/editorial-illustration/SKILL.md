@@ -1,6 +1,6 @@
 ---
 name: editorial-illustration
-description: Make an illustration for a post on this blog with an image model, in one of six styles: wikiHow (one person doing one step, soft shading, a pale background), Tempo (a news-magazine cover painting, a visual metaphor in gouache caricature), Summer flat (a retro beach-read novel cover, a stylish figure in sunglasses), Renaissance collage (modern things in old-master techniques on torn paper), Live-action hybrid (hand-drawn grayscale people sketched into a real photograph) or Propaganda poster (a heroic figure, sunburst rays and a bold slogan in red, cream and black). Saved as WebP in assets/img/ with a focus box. Use when Adjie asks for an illustration, a drawing, an image, a picture for a step or a section, a cover image that is not a screenshot or a chart, a style by name (wikiHow, Tempo, summer novel, collage, live-action, propaganda), a caricature, a slogan poster or a social card with a point of view. For an isometric picture, or a place or system with exact layout, use isometric-illustration.
+description: Make an illustration for a post on this blog with an image model, in one of six styles: wikiHow (one person doing one step, soft shading, a pale background), Tempo (a news-magazine cover painting, a visual metaphor in gouache caricature), Summer flat (a retro beach-read novel cover, a stylish figure in sunglasses), Renaissance collage (modern things in old-master techniques on torn paper), Live-action hybrid (hand-drawn grayscale people sketched into a real photograph) or Propaganda poster (a mid-century public poster: screen print, painted, jet-age graphic or photomontage). Saved as WebP in assets/img/ with a focus box. Use when Adjie asks for an illustration, a drawing, an image, a picture for a step or a section, a cover image that is not a screenshot or a chart, a style by name (wikiHow, Tempo, summer novel, collage, live-action, propaganda), a caricature, a slogan poster or a social card with a point of view. For an isometric picture, or a place or system with exact layout, use isometric-illustration.
 ---
 
 # Illustration with an image model
@@ -16,13 +16,14 @@ word for word. The workflow, the keys, the checks and the focus box are the same
 | Summer flat | a summer beach-read novel cover | 3 or 4 flat colours plus black and white, crisp edges | a feeling: a light personal or money-habit point | `references/summer-flat.md` | `flat` |
 | Renaissance collage | a scrapbook of torn old-master fragments | oil, sepia engraving, marble, fresco, gold leaf, torn paper | a big theme: history, wealth and power, eras compared | `references/renaissance-collage.md` | `collage` |
 | Live-action hybrid | a photo with friendly doodled people in it | a real photograph, plus black brush-pen line art with grayscale fills | *who and where*: everyday people in a real place, a relatable moment | `references/live-action.md` | `hybrid` |
-| Propaganda poster | a heroic mid-century public poster | flat posterised red, cream and black, sunburst rays, silhouettes, block letters | a slogan: a national plan, a call to action, official optimism taken at its word | `references/propaganda.md` | `propaganda` |
+| Propaganda poster | a 1930s to 1960s public poster | four treatments: a flat-ink screen print, a gouache painting, a jet-age graphic of diagonals, a photomontage | a national plan, a call to action, official optimism taken at its word | `references/propaganda.md` | `propaganda-print`, `-painted`, `-jet`, `-montage` |
 
 **Which style.** wikiHow shows a reader *how*: one person, one step, a pale background.
 Live-action hybrid shows *who and where*: people like the reader in a place that is real
 (a Jakarta sidewalk, a warung, an office, a train platform), friendly rather than pointed,
 and it can be drawn onto Adjie's own photograph. Tempo, Summer flat, the collage and the
-propaganda poster show *what the writer thinks*: a metaphor, a mood, a theme, a slogan.
+propaganda poster show *what the writer thinks*: a metaphor, a mood, a theme, a call to
+arms.
 `isometric-illustration` shows *how a place or system fits together*, drawn in code, with
 exact counts and a version for each theme. Keep one style through a post, so its pictures
 read as a set, unless Adjie asks otherwise.
@@ -95,8 +96,8 @@ Settle in a few lines (in the plan's features table, if the post goes through
   and the object in the hands; Tempo a visual metaphor with an everyday object; Summer flat
   a stylish person with one witty gesture; the collage a hero object plus four to six
   fragments, each in a named old technique; the hybrid a real place and a small human moment
-  in it; the propaganda poster one heroic figure, the rays, the silhouettes behind and a
-  slogan. Each guide has a table or recipe for this. Pass the brief a test: someone who has
+  in it; the propaganda poster a treatment, one idealised figure or machine, and words only
+  when they earn their place. Each guide has a table or recipe for this. Pass the brief a test: someone who has
   not read the post should get the point from the description alone.
 - **Who:** age, skin, hair, clothes. Indonesian people and settings where the post is about
   Indonesia; vary age, gender, skin tone and hair across a post, or keep the post's own
@@ -109,9 +110,9 @@ Settle in a few lines (in the plan's features table, if the post goes through
   real is meant, say so ("an invented face that resembles no real politician") and change
   the dress and the pose that point to someone; look at the face before using it. When
   someone real is meant, name them, and let Adjie decide.
-- **Words in the picture:** usually none, except the propaganda poster, whose slogan is half
-  the picture. A short quoted phrase works (a speech bubble, a phone screen, a ribbon banner,
-  a slogan band); detailed writing (a receipt, a list, a screen of text) always becomes slop,
+- **Words in the picture:** usually none; the propaganda poster often has a word or a
+  slogan, never by default. A short quoted phrase works (a speech bubble, a phone screen, a
+  ribbon banner, a slogan band); detailed writing (a receipt, a list, a screen of text) always becomes slop,
   so ask for "only wavy scribble lines, no readable words". With words, make one picture per
   language: for the second, attach the first picture with `--ref` and ask to "make it again
   exactly ... changing only the words: the quoted words now read exactly ..." (prompt in
@@ -143,7 +144,8 @@ GEMINI_API_KEY=... sh $K/scripts/generate.sh tempo _illustrations/<name>.txt <sc
 ```
 
 - The first argument is the style key from the table: `wikihow`, `tempo`, `flat`, `collage`,
-  `hybrid` or `propaganda`. The script attaches that style's examples and uses Nano
+  `hybrid`, or `propaganda-print`, `-painted`, `-jet` or `-montage` (the poster's four
+  treatments; plain `propaganda` asks which). The script attaches those examples and uses Nano
   Banana 2.1.
 - `--aspect 16:9` for a social card; `--model <id>` to change the model; `--ref <image>` to
   attach a picture *before* the examples: a post's earlier picture, to keep a character the
@@ -212,7 +214,7 @@ What to box, by style: the person with the object in their hands (wikiHow); the 
 with the gesture or object that makes the joke, and the speech bubble when its words are the
 point (Tempo, Summer flat); the one modern thing the collage is about, not the paper around
 it; the drawn characters and what they do, not the photograph around them (hybrid); the
-heroic figure with the slogan when it fits, else the figure (propaganda). On a two-sided
+figure or machine with its words when they fit, else the figure (propaganda). On a two-sided
 picture pick the side the post argues about, never the dividing line. Never the whole
 picture.
 

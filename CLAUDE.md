@@ -8,7 +8,7 @@ post, plan first and write after approval: the `ai-assisted-blog-post` skill
 (`.claude/skills/ai-assisted-blog-post/`). For an illustration made with an image model, in
 one of six styles (a wikiHow step picture of a person doing the step, a *Tempo*-cover
 painting, a summer-novel flat cover, a Renaissance collage of modern things, a live-action
-hybrid of a photo with hand-drawn people, or a propaganda poster with a slogan): the
+hybrid of a photo with hand-drawn people, or a mid-century propaganda poster): the
 `editorial-illustration` skill (`.claude/skills/editorial-illustration/`), Nano Banana on the
 Gemini API or OpenRouter, prompts kept in `_illustrations/`. For an isometric
 scene (a place or system with several people, buildings or machines, drawn in code as a dark
