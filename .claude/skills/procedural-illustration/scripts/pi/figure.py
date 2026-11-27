@@ -94,13 +94,13 @@ class Figure:
         i18n = f'site.data.i18n.{lang}'
         head = f'<strong>{esc(tr(self.title, lang))}</strong>'
         if self.subtitle:
-            head += f'<span>{esc(tr(self.subtitle, lang))}</span>'
+            head += f' <span>{esc(tr(self.subtitle, lang))}</span>'
         art = ''.join(self.svgs(lang))
         foot = ''
         if self.source:
             foot += f'<span>{{{{ {i18n}.chart_source }}}}: {esc(tr(self.source, lang))}</span>'
         if self.note:
-            foot += f'<span class="pi-note">{{{{ {i18n}.chart_note }}}}: {esc(tr(self.note, lang))}</span>'
+            foot += f' <span class="pi-note">{{{{ {i18n}.chart_note }}}}: {esc(tr(self.note, lang))}</span>'
         table = ''
         if self.data_table:
             t = self.table_html(lang)
@@ -111,7 +111,7 @@ class Figure:
                 '{%- endcomment -%}\n'
                 f'<figure class="pi pi-{self.kind}" id="pi-{n}" role="group" aria-labelledby="pi-{n}-h">'
                 f'<figcaption id="pi-{n}-h">{head}</figcaption>'
-                f'<div class="pi-art">{art}</div>'
+                f'<div class="pi-art">{art}</div><!--/pi-art-->'
                 + (f'<p class="pi-src">{foot}</p>' if foot else '') + table + '</figure>\n')
 
     def table_html(self, lang):
