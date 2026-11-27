@@ -60,6 +60,13 @@ each REVIEW looked at). The box marks the subject every crop keeps whole; the ru
 `.claude/skills/editorial-illustration/references/focus-box.md`, and both illustration
 skills mark it when they save a picture.
 
+The illustration styles are walled off from each other ("The great wall" in
+`editorial-illustration/SKILL.md`): each is its own unique theme, made from its own folder in
+its own words, and nothing of one may leak into another. Every image-model picture is made
+with its `generate.sh`, whose prompt check and style check both pass; after changing or
+adding any style, `node .claude/skills/editorial-illustration/scripts/walls.mjs` ends with
+"the great wall holds".
+
 Then, in `_site/`: each page has exactly one `<h1>` and valid JSON-LD; `sitemap.xml` and
 `*/feed.xml` parse as XML; paired posts list each other in `hreflang`; and at 390px no page
 scrolls sideways.

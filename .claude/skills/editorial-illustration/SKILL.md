@@ -5,18 +5,20 @@ description: Make an illustration for a post on this blog with an image model, i
 
 # Illustration with an image model
 
-Six styles, one generator. Each style has its own guide in `references/`, example pictures
-in `examples/` that the generator attaches as style references, and a style block to paste
-word for word. The workflow, the keys, the checks and the focus box are the same for all.
+Six styles, each its own unique theme, walled off from the others (**The great wall**,
+below). Each style is a sealed folder, `styles/<style>/`: its guide (`guide.md`), its data
+(`style.json`: the start of its style block, the words it owns, the description the judge
+reads, its examples) and its example pictures (`examples/`). Only the workflow is shared:
+the generator, the keys, the checks and the focus box.
 
-| Style | Looks like | Made of | Carries | Guide | Key |
+| Style | Looks like | Made of | Carries | Folder | Key |
 |---|---|---|---|---|---|
-| wikiHow | an instructional step picture | thin outlines in a darker shade of each colour, soft shading, pale wash | *how*: one person, one action, the object in the hands | `references/wikihow.md` | `wikihow` |
-| Tempo | a *Tempo* cover painting | soft gouache, no outlines, warm light and violet shadows, one bold colour | a visual metaphor: a satirical or political point | `references/tempo.md` | `tempo` |
-| Summer flat | a summer beach-read novel cover | 3 or 4 flat colours plus black and white, crisp edges | a feeling: a light personal or money-habit point | `references/summer-flat.md` | `flat` |
-| Renaissance collage | a scrapbook of torn old-master fragments | oil, sepia engraving, marble, fresco, gold leaf, torn paper | a big theme: history, wealth and power, eras compared | `references/renaissance-collage.md` | `collage` |
-| Live-action hybrid | a photo with friendly doodled people in it | a real photograph, plus black brush-pen line art with grayscale fills | *who and where*: everyday people in a real place, a relatable moment | `references/live-action.md` | `hybrid` |
-| Propaganda poster | a 1930s to 1960s public poster | four treatments: a flat-ink screen print, a gouache painting, a jet-age graphic of diagonals, a photomontage | a national plan, a call to action, official optimism taken at its word | `references/propaganda.md` | `propaganda-print`, `-painted`, `-jet`, `-montage` |
+| wikiHow | an instructional step picture | thin outlines in a darker shade of each colour, soft shading, pale wash | *how*: one person, one action, the object in the hands | `styles/wikihow/` | `wikihow` |
+| Tempo | a *Tempo* cover painting | soft gouache, no outlines, warm light and violet shadows, one bold colour | a visual metaphor: a satirical or political point | `styles/tempo/` | `tempo` |
+| Summer flat | a summer beach-read novel cover | 3 or 4 flat colours plus black and white, crisp edges | a feeling: a light personal or money-habit point | `styles/flat/` | `flat` |
+| Renaissance collage | a scrapbook of torn old-master fragments | oil, sepia engraving, marble, fresco, gold leaf, torn paper | a big theme: history, wealth and power, eras compared | `styles/collage/` | `collage` |
+| Live-action hybrid | a photo with friendly doodled people in it | a real photograph, plus black brush-pen line art with grayscale fills | *who and where*: everyday people in a real place, a relatable moment | `styles/hybrid/` | `hybrid` |
+| Propaganda poster | a 1930s to 1960s public poster | four treatments: a flat-ink screen print, a realist oil painting, a jet-age graphic of diagonals, a photomontage | a national plan, a call to action, official optimism taken at its word | `styles/propaganda/` | `propaganda-print`, `-painted`, `-jet`, `-montage` |
 
 **Which style.** wikiHow shows a reader *how*: one person, one step, a pale background.
 Live-action hybrid shows *who and where*: people like the reader in a place that is real
@@ -35,6 +37,53 @@ Adjie's samples to this public repo (they are not ours, and the poster samples a
 watermarked stock): every picture in `examples/` was generated from them and is ours to
 keep. Never say in a caption or alt text that a picture is from wikiHow, *Tempo*, a book
 cover or a real poster.
+
+## The great wall
+
+Every style is its own world. A picture is made in exactly one style, from that style's
+folder alone, and nothing from another style may cross into it: not a word, not an idea, not
+a picture. Adjie's rule, after two leaks: a propaganda montage that came back with the
+collage's white cut-out borders and sepia, and a painted poster with Tempo's pushed
+caricature expression. Neither leaked through a file. They leaked through *words* (the
+poster's lines said "cut out", "ochre", "gouache"), an *idea* (the painted poster's scene
+was Tempo's grandmother-and-chilli example) and *examples* that had already drifted. So the
+wall stands on all three, and on the finished picture too:
+
+1. **One picture, one style.** No blends, no "Tempo with a collage background", no borrowed
+   trait. A deliberate borrowing happens only when Adjie asks for it, and is passed by name
+   with `--allow <word>` (the China post's wikiHow picture is a caricature on purpose, so
+   regenerating it takes `--allow caricature`).
+2. **One folder per style.** A picture is made from its own folder only: its guide, its
+   style block, its examples. `generate.sh <style>` attaches that folder's examples and
+   nothing else. Never attach another style's example, and never use a post picture of
+   another style as a `--ref`: the script refuses both.
+3. **Own words only.** Each style owns the technique words of its look (`style.json`,
+   `"words"`: `gouache` and `caricature` are Tempo's, `torn`, `sepia`, `ochre`, `engraving`
+   are the collage's, `doodle` and `brush-pen` the hybrid's, and so on). A prompt may not use
+   another style's words anywhere outside its own style block, and a style block may not use
+   them at all, not even to forbid them: naming a feature plants it. Describe what the style
+   *is*, in its own words. `generate.sh` refuses a prompt that breaks this, before any cost.
+4. **Own ideas only.** Write a scene from the style's own guide. Never reuse a scene, a
+   character, a metaphor or a palette from another style's guide or examples.
+5. **Every picture is judged.** After generating, `generate.sh` asks a vision model whether
+   the picture stays in its style (`scripts/judge.mjs`, which reads every style's
+   description). A leak exits with code 3 and the picture is failed: never use it, rewrite
+   the scene in the style's own words and generate again. Run the judge by hand on any
+   picture made another way.
+6. **Changing or adding a style touches only its folder.** Its words must not overlap any
+   other style's, its block must pass, and afterwards `node scripts/walls.mjs` must end with
+   "the great wall holds": no word owned twice, no block using a neighbour's words, every
+   example of every style passing the judge as its own style. Never edit another style's
+   folder to make room for a new one.
+
+Where the walls run closest, and what keeps each pair apart:
+
+| Neighbours | Stays on its own side by |
+|---|---|
+| wikiHow / Live-action hybrid | colour drawing on a pale painted wash / grey drawing on a real colour photograph |
+| Tempo / propaganda painted | gouache caricature, violet shadows, odd angles, no words / realist oil, true-to-life calm faces, a big painted word |
+| Renaissance collage / propaganda montage | torn colour paper, old-master techniques, warm sepia / black-and-white photographs cut clean, flat red bars |
+| Summer flat / propaganda print and jet age | fashion figures in sunglasses, turquoise and pink, no texture / heroic figures or machines, brick red, cream, black or yellow and grey, print texture |
 
 ```
 brief → the idea → prompt in _illustrations/<name>.txt → generate.sh <style> → look, retry
@@ -97,8 +146,9 @@ Settle in a few lines (in the plan's features table, if the post goes through
   a stylish person with one witty gesture; the collage a hero object plus four to six
   fragments, each in a named old technique; the hybrid a real place and a small human moment
   in it; the propaganda poster a treatment, one idealised figure or machine, and words only
-  when they earn their place. Each guide has a table or recipe for this. Pass the brief a test: someone who has
-  not read the post should get the point from the description alone.
+  when they earn their place. Each guide has a table or recipe for this; take the idea from
+  this style's guide, never from another's (the great wall, rule 4). Pass the brief a test:
+  someone who has not read the post should get the point from the description alone.
 - **Who:** age, skin, hair, clothes. Indonesian people and settings where the post is about
   Indonesia; vary age, gender, skin tone and hair across a post, or keep the post's own
   character (Robert, Geoff). A public figure (a president, a minister) by name and
@@ -112,22 +162,22 @@ Settle in a few lines (in the plan's features table, if the post goes through
   someone real is meant, name them, and let Adjie decide.
 - **Words in the picture:** usually none; the propaganda poster often has a word or a
   slogan, never by default. A short quoted phrase works (a speech bubble, a phone screen, a
-  ribbon banner, a slogan band); detailed writing (a receipt, a list, a screen of text) always becomes slop,
-  so ask for "only wavy scribble lines, no readable words". With words, make one picture per
+  ribbon banner, a slogan band); detailed writing (a receipt, a list, a screen of text)
+  always becomes slop, so ask for "only wavy scribble lines, no readable words". With words,
+  make one picture per
   language: for the second, attach the first picture with `--ref` and ask to "make it again
   exactly ... changing only the words: the quoted words now read exactly ..." (prompt in
   `_illustrations/restyle/gsl-ill-podium-id--tempo.txt`). Tested in the Tempo, flat,
   collage and propaganda styles: the same picture came back, only the words changed, spelled
-  right. Words
-  on something small (a phone in a hand) can come out garbled: make the object big and the
-  words "big bold letters on two lines", and zoom in to check every letter.
+  right. Words on something small (a phone in a hand) can come out garbled: make the object
+  big and the words "big bold letters on two lines", and zoom in to check every letter.
 - **Shape:** `4:3` in a post, `16:9` for a social card.
 
 ## Step 2: Write the prompt
 
-From the style's guide, in this order: the **opening line**, the **scene** (the guide says
-what goes in it and in which order), the **style block** word for word, then **one text
-rule** (`No text, no letters, no numbers.`, `No readable words.` for the collage, or `No text
+From the style's own guide only, in this order: the **opening line**, the **scene** (the
+guide says what goes in it and in which order), the **style block** word for word (and, for
+the propaganda poster, the treatment's line), then **one text rule** (`No text, no letters, no numbers.`, `No readable words.` for the collage, or `No text
 except the exact words quoted in the scene.`). Read the guide's "What the tests taught" before
 the first try: it fixes the usual failures (a device facing away, props too small, a scowl
 instead of a frown, US dollars, the examples leaking into the scene).
@@ -145,19 +195,27 @@ GEMINI_API_KEY=... sh $K/scripts/generate.sh tempo _illustrations/<name>.txt <sc
 
 - The first argument is the style key from the table: `wikihow`, `tempo`, `flat`, `collage`,
   `hybrid`, or `propaganda-print`, `-painted`, `-jet` or `-montage` (the poster's four
-  treatments; plain `propaganda` asks which). The script attaches those examples and uses Nano
-  Banana 2.1.
+  treatments; plain `propaganda` asks which).
+- The script runs the great wall in three steps. First it checks the prompt, free: its own
+  style block is there, no other style's block is, and no other style's word is used (exit
+  2, nothing generated, with the reason). Then it generates with Nano Banana 2.1 and this
+  style's own examples only. Then the judge looks at the picture: `style check: ... stays in
+  <style>` (exit 0) or `LEAK` with the foreign features (exit 3: the picture failed).
+  `--lint-only` runs the first step alone, to check a prompt before spending anything.
 - `--aspect 16:9` for a social card; `--model <id>` to change the model; `--ref <image>` to
   attach a picture *before* the examples: a post's earlier picture, to keep a character the
   same (open the prompt with "The first attached picture shows a character. Draw the same
-  ..."), or Adjie's photograph for the hybrid style (its guide has the opening line).
+  ..."), or Adjie's photograph for the hybrid style (its guide has the opening line). A
+  reference from another style is refused.
 - Run one at a time (two at most on Google). Parallel requests get a 429; the script waits
   and retries a 429, 502 or 503 three times, ten seconds apart.
 
 Then **open the PNG with Read and check it**:
 
+- [ ] The script said `stays in <style>`. A leak is a failed picture, whatever it looks like.
 - [ ] The point reads in two seconds without the caption: the step, the joke, the moment.
-- [ ] It is the style: compare with the style's examples and the guide's "What to reject".
+- [ ] It is the style and only the style: compare with its examples, its guide's "What to
+      reject", and the neighbour table in "The great wall".
 - [ ] Faces: the expression asked for; a public figure is recognisable and not demeaned.
 - [ ] Hands: five fingers, holding things the way people do. A device faces the way asked.
 - [ ] Words: exactly the ones quoted, spelled right; nothing else readable (the collage's

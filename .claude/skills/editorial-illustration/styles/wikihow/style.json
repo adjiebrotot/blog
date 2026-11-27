@@ -1,0 +1,16 @@
+{
+  "name": "wikiHow",
+  "block": "Style: match the attached reference pictures exactly: an instructional step illustration with realistic simplified proportions",
+  "words": [
+    "instructional",
+    "almond eyes",
+    "upper lid"
+  ],
+  "describe": "an instructional step drawing in colour: thin outlines in a darker shade of each colour (never black), soft painterly shading, simple friendly faces with small almond eyes, realistic simplified proportions, a pale blurred painted background",
+  "examples": [
+    "wikihow-midshot.webp",
+    "wikihow-indonesia.webp",
+    "wikihow-split.webp",
+    "wikihow-back.webp"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Renaissance collage",
+  "block": "Style: a layered scrapbook collage of cut and torn paper fragments with soft drop shadows",
+  "words": [
+    "torn",
+    "deckled",
+    "scrapbook",
+    "old-master",
+    "old master",
+    "sfumato",
+    "craquelure",
+    "engraving",
+    "engraved",
+    "cross-hatching",
+    "fresco",
+    "gold leaf",
+    "gilded",
+    "parchment",
+    "sepia",
+    "ochre",
+    "renaissance",
+    "collage",
+    "cut-out border",
+    "cut-out borders",
+    "white border",
+    "white borders"
+  ],
+  "describe": "a Renaissance scrapbook collage: torn and deckled paper fragments with white cut-out borders and drop shadows, modern subjects in old-master techniques (oil with sfumato and craquelure, sepia engraving, marble, fresco, gold leaf), a warm ochre, cream and sepia palette",
+  "examples": [
+    "collage-train.webp",
+    "collage-portrait.webp",
+    "collage-bomber.webp"
+  ]
+}

@@ -284,7 +284,7 @@ the blog can draw them. Per type:
   cover, good for politics and satire), Summer flat (a stylish figure in a few flat colours,
   good for light personal and money-habit points), Renaissance collage (modern things in
   old-master techniques, good for big themes and eras compared) or Propaganda poster (a
-  mid-century public poster as a screen print, a gouache painting, a jet-age graphic or a
+  mid-century public poster as a screen print, a realist painting, a jet-age graphic or a
   photomontage, good for national plans, calls to action and official optimism taken at its
   word). Give the style, the point, the idea (who does what, with which object) and its alt
   text. Not where a chart or a screenshot shows the real thing.

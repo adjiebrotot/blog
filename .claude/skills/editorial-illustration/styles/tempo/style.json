@@ -1,0 +1,20 @@
+{
+  "name": "Tempo",
+  "block": "Style: an editorial cover painting for a weekly news magazine, painted digitally like gouache",
+  "words": [
+    "caricature",
+    "caricatured",
+    "caricatures",
+    "gouache",
+    "violet-blue",
+    "news magazine",
+    "news-magazine",
+    "magazine cover"
+  ],
+  "describe": "an Indonesian news-magazine cover painting: soft chalky gouache with no outlines, gentle caricature (oversized heads and hands, pushed expressions), warm light with violet-blue shadows, one bold flat background colour, an unusual angle and a bold crop",
+  "examples": [
+    "tempo-above.webp",
+    "tempo-closeup.webp",
+    "tempo-two.webp"
+  ]
+}
