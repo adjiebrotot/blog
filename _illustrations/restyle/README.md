@@ -1,7 +1,7 @@
 # Restyled briefs
 
-The blog's illustration briefs (the files one folder up) rewritten for the three styles of
-the `editorial-illustration` skill: `<name>--tempo.txt`, `<name>--flat.txt` and
+The blog's wikiHow illustration briefs (the files one folder up) rewritten for three other
+styles of the `editorial-illustration` skill: `<name>--tempo.txt`, `<name>--flat.txt` and
 `<name>--collage.txt`, made on 26 November 2026 to try the styles on real posts. They are
 candidates, not live pictures: the posts still use the originals until Adjie picks a
 version. The generated pictures (WebP, 1456 px wide) are kept outside the repo, in the

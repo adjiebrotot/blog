@@ -41,7 +41,7 @@ publishes it. The look comes from the design system of
    `md/README.txt`) publishes the post as Markdown at `<post URL>index.md` for AI readers.
    Every illustration needs a focus box in `_data/focus.yml` first, because the cards, the
    social card and the share poster crop it around that box (rule:
-   `.claude/skills/wikihow-illustration/references/focus-box.md`). `python3 _build/focus.py`
+   `.claude/skills/editorial-illustration/references/focus-box.md`). `python3 _build/focus.py`
    must say OK.
 5. Check it for search and answer engines:
    `python3 .claude/skills/ai-assisted-blog-post/scripts/check-seo.py <post>.md` (title,

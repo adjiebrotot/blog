@@ -7,8 +7,8 @@ picture's own shape. Each one moves its crop to keep the picture's **focus box**
 the box decides what a reader sees in every one of them. A picture without a box is cut in
 the centre, which on a split or multi-panel picture shows the seam and nothing else.
 
-**Mandatory for every illustration made by `wikihow-illustration`, `editorial-illustration`
-and `isometric-illustration`** (each `*-ill-*.webp`, the isometric `--card` included), and
+**Mandatory for every illustration made by `editorial-illustration` (all six styles) and
+`isometric-illustration`** (each `*-ill-*.webp`, the isometric `--card` included), and
 for any other picture set as a post's `thumbnail:` or `share_image:`. Mark it when the
 picture is saved, not later: any illustration can become a post's lead picture.
 `python3 _build/focus.py` fails until every one has a valid box.

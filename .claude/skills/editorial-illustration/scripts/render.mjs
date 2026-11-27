@@ -67,7 +67,7 @@ console.log(`${output}: ${width}×${result.height}${preview ? `, preview ${previ
 if (/assets\/img\/[^/]+-ill-[^/]+\.webp$/.test(output)) {
   const name = output.split('/').pop();
   console.log(`\nMandatory next: its focus box in _data/focus.yml, the subject every crop keeps whole`);
-  console.log(`(.claude/skills/wikihow-illustration/references/focus-box.md):`);
+  console.log(`(.claude/skills/editorial-illustration/references/focus-box.md):`);
   console.log(`  ${(name + ':').padEnd(34)}{ box: [x0, y0, x1, y1], size: [${width}, ${result.height}] }   # the subject`);
   console.log(`then: python3 _build/focus.py --preview <scratchpad>/focus  and  python3 _build/focus.py`);
 }

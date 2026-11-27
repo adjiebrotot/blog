@@ -101,9 +101,9 @@ blog's briefs.
   background. Crop in close on one or two people and let the object carry the rest.
 - **Short quoted text works.** A speech bubble with "Our economy is skyrocketing!" came back
   letter-perfect, in bold sans serif. Writing on a phone screen ("DEBT $10K") too.
-- **Public figures work.** Xi Jinping whispering to Joko Widodo came back recognisable in all
-  three styles when the prompt named and described them. Exaggerate the expression and the
-  posture, not their ethnicity or body.
+- **Public figures work.** Xi Jinping whispering to Joko Widodo came back recognisable in the
+  Tempo, flat and collage styles when the prompt named and described them. Exaggerate the
+  expression and the posture, not their ethnicity or body.
 - **From above, keep the person in a side corner** (as in `tempo-above.webp`). Seated at the
   bottom edge facing up the picture, a diner came out with the top of his head towards the
   viewer and an upside-down face.
