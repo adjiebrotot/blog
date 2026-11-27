@@ -142,5 +142,8 @@ pixel size, inside a `<figure>`, with alt text that says what the picture shows 
 post's language ("Caricature of ...", "Collage of ..." is fine when it is one; never the
 style's source). These pictures carry their own background, so they work in both themes.
 
+If it is the post's lead picture, give it a focus box in `_data/focus.yml` (see
+`wikihow-illustration`) and check the crops with `python3 _build/focus.py --preview <dir>`.
+
 Run the checks in `CLAUDE.md`, and commit the WebP with its prompt file. Tell Adjie the style,
 the model and the number of tries.

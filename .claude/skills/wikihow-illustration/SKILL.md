@@ -148,6 +148,10 @@ Then use an `<img>` with its real pixel size, like the other images on the blog,
 
 - **Alt text** says what the person is doing and with what, in the post's language. Not
   "illustration of" and not the style.
+- **A post's lead picture gets a focus box.** Cards, the social card and the share poster crop
+  it to other shapes, so add its line to `_data/focus.yml` (the subject every crop keeps
+  whole: one whole person, not the seam of a split picture) before `node _build/og.mjs`, and
+  check the crops with `python3 _build/focus.py --preview <dir>`.
 - A picture can also be the social card (`image:` and `image_alt:` in the front matter).
   Cards work best wide: generate a version with `--aspect 16:9` and render it with
   `--width 1200`.

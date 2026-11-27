@@ -124,7 +124,8 @@ matches (`references/blog-embed.md`).
 6. **Publish.** `--publish` copies the pair to `assets/img/` and prints the `<figure>` to
    paste; write the alt text in the post's language on both images. If the scene is the
    post's lead picture, add `--card` and put the `thumbnail:` and `share_image:` lines it
-   prints in the front matter, then run `node _build/og.mjs`.
+   prints in the front matter, give the card a focus box in `_data/focus.yml` (check it with
+   `python3 _build/focus.py --preview <dir>`), then run `node _build/og.mjs`.
 7. **Run the checks in `CLAUDE.md`** and commit the scene file with the SVGs (and the card),
    plus `models.py` if you added an object there.
 

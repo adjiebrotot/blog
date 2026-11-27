@@ -212,6 +212,19 @@ main { padding: 1rem 0 3rem; }
   border-bottom: 1.5px solid var(--ink-line); background: var(--panel-raised);
 }
 .post-card-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+/* A picture with a focus box (_data/focus.yml: --fx0..--fy1 in percent, --ir its width/height)
+   is cropped to keep that box whole, for whatever shape the frame has (--cr, its width/height,
+   set on each frame below). --vx/--vy: the share of the picture's width/height the frame
+   shows. The crop centres on the box and stops at the picture's edges; a box too big for the
+   frame stays centred across and keeps its top edge (a head) down. Same rule as focusCrop() in blog.js and _build/og.mjs. */
+.post-card-thumb { --cr: 1.6; }
+.post-card-thumb img.has-focus {
+  --vx: min(1, var(--cr) / var(--ir));
+  --vy: min(1, var(--ir) / var(--cr));
+  object-position:
+    calc(100% * clamp(0, ((var(--fx0) + var(--fx1)) / 200 - var(--vx) / 2) / max(1 - var(--vx), 0.0001), 1))
+    calc(100% * clamp(0, min((var(--fy0) + var(--fy1)) / 200 - var(--vy) / 2, var(--fy0) / 100) / max(1 - var(--vy), 0.0001), 1));
+}
 .post-card.is-featured .post-card-thumb { margin: calc(-1 * clamp(1.25rem, 3vw, 2rem)) calc(-1 * clamp(1.25rem, 3vw, 2rem)) 0.35rem; }
 /* A regular card keeps the picture small, a square on the left beside the text. */
 .post-card.has-thumb:not(.is-featured) {
@@ -220,17 +233,17 @@ main { padding: 1rem 0 3rem; }
 }
 .post-card.has-thumb:not(.is-featured) > :not(.post-card-thumb) { grid-column: 2; }
 .post-card.has-thumb:not(.is-featured) .post-card-thumb {
-  grid-column: 1; grid-row: 1 / span 5; align-self: start; margin: 0; aspect-ratio: 1;
+  --cr: 1; grid-column: 1; grid-row: 1 / span 5; align-self: start; margin: 0; aspect-ratio: 1;
   border: 1.5px solid var(--ink-line); border-radius: var(--radius-lg);
 }
-.post-card.has-thumb:not(.is-featured) .post-card-thumb img { object-position: 50% 25%; }
+.post-card.has-thumb:not(.is-featured) .post-card-thumb img:not(.has-focus) { object-position: 50% 25%; }
 
 /* On a wide screen the featured card puts its picture beside the text, not above it. */
 @media (min-width: 760px) {
   .post-card.is-featured.has-thumb { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); grid-auto-rows: min-content; column-gap: clamp(1.25rem, 3vw, 2rem); align-content: center; }
   .post-card.is-featured.has-thumb > :not(.post-card-thumb) { grid-column: 2; }
   .post-card.is-featured .post-card-thumb {
-    grid-column: 1; grid-row: 1 / span 5; align-self: center; margin: 0; aspect-ratio: 4 / 3;
+    --cr: 1.3333; grid-column: 1; grid-row: 1 / span 5; align-self: center; margin: 0; aspect-ratio: 4 / 3;
     border: 1.5px solid var(--ink-line); border-radius: var(--radius-lg);
   }
 }
