@@ -6,7 +6,7 @@ date: 2026-11-04 09:00:00 +0800
 last_modified_at: 2026-11-11
 tags: [politics]
 image: /assets/img/og/gaji-pejabat-indonesia.jpg
-image_alt: "Seorang politisi bertubuh tambun berjas gelap dan berpeci hitam duduk di singgasana emas sambil makan paha ayam goreng, warga biasa di satu sisi menatapnya dengan kaget, dan di sisi lain seorang pejabat Australia berjas sederhana berdiri santai sambil melambaikan bendera kecil Australia"
+image_alt: "Seorang politisi bertubuh tambun berjas gelap dan berpeci hitam duduk di singgasana emas sambil makan paha ayam goreng, warga biasa di satu sisi menatapnya dengan kaget, dan di sisi lain seorang pejabat Australia berjas abu-abu sederhana lewat bersepeda sambil melambaikan bendera kecil Australia"
 share_image: /assets/img/gpi-ill-raja-pejabat.webp
 translation: politician-pay
 keywords: [gaji pejabat Indonesia, gaji anggota DPR, gaji presiden Indonesia, dana reses DPR, tunjangan DPR, gaji perdana menteri Australia, tot tot wuk wuk, perjalanan dinas]
@@ -70,7 +70,7 @@ Australia tidak punya pensiun khusus untuk perdana menteri. Skema pensiun lama b
 Gaji dan tunjangan kotor anggota DPR setara 22,3 kali rata-rata upah buruh (19,7 kali setelah pajak), sedangkan gaji dan tunjangan anggota parlemen Australia hanya setara 4,2 kali median upah pekerja. Kalau dana reses dan anggaran kantor ikut dihitung, perbandingannya menjadi sekitar 85 kali berbanding 8,6 kali.
 
 <figure>
-<img src="/assets/img/gpi-ill-raja-pejabat.webp" alt="Seorang politisi bertubuh tambun berjas gelap dan berpeci hitam duduk di singgasana emas sambil makan paha ayam goreng, warga biasa di satu sisi menatapnya dengan kaget, dan di sisi lain seorang pejabat Australia berjas sederhana berdiri santai sambil melambaikan bendera kecil Australia" width="1456" height="1087" loading="lazy">
+<img src="/assets/img/gpi-ill-raja-pejabat.webp" alt="Seorang politisi bertubuh tambun berjas gelap dan berpeci hitam duduk di singgasana emas sambil makan paha ayam goreng, warga biasa di satu sisi menatapnya dengan kaget, dan di sisi lain seorang pejabat Australia berjas abu-abu sederhana lewat bersepeda sambil melambaikan bendera kecil Australia" width="1200" height="896" loading="lazy">
 </figure>
 
 Mari mulai dari anggota parlemen biasa di House of Representatives (majelis rendah parlemen federal, padanan DPR), yang disebut *backbencher* karena tidak menjabat menteri. Gaji pokoknya A$239.270 setahun atau A$19.939 sebulan.[^rt] Di luar gaji, ada *electorate allowance* (tunjangan untuk biaya di daerah pemilihan) yang dibayarkan langsung kepada anggota dan dikenai pajak, dengan besaran A$39.700 sampai A$57.100 setahun, tergantung luas daerah pemilihannya.[^ea] Saya memakai angka tengahnya, A$47.200 setahun atau A$3.933 sebulan. Ada pula uang perjalanan ke Canberra, ibu kota Australia, berupa tarif per malam selama masa sidang yang menurut pemberitaan sekitar A$310 per malam.[^ta] Kalau saya perkirakan sekitar 80 malam setahun, jumlahnya kira-kira A$24.800 setahun atau A$2.067 sebulan. Totalnya sekitar A$311.270 setahun atau A$25.939 sebulan, setara 4,2 kali median upah bulanan pekerja Australia (A$6.175).[^absmed]

@@ -196,7 +196,7 @@ examples, and why each fits its readers. "Same in both" is fine.>
 | D1 | Evidence | <claim/figure, class, date, material conditions> (EN / ID / both) | <section> | <checked source or model inputs; assumptions identified; personal confirmation status> |
 | T1 | Tool embed | <tool, chart, view, inputs> | <section> | <#load link; preview from brotools-embed> |
 | S1 | Screenshot | <what the image shows> | <section> | <how it will be made> |
-| I1 | Illustration | <style (wikiHow / Live-action hybrid / Tempo / Summer flat / Renaissance collage / Propaganda poster), the point, the idea that carries it (who does what, with which object)> | <section> | generated with `editorial-illustration` |
+| I1 | Illustration | <style (wikiHow / Live-action hybrid / Tempo / Summer flat / Renaissance collage), the point, the idea that carries it (who does what, with which object)> | <section> | generated with `editorial-illustration` |
 | I2 | Isometric scene | <the place or system, who is in it, the props that make it read> | <section> | drawn with `isometric-illustration` |
 | M1 | Mermaid | <diagram type: flowchart, xychart-beta, pie...> showing <...> | <section> | <data behind it> |
 | K1 | KaTeX | <the equation, in words> | <section> | <every symbol it defines> |
@@ -282,12 +282,10 @@ the blog can draw them. Per type:
   a real photographed place, for everyday moments, travel and work stories, and it can be
   drawn onto Adjie's own photo), *Tempo* (a visual metaphor painted like a news-magazine
   cover, good for politics and satire), Summer flat (a stylish figure in a few flat colours,
-  good for light personal and money-habit points), Renaissance collage (modern things in
-  old-master techniques, good for big themes and eras compared) or Propaganda poster (a
-  mid-century public poster as a screen print, a realist painting, a jet-age graphic or a
-  photomontage, good for national plans, calls to action and official optimism taken at its
-  word). Give the style, the point, the idea (who does what, with which object) and its alt
-  text. Not where a chart or a screenshot shows the real thing.
+  good for light personal and money-habit points) or Renaissance collage (modern things in
+  old-master techniques, good for big themes and eras compared). A `politics` post uses
+  Tempo and a `finance` post Live-action hybrid. Give the style, the point, the idea (who
+  does what, with which object) and its alt text. Not where a chart or a screenshot shows the real thing.
 - **Isometric scene:** a place or a system (a market, a station, a substation, a street)
   with several people or machines, drawn in code with the `isometric-illustration` skill as
   a dark and a light SVG. Give the brief (what it shows and why, who is in it, the props,

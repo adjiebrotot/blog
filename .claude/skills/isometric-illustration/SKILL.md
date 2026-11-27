@@ -27,10 +27,10 @@ brief -> the objects (library, or new ones checked on sheet.py) -> arrange on th
 
 | | editorial-illustration | isometric-illustration |
 |---|---|---|
-| Shows | one person doing one action (wikiHow), people in a real place (live-action hybrid), or the section's point: a metaphor, a caricature, a mood, a slogan (Tempo, Summer flat, Renaissance collage, propaganda poster) | a place or a system: several people, buildings, machines, flows |
+| Shows | one person doing one action (wikiHow), people in a real place (live-action hybrid), or the section's point: a metaphor, a caricature, a mood, a slogan (Tempo, Summer flat, Renaissance collage) | a place or a system: several people, buildings, machines, flows |
 | Made by | an image model (needs a key, costs money) | code in this skill (free, exact, editable) |
-| Output | one WebP that carries its own background, in one of six styles | an SVG pair that follows the reader's theme; GIF and WebP card optional |
-| Words in the picture | a short quoted phrase at most (a poster's slogan) | none: labels go in the caption or the prose |
+| Output | one WebP that carries its own background, in one of five styles | an SVG pair that follows the reader's theme; GIF and WebP card optional |
+| Words in the picture | a short quoted phrase at most (a speech bubble) | none: labels go in the caption or the prose |
 | Best for | a step, a habit, a feeling, satire, an argument, a big theme, a social card | how something works, where things are, how many, a before and after |
 
 ## The look (non-negotiable)
