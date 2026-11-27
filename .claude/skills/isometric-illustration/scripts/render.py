@@ -119,7 +119,7 @@ def main():
         print("\ncard: assets/img/%s.webp (%d KB). For the post card, share poster and OG card, add to the front matter:\n"
               "  thumbnail: /assets/img/%s.webp\n  share_image: /assets/img/%s.webp" % (cname, kb, cname, cname))
         print("\nMandatory next: the card's focus box in _data/focus.yml, the subject every crop keeps whole\n"
-              "(.claude/skills/wikihow-illustration/references/focus-box.md):\n"
+              "(.claude/skills/editorial-illustration/references/focus-box.md):\n"
               "  %-34s{ box: [x0, y0, x1, y1], size: [%d, %d] }   # the subject\n"
               "then: python3 _build/focus.py --preview <scratchpad>/focus, python3 _build/focus.py (OK),\n"
               "and node _build/og.mjs" % (cname + ".webp:", W, H))

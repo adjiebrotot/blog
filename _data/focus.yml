@@ -3,7 +3,7 @@
 # and the share poster crop it to their own shape, and every crop moves to keep this box
 # whole; when the box is too big for a frame, the crop centres on it across and keeps its
 # top edge (heads sit at the top). Mandatory: how to choose the box, and what never to box,
-# is in .claude/skills/wikihow-illustration/references/focus-box.md.
+# is in .claude/skills/editorial-illustration/references/focus-box.md.
 #
 #   <file in assets/img/>: { box: [x0, y0, x1, y1], size: [width, height] }   # the subject
 #

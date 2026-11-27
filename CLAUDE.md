@@ -5,12 +5,12 @@ branch", `github-pages` gem). Use only plugins that GitHub Pages whitelists, and
 GitHub Actions. How to write a post: `README.md`. How to write it in Adjie's voice: the
 `adjie-writing-style` skill (`.claude/skills/adjie-writing-style/`). To turn a concept or rough points into a
 post, plan first and write after approval: the `ai-assisted-blog-post` skill
-(`.claude/skills/ai-assisted-blog-post/`). For an illustration (a person doing the step,
-wikiHow style): the `wikihow-illustration` skill (`.claude/skills/wikihow-illustration/`),
-made with an image model on OpenRouter, prompts kept in `_illustrations/`. For an editorial
-picture that makes a point (a *Tempo*-cover painting, a summer-novel flat cover or a
-Renaissance collage of modern things): the `editorial-illustration` skill
-(`.claude/skills/editorial-illustration/`), same image model and prompt folder. For an isometric
+(`.claude/skills/ai-assisted-blog-post/`). For an illustration made with an image model, in
+one of six styles (a wikiHow step picture of a person doing the step, a *Tempo*-cover
+painting, a summer-novel flat cover, a Renaissance collage of modern things, a live-action
+hybrid of a photo with hand-drawn people, or a propaganda poster with a slogan): the
+`editorial-illustration` skill (`.claude/skills/editorial-illustration/`), Nano Banana on the
+Gemini API or OpenRouter, prompts kept in `_illustrations/`. For an isometric
 scene (a place or system with several people, buildings or machines, drawn in code as a dark
 and a light SVG): the `isometric-illustration` skill (`.claude/skills/isometric-illustration/`),
 scene files kept in `_illustrations/` too. For a chart or tool from
@@ -57,7 +57,7 @@ personal provenance settled. A clean checker run is not an editorial-quality ver
 Every illustration (`*-ill-*.webp`) and every `thumbnail:` or `share_image:` picture has a
 focus box in `_data/focus.yml`: `python3 _build/focus.py` says OK (no MISSING or ERROR, and
 each REVIEW looked at). The box marks the subject every crop keeps whole; the rule is
-`.claude/skills/wikihow-illustration/references/focus-box.md`, and the three illustration
+`.claude/skills/editorial-illustration/references/focus-box.md`, and both illustration
 skills mark it when they save a picture.
 
 Then, in `_site/`: each page has exactly one `<h1>` and valid JSON-LD; `sitemap.xml` and

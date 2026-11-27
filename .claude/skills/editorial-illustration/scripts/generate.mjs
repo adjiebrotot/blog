@@ -1,19 +1,22 @@
-// Generate an illustration with an image model and save it as a PNG. Two providers:
-//
-//   OpenRouter:
-//   OPENROUTER_API_KEY=sk-or-... node generate.mjs <prompt.txt> <out.png>
-//     [--model google/gemini-nano-banana-2.1] [--aspect 4:3] [--ref <image>]...
+// Generate an illustration with an image model and save it as a PNG. Usually called through
+// generate.sh, which attaches the chosen style's example pictures. Two providers:
 //
 //   Google Gemini API, directly:
-//   GEMINI_API_KEY=... node generate.mjs <prompt.txt> <out.png> --provider google
-//     [--model gemini-3.1-flash-image] [--aspect 4:3] [--ref <image>]...
+//   GEMINI_API_KEY=... node generate.mjs <prompt.txt> <out.png>
+//     [--model gemini-nano-banana-2.1] [--aspect 4:3] [--ref <image>]...
+//
+//   OpenRouter:
+//   OPENROUTER_API_KEY=sk-or-... node generate.mjs <prompt.txt> <out.png> --provider openrouter
+//     [--model google/gemini-nano-banana-2.1] [--aspect 4:3] [--ref <image>]...
 //
 // --provider auto (the default) uses OpenRouter when OPENROUTER_API_KEY is set, else Google
-// when GEMINI_API_KEY is set. A "google/" prefix on a Google model id is dropped.
+// when GEMINI_API_KEY is set. The default model is Nano Banana 2.1 on both; a "google/"
+// prefix on a Google model id is dropped, and added for OpenRouter when missing.
 //
-// <prompt.txt> holds the full prompt (scene + the style block from references/image-prompt.md).
-// --ref attaches an earlier picture from this blog as a style reference (repeatable), so a
-// post's pictures match each other. Then convert the PNG with render.mjs.
+// <prompt.txt> holds the full prompt (opening line, scene, the style block from the style's
+// guide in references/, the text rule). --ref attaches a picture (repeatable): the style's
+// examples, a post's earlier picture to keep a character, or a photograph to draw on.
+// Then convert the PNG with render.mjs.
 import { readFile, writeFile } from 'node:fs/promises';
 
 const args = process.argv.slice(2);
@@ -28,8 +31,8 @@ if (provider === 'auto') {
   provider = !process.env.OPENROUTER_API_KEY && process.env.GEMINI_API_KEY ? 'google' : 'openrouter';
 }
 const google = provider === 'google';
-let model = opt('model', google ? 'gemini-3.1-flash-image' : 'google/gemini-nano-banana-2.1');
-if (google) model = model.replace(/^google\//, '');
+let model = opt('model', 'gemini-nano-banana-2.1');
+model = google ? model.replace(/^google\//, '') : model.includes('/') ? model : `google/${model}`;
 const aspect = opt('aspect', '4:3');
 const [promptFile, output] = args;
 const keyName = google ? 'GEMINI_API_KEY' : 'OPENROUTER_API_KEY';
@@ -92,6 +95,10 @@ for (let tries = 1; busy(res.status) && tries <= 3; tries++) {
 const body = await res.json();
 if (!res.ok) {
   console.error(`${res.status}: ${JSON.stringify(body.error ?? body)}`);
+  if (/spend(ing)? cap/i.test(JSON.stringify(body))) {
+    console.error('The Google project is at its monthly spend cap (set in AI Studio, separate from its credit). '
+      + '"Rate-limited to prevent exceeding" lifts in a minute or two; "has exceeded" does not: ask Adjie to raise the cap.');
+  }
   process.exit(1);
 }
 

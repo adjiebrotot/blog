@@ -5,7 +5,7 @@
     python3 _build/focus.py --new <picture>       # print the line to add for a new picture
     python3 _build/focus.py --preview DIR         # check, and draw every crop to look at
 
-The rule: .claude/skills/wikihow-illustration/references/focus-box.md.
+The rule: .claude/skills/editorial-illustration/references/focus-box.md.
 
 1. MISSING: every illustration (*-ill-*.webp in assets/img/) and every picture a post sets as
    `thumbnail:` or `share_image:`, or og.mjs uses for the home card, needs a focus box.
@@ -161,7 +161,7 @@ def main():
             if (IMG / name).exists():
                 preview(name, box, out)
         print(f'Previews in {out}/')
-    print('OK' if not problems else f'{problems} to fix (rule: .claude/skills/wikihow-illustration/references/focus-box.md)')
+    print('OK' if not problems else f'{problems} to fix (rule: .claude/skills/editorial-illustration/references/focus-box.md)')
     return 1 if problems else 0
 
 
