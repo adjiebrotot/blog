@@ -12,6 +12,9 @@ fig.add(component)        # stacked top to bottom, `gap` apart
 @fig.draw                 # free drawing: def draw(c, lang): ... (return a height to fix it)
 ```
 
+`source`, `note`: the text only. The page adds "Source:" / "Sumber:" and "Note:" / "Catatan:"
+from `_data/i18n.yml`; writing them again prints the word twice.
+
 `name` is the file name and page id: `<prefix>-pi-<subject>` (`gsl-pi-real-wages`). `kind`:
 `chart`, `map`, `infographic`, `flow`, `engineering` (flow/engineering skip the unit and
 outlier questions). Text values are `{'en': ..., 'id': ...}` or plain strings. `tr(v, lang)`

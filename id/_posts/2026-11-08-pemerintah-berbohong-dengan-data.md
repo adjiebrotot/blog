@@ -114,17 +114,9 @@ Masalahnya, menurut metodologi yang diterbitkan BPS (2013), harga dicatat dengan
 
 **Bagaimana melihat kenyataannya?** Lihatlah kenaikan harga kumulatif, bukan laju bulanannya. Menurut data Bank Dunia, harga konsumen di Indonesia sudah naik sekitar 31% dari 2015 sampai 2024.[^cpi] Tentu saja deflasi juga bukan tujuan, karena harga yang turun terus-menerus biasanya menandakan ekonomi yang lesu. Pertanyaan yang lebih penting adalah apakah upah naik lebih cepat daripada harga, alias apakah upah riil ikut naik.
 
-Grafik di bawah menunjukkan upah riil, yaitu upah dibagi IHK, dengan 2019 sebagai titik awal (2019 = 100). Garis biru menunjukkan upah riil di Australia, sedangkan garis merah menunjukkan upah riil di Indonesia.[^upahriil]
+Grafik di bawah menunjukkan upah riil, yaitu upah dibagi IHK, dengan 2019 sebagai titik awal (2019 = 100).
 
-```mermaid
-%%{init: {"themeVariables": {"xyChart": {"plotColorPalette": "#5A91E8, #E63939"}}}}%%
-xychart-beta
-  title "Upah riil, 2019 = 100"
-  x-axis [2019, 2020, 2021, 2022, 2023, 2024, 2025]
-  y-axis "Indeks" 88 --> 104
-  line [100, 100.8, 99.9, 96.5, 94.9, 95.4, 95.9]
-  line [100, 93.1, 91.0, 97.8, 97.7, 98.3, 98.3]
-```
+{% include pi/gsl-pi-real-wages-id.html %}
 
 Meski inflasi Indonesia dalam beberapa tahun terakhir tergolong rendah, rata-rata upah buruh pada 2025 (Rp3,33 juta sebulan) hanya bisa membeli barang dan jasa 1,7% lebih sedikit daripada upah pada 2019 (Rp2,91 juta).[^upahriil] Supaya adil, perlu dicatat bahwa upah riil di Australia juga turun, bahkan lebih dalam, setelah lonjakan inflasi pada 2022. Artinya, di negara mana pun, inflasi yang rendah belum tentu berarti upah mampu mengejar harga. Cara lain yang membantu adalah membandingkan harga dengan penghasilan, misalnya harga rumah dengan penghasilan setahun, atau uang sekolah dengan median upah.
 
@@ -175,14 +167,7 @@ Harus saya akui, kalau dilihat dari angka resmi yang biasa dikutip ini saja, pem
 
 Seberapa besar utang yang dititipkan ke BUMN Karya terlihat dari empat perusahaan yang sahamnya tercatat di bursa, yaitu Waskita Karya (WSKT), Wijaya Karya (WIKA), Adhi Karya (ADHI), dan PP (PTPP). Grafik di bawah menunjukkan total liabilitas (kewajiban) keempatnya. Hanya dalam tiga tahun, totalnya melonjak lebih dari tiga kali lipat, dari Rp60,4 triliun pada 2015 menjadi Rp197,5 triliun pada 2018, di tengah gencarnya pembangunan jalan tol dan infrastruktur, lalu bertahan di atas Rp200 triliun sampai 2023 sebelum turun menjadi Rp188,7 triliun pada 2024. Liabilitas Waskita Karya sendiri naik dari Rp20,6 triliun menjadi Rp95,5 triliun pada periode yang sama, dan Waskita Karya serta Wijaya Karya akhirnya harus merestrukturisasi utangnya dengan bank pada 2023 sampai 2024.[^karya] Tidak sepeser pun dari liabilitas itu dihitung sebagai utang pemerintah.
 
-```mermaid
-%%{init: {"themeVariables": {"xyChart": {"plotColorPalette": "#E63939"}}}}%%
-xychart-beta
-  title "Total liabilitas WSKT, WIKA, ADHI, dan PTPP (Rp triliun)"
-  x-axis [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
-  y-axis "Rp triliun" 0 --> 240
-  bar [60.4, 98.4, 156.2, 197.5, 207.2, 212.5, 215.5, 215.6, 213.1, 188.7]
-```
+{% include pi/gsl-pi-soe-liabilities-id.html %}
 
 **Bagaimana melihat kenyataannya?** Pertama, hitunglah utang sektor publik secara keseluruhan, termasuk utang BUMN. Kedua, lihat ongkosnya, yaitu berapa bagian pendapatan negara yang habis untuk membayar bunga. Menurut hitungan saya dari data IMF, bunga bersih yang dibayar pemerintah Indonesia menelan 16,3% dari pendapatannya pada 2025, tertinggi di ASEAN dan ketiga tertinggi dari 48 negara, setelah Kosta Rika (29,8%) dan Meksiko (24,4%).[^imfint] Di Australia porsinya hanya 2,6%, dan di Jepang, yang utangnya 204,8% PDB, hanya 0,5%, seperti terlihat pada grafik di bawah.
 

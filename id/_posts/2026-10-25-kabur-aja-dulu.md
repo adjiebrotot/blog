@@ -116,15 +116,7 @@ Kamu bisa menyusun skenariomu sendiri di [Cost of Living Comparator](https://too
 
 Ambil contoh iPhone 18 Pro 256GB yang baru dirilis bulan ini. Harga resminya sekitar Rp27,5 juta di Indonesia, A$2.099 di Australia, dan S$1.899 di Singapura.[^iphone] Kalau dikonversi dengan kurs A$1 = Rp12.710 dan S$1 = Rp14.152, harga di Australia dan Singapura setara dengan Rp26,7 juta dan Rp26,9 juta, hampir sama dan malah sedikit lebih murah. Sekarang bandingkan harga itu dengan gaji bersih pekerja berupah minimum di ketiga kota:
 
-```mermaid
-xychart-beta
-  title "Berapa hari kerja dengan upah minimum untuk membeli iPhone 18 Pro?"
-  x-axis ["Jakarta", "Perth", "Singapura"]
-  y-axis "hari kerja" 0 --> 110
-  bar [104, 12, 25]
-```
-
-*Dihitung dari gaji bersih pekerja berupah minimum (Rp5,73 juta, A$3.769, dan S$1.664 sebulan), dengan 21,7 hari kerja per bulan.*
+{% include pi/kad-pi-iphone-days-id.html %}
 
 Di Jakarta, pekerja bergaji UMP harus bekerja sekitar 4,8 bulan untuk membeli satu iPhone, sementara di Perth cukup sekitar 12 hari kerja dan di Singapura sekitar 25 hari. Untuk pekerja profesional, selisihnya mengecil, tetapi masih jauh: 2,8 bulan di Jakarta, dibandingkan dengan sekitar 9 hari kerja di Perth dan 8 hari di Singapura.
 

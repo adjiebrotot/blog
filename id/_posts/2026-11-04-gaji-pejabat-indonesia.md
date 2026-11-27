@@ -135,13 +135,7 @@ Jarak antara gaji presiden dan upah pekerja di Indonesia termasuk yang paling le
 | Indonesia | Rp62,74 juta sebulan[^setkab] | Rp3,33 juta sebulan (rata-rata)[^bpsupah] | 18,8 kali |
 | Filipina | ₱449.157 sebulan[^ph] | ₱21.544 sebulan (rata-rata pekerja penuh waktu)[^ph] | 20,8 kali |
 
-```mermaid
-xychart-beta horizontal
-  title "Gaji pemimpin, berapa kali upah pekerja di negaranya"
-  x-axis ["Tiongkok", "Norwegia", "Vietnam", "Inggris", "AS", "Malaysia", "Korsel", "Thailand", "Jepang", "Australia", "Indonesia", "Filipina"]
-  y-axis "kali lipat" 0 --> 22
-  bar [1.9, 3.3, 3.8, 4.5, 7.8, 7.8, 7.9, 8.0, 8.3, 8.4, 18.8, 20.8]
-```
+{% include hbar.html id="gpi-leader-pay" %}
 
 Untuk Indonesia dan Filipina, kelipatan di tabel ini bisa jadi masih terlalu rendah. Upah rata-rata Indonesia kemungkinan besar lebih tinggi daripada mediannya, karena segelintir orang bergaji sangat besar menarik rata-rata ke atas, sedangkan angka upah Filipina berasal dari survei perusahaan formal dengan sedikitnya 10 pekerja, sehingga pekerja sektor informal yang upahnya lebih rendah tidak ikut terhitung.
 
@@ -160,13 +154,7 @@ Pola yang sama muncul ketika yang dibandingkan adalah anggota parlemen biasa. Un
 | Filipina | ₱300.961 sebulan (gaji pokok saja)[^mpph] | ₱21.544 sebulan (rata-rata pekerja penuh waktu)[^ph] | 14,0 kali |
 | Indonesia | sekitar Rp74,2 juta sebulan[^dpr] | Rp3,33 juta sebulan (rata-rata)[^bpsupah] | 22,3 kali |
 
-```mermaid
-xychart-beta horizontal
-  title "Gaji anggota parlemen, berapa kali upah pekerja di negaranya"
-  x-axis ["Norwegia", "Inggris", "AS", "Australia", "Jepang", "Korsel", "Thailand", "Malaysia", "Filipina", "Indonesia"]
-  y-axis "kali lipat" 0 --> 24
-  bar [1.9, 2.5, 3.4, 4.2, 4.5, 4.7, 7.2, 8.7, 14.0, 22.3]
-```
+{% include hbar.html id="gpi-mp-pay" %}
 
 Tiongkok dan Vietnam sengaja tidak saya masukkan ke tabel anggota parlemen, karena sebagian besar wakil rakyat di kedua negara itu bekerja paruh waktu dan tetap menjalani pekerjaan utamanya, sehingga tidak ada gaji anggota parlemen yang bisa dibandingkan secara adil. Kelipatan Filipina pun masih terlalu rendah, karena saya hanya memakai gaji pokok anggota House of Representatives (majelis rendah Filipina), padahal mereka juga menerima berbagai tunjangan yang besarnya tidak diumumkan secara rinci.
 

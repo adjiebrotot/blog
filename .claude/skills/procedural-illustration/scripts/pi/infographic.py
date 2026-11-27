@@ -22,16 +22,18 @@ class Units(Component):
     per: the amount one icon stands for (1 day, 1 million people). key: the sentence that says so,
          e.g. {'en': '= 1 working day', 'id': '= 1 hari kerja'}; drawn once, with the icon, above.
     arrange: 'grid' (rows of icons, `cols` per line: {'w': 20, 'n': 10}) or 'stack' (one tower per
-             row, slabs piled up like phones on a table, side by side, every 10th slab ticked).
+             row, slabs piled up like phones on a table, side by side, every 10th slab ticked and a small
+             gap after every `group` slabs, default the tick step, so the count can be read in tens).
     value_text: per-row override; fmt: number format of the count.
     """
 
     def __init__(self, rows, icon='square', per=1, key=None, arrange='grid', cols=None, fmt=None,
-                 unit=None, slab=None, cap_icon=True, tick_every=10):
+                 unit=None, slab=None, cap_icon=True, tick_every=10, group=None):
         self.rows, self.icon, self.per, self.key = rows, icon, per, key
         self.arrange, self.cols = arrange, cols or {'w': 20, 'n': 10}
         self.fmt = make_fmt(fmt, [r['value'] for r in rows])
         self.unit, self.slab, self.cap_icon, self.tick_every = unit, slab, cap_icon, tick_every
+        self.group = group
         self.orient = 'h' if arrange == 'grid' else 'v'
 
     def table(self, lang):
@@ -49,7 +51,7 @@ class Units(Component):
         if not self.key:
             return y
         s = 18 if c.layout == 'w' else 16
-        if self.arrange == 'stack':
+        if self.arrange == 'stack' and self.icon in (None, 'square'):
             self._slab(c, 0, y + s / 2 - 3, s * 1.4, 'base')
             x = s * 1.4 + 8
         else:
@@ -138,8 +140,12 @@ class Units(Component):
         col_w = min(120 if L == 'w' else 74, (c.W - 40) / n * 0.62)
         step = (c.W - 30) / n
         units_max = maxv / self.per
+        # a visible gap after every `group` slabs (default: the tick step), so a reader can count in tens
+        g = self.group if self.group is not None else self.tick_every
+        G = (3.5 if L == 'w' else 3.0) if g else 0
+        gaps = lambda k: ((k - 1) // g) if (g and k > 0) else 0   # gaps below the top of the k-th slab
         top = y0 + VALUE[L] + 26
-        bottom = top + units_max * t
+        bottom = top + units_max * t + gaps(int(math.ceil(units_max - 1e-9))) * G
         for i, r in enumerate(self.rows):
             role = r.get('role', 'base')
             x = 30 + i * step + (step - col_w) / 2
@@ -148,29 +154,42 @@ class Units(Component):
             frac = units - k
             yb = bottom
             for j in range(k):
+                if g and j and j % g == 0:
+                    yb -= G
                 c.rect(x, yb - t, col_w, t - 0.6, fill=role, mark=False, rx=0.8)
                 yb -= t
             if frac > 0.05:
+                if g and k and k % g == 0:
+                    yb -= G
                 c.rect(x, yb - t * frac, col_w * 1, t * frac - 0.4, fill=role, mark=False)
                 yb -= t * frac
-            # the top unit seen from above: the stack's cap
-            d = min(col_w * 0.16, 9)
-            c.polygon([(x, yb), (x + d, yb - d * 0.6), (x + col_w + d, yb - d * 0.6), (x + col_w, yb)],
-                      fill=role + '-soft' if role in ('hl', 'a', 'base') else role, stroke=role, sw=1)
-            c.polygon([(x + col_w, yb), (x + col_w + d, yb - d * 0.6), (x + col_w + d, bottom - d * 0.6),
-                       (x + col_w, bottom)], fill=role, op=0.55)
-            if self.cap_icon and self.icon:
-                s = min(d * 1.6, 14)
-            c.marks.append((x, yb - d, x + col_w + d, bottom))
+            # the top unit seen from above: the stack's cap, drawn as the thing itself (a phone's
+            # screen, a note's face) so the tower reads as a pile of units, not a bar
+            dx = min(col_w * 0.28, 22)
+            dy = dx * 0.5
+            d = dx
+            soft = role + '-soft' if role in ('hl', 'a', 'base') else role
+            c.polygon([(x + col_w, yb), (x + col_w + dx, yb - dy), (x + col_w + dx, bottom - dy), (x + col_w, bottom)],
+                      fill=role)
+            c.polygon([(x + col_w, yb), (x + col_w + dx, yb - dy), (x + col_w + dx, bottom - dy), (x + col_w, bottom)],
+                      fill='shade')
+            top = [(x, yb), (x + dx, yb - dy), (x + col_w + dx, yb - dy), (x + col_w, yb)]
+            c.polygon(top, fill=soft, stroke=role, sw=1)
+            if self.cap_icon:
+                # an inset face: 10% margins along both edges of the top parallelogram
+                P = lambda u, v: (x + u * col_w + v * dx, yb - v * dy)
+                c.polygon([P(0.08, 0.16), P(0.08, 0.84), P(0.86, 0.84), P(0.86, 0.16)], fill=role)
+                c.polyline([P(0.91, 0.38), P(0.91, 0.62)], stroke=role, sw=1.6, cap='round')
+            c.marks.append((x, yb - dy, x + col_w + dx, bottom))
             # every tenth unit ticked on the left, so the count can be read off the tower
             if self.tick_every and i == 0:
                 for m in range(self.tick_every, int(units_max) + 1, self.tick_every):
-                    yy = bottom - m * t
-                    c.line(4, yy, 24, yy, stroke='grid', sw=1)
+                    yy = bottom - m * t - gaps(m) * G
+                    c.line(30, yy, 40, yy, stroke='axis', sw=1)
                     if m % (self.tick_every * (5 if units_max > 60 else 2)) == 0:
-                        c.text(0, yy, str(m), TICK[L], 400, 'label', 'start', 'middle',
+                        c.text(26, yy, str(m), TICK[L], 400, 'label', 'end', 'middle',
                                kind='tick')
-            c.text(x + col_w / 2 + d / 2, yb - d - 6, self.value(r, lang), VALUE[L] + (3 if L == 'w' else 1), 700,
+            c.text(x + col_w / 2 + dx / 2, yb - dy - 6, self.value(r, lang), VALUE[L] + (3 if L == 'w' else 1), 700,
                    ink(role) if role != 'base' else 'ink', 'middle', 'bottom', kind='value')
             hl = role == 'hl'
             lb = c.text(x + col_w / 2, bottom + 10, tr(r['label'], lang), LABEL[L], 700 if hl else 500,

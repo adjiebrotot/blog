@@ -357,7 +357,9 @@ class Bars(Component):
         for i, t in enumerate(texts):
             if i in keep:
                 hl = len(t) > 4 and t[4]
-                c.text(t[0], t[1] - 6, t[2], size, 700 if hl else 600, t[3], 'middle', 'bottom', kind='value')
+                # a halo keeps a label legible where it overhangs a taller neighbour on a phone
+                c.text(t[0], t[1] - 6, t[2], size, 700 if hl else 600, t[3], 'middle', 'bottom', kind='value',
+                       halo=True)
         # category labels (thinned on the narrow layout when they collide)
         labs = [tr(it['label'], lang) for it in self.items]
         xs = [b.mid(i) for i in range(len(self.items))]
