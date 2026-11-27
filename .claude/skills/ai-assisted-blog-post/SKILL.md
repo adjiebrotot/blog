@@ -198,7 +198,7 @@ examples, and why each fits its readers. "Same in both" is fine.>
 | S1 | Screenshot | <what the image shows> | <section> | <how it will be made> |
 | I1 | Illustration | <style (wikiHow / Live-action hybrid / Tempo / Summer flat / Renaissance collage), the point, the idea that carries it (who does what, with which object)> | <section> | generated with `editorial-illustration` |
 | I2 | Isometric scene | <the place or system, who is in it, the props that make it read> | <section> | drawn with `isometric-illustration` |
-| M1 | Mermaid | <diagram type: flowchart, xychart-beta, pie...> showing <...> | <section> | <data behind it> |
+| P1 | Procedural figure | <form: bars, line, units, flow, map, 3D, SLD...> showing <the point, as its title> | <section> | <data and source behind it; drawn with `procedural-illustration`> |
 | K1 | KaTeX | <the equation, in words> | <section> | <every symbol it defines> |
 | X1 | Extra | table / alert / footnotes / TOC | <section> | |
 
@@ -260,7 +260,7 @@ the blog rules (no em-dashes,
 saya-kamu in Indonesian). For a post in both languages, each one is written natively by
 its own writer, with different characters or examples if that suits each readership.
 
-**Features.** Only what earns its place. A post needs no Mermaid or KaTeX just because
+**Features.** Only what earns its place. A post needs no figure or KaTeX just because
 the blog can draw them. Per type:
 
 - **Evidence:** the figure or claim, its evidence class, date, provenance and material
@@ -291,8 +291,12 @@ the blog can draw them. Per type:
   a dark and a light SVG. Give the brief (what it shows and why, who is in it, the props,
   still or animated) and its alt text. Use it where the reader needs to see how parts fit
   together or how many there are; no words in the art.
-- **Mermaid:** the diagram type and the data or steps it draws. Charts use
-  `xychart-beta` or `pie` and need real numbers from a checked evidence row, with model inputs and assumptions where applicable.
+- **Procedural figure:** a chart, infographic, flowchart, map, 3D graph or engineering
+  diagram drawn in code by the `procedural-illustration` skill (Mermaid is no longer used for
+  charts or flowcharts). Give the form (its `references/chart-chooser.md`), the title as the
+  point, the subtitle (metric, unit, period), the source, and the numbers from a checked
+  evidence row, with model inputs and assumptions where applicable. The figure carries its
+  own labels in both languages; its Indonesian words follow `bahasa-indonesia`.
 - **KaTeX:** the equation in words or LaTeX, and the symbols it defines. A simple sum for
   emphasis stays in the sentence as text (see `adjie-writing-style`).
 - **Extras:** comparison tables, `> [!NOTE]` alerts, footnotes for sources, `* TOC`.
