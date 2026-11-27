@@ -50,3 +50,12 @@ choices. Save future explicit decisions here and in the shared voice reference. 
 defaults and evaluator rewrites are never approval evidence. Generalise only with repeated
 consistent contextual choices or an explicit author instruction; retain context when choices
 differ and ask if the same context conflicts.
+
+## Tool site (tool.adjiebrotots.com), 27 November 2026
+
+| ID | Date | Topic/passage | Options | Exact author selection or own wording | Reason if given | Context/scope | Approval provenance |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| W22 | 2026-11-27 | Country tax pages: lead-ins in a strategy block | "Cocok untuk:" / "Catatan:" vs "Siapa yang cocok:" / "Yang perlu diwaspadai:" | "Cocok untuk:" and "Catatan:" | "simple" | All country pages of the Global Income Tax Calculator; "Perlu diingat:" also became "Catatan:" | Explicit author selection in chat, 27 Nov 2026 |
+| W23 | 2026-11-27 | Tool page names | "Kalkulator Gaji Bersih ...", "Kalkulator PPh 21 ..." vs "Tool ..." | Keep "Kalkulator ..." | "Fine" | Page names, titles and search snippets on the tool site; prose still says *tool* | Explicit author selection in chat, 27 Nov 2026 |
+| W24 | 2026-11-27 | 404 page heading (a train picture) | "Halaman yang kamu cari tidak ketemu." vs "Halaman ini ketinggalan kereta." | "Halaman ini ketinggalan kereta." | Keep the joke | Tool site 404 page | Explicit author selection in chat, 27 Nov 2026 |
+| W25 | 2026-11-27 | Rent vs buy tool: button that opens the CAGR helper | "Tampilkan *tool*" vs "Buka kalkulator CAGR" | "Buka kalkulator CAGR" (and "Tutup kalkulator CAGR") | "fine for this context" | That button; contextual, not a rule to call the tools *kalkulator* | Explicit author selection in chat, 27 Nov 2026 |
