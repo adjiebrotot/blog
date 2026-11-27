@@ -25,7 +25,7 @@ US$9.5 trillion a day. That was the foreign-exchange market in April 2025.[^bis]
 
 A bigger number beside your currency is not necessarily a reason to celebrate. A stronger dollar can buy you a cheaper overseas holiday while making life harder for the business that pays your wages. A weaker one can make that holiday more expensive while helping local businesses win overseas customers.[^exchange]
 
-<img src="/assets/img/fx-ill-money-changer.webp" alt="A woman holds banknotes at a currency-exchange counter beneath a screen showing upward and downward arrows" width="1200" height="670" loading="lazy">
+<img src="/assets/img/fx-ill-money-changer.webp" alt="A woman holding banknotes at a currency-exchange counter in a mall looks up at a board showing an up arrow and a down arrow" width="1376" height="768" loading="lazy">
 
 Appreciation means your currency buys more of another currency; depreciation means it buys less. Watch the quotation: fewer rupiah per US dollar means a stronger rupiah, while fewer US cents per Australian dollar means a weaker Aussie dollar. So who gains from a move, and who pays?
 
@@ -88,7 +88,7 @@ Depreciation makes a country's accommodation, meals and services cheaper for for
 
 China shows the goods side. Robin Brooks of the Brookings Institution estimates that the real effective renminbi is undervalued by more than 20% assuming an equilibrium current-account surplus of 0.5%, and still by more than 10% at 2%, and points to China's large and growing non-commodity trade surplus.[^china-analysis] A relatively cheap yuan keeps Chinese goods competitive abroad.
 
-<img src="/assets/img/fx-ill-weak-currency-split.webp" alt="An overseas traveller worries about a shop price while a local shopkeeper welcomes a foreign tourist" width="1456" height="1087" loading="lazy">
+<img src="/assets/img/fx-ill-weak-currency-split.webp" alt="In a small souvenir shop, a smiling shopkeeper hands a wrapped parcel to a happy foreign tourist who holds out a few banknotes" width="1200" height="896" loading="lazy">
 
 ### Imported goods, inputs and fuel cost more, so your cost of living rises (−)
 

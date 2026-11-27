@@ -6,7 +6,7 @@ date: 2026-11-04 09:00:00 +0800
 last_modified_at: 2026-11-11
 tags: [politics]
 image: /assets/img/og/indonesian-politicians-pay.jpg
-image_alt: "A heavy-set Indonesian politician in a dark suit and black peci sits on a gold throne eating a fried chicken leg while ordinary Indonesians look on in shock, and an Australian official in a plain suit stands to one side waving a small Australian flag"
+image_alt: "A heavy-set Indonesian politician in a dark suit and black peci sits on a gold throne eating a fried chicken leg while ordinary Indonesians look on in shock, and an Australian official in a plain grey suit rides past on an ordinary bicycle, waving a small Australian flag"
 share_image: /assets/img/gpi-ill-raja-pejabat.webp
 translation: politician-pay
 keywords: [Indonesian politicians pay, DPR salary, Indonesian president salary, Australian MP salary, Australian prime minister salary, politician pay vs minimum wage, DPR allowances, reses funds]
@@ -70,7 +70,7 @@ An Indonesian ex-president, under Law 7 of 1978, keeps a pension of 100% of the 
 A member of the DPR, Indonesia's 580-member House of Representatives, gets pay and allowances worth 22.3 times the average Indonesian wage (19.7 times after tax), and about 85 times once recess funds are counted. An Australian backbench MP's pay and allowances come to 4.2 times the median Australian wage, and about 8.6 times with everything included.
 
 <figure>
-<img src="/assets/img/gpi-ill-raja-pejabat.webp" alt="A heavy-set Indonesian politician in a dark suit and black peci sits on a gold throne eating a fried chicken leg while ordinary Indonesians look on in shock, and an Australian official in a plain suit stands to one side waving a small Australian flag" width="1456" height="1087" loading="lazy">
+<img src="/assets/img/gpi-ill-raja-pejabat.webp" alt="A heavy-set Indonesian politician in a dark suit and black peci sits on a gold throne eating a fried chicken leg while ordinary Indonesians look on in shock, and an Australian official in a plain grey suit rides past on an ordinary bicycle, waving a small Australian flag" width="1200" height="896" loading="lazy">
 <figcaption>Two ways to treat the people you elect. One gets a throne and a chicken leg, the other gets a small flag and a budget he has to report on.</figcaption>
 </figure>
 

@@ -52,7 +52,7 @@ Tarifnya **progresif per lapisan**: Rp60 juta pertama kena 5%, kelebihannya samp
 Mulai tahun pajak 2025 (yang dilaporkan awal 2026), SPT Tahunan disampaikan lewat Coretax, dengan NIK sebagai nomor identitas pajak. Coretax tidak mengubah aturannya, hanya mengubah tombol yang kamu klik.[^ddtcfaq]
 
 <figure>
-<img src="/assets/img/psg-ill-lapor-spt.webp" alt="Pasangan suami istri duduk di meja makan, istri menunjuk layar laptop, suami memegang selembar kertas di samping kalkulator" width="1456" height="1087" loading="lazy">
+<img src="/assets/img/psg-ill-lapor-spt.webp" alt="Pasangan suami istri duduk di meja makan, istri menunjuk laptop, suami memegang selembar kertas, dengan kalkulator dan segelas teh di meja" width="1200" height="896" loading="lazy">
 </figure>
 
 ### Kalau gabung
@@ -143,7 +143,7 @@ Kalimat ini yang paling sering saya dengar, dan ada juga versi romantisnya: "Sua
 Kalau penghasilan salah satu dari kalian di bawah PTKP sendiri sementara yang satu lagi bergaji cukup besar, memilih gabung hanya untuk menghindari kerepotan bisa membuat kalian membayar beberapa juta rupiah lebih banyak setiap tahun.
 
 <figure>
-<img src="/assets/img/psg-ill-jalan-jalan.webp" alt="Seorang perempuan menutup ritsleting koper di kasur; di atas koper ada topi pantai dan kacamata hitam, dan di sampingnya ada amplop" width="1456" height="1087" loading="lazy">
+<img src="/assets/img/psg-ill-jalan-jalan.webp" alt="Seorang perempuan menutup ritsleting koper di kasur; di atas koper ada topi pantai dan kacamata hitam, dan di sampingnya ada amplop" width="1200" height="896" loading="lazy">
 </figure>
 
 **Urusan hati boleh saja diserahkan pada cinta, tetapi untuk urusan pajak, biarkan hitungan yang mengambil keputusan.**

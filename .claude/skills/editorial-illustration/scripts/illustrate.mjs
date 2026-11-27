@@ -3,7 +3,7 @@
 //   node illustrate.mjs <style> <prompt.txt> <out.png> [options]
 //
 // 1. Prompt wall (no API call, no cost). The prompt holds the start of its own style block
-//    (and, for a propaganda treatment, its treatment line); no other style's block or line;
+//    (and, for a style with treatments, its treatment line); no other style's block or line;
 //    and, outside its own block, none of the words another style owns (styles/*/style.json).
 // 2. Reference wall. A --ref may not come from another style's folder, nor be a post picture
 //    whose prompt in _illustrations/ was written for another style.
@@ -46,10 +46,6 @@ const [style, promptFile, out, ...rest] = args;
 
 const styles = await loadStyles();
 const usage = `usage: sh generate.sh <${Object.keys(styles).join('|')}> <prompt.txt> <out.png> [--aspect 4:3] [--ref <image>]... [--allow <word>]... [--lint-only] [--no-judge]`;
-if (style === 'propaganda') {
-  console.error('pick a treatment: propaganda-print, propaganda-painted, propaganda-jet or propaganda-montage (styles/propaganda/guide.md)');
-  process.exit(1);
-}
 if (!styles[style] || !promptFile || (!out && !lintOnly)) {
   console.error(styles[style] || !style ? usage : `unknown style "${style}". ${usage}`);
   process.exit(1);

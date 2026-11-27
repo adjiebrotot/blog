@@ -4,10 +4,12 @@ The blog's wikiHow illustration briefs (the files one folder up) rewritten for t
 styles of the `editorial-illustration` skill: `<name>--tempo.txt`, `<name>--flat.txt` and
 `<name>--collage.txt`, made on 26 November 2026 to try the styles on real posts. They are
 candidates, not live pictures: the posts still use the originals until Adjie picks a
-version. The generated pictures (WebP, 1456 px wide) are kept outside the repo, in the
-review page Adjie picks from (https://claude.ai/artifact/FiKFRNunvxktpoThREwoED, files
-`full/<name>--<style>.webp`), so use those rather than regenerating. A picked one becomes the post's picture (WebP in `assets/img/`), and its prompt
-moves up a folder as that picture's prompt file.
+version.
+
+**Picked (27 November 2026):** politics posts use Tempo, finance posts use the live-action
+hybrid. Those posts' prompts (`gpi`, `gsl`, `cbf` in Tempo; `rvo`, `debt`, `kad`, `psg`, `pns`,
+`fx` in hybrid) are now live and have moved up a folder; the remaining files here are
+unused candidates.
 
 Regenerate one with:
 

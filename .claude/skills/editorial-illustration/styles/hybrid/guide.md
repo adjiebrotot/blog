@@ -69,7 +69,7 @@ carries the setting. Good pairings:
 | Field work, the real economy | an engineer in a hard hat with a clipboard explains something to a farmer in a real rice field |
 
 It suits a personal story, travel, daily life, work and a case study's character in a real
-city. For a satirical point, use Tempo or the propaganda poster; for a step, wikiHow.
+city. For a satirical point, use Tempo; for a step, wikiHow.
 
 ## The prompt
 

@@ -6,9 +6,7 @@
 #   GEMINI_API_KEY=... sh generate.sh <style> <prompt.txt> <out.png> [options]
 #   OPENROUTER_API_KEY=... sh generate.sh <style> <prompt.txt> <out.png> [options]
 #
-# <style>: wikihow, tempo, flat, collage, hybrid (live-action hybrid), or the propaganda
-# poster in one of its four treatments: propaganda-print, propaganda-painted, propaganda-jet
-# or propaganda-montage. Each style is a sealed folder: styles/<style>/ (guide.md,
+# <style>: wikihow, tempo, flat, collage or hybrid (live-action hybrid). Each style is a sealed folder: styles/<style>/ (guide.md,
 # style.json, examples/). The walls between them: SKILL.md, "The great wall".
 #
 # Options: --aspect 4:3 (default), 16:9 or 3:4; --model <id> (default: Nano Banana 2.1);

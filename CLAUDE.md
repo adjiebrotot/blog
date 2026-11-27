@@ -6,9 +6,9 @@ GitHub Actions. How to write a post: `README.md`. How to write it in Adjie's voi
 `adjie-writing-style` skill (`.claude/skills/adjie-writing-style/`). To turn a concept or rough points into a
 post, plan first and write after approval: the `ai-assisted-blog-post` skill
 (`.claude/skills/ai-assisted-blog-post/`). For an illustration made with an image model, in
-one of six styles (a wikiHow step picture of a person doing the step, a *Tempo*-cover
-painting, a summer-novel flat cover, a Renaissance collage of modern things, a live-action
-hybrid of a photo with hand-drawn people, or a mid-century propaganda poster): the
+one of five styles (a wikiHow step picture of a person doing the step, a *Tempo*-cover
+painting, a summer-novel flat cover, a Renaissance collage of modern things, or a live-action
+hybrid of a photo with hand-drawn people; politics posts use Tempo, finance posts the hybrid): the
 `editorial-illustration` skill (`.claude/skills/editorial-illustration/`), Nano Banana on the
 Gemini API or OpenRouter, prompts kept in `_illustrations/`. For an isometric
 scene (a place or system with several people, buildings or machines, drawn in code as a dark

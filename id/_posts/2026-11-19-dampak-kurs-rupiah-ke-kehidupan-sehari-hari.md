@@ -25,7 +25,7 @@ US$9,5 triliun per hari: sebesar itulah transaksi di pasar valuta asing (valas) 
 
 Di pasar sebesar itu, mata uang yang menguat membuat liburan dan barang impor lebih murah, tetapi menyulitkan perusahaan tempatmu bekerja kalau perusahaan itu menjual ke luar negeri. Mata uang yang melemah berlaku sebaliknya: lebih mudah mencari pembeli di luar negeri, sementara liburan ke sana jadi lebih mahal.[^kurs]
 
-<img src="/assets/img/fx-ill-money-changer.webp" alt="Perempuan memegang uang di money changer dengan layar yang menunjukkan panah naik dan turun" width="1200" height="670" loading="lazy">
+<img src="/assets/img/fx-ill-money-changer.webp" alt="Perempuan memegang uang di money changer sebuah mal sambil menatap papan yang menunjukkan panah naik dan turun" width="1376" height="768" loading="lazy">
 
 Satu hal perlu diperjelas lebih dulu: rupiah menguat berarti kamu butuh lebih sedikit rupiah untuk membeli satu mata uang asing. Contohnya, kalau US$1 berubah dari Rp16.000 menjadi Rp14.000, rupiah menguat meski angka di papan kurs justru turun. Kalau US$1 naik dari Rp16.000 menjadi Rp18.000, rupiah melemah.
 
@@ -98,7 +98,7 @@ Mata uang yang melemah membuat hotel, makanan, dan jasa lokal lebih murah bagi w
 
 Barang ekspor China memperlihatkan hal yang sama. Robin Brooks dari Brookings memperkirakan pada Maret 2025 bahwa kurs efektif riil yuan, yaitu kurs terhadap mata uang mitra dagang yang sudah disesuaikan dengan inflasi, terlalu rendah lebih dari 20% kalau surplus transaksi berjalan yang dianggap seimbang adalah 0,5%, dan masih lebih dari 10% kalau 2%. Ia menunjuk surplus perdagangan non-komoditas China yang besar dan terus tumbuh.[^china-analisis] Menurut saya, yuan yang relatif murah inilah yang membuat barang China tetap kompetitif di luar negeri.
 
-<img src="/assets/img/fx-ill-weak-currency-split.webp" alt="Pelancong kesulitan membeli barang di luar negeri, sementara pemilik toko lokal melayani wisatawan asing" width="1456" height="1087" loading="lazy">
+<img src="/assets/img/fx-ill-weak-currency-split.webp" alt="Di toko suvenir kecil, pemilik toko tersenyum menyerahkan bungkusan kepada wisatawan asing yang gembira sambil menyodorkan uang" width="1200" height="896" loading="lazy">
 
 ### Bahan baku, energi, dan transportasi lebih mahal, jadi biaya hidup naik (−)
 

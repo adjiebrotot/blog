@@ -1,6 +1,6 @@
 // Loads the sealed style folders (styles/<folder>/style.json, guide.md, examples/) into one
-// entry per style key. A folder is one style; the propaganda folder holds one style with four
-// treatments, each its own key (propaganda-print, ...). Nothing here mixes two folders: every
+// entry per style key. A folder is one style; a folder whose style.json has "treatments"
+// holds one style with several treatments, each its own key (<folder>-<treatment>). Nothing here mixes two folders: every
 // path an entry carries points inside its own folder.
 import { readFile, readdir } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';

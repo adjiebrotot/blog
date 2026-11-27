@@ -6,7 +6,7 @@ date: 2026-11-08 09:00:00 +0800
 last_modified_at: 2026-11-11
 tags: [politics]
 image: /assets/img/og/how-governments-lie-with-statistics.jpg
-image_alt: "A heavy-set man in a light blue shirt and black peci shouts \"Our economy is skyrocketing!\" from a podium, one finger pointing up, while a crowd cheers behind him"
+image_alt: "A heavy-set man in a light blue shirt and black peci shouts \"Our economy is skyrocketing!\" from a podium, pointing at a red arrow on the wall whose tip is held up by tape and a pencil"
 og_position: "4% 50%"
 share_image: /assets/img/gsl-ill-podium-en.webp
 translation: government-statistics
@@ -25,8 +25,8 @@ bmc_message: "This coffee's price rose 0% this month (official figure). Buy me o
 Every number in an "our economy is skyrocketing" speech may be true. A government rarely needs to invent a statistic: it can choose which one to show, how to define it and what to leave out.
 
 <figure>
-<img src="/assets/img/gsl-ill-podium-en.webp" alt="A heavy-set man in a light blue shirt and black peci stands at a podium with his finger pointing up, shouting the words in his speech bubble, &quot;Our economy is skyrocketing!&quot;, while a crowd cheers behind him" width="1456" height="1087" loading="lazy">
-<figcaption>Every number on his screen may be true. That is what makes the speech work.</figcaption>
+<img src="/assets/img/gsl-ill-podium-en.webp" alt="Caricature of a heavy-set man in a light blue shirt and black peci shouting &quot;Our economy is skyrocketing!&quot; from a podium, pointing at a red zigzag arrow on the wall behind him whose tip is held up by tape and a pencil" width="1200" height="896" loading="lazy">
+<figcaption>Every number on his chart may be true. That is what makes the speech work.</figcaption>
 </figure>
 
 Let's examine seven headline figures: unemployment, GDP per capita, GDP growth, inflation, poverty, the Gini ratio, and the deficit and debt. For each, I compare what it measures with what it leaves out, using Indonesia, its ASEAN neighbours and the OECD.

@@ -1,11 +1,11 @@
 ---
 name: editorial-illustration
-description: Make an illustration for a post on this blog with an image model, in one of six styles: wikiHow (one person doing one step, soft shading, a pale background), Tempo (a news-magazine cover painting, a visual metaphor in gouache caricature), Summer flat (a retro beach-read novel cover, a stylish figure in sunglasses), Renaissance collage (modern things in old-master techniques on torn paper), Live-action hybrid (hand-drawn grayscale people sketched into a real photograph) or Propaganda poster (a mid-century public poster: screen print, painted, jet-age graphic or photomontage). Saved as WebP in assets/img/ with a focus box. Use when Adjie asks for an illustration, a drawing, an image, a picture for a step or a section, a cover image that is not a screenshot or a chart, a style by name (wikiHow, Tempo, summer novel, collage, live-action, propaganda), a caricature, a slogan poster or a social card with a point of view. For an isometric picture, or a place or system with exact layout, use isometric-illustration.
+description: Make an illustration for a post on this blog with an image model, in one of five styles: wikiHow (one person doing one step, soft shading, a pale background), Tempo (a news-magazine cover painting, a visual metaphor in gouache caricature), Summer flat (a retro beach-read novel cover, a stylish figure in sunglasses), Renaissance collage (modern things in old-master techniques on torn paper) or Live-action hybrid (hand-drawn grayscale people sketched into a real photograph). Saved as WebP in assets/img/ with a focus box. Use when Adjie asks for an illustration, a drawing, an image, a picture for a step or a section, a cover image that is not a screenshot or a chart, a style by name (wikiHow, Tempo, summer novel, collage, live-action), a caricature or a social card with a point of view. For an isometric picture, or a place or system with exact layout, use isometric-illustration.
 ---
 
 # Illustration with an image model
 
-Six styles, each its own unique theme, walled off from the others (**The great wall**,
+Five styles, each its own unique theme, walled off from the others (**The great wall**,
 below). Each style is a sealed folder, `styles/<style>/`: its guide (`guide.md`), its data
 (`style.json`: the start of its style block, the words it owns, the description the judge
 reads, its examples) and its example pictures (`examples/`). Only the workflow is shared:
@@ -18,35 +18,36 @@ the generator, the keys, the checks and the focus box.
 | Summer flat | a summer beach-read novel cover | 3 or 4 flat colours plus black and white, crisp edges | a feeling: a light personal or money-habit point | `styles/flat/` | `flat` |
 | Renaissance collage | a scrapbook of torn old-master fragments | oil, sepia engraving, marble, fresco, gold leaf, torn paper | a big theme: history, wealth and power, eras compared | `styles/collage/` | `collage` |
 | Live-action hybrid | a photo with friendly doodled people in it | a real photograph, plus black brush-pen line art with grayscale fills | *who and where*: everyday people in a real place, a relatable moment | `styles/hybrid/` | `hybrid` |
-| Propaganda poster | a 1930s to 1960s public poster | four treatments: a flat-ink screen print, a realist oil painting, a jet-age graphic of diagonals, a photomontage | a national plan, a call to action, official optimism taken at its word | `styles/propaganda/` | `propaganda-print`, `-painted`, `-jet`, `-montage` |
 
 **Which style.** wikiHow shows a reader *how*: one person, one step, a pale background.
 Live-action hybrid shows *who and where*: people like the reader in a place that is real
 (a Jakarta sidewalk, a warung, an office, a train platform), friendly rather than pointed,
-and it can be drawn onto Adjie's own photograph. Tempo, Summer flat, the collage and the
-propaganda poster show *what the writer thinks*: a metaphor, a mood, a theme, a call to
-arms.
+and it can be drawn onto Adjie's own photograph. Tempo, Summer flat and the collage show
+*what the writer thinks*: a metaphor, a mood, a theme.
 `isometric-illustration` shows *how a place or system fits together*, drawn in code, with
 exact counts and a version for each theme. Keep one style through a post, so its pictures
 read as a set, unless Adjie asks otherwise.
 
+**By category (Adjie's choice, 27 November 2026):** a `politics` post uses **Tempo**, a
+`finance` post uses **Live-action hybrid**, in both languages. Other categories pick by the
+rule above.
+
 **The styles are the inspiration, not the brands or the sources.** Never ask for or keep a
 wikiHow logo, a *Tempo* masthead, cover lines, a price or a barcode, a book title or author
-name, a copy of a real painting, or a real poster's symbols, leaders or slogans. Never commit
-Adjie's samples to this public repo (they are not ours, and the poster samples are
-watermarked stock): every picture in `examples/` was generated from them and is ours to
+name, a copy of a real painting, Never commit Adjie's samples to this public repo (they are
+not ours): every picture in `examples/` was generated from them and is ours to
 keep. Never say in a caption or alt text that a picture is from wikiHow, *Tempo*, a book
-cover or a real poster.
+cover.
 
 ## The great wall
 
 Every style is its own world. A picture is made in exactly one style, from that style's
 folder alone, and nothing from another style may cross into it: not a word, not an idea, not
-a picture. Adjie's rule, after two leaks: a propaganda montage that came back with the
-collage's white cut-out borders and sepia, and a painted poster with Tempo's pushed
-caricature expression. Neither leaked through a file. They leaked through *words* (the
-poster's lines said "cut out", "ochre", "gouache"), an *idea* (the painted poster's scene
-was Tempo's grandmother-and-chilli example) and *examples* that had already drifted. So the
+a picture. Adjie's rule, after two leaks in a style since removed: one picture came back with the
+collage's white cut-out borders and sepia, another with Tempo's pushed caricature
+expression. Neither leaked through a file. They leaked through *words* (the prompt said
+"cut out", "ochre", "gouache"), an *idea* (the scene was Tempo's grandmother-and-chilli
+example) and *examples* that had already drifted. So the
 wall stands on all three, and on the finished picture too:
 
 1. **One picture, one style.** No blends, no "Tempo with a collage background", no borrowed
@@ -81,9 +82,8 @@ Where the walls run closest, and what keeps each pair apart:
 | Neighbours | Stays on its own side by |
 |---|---|
 | wikiHow / Live-action hybrid | colour drawing on a pale painted wash / grey drawing on a real colour photograph |
-| Tempo / propaganda painted | gouache caricature, violet shadows, odd angles, no words / realist oil, true-to-life calm faces, a big painted word |
-| Renaissance collage / propaganda montage | torn colour paper, old-master techniques, warm sepia / black-and-white photographs cut clean, flat red bars |
-| Summer flat / propaganda print and jet age | fashion figures in sunglasses, turquoise and pink, no texture / heroic figures or machines, brick red, cream, black or yellow and grey, print texture |
+| Tempo / Summer flat | gouache caricature, violet shadows, painted texture / fashion figures in sunglasses, 3 or 4 flat colours, crisp edges, no texture |
+| Tempo / Renaissance collage | one painted scene on one bold colour / torn fragments of many old-master techniques, warm sepia |
 
 ```
 brief → the idea → prompt in _illustrations/<name>.txt → generate.sh <style> → look, retry
@@ -137,7 +137,7 @@ Model ids change. List the current ones with
 Settle in a few lines (in the plan's features table, if the post goes through
 `ai-assisted-blog-post`):
 
-- **Style:** one of the six (the table above), the same for the whole post unless Adjie says
+- **Style:** one of the five (the table above), the same for the whole post unless Adjie says
   otherwise.
 - **The point:** one sentence: the step the picture shows, or what the section argues or
   feels.
@@ -145,8 +145,7 @@ Settle in a few lines (in the plan's features table, if the post goes through
   and the object in the hands; Tempo a visual metaphor with an everyday object; Summer flat
   a stylish person with one witty gesture; the collage a hero object plus four to six
   fragments, each in a named old technique; the hybrid a real place and a small human moment
-  in it; the propaganda poster a treatment, one idealised figure or machine, and words only
-  when they earn their place. Each guide has a table or recipe for this; take the idea from
+  in it. Each guide has a table or recipe for this; take the idea from
   this style's guide, never from another's (the great wall, rule 4). Pass the brief a test:
   someone who has not read the post should get the point from the description alone.
 - **Who:** age, skin, hair, clothes. Indonesian people and settings where the post is about
@@ -155,20 +154,18 @@ Settle in a few lines (in the plan's features table, if the post goes through
   description, for editorial comment on their public role: exaggerate the expression and
   posture, never their ethnicity or body, and never caricature a private person. **The
   reverse matters too:** a generic "heavy-set Indonesian politician in a peci" came back as a
-  clear likeness of the sitting president in the collage and Tempo tests, and a heroic
-  official in a peci pointing ahead came back as Sukarno in the propaganda test. When nobody
+  clear likeness of the sitting president in the collage and Tempo tests. When nobody
   real is meant, say so ("an invented face that resembles no real politician") and change
   the dress and the pose that point to someone; look at the face before using it. When
   someone real is meant, name them, and let Adjie decide.
-- **Words in the picture:** usually none; the propaganda poster often has a word or a
-  slogan, never by default. A short quoted phrase works (a speech bubble, a phone screen, a
-  ribbon banner, a slogan band); detailed writing (a receipt, a list, a screen of text)
+- **Words in the picture:** usually none. A short quoted phrase works (a speech bubble, a
+  phone screen, a ribbon banner); detailed writing (a receipt, a list, a screen of text)
   always becomes slop, so ask for "only wavy scribble lines, no readable words". With words,
   make one picture per
   language: for the second, attach the first picture with `--ref` and ask to "make it again
   exactly ... changing only the words: the quoted words now read exactly ..." (prompt in
-  `_illustrations/restyle/gsl-ill-podium-id--tempo.txt`). Tested in the Tempo, flat,
-  collage and propaganda styles: the same picture came back, only the words changed, spelled
+  `_illustrations/restyle/gsl-ill-podium-id--tempo.txt`). Tested in the Tempo, flat
+  and collage styles: the same picture came back, only the words changed, spelled
   right. Words on something small (a phone in a hand) can come out garbled: make the object
   big and the words "big bold letters on two lines", and zoom in to check every letter.
 - **Shape:** `4:3` in a post, `16:9` for a social card.
@@ -176,8 +173,7 @@ Settle in a few lines (in the plan's features table, if the post goes through
 ## Step 2: Write the prompt
 
 From the style's own guide only, in this order: the **opening line**, the **scene** (the
-guide says what goes in it and in which order), the **style block** word for word (and, for
-the propaganda poster, the treatment's line), then **one text rule** (`No text, no letters, no numbers.`, `No readable words.` for the collage, or `No text
+guide says what goes in it and in which order), the **style block** word for word, then **one text rule** (`No text, no letters, no numbers.`, `No readable words.` for the collage, or `No text
 except the exact words quoted in the scene.`). Read the guide's "What the tests taught" before
 the first try: it fixes the usual failures (a device facing away, props too small, a scowl
 instead of a frown, US dollars, the examples leaking into the scene).
@@ -194,8 +190,7 @@ GEMINI_API_KEY=... sh $K/scripts/generate.sh tempo _illustrations/<name>.txt <sc
 ```
 
 - The first argument is the style key from the table: `wikihow`, `tempo`, `flat`, `collage`,
-  `hybrid`, or `propaganda-print`, `-painted`, `-jet` or `-montage` (the poster's four
-  treatments; plain `propaganda` asks which).
+  or `hybrid`.
 - The script runs the great wall in three steps. First it checks the prompt, free: its own
   style block is there, no other style's block is, and no other style's word is used (exit
   2, nothing generated, with the reason). Then it generates with Nano Banana 2.1 and this
@@ -247,7 +242,7 @@ images on the blog, inside a `<figure>` when it has a caption:
 ```
 
 - **Alt text** says what the picture shows, in the post's language: what the person does and
-  with what, or "Caricature of ...", "Collage of ...", "Poster of ..." when it is one. Never
+  with what, or "Caricature of ...", "Collage of ..." when it is one. Never
   the style's source.
 - A picture can also be the social card (`image:` and `image_alt:` in the front matter).
   Cards work best wide: generate a version with `--aspect 16:9` and render it with
@@ -271,8 +266,7 @@ split picture shows only the seam. Follow `references/focus-box.md` exactly:
 What to box, by style: the person with the object in their hands (wikiHow); the caricature
 with the gesture or object that makes the joke, and the speech bubble when its words are the
 point (Tempo, Summer flat); the one modern thing the collage is about, not the paper around
-it; the drawn characters and what they do, not the photograph around them (hybrid); the
-figure or machine with its words when they fit, else the figure (propaganda). On a two-sided
+it; the drawn characters and what they do, not the photograph around them (hybrid). On a two-sided
 picture pick the side the post argues about, never the dividing line. Never the whole
 picture.
 

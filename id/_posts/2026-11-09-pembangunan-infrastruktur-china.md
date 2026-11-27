@@ -6,7 +6,7 @@ date: 2026-11-09 09:00:00 +0800
 last_modified_at: 2026-11-11
 tags: [politics]
 image: /assets/img/og/pembangunan-infrastruktur-china.jpg
-image_alt: "Ilustrasi dua insinyur dalam satu gambar terbelah: di kiri, insinyur berhelm oranye memegangi kepalanya dengan panik di tengah jalan yang macet oleh mobil, motor, dan bus penuh sesak; di kanan, insinyur berhelm putih menunjuk ke depan sambil mengepit gulungan cetak biru, berlatar stasiun baru yang sedang dibangun, dua derek, dan jalan lebar yang masih kosong"
+image_alt: "Ilustrasi dua insinyur: di kiri, insinyur berhelm oranye duduk di atap mobil di tengah kemacetan mobil, motor, dan bus penuh sesak sambil memegangi kepalanya dengan panik; di kanan, insinyur berhelm putih memegang gulungan cetak biru, berdiri di atas rel kereta layang yang baru dibangun, dan menunjuk ke arahnya sementara derek menurunkan balok berikutnya"
 translation: china-build-it
 keywords: [pembangunan infrastruktur China, kereta cepat China, supply-push dan demand-pull, Kereta Cepat Whoosh, Bandara Kertajati, Ibu Kota Nusantara, Tol Trans-Jawa]
 bmc_message: "Traktir saya segelas kopi: tulisan berikutnya saya bangun dulu, pembacanya pasti datang belakangan."
@@ -32,7 +32,7 @@ Yang selalu membuat saya takjub adalah skala pembangunannya: jaringan kereta cep
 Sebagai orang yang tumbuh di Indonesia, saya terbiasa dengan urutan yang sebaliknya. Di kota-kota kita, jalan biasanya baru dilebarkan dan rel baru dibangun setelah macetnya tidak tertahankan lagi, sedangkan di China saya berkali-kali melihat stasiun megah dan jalan lebar yang berdiri di lahan yang sekelilingnya masih kosong, seolah-olah penghuninya memang sengaja disuruh datang belakangan.
 
 <figure>
-<img src="/assets/img/cbf-ill-two-engineers.webp" alt="Ilustrasi dua insinyur dalam satu gambar terbelah: di kiri, insinyur berhelm oranye memegangi kepalanya dengan panik di tengah jalan yang macet oleh mobil, motor, dan bus penuh sesak; di kanan, insinyur berhelm putih menunjuk ke depan sambil mengepit gulungan cetak biru, berlatar stasiun baru yang sedang dibangun, dua derek, dan jalan lebar yang masih kosong" width="1456" height="813">
+<img src="/assets/img/cbf-ill-two-engineers.webp" alt="Ilustrasi dua insinyur: di kiri, insinyur berhelm oranye duduk di atap mobil di tengah kemacetan mobil, motor, dan bus penuh sesak sambil memegangi kepalanya dengan panik; di kanan, insinyur berhelm putih memegang gulungan cetak biru, berdiri di atas rel kereta layang yang baru dibangun, dan menunjuk ke arahnya sementara derek menurunkan balok berikutnya" width="1376" height="768">
 <figcaption>Dua cara membangun kota: menambal setelah macet (<em>demand-pull</em>) atau membangun sebelum penghuninya datang (<em>supply-push</em>).</figcaption>
 </figure>
 
@@ -143,7 +143,7 @@ Pergeseran ke arah *supply-push* baru terasa pada era Presiden Joko Widodo. Pada
 3. Kejar infrastrukturnya. Kata Jokowi, "*Connectivity* antar kota, *connectivity* kalau kita antar pulau, itu harus. Jangan ditunda-tunda."[^lemhannas]
 
 <figure>
-<img src="/assets/img/cbf-ill-three-keys.webp" alt="Karikatur Xi Jinping berjas biru tua dan berdasi merah yang berbisik ke telinga Jokowi, yang berkemeja putih dan mendengarkan sambil memegang dagu. Di atas mereka ada awan pikiran berisi tiga gambar: lima orang bergandengan tangan, bola lampu di atas gedung-gedung kota dan pelabuhan dengan kapal kargo, serta kereta di atas jembatan panjang antara dua pulau dengan jalan raya dan pesawat" width="1456" height="1087" loading="lazy">
+<img src="/assets/img/cbf-ill-three-keys.webp" alt="Karikatur Xi Jinping berjas biru tua dan berdasi merah yang berbisik ke telinga Jokowi. Jokowi, yang berkemeja putih, mendengarkan dengan mata terbelalak dan senyum penuh arti. Di balik punggungnya, Xi memegang seikat tiga kunci kuningan tua: satu berbentuk lima orang bergandengan tangan, satu berbentuk bola lampu, dan satu berbentuk kereta kecil" width="1200" height="896" loading="lazy">
 <figcaption>Tiga resep yang dibisikkan: partai yang bersatu, mimpi besar dengan rencana jangka panjang, dan konektivitas yang tidak ditunda-tunda.</figcaption>
 </figure>
 

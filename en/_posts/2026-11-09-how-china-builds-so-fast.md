@@ -5,7 +5,7 @@ date: 2026-11-09 09:00:00 +0800
 last_modified_at: 2026-11-11
 tags: [politics]
 image: /assets/img/og/how-china-builds-so-fast.jpg
-image_alt: "Split illustration: on the left, a panicked engineer in an orange hard hat grips his helmet in front of a jammed street of cars, motorbikes and a crowded bus; on the right, a calm engineer with a rolled blueprint points at a new station rising on open land beside a wide, empty road"
+image_alt: "On the left, a panicked engineer in an orange hard hat sits on a car roof in a jam of cars, motorbikes and a crowded bus; on the right, a calm engineer with a rolled blueprint stands on a new elevated railway while a crane lowers the next beam"
 translation: china-build-it
 keywords: [how China builds so fast, China infrastructure, build it and they will come, supply-push vs demand-pull, China high-speed rail, Indonesia infrastructure, Whoosh Kertajati IKN]
 bmc_message: "Supply-push in action: the button is already built. Now you come and buy me a coffee!"
@@ -22,7 +22,7 @@ bmc_message: "Supply-push in action: the button is already built. Now you come a
 How do you build 2,862 km of high-speed rail in a single year? That is what China opened in 2025: about twenty times the whole length of Whoosh, Indonesia's only high-speed line (142.3 km).[^nra][^whoosh] I have been asking myself versions of that question on every trip to China, and I have made at least one a year since 2023.
 
 <figure>
-<img src="/assets/img/cbf-ill-two-engineers.webp" alt="Split illustration. Left: a panicked engineer in an orange hard hat and vest grips his helmet with both hands, behind him a jammed street of cars, motorbikes and a crowded bus between old, packed buildings. Right: a calm engineer in a white hard hat and yellow vest, a rolled blueprint under her arm, points ahead at a big new station under construction on open land, with two cranes and a wide, empty new road" width="1456" height="813">
+<img src="/assets/img/cbf-ill-two-engineers.webp" alt="Two engineers. Left: a panicked engineer in an orange hard hat and vest sits on a car roof in a jam of cars, motorbikes and a crowded bus, gripping his helmet with both hands. Right: a calm engineer in a white hard hat and yellow vest, a rolled blueprint in her hand, stands on the tracks of a new elevated railway and points across at him while a crane lowers the next beam into place" width="1376" height="768">
 <figcaption>Two ways to build a city: wait for the jam and then dig through it, or build first and wait for the city.</figcaption>
 </figure>
 
@@ -149,7 +149,7 @@ On 18 November 2014, President Jokowi told participants of Lemhannas, the nation
 3. **Connectivity now:** "Kejar infrastrukturnya", chase the infrastructure: connectivity between cities and between islands, and "jangan ditunda-tunda", don't keep putting it off.[^lemhannas]
 
 <figure>
-<img src="/assets/img/cbf-ill-three-keys.webp" alt="Caricature of Xi Jinping in a navy suit and red tie, cupping a hand and whispering into the ear of Jokowi, in a white shirt with his hand on his chin, listening. Above them a thought cloud holds three round pictures: five people holding hands in a row, a light bulb over a city skyline and a harbour with a cargo ship, and a train on a long bridge between two islands with a road and a plane" width="1456" height="1087" loading="lazy">
+<img src="/assets/img/cbf-ill-three-keys.webp" alt="Caricature of Xi Jinping in a navy suit and red tie, cupping a hand and whispering into the ear of Jokowi, in a white shirt, who listens with wide eyes and a sly smile. Behind his back, Xi holds a ring of three old brass keys: one shaped like five people holding hands, one like a light bulb, one like a small train" width="1200" height="896" loading="lazy">
 <figcaption>Three keys, as Jokowi retold them: a united party, a big long-term plan, and connectivity built now. Indonesia took the third one most to heart.</figcaption>
 </figure>
 

@@ -6,7 +6,7 @@ date: 2026-11-08 09:00:00 +0800
 last_modified_at: 2026-11-11
 tags: [politics]
 image: /assets/img/og/pemerintah-berbohong-dengan-data.jpg
-image_alt: "Seorang pria bertubuh tambun berkemeja biru muda dan berpeci hitam berdiri di podium sambil mengacungkan telunjuk dan berseru 'Ekonomi Kita Meroket!', sementara kerumunan di belakangnya bersorak"
+image_alt: "Seorang pria bertubuh tambun berkemeja biru muda dan berpeci hitam berseru 'Ekonomi Kita Meroket!' dari podium sambil menunjuk panah merah zig-zag di dinding, yang ujungnya ditopang selotip dan sebatang pensil"
 og_position: "4% 50%"
 share_image: /assets/img/gsl-ill-podium-id.webp
 translation: government-statistics
@@ -25,7 +25,7 @@ bmc_message: "Traktir saya kopi, dan saya janji tidak akan melaporkannya sebagai
 Angka pertumbuhan, pengangguran, dan kemiskinan dalam pidato “ekonomi kita meroket” bisa saja benar semua. Masalahnya, pemerintah cukup memilih angka mana yang ditampilkan, bagaimana angka itu didefinisikan, dan apa yang tidak disebut untuk membuat keadaan terlihat lebih baik.
 
 <figure>
-<img src="/assets/img/gsl-ill-podium-id.webp" alt="Seorang pria bertubuh tambun berkemeja biru muda dan berpeci hitam berdiri di podium sambil mengacungkan telunjuk dan berseru 'Ekonomi Kita Meroket!', sementara kerumunan di belakangnya bersorak" width="1456" height="1087">
+<img src="/assets/img/gsl-ill-podium-id.webp" alt="Seorang pria bertubuh tambun berkemeja biru muda dan berpeci hitam berseru 'Ekonomi Kita Meroket!' dari podium sambil menunjuk panah merah zig-zag di dinding, yang ujungnya ditopang selotip dan sebatang pensil" width="1200" height="896">
 <figcaption>Pidatonya berapi-api dan tepuk tangannya meriah, tetapi pertanyaannya tetap sama: angka mana yang dipilih untuk dipamerkan?</figcaption>
 </figure>
 

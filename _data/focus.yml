@@ -11,20 +11,20 @@
 # names what the box keeps (required). `python3 _build/focus.py --new <file>` prints a line
 # to fill in; `python3 _build/focus.py --preview <dir>` draws every crop to look at.
 
-cbf-ill-three-keys.webp:          { box: [14, 2, 87, 100], size: [1456, 1087] }    # the whisper and the thought bubble
-cbf-ill-two-engineers.webp:       { box: [6, 25, 40, 100], size: [1456, 813] }     # the panicked engineer
-debt-ill-three-people-en.webp:    { box: [0, 14, 66, 100], size: [1200, 896] }     # the borrower and the saver
-debt-ill-three-people-id.webp:    { box: [0, 14, 66, 100], size: [1456, 1087] }    # the borrower and the saver
-fx-ill-money-changer.webp:        { box: [8, 2, 47, 100], size: [1200, 670] }      # the woman and the rate board
-fx-ill-weak-currency-split.webp:  { box: [1, 4, 50, 90], size: [1456, 1087] }      # the traveller wincing at the price
-gpi-ill-raja-pejabat.webp:        { box: [4, 13, 73, 97], size: [1456, 1087] }     # the shocked citizens and the throne
-gsl-ill-podium-en.webp:           { box: [3, 3, 76, 100], size: [1456, 1087] }     # the speech bubble and the speaker's face
-gsl-ill-podium-id.webp:           { box: [3, 3, 76, 100], size: [1456, 1087] }     # the speech bubble and the speaker's face
-kad-ill-laptop-invest.webp:       { box: [18, 4, 93, 93], size: [1456, 1087] }     # the woman and her laptop chart
-kad-ill-warung-struk.webp:        { box: [19, 3, 83, 92], size: [1456, 1087] }     # the man and his receipt
-pns-ill-pns-vs-swasta.webp:       { box: [59, 15, 96, 100], size: [1456, 1087] }   # the private-sector worker
-pns-ill-superannuation.webp:      { box: [25, 11, 82, 100], size: [1456, 1087] }   # the Australian with the super jar
-psg-ill-jalan-jalan.webp:         { box: [15, 3, 90, 96], size: [1456, 1087] }     # the woman packing her suitcase
-psg-ill-lapor-spt.webp:           { box: [3, 10, 72, 95], size: [1456, 1087] }     # the wife at the laptop
-rvo-ill-buyer-renter.webp:        { box: [7, 8, 58, 100], size: [1456, 1087] }     # the buyer painting his wall
-rvo-ill-count-wealth.webp:        { box: [18, 5, 85, 98], size: [1456, 1087] }     # the woman, coins, house and piggy bank
+cbf-ill-three-keys.webp:          { box: [6, 19, 80, 100], size: [1200, 896] }     # the whisper and the keys
+cbf-ill-two-engineers.webp:       { box: [15, 18, 36, 76], size: [1376, 768] }     # the panicked engineer on the car
+debt-ill-three-people-en.webp:    { box: [8, 28, 66, 100], size: [1200, 896] }       # the borrower and the saver
+debt-ill-three-people-id.webp:    { box: [16, 30, 69, 100], size: [1200, 896] }      # the borrower and the saver
+fx-ill-money-changer.webp:        { box: [3, 0, 50, 100], size: [1376, 768] }        # the woman and the rate board
+fx-ill-weak-currency-split.webp:  { box: [27, 18, 93, 100], size: [1200, 896] }      # the shopkeeper handing the parcel to the tourist
+gpi-ill-raja-pejabat.webp:        { box: [8, 8, 76, 100], size: [1200, 896] }      # the politician on the throne and the shocked citizens
+gsl-ill-podium-en.webp:           { box: [3, 22, 78, 100], size: [1200, 896] }     # the speech bubble, the speaker and his pointing hand
+gsl-ill-podium-id.webp:           { box: [3, 22, 78, 100], size: [1200, 896] }     # the speech bubble, the speaker and his pointing hand
+kad-ill-laptop-invest.webp:       { box: [27, 15, 88, 100], size: [1200, 896] }      # the woman and her laptop chart
+kad-ill-warung-struk.webp:        { box: [46, 13, 92, 100], size: [1200, 896] }      # the man, his receipt and his plate
+pns-ill-pns-vs-swasta.webp:       { box: [52, 18, 82, 97], size: [1200, 896] }       # the private-sector worker
+pns-ill-superannuation.webp:      { box: [36, 22, 84, 96], size: [1200, 896] }       # the Australian with the coin jar
+psg-ill-jalan-jalan.webp:         { box: [40, 12, 93, 90], size: [1200, 896] }       # the woman packing her suitcase
+psg-ill-lapor-spt.webp:           { box: [12, 16, 86, 95], size: [1200, 896] }       # the couple at the laptop
+rvo-ill-buyer-renter.webp:        { box: [12, 26, 40, 90], size: [1200, 896] }       # the buyer painting his wall
+rvo-ill-count-wealth.webp:        { box: [35, 10, 83, 88], size: [1200, 896] }       # the woman, coins, house and piggy bank
