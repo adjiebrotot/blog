@@ -54,6 +54,12 @@ and has its `md/<lang>-<slug>.txt` stub. It also has a substantive-editor PASS u
 `.claude/skills/adjie-writing-style/references/editorial-safeguards.md`, with evidence and
 personal provenance settled. A clean checker run is not an editorial-quality verdict.
 
+Every illustration (`*-ill-*.webp`) and every `thumbnail:` or `share_image:` picture has a
+focus box in `_data/focus.yml`: `python3 _build/focus.py` says OK (no MISSING or ERROR, and
+each REVIEW looked at). The box marks the subject every crop keeps whole; the rule is
+`.claude/skills/wikihow-illustration/references/focus-box.md`, and the three illustration
+skills mark it when they save a picture.
+
 Then, in `_site/`: each page has exactly one `<h1>` and valid JSON-LD; `sitemap.xml` and
 `*/feed.xml` parse as XML; paired posts list each other in `hreflang`; and at 390px no page
 scrolls sideways.

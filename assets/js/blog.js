@@ -616,15 +616,37 @@
     ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r);
     ctx.closePath();
   }
+  /* Where a cover crop of a picture starts, as a share (0..1) of the room the
+     picture overflows the frame by on each axis: the crop keeps the picture's
+     focus box (_data/focus.yml, percent) whole, centred and inside the edges;
+     a box too big for the frame stays centred across and keeps its top. Same
+     rule as blog.css. */
+  function focusCrop(box, ir, cr) {
+    if (!box) return { x: 0.5, y: 0.5 };
+    var vx = Math.min(1, cr / ir), vy = Math.min(1, ir / cr);
+    function at(a, b, v, top) {
+      var s = (a + b) / 200 - v / 2;
+      if (top) s = Math.min(s, a / 100);
+      return v >= 1 ? 0.5 : Math.max(0, Math.min(1, s / (1 - v)));
+    }
+    return { x: at(box[0], box[2], vx), y: at(box[1], box[3], vy, true) };
+  }
+  function focusBox(d, src) {
+    try {
+      var f = JSON.parse(d.focus || '{}')[decodeURIComponent(String(src).split(/[?#]/)[0].split('/').pop())];
+      return f && f.box;
+    } catch (e) { return null; }
+  }
   /* The picture in the family sticker: an ink outline and a hard offset. */
-  function drawSticker(ctx, img, x, y, w, h) {
+  function drawSticker(ctx, img, x, y, w, h, box) {
     var r = 30;
     ctx.fillStyle = INK; roundRect(ctx, x + 12, y + 12, w, h, r); ctx.fill();
     ctx.fillStyle = '#fff'; roundRect(ctx, x, y, w, h, r); ctx.fill();
     if (img) {
       ctx.save(); roundRect(ctx, x, y, w, h, r); ctx.clip();
       var s = Math.max(w / img.naturalWidth, h / img.naturalHeight), iw = img.naturalWidth * s, ih = img.naturalHeight * s;
-      ctx.drawImage(img, x + (w - iw) / 2, y + (h - ih) / 2, iw, ih);
+      var at = focusCrop(box, img.naturalWidth / img.naturalHeight, w / h);
+      ctx.drawImage(img, x + (w - iw) * at.x, y + (h - ih) * at.y, iw, ih);
       ctx.restore();
     }
     ctx.lineWidth = 4; ctx.strokeStyle = INK; roundRect(ctx, x, y, w, h, r); ctx.stroke();
@@ -644,7 +666,7 @@
       pic ? loadImage(pic).catch(function () { return null; }) : null,
       loadImage(document.querySelector('.brand img').src).catch(function () { return null; })
     ]).then(function (got) {
-      var img = got[1], logo = got[2];
+      var img = got[1], logo = got[2], box = pic && focusBox(d, pic);
       var c = document.createElement('canvas');
       c.width = W; c.height = H;
       var ctx = c.getContext('2d'), cw = W - pad * 2;
@@ -675,7 +697,7 @@
         // The picture and the title high up, the blog's name at the very
         // bottom, and the wide space between left blank for the reader's
         // link sticker or their own words.
-        drawSticker(ctx, img, pad, 120, cw - 12, 480);
+        drawSticker(ctx, img, pad, 120, cw - 12, 480, box);
         heading(120 + 480 + 12 + 40, 56, [72, 66, 60, 54, 48], 4, 280);
         drawBrand(ctx, logo, pad, H - 64 - 72);
       } else {
@@ -684,7 +706,7 @@
         var textEnd = heading(pad, 54, [68, 62, 56, 50, 44], 3, 200);
         var brandY = H - pad - 72, imgTop = textEnd + 40;
         var imgH = Math.max(300, Math.min(brandY - 140 - imgTop, Math.round(cw * 0.6)));
-        drawSticker(ctx, img, pad, imgTop, cw - 12, imgH);
+        drawSticker(ctx, img, pad, imgTop, cw - 12, imgH, box);
         drawBrand(ctx, logo, pad, brandY);
       }
       return new Promise(function (resolve, reject) {

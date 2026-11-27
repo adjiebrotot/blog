@@ -12,7 +12,9 @@
   {%- endif %}
 <article class="post-card{% if include.featured %} is-featured{% endif %}{% if _img %} has-thumb{% endif %}">
   {%- if _img %}
-  <a class="post-card-thumb" href="{{ p.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ _img | relative_url }}" alt="" width="1456" height="1087" loading="{% if include.featured %}eager{% else %}lazy{% endif %}" decoding="async"></a>
+  {%- comment %} The crop keeps the picture's point of interest whole: its box in _data/focus.yml, placed by blog.css. {% endcomment %}
+  {%- assign _fname = _img | split: '/' | last %}{% assign _f = site.data.focus[_fname] %}
+  <a class="post-card-thumb" href="{{ p.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ _img | relative_url }}" alt="" width="{{ _f.size[0] | default: 1456 }}" height="{{ _f.size[1] | default: 1087 }}"{% if _f.box %} class="has-focus" style="--fx0:{{ _f.box[0] }};--fy0:{{ _f.box[1] }};--fx1:{{ _f.box[2] }};--fy1:{{ _f.box[3] }};--ir:calc({{ _f.size[0] }} / {{ _f.size[1] }})"{% endif %} loading="{% if include.featured %}eager{% else %}lazy{% endif %}" decoding="async"></a>
   {%- endif %}
   {% include tags.html tags=p.tags lang=include.lang %}
   <h{{ include.level | default: 2 }} class="post-card-title"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h{{ include.level | default: 2 }}>

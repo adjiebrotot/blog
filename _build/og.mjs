@@ -5,8 +5,8 @@
 // Then point the post at its card in the front matter:
 //   image: /assets/img/og/<slug>.jpg
 //   image_alt: "..."
-// A post can move the crop of its illustration with og_position: "<x> <y>" (CSS object-position,
-// e.g. "0% 50%" to keep the left edge).
+// The illustration is cropped to keep its focus box (_data/focus.yml) whole. A post can
+// still force the crop with og_position: "<x> <y>" (CSS object-position, e.g. "0% 50%").
 // This folder starts with _, so Jekyll does not publish it.
 import { createRequire } from 'module';
 import fs from 'fs';
@@ -22,6 +22,20 @@ const url = f => 'file://' + path.join(ROOT, f);
 // The category labels, per language, from _data/categories.yml (one line per language).
 const labels = {};
 for (const m of fs.readFileSync(path.join(ROOT, '_data/categories.yml'), 'utf8').matchAll(/- key: (\w+)\n\s+en: \{ label: ([^,]+),[^\n]*\n\s+id: \{ label: ([^,]+),/g)) labels[m[1]] = { en: m[2], id: m[3] };
+
+// The focus boxes, one line per picture: `<file>: { box: [x0, y0, x1, y1], size: [w, h] }`.
+const focus = {};
+for (const m of fs.readFileSync(path.join(ROOT, '_data/focus.yml'), 'utf8').matchAll(/^([\w.-]+):\s*\{\s*box:\s*\[([^\]]+)\],\s*size:\s*\[([^\]]+)\]/gm)) {
+  focus[m[1]] = { box: m[2].split(',').map(Number), size: m[3].split(',').map(Number) };
+}
+// The object-position that keeps the box whole in a frame of ratio cr (same rule as blog.css).
+function focusPosition(ill, cr) {
+  const f = focus[ill];
+  if (!f) return null;
+  const ir = f.size[0] / f.size[1], vx = Math.min(1, cr / ir), vy = Math.min(1, ir / cr);
+  const at = (a, b, v, top) => v >= 1 ? 50 : Math.round(100 * Math.max(0, Math.min(1, (top ? Math.min((a + b) / 200 - v / 2, a / 100) : (a + b) / 200 - v / 2) / (1 - v))));
+  return `${at(f.box[0], f.box[2], vx)}% ${at(f.box[1], f.box[3], vy, true)}%`;
+}
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const unq = s => s.trim().replace(/^"(.*)"$/, '$1').replace(/^'(.*)'$/, '$1').replace(/\\"/g, '"');
@@ -43,6 +57,7 @@ function posts() {
 }
 
 function card({ title, eyebrow, ill, lang, pos }) {
+  pos = pos || (ill && focusPosition(ill, 500 / 510));
   return `<!DOCTYPE html><html lang="${lang}"><head>
 <link rel="stylesheet" href="${url('assets/css/fonts.css')}">
 <style>
