@@ -306,6 +306,17 @@ Also from the general rules for Indonesian:
 - No passive chains copied from English. Indonesian passive is natural (*dipotong
   kantornya*), but put the doer in when English leaves it out and the reader needs it.
 
+### UI copy and short descriptions: the objective, not the sentence
+
+A tool's card, a button, a tour step or a one-line description is rewritten from what the
+reader gets, not translated from the English line. Drop English wordplay and rhythm ("one note
+at a time", "year by year", "side by side") and say the goal plainly the way an Indonesian
+app would: "Putar roda untuk tentukan pilihan", not "Putar roda atau lempar dadu untuk
+memilih satu". Technical terms stay as the field says them: engineers say *node*, *bus*,
+*load flow*, *single line diagram*, *dispatch*; developers say *tree view*, *key*. A dictionary
+word nobody in the field uses (*simpul*, *diagram segaris*, *pohon*) is wrong (Adjie, 27
+November 2026, `references/corrections.md`).
+
 ## Foreign terms: italics and explanations
 
 Keep a foreign term when it is the word people really use, or when the exact term matters
