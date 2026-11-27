@@ -39,9 +39,10 @@ publishes it. The look comes from the design system of
 4. Give it a social card and a Markdown copy: `node _build/og.mjs` draws
    `assets/img/og/<slug>.jpg` (set it as `image:`), and a stub in `md/` (copy one, see
    `md/README.txt`) publishes the post as Markdown at `<post URL>index.md` for AI readers.
-   The post's lead illustration is cropped on the cards, the social card and the share
-   poster, so give it a focus box in `_data/focus.yml` first (the subject every crop keeps
-   whole) and check it: `python3 _build/focus.py --preview <dir>`.
+   Every illustration needs a focus box in `_data/focus.yml` first, because the cards, the
+   social card and the share poster crop it around that box (rule:
+   `.claude/skills/wikihow-illustration/references/focus-box.md`). `python3 _build/focus.py`
+   must say OK.
 5. Check it for search and answer engines:
    `python3 .claude/skills/ai-assisted-blog-post/scripts/check-seo.py <post>.md` (title,
    description, slug, keywords, the In short block, headings, sources, links, images, the

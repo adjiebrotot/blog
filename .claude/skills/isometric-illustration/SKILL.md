@@ -124,9 +124,17 @@ matches (`references/blog-embed.md`).
 6. **Publish.** `--publish` copies the pair to `assets/img/` and prints the `<figure>` to
    paste; write the alt text in the post's language on both images. If the scene is the
    post's lead picture, add `--card` and put the `thumbnail:` and `share_image:` lines it
-   prints in the front matter, give the card a focus box in `_data/focus.yml` (check it with
-   `python3 _build/focus.py --preview <dir>`), then run `node _build/og.mjs`.
-7. **Run the checks in `CLAUDE.md`** and commit the scene file with the SVGs (and the card),
+   prints in the front matter, then mark the card's focus box (step 7) before
+   `node _build/og.mjs`.
+7. **Mark the card's focus box (mandatory for every `--card`).** The post cards, social card
+   and share poster crop the card to other shapes around its box in `_data/focus.yml`. Follow
+   `.claude/skills/wikihow-illustration/references/focus-box.md` exactly: `--publish --card`
+   prints the line to fill in; name the subject in its comment (the person or machine the
+   scene is about, such as the cashier at the till or the transformer), box it alone, look at
+   every crop with `python3 _build/focus.py --preview <scratchpad>/focus`, and finish when
+   `python3 _build/focus.py` says OK. A scene drawn wide with its subject in a corner needs
+   the box most; never box the whole scene.
+8. **Run the checks in `CLAUDE.md`** and commit the scene file with the SVGs (and the card with its focus line),
    plus `models.py` if you added an object there.
 
 ## Layering: how it works

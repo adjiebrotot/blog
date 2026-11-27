@@ -148,14 +148,29 @@ Then use an `<img>` with its real pixel size, like the other images on the blog,
 
 - **Alt text** says what the person is doing and with what, in the post's language. Not
   "illustration of" and not the style.
-- **A post's lead picture gets a focus box.** Cards, the social card and the share poster crop
-  it to other shapes, so add its line to `_data/focus.yml` (the subject every crop keeps
-  whole: one whole person, not the seam of a split picture) before `node _build/og.mjs`, and
-  check the crops with `python3 _build/focus.py --preview <dir>`.
 - A picture can also be the social card (`image:` and `image_alt:` in the front matter).
   Cards work best wide: generate a version with `--aspect 16:9` and render it with
   `--width 1200`.
 - The picture carries its own pale background, so it works in the light and the dark theme.
 
-Run the checks in `CLAUDE.md`, and commit the WebP with its prompt file. Tell Adjie which
+## Step 5: Mark its focus box (mandatory)
+
+Every illustration gets a focus box in `_data/focus.yml` as soon as it is saved, lead picture
+or not: the post cards, the social card and the share poster crop it to other shapes, and the
+box is what each crop keeps whole. Without one the crop is cut at the centre, which on a split
+picture shows only the seam. Follow `references/focus-box.md` exactly:
+
+1. `python3 _build/focus.py --new assets/img/<name>.webp` prints the line; add it.
+2. Name the subject in its comment, then box that subject alone (a whole person with face and
+   gesture, plus what they hold when it carries the point), narrow enough for the square card.
+3. `python3 _build/focus.py --preview <scratchpad>/focus` and look at every crop: each must
+   show the subject whole and make sense alone. Fix the box until it does.
+4. `python3 _build/focus.py` must say OK. Only then run `node _build/og.mjs` for a social card.
+
+Never box the whole picture or the seam of a split, never cut a face or a telling hand, never
+leave the subject unnamed: the checker rejects the first and the last, the preview shows the
+rest.
+
+Run the checks in `CLAUDE.md`, and commit the WebP with its prompt file and its
+`_data/focus.yml` line. Tell Adjie which
 model made it and what it cost (the script prints both).

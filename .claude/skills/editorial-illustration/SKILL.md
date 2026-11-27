@@ -142,8 +142,22 @@ pixel size, inside a `<figure>`, with alt text that says what the picture shows 
 post's language ("Caricature of ...", "Collage of ..." is fine when it is one; never the
 style's source). These pictures carry their own background, so they work in both themes.
 
-If it is the post's lead picture, give it a focus box in `_data/focus.yml` (see
-`wikihow-illustration`) and check the crops with `python3 _build/focus.py --preview <dir>`.
+## Step 5: Mark its focus box (mandatory)
 
-Run the checks in `CLAUDE.md`, and commit the WebP with its prompt file. Tell Adjie the style,
+Every illustration gets a focus box in `_data/focus.yml` as soon as it is saved, lead picture
+or not, so the post cards, the social card and the share poster crop it around its subject
+instead of its centre. Follow `.claude/skills/wikihow-illustration/references/focus-box.md`
+exactly: `python3 _build/focus.py --new assets/img/<name>.webp` for the line, name the subject
+in its comment, box that subject alone, check every crop with
+`python3 _build/focus.py --preview <scratchpad>/focus`, and finish when `python3 _build/focus.py`
+says OK.
+
+What to box in these styles: the caricature with the gesture or object that makes the joke
+(the chicken leg, the raised finger), and the speech bubble when its words are the point. On a
+two-sided metaphor pick the side the post argues about, never the dividing line. In a collage,
+the one modern thing the picture is about, not the torn-paper texture around it. Never the
+whole picture.
+
+Run the checks in `CLAUDE.md`, and commit the WebP with its prompt file and its
+`_data/focus.yml` line. Tell Adjie the style,
 the model and the number of tries.

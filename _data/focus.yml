@@ -1,24 +1,30 @@
-# The point of interest of each illustration that gets cropped (the post-card thumbnail,
-# the social card drawn by _build/og.mjs and the share poster). Every crop, of any shape,
-# is moved so this box stays whole; when the box is too big for the crop, the crop centres
-# on it across and keeps its top edge (heads sit at the top). Pick the subject a reader
-# must see: one whole person in a split or multi-panel picture, not the seam between them.
+# The point of interest of every illustration (each *-ill-*.webp, and any picture set as a
+# post's `thumbnail:` or `share_image:`). The post cards, the social card (_build/og.mjs)
+# and the share poster crop it to their own shape, and every crop moves to keep this box
+# whole; when the box is too big for a frame, the crop centres on it across and keeps its
+# top edge (heads sit at the top). Mandatory: how to choose the box, and what never to box,
+# is in .claude/skills/wikihow-illustration/references/focus-box.md.
 #
-#   <file in assets/img/>: { box: [x0, y0, x1, y1], size: [width, height] }
+#   <file in assets/img/>: { box: [x0, y0, x1, y1], size: [width, height] }   # the subject
 #
-# box is in percent of the picture, left/top edge to right/bottom edge; size is in pixels.
-# `python3 _build/focus.py` lists cropped pictures that have no entry yet (with their size),
-# checks each size and, with --preview DIR, draws a preview of every crop shape for checking.
+# box: percent of the picture, left/top edge to right/bottom edge. size: pixels. The comment
+# names what the box keeps (required). `python3 _build/focus.py --new <file>` prints a line
+# to fill in; `python3 _build/focus.py --preview <dir>` draws every crop to look at.
 
-cbf-ill-two-engineers.webp:      { box: [6, 25, 40, 100], size: [1456, 813] }   # the panicked engineer
-debt-ill-three-people-en.webp:   { box: [0, 14, 66, 100], size: [1200, 896] }   # the borrower and the saver
-debt-ill-three-people-id.webp:   { box: [0, 14, 66, 100], size: [1456, 1087] }
-fx-ill-money-changer.webp:       { box: [8, 2, 47, 100], size: [1200, 670] }    # the woman and the rate board
-gpi-ill-raja-pejabat.webp:       { box: [4, 13, 73, 97], size: [1456, 1087] }   # the shocked citizens and the throne
-gsl-ill-podium-en.webp:          { box: [3, 3, 76, 100], size: [1456, 1087] }   # the speech bubble and the speaker's face
-gsl-ill-podium-id.webp:          { box: [3, 3, 76, 100], size: [1456, 1087] }
-kad-ill-warung-struk.webp:       { box: [19, 3, 83, 92], size: [1456, 1087] }   # the man and his receipt
-pns-ill-pns-vs-swasta.webp:      { box: [59, 15, 96, 100], size: [1456, 1087] } # the private-sector worker
-psg-ill-lapor-spt.webp:          { box: [3, 10, 72, 95], size: [1456, 1087] }   # the wife at the laptop
-rvo-ill-buyer-renter.webp:       { box: [7, 8, 58, 100], size: [1456, 1087] }   # the buyer painting his wall
-rvo-ill-count-wealth.webp:       { box: [18, 5, 85, 98], size: [1456, 1087] }   # the woman, coins, house and piggy bank
+cbf-ill-three-keys.webp:          { box: [14, 2, 87, 100], size: [1456, 1087] }    # the whisper and the thought bubble
+cbf-ill-two-engineers.webp:       { box: [6, 25, 40, 100], size: [1456, 813] }     # the panicked engineer
+debt-ill-three-people-en.webp:    { box: [0, 14, 66, 100], size: [1200, 896] }     # the borrower and the saver
+debt-ill-three-people-id.webp:    { box: [0, 14, 66, 100], size: [1456, 1087] }    # the borrower and the saver
+fx-ill-money-changer.webp:        { box: [8, 2, 47, 100], size: [1200, 670] }      # the woman and the rate board
+fx-ill-weak-currency-split.webp:  { box: [1, 4, 50, 90], size: [1456, 1087] }      # the traveller wincing at the price
+gpi-ill-raja-pejabat.webp:        { box: [4, 13, 73, 97], size: [1456, 1087] }     # the shocked citizens and the throne
+gsl-ill-podium-en.webp:           { box: [3, 3, 76, 100], size: [1456, 1087] }     # the speech bubble and the speaker's face
+gsl-ill-podium-id.webp:           { box: [3, 3, 76, 100], size: [1456, 1087] }     # the speech bubble and the speaker's face
+kad-ill-laptop-invest.webp:       { box: [18, 4, 93, 93], size: [1456, 1087] }     # the woman and her laptop chart
+kad-ill-warung-struk.webp:        { box: [19, 3, 83, 92], size: [1456, 1087] }     # the man and his receipt
+pns-ill-pns-vs-swasta.webp:       { box: [59, 15, 96, 100], size: [1456, 1087] }   # the private-sector worker
+pns-ill-superannuation.webp:      { box: [25, 11, 82, 100], size: [1456, 1087] }   # the Australian with the super jar
+psg-ill-jalan-jalan.webp:         { box: [15, 3, 90, 96], size: [1456, 1087] }     # the woman packing her suitcase
+psg-ill-lapor-spt.webp:           { box: [3, 10, 72, 95], size: [1456, 1087] }     # the wife at the laptop
+rvo-ill-buyer-renter.webp:        { box: [7, 8, 58, 100], size: [1456, 1087] }     # the buyer painting his wall
+rvo-ill-count-wealth.webp:        { box: [18, 5, 85, 98], size: [1456, 1087] }     # the woman, coins, house and piggy bank

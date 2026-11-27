@@ -341,7 +341,8 @@ voice or editorial quality:
 - **Links.** At least one link in the text to the most related post on the blog (in the
   same language), and a link to the Adjie Brotools tool the post uses.
 - **Images.** A social card (`node _build/og.mjs`), `image_alt`, and alt text, width and
-  height on every image.
+  height on every image. Every illustration has its focus box in `_data/focus.yml`, marked
+  by the skill that made it (`python3 _build/focus.py` says OK), so every crop keeps its subject.
 - **A Markdown copy:** the `md/<lang>-<slug>.txt` stub (`md/README.txt`).
 - **3 to 8 `keywords:`** in the post's language: the question, the local terms, the tool's
   name.

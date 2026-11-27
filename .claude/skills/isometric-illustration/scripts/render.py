@@ -117,7 +117,12 @@ def main():
         card.save(img / (cname + ".webp"), "WEBP", quality=88, method=6)
         kb = (img / (cname + ".webp")).stat().st_size // 1024
         print("\ncard: assets/img/%s.webp (%d KB). For the post card, share poster and OG card, add to the front matter:\n"
-              "  thumbnail: /assets/img/%s.webp\n  share_image: /assets/img/%s.webp\nthen run node _build/og.mjs" % (cname, kb, cname, cname))
+              "  thumbnail: /assets/img/%s.webp\n  share_image: /assets/img/%s.webp" % (cname, kb, cname, cname))
+        print("\nMandatory next: the card's focus box in _data/focus.yml, the subject every crop keeps whole\n"
+              "(.claude/skills/wikihow-illustration/references/focus-box.md):\n"
+              "  %-34s{ box: [x0, y0, x1, y1], size: [%d, %d] }   # the subject\n"
+              "then: python3 _build/focus.py --preview <scratchpad>/focus, python3 _build/focus.py (OK),\n"
+              "and node _build/og.mjs" % (cname + ".webp:", W, H))
 
 
 if __name__ == "__main__":
