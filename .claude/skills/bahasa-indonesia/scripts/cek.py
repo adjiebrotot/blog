@@ -91,6 +91,9 @@ FALSE_FRIENDS = [
     (r"\blewat \[", "a source is 'dikutip dari' or 'menurut', not 'lewat' (via)"),
     (r"^Dengan (gabung|pisah|kerja|MT|PH)\b|[.] Dengan (gabung|pisah|kerja|MT|PH)\b", "'with X' calque: 'Kalau memilih ...', 'Untuk ...'"),
     (r"\b(Garis )?(biru|oranye|hijau|merah muda) adalah\b", "a colour is not the scenario: 'garis biru menunjukkan ...'"),
+    (r"\bsimpul\b|\bdiagram segaris\b|\btampilan pohon\b|\bsebagai pohon\b", "technical term practitioners say in English: *node*, *single line diagram*, *tree view*"),
+    (r"\bsatu (catatan|langkah|baris|kartu) demi satu\b|\btahun demi tahun\b", "English rhythm ('one X at a time', 'year by year'): say the objective, or 'per tahun', 'setiap tahun'"),
+    (r"\bberdampingan\b", "'side by side' calque: 'sekaligus', or 'bandingkan ...'"),
     (r"\bmenganggap\b.*\b(tool|kalkulator|sistem)\b|\b(Tool|tool|sistem)\*? ini menganggap\b", "a tool calculates, it does not think"),
 ]
 

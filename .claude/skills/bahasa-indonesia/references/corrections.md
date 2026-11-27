@@ -226,3 +226,14 @@ Indonesian example built on an assumption. International organisations keep thei
 | kedalaman pasar | *market depth* | Keep the term people use. |
 | mata uang cadangan | *reserve currency* | Keep the term people use. |
 | (Reserve Bank of Australia mandate only) | + Bank Indonesia's mandate as a comparison | Relate it to Indonesia. |
+
+## Tool site, Indonesian pages (27 November 2026)
+
+Adjie on tool.adjiebrotots.com's Indonesian pages: "a lot of AI-slop because of the literal
+translation from English to Indonesian." Three examples, and the rule behind each:
+
+| Before | After | Why |
+| --- | --- | --- |
+| lalu baca harga di tiap simpul. | lalu cek harga listrik di setiap *node*. | Wrong word: keep the technical term the field uses (*node*). A dictionary equivalent nobody in the field says (*simpul*, *diagram segaris*, *pohon* for a tree view) is wrong. |
+| Susun Business Model Canvas siap presentasi, satu catatan demi satu. | Tuangkan ide bisnismu ke dalam Business Model Canvas yang rapi dan siap dipresentasikan. | Bad Indonesian structure. "You can fully rewrite to a better sentence, doesn't need to translate from English. Objective is more important." |
+| Putar roda atau lempar dadu untuk memilih satu. | Putar roda untuk tentukan pilihan. | Too literal. Say it from the context, the way an Indonesian app would. |
