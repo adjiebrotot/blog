@@ -104,17 +104,20 @@ Settle in a few lines (in the plan's features table, if the post goes through
   description, for editorial comment on their public role: exaggerate the expression and
   posture, never their ethnicity or body, and never caricature a private person. **The
   reverse matters too:** a generic "heavy-set Indonesian politician in a peci" came back as a
-  clear likeness of the sitting president in the collage and Tempo tests. When nobody real
-  is meant, say so: "an invented face that resembles no real politician". When someone real
-  is meant, name them, and let Adjie decide.
+  clear likeness of the sitting president in the collage and Tempo tests, and a heroic
+  official in a peci pointing ahead came back as Sukarno in the propaganda test. When nobody
+  real is meant, say so ("an invented face that resembles no real politician") and change
+  the dress and the pose that point to someone; look at the face before using it. When
+  someone real is meant, name them, and let Adjie decide.
 - **Words in the picture:** usually none, except the propaganda poster, whose slogan is half
   the picture. A short quoted phrase works (a speech bubble, a phone screen, a ribbon banner,
   a slogan band); detailed writing (a receipt, a list, a screen of text) always becomes slop,
   so ask for "only wavy scribble lines, no readable words". With words, make one picture per
   language: for the second, attach the first picture with `--ref` and ask to "make it again
   exactly ... changing only the words: the quoted words now read exactly ..." (prompt in
-  `_illustrations/restyle/gsl-ill-podium-id--tempo.txt`). Tested in the Tempo, flat and
-  collage styles: the same picture came back, only the words changed, spelled right. Words
+  `_illustrations/restyle/gsl-ill-podium-id--tempo.txt`). Tested in the Tempo, flat,
+  collage and propaganda styles: the same picture came back, only the words changed, spelled
+  right. Words
   on something small (a phone in a hand) can come out garbled: make the object big and the
   words "big bold letters on two lines", and zoom in to check every letter.
 - **Shape:** `4:3` in a post, `16:9` for a social card.

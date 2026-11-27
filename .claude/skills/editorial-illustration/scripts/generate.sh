@@ -25,8 +25,8 @@ case $style in
   tempo) refs="$ex/tempo-above.webp $ex/tempo-closeup.webp $ex/tempo-two.webp" ;;
   flat) refs="$ex/flat-hat.webp $ex/flat-drink.webp $ex/flat-split.webp" ;;
   collage) refs="$ex/collage-train.webp $ex/collage-portrait.webp $ex/collage-bomber.webp" ;;
-  hybrid) refs="$ex/hybrid-street.webp $ex/hybrid-warung.webp $ex/hybrid-office.webp" ;;
-  propaganda) refs="$ex/propaganda-worker.webp $ex/propaganda-saver.webp $ex/propaganda-industry.webp" ;;
+  hybrid) refs="$ex/hybrid-street.webp $ex/hybrid-warung.webp $ex/hybrid-riverside.webp" ;;
+  propaganda) refs="$ex/propaganda-saver.webp $ex/propaganda-farmer.webp $ex/propaganda-card.webp" ;;
   *) echo "style must be $styles" >&2; exit 1 ;;
 esac
 for r in $refs; do

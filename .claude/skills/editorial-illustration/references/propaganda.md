@@ -5,7 +5,8 @@ behind, factories, cranes and ships in silhouette, a bold slogan in block capita
 few flat inks of brick red, cream and black. Earnest on the surface, so it carries irony
 well: official optimism taken at its word, a national plan in heroic dress, or a household
 money habit turned into a call to arms. Adjie's samples were eight stock posters; the
-pictures in `examples/` were generated from them, with none of their symbols, leaders or
+pictures in `examples/` were generated from crops of the three that carry no symbol (a worker
+with a wrench, a raised fist with a plain red banner, a steelworks), with none of their
 words, and are ours to keep; `generate.sh propaganda` attaches them.
 
 ## The rule: the look, never the ideology
@@ -57,11 +58,15 @@ that says where, and a slogan of two to five words.
 
 | The point | The picture | Slogan |
 |-----------|-------------|--------|
-| Downstreaming hype | a smelter worker in a hard hat holds up a glowing nickel ingot; smelter stacks and an ore barge in silhouette | `FORWARD TO THE SMELTER!` |
-| Pay yourself first | a young woman in an office shirt holds a piggy bank high like a torch; office towers and cranes below | `PAY YOURSELF FIRST!` |
-| A new capital in the forest | a giant surveyor with a theodolite over a silhouette of rainforest turning into towers | `BUILD THE NEW CAPITAL!` |
-| Clearing the credit card | a man snaps a credit card in two with both fists, rays behind him | `DEBT FREE BY DECEMBER!` |
-| Investing every month | a family of three marches forward with a banner showing a rising line chart | `INVEST EVERY MONTH!` |
+| Downstreaming hype | a smelter worker in a hard hat holds up a glowing nickel ingot, the national flag on a pole; smelter chimneys and an ore barge in silhouette | `MAJU TERUS HILIRISASI!` |
+| Pay yourself first | a young woman in an office shirt holds a piggy bank high like a torch; office towers, cranes and an elevated train below | `PAY YOURSELF FIRST!` |
+| A new capital in the forest | a giant city planner in a hard hat with a rolled blueprint over rainforest turning into towers | `BUILD THE NEW CAPITAL!` |
+| Officials' perks | a beaming official holds a golden fried chicken leg up like a torch over a queue of small citizens | `WE WORK FOR YOU!` |
+| Clearing the credit card | a man snaps a credit card in two with both fists, a mall and billboards below | `DEBT FREE BY DECEMBER!` |
+| Investing every month | a family of three marches forward behind a banner with a rising line chart | `INVEST EVERY MONTH!` |
+| Food self-sufficiency | a rice farmer hugs a golden sheaf of rice; terraces, a tractor and pylons below | `SWASEMBADA PANGAN!` |
+
+All seven were tested; the table's pictures came out as described.
 
 The slogan is in the post's language and is part of the picture, so make one picture per
 language (Step 1 of `SKILL.md` has the remake method).
@@ -78,11 +83,20 @@ The scene, in this order: **the figure** (age, skin, hair, clothes, as a heroic 
 figure), **the gesture with the object**, **the angle** (from below), **what is behind**
 (rays, the sun disk), **the silhouettes** along the bottom, **the slogan** in quotes and where
 it sits, then **the palette** if it differs from red, cream and black, and the aspect.
-The example that made `examples/propaganda-worker.webp`:
+The example that made `examples/propaganda-saver.webp`:
 
 ```text
-DRAFT: filled in after the tuning tests.
+A young Indonesian woman in her twenties with short black hair, wearing a plain office shirt
+with rolled-up sleeves, seen from a low angle from the waist up, holds a big piggy bank high
+above her head in one hand like a torch, chin up, looking proudly to the horizon. Sunburst
+rays radiate from behind the piggy bank. Along the bottom, near-black silhouettes of office
+towers, construction cranes and an elevated train line. A brick red band along the bottom of
+the poster carries the slogan "PAY YOURSELF FIRST!" in big cream condensed block capitals.
+4:3.
 ```
+
+`examples/propaganda-farmer.webp` is the food self-sufficiency row of the table (red, cream,
+black and mustard) and `examples/propaganda-card.webp` the credit-card row (with navy).
 
 The style block, word for word, at the end:
 
@@ -104,7 +118,35 @@ slogan (rare) uses `No text, no letters, no numbers.`
 
 ## What the tests taught
 
-DRAFT: filled in after the tuning tests on Nano Banana 2.1.
+Tested on 27 November 2026 on the Gemini API with Nano Banana 2.1: eight tuning pictures with
+the three symbol-free sample crops attached, then two briefs through `generate.sh propaganda`
+with the examples alone.
+
+- **It works from words alone, but drifts in colour:** without the examples it added mustard
+  rays nobody asked for. With them it keeps to the palette the scene names. Name the palette
+  in the scene whenever it is more than red, cream and black.
+- **Slogans come out letter-perfect** in English and Indonesian, two to four words in
+  capitals (`"PAY YOURSELF FIRST!"`, `"MAJU TERUS HILIRISASI!"`, `"SWASEMBADA PANGAN!"`).
+  Say where the band sits, its colour and the letters' colour.
+- **The second language is a remake.** Attaching the English poster with `--ref` and asking
+  to "make the attached poster again exactly as it is ..., changing only the words: the slogan
+  in the band now reads exactly ..." gave the same poster with `"SISIHKAN DULU!"`.
+- **A heroic Indonesian man in a peci pointing ahead comes back as Sukarno**, even with "an
+  invented face that resembles no real politician": that dress and gesture are the model's
+  idea of an Indonesian poster. When nobody real is meant, change both (a hard hat, glasses,
+  a batik shirt, a woman, a held object instead of a pointing arm), and look at the face
+  before using it. A bald official with a moustache in a suit read as nobody.
+- **Never name a building in the silhouettes.** "A school" came back with SCHOOL written on
+  it. Describe it ("a low building with a clock and a flagpole") and add "with no words on any
+  building".
+- **No banned symbol appeared** in any test with the style block's ban. A farmer told "she
+  holds nothing else: no tools in her hands" carried only her rice. The Indonesian flag came
+  back right: red over white, whole, nothing on it.
+- **Hands hold up:** a card snapped between two fists came out right with "exactly two hands,
+  five fingers each".
+- **Say who holds each banner pole.** In the family march one pole floated free.
+- **3:4 portrait works** (the slogan band moves to the top) for a poster that stands alone;
+  4:3 is the default in a post.
 
 ## What to reject
 

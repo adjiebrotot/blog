@@ -95,8 +95,18 @@ the platform on the left), **the expression and the doodle marks**, then **the f
 `examples/hybrid-street.webp`:
 
 ```text
-DRAFT: filled in after the tuning tests.
+A photograph of a sunny afternoon on the wide pedestrian sidewalk of Jalan Sudirman in
+Jakarta, with tall glass office towers, trees and a busy road behind, slightly out of focus.
+Drawn into it: a young Indonesian woman in a hijab and a long tunic and an Indonesian man in
+his thirties with short black hair and round glasses, wearing a short-sleeved shirt, both
+office workers, walking side by side towards the viewer. She holds her phone up to show him
+the screen and smiles; he looks at it, surprised, eyebrows up, with little doodle dashes
+around his head. Medium shot, the two of them from the knees up, 4:3.
 ```
+
+`examples/hybrid-warung.webp` came from the warung version of the same recipe (the man
+reading a long receipt, plate and glass "in grey like him") and `examples/hybrid-riverside.webp`
+from an older couple seen from behind on a stone wall by the Swan River at golden hour.
 
 The style block, word for word, at the end:
 
@@ -104,10 +114,10 @@ The style block, word for word, at the end:
 Style: a live-action and 2D illustration hybrid (mixed media), matching the attached
 reference pictures. The setting is a real photograph with natural light, true colours and
 real depth of field. The people, and everything they hold or use, are hand-drawn 2D
-characters in a sketchy, friendly style placed into that photograph: textured black brush-pen
-outlines, heavier on the outer contour and thinner inside; flat grayscale fills only (near
-black hair, mid grey and light grey clothes, skin left paper white) with an optional light
-pencil texture; no colour, no gradients and no 3D shading on anything drawn; rounded,
+characters in a sketchy, friendly style placed into that photograph: bold, slightly rough black
+brush-pen outlines with a dry textured edge, thick on the outer contour and thinner inside;
+flat grayscale fills only, food and drink included (near black hair, mid grey and light grey
+clothes, skin left paper white) with an optional light pencil texture; no colour, no gradients and no 3D shading on anything drawn; rounded,
 approachable shapes; simple friendly faces with small dot eyes, short eyebrows and a small
 curved mouth, expressive but not detailed. Small doodle marks near the heads (short dashes for
 surprise or excitement, a round speech bubble with an icon). The drawn people sit and stand
@@ -122,7 +132,35 @@ Then one text rule: `No text, no letters, no numbers.` or, with words quoted in 
 
 ## What the tests taught
 
-DRAFT: filled in after the tuning tests on Nano Banana 2.1.
+Tested on 27 November 2026 on the Gemini API with Nano Banana 2.1: eight tuning pictures with
+crops of Adjie's design system attached, then two of the blog's briefs (the tax-return couple,
+the Perth buyer and renter) through `generate.sh hybrid` with the examples alone.
+
+- **The style works from words alone**; the examples add what words miss: the rough,
+  dry-edged brush line and the pencil grain of the design system.
+- **The examples leak.** With the samples attached, a man asked for with "short black hair"
+  got their curly hair and backpack. Name everyone's hair and what each person carries.
+- **Food and drink keep their real colour** unless the scene names them grey: a drawn egg came
+  back yellow and iced tea amber, even with "food and drink included" in the style block.
+  "A drawn plate of fried rice and a drawn glass of iced tea, both in grey like him" fixed it.
+- **Adjie's photograph comes back as it was.** Drawing a commuter into a platform photo left
+  the rest untouched: outside the figure, 0.2% of the pixels changed noticeably. The result
+  comes at the model's size (about 1200 x 900 for 4:3) and shape, so crop the photo to the
+  `--aspect` first, and keep the original for anything that needs full resolution.
+- **Skin is paper white for everyone**, as in the design system, so skin tone does not show.
+  Say who people are with hair, a hijab, a beard, glasses, age and clothes.
+- **Quoted words in a speech bubble come out letter-perfect** in hand-lettered capitals
+  (`"MAHAL!"`). Otherwise give the bubble an icon (a music note, a lightbulb, a heart).
+- **Give small props a size.** A chilli held between finger and thumb came out as a speck.
+- **People in the midground come out small** (the solar-farm engineers were a quarter of the
+  height). For a thumbnail or a social card, bring them to the foreground, knees up.
+- **The photo brings its own detail,** writing included: a calendar on a dining-room wall
+  came back with readable numbers. Name what is on the walls ("a plain wall") when it matters.
+  Market and shop signs came back blurred.
+- **A named city gives a believable, generic version of it** (a Perth skyline across the
+  river, Sudirman's towers). Good for mood; not a record of the place.
+- **Back views, golden hour, seated people at a real table and a 16:9 card with the people on
+  one side** all worked on the first try.
 
 ## What to reject
 
