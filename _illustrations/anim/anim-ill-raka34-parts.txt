@@ -1,0 +1,18 @@
+The first attached picture shows a character, Raka, in a three-quarter view turned to the right. Draw the same character, at the same size, same three-quarter view, same clothes and same drawing, taken apart into separate pieces for a 2D animation rig with bending limbs, the way an animator prepares a character: each piece drawn on its own, fully closed by its own black outline all the way round, spaced well apart on a plain pure white background, no piece touching or overlapping another.
+
+The pieces, all in the same three-quarter view:
+1. The head with hair and ears and a calm neutral face, with the neck below it, the neck ending in a rounded bottom.
+2. The torso: the light grey shirt from the collar to the hem, without the sleeves, the shoulders rounded off. Inside the open collar the white skin of the neck is visible, filling the collar opening right up to the top edge.
+3. The near arm (his left arm, on the right of the first picture) in ONE long piece: the short grey shirt sleeve at the top, then the bare upper arm, the elbow and the bare forearm, straight and hanging down, ending at the wrist with a rounded end. No hand.
+4. The far arm (his right arm) in one long piece, the same as piece 3, slightly narrower.
+5. The near hand, open and relaxed, fingers together, pointing down, with a rounded wrist end at the top.
+6. The far hand, the same, slightly smaller.
+7. The hips: only the top of the dark grey trousers, the waistband with belt loops and the seat down to the crotch, a short wide band, rounded at the bottom.
+8. The near leg in ONE long piece: the dark grey trouser leg from the top of the thigh, rounded at the top, straight down through the knee to the black lace-up shoe pointing to the lower right.
+9. The far leg in one long piece, the same as piece 8.
+
+Arrange them in a tidy layout: head, torso and hips in the middle column, the arms and hands on the left and right, the two legs at the bottom side by side. No arrows, no labels, no numbers, no shadows. Square 1:1.
+
+Style: a live-action and 2D illustration hybrid (mixed media), matching the attached reference pictures. The drawing follows the attached pictures exactly: hand-drawn 2D, sketchy and friendly, bold slightly rough black brush-pen outlines with a dry textured edge, thick on the outer contour and thinner inside; flat grayscale fills only (near black hair, mid grey and light grey clothes, skin left paper white) with a light pencil texture; no colour, no gradients and no 3D shading. No logo, no watermark, no signature.
+
+No text, no letters, no numbers.
