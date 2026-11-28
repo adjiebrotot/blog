@@ -137,17 +137,9 @@ The officials' statements do not establish manipulation by BPS or a large effect
 
 Look at the cumulative change, not the monthly rate: prices in Indonesia rose about 31% from 2015 to 2024.[^cpi-cum] (Deflation is not the goal, by the way. Falling prices usually signal a stagnant economy.) Then ask whether wages keep up. Real wages, a.k.a. wages after inflation, are the number that tells you whether a family can buy more this year than last.
 
-Divide BPS's average employee wage by the consumer price index and set 2019 at 100. In 2025, the average Indonesian employee's wage bought 1.7% less than in 2019, after six years in which the inflation headline was mostly called low.[^realwage] Australia's real wages fell too, after the 2022 inflation spike, and further, to 95.9. Low inflation and wages that keep up are two different things, in any country. In the chart below, the blue line is Australia and the red line is Indonesia.
+Divide BPS's average employee wage by the consumer price index and set 2019 at 100. In 2025, the average Indonesian employee's wage bought 1.7% less than in 2019, after six years in which the inflation headline was mostly called low.[^realwage] Australia's real wages fell too, after the 2022 inflation spike, and further, to 95.9. Low inflation and wages that keep up are two different things, in any country.
 
-```mermaid
-%%{init: {"themeVariables": {"xyChart": {"plotColorPalette": "#5A91E8, #E63939"}}}}%%
-xychart-beta
-  title "Real wages, 2019 = 100"
-  x-axis [2019, 2020, 2021, 2022, 2023, 2024, 2025]
-  y-axis "Index" 88 --> 104
-  line [100, 100.8, 99.9, 96.5, 94.9, 95.4, 95.9]
-  line [100, 93.1, 91.0, 97.8, 97.7, 98.3, 98.3]
-```
+{% include pi/gsl-pi-real-wages-en.html %}
 
 And look at the ratios that matter at home: a house price against a year's income, a year's school fees against the median wage.
 
@@ -197,14 +189,7 @@ Indonesia's reported debt ratio is lower than those of many other countries. Aus
 
 **One: off the balance sheet, through state-owned enterprises (<span markdown="0">SOEs</span>).** Toll roads and infrastructure are built by the state construction companies (BUMN Karya: WSKT, WIKA, ADHI and PTPP) with their own borrowing. That debt isn't "government debt", but the state owns the companies and rescues them when they struggle. The liabilities of the four listed state construction companies more than tripled in three years, from Rp60.4 trillion in 2015 to Rp197.5 trillion in 2018, during the toll-road push, stayed above Rp200 trillion until 2023, and were still Rp188.7 trillion in 2024. Waskita Karya (WSKT) alone went from Rp20.6 trillion to Rp95.5 trillion over those three years. Waskita and Wijaya Karya (WIKA) both went through debt restructuring with their banks in 2023 and 2024.[^karya] None of it is counted as government debt. Here are their combined liabilities, year by year:
 
-```mermaid
-%%{init: {"themeVariables": {"xyChart": {"plotColorPalette": "#E63939"}}}}%%
-xychart-beta
-  title "Total liabilities of WSKT, WIKA, ADHI and PTPP (Rp trillion)"
-  x-axis [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
-  y-axis "Rp trillion" 0 --> 240
-  bar [60.4, 98.4, 156.2, 197.5, 207.2, 212.5, 215.5, 215.6, 213.1, 188.7]
-```
+{% include pi/gsl-pi-soe-liabilities-en.html %}
 
 **Two: bills paid late.** The government owes Pertamina and PLN compensation for selling fuel and electricity below cost. In 2024, Rp53.8 trillion of the bills for Q1 2024 were still unpaid.[^energy] Paying late keeps this year's deficit lower and parks the cost on the SOEs' books until the money arrives.
 

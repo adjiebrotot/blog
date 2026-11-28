@@ -683,17 +683,64 @@ a.btn-primary { color: var(--text-inv); }
 }
 .abbr-tip.is-shown { opacity: 1; visibility: visible; }
 
-/* ── Country bar chart: {% include hbar.html id="..." %}, data in _data/charts.yml.
-   One highlighted country (red), ASEAN (blue), OECD members (neutral grey), the OECD
-   average (ink). Every bar carries its name and value as text, so colour is never the
+/* ── Data figures: one palette for every chart, map, diagram and infographic on the blog.
+   Procedural figures ({% include pi/<name>-<lang>.html %}, the procedural-illustration skill)
+   and the country bar chart ({% include hbar.html id="..." %}) both read these tokens, so a
+   colour means the same thing in every figure. Roles, not hues: --pi-hl is the subject the
+   figure is about, --pi-a its comparison group, --pi-base the context. Values are checked
+   for contrast and colour-blind separation by the skill's check.py. ── */
+:root {
+  --pi-ink:var(--text); --pi-label:var(--chart-text); --pi-grid:var(--chart-grid); --pi-axis:#5B6A85; --pi-bg:var(--panel);
+  --pi-hl:#F05252; --pi-hl-soft:#5A2630; --pi-a:#5A91E8; --pi-a-soft:#1E3A66; --pi-base:#6B7A94; --pi-base-soft:#26334B;
+  --pi-gold:var(--gold); --pi-teal:var(--accent2); --pi-pos:var(--positive-em); --pi-neg:var(--negative-em);
+  --pi-s1:var(--line-a); --pi-s2:var(--line-b); --pi-s3:var(--line-c); --pi-s4:var(--line-d); --pi-s5:var(--line-e);
+  --pi-seq1:#1E3354; --pi-seq2:#2B4F82; --pi-seq3:#3D6FB3; --pi-seq4:#5E93DB; --pi-seq5:#9CC2F5;
+  --pi-div1:#E05555; --pi-div2:#A4434E; --pi-div3:#3A4760; --pi-div4:#3F6DB5; --pi-div5:#7FB2FF;
+  --pi-land:#24334F; --pi-land-ctx:#1A263B; --pi-land-line:var(--panel); --pi-node:#1F2D47; --pi-node-line:#3C4C68;
+  --pi-shade:rgba(0,0,0,.34); --pi-light:rgba(255,255,255,.14);
+  /* Text in a series colour: the same hue, at 4.5:1 or more on the card */
+  --pi-hl-ink:#FF8B8B; --pi-a-ink:#8DBBFF; --pi-base-ink:#A8B6CF; --pi-gold-ink:var(--gold); --pi-teal-ink:var(--accent2);
+  --pi-s1-ink:var(--line-a); --pi-s2-ink:var(--line-b); --pi-s3-ink:var(--line-c); --pi-s4-ink:var(--line-d); --pi-s5-ink:var(--line-e);
+}
+:root.light {
+  --pi-axis:#8D9AB0;
+  --pi-hl:#E63939; --pi-hl-soft:#FBD3D3; --pi-a:#3A71C8; --pi-a-soft:#D6E4FA; --pi-base:#7F8BA0; --pi-base-soft:#E3E9F3;
+  --pi-seq1:#DCE8FB; --pi-seq2:#AFCBF4; --pi-seq3:#7AA7E8; --pi-seq4:#3F79CF; --pi-seq5:#0F4FB0;
+  --pi-div1:#C6382F; --pi-div2:#EE9A92; --pi-div3:#E3E9F3; --pi-div4:#8FB5FF; --pi-div5:#0052CC;
+  --pi-land:#DCE4F1; --pi-land-ctx:#EEF2F8; --pi-node:#F0F4FF; --pi-node-line:#C8D4E8;
+  --pi-shade:rgba(20,32,58,.24); --pi-light:rgba(255,255,255,.32);
+  --pi-hl-ink:#C6382F; --pi-a-ink:#2C62B5; --pi-base-ink:#4C5B76;
+  --pi-s1-ink:#2C62B5; --pi-s2-ink:#C6382F; --pi-s3-ink:#1F7F63; --pi-s4-ink:#A84D63; --pi-s5-ink:#7E3F99;
+}
+/* The figure card: title and subtitle as text above, the drawing, then the source line. */
+.pi, .hbar { background: var(--pi-bg); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1rem 1rem 0.85rem; }
+.prose .pi figcaption, .prose .hbar figcaption { margin: 0; text-align: left; color: var(--text); }
+.pi figcaption strong, .hbar figcaption strong { display: block; font-size: 1rem; line-height: 1.35; }
+.pi figcaption span, .hbar figcaption span { display: block; color: var(--muted); font-size: 0.82rem; line-height: 1.4; margin-top: 0.15rem; }
+.pi-art { container-type: inline-size; margin-top: 0.75rem; }
+.pi-art svg { display: block; width: 100%; height: auto; overflow: visible; font-family: inherit; font-variant-numeric: tabular-nums; }
+.pi-art .pi-n { display: none; }
+@container (max-width: 519px) { .pi-art .pi-w { display: none; } .pi-art .pi-n { display: block; } }
+.pi-art text { font-kerning: normal; }
+.pi-art .halo { paint-order: stroke; stroke: var(--pi-bg); stroke-width: 4px; stroke-linejoin: round; }
+.pi-art .pi-flow { stroke-dasharray: 6 6; animation: pi-flow 0.9s linear infinite; }
+@keyframes pi-flow { to { stroke-dashoffset: -12; } }
+@media (prefers-reduced-motion: reduce) { .pi-art .pi-flow { animation: none; } }
+.prose .pi .pi-src, .prose .hbar .hbar-src { margin: 0.7rem 0 0; color: var(--muted); font-size: 0.75rem; line-height: 1.45; }
+.pi-src .pi-note { display: block; margin-top: 0.15rem; }
+.prose .pi details.pi-data { margin: 0.45rem 0 0; font-size: 0.75rem; color: var(--muted); }
+.pi details.pi-data summary { cursor: pointer; width: max-content; }
+.pi details.pi-data summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+.prose .pi .pi-data table { margin: 0.4rem 0 0; font-size: 0.78rem; width: 100%; display: block; overflow-x: auto; }
+.pi .pi-data th, .pi .pi-data td { padding: 0.2rem 0.6rem 0.2rem 0; text-align: left; white-space: nowrap; }
+.pi .pi-data td.n { text-align: right; font-variant-numeric: tabular-nums; }
+@media (forced-colors: active) { .pi-art svg * { forced-color-adjust: auto; } }
+
+/* ── Country bar chart: {% include hbar.html id="..." %}, data in _data/charts.json.
+   One highlighted country (--pi-hl), ASEAN (--pi-a), OECD members (--pi-base), the OECD
+   average (ink). Every bar carries its flag, name and value as text, so colour is never the
    only cue. Names wrap to two lines on a phone instead of being cut. ── */
-.hbar { --hb-hl:#F05252; --hb-asean:#5A91E8; --hb-oecd:#7A7873; --hb-avg:var(--text);
-  background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius-lg);
-  padding: 1rem 1rem 0.85rem; }
-:root.light .hbar { --hb-hl:#E63939; --hb-asean:#3A71C8; --hb-oecd:#8A8782; }
-.prose .hbar figcaption { margin: 0; text-align: left; color: var(--text); }
-.hbar figcaption strong { display: block; font-size: 1rem; line-height: 1.35; }
-.hbar figcaption span { display: block; color: var(--muted); font-size: 0.82rem; line-height: 1.4; margin-top: 0.15rem; }
+.hbar { --hb-hl:var(--pi-hl); --hb-asean:var(--pi-a); --hb-oecd:var(--pi-base); --hb-avg:var(--text); }
 .prose .hbar ul.hbar-key { list-style: none; padding: 0; margin: 0.6rem 0 0.5rem; display: flex; flex-wrap: wrap; gap: 0.2rem 0.9rem; font-size: 0.78rem; color: var(--muted); }
 .prose .hbar ul.hbar-key li { margin: 0; display: flex; align-items: center; gap: 0.35rem; }
 .hbar-key li::before { content: ""; width: 0.75rem; height: 0.75rem; border-radius: 3px; background: var(--hb-oecd); }
@@ -702,7 +749,10 @@ a.btn-primary { color: var(--text-inv); }
 .hbar-key li.avg::before { background: var(--hb-avg); }
 .prose .hbar ol { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
 .prose .hbar ol li { margin: 0; display: grid; grid-template-columns: minmax(5.5rem, 28%) 1fr auto; gap: 0.5rem; align-items: center; font-size: 0.82rem; line-height: 1.2; }
-.hbar .k { color: var(--muted); text-align: right; overflow-wrap: anywhere; }
+.hbar .k { color: var(--muted); text-align: right; overflow-wrap: break-word; hyphens: auto; display: flex; align-items: center; justify-content: flex-end; gap: 0.4rem; }
+.hbar .k > span { min-width: 0; }
+.hbar .k img.flag { flex: none; width: 1.2rem; height: 0.9rem; border-radius: 2px; box-shadow: 0 0 0 1px var(--border); object-fit: cover; margin: 0; border: 0; display: inline-block; }
+.hbar .k .flag-none { flex: none; width: 1.2rem; height: 0.9rem; }
 .hbar .b { height: 0.8rem; min-width: 0; }
 .hbar .b i { display: block; height: 100%; min-width: 2px; border-radius: 0 4px 4px 0; background: var(--hb-oecd); }
 .hbar li.hl .b i { background: var(--hb-hl); }
@@ -713,6 +763,9 @@ a.btn-primary { color: var(--text-inv); }
 .hbar li.hl .k, .hbar li.hl .v, .hbar li.avg .k { color: var(--text); font-weight: 700; }
 .hbar .v { font-variant-numeric: tabular-nums; white-space: nowrap; min-width: 3rem; }
 .hbar .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-.prose .hbar .hbar-src { margin: 0.7rem 0 0; color: var(--muted); font-size: 0.75rem; line-height: 1.4; }
 @media (forced-colors: active) { .hbar .b i { border: 1px solid CanvasText; } }
 .hbar .k small { display: block; font-size: 0.72rem; color: var(--muted); font-weight: 400; }
+/* Phones: a wider name column for the flags, a smaller card padding */
+@media (max-width: 640px) { .pi, .hbar { padding: 0.85rem 0.75rem 0.75rem; }
+  .prose .hbar ol li { grid-template-columns: minmax(7.6rem, 42%) 1fr auto; gap: 0.4rem; }
+  .hbar .k { gap: 0.3rem; } .hbar .k img.flag, .hbar .k .flag-none { width: 1.05rem; height: 0.79rem; } }

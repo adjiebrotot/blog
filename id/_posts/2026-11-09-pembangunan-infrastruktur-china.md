@@ -22,10 +22,7 @@ bmc_message: "Traktir saya segelas kopi: tulisan berikutnya saya bangun dulu, pe
 
 Sejak 2023, saya menyempatkan diri berkunjung ke China setidaknya sekali setahun. Sampai tulisan ini dibuat, saya sudah mengunjungi 14 wilayah yang ditandai dalam peta ini.
 
-<figure>
-{% include cbf-china-map.html lang="id" title="Peta China yang menandai 14 wilayah yang pernah saya kunjungi: Beijing, Tianjin, Shanghai, Chongqing, Jiangsu, Heilongjiang, Hunan, Shaanxi, Sichuan, Guangdong, Fujian, Taiwan, Hong Kong, dan Makau" %}
-<figcaption>Keempat belas wilayah yang sudah saya jejaki sejak 2023. Peta: data batas wilayah DataV (Alibaba Cloud).</figcaption>
-</figure>
+{% include pi/cbf-pi-china-visited-id.html %}
 
 Yang selalu membuat saya takjub adalah skala pembangunannya: jaringan kereta cepat yang menjangkau hampir ke mana-mana, stasiun kereta yang luasnya menyaingi bandara, jaringan metro yang tidak kalah panjang dari jaringan MRT Singapura di hampir setiap kota besar, dan gedung pencakar langit yang menjulang bahkan di kota-kota lapis kedua dan ketiga (sebutan untuk kota menengah dan kecil di China) yang namanya jarang kita dengar.
 
@@ -73,16 +70,7 @@ Kuncinya ada pada kepemilikan tanah. Di kota-kota China, tanah dimiliki negara, 
 
 Putaran itu dijaga oleh perencanaan jangka panjang, mulai dari Rencana Lima Tahun nasional sampai rencana induk kota untuk puluhan tahun ke depan. Para pejabat daerah di China pun selama ini dinilai dari pertumbuhan ekonomi wilayah yang mereka pimpin, sehingga mereka berlomba-lomba membangun. Diagram berikut menggambarkan putaran itu, termasuk jalan buntunya ketika tidak ada yang datang.
 
-```mermaid
-flowchart TD
-  A[Negara menguasai tanah] --> B[Pemerintah daerah membangun rel, jalan, dan metro dengan utang]
-  B --> C[Harga tanah di sekitarnya naik]
-  C --> D[Hak guna tanah dijual ke pengembang]
-  D --> E[Hasilnya melunasi utang dan membiayai proyek berikutnya]
-  E --> B
-  B -.-> F[Tidak ada yang datang: tidak ada pekerjaan, tidak ada alasan]
-  F -.-> G[Tanah tidak laku, utang tetap menumpuk, seperti di Yujiapu]
-```
+{% include pi/cbf-pi-land-finance-loop-id.html %}
 
 ### Kapan warga dan pelaku usaha benar-benar datang?
 

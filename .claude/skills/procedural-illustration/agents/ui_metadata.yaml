@@ -1,0 +1,3 @@
+interface:
+  display_name: "Procedural Illustration"
+  short_description: "Charts, infographics, flowcharts, maps, 3D graphs and engineering diagrams drawn in code in the blog's design system: inline SVG for both themes and phone and desktop, with flags, a source line and a 21-point checklist"

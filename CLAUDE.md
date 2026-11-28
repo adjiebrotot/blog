@@ -13,7 +13,12 @@ hybrid of a photo with hand-drawn people; politics posts use Tempo, finance post
 Gemini API or OpenRouter, prompts kept in `_illustrations/`. For an isometric
 scene (a place or system with several people, buildings or machines, drawn in code as a dark
 and a light SVG): the `isometric-illustration` skill (`.claude/skills/isometric-illustration/`),
-scene files kept in `_illustrations/` too. For a chart or tool from
+scene files kept in `_illustrations/` too. For a chart, graph, map, flowchart, infographic,
+3D graph or engineering diagram of data (not a tool embed): the `procedural-illustration` skill
+(`.claude/skills/procedural-illustration/`, a router to six subskills), drawn in code as inline
+SVG in the blog's tokens for both themes and both phone and desktop, with flags, a source line
+and a 21-point presentation checklist; specs in `_illustrations/<prefix>-pi-<subject>.py`,
+output in `_includes/pi/`. Mermaid is no longer used for charts or flowcharts. For a chart or tool from
 Adjie Brotools in a post, with its figures and a preview before writing: the `brotools-embed`
 skill (`.claude/skills/brotools-embed/`), which works from the live tool site. The design tokens come from
 `../tool/dark.css` and `light.css` (tool repo, `_ref/design-reference.md`).
@@ -53,6 +58,10 @@ and `python3 .claude/skills/ai-assisted-blog-post/scripts/check-seo.py <file>` (
 and has its `md/<lang>-<slug>.txt` stub. It also has a substantive-editor PASS under
 `.claude/skills/adjie-writing-style/references/editorial-safeguards.md`, with evidence and
 personal provenance settled. A clean checker run is not an editorial-quality verdict.
+
+Every procedural figure the change touched renders with no ERROR:
+`python3 .claude/skills/procedural-illustration/scripts/render.py _illustrations/<name>.py --out <scratchpad>`,
+and its sheet was looked at. Never edit `_includes/pi/` by hand; publish from the spec.
 
 Every illustration (`*-ill-*.webp`) and every `thumbnail:` or `share_image:` picture has a
 focus box in `_data/focus.yml`: `python3 _build/focus.py` says OK (no MISSING or ERROR, and

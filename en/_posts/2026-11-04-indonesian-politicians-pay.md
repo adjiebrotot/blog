@@ -152,13 +152,7 @@ I used the same yardstick as for Australia and Indonesia: the leader's salary di
 | Indonesia | President: Rp62.74 million a month (since 2001)[^setkab] | BPS average wage of employees Rp3.33 million a month (August 2025)[^bpswage] | 18.8x |
 | Philippines | President: ₱449,157 a month (from 1 January 2026)[^philippines] | Average full-time wage ₱21,544 a month (2024) | 20.8x |
 
-```mermaid
-xychart-beta horizontal
-  title "Leader's pay as a multiple of a typical wage"
-  x-axis [China, Norway, Vietnam, UK, Malaysia, US, "S. Korea", Thailand, Japan, Australia, Indonesia, Philippines]
-  y-axis "Multiple of a typical wage" 0 --> 22
-  bar [1.9, 3.3, 3.8, 4.5, 7.8, 7.8, 7.9, 8.0, 8.3, 8.4, 18.8, 20.8]
-```
+{% include hbar.html id="gpi-leader-pay" %}
 
 The two highest multiples, Indonesia's 18.8 and the Philippines' 20.8, are if anything too low. Indonesia's is an average, and a median would most likely be lower. The Philippine wage comes from a survey of formal businesses with at least ten workers, which leaves out the informal sector, where pay is lower.
 
@@ -177,13 +171,7 @@ Ordinary MPs show the same pattern. For each country I added up the salary and t
 | Philippines | ₱300,961 a month (base salary only, from 1 January 2026)[^mp-philippines] | Average full-time wage ₱21,544 a month (2024) | 14.0x |
 | Indonesia | About Rp74.2 million a month (gross, September 2025)[^dpr] | BPS average wage of employees Rp3.33 million a month (August 2025)[^bpswage] | 22.3x |
 
-```mermaid
-xychart-beta horizontal
-  title "MP's pay as a multiple of a typical wage"
-  x-axis [Norway, UK, US, Australia, Japan, "S. Korea", Thailand, Malaysia, Philippines, Indonesia]
-  y-axis "Multiple of a typical wage" 0 --> 24
-  bar [1.9, 2.5, 3.4, 4.2, 4.5, 4.7, 7.2, 8.7, 14.0, 22.3]
-```
+{% include hbar.html id="gpi-mp-pay" %}
 
 China and Vietnam are missing from the MP table on purpose. Most of their legislators are part-time and keep their day jobs, so there is no MP salary to compare fairly. The Philippine figure is too low as well: it is the base salary of a member of the House of Representatives, and their allowances, which are large, aren't published in detail.
 

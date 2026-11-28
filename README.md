@@ -116,21 +116,21 @@ KaTeX and Mermaid load only on a post that uses them.
   ```
 
   A single `$` stays a dollar sign, so prices like $500 are safe.
-- **Diagrams and charts:** a ` ```mermaid ` block draws a
-  [Mermaid](https://mermaid.js.org/intro/) diagram: `flowchart`, `sequenceDiagram`, `gantt`,
-  `pie` or `xychart-beta` (bars and lines). Colours come from the blog's theme and the tool's
-  chart palette, and redraw when the reader switches theme.
+- **Charts, maps, flowcharts and infographics:** drawn in code by the
+  `procedural-illustration` skill (`.claude/skills/procedural-illustration/`), in the blog's
+  design system: one spec in `_illustrations/<prefix>-pi-<subject>.py` makes the figure in both
+  languages, for desktop and phone, in both themes, with flags, a source line and a data table.
+  Publish it with `render.py --publish` and include it on its own line:
 
-  ````
-  ```mermaid
-  xychart-beta
-    title "Net wealth"
-    x-axis [Y1, Y2, Y3, Y4, Y5]
-    y-axis "AUD k" 0 --> 200
-    bar [20, 45, 80, 120, 170]
-    line [30, 50, 70, 95, 120]
+  ```liquid
+  {% include pi/gsl-pi-real-wages-en.html %}
   ```
-  ````
+
+  A long ranking of countries uses the HTML bar chart, with flags:
+  `{% include hbar.html id="gsl-unemployment" %}` (data in `_data/charts.json`).
+- **Other diagrams:** a ` ```mermaid ` block still draws a sequence diagram or a Gantt chart
+  ([Mermaid](https://mermaid.js.org/intro/)), in the blog's colours. Charts and flowcharts use
+  the procedural figures above.
 - **Footnotes:** `text[^1]`, then `[^1]: The note.` anywhere below.
 - **Task lists:** `- [ ] to do` and `- [x] done`.
 - **Alerts:** GitHub's `> [!NOTE]`, `> [!TIP]`, `> [!IMPORTANT]`, `> [!WARNING]` and

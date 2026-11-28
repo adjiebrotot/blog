@@ -4,7 +4,12 @@
   The data lives in _data/charts.json under that id (title, sub, source and each row's
   label and value text per language, plus the bar width in percent and the row's group:
   hl = the highlighted country, asean, oecd, avg, or na for "no data"). Country names come
-  from _data/countries.yml. Colours follow the theme (blog.css, .hbar).
+  from _data/countries.yml. Colours follow the theme (blog.css, .hbar, the --pi-* tokens).
+  Each row shows its country's flag (assets/img/flags/<iso3>.svg, by the row's ISO alpha-3
+  code `c`, when _data/countries.yml knows it); a row whose code is not a country (OECD, x)
+  or that sets "flag": false gets an empty
+  slot so the names stay aligned, and "flag": "EUU" picks another flag. A chart sets
+  "flags": false to show none. Part of the procedural-illustration skill's design system.
 {%- endcomment -%}
 {%- assign _c = site.data.charts[include.id] -%}
 {%- assign _l = page.lang | default: site.default_lang -%}
@@ -15,7 +20,10 @@
 <ol>
 {%- for _r in _c.rows -%}
 {%- assign _name = site.data.countries[_r.c][_l] | default: _r.label[_l] %}
-<li class="{{ _r.g }}"><span class="k">{{ _name }}{% if _r.note %}<small>{{ _r.note[_l] }}</small>{% endif %}</span><span class="sr">: </span><span class="b"><i style="width:{{ _r.w }}%"></i></span><span class="v">{{ _r.v[_l] }}</span></li>
+{%- assign _f = _r.flag | default: _r.c -%}
+{%- unless _r.flag or site.data.countries[_f] -%}{%- assign _f = nil -%}{%- endunless -%}
+{%- if _r.flag == false or _f == "OECD" -%}{%- assign _f = nil -%}{%- endif %}
+<li class="{{ _r.g }}"><span class="k"><span>{{ _name }}{% if _r.note %}<small>{{ _r.note[_l] }}</small>{% endif %}</span>{% unless _c.flags == false %}{% if _f %}<img class="flag" src="/assets/img/flags/{{ _f | downcase }}.svg" alt="" width="18" height="14" loading="lazy">{% else %}<span class="flag-none"></span>{% endif %}{% endunless %}</span><span class="sr">: </span><span class="b"><i style="width:{{ _r.w }}%"></i></span><span class="v">{{ _r.v[_l] }}</span></li>
 {%- endfor %}
 </ol>
 <p class="hbar-src">{{ _t.chart_source }}: {{ _c.source[_l] }}</p>

@@ -1365,7 +1365,8 @@
      "id": "64,1%"
     }
    }
-  ]
+  ],
+  "flags": false
  },
  "gsl-poverty-830": {
   "title": {
@@ -2423,6 +2424,256 @@
     "v": {
      "en": "-0.1%",
      "id": "-0,1%"
+    }
+   }
+  ]
+ },
+ "gpi-leader-pay": {
+  "title": {
+   "en": "Indonesia's president is paid 18.8 times the typical wage, second only to the Philippines",
+   "id": "Gaji presiden Indonesia setara 18,8 kali upah pekerja, hanya dilampaui Filipina"
+  },
+  "sub": {
+   "en": "Leader's pay divided by the country's typical wage: the median, or the average where no official median is published. Latest figures in the sources",
+   "id": "Gaji pemimpin negara dibagi upah pekerja di negaranya: median, atau rata-rata kalau median resminya tidak tersedia. Angka yang dipakai adalah yang terbaru dari tiap sumber"
+  },
+  "source": {
+   "en": "Official pay documents and national statistics agencies (details in the footnotes), author's calculation",
+   "id": "Dokumen gaji resmi dan badan statistik tiap negara (rinciannya di catatan kaki), dihitung penulis"
+  },
+  "no_groups": true,
+  "has_avg": false,
+  "rows": [
+   {
+    "c": "PHL",
+    "g": "",
+    "w": 100.0,
+    "v": {
+     "en": "20.8×",
+     "id": "20,8×"
+    },
+    "note": {
+     "en": "Formal firms with 10+ workers",
+     "id": "Perusahaan formal, 10 pekerja ke atas"
+    }
+   },
+   {
+    "c": "IDN",
+    "g": "hl",
+    "w": 90.4,
+    "v": {
+     "en": "18.8×",
+     "id": "18,8×"
+    },
+    "note": {
+     "en": "Average wage, not median",
+     "id": "Rata-rata upah, bukan median"
+    }
+   },
+   {
+    "c": "AUS",
+    "g": "",
+    "w": 40.4,
+    "v": {
+     "en": "8.4×",
+     "id": "8,4×"
+    }
+   },
+   {
+    "c": "JPN",
+    "g": "",
+    "w": 39.9,
+    "v": {
+     "en": "8.3×",
+     "id": "8,3×"
+    }
+   },
+   {
+    "c": "THA",
+    "g": "",
+    "w": 38.5,
+    "v": {
+     "en": "8.0×",
+     "id": "8,0×"
+    }
+   },
+   {
+    "c": "KOR",
+    "g": "",
+    "w": 38.0,
+    "v": {
+     "en": "7.9×",
+     "id": "7,9×"
+    }
+   },
+   {
+    "c": "MYS",
+    "g": "",
+    "w": 37.5,
+    "v": {
+     "en": "7.8×",
+     "id": "7,8×"
+    }
+   },
+   {
+    "c": "USA",
+    "g": "",
+    "w": 37.5,
+    "v": {
+     "en": "7.8×",
+     "id": "7,8×"
+    }
+   },
+   {
+    "c": "GBR",
+    "g": "",
+    "w": 21.6,
+    "v": {
+     "en": "4.5×",
+     "id": "4,5×"
+    }
+   },
+   {
+    "c": "VNM",
+    "g": "",
+    "w": 18.3,
+    "v": {
+     "en": "3.8×",
+     "id": "3,8×"
+    }
+   },
+   {
+    "c": "NOR",
+    "g": "",
+    "w": 15.9,
+    "v": {
+     "en": "3.3×",
+     "id": "3,3×"
+    }
+   },
+   {
+    "c": "CHN",
+    "g": "",
+    "w": 9.1,
+    "v": {
+     "en": "1.9×",
+     "id": "1,9×"
+    },
+    "note": {
+     "en": "Base pay, 2015 figure",
+     "id": "Gaji pokok, angka 2015"
+    }
+   }
+  ]
+ },
+ "gpi-mp-pay": {
+  "title": {
+   "en": "An Indonesian MP earns 22.3 times the typical wage, the highest of ten countries",
+   "id": "Gaji anggota DPR setara 22,3 kali upah pekerja, tertinggi di antara sepuluh negara"
+  },
+  "sub": {
+   "en": "Salary plus fixed allowances paid to a backbench MP, before tax, divided by the country's typical wage (median, or average where no official median is published). Office budgets and staff excluded",
+   "id": "Gaji ditambah tunjangan tetap anggota parlemen biasa sebelum pajak, dibagi upah pekerja di negaranya (median, atau rata-rata kalau median resminya tidak tersedia). Anggaran kantor dan staf tidak dihitung"
+  },
+  "source": {
+   "en": "Official pay documents and national statistics agencies (details in the footnotes), author's calculation",
+   "id": "Dokumen gaji resmi dan badan statistik tiap negara (rinciannya di catatan kaki), dihitung penulis"
+  },
+  "no_groups": true,
+  "has_avg": false,
+  "rows": [
+   {
+    "c": "IDN",
+    "g": "hl",
+    "w": 100.0,
+    "v": {
+     "en": "22.3×",
+     "id": "22,3×"
+    }
+   },
+   {
+    "c": "PHL",
+    "g": "",
+    "w": 62.8,
+    "v": {
+     "en": "14.0×",
+     "id": "14,0×"
+    },
+    "note": {
+     "en": "Base salary only",
+     "id": "Gaji pokok saja"
+    }
+   },
+   {
+    "c": "MYS",
+    "g": "",
+    "w": 39.0,
+    "v": {
+     "en": "8.7×",
+     "id": "8,7×"
+    }
+   },
+   {
+    "c": "THA",
+    "g": "",
+    "w": 32.3,
+    "v": {
+     "en": "7.2×",
+     "id": "7,2×"
+    }
+   },
+   {
+    "c": "KOR",
+    "g": "",
+    "w": 21.1,
+    "v": {
+     "en": "4.7×",
+     "id": "4,7×"
+    }
+   },
+   {
+    "c": "JPN",
+    "g": "",
+    "w": 20.2,
+    "v": {
+     "en": "4.5×",
+     "id": "4,5×"
+    }
+   },
+   {
+    "c": "AUS",
+    "g": "",
+    "w": 18.8,
+    "v": {
+     "en": "4.2×",
+     "id": "4,2×"
+    }
+   },
+   {
+    "c": "USA",
+    "g": "",
+    "w": 15.2,
+    "v": {
+     "en": "3.4×",
+     "id": "3,4×"
+    }
+   },
+   {
+    "c": "GBR",
+    "g": "",
+    "w": 11.2,
+    "v": {
+     "en": "2.5×",
+     "id": "2,5×"
+    }
+   },
+   {
+    "c": "NOR",
+    "g": "",
+    "w": 8.5,
+    "v": {
+     "en": "1.9×",
+     "id": "1,9×"
     }
    }
   ]

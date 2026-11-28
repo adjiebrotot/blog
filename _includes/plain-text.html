@@ -12,6 +12,11 @@
   {%- assign _after = _parts[1] | split: _sep -%}
   {%- capture _html -%}{{ _parts[0] }}{% for _x in _after offset: 1 %}{{ _x }}{% unless forloop.last %}{{ _sep }}{% endunless %}{% endfor %}{%- endcapture -%}
 {%- endif -%}
+{%- comment -%} A procedural figure's drawing is skipped; its title, source and data table stay. {%- endcomment -%}
+{%- if _html contains '<div class="pi-art">' -%}
+  {%- assign _parts = _html | split: '<div class="pi-art">' -%}
+  {%- capture _html -%}{{ _parts[0] }}{% for _x in _parts offset: 1 %}{% assign _y = _x | split: '<!--/pi-art-->' %}{{ _y[1] }}{% endfor %}{%- endcapture -%}
+{%- endif -%}
 {%- capture _nl %}
 {% endcapture -%}
 {%- assign _h2 = _nl | append: "## <h2 " -%}
