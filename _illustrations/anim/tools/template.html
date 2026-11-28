@@ -1,0 +1,615 @@
+<title>Raka's Payday</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one column; the stage is the hero, the transport bar sits under it like an editing
+   timeline, and the making-of reads below as three plain steps. Ink greys from the drawing,
+   golden-hour amber from the photograph as the only accent. */
+:root {
+  --bg: #f5f4f1;
+  --surface: #ffffff;
+  --ink: #17171a;
+  --muted: #5e5d63;
+  --line: #dcdad5;
+  --track: #e7e5e0;
+  --accent: #c7781c;
+  --accent-ink: #ffffff;
+  --stage: #0d0d0f;
+  --display: "Schibsted Grotesk", "Inter", system-ui, sans-serif;
+  --body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121214; --surface: #1b1b1f; --ink: #ecebe8; --muted: #a3a1a8; --line: #2e2e33;
+    --track: #2a2a2f; --accent: #e6993d; --accent-ink: #17171a; --stage: #000000; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121214; --surface: #1b1b1f; --ink: #ecebe8; --muted: #a3a1a8; --line: #2e2e33;
+  --track: #2a2a2f; --accent: #e6993d; --accent-ink: #17171a; --stage: #000000; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 28px 48px;
+}
+.wrap { max-width: 1080px; margin: 0 auto; display: grid; gap: 28px; }
+header { display: grid; gap: 6px; }
+.eyebrow { font: 600 12px/1 var(--body); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1 { font: 800 clamp(28px, 4.4vw, 44px)/1.05 var(--display); letter-spacing: -.02em; margin: 0; text-wrap: balance; }
+.lede { margin: 0; color: var(--muted); max-width: 62ch; }
+
+.player { display: grid; gap: 0; border-radius: 14px; overflow: hidden; background: var(--surface); border: 1px solid var(--line); }
+.stage { position: relative; background: var(--stage); aspect-ratio: 16 / 9; max-width: 100%; }
+.stage canvas { display: block; width: 100%; height: 100%; cursor: pointer; }
+.loading { position: absolute; inset: 0; display: grid; place-items: center; color: #bbb; font: 500 13px var(--mono); }
+
+.bar { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 14px; padding: 12px 16px 10px; }
+.btn { appearance: none; border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px;
+  height: 36px; min-width: 36px; padding: 0 12px; display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  font: 600 13px var(--body); cursor: pointer; }
+.btn:hover { border-color: var(--muted); }
+.btn:focus-visible, .scrub:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.btn.play { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); width: 44px; height: 44px; padding: 0; }
+.btn[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.btn svg { width: 16px; height: 16px; fill: currentColor; }
+.btn.play svg { width: 18px; height: 18px; }
+.left, .right { display: flex; align-items: center; gap: 8px; }
+
+.scrub { position: relative; height: 36px; touch-action: none; cursor: pointer; border-radius: 8px; }
+.scrub .rail { position: absolute; left: 0; right: 0; top: 14px; height: 8px; border-radius: 8px; background: var(--track); overflow: hidden; }
+.scrub .fill { position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: var(--accent); }
+.scrub .mark { position: absolute; top: 10px; width: 2px; height: 16px; background: var(--muted); opacity: .55; border-radius: 1px; transform: translateX(-1px); }
+.scrub .thumb { position: absolute; top: 8px; width: 20px; height: 20px; border-radius: 50%; background: var(--surface);
+  border: 3px solid var(--accent); transform: translateX(-10px); box-shadow: 0 1px 4px rgb(0 0 0 / .25); }
+.scrub.dragging .thumb { transform: translateX(-10px) scale(1.15); }
+.scrub .labels { position: absolute; left: 0; right: 0; top: 28px; height: 14px; font: 500 10.5px/14px var(--body); color: var(--muted); }
+.scrub .labels span { position: absolute; transform: translateX(-1px); white-space: nowrap; }
+.time { font: 500 13px var(--mono); font-variant-numeric: tabular-nums; color: var(--muted); white-space: nowrap; }
+.time b { color: var(--ink); font-weight: 500; }
+select.btn { padding-right: 8px; }
+
+.beats { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 16px 14px; }
+.beat { appearance: none; border: 1px solid var(--line); background: transparent; color: var(--muted); border-radius: 999px;
+  padding: 4px 10px; font: 500 12.5px var(--body); cursor: pointer; display: inline-flex; gap: 6px; align-items: baseline; }
+.beat i { font: 500 11px var(--mono); font-style: normal; opacity: .8; }
+.beat.on { border-color: var(--accent); color: var(--ink); background: color-mix(in srgb, var(--accent) 14%, transparent); }
+
+.making { display: grid; gap: 14px; }
+h2 { font: 700 20px/1.2 var(--display); margin: 0; letter-spacing: -.01em; }
+.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; align-items: start; }
+.step { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.step h3 { margin: 0; font: 700 15px/1.3 var(--display); }
+.step p { margin: 0; color: var(--muted); font-size: 14px; }
+.step .n { font: 500 12px var(--mono); color: var(--accent); }
+.sheets { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.sheets img { width: 100%; aspect-ratio: 1; object-fit: contain; background: #fff; border-radius: 6px; border: 1px solid var(--line); }
+.sheets img.wide { grid-column: span 3; aspect-ratio: 16/9; object-fit: cover; }
+.facts { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; font-size: 13.5px; }
+.facts li { display: flex; justify-content: space-between; gap: 10px; border-bottom: 1px dashed var(--line); padding-bottom: 4px; }
+.facts li span:last-child { font: 500 12.5px var(--mono); color: var(--muted); text-align: right; }
+kbd { font: 500 11.5px var(--mono); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px; padding: 0 5px; background: var(--surface); }
+
+@media (max-width: 760px) {
+  .steps { grid-template-columns: minmax(0, 1fr); }
+  .bar { grid-template-columns: auto 1fr; row-gap: 6px; }
+  .right { grid-column: 1 / -1; justify-content: space-between; }
+  .scrub .labels { display: none; }
+  .scrub { height: 36px; }
+}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Live-action hybrid · animation proof of concept</div>
+    <h1>Raka's Payday</h1>
+    <p class="lede">A drawn character rigged as a 2D puppet and walked through a photograph. Every piece of him, every face and the park itself came from the image model; the bones, the timing and the player are code. Drag the timeline to scrub frame by frame.</p>
+  </header>
+
+  <section class="player" aria-label="Animation player">
+    <div class="stage">
+      <canvas id="cv" width="1376" height="774" aria-label="Animation: Raka walks down a park path toward the camera, checks his phone, gets paid, cheers and waves"></canvas>
+      <div class="loading" id="loading">loading pieces…</div>
+    </div>
+    <div class="bar">
+      <div class="left">
+        <button class="btn play" id="play" aria-label="Play"><svg viewBox="0 0 24 24" id="playIcon"><path d="M7 4.5v15l13-7.5z"/></svg></button>
+        <button class="btn" id="prev" aria-label="Previous frame" title="Previous frame (,)"><svg viewBox="0 0 24 24"><path d="M6 5h2v14H6zM20 5v14L9 12z"/></svg></button>
+        <button class="btn" id="next" aria-label="Next frame" title="Next frame (.)"><svg viewBox="0 0 24 24"><path d="M16 5h2v14h-2zM4 5v14l11-7z"/></svg></button>
+      </div>
+      <div class="scrub" id="scrub" role="slider" tabindex="0" aria-label="Timeline" aria-valuemin="0" aria-valuemax="15" aria-valuenow="0">
+        <div class="rail"><div class="fill" id="fill"></div></div>
+        <div id="marks"></div>
+        <div class="thumb" id="thumb"></div>
+      </div>
+      <div class="right">
+        <span class="time" id="time"><b>00:00.00</b> / 00:15.00</span>
+        <select class="btn" id="speed" aria-label="Playback speed">
+          <option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option>
+        </select>
+        <button class="btn" id="loop" aria-pressed="true" title="Loop">Loop</button>
+        <button class="btn" id="bones" aria-pressed="false" title="Show the rig (B)">Rig</button>
+      </div>
+    </div>
+    <div class="beats" id="beats"></div>
+  </section>
+
+  <section class="making">
+    <h2>How it was made</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="n">1 · generate</span>
+        <h3>Four sheets and a plate</h3>
+        <p>Nano Banana 2.1, with the blog's hybrid examples attached: a neutral pose, the same man taken apart into eleven pieces, nine faces, hands and props, and an empty park with nobody in it.</p>
+        <div class="sheets" id="sheets"></div>
+      </div>
+      <div class="step">
+        <span class="n">2 · rig</span>
+        <h3>A cut-out puppet</h3>
+        <p>The pieces are lifted off white by flood fill, given a pivot at each joint and chained into a bone tree. Faces and hands are swapped, never redrawn.</p>
+        <ul class="facts">
+          <li><span>Pieces</span><span>11 body, 9 faces, 3 extra hands</span></li>
+          <li><span>Joints</span><span>hips, 2 legs, waist, neck, 2×(shoulder, elbow, wrist)</span></li>
+          <li><span>Perspective</span><span>feet on the path, eye height 1.6 m</span></li>
+          <li><span>Shadow</span><span>his own silhouette, laid on the paving</span></li>
+        </ul>
+      </div>
+      <div class="step">
+        <span class="n">3 · animate</span>
+        <h3>One function of time</h3>
+        <p>Every frame is computed from the clock alone: a walk cycle driven by distance walked, eased keyframes for the acting, timed swaps for blinks. That is what lets the timeline scrub backwards as cleanly as it plays.</p>
+        <p><kbd>Space</kbd> play · <kbd>,</kbd> <kbd>.</kbd> step a frame · <kbd>B</kbd> rig</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+const ASSETS = /*ASSETS*/;
+const SHEETS = /*SHEETS*/;
+
+// ---------- rig ----------
+// joint: where the node's pivot sits, in the parent piece's own pixels.
+// anchor: the pivot inside this node's own piece.
+const NODES = {
+  hips:   { parent: null,     img: 'hips',   anchor: [112, 8] },
+  legR:   { parent: 'hips',   joint: [64, 112],  img: 'legR',  anchor: [90, 30] },
+  legL:   { parent: 'hips',   joint: [160, 112], img: 'legL',  anchor: [56, 30] },
+  torso:  { parent: 'hips',   joint: [112, 8],   img: 'torso', anchor: [116, 282] },
+  head:   { parent: 'torso',  joint: [117, 26],  img: 'face_neutral', anchor: [123, 284], scale: 0.68 },
+  upperR: { parent: 'torso',  joint: [30, 74],   img: 'upperR', anchor: [64, 30] },
+  foreR:  { parent: 'upperR', joint: [46, 176],  img: 'foreR',  anchor: [32, 16] },
+  handR:  { parent: 'foreR',  joint: [26, 158],  img: 'handR',  anchor: [23, 12] },
+  upperL: { parent: 'torso',  joint: [202, 74],  img: 'upperL', anchor: [36, 30] },
+  foreL:  { parent: 'upperL', joint: [55, 176],  img: 'foreL',  anchor: [31, 16] },
+  handL:  { parent: 'foreL',  joint: [37, 158],  img: 'handL',  anchor: [37, 12] },
+};
+const TREE = ['hips', 'legR', 'legL', 'torso', 'head', 'upperR', 'foreR', 'handR', 'upperL', 'foreL', 'handL'];
+const DRAW = ['hips', 'legL', 'legR', 'head', 'torso', 'foreR', 'handR', 'upperR', 'foreL', 'handL', 'upperL'];
+const DRAW_PHONE = ['hips', 'legL', 'legR', 'head', 'torso', 'foreL', 'handL', 'upperL', 'foreR', 'upperR', 'handR'];
+// Swappable drawings for the hand slots: piece, pivot at the wrist, scale, base turn, mirror.
+const VARIANTS = {
+  handR_phone: { img: 'handR_phone', anchor: [50, 254], scale: 0.44, rot: 180 },
+  handL_stop:  { img: 'handL_stop',  anchor: [74, 250], scale: 0.40, rot: 180 },
+  handL_pump:  { img: 'handR_fist',  anchor: [82, 212], scale: 0.40, rot: 180, mirror: true },
+};
+const RIG_H = 892;          // head top to soles, in piece pixels
+const FEET = 112 + 338;     // soles below the hip pivot
+const HORIZON = 435, EYE = 1.6, HEIGHT = 1.7, PATH_X = 690;
+const DUR = 15, FPS = 24;
+
+// ---------- easing and keys ----------
+const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+const E = {
+  lin: (u) => u,
+  io: (u) => (u < .5 ? 4 * u * u * u : 1 - Math.pow(-2 * u + 2, 3) / 2),
+  o: (u) => 1 - Math.pow(1 - u, 3),
+  i: (u) => u * u * u,
+  back: (u) => { const c1 = 1.9, c3 = c1 + 1; return 1 + c3 * Math.pow(u - 1, 3) + c1 * Math.pow(u - 1, 2); },
+};
+// keys: [[time, value, ease?], ...]; the ease of a key shapes the move that arrives at it.
+function k(t, keys) {
+  if (t <= keys[0][0]) return keys[0][1];
+  for (let i = 1; i < keys.length; i++) {
+    const [t1, v1, e = 'io'] = keys[i];
+    if (t <= t1) {
+      const [t0, v0] = keys[i - 1];
+      return v0 + (v1 - v0) * E[e]((t - t0) / (t1 - t0));
+    }
+  }
+  return keys[keys.length - 1][1];
+}
+const step = (t, keys) => { let v = keys[0][1]; for (const [tt, vv] of keys) if (t >= tt) v = vv; return v; };
+const bump = (t, a, b) => (t <= a || t >= b ? 0 : Math.sin(Math.PI * (t - a) / (b - a)));
+
+// ---------- the performance ----------
+const V = 1.35, T_DECEL = 4.6, T_STOP = 5.4, Z_END = 1.85;
+const dist = (t) => {
+  if (t < T_DECEL) return V * t;
+  const u = Math.min(t, T_STOP) - T_DECEL, D = T_STOP - T_DECEL;
+  return V * T_DECEL + V * (u - (u * u) / (2 * D));
+};
+const D_TOTAL = dist(T_STOP);
+const BEATS = [
+  [0, 'Walk in'], [5.5, 'Phone out'], [6.9, 'Buzz'], [7.55, 'Payday'], [8.3, 'Fist pump'], [10.1, 'Wave'], [13.3, 'Settle'],
+];
+
+function pose(t) {
+  const P = { r: {}, d: {}, sx: {}, sy: {}, v: {}, fx: {} };
+  const add = (o, n, v) => { o[n] = (o[n] || 0) + v; };
+
+  // where he stands: perspective from distance to camera
+  const Z = Z_END + (D_TOTAL - dist(t));
+  const feetY = HORIZON + 1039.5 / Z;
+  const H = (feetY - HORIZON) * (HEIGHT / EYE);
+  P.S = H / RIG_H;
+  P.feet = [PATH_X + 8 * (1 - Z_END / Z), feetY];
+
+  // walk cycle, driven by distance so the steps slow as he stops
+  const speed = t < T_DECEL ? 1 : t < T_STOP ? 1 - (t - T_DECEL) / (T_STOP - T_DECEL) : 0;
+  const amp = Math.pow(speed, 0.6);
+  const ph = (2 * Math.PI * dist(t)) / 1.5;
+  const s = Math.sin(ph);
+  const liftR = Math.max(0, s) * amp, liftL = Math.max(0, -s) * amp;
+  P.d.legR = [0, -26 * liftR]; P.sy.legR = 1 - 0.06 * liftR; P.r.legR = -2.5 * liftR;
+  P.d.legL = [0, -26 * liftL]; P.sy.legL = 1 - 0.06 * liftL; P.r.legL = 2.5 * liftL;
+  P.root = [0, -9 * amp * Math.abs(s)];
+  P.r.hips = 2.2 * s * amp;
+  P.r.torso = -1.8 * s * amp;
+  P.r.head = 1.2 * s * amp;
+  P.r.upperR = 5 * amp + 3 * s * amp;
+  P.r.foreR = -6 * amp - 16 * liftL;
+  P.r.upperL = -5 * amp + 3 * s * amp;
+  P.r.foreL = 6 * amp + 16 * liftR;
+
+  // stopping: a small dip and recover
+  P.root[1] += 10 * bump(t, 5.15, 5.85);
+
+  // idle: breathing and a slow weight shift
+  const idle = clamp((t - 5.2) / 0.8);
+  P.sy.torso = 1 + idle * 0.012 * Math.sin((2 * Math.PI * t) / 3.4);
+  add(P.r, 'hips', idle * 0.8 * Math.sin((2 * Math.PI * t) / 5.5));
+  add(P.r, 'torso', -idle * 0.5 * Math.sin((2 * Math.PI * t) / 5.5));
+
+  // right arm: phone from the pocket, up to the chest, then down again
+  add(P.r, 'upperR', k(t, [[5.4, 0], [5.7, -4], [6.35, -10, 'o'], [10.0, -10], [10.7, 2]]));
+  add(P.r, 'foreR', k(t, [[5.4, 0], [5.7, 10], [6.35, -118, 'back'], [10.0, -118], [10.7, -12, 'io']]));
+  P.v.handR = t >= 5.72 ? 'handR_phone' : null;
+  P.r.handR = k(t, [[5.7, 0], [6.35, -42], [10.0, -42], [10.7, 10]]);
+  const buzz = t > 6.9 && t < 7.45 ? Math.sin(2 * Math.PI * 26 * t) * (1 - (t - 6.9) / 0.55) : 0;
+  add(P.r, 'handR', 6 * buzz);
+  P.fx.buzz = t > 6.9 && t < 7.45 ? 1 - (t - 6.9) / 0.55 : 0;
+
+  // head: look down at the phone, snap up at the news
+  const look = k(t, [[6.0, 0], [6.45, 1], [7.5, 1], [7.62, 0, 'o']]);
+  P.d.head = [0, 7 * look];
+  P.sy.head = 1 - 0.035 * look;
+  add(P.r, 'head', -2.5 * look);
+
+  // surprise hop, then the cheer bounces
+  P.root[1] -= 16 * bump(t, 7.55, 7.95) + 7 * bump(t, 8.9, 9.2) + 7 * bump(t, 9.3, 9.6);
+  P.sy.torso *= 1 + 0.03 * bump(t, 7.55, 7.85);
+
+  // left arm: fist pump, then open and wave
+  add(P.r, 'upperL', k(t, [[8.25, 0], [8.7, -100, 'back'], [10.0, -100], [10.45, -62, 'io'], [12.55, -62], [13.25, -2, 'io']]));
+  const pumps = -32 * (bump(t, 8.9, 9.2) + bump(t, 9.3, 9.6));
+  const wave = 16 * Math.sin(2 * Math.PI * 2.1 * (t - 10.45)) * clamp((t - 10.45) / 0.25) * clamp((12.5 - t) / 0.3);
+  add(P.r, 'foreL', k(t, [[8.25, 0], [8.7, -78, 'back'], [10.0, -78], [10.45, -112, 'io'], [12.55, -112], [13.25, 4, 'io']]) - pumps + wave);
+  P.v.handL = t >= 8.36 && t < 10.2 ? 'handL_pump' : t >= 10.2 && t < 13.05 ? 'handL_stop' : null;
+  add(P.r, 'head', k(t, [[10.3, 0], [10.7, 3], [12.6, 3], [13.2, 0]]));
+
+  // faces
+  let face = step(t, [[0, 'neutral'], [6.45, 'read'], [7.55, 'surprise'], [8.2, 'laugh'], [10.3, 'smile'], [12.9, 'proud']]);
+  if (t > 9.0 && t < 9.12) face = 'ah';
+  for (const b of [1.4, 3.5, 5.05, 11.85, 14.0]) {
+    if (t >= b && t < b + 0.13 && ['neutral', 'smile', 'proud'].includes(face)) face = 'blink';
+  }
+  P.face = 'face_' + face;
+
+  // effects
+  P.fx.dashes = k(t, [[7.55, 0], [7.72, 1.12, 'o'], [7.85, 1], [8.55, 1], [8.85, 0, 'i']]);
+  P.fx.bubble = k(t, [[8.22, 0], [8.55, 1, 'back'], [11.4, 1], [11.75, 0, 'i']]);
+  P.fx.bubbleRise = clamp((t - 8.22) / 3.5);
+  P.fx.sparkle = t > 8.6 && t < 10.2 ? clamp((t - 8.6) / 0.2) * clamp((10.2 - t) / 0.3) : 0;
+
+  // camera: a slow push in, a little hand-held drift
+  P.cam = { z: 1.025 + 0.055 * (t / DUR), x: 3 * Math.sin(t * 0.6), y: 2 * Math.sin(t * 0.43 + 1) };
+  P.fade = clamp((t - (DUR - 0.45)) / 0.45) * 0.85;
+  return P;
+}
+
+// ---------- renderer ----------
+const cv = document.getElementById('cv');
+const ctx = cv.getContext('2d');
+const W = 1376, Hh = 774;
+const IMG = {};
+let charC, charX, silC, silX;
+let showBones = false;
+
+function frameMatrices(P) {
+  const M = {}, F = {};
+  const rootY = P.feet[1] - FEET * P.S;
+  for (const name of TREE) {
+    const n = NODES[name];
+    let m;
+    if (!n.parent) {
+      m = new DOMMatrix().translate(P.feet[0] + P.root[0] * P.S, rootY + P.root[1] * P.S).scale(P.S);
+    } else {
+      m = M[n.parent].translate(n.joint[0], n.joint[1]);
+    }
+    const d = P.d[name];
+    if (d) m = m.translate(d[0], d[1]);
+    m = m.rotate(P.r[name] || 0);
+    F[name] = m;
+    const sx = P.sx[name] || 1, sy = P.sy[name] || 1, sc = n.scale || 1;
+    M[name] = m.scale(sx * sc, sy * sc).translate(-n.anchor[0], -n.anchor[1]);
+  }
+  return { M, F };
+}
+
+function drawCharacter(c, P, base) {
+  const { M, F } = frameMatrices(P);
+  const order = P.v.handR === 'handR_phone' ? DRAW_PHONE : DRAW;
+  for (const name of order) {
+    const n = NODES[name];
+    const vName = P.v[name];
+    let m, img;
+    if (vName) {
+      const v = VARIANTS[vName];
+      img = IMG[v.img];
+      m = F[name].rotate(v.rot).scale(v.mirror ? -v.scale : v.scale, v.scale).translate(-v.anchor[0], -v.anchor[1]);
+    } else {
+      img = IMG[name === 'head' ? P.face : n.img];
+      m = M[name];
+    }
+    c.setTransform(base.multiply(m));
+    c.drawImage(img, 0, 0);
+  }
+  return { M, F };
+}
+
+function render(t) {
+  const P = pose(t);
+  const dpr = cv.width / W;
+  const cam = new DOMMatrix().scale(dpr)
+    .translate(W / 2 + P.cam.x, Hh * 0.56 + P.cam.y).scale(P.cam.z).translate(-W / 2, -Hh * 0.56);
+
+  // the photograph
+  ctx.setTransform(cam);
+  ctx.drawImage(IMG.plate, 0, 0, W, Hh);
+
+  // the character, drawn once off-screen so his silhouette can make the cast shadow
+  charX.setTransform(1, 0, 0, 1, 0, 0);
+  charX.clearRect(0, 0, charC.width, charC.height);
+  const { M, F } = drawCharacter(charX, P, cam);
+
+  // cast shadow: low sun from the left, laid along the paving to the right
+  silX.setTransform(1, 0, 0, 1, 0, 0);
+  silX.globalCompositeOperation = 'source-over';
+  silX.clearRect(0, 0, silC.width, silC.height);
+  silX.drawImage(charC, 0, 0);
+  silX.globalCompositeOperation = 'source-in';
+  silX.fillStyle = '#2a1a08';
+  silX.fillRect(0, 0, silC.width, silC.height);
+  const fp = cam.transformPoint(new DOMPoint(P.feet[0], P.feet[1]));
+  ctx.save();
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.globalAlpha = 0.55;
+  ctx.globalCompositeOperation = 'multiply';
+  ctx.filter = `blur(${Math.max(1, 3 * P.S * dpr).toFixed(1)}px)`;
+  // x across the body -> along the depth of the ground; up the body -> along the shadow
+  const sa = 0.22, sb = 0.26, sc = -0.95, sd = -0.1;
+  ctx.setTransform(sa, sb, sc, sd, fp.x - sa * fp.x - sc * fp.y, fp.y - sb * fp.x - sd * fp.y);
+  ctx.drawImage(silC, 0, 0);
+  ctx.restore();
+
+  // contact shadow under the feet
+  ctx.save();
+  ctx.setTransform(cam);
+  const H = RIG_H * P.S;
+  const g = ctx.createRadialGradient(0, 0, 0, 0, 0, 1);
+  g.addColorStop(0, 'rgba(30,18,6,0.5)');
+  g.addColorStop(1, 'rgba(30,18,6,0)');
+  ctx.translate(P.feet[0], P.feet[1] - 0.004 * H);
+  ctx.scale(H * 0.2, H * 0.03);
+  ctx.fillStyle = g;
+  ctx.beginPath(); ctx.arc(0, 0, 1, 0, Math.PI * 2); ctx.fill();
+  ctx.restore();
+
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.drawImage(charC, 0, 0);
+
+  // doodle effects, placed in the head's and hands' own frames
+  const head = cam.multiply(F.head).scale(NODES.head.scale);
+  if (P.fx.dashes > 0) {
+    const sc = 0.5 * P.fx.dashes;
+    ctx.setTransform(head.translate(0, -268).scale(sc));
+    ctx.globalAlpha = clamp(P.fx.dashes);
+    ctx.drawImage(IMG.dashes, -IMG.dashes.width / 2, -IMG.dashes.height * 0.55);
+    ctx.globalAlpha = 1;
+  }
+  if (P.fx.bubble > 0) {
+    const sc = 0.62 * P.fx.bubble;
+    ctx.setTransform(head.translate(150, -300 - 30 * P.fx.bubbleRise).rotate(-4 + 3 * Math.sin(P.fx.bubbleRise * 7)).scale(sc));
+    ctx.globalAlpha = clamp(P.fx.bubble);
+    ctx.drawImage(IMG.bubble_coin, -14, -IMG.bubble_coin.height);
+    ctx.globalAlpha = 1;
+  }
+  if (P.fx.sparkle > 0) {
+    const tt = performance.now();
+    const hand = cam.multiply(F.handL);
+    const tw = 0.85 + 0.15 * Math.sin(lastT * 18);
+    ctx.setTransform(hand.rotate(-(P.r.handL || 0)).translate(-150, -60).scale(0.55 * P.fx.sparkle * tw));
+    ctx.globalAlpha = P.fx.sparkle;
+    ctx.drawImage(IMG.sparkles, -IMG.sparkles.width / 2, -IMG.sparkles.height / 2);
+    ctx.globalAlpha = 1;
+  }
+  if (P.fx.buzz > 0) {
+    const hand = cam.multiply(F.handR);
+    ctx.setTransform(hand);
+    ctx.strokeStyle = '#111'; ctx.lineCap = 'round'; ctx.lineWidth = 5; ctx.globalAlpha = P.fx.buzz;
+    for (const sgn of [-1, 1]) {
+      for (let i = 0; i < 2; i++) {
+        ctx.beginPath();
+        ctx.arc(sgn * 4, -150, 62 + i * 20, sgn > 0 ? -0.55 : Math.PI - 0.55 + 0.0, sgn > 0 ? 0.35 : Math.PI + 0.35);
+        ctx.stroke();
+      }
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  if (showBones) drawBones(M, F, cam);
+
+  if (P.fade > 0) {
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.fillStyle = `rgba(0,0,0,${P.fade})`;
+    ctx.fillRect(0, 0, cv.width, cv.height);
+  }
+}
+
+function drawBones(M, F, cam) {
+  ctx.save();
+  ctx.lineWidth = 2.5 * (cv.width / W);
+  const pt = (m) => cam.multiply(m).transformPoint(new DOMPoint(0, 0));
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  for (const name of TREE) {
+    const n = NODES[name];
+    const a = pt(F[name]);
+    if (n.parent) {
+      const b = pt(F[n.parent]);
+      ctx.strokeStyle = 'rgba(255,170,40,0.95)';
+      ctx.beginPath(); ctx.moveTo(b.x, b.y); ctx.lineTo(a.x, a.y); ctx.stroke();
+    }
+  }
+  // piece outlines
+  ctx.strokeStyle = 'rgba(90,200,255,0.55)';
+  ctx.lineWidth = 1.2 * (cv.width / W);
+  for (const name of DRAW) {
+    const img = IMG[NODES[name].img];
+    const m = cam.multiply(M[name]);
+    const c = [[0, 0], [img.width, 0], [img.width, img.height], [0, img.height]].map(([x, y]) => m.transformPoint(new DOMPoint(x, y)));
+    ctx.beginPath(); c.forEach((p, i) => (i ? ctx.lineTo(p.x, p.y) : ctx.moveTo(p.x, p.y))); ctx.closePath(); ctx.stroke();
+  }
+  for (const name of TREE) {
+    const a = pt(F[name]);
+    ctx.fillStyle = '#fff'; ctx.strokeStyle = 'rgba(255,140,0,1)'; ctx.lineWidth = 2.5 * (cv.width / W);
+    ctx.beginPath(); ctx.arc(a.x, a.y, 5 * (cv.width / W), 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+  }
+  ctx.restore();
+}
+
+// ---------- player ----------
+let lastT = 0, playing = false, speed = 1, loop = true, raf = 0, prevNow = 0;
+const $ = (id) => document.getElementById(id);
+const fmt = (t) => {
+  const m = Math.floor(t / 60), s = t - m * 60;
+  return `${String(m).padStart(2, '0')}:${s.toFixed(2).padStart(5, '0')}`;
+};
+function seek(t) {
+  lastT = clamp(t, 0, DUR);
+  render(lastT);
+  const p = (lastT / DUR) * 100;
+  $('fill').style.width = p + '%';
+  $('thumb').style.left = p + '%';
+  $('time').innerHTML = `<b>${fmt(lastT)}</b> / ${fmt(DUR)}`;
+  $('scrub').setAttribute('aria-valuenow', lastT.toFixed(2));
+  $('scrub').setAttribute('aria-valuetext', `${lastT.toFixed(1)} seconds, ${currentBeat()}`);
+  document.querySelectorAll('.beat').forEach((b, i) => b.classList.toggle('on', BEATS[i][1] === currentBeat()));
+}
+const currentBeat = () => { let n = BEATS[0][1]; for (const [bt, l] of BEATS) if (lastT >= bt) n = l; return n; };
+function setPlaying(on) {
+  playing = on;
+  $('play').setAttribute('aria-label', on ? 'Pause' : 'Play');
+  $('playIcon').innerHTML = on ? '<path d="M6 4.5h4v15H6zM14 4.5h4v15h-4z"/>' : '<path d="M7 4.5v15l13-7.5z"/>';
+  cancelAnimationFrame(raf);
+  if (on) { if (lastT >= DUR) seek(0); prevNow = performance.now(); raf = requestAnimationFrame(tick); }
+}
+function tick(now) {
+  const dt = Math.min(0.1, (now - prevNow) / 1000);
+  prevNow = now;
+  let t = lastT + dt * speed;
+  if (t >= DUR) { if (loop) t -= DUR; else { seek(DUR); setPlaying(false); return; } }
+  seek(t);
+  raf = requestAnimationFrame(tick);
+}
+
+function sizeCanvas() {
+  const r = cv.getBoundingClientRect();
+  const dpr = Math.min(2, window.devicePixelRatio || 1);
+  const w = Math.max(640, Math.min(2752, Math.round(r.width * dpr)));
+  if (cv.width !== w) {
+    cv.width = w; cv.height = Math.round((w * Hh) / W);
+    charC.width = silC.width = cv.width; charC.height = silC.height = cv.height;
+  }
+  render(lastT);
+}
+
+function buildUI() {
+  const marks = $('marks'), beats = $('beats');
+  for (const [bt, l] of BEATS) {
+    const p = (bt / DUR) * 100;
+    if (bt > 0) { const m = document.createElement('div'); m.className = 'mark'; m.style.left = p + '%'; marks.append(m); }
+    const b = document.createElement('button'); b.className = 'beat';
+    b.innerHTML = `${l} <i>${bt.toFixed(1)}s</i>`;
+    b.addEventListener('click', () => { setPlaying(false); seek(bt + 0.001); });
+    beats.append(b);
+  }
+  const scrub = $('scrub');
+  let wasPlaying = false, dragging = false;
+  const at = (e) => { const r = scrub.getBoundingClientRect(); return ((e.clientX - r.left) / r.width) * DUR; };
+  scrub.addEventListener('pointerdown', (e) => {
+    dragging = true; wasPlaying = playing; setPlaying(false);
+    scrub.setPointerCapture(e.pointerId); scrub.classList.add('dragging'); seek(at(e));
+  });
+  scrub.addEventListener('pointermove', (e) => { if (dragging) seek(at(e)); });
+  const end = () => { if (!dragging) return; dragging = false; scrub.classList.remove('dragging'); if (wasPlaying && lastT < DUR) setPlaying(true); };
+  scrub.addEventListener('pointerup', end);
+  scrub.addEventListener('pointercancel', end);
+  scrub.addEventListener('keydown', (e) => {
+    const d = { ArrowRight: 1 / FPS, ArrowLeft: -1 / FPS, ArrowUp: 1, ArrowDown: -1, PageUp: 1, PageDown: -1 }[e.key];
+    if (d !== undefined) { e.preventDefault(); setPlaying(false); seek(lastT + (e.shiftKey ? d * 10 : d)); }
+    if (e.key === 'Home') { e.preventDefault(); seek(0); }
+    if (e.key === 'End') { e.preventDefault(); seek(DUR); }
+  });
+  $('play').addEventListener('click', () => setPlaying(!playing));
+  cv.addEventListener('click', () => setPlaying(!playing));
+  $('prev').addEventListener('click', () => { setPlaying(false); seek(Math.round(lastT * FPS - 1) / FPS); });
+  $('next').addEventListener('click', () => { setPlaying(false); seek(Math.round(lastT * FPS + 1) / FPS); });
+  $('speed').addEventListener('change', (e) => { speed = Number(e.target.value); });
+  $('loop').addEventListener('click', (e) => { loop = !loop; e.currentTarget.setAttribute('aria-pressed', String(loop)); });
+  $('bones').addEventListener('click', (e) => { showBones = !showBones; e.currentTarget.setAttribute('aria-pressed', String(showBones)); render(lastT); });
+  document.addEventListener('keydown', (e) => {
+    if (e.target.closest('select, input, textarea')) return;
+    if (e.key === ' ' && !e.target.closest('button')) { e.preventDefault(); setPlaying(!playing); }
+    if (e.key === ',') { setPlaying(false); seek(Math.round(lastT * FPS - 1) / FPS); }
+    if (e.key === '.') { setPlaying(false); seek(Math.round(lastT * FPS + 1) / FPS); }
+    if (e.key === 'b' || e.key === 'B') $('bones').click();
+  });
+  const sheets = $('sheets');
+  for (const [name, alt, wide] of [['parts', 'Body pieces sheet'], ['faces', 'Nine expressions sheet'], ['props', 'Hands and props sheet'], ['plate', 'Empty park photograph', true]]) {
+    const im = new Image(); im.src = SHEETS[name]; im.alt = alt; im.loading = 'lazy'; if (wide) im.className = 'wide'; sheets.append(im);
+  }
+}
+
+window.__seek = (t, bones) => { showBones = !!bones; setPlaying(false); seek(t); };
+
+Promise.all(Object.entries(ASSETS).map(([n, src]) => new Promise((res, rej) => {
+  const im = new Image(); im.onload = () => { IMG[n] = im; res(); }; im.onerror = rej; im.src = src;
+}))).then(() => {
+  charC = document.createElement('canvas'); charX = charC.getContext('2d');
+  silC = document.createElement('canvas'); silX = silC.getContext('2d');
+  $('loading').hidden = true;
+  buildUI();
+  sizeCanvas();
+  new ResizeObserver(sizeCanvas).observe(cv);
+  const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (still) seek(8.9); else setPlaying(true);
+  window.__ready = true;
+});
+</script>

@@ -1,0 +1,20 @@
+The first attached picture shows a character, Raka, standing front-on. Draw the same character, at the same size, same clothes and same drawing, taken apart into separate body pieces for a 2D puppet rig, the way an animator prepares a character: each piece drawn on its own, fully closed by its own black outline all the way round, and the pieces spaced well apart on a plain pure white background so that no piece touches or overlaps another.
+
+The pieces, all seen front-on, laid out in a tidy grid:
+1. The head with hair and both ears, a calm neutral face, cut just under the chin (no neck).
+2. The torso: the light grey shirt with its collar and the neck inside the collar, without the sleeves, the shoulders rounded off, the shirt hem at the bottom.
+3. The left upper arm: the short shirt sleeve with the bare upper arm coming out of it down to the elbow, rounded at the shoulder top and rounded at the elbow end.
+4. The right upper arm, the same as piece 3, mirrored.
+5. The left forearm: bare skin from the elbow to the wrist, both ends rounded.
+6. The right forearm, mirrored.
+7. The left hand, open and relaxed, fingers together, with a round wrist end.
+8. The right hand, mirrored.
+9. The hips: the top of the dark grey trousers with the waistband and belt loops, from the waist to the top of the thighs, rounded at the bottom.
+10. The left leg: the dark grey trouser leg from the top of the thigh down to the black shoe, the top end rounded.
+11. The right leg, mirrored.
+
+Every joint end is a smooth round end with a little extra overlap, so the pieces can rotate under each other without gaps. No arrows, no labels, no numbers, no shadows. Square 1:1.
+
+Style: a live-action and 2D illustration hybrid (mixed media), matching the attached reference pictures. The drawing follows the attached pictures exactly: hand-drawn 2D, sketchy and friendly, bold slightly rough black brush-pen outlines with a dry textured edge, thick on the outer contour and thinner inside; flat grayscale fills only (near black hair, mid grey and light grey clothes, skin left paper white) with a light pencil texture; no colour, no gradients and no 3D shading. No logo, no watermark, no signature.
+
+No text, no letters, no numbers.
