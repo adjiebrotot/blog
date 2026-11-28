@@ -16,7 +16,7 @@
 {%- assign _t = site.data.i18n[_l] -%}
 <figure class="hbar" role="group" aria-labelledby="hbar-{{ include.id }}">
 <figcaption id="hbar-{{ include.id }}"><strong>{{ _c.title[_l] }}</strong><span>{{ _c.sub[_l] }}</span></figcaption>
-<ul class="hbar-key" aria-hidden="true"><li class="hl">{{ _t.chart_highlight }}</li>{% unless _c.no_groups %}<li class="asean">{{ _t.chart_asean }}</li><li class="oecd">{{ _t.chart_oecd }}</li>{% if _c.has_avg %}<li class="avg">{{ _t.chart_oecd_avg }}</li>{% endif %}{% endunless %}</ul>
+{% unless _c.no_groups %}<ul class="hbar-key" aria-hidden="true"><li class="hl">{{ _t.chart_highlight }}</li><li class="asean">{{ _t.chart_asean }}</li><li class="oecd">{{ _t.chart_oecd }}</li>{% if _c.has_avg %}<li class="avg">{{ _t.chart_oecd_avg }}</li>{% endif %}</ul>{% endunless %}
 <ol>
 {%- for _r in _c.rows -%}
 {%- assign _name = site.data.countries[_r.c][_l] | default: _r.label[_l] %}
@@ -26,5 +26,6 @@
 <li class="{{ _r.g }}"><span class="k"><span>{{ _name }}{% if _r.note %}<small>{{ _r.note[_l] }}</small>{% endif %}</span>{% unless _c.flags == false %}{% if _f %}<img class="flag" src="/assets/img/flags/{{ _f | downcase }}.svg" alt="" width="18" height="14" loading="lazy">{% else %}<span class="flag-none"></span>{% endif %}{% endunless %}</span><span class="sr">: </span><span class="b"><i style="width:{{ _r.w }}%"></i></span><span class="v">{{ _r.v[_l] }}</span></li>
 {%- endfor %}
 </ol>
-<p class="hbar-src">{{ _t.chart_source }}: {{ _c.source[_l] }}</p>
+{%- comment -%} The full source stays in _data/charts.json for editors; the reader is sent to the post's References. {%- endcomment -%}
+<p class="hbar-src">{{ _t.chart_source }}: <a href="#{{ _t.chart_refs_id }}">{{ _t.chart_refs }}</a></p>
 </figure>

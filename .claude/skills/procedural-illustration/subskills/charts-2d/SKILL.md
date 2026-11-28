@@ -33,9 +33,10 @@ item: {'label': {...}, 'value': n | 'values': [...], 'role': 'hl'|'a'|'base'|...
 ## The `hbar` include (long country rankings)
 
 For 10 or more countries, the HTML bar chart reflows better than any SVG: names wrap, rows
-stay 1:1 on every screen. Data in `_data/charts.json` (title, sub, source per language, rows
+stay 1:1 on every screen. Data in `_data/charts.json` (title, sub, source per language; the figure shows only "Source:
+References" as a link, the `source` text is provenance for editors; rows
 with `c` = ISO alpha-3, `g` = hl/asean/oecd/avg/na, `w` = width %, `v` = value text per
-language, optional `note`, `flag`). Flags come from the row's code; `"flag": false` or a
+language, optional `note`, a caveat drawn smaller than the name, `flag`). Flags come from the row's code; `"flag": false` or a
 non-country code (OECD) leaves an aligned blank. `{% include hbar.html id="..." %}`. Country
 names per language: `_data/countries.yml` (add a country there when a chart needs it). Keep
 `w` proportional to the value (`w = value / max * 100`), one precision per chart.

@@ -15,6 +15,10 @@ from . import metrics
 from .tokens import paint
 
 MIN_TEXT = {'w': 13, 'n': 12.5}   # smallest text allowed per layout (checklist item 4)
+# A row note (a caveat under a name: "Base salary only") is set smaller than the data label on
+# purpose, so it reads as a qualifier, not as data.
+MIN_NOTE = {'w': 11.5, 'n': 11}
+NOTE = MIN_NOTE
 ICONS = None
 COUNTRIES = None
 ASSETS = os.path.join(os.path.dirname(__file__), '..', '..', 'assets')

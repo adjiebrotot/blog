@@ -294,7 +294,9 @@ the blog can draw them. Per type:
 - **Procedural figure:** a chart, infographic, flowchart, map, 3D graph or engineering
   diagram drawn in code by the `procedural-illustration` skill (Mermaid is no longer used for
   charts or flowcharts). Give the form (its `references/chart-chooser.md`), the title as the
-  point, the subtitle (metric, unit, period), the source, and the numbers from a checked
+  point, a short subtitle if needed (metric and unit, nothing the chart already shows), the
+  source behind it (the figure links to the post's References; none for the author's own
+  experience), and the numbers from a checked
   evidence row, with model inputs and assumptions where applicable. The figure carries its
   own labels in both languages; its Indonesian words follow `bahasa-indonesia`.
 - **KaTeX:** the equation in words or LaTeX, and the symbols it defines. A simple sum for

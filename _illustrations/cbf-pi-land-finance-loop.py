@@ -40,13 +40,11 @@ def loop_id():
 
 FIG_EN = Figure('cbf-pi-land-finance-loop',
                 title={'en': 'In China, selling land repays the debt that built the line'},
-                subtitle={'en': 'The loop works only if people and jobs follow the new line'},
                 alt={'en': 'Flowchart. The state owns the land. The government borrows through local financing vehicles to build rail, roads and metro; land near the new line rises in value; the government sells land-use rights to developers; the revenue repays the debt and funds the next project, which starts the loop again. If nobody comes, with no jobs and no reason to move, the land does not sell and the debt stays, as at Yujiapu.'},
                 langs=('en',), kind='flow', data_table=False, review=REVIEW)
 FIG_EN.add(loop_en())
 FIG_ID = Figure('cbf-pi-land-finance-loop',
                 title={'id': 'Di China, penjualan tanah melunasi utang yang membangun jalur'},
-                subtitle={'id': 'Putaran ini hanya berjalan kalau penduduk dan pekerjaan menyusul jalur baru'},
                 alt={'id': 'Diagram alur. Negara menguasai tanah. Pemerintah daerah membangun rel, jalan, dan metro dengan utang; harga tanah di sekitarnya naik; hak guna tanah dijual ke pengembang; hasilnya melunasi utang dan membiayai proyek berikutnya, lalu putaran dimulai lagi. Kalau tidak ada yang datang karena tidak ada pekerjaan dan tidak ada alasan untuk pindah, tanah tidak laku dan utang tetap menumpuk, seperti di Yujiapu.'},
                 langs=('id',), kind='flow', data_table=False, review=REVIEW)
 FIG_ID.add(loop_id())

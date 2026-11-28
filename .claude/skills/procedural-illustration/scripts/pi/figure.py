@@ -3,7 +3,8 @@
     fig = Figure('gsl-pi-real-wages',
                  title={'en': 'Real wages have not recovered from 2021', 'id': '...'},
                  subtitle={'en': 'Average real wage, index 2019 = 100', 'id': '...'},
-                 source={'en': 'BPS Sakernas (August); author calculations', 'id': '...'},
+                 source='refs',          # "Source: References", a link to the post's References
+                                         # section; None for the author's own experience or reasoning
                  alt={'en': 'Line chart ...', 'id': '...'},
                  review={...})          # answers to the manual checklist items (references/checklist.md)
     fig.add(Line(...))                 # components stack top to bottom
@@ -15,7 +16,7 @@ read aloud like the post), the drawing as two inline SVGs (wide >= 520px column,
 below; CSS shows one), then the source, the note and a folded data table.
 """
 from . import metrics
-from .canvas import Canvas, esc, MIN_TEXT
+from .canvas import Canvas, esc, MIN_TEXT, MIN_NOTE
 
 LAYOUTS = (('w', 720), ('n', 280))
 I18N = {'source': 'chart_source', 'note': 'chart_note', 'data': 'chart_data'}
@@ -97,7 +98,11 @@ class Figure:
             head += f' <span>{esc(tr(self.subtitle, lang))}</span>'
         art = ''.join(self.svgs(lang))
         foot = ''
-        if self.source:
+        if self.source in (True, 'refs'):
+            # the post's References section holds the full sources; the figure only points there
+            foot += (f'<span>{{{{ {i18n}.chart_source }}}}: <a href="#{{{{ {i18n}.chart_refs_id }}}}">'
+                     f'{{{{ {i18n}.chart_refs }}}}</a></span>')
+        elif self.source:
             foot += f'<span>{{{{ {i18n}.chart_source }}}}: {esc(tr(self.source, lang))}</span>'
         if self.note:
             foot += f' <span class="pi-note">{{{{ {i18n}.chart_note }}}}: {esc(tr(self.note, lang))}</span>'
@@ -139,9 +144,10 @@ class Figure:
             out += [(lv, f'[{lang}/{layout}] {m}') for lv, m in c.issues]
             ts = c.texts
             for t in ts:
-                if t['size'] < MIN_TEXT[layout] - 1e-6:
+                floor = MIN_NOTE[layout] if t.get('row_note') else MIN_TEXT[layout]
+                if t['size'] < floor - 1e-6:
                     out.append(('ERROR', f'[{lang}/{layout}] text "{t["text"][:40]}" is {t["size"]}px, under '
-                                         f'{MIN_TEXT[layout]}px (item 4)'))
+                                         f'{floor}px (item 4)'))
                 x0, y0, x1, y1 = t['box']
                 if x0 < -0.5 or x1 > c.W + 0.5:
                     out.append(('ERROR', f'[{lang}/{layout}] text "{t["text"][:40]}" runs outside the frame '

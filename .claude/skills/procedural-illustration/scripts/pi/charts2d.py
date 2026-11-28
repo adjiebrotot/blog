@@ -11,6 +11,7 @@ from . import fmt, metrics
 from .figure import Component, tr
 from .scale import Linear, Band, nice_step
 from .tokens import ink
+from .canvas import NOTE
 
 TICK = {'w': 13, 'n': 12.5}
 LABEL = {'w': 13.5, 'n': 13}
@@ -248,8 +249,9 @@ class Bars(Component):
             lx = x_bar - 10 - fw
             c.text(lx, ty - size * 0.6, '\n'.join(lines), size, wt, lab_fill, 'end', 'top', lh=1.2)
             if note:
-                c.text(lx, ty - size * 0.6 + len(lines) * size * 1.2, note, size - 1.5 if L == 'w' else 12.5, 400,
-                       'label', 'end', 'top', kind='note')
+                nb = c.text(lx, ty - size * 0.6 + len(lines) * size * 1.2, note, NOTE[L], 400,
+                            'label', 'end', 'top', kind='note')
+                c.texts[-1]['row_note'] = True
             if it.get('flag'):
                 c.flag(it['flag'], x_bar - 6 - flag_h * 4 / 3, cy - flag_h / 2, flag_h)
             if self.mode == 'stack':

@@ -7,8 +7,8 @@ their arguments. Several figures can share a file, separated by `---`.
 ```yaml
 name: gsl-pi-soe-liabilities
 title: {en: State builders tripled their debt in three years, id: "..."}
-subtitle: {en: "Total liabilities of WSKT, WIKA, ADHI and PTPP, Rp trillion, end of year", id: "..."}
-source: {en: Company annual reports (consolidated balance sheets), id: "..."}
+subtitle: {en: "Combined liabilities of four state construction companies", id: "..."}
+source: refs            # "Source: References", a link to the post's References
 alt: {en: "Column chart ...", id: "..."}
 review:
   type: columns, one stock per year

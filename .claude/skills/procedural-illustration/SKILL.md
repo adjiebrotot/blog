@@ -54,13 +54,21 @@ pointer lines, brackets, text boxes with round, square or cut corners).
 
 ## The rules (non-negotiable)
 
-1. **Data first, honestly.** Every number comes from the post's sources; the figure's
-   `source=` names them (item 1). Show the whole series the post relies on; a crop or a
+1. **Data first, honestly.** Every number comes from the post's sources. The figure does not
+   list them: `source='refs'` prints "Source: References", a link to the post's References
+   section, where the full citations live (item 1). A figure of the author's own experience or
+   reasoning (places visited, a diagram of an argument) has no source line at all; say so in
+   `review['source']`. Show the whole series the post relies on; a crop or a
    non-zero axis is said on the chart and in `review` (items 13, 18). Never invent values; an
    example figure in `examples/` is labelled "not data" and never published.
-2. **The title says the point** ("Indonesia's real wage is still below 2019"), the subtitle
-   says the metric, unit and period ("Average wage over consumer prices, 2019 = 100"). Both
-   are HTML above the drawing, so they wrap and translate; nothing in the drawing repeats them.
+2. **The title says the point** ("Indonesia's real wage is still below 2019"). The subtitle,
+   if any, is short: the metric and unit ("Average wage over consumer prices, index, 2019 =
+   100"). It never explains what the drawing already shows (the years on the axis, what the
+   colours mean, which line is which) or anything self-explanatory, and never says anything
+   about the interface (small screens, tables, tapping). No subtitle is better than a
+   redundant one. Both are HTML above the drawing, so they wrap and translate.
+   A row note (a caveat on one item: "Base salary only") is set smaller than the item's label,
+   so it reads as a qualifier, not as data.
 3. **Label the data directly.** Names at the line ends, values on the bars, flags beside
    countries; a key only when direct labels cannot work (a stacked bar, a choropleth).
 4. **One story colour.** `hl` (red) is the subject; `a` (blue) its peers; `base` (grey) the

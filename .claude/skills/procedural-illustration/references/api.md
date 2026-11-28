@@ -12,8 +12,11 @@ fig.add(component)        # stacked top to bottom, `gap` apart
 @fig.draw                 # free drawing: def draw(c, lang): ... (return a height to fix it)
 ```
 
-`source`, `note`: the text only. The page adds "Source:" / "Sumber:" and "Note:" / "Catatan:"
-from `_data/i18n.yml`; writing them again prints the word twice.
+`source='refs'`: "Source: References" / "Sumber: Referensi", a link to the post's References
+section (`chart_refs`, `chart_refs_id` in `_data/i18n.yml`). `None` for the author's own
+experience or reasoning (with `review['source']`). A short written source (under 40 characters)
+is allowed for a figure outside a post. `note`: the text only; the page adds "Note:" /
+"Catatan:"; one short caveat that changes the reading.
 
 `name` is the file name and page id: `<prefix>-pi-<subject>` (`gsl-pi-real-wages`). `kind`:
 `chart`, `map`, `infographic`, `flow`, `engineering` (flow/engineering skip the unit and

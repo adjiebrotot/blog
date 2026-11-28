@@ -1,13 +1,13 @@
 {
- "_about": "Data for the country bar charts ({% include hbar.html id=... %}), generated from World Bank, ILO, IMF, PIP and WID data. Edit a number only together with its source.",
+ "_about": "Data for the country bar charts ({% include hbar.html id=... %}), generated from World Bank, ILO, IMF, PIP and WID data. Edit a number only together with its source. The figure shows \"Source: References\" (a link to the post's References); `source` here keeps the full provenance for editors.",
  "gsl-unemployment": {
   "title": {
    "en": "Unemployment rate, 2025",
    "id": "Tingkat pengangguran, 2025"
   },
   "sub": {
-   "en": "Share of the labour force with no paid work at all, not even one hour in the survey week",
-   "id": "Persentase angkatan kerja yang sama sekali tidak bekerja, satu jam pun, selama seminggu sebelum survei"
+   "en": "% of the labour force with no work at all, not even one hour a week",
+   "id": "% angkatan kerja yang sama sekali tidak bekerja, satu jam pun dalam seminggu"
   },
   "source": {
    "en": "ILO modelled estimates, from the World Bank (SL.UEM.TOTL.ZS). OECD average: simple mean of the 38 members with data",
@@ -230,8 +230,8 @@
    "id": "Pekerja informal"
   },
   "sub": {
-   "en": "Share of workers in informal jobs (no written contract, no social protection), latest year (Indonesia: 2024)",
-   "id": "Persentase pekerja yang tergolong informal (tanpa kontrak tertulis dan jaminan sosial), tahun terbaru (Indonesia: 2024)"
+   "en": "Share of workers, latest year (Indonesia: 2024)",
+   "id": "Persentase pekerja, tahun terbaru (Indonesia: 2024)"
   },
   "source": {
    "en": "ILOSTAT, SDG indicator 8.3.1 (ILO harmonised definition). OECD average: simple mean of the 31 members with data",
@@ -400,8 +400,8 @@
    "id": "Jam kerja aktual, 2025"
   },
   "sub": {
-   "en": "Average hours a week per employed person",
-   "id": "Rata-rata jam kerja per minggu setiap orang yang bekerja"
+   "en": "Hours a week per employed person",
+   "id": "Jam kerja per minggu per orang yang bekerja"
   },
   "source": {
    "en": "ILO modelled estimates. OECD average: simple mean of the 38 members with data",
@@ -624,8 +624,8 @@
    "id": "Berapa bagian PDB per kapita yang sampai ke orang biasa"
   },
   "sub": {
-   "en": "Median income (or spending) per person in a year, as a share of GDP per capita, latest survey. Indonesia and most of ASEAN survey spending; OECD countries survey income",
-   "id": "Median pendapatan (atau pengeluaran) per orang setahun dibagi PDB per kapita, survei terbaru. Indonesia dan sebagian besar negara ASEAN mensurvei pengeluaran, sedangkan negara OECD mensurvei pendapatan"
+   "en": "Median income or spending per person, % of GDP per capita",
+   "id": "Median pendapatan atau pengeluaran per orang, % dari PDB per kapita"
   },
   "source": {
    "en": "World Bank Poverty and Inequality Platform and World Development Indicators (2021 PPP), author's calculation. OECD average: simple mean of the 37 members with data",
@@ -848,8 +848,8 @@
    "id": "Pendapatan yang tinggal di dalam negeri: PNB dibagi PDB, 2025"
   },
   "sub": {
-   "en": "Below 100%: part of what is produced in the country is paid out to foreign owners and lenders",
-   "id": "Di bawah 100%: sebagian hasil produksi di dalam negeri mengalir ke pemilik modal dan pemberi pinjaman asing"
+   "en": "Gross national income, % of GDP",
+   "id": "Pendapatan nasional bruto, % dari PDB"
   },
   "source": {
    "en": "World Bank, GNI and GDP per capita (PPP, current international dollars). OECD average: simple mean of the 38 members with data",
@@ -1090,8 +1090,8 @@
    "id": "Investasi yang dibutuhkan untuk satu persen pertumbuhan (ICOR)"
   },
   "sub": {
-   "en": "Investment as a share of GDP divided by real GDP growth, average of 2015 to 2024 without 2020 and 2021. Lower means each rupiah of investment buys more growth",
-   "id": "Investasi sebagai persentase PDB dibagi pertumbuhan PDB riil, rata-rata 2015 sampai 2024 tanpa 2020 dan 2021. Makin rendah, makin banyak pertumbuhan yang dihasilkan setiap rupiah investasi"
+   "en": "Investment (% of GDP) over real growth, 2015 to 2024 (without 2020 and 2021)",
+   "id": "Investasi (% dari PDB) dibagi pertumbuhan riil, 2015 sampai 2024 (tanpa 2020 dan 2021)"
   },
   "source": {
    "en": "World Bank (NE.GDI.FTOT.ZS, NY.GDP.MKTP.KD.ZG), author's calculation. OECD average: simple mean of the 38 members with data",
@@ -1287,8 +1287,8 @@
    "id": "Angka kemiskinan Indonesia bergantung pada garis yang dipakai"
   },
   "sub": {
-   "en": "Share of Indonesians below each line (BPS: March 2025; World Bank: 2025 survey, 2021 PPP)",
-   "id": "Persentase penduduk Indonesia di bawah setiap garis (BPS: Maret 2025; Bank Dunia: survei 2025, PPP 2021)"
+   "en": "Share of Indonesians below each line, 2025",
+   "id": "Persentase penduduk di bawah tiap garis, 2025"
   },
   "source": {
    "en": "BPS, poverty release of July 2025; World Bank Poverty and Inequality Platform",
@@ -1374,8 +1374,8 @@
    "id": "Kemiskinan pada garis untuk kelompok pendapatan Indonesia"
   },
   "sub": {
-   "en": "Share of people below US$8.30 a day (2021 PPP), latest survey, with 2025 GDP per capita (PPP) under each name",
-   "id": "Persentase penduduk di bawah US$8,30 per hari (PPP 2021), survei terbaru, dengan PDB per kapita 2025 (PPP) di bawah nama negara"
+   "en": "Share below US$8.30 a day (2021 PPP), latest survey",
+   "id": "Persentase penduduk di bawah US$8,30 per hari (PPP 2021), survei terbaru"
   },
   "source": {
    "en": "World Bank Poverty and Inequality Platform; World Bank GDP per capita",
@@ -1547,8 +1547,8 @@
    "id": "Indeks Gini dari survei rumah tangga"
   },
   "sub": {
-   "en": "0 = everyone equal, 100 = one person has everything; latest survey. Indonesia and most of ASEAN measure spending, OECD countries measure income",
-   "id": "0 berarti semua orang setara, 100 berarti satu orang memiliki segalanya; survei terbaru. Indonesia dan sebagian besar negara ASEAN mengukur pengeluaran, sedangkan negara OECD mengukur pendapatan"
+   "en": "0 = everyone equal, 100 = one person has everything",
+   "id": "0 berarti pendapatan semua orang sama, 100 berarti satu orang menguasai segalanya"
   },
   "source": {
    "en": "World Bank Poverty and Inequality Platform. OECD average: simple mean of the 37 members with data",
@@ -1744,8 +1744,8 @@
    "id": "Porsi pendapatan nasional yang diterima 10% teratas"
   },
   "sub": {
-   "en": "Share of pre-tax national income, latest year available (Indonesia: 2018)",
-   "id": "Persentase pendapatan nasional sebelum pajak, tahun terbaru yang tersedia (Indonesia: 2018)"
+   "en": "Share of pre-tax national income, latest year (Indonesia: 2018)",
+   "id": "Persentase pendapatan nasional sebelum pajak, tahun terbaru (Indonesia: 2018)"
   },
   "source": {
    "en": "World Inequality Database, via Our World in Data. OECD average: simple mean of the 38 members with data",
@@ -1968,8 +1968,8 @@
    "id": "Utang pemerintah, 2025"
   },
   "sub": {
-   "en": "General government gross debt, as a share of GDP",
-   "id": "Utang bruto pemerintah (pusat dan daerah) sebagai persentase PDB"
+   "en": "General government gross debt, % of GDP",
+   "id": "Utang bruto pemerintah pusat dan daerah, % dari PDB"
   },
   "source": {
    "en": "IMF World Economic Outlook. OECD average: simple mean of the 38 members with data",
@@ -2201,8 +2201,8 @@
    "id": "Berapa bagian pendapatan pemerintah yang habis untuk bunga utang, 2025"
   },
   "sub": {
-   "en": "Net interest paid by general government divided by its revenue. Below zero: the government earns more interest than it pays",
-   "id": "Bunga bersih yang dibayar pemerintah (pusat dan daerah) dibagi pendapatannya. Di bawah nol: pemerintah menerima bunga lebih besar daripada yang dibayarnya"
+   "en": "Net interest paid, % of government revenue",
+   "id": "Bunga bersih yang dibayar, % dari pendapatan pemerintah"
   },
   "source": {
    "en": "IMF Fiscal Monitor (primary balance minus overall balance, over revenue), author's calculation. OECD average: simple mean of the 38 members with data",
@@ -2434,8 +2434,8 @@
    "id": "Gaji presiden Indonesia setara 18,8 kali upah pekerja, hanya dilampaui Filipina"
   },
   "sub": {
-   "en": "Leader's pay divided by the country's typical wage: the median, or the average where no official median is published. Latest figures in the sources",
-   "id": "Gaji pemimpin negara dibagi upah pekerja di negaranya: median, atau rata-rata kalau median resminya tidak tersedia. Angka yang dipakai adalah yang terbaru dari tiap sumber"
+   "en": "Pay as a multiple of the country's typical wage",
+   "id": "Gaji dibagi upah pekerja di negara masing-masing"
   },
   "source": {
    "en": "Official pay documents and national statistics agencies (details in the footnotes), author's calculation",
@@ -2572,8 +2572,8 @@
    "id": "Gaji anggota DPR setara 22,3 kali upah pekerja, tertinggi di antara sepuluh negara"
   },
   "sub": {
-   "en": "Salary plus fixed allowances paid to a backbench MP, before tax, divided by the country's typical wage (median, or average where no official median is published). Office budgets and staff excluded",
-   "id": "Gaji ditambah tunjangan tetap anggota parlemen biasa sebelum pajak, dibagi upah pekerja di negaranya (median, atau rata-rata kalau median resminya tidak tersedia). Anggaran kantor dan staf tidak dihitung"
+   "en": "Pay and fixed allowances before tax, as a multiple of the country's typical wage",
+   "id": "Gaji dan tunjangan tetap sebelum pajak, dibagi upah pekerja di negara masing-masing"
   },
   "source": {
    "en": "Official pay documents and national statistics agencies (details in the footnotes), author's calculation",
