@@ -13,11 +13,9 @@ rows = [
 FIG = Figure(
     'kad-pi-iphone-days',
     title={'id': 'Harga satu iPhone setara 104 hari kerja upah minimum di Jakarta, tetapi hanya 12 hari di Perth'},
-    subtitle={'id': 'Hari kerja dengan gaji bersih upah minimum untuk membeli iPhone 18 Pro 256GB, harga resmi Oktober 2026. '
-                    'Satu ikon ponsel = satu hari kerja (21,7 hari kerja per bulan).'},
-    note={'id': 'Upah minimum di Jakarta adalah UMP DKI 2026 (Rp5,73 juta). Untuk Perth, dipakai upah minimum nasional Australia (gaji bersih A$3.769 sebulan setelah pajak). '
-                'Singapura tidak punya upah minimum nasional, jadi dipakai upah dasar pekerja kebersihan menurut Progressive Wage Model (S$1.664 setelah iuran CPF, tabungan pensiun wajib).'},
-    source={'id': 'Katadata (UMP DKI Jakarta 2026), Fair Work Ombudsman, MOM Singapura, ATO, IRAS; harga iPhone dari Selular.ID, Finder dan TechRepublic, dihitung penulis'},
+    subtitle={'id': 'Hari kerja berupah minimum bersih untuk membeli satu iPhone 18 Pro, harga Oktober 2026'},
+    note={'id': 'Singapura tidak punya upah minimum nasional; yang dipakai adalah upah dasar pekerja kebersihan menurut Progressive Wage Model.'},
+    source='refs',
     alt={'id': 'Tiga menara ikon ponsel, satu ikon untuk satu hari kerja. Menara Jakarta setinggi 104 ikon, '
                'Singapura 25, dan Perth 12. Pekerja berupah minimum di Jakarta harus bekerja sekitar 4,2 kali lebih lama daripada pekerja di Singapura '
                'dan 8,7 kali lebih lama daripada pekerja di Perth untuk membeli satu iPhone 18 Pro.'},

@@ -11,6 +11,7 @@ from . import metrics
 from .figure import Component, tr
 from .charts2d import make_fmt, LABEL, VALUE, TICK, place
 from .tokens import ink
+from .canvas import NOTE
 
 
 class Units(Component):
@@ -118,8 +119,9 @@ class Units(Component):
                 c.text(c.W - vw + 10, y + s / 2, self.value(r, lang), VALUE[L] + 2, 700,
                        ink(role) if role != 'base' else 'ink', 'start', kind='value')
                 if r.get('note'):
-                    c.text(lw - 10, lb[3] + 2, tr(r['note'], lang), TICK[L], 400, 'label', 'end', 'top', max_w=lw - 12,
+                    c.text(lw - 10, lb[3] + 2, tr(r['note'], lang), NOTE[L], 400, 'label', 'end', 'top', max_w=lw - 12,
                            kind='note')
+                    c.texts[-1]['row_note'] = True
             y += block_h + (16 if not narrow else 14)
         return c.maxy + 2
 
@@ -197,8 +199,9 @@ class Units(Component):
             if r.get('flag'):
                 c.flag(r['flag'], x + col_w / 2 - 8.7, lb[3] + 5, 13)
             if r.get('note'):
-                c.text(x + col_w / 2, (lb[3] + (22 if r.get('flag') else 4)), tr(r['note'], lang), TICK[L], 400,
+                c.text(x + col_w / 2, (lb[3] + (22 if r.get('flag') else 4)), tr(r['note'], lang), NOTE[L], 400,
                        'label', 'middle', 'top', max_w=step - 6, kind='note')
+                c.texts[-1]['row_note'] = True
         c.line(0, bottom + 0.5, c.W, bottom + 0.5, stroke='axis', sw=1.25)
         return c.maxy + 2
 

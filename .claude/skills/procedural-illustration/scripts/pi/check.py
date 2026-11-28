@@ -36,10 +36,13 @@ def run(fig, lang):
     add = lambda lv, item, msg: out.append((lv, item, msg))
     kind = fig.kind
     is_diagram = kind in DIAGRAM_KINDS
-    # 1 source
-    if not fig.source and not (is_diagram and fig.review.get('source')):
-        add('ERROR', 1, 'no source: give source={...} (or, for a diagram of your own reasoning, '
-                        "review['source'] saying so)")
+    # 1 source: a link to the post's References section (source='refs'); none for the author's own
+    # experience or reasoning (say so in review['source']); never a long list of sources on the figure
+    if not fig.source and not fig.review.get('source'):
+        add('ERROR', 1, "no source: source='refs' (links to the post's References), or, for the author's own "
+                        "experience or reasoning, no source and review['source'] saying so")
+    elif isinstance(fig.source, (str, dict)) and fig.source != 'refs' and len(tr(fig.source, lang) or '') > 40:
+        add('ERROR', 1, "the source line is long: use source='refs'; the full sources live in the post's References")
     # 2 labels and units: list every word for proofreading
     texts = sorted({t['text'] for cvs in fig.last[lang].values() for t in cvs.texts})
     add('REVIEW', 2, f'proofread every label ({len(texts)}): ' + ' | '.join(x.replace('\n', ' ') for x in texts))
@@ -85,9 +88,13 @@ def run(fig, lang):
         add('ERROR', 7, 'no title')
     elif len(t) > 95:
         add('WARN', 7, f'title is {len(t)} characters: keep it under ~90, move detail to the subtitle')
-    # 8 subtitle
-    if not fig.subtitle and not is_diagram and not fig.review.get('units'):
-        add('WARN', 8, 'no subtitle: add the metric, unit and period (e.g. "Index, 2019 = 100, August each year")')
+    # 8 subtitle: the metric and unit, short; nothing the drawing already shows, nothing about the screen
+    sub = tr(fig.subtitle, lang) or ''
+    if sub and len(sub) > 90:
+        add('WARN', 8, f'subtitle is {len(sub)} characters: say the metric and unit in under ~90; cut what the '
+                       'chart already shows (the years on the axis, what the colours mean)')
+    if re.search(r'\b(screen|layar|tap|hover|click|klik|scroll|table|tabel|legend|shaded|warna|colou?r)', sub, re.I):
+        add('ERROR', 8, 'the subtitle explains the drawing or the interface (screens, tables, colours): cut it')
     # 9 overlaps / frame / min size
     for lv, m in fig.drawing_issues(lang):
         add(lv, 9 if 'overlap' in m else 4 if 'px' in m and 'under' in m else 10, m)

@@ -70,6 +70,8 @@ en:
   chart_source: Source
   chart_note: Note
   chart_data: Data table
+  chart_refs: References
+  chart_refs_id: references
   chart_highlight: Indonesia
   chart_asean: Other ASEAN
   chart_oecd: OECD members
@@ -146,6 +148,8 @@ id:
   chart_source: Sumber
   chart_note: Catatan
   chart_data: Tabel data
+  chart_refs: Referensi
+  chart_refs_id: referensi
   chart_highlight: Indonesia
   chart_asean: Negara ASEAN lainnya
   chart_oecd: Anggota OECD

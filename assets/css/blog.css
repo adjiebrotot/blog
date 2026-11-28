@@ -764,7 +764,8 @@ a.btn-primary { color: var(--text-inv); }
 .hbar .v { font-variant-numeric: tabular-nums; white-space: nowrap; min-width: 3rem; }
 .hbar .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 @media (forced-colors: active) { .hbar .b i { border: 1px solid CanvasText; } }
-.hbar .k small { display: block; font-size: 0.72rem; color: var(--muted); font-weight: 400; }
+/* A row note (a caveat such as "Base salary only") sits smaller and lighter than the name */
+.hbar .k small { display: block; font-size: 0.66rem; line-height: 1.25; color: var(--muted); font-weight: 400; margin-top: 0.1rem; }
 /* Phones: a wider name column for the flags, a smaller card padding */
 @media (max-width: 640px) { .pi, .hbar { padding: 0.85rem 0.75rem 0.75rem; }
   .prose .hbar ol li { grid-template-columns: minmax(7.6rem, 42%) 1fr auto; gap: 0.4rem; }
